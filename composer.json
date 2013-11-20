@@ -43,9 +43,6 @@
         "imagine/Imagine":"0.6.*@dev",
         "phpdocumentor/phpdocumentor": "*"
     },
-    "require-dev": {
-        "artur-gajewski/phpdocumentor-bundle": "dev-master"
-    },
     "scripts": {
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",

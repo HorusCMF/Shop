@@ -8,10 +8,4 @@
 
 class_name: TestGuy
 modules:
-  enabled: [Symfony2, Doctrine2, TestHelper,PhpBrowser, WebDebug]
-  config:
-    Symfony2:
-       app_path: 'app'
-       environment: 'test'
-    PhpBrowser:
-        url: 'http://www.hetic.ju/app_test.php/'
+    enabled: [Filesystem, TestHelper]
