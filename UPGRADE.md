@@ -2,6 +2,8 @@ UPGRADE FROM 1.0 to 1.1
 =======================
 
 ### General
+  * SEO Autocompletion
+  * Price TTC HT Interactive
   * Statistics
   * Emailing Alerts
   * Configure your Backend : Name, Theme, Colors, VAD Contrate...

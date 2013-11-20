@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Horus Shop CMF</title>
+            
+
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="http://bootswatch.com/amelia/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="http://getbootstrap.com/2.3.2/assets/css/bootstrap-responsive.css"/>
+    <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.10.3/themes/hot-sneaks/jquery-ui.css"/>
+    <link rel="stylesheet" type="text/css" href="http://davidstutz.github.io/bootstrap-multiselect/css/bootstrap-multiselect.css"/>
+
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/63fc03d_green_1.css"/>
+    
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/88f7443_main_1.css"/>
+            <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    </head>
+    <body>
+            <a href="https://github.com/HorusCMF/Shop"><img
+                style="z-index: 50000;position: absolute; top: 0; right: 0; border: 0;"
+                src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+            <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="/backend/" class="navbar-brand">Horus CMF</a>
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar-main">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown active">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes"><i class="glyphicon glyphicon-gift"></i>  Produits <span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="themes">
+                            <li><a tabindex="-1" href="/backend/produits"><i class="glyphicon glyphicon-list"></i> Mes produits</a></li>
+                            <li><a tabindex="-1" href="/backend/produits/creer"><i class="glyphicon glyphicon-plus-sign"></i> Créer un produit</a></li>
+                            <li><a tabindex="-1" href="/backend/commercials"><i class="glyphicon glyphicon-star"></i> Actions commerciales</a></li>
+                            <li><a tabindex="-1" href="/backend/commercials/ajouter"><i class="glyphicon glyphicon-star-empty"></i> Créer commerciale</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download"><i class="glyphicon glyphicon-folder-open"></i>  Catégories<span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="download">
+                            <li><a tabindex="-1" href="/backend/categories"><i class="glyphicon glyphicon-folder-close"></i> Gérer les catégories</a></li>
+                            <li><a tabindex="-1" href="/backend/categories/ajouter"><i class="glyphicon glyphicon-folder-open"></i> Créer une catégorie</a></li>
+                            <li><a tabindex="-1" href="/backend/familles"><i class="glyphicon glyphicon-briefcase"></i> Mes familles</a></li>
+                            <li><a tabindex="-1" href="/backend/familles/ajouter"><i class="glyphicon glyphicon-bookmark"></i> Créer une famille</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes"><i class="glyphicon glyphicon-list-alt"></i>  Contenu <span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="themes">
+                            <li><a tabindex="-1" href="/backend/pages"><i class="glyphicon glyphicon-book"></i> Mes pages</a></li>
+                            <li><a tabindex="-1" href="/backend/pages/ajouter"><i class="glyphicon glyphicon-file"></i> Créer une page</a></li>
+                            <li><a tabindex="-1" href="/backend/articles"><i class="glyphicon glyphicon-tags"></i> Mes articles</a></li>
+                            <li><a tabindex="-1" href="/backend/articles/ajouter"><i class="glyphicon glyphicon-pencil"></i> Créer une article</a></li>
+                            <li><a tabindex="-1" href="/backend/tags"><i class="glyphicon glyphicon-tags"></i> Mes tags</a></li>
+                            <li><a tabindex="-1" href="/backend/tags/ajouter"><i class="glyphicon glyphicon-tag"></i> Créer un produit</a></li>
+                        </ul>
+                    </li>
+                    <li class="">
+                            <a tabindex="-1" href="/backend/medias"><i class="glyphicon glyphicon-picture"></i> Gérer les médias</a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download"><i class="glyphicon glyphicon-plus"></i>  Plus<span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="download">
+                            <li><a tabindex="-1" href="./bootstrap.min.css"><i class="glyphicon glyphicon-th-list"></i> Gérer les commandes</a></li>
+                            <li><a tabindex="-1" href="./bootstrap.min.css"><i class="glyphicon glyphicon-usd"></i> Gérer les factures</a></li>
+                            <li><a tabindex="-1" href="./bootstrap.min.css"><i class="glyphicon glyphicon-road"></i> Gérer les transports</a></li>
+                            <li><a tabindex="-1" href="./bootstrap.min.css"><i class="glyphicon glyphicon-user"></i> Gérer les clients</a></li>
+                            <li><a tabindex="-1" href="./bootstrap.min.css"><i class="glyphicon glyphicon-shopping-cart"></i> Gérer les paniers</a></li>
+                            <li><a tabindex="-1" href="./bootstrap.min.css"><i class="glyphicon glyphicon-comment"></i> Gérer les commentaires</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="configuration"><i class="glyphicon glyphicon-cog"></i> Configuration<span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="download">
+                            <li><a tabindex="-1" href="./bootstrap.min.css">Ma Boutique</a></li>
+                            <li><a tabindex="-1" href="./bootstrap.css">Mon Compte</a></li>
+                            <li class="divider"></li>
+                            <li><a tabindex="-1" href="./variables.less">Mon Catalogue</a></li>
+                            <li><a tabindex="-1" href="./variables.less">Mon Contrat VAD</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a  href="/backend/logout" id="customisation"><i class="glyphicon glyphicon-off"></i> Deconnexion</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="container">
+                    <div class="row-fluid">
+                        <div class="span3">
+                                <button id="closepanel" type="button" class="close" data-dismiss="alert"><i
+                class="glyphicon glyphicon-remove-circle"></i></button>
+    <div class="panel panel-primary">
+        <div class="panel-heading"><h4><i class="glyphicon glyphicon-list-alt"></i> Menu</h4>
+        </div>
+        <div class="panel-body">
+            <ul class="nav nav-pills nav-stacked">
+                <li><a><i class="glyphicon glyphicon-home"></i> Aujourd'hui</a></li>
+                <li><a><i class="glyphicon glyphicon-shopping-cart"></i> Gérer mes produits<span
+                                class="badge">10</span></a></li>
+                <li><a><i class="glyphicon glyphicon-ok"></i> Gérer mes commandes<span
+                                class="badge">42</span></a></li>
+                <li><a><i class="glyphicon glyphicon-cog"></i> Configuration</a></li>
+            </ul>
+        </div>
+        <div class="panel-heading"></div>
+    </div>
+    <button id="closepanel" type="button" class="close" data-dismiss="alert"><i
+                class="glyphicon glyphicon-remove-circle"></i></button>
+    <div class="panel panel-primary">
+        <div class="panel-heading"><h4><i class="glyphicon glyphicon-stats"></i> Statistique
+            </h4>
+        </div>
+        <div class="panel-body">
+            <div class="bs-example bs-example-tabs">
+                <ul id="myTab" class="nav nav-tabs">
+                    <li class="active"><a href="#today" data-toggle="tab">A jour</a></li>
+                    <li><a href="#month" data-toggle="tab">Ce mois</a></li>
+                    <li><a href="#year" data-toggle="tab">Cette année</a></li>
+                    </li>
+                </ul>
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane fade in active" id="today">
+                        <table class="table table-striped">
+                            <tbody>
+                            <tr>
+                                <td>Ventes Globales</td>
+                                <td>2500.00 €</td>
+                            </tr>
+                            <tr>
+                                <td>Chiffre d'affaires hors expédition</td>
+                                <td>2000.00 €</td>
+                            </tr>
+                            <tr>
+                                <td>CA Hier</td>
+                                <td>1700.00 €</td>
+                            </tr>
+                            <tr>
+                                <td>Commandes en attentes</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>Commandes en cours</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>Commandes annulés</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Panier moyen</td>
+                                <td>25.5</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="month">
+                        <table class="table table-striped">
+                            <tbody>
+                            <tr>
+                                <td>Ventes Globales</td>
+                                <td>2500.00 €</td>
+                            </tr>
+                            <tr>
+                                <td>Chiffre d'affaires hors expédition</td>
+                                <td>2000.00 €</td>
+                            </tr>
+                            <tr>
+                                <td>CA Hier</td>
+                                <td>1700.00 €</td>
+                            </tr>
+                            <tr>
+                                <td>Commandes en attentes</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>Commandes en cours</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>Commandes annulés</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Panier moyen</td>
+                                <td>25.5</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="year">
+                        <table class="table table-striped">
+                            <tbody>
+                            <tr>
+                                <td>Ventes Globales</td>
+                                <td>2500.00 €</td>
+                            </tr>
+                            <tr>
+                                <td>Chiffre d'affaires hors expédition</td>
+                                <td>2000.00 €</td>
+                            </tr>
+                            <tr>
+                                <td>CA Hier</td>
+                                <td>1700.00 €</td>
+                            </tr>
+                            <tr>
+                                <td>Commandes en attentes</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>Commandes en cours</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>Commandes annulés</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Panier moyen</td>
+                                <td>25.5</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button id="closepanel" type="button" class="close" data-dismiss="alert"><i
+                class="glyphicon glyphicon-remove-circle"></i></button>
+    <div class="panel panel-primary">
+        <div class="panel-heading"><h4><i class="glyphicon glyphicon-info-sign"></i> Informations
+            </h4>
+        </div>
+        <div class="panel-body">
+            <table class="table table-striped">
+                <tbody>
+                <tr>
+                    <td>Clients</td>
+                    <td>45</td>
+                </tr>
+                <tr>
+                    <td>Categories</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Products</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>Produits en ligne</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Produits hors ligne</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Commandes</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Commandes en cours</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Commandes expédiés</td>
+                    <td>6</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+                        </div>
+                        <div class="span9">
+                                                            <nav id="searchmenu" class="navbar navbar-default" role="navigation">
+        <button id="closesearch" type="button" class="close" data-dismiss="alert"><i
+                    class="glyphicon glyphicon-remove-circle"></i></button>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-2">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><i class="glyphicon glyphicon-search"></i>
+                Rechercher</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+            <form action="/recherche/" class="span12" role="search" method="get">
+                <div class="form-group">
+                    <div class="col-xs-8">
+                        <input type="text" class="form-control" name="word"
+                               placeholder="Nom, Référence, Description, Catégorie..."
+                               value="">
+                    </div>
+                    <button type="submit" class="btn btn-primary"><i
+                                class="glyphicon glyphicon-search"></i></button>
+                    <a id="moresearch" class="btn btn-primary"><i
+                                class="glyphicon glyphicon-plus-sign"></i> </a>
+                </div>
+                        </div>
+        <div class="hide" id="advancedsearch">
+            <div class="row-fluid col-md-offset-1">
+                <div class="span2">
+                    <input name="produits" id="produits" type="checkbox"
+                           > <label
+                            for="produits"
+                            class="whitetext">Produits</label>
+                </div>
+                <div class="span2">
+                    <input name="categories" id="categories" type="checkbox"
+                            > <label
+                            for="categories" class="whitetext">Catégories</label>
+                </div>
+                <div class="span2">
+                    <input name="familles" id="familles" type="checkbox"
+                            > <label
+                            for="familles" class="whitetext">Famille</label>
+                </div>
+                <div class="span2">
+                    <input name="pages" id="pages" type="checkbox"
+                            > <label for="pages"
+                                                                                                        class="whitetext">Pages</label>
+                </div>
+                <div class="span2">
+                    <input name="articles" id="articles" type="checkbox"
+                           > <label
+                            for="articles" class="whitetext">Article</label>
+                </div>
+                <div class="span2">
+                    <input name="tags" id="tags" type="checkbox"
+                           > <label for="tags"
+                                                                                                      class="whitetext">Tags</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-filter"></i> Filtrer
+            </button>
+        </div>
+        </form>
+    </nav>
+
+                                            
+                            <div class="maincontent">
+                                
+    <div class="" id="commercials">
+        <h2><i class="glyphicon glyphicon-star"></i> Vos actions commerciales</h2>
+                    <div class="alert alert-dismissable alert-danger">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <i class="glyphicon glyphicon-info-sign"></i> Aucune action de créer pour le moment.
+                <a href="/backend/commercials/ajouter" class="pull-right  btn btn-primary"><i
+                            class="glyphicon glyphicon-plus"></i> Ajouter une action commerciale</a>
+                <div class="clear"></div>
+            </div>
+        
+        <div class="clear"></div>
+    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="scrollup">Scroll</a>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="container text-center">
+            <p class="muted credit">Horus CMF forked by <a href="https://github.com/HorusCMF/Shop">Symfomany</a></p>
+        </div>
+    </div>
+            
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script src="http://damirfoy.com/iCheck/jquery.icheck.min.js?v=0.9.1"></script>
+    <script src="http://davidstutz.github.io/bootstrap-multiselect/js/bootstrap-multiselect.js"></script>
+    <script src="/js/ckeditor/ckeditor.js"></script>
+    <script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+        <script type="text/javascript" src="/js/89bdc83_main_1.js"></script>
+        </body>
+</html>

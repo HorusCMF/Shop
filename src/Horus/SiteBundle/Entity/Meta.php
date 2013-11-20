@@ -31,12 +31,18 @@ class Meta
      *      max = "200",
      *      minMessage = "Votre titre doit faire au moins {{ limit }} caractères",
      *      maxMessage = "Votre titre ne peut pas être plus long que {{ limit }} caractères"
-     * )     * @ORM\Column(name="title", type="text", nullable=true)
+     * )
+     * @ORM\Column(name="title", type="text", nullable=true)
      */
     private $title;
 
     /**
-     * @var string
+     * @Assert\Length(
+     *      min = "5",
+     *      max = "200",
+     *      minMessage = "Votre contenu doit faire au moins {{ limit }} caractères",
+     *      maxMessage = "Votre contenu ne peut pas être plus long que {{ limit }} caractères"
+     * )
      * @ORM\Column(name="content", type="text", nullable=true)
      */
     private $content;

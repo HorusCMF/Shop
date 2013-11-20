@@ -110,7 +110,7 @@
 
  <body>
  <div class="layout">
- <h1>Codeception Results <small><span style="color: green">OK</span> (1.1s)</small></h1>
+ <h1>Codeception Results <small><span style="color: green">OK</span> (15.7s)</small></h1>
 
 
 	 <table border="0" style="width: 100%;">
@@ -120,59 +120,22 @@
  </td>
 </tr>   <tr>
     <td>
-     <p class="scenarioSuccess" onclick="showHide('1', this)">[+] perform actions and see result (MainCest.onHome) (0.37s)</p>
+     <p class="scenarioSuccess" onclick="showHide('1', this)">[+] in products create page (MainCest.onCreateProcessFailureProducts) (15.74s)</p>
     </td>
    </tr>
    <tr>
     <td>
      <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer1">
       <tr>
-       <td class="stepName">I am on page <span style="color: #732E81;">"/"</span></td>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend/produits/creer"</span></td>
       </tr>
 
       <tr>
-       <td class="stepName">I see <span style="color: #732E81;">"Authentification"</span></td>
+       <td class="stepName">I see <span style="color: #732E81;">"Créer un produit"</span></td>
       </tr>
 
       <tr>
-       <td class="stepName">I see <span style="color: #732E81;">"Souvenir de moi"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName">I am on page <span style="color: #732E81;">"/backend"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName">I see <span style="color: #732E81;">"Authentification"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName">I see <span style="color: #732E81;">"Souvenir de moi"</span></td>
-      </tr>
-
-
-     </table>
-    </td>
-   </tr>
-
-   <tr>
-    <td>
-     <p class="scenarioSuccess" onclick="showHide('2', this)">[+] perform actions and see result (MainCest.onFailureAuthentificate) (0.27s)</p>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer2">
-      <tr>
-       <td class="stepName">I am on page <span style="color: #732E81;">"/"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName">I see <span style="color: #732E81;">"Authentification"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName">I submit form <span style="color: #732E81;">"form",{"_username":"test@yahoo.fr","_password":"ok"}</span></td>
+       <td class="stepName">I submit form <span style="color: #732E81;">"form#createproduct",{"accroche":"o","reference":"ok","ean":"ok","prixHT":"ok","prixTTC":"ok"}</span></td>
       </tr>
 
       <tr>
@@ -180,40 +143,19 @@
       </tr>
 
       <tr>
-       <td class="stepName">I <strong>I expect ?</strong></td>
-      </tr>
-
-
-     </table>
-    </td>
-   </tr>
-
-   <tr>
-    <td>
-     <p class="scenarioSuccess" onclick="showHide('3', this)">[+] perform actions and see result (MainCest.onSuccessAuthentificate) (0.5s)</p>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer3">
-      <tr>
-       <td class="stepName">I am on page <span style="color: #732E81;">"/"</span></td>
+       <td class="stepName">I see <span style="color: #732E81;">"Le titre ne doit pas etre vide"</span></td>
       </tr>
 
       <tr>
-       <td class="stepName">I see <span style="color: #732E81;">"Authentification"</span></td>
+       <td class="stepName">I see <span style="color: #732E81;">"Le résumé ne doit pas etre vide"</span></td>
       </tr>
 
       <tr>
-       <td class="stepName">I submit form <span style="color: #732E81;">"form",{"_username":"test@yahoo.fr","_password":"djscrave"}</span></td>
+       <td class="stepName">I see <span style="color: #732E81;">"La description ne doit pas etre vide"</span></td>
       </tr>
 
       <tr>
-       <td class="stepName">I am on page <span style="color: #732E81;">"/backend"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName">I see <span style="color: #732E81;">"Modern Solution for E-Commerce for Minimalist Operations"</span></td>
+       <td class="stepName">I see <span style="color: #732E81;">"Votre accroche doit faire au moins 5 caractères"</span></td>
       </tr>
 
 
@@ -229,7 +171,7 @@
       <table border="0">
        <tr>
         <td width="250" class="scenarioSuccess">Successful scenarios:</td>
-        <td class="scenarioSuccessValue"><strong>3</strong></td>
+        <td class="scenarioSuccessValue"><strong>1</strong></td>
        </tr>
        <tr>
         <td class="scenarioFailed">Failed scenarios:</td>

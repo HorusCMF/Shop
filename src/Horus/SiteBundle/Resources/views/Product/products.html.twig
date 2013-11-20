@@ -3,89 +3,14 @@
 {% block content %}
 
     <div class="page" id="products">
-        <h2><i class="glyphicon glyphicon-gift"></i> Vos produits <span class="label-danger label pull-right"><i
+        <h2><i class="glyphicon glyphicon-gift"></i> Vos produits </h2>
+        <h3 class="pull-right">
+            <span class="label-danger label pull-right"><i
                         class="glyphicon glyphicon-shopping-cart"></i> {{ produits.getTotalItemCount }} produits</span>
-        </h2>
+        </h3>
         <hr class="clear fancy-line">
 
-        {% for produit in produits %}
-            <div class="media">
-                <div class="btn-group pull-right">
-                    <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
-                        <i class="glyphicon glyphicon-plus"></i> Action <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        {% if produit.isVisible %}
-                            <li><a onclick="return(confirm('Etes-vous sûr de vouloir désactiver cet article?'));"
-                                   href="{{ path('horus_site_desactive_product', {'id' : produit.id}) }}"><i
-                                            class="glyphicon glyphicon-minus-sign"></i> Désactiver</a></li>
-                        {% else %}
-                            <li><a onclick="return(confirm('Etes-vous sûr de vouloir activer cet article?'));"
-                                   href="{{ path('horus_site_active_product', {'id' : produit.id}) }}"><i
-                                            class="glyphicon glyphicon-ok"></i> Activer</a></li>
-                        {% endif %}
-                        <li><a onclick="return(confirm('Etes-vous sûr de vouloir supprimer cet article?'));"
-                               href="{{ path('horus_site_remove_product', {'id' : produit.id}) }}"><i
-                                        class="glyphicon glyphicon-remove"></i> Supprimer</a></li>
-                        <li><a href="{{ path('horus_site_edit_product', {'id' : produit.id}) }}"><i
-                                        class="glyphicon glyphicon-pencil"></i> Editer</a></li>
-                        <li><a href="{{ path('horus_site_edit_pictures_product', {'id' : produit.id}) }}"><i
-                                        class="glyphicon glyphicon-camera"></i> Photos</a></li>
-                        <li><a href="{{ path('horus_site_product', {'id' : produit.id}) }}"><i
-                                        class="glyphicon glyphicon-search"></i> Voir</a></li>
-
-                    </ul>
-                </div>
-                <a class="pull-left" href="#">
-                    {% if produit.starPicture %}
-                        <img src="{{ imgproducts ~  produit.id ~ '/' ~ produit.starPicture.path }} "/>
-                    {% else %}
-                        <img class="media-object img-thumbnail" src="http://placehold.it/150x75" alt="...">
-                    {% endif %}
-                </a>
-
-                <div class="media-body">
-                    <h4 class="media-heading"><a
-                                href="{{ path('horus_site_product', {'id' : produit.id}) }}">{{ produit.title }}</a> de
-                        <a href="{{ path('horus_site_category', {'id' : produit.category.id}) }}">{{ produit.category.name }}</a>
-                        {% if produit.isVisible %}
-                            <span class="badge badge-success">En ligne</span>
-                        {% else %}
-                            <span class="badge badge-danger">Hors-Ligne</span>
-                        {% endif %}
-                    </h4>
-                    <h6>Référence: {{ produit.reference }}</h6>
-                    <hr class="fancy-line"/>
-
-                    <p>{{ produit.cover|truncate('400',true)|raw }}</p>
-
-                    <h3>
-                        {% if produit.quantity > 0 %}
-                            <span class="label label-success pull-left">{{ produit.quantity }} en stock</span>
-                        {% else %}
-                            <span class="label label-danger pull-left">Rupture de stock</span>
-                        {% endif %}
-                    </h3>
-
-                    <p>
-                        <a href="{{ path('horus_site_product', {'id' : produit.id}) }}"
-                           class="btn-xs btn btn-warning pull-right"><i class="glyphicon glyphicon-search"></i> Voir le
-                            produit</a>
-                    </p>
-                </div>
-            </div>
-            {% if not loop.last %}
-                <hr class="clear fancy-line"/>{% endif %}
-        {% else %}
-            <div class="alert alert-dismissable alert-danger">
-                <button type="button" class="close" data-dismiss="alert">×</button>
-                <i class="glyphicon glyphicon-info-sign"></i> Aucun produit de créer pour le moment.
-                <a href="{{ path('horus_site_create_product' ) }}" class="pull-right btn btn-primary "><i
-                            class="glyphicon glyphicon-plus"></i> Créer un produit</a>
-
-                <div class="clear"></div>
-            </div>
-        {% endfor %}
+        {% include 'HorusSiteBundle:Product:_listproducts.html.twig' %}
 
         <div class="pull-right">
             {{ knp_pagination_render(produits) }}

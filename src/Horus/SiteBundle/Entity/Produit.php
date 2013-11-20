@@ -50,6 +50,7 @@ class Produit
 
     /**
      * @var integer
+     * @Assert\Url(message="Votre URL de Vidéo n'est pas valide")
      * @Assert\Length(
      *      min = "8",
      *      max = "1000",
@@ -98,6 +99,7 @@ class Produit
      * @Assert\NotBlank(
      *     message = "Le prix TTC ne doit pas etre vide"
      * )
+     * @Assert\Regex(pattern="/[0-9]{1,}[.,]{0,1}[0-9]{0,2}/", message="Le prix TTC n'est pas valide")
      * @ORM\Column(name="prixTTC", type="float", nullable=false)
      */
     private $prixTTC;
@@ -106,6 +108,7 @@ class Produit
      * @Assert\NotBlank(
      *     message = "Le prix HT ne doit pas etre vide"
      * )
+     * @Assert\Regex(pattern="/[0-9]{1,}[.,]{0,1}[0-9]{0,2}/", message="Le prix TTC n'est pas valide")
      * @ORM\Column(name="prixHT", type="float", nullable=false)
      */
     private $prixHT;
@@ -183,6 +186,12 @@ class Produit
     private $content;
 
     /**
+     * @Assert\Length(
+     *      min = "8",
+     *      max = "1000",
+     *      minMessage = "Votre commentaire doit faire au moins {{ limit }} caractères",
+     *      maxMessage = "Votre commentaire ne peut pas être plus long que {{ limit }} caractères"
+     * )
      * @ORM\Column(name="extras", type="text", nullable=true)
      */
     private $extras;
@@ -208,6 +217,7 @@ class Produit
 
     /**
      * @var string
+     * @Assert\Type(type="integer", message="La valeur {{ value }} n'est pas un type {{ type }} valide.")
      * @ORM\Column(name="quantity", type="integer", nullable=true)
      */
     private $quantity;
@@ -269,6 +279,7 @@ class Produit
 
     /**
      * @ORM\OneToMany(targetEntity="Seo",mappedBy="produit", cascade={"all"},orphanRemoval=true)
+     * @Assert\Valid
      */
     protected $seo;
 
@@ -281,6 +292,7 @@ class Produit
 
     /**
      * @ORM\OneToMany(targetEntity="Meta",mappedBy="produit", cascade={"all"},orphanRemoval=true)
+     * @Assert\Valid
      */
     protected $metas;
 

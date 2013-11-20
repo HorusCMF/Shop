@@ -17,7 +17,7 @@ class ProductType extends AbstractType
             ->add('video', 'text', array('required' => false, 'attr' => array( 'placeholder' => "Ex:  http://www.youtube.com/watch?v=BQjqM24uWr8")))
             ->add('reference', 'text', array('required' => true, 'attr' => array( 'placeholder' => 'Ex: EAX09-A')))
             ->add('ean', 'text', array('required' => false, 'attr' => array( 'placeholder' => 'Ex: 471-9-5120-0288-x')))
-            ->add('quantity', 'integer', array('required' => true, 'required' => false, 'attr' => array('class' => 'form-control', 'placeholder' => 'Ex: 12')))
+            ->add('quantity', 'text', array('required' => true, 'required' => false, 'attr' => array('class' => 'form-control', 'placeholder' => 'Ex: 12')))
             ->add('etat', 'choice', array(
                 'attr' => array('class' => 'rad'),
                 'choices' => array(1 => 'Neuf', 2 => 'Occasion', 3 => 'Reconditionné'),

@@ -2,6 +2,9 @@
 
 {% block javascripts %}
     {{ parent() }}
+    {% javascripts '@HorusSiteBundle/Resources/public/js/referencement.js' %}
+    <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
 {% endblock %}
 
 
@@ -21,7 +24,7 @@
         </div>
     {% endif %}
 
-    <form novalidate="novalidate" action="{{ path('horus_site_create_product') }}" method="post">
+    <form id="createproduct" novalidate="novalidate" action="{{ path('horus_site_create_product') }}" method="post">
 
     <div class="bs-example bs-example-tabs">
     <ul id="myTab" class="nav nav-tabs">
@@ -99,6 +102,17 @@
             </div>
         </div>
 
+        <div class="row-fluid">
+            <div class="span6">
+                <label for="category">Catégorie principal</label>
+                {{ form_widget(form.category, {'attr': {'class' : 'rad' }}) }}
+            </div>
+            <div class="span6">
+                <label for="prodparent">Produit parent</label>
+                {{ form_widget(form.prodparent) }}
+            </div>
+        </div>
+
         <label for="cover">Résumé</label>
         {{ form_widget(form.cover,{'attr' : {'class' : 'ckeditor' }}) }}
         {{ form_errors(form.cover) }}
@@ -147,8 +161,7 @@
 
     <div class="tab-pane fade" id="status">
         <div class="row-fluid">
-            {{ form_errors(form.quantity) }}
-            {{ form_errors(form.datePublication) }}
+
             <div class="">
                 <h4>Etat de produit</h4>
 
@@ -192,6 +205,8 @@
 
         <div class="">
             <h4>Précision</h4>
+            {{ form_errors(form.quantity) }}
+            {{ form_errors(form.datePublication) }}
 
             <div class="row-fluid">
                 <div class="span3">
@@ -206,18 +221,6 @@
         </div>
     </div>
     <div class="tab-pane fade" id="categorie">
-        <div class="row-fluid">
-            <div class="span4">
-                <label for="category">Catégorie principal</label>
-                {{ form_widget(form.category, {'attr': {'class' : 'rad' }}) }}
-            </div>
-            <div class="span4">
-                <label for="prodparent">Produit parent</label>
-                {{ form_widget(form.prodparent) }}
-            </div>
-        </div>
-        <p></p>
-
         <div class="row-fluid">
             <div class="span12">
                 <label for="status_0">Catégorie secondaires</label>
@@ -252,8 +255,11 @@
     <div class="tab-pane fade" id="referencement">
         <div class="row-fluid">
             <div class="span10">
+                {{ form_errors(form.seo[0].title)}}
+                {{ form_errors(form.seo[0].keywords)}}
                 <label for="">Titre</label>
 
+                {{ form_errors(form.seo[0].description)}}
                 <div class="input-group">
                     {{ form_widget(form.seo[0].title, {'attr': { }}) }}
                                     <span class="input-group-btn">
