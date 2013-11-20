@@ -20,7 +20,7 @@
     <file path="/test.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381817139137" ignored="false" />
     <file path="/hetic.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382015567061" ignored="false" />
     <file path="/AppKernel.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384958119943" ignored="false" />
-    <file path="/config.yml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384961440888" ignored="false" />
+    <file path="/config.yml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384965139240" ignored="false" />
     <file path="/SearchType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381858398883" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/AbstractType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382374214535" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/FormBuilder.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381858574203" ignored="false" />
@@ -429,10 +429,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MainController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Controller/MainController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="16" selection-start="2312" selection-end="2312" vertical-scroll-proportion="0.19252336">
+            <state line="91" column="0" selection-start="2831" selection-end="2831" vertical-scroll-proportion="-22.291666">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.yml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/config/config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="39" selection-start="187" selection-end="187" vertical-scroll-proportion="0.26373628">
               <folding />
             </state>
           </provider>
@@ -457,7 +466,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/config/security.yml" />
         <option value="$PROJECT_DIR$/src/Horus/SiteBundle/DependencyInjection/HeticSiteExtension.php" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/composer.json" />
@@ -473,6 +481,7 @@
         <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Controller/AdministrateurController.php" />
         <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Controller/MainController.php" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/config/config.yml" />
       </list>
     </option>
   </component>
@@ -587,36 +596,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hetic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hetic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Horus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SiteBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -896,13 +875,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/DependencyInjection/HeticSiteExtension.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="11" selection-start="457" selection-end="457" vertical-scroll-proportion="0.34797892">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="24" selection-start="178" selection-end="178" vertical-scroll-proportion="0.16100179">
@@ -1011,7 +983,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Controller/MainController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="16" selection-start="2312" selection-end="2312" vertical-scroll-proportion="0.19252336">
+        <state line="91" column="0" selection-start="2831" selection-end="2831" vertical-scroll-proportion="-22.291666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="39" selection-start="187" selection-end="187" vertical-scroll-proportion="0.26373628">
           <folding />
         </state>
       </provider>

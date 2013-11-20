@@ -80,7 +80,6 @@ class MainController extends Controller
             array('pageParameterName' => 'page1')
         );
 
-
         if (!empty($categories_arg))
             $categories = $finderCategories->find($finalword);
 
@@ -90,7 +89,6 @@ class MainController extends Controller
             2 /*limit per page*/,
             array('pageParameterName' => 'page2')
         );
-
 
         if (!empty($familles_arg))
             $familles = $finderFamille->find($finalword);
