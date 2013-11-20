@@ -2,15 +2,11 @@
 
 {% block javascripts %}
     {{ parent() }}
-    {% javascripts '@HorusSiteBundle/Resources/public/js/product.js' %}
-    <script src="{{ asset_url }}" type="text/javascript"></script>
-    {% endjavascripts %}
 {% endblock %}
 
 
 {% block content %}
-
-    <div id="createcategory">
+    <div id="createcategory" class="page">
         <a class="btn back btn-danger pull-right" href="{{ path('horus_site_categories') }}">&larr; Revenir à la liste des
             catégories</a>
 

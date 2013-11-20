@@ -1,19 +1,12 @@
 {% extends 'HorusSiteBundle::layout.html.twig' %}
 
-
 {% block javascripts %}
     {{ parent() }}
     <script type="text/javascript" src="/js/dropzone.js"></script>
-
-    {% javascripts '@HorusSiteBundle/Resources/public/js/product.js' filter="cssrewrite" %}
-    <script src="{{ asset_url }}" type="text/javascript"></script>
-    {% endjavascripts %}
-
 {% endblock %}
 
 
 {% block content %}
-
     <div id="picturecategory">
         <a class="btn back btn-danger pull-right" href="{{ path('horus_site_categories') }}">&larr; Revenir à la liste
             de
@@ -30,7 +23,7 @@
                     <td>
 
                         {% if image.cover %}
-                            <span class="label label-success">Cette photo a été mise en avant</span><br /><br />
+                            <span class="label label-success">Cette photo a été mise en avant</span><br/><br/>
                         {% endif %}
 
                         <a class="btn btn-primary"
@@ -89,7 +82,6 @@
                 <input name="file" type="file" multiple/>
             </div>
         </form>
-
     </div>
 {% endblock %}
 

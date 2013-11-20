@@ -8,7 +8,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
 
 
 /**
- * Article
+ * Category
  * @Gedmo\Tree(type="nested")
  * @ORM\Entity(repositoryClass="Horus\SiteBundle\Repository\CategoryRepository")
  * @ORM\Table(name="category")

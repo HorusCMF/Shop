@@ -2,14 +2,10 @@
 
 {% block javascripts %}
     {{ parent() }}
-    {% javascripts '@HorusSiteBundle/Resources/public/js/product.js' %}
-    <script src="{{ asset_url }}" type="text/javascript"></script>
-    {% endjavascripts %}
 {% endblock %}
 
 
 {% block content %}
-
     <div id="editarticle">
         <a class="btn back btn-danger pull-right" href="{{ path('horus_site_articles') }}">&larr; Revenir à la liste des
             article</a>
@@ -22,6 +18,7 @@
             <div class="row-fluid">
                 <div class="span12">
                     <label for="title">Titre</label>
+
                     <div class="input-group">
                         {{ form_widget(form.title) }}
                         <span class="input-group-btn">
@@ -64,7 +61,7 @@
             <div class="row-fluid">
                 <div class="span12">
                     <label for="content">Description</label>
-                        {{ form_widget(form.content) }}
+                    {{ form_widget(form.content) }}
                     {{ form_errors(form.content) }}
                 </div>
             </div>

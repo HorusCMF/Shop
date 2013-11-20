@@ -9,7 +9,7 @@ use Gedmo\Mapping\Annotation as Gedmo; // gedmo annotations
 
 
 /**
- * Article
+ * Produit
  * @ORM\Entity(repositoryClass="Horus\SiteBundle\Repository\ProduitRepository")
  * @ORM\Table(name="produit")
  * @ORM\HasLifecycleCallbacks()

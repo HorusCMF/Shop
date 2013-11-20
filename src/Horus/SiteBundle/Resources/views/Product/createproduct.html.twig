@@ -9,8 +9,7 @@
 
 
 {% block content %}
-
-    <div id="createproduct">
+    <div id="createproduct" class="page">
     <a class="btn back btn-danger pull-right" href="{{ path('horus_site_products') }}">&larr; Revenir à la liste de
         produit</a>
 
@@ -173,6 +172,7 @@
         <div class="row-fluid">
             <div class="">
                 <h4>Disponibilité du produit</h4>
+
                 <div class="span3">
                     {{ form_widget(form.status[0], {'attr': {'class' : 'rad pull-left' }}) }}
                     <label for="status_0" class="pull-left">Disponible à la vente</label>
@@ -188,10 +188,14 @@
             </div>
         </div>
         <p></p>
+
         <p></p>
+
         <p></p>
+
         <div class="">
             <h4>Précision</h4>
+
             <div class="row-fluid">
                 <div class="span3">
                     <label for="datePublication" class="pull-left">Date de disponibilité</label>

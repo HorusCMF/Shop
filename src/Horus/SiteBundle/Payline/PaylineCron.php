@@ -7,6 +7,10 @@ use Doctrine\ORM\EntityManager;
 //use Symfony\Component\DependencyInjection\ContainerAware;
 //use Doctrine\Common\Util\Debug;
 
+/**
+ * Class PaylineCron
+ * @package Horus\SiteBundle\Payline
+ */
 class PaylineCron {
 
     protected $user;

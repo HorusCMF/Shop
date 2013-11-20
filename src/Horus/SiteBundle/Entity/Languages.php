@@ -5,8 +5,7 @@ namespace Horus\SiteBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * MyFuckinJob\SiteBundle\Entity\Skill
- *
+ * Languages
  * @ORM\Table(name="i18n_language_codes")
  * @ORM\Entity
  */

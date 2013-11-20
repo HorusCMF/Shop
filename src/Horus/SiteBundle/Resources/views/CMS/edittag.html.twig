@@ -2,16 +2,13 @@
 
 {% block javascripts %}
     {{ parent() }}
-    {% javascripts '@HorusSiteBundle/Resources/public/js/product.js' %}
-    <script src="{{ asset_url }}" type="text/javascript"></script>
-    {% endjavascripts %}
 {% endblock %}
 
 
 {% block content %}
-
     <div id="edittag">
-        <a class="btn back btn-danger pull-right" href="{{ path('horus_site_tags') }}">&larr; Revenir à la liste des tags</a>
+        <a class="btn back btn-danger pull-right" href="{{ path('horus_site_tags') }}">&larr; Revenir à la liste des
+            tags</a>
 
         <h1><i class="glyphicon glyphicon-tag"></i> Modifier ce tag</h1>
         <hr class="clear fancy-line">
@@ -21,6 +18,7 @@
             <div class="row-fluid">
                 <div class="span12">
                     <label for="title">Mots-Clefs</label>
+
                     <div class="input-group">
                         {{ form_widget(form.word) }}
                         <span class="input-group-btn">

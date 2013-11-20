@@ -1,8 +1,7 @@
 {% extends 'HorusSiteBundle::layout.html.twig' %}
 
 {% block content %}
-
-    <div class="" id="products">
+    <div class="" id="article">
         <h2><i class="glyphicon glyphicon-gift"></i> Article "{{ article.title|title }}"</h2>
 
         {#<div class="btn-group pull-right">#}
@@ -41,10 +40,6 @@
         <p>
             {{ article.content|raw }}
         </p>
-
-
-
-
         <div class="clear"></div>
     </div>
 {% endblock %}

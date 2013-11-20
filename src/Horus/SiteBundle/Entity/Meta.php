@@ -7,7 +7,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 
 /**
- * Article
+ * Meta
  * @ORM\Entity
  * @ORM\Table(name="produit_meta")
  * @ORM\HasLifecycleCallbacks()

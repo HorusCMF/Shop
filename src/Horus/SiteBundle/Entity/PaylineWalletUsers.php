@@ -6,7 +6,6 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * PaylineWalletUsers
- *
  * @ORM\Table(name="payline_wallet_users")
  * @ORM\Entity
  */

@@ -5,6 +5,7 @@ namespace Horus\SiteBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
+ * Metier
  * @ORM\Table(name="metier")
  * @ORM\Entity
  */

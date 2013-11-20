@@ -2,26 +2,25 @@
 
 {% block javascripts %}
     {{ parent() }}
-    {% javascripts '@HorusSiteBundle/Resources/public/js/product.js' %}
-    <script src="{{ asset_url }}" type="text/javascript"></script>
-    {% endjavascripts %}
 {% endblock %}
 
 
 {% block content %}
-
     <div id="editcategory">
-        <a class="btn back btn-danger pull-right" href="{{ path('horus_site_categories') }}">&larr; Revenir à la liste des
+        <a class="btn back btn-danger pull-right" href="{{ path('horus_site_categories') }}">&larr; Revenir à la liste
+            des
             catégories</a>
 
         <h1><i class="glyphicon glyphicon-pencil"></i> Editer "{{ category.name|title }}"</h1>
         <hr class="clear fancy-line">
 
-        <form novalidate="novalidate" action="{{ path('horus_site_edit_category', {'id' : category.id}) }}" method="post">
+        <form novalidate="novalidate" action="{{ path('horus_site_edit_category', {'id' : category.id}) }}"
+              method="post">
 
             <div class="row-fluid">
                 <div class="span12">
                     <label for="title">Titre</label>
+
                     <div class="input-group">
                         {{ form_widget(form.name) }}
                         <span class="input-group-btn">
@@ -37,7 +36,7 @@
             <div class="row-fluid">
                 <div class="span12">
                     <label for="title">Résumé</label>
-                        {{ form_widget(form.cover) }}
+                    {{ form_widget(form.cover) }}
                     {{ form_errors(form.cover) }}
                 </div>
             </div>
@@ -45,7 +44,7 @@
             <div class="row-fluid">
                 <div class="span12">
                     <label for="title">Description</label>
-                        {{ form_widget(form.description) }}
+                    {{ form_widget(form.description) }}
                     {{ form_errors(form.description) }}
                 </div>
             </div>
@@ -53,7 +52,7 @@
             <div class="row-fluid">
                 <div class="span12">
                     <label for="title">Articles</label>
-                        {{ form_widget(form.articles) }}
+                    {{ form_widget(form.articles) }}
                     {{ form_errors(form.articles) }}
                 </div>
             </div>

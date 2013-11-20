@@ -2,14 +2,10 @@
 
 {% block javascripts %}
     {{ parent() }}
-    {% javascripts '@HorusSiteBundle/Resources/public/js/product.js' %}
-    <script src="{{ asset_url }}" type="text/javascript"></script>
-    {% endjavascripts %}
 {% endblock %}
 
 
 {% block content %}
-
     <div id="editcommercial">
         <a class="btn back btn-danger pull-right" href="{{ path('horus_site_commercials') }}">&larr; Revenir à la liste
             des commercials</a>
@@ -40,7 +36,7 @@
                     <label for="datePublication">Date de publication</label>
                     {#<input type="text" placeholder="jj/mm/YYYY" id="datePublication" class="date form-control" name="datePublication" required="required">#}
                     {{ form_errors(form.datePublication) }}
-                    {{ form_widget(form.datePublication, {'attr' : {'class' : "date form-control"}}) }}
+                    {{ form_widget(form.datePublication, {'attr' : {'class' : "date form-control" }}) }}
                 </div>
                 <div class="span6">
                     <label for="nature">Nature</label>

@@ -12,13 +12,10 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
-
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Gedmo\Mapping\Annotation as Gedmo;
 
-use MyFuckinJob\SiteBundle\Entity\DemandeurHoraires;
-use MyFuckinJob\SiteBundle\Entity\Skill;
 
 
 /**
@@ -1617,59 +1614,6 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
         return $this->mobiliter;
     }
 
-    /**
-     * Set horaires
-     *
-     * @param DemandeurHoraires $horaires
-     * @return Demandeur
-     */
-    public function setHoraires(DemandeurHoraires $horaires = null)
-    {
-        $this->horaires = $horaires;
-    }
-
-    /**
-     * Get horaires
-     *
-     * @return \MyFuckinJob\SiteBundle\Entity\DemandeurHoraires 
-     */
-    public function getHoraires()
-    {
-        return $this->horaires;
-    }
-
-    /**
-     * Add skill
-     *
-     * @param \MyFuckinJob\SiteBundle\Entity\Skill $skill
-     * @return Demandeur
-     */
-    public function addSkill(\MyFuckinJob\SiteBundle\Entity\Skill $skill)
-    {
-        $this->skill[] = $skill;
-    
-        return $this;
-    }
-
-    /**
-     * Remove skill
-     *
-     * @param \MyFuckinJob\SiteBundle\Entity\Skill $skill
-     */
-    public function removeSkill(\MyFuckinJob\SiteBundle\Entity\Skill $skill)
-    {
-        $this->skill->removeElement($skill);
-    }
-
-    /**
-     * Get skill
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getSkill()
-    {
-        return $this->skill;
-    }
 
     /**
      * Add experiences

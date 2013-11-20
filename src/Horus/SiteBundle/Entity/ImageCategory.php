@@ -7,7 +7,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 
 /**
- * Article
+ * ImageCategory
  * @ORM\Entity
  * @ORM\Table(name="images_category")
  * @ORM\HasLifecycleCallbacks()

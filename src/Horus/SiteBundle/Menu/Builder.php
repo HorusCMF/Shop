@@ -1,5 +1,5 @@
 <?php
-// src/Acme/DemoBundle/Menu/Builder.php
+
 namespace Horus\SiteBundle\Menu;
 
 use Knp\Menu\FactoryInterface;

@@ -1,5 +1,5 @@
 parameters:
-
+  paginate_by_page: 4
   carte_1 : 4970101122334455
   carte_2 : 4970101122334463
   carte_3 : 4970101122334471

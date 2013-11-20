@@ -15,13 +15,22 @@ use Horus\SiteBundle\Entity\Article;
 class CMSController extends Controller
 {
 
+    /**
+     * All tags
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
     public function tagsAction()
     {
         $em = $this->getDoctrine()->getManager();
         $tags = $em->getRepository('HorusSiteBundle:Tag')->findAll();
+
         return $this->render('HorusSiteBundle:CMS:tags.html.twig', array('tags' => $tags));
     }
 
+    /**
+     * Create a tag
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     */
     public function createtagAction()
     {
         $request = $this->getRequest();
@@ -32,142 +41,159 @@ class CMSController extends Controller
         $form = $this->createForm(new TagType(), $tag);
         $form->handleRequest($request);
 
-        if ($request->getMethod() === "POST") {
 
-            if ($form->isValid()) {
-                $em->persist($tag);
-                $em->flush();
-                $this->get('session')->getFlashBag()->add(
-                    'success',
-                    "Le tag a bien été ajouté"
-                );
-                return $this->redirect($this->generateUrl('horus_site_tags'));
-            }
+        if ($form->isValid()) {
+            $em->persist($tag);
+            $em->flush();
+            $this->get('session')->getFlashBag()->add(
+                'success',
+                "Le tag a bien été ajouté"
+            );
+
+            return $this->redirect($this->generateUrl('horus_site_tags'));
         }
+
         return $this->render('HorusSiteBundle:CMS:createtag.html.twig',
             array(
                 'form' => $form->createView(),
             )
         );
-
     }
 
+    /**
+     * Edit a tag
+     * @param Tag $id
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     */
     public function edittagAction(Tag $id)
     {
         $request = $this->getRequest();
         $em = $this->getDoctrine()->getManager();
 
-
         $form = $this->createForm(new TagType(), $id);
         $form->handleRequest($request);
 
-        if ($request->getMethod() === "POST") {
+        if ($form->isValid()) {
+            $em->persist($id);
+            $em->flush();
+            $this->get('session')->getFlashBag()->add(
+                'success',
+                "Le tag a bien été modifié"
+            );
 
-            if ($form->isValid()) {
-                $em->persist($id);
-                $em->flush();
-                $this->get('session')->getFlashBag()->add(
-                    'success',
-                    "Le tag a bien été modifié"
-                );
-                return $this->redirect($this->generateUrl('horus_site_tags'));
-            }
+            return $this->redirect($this->generateUrl('horus_site_tags'));
         }
+
         return $this->render('HorusSiteBundle:CMS:edittag.html.twig',
             array(
                 'form' => $form->createView(),
                 'tag' => $id,
             )
         );
-
     }
 
 
+    /**
+     * All pages
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
     public function pagesAction()
     {
         $em = $this->getDoctrine()->getManager();
-
+        $pages = $em->getRepository('HorusSiteBundle:Page')->findAll();
         $isarticle = $em->getRepository('HorusSiteBundle:Page')->isArticle();
-        if((int)$isarticle['nombre'] == 0){
+        if ((int)$isarticle['nombre'] == 0) {
             $this->get('session')->getFlashBag()->add(
                 'warning',
                 "N'oubliez pas de créer également un article"
             );
         }
 
-        $pages = $em->getRepository('HorusSiteBundle:Page')->findAll();
         return $this->render('HorusSiteBundle:CMS:pages.html.twig', array('pages' => $pages));
     }
 
+    /**
+     * All Articles
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
     public function articlesAction()
     {
         $em = $this->getDoctrine()->getManager();
-
+        $articles = $em->getRepository('HorusSiteBundle:Article')->findAll();
         $ispage = $em->getRepository('HorusSiteBundle:Article')->isPage();
-        if((int)$ispage['nombre'] == 0){
+        if ((int)$ispage['nombre'] == 0) {
             $this->get('session')->getFlashBag()->add(
                 'warning',
                 "N'oubliez pas de créer également une page"
             );
         }
 
-        $articles = $em->getRepository('HorusSiteBundle:Article')->findAll();
-        return $this->render('HorusSiteBundle:CMS:articles.html.twig', array('articles' => $articles ));
+        return $this->render('HorusSiteBundle:CMS:articles.html.twig', array('articles' => $articles));
     }
 
 
+    /**
+     * Remove a tag
+     * @param Tag $id
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
     public function removetagAction(Tag $id)
     {
         $em = $this->getDoctrine()->getManager();
-
         $em->remove($id);
         $em->flush();
         $this->get('session')->getFlashBag()->add(
             'success',
             "Le tag a bien été supprimé"
         );
+
         return $this->redirect($this->generateUrl('horus_site_tags'));
     }
 
 
+    /**
+     * Create a article
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     */
     public function createarticleAction()
     {
         $request = $this->getRequest();
         $em = $this->getDoctrine()->getManager();
 
         $page = new Article();
-
         $form = $this->createForm(new ArticleType(), $page);
         $form->handleRequest($request);
 
         $ispage = $em->getRepository('HorusSiteBundle:Article')->isPage();
-        if((int)$ispage['nombre'] == 0){
+        if ((int)$ispage['nombre'] == 0) {
             $this->get('session')->getFlashBag()->add(
                 'warning',
                 "N'oubliez pas de créer également une page"
             );
         }
 
-        if ($request->getMethod() === "POST") {
-
-            if ($form->isValid()) {
-                $em->persist($page);
-                $em->flush();
-                $this->get('session')->getFlashBag()->add(
-                    'success',
-                    "L'article a bien été ajouté"
-                );
-                return $this->redirect($this->generateUrl('horus_site_articles'));
-            }
+        if ($form->isValid()) {
+            $em->persist($page);
+            $em->flush();
+            $this->get('session')->getFlashBag()->add(
+                'success',
+                "L'article a bien été ajouté"
+            );
+            return $this->redirect($this->generateUrl('horus_site_articles'));
         }
+
         return $this->render('HorusSiteBundle:CMS:createarticle.html.twig',
             array(
                 'form' => $form->createView(),
             )
         );
-
     }
 
+    /**
+     * Edit a article
+     * @param Article $id
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     */
     public function editarticleAction(Article $id)
     {
         $request = $this->getRequest();
@@ -177,26 +203,25 @@ class CMSController extends Controller
         $form->handleRequest($request);
 
         $ispage = $em->getRepository('HorusSiteBundle:Article')->isPage();
-        if((int)$ispage['nombre'] == 0){
+        if ((int)$ispage['nombre'] == 0) {
             $this->get('session')->getFlashBag()->add(
                 'warning',
                 "N'oubliez pas de créer également une page"
             );
         }
 
-        if ($request->getMethod() === "POST") {
+        if ($form->isValid()) {
+            $id->setDateUpdated(new \Datetime('now'));
+            $em->persist($id);
+            $em->flush();
+            $this->get('session')->getFlashBag()->add(
+                'success',
+                "L'article a bien été editée"
+            );
 
-            if ($form->isValid()) {
-                $id->setDateUpdated(new \Datetime('now'));
-                $em->persist($id);
-                $em->flush();
-                $this->get('session')->getFlashBag()->add(
-                    'success',
-                    "L'article a bien été editée"
-                );
-                return $this->redirect($this->generateUrl('horus_site_articles'));
-            }
+            return $this->redirect($this->generateUrl('horus_site_articles'));
         }
+
         return $this->render('HorusSiteBundle:CMS:editarticle.html.twig',
             array(
                 'form' => $form->createView(),
@@ -206,7 +231,11 @@ class CMSController extends Controller
 
     }
 
-
+    /**
+     * Remove a article
+     * @param Article $id
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
     public function removearticleAction(Article $id)
     {
         $em = $this->getDoctrine()->getManager();
@@ -221,6 +250,11 @@ class CMSController extends Controller
     }
 
 
+    /**
+     * Desactive an article
+     * @param Article $id
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
     public function desactivearticleAction(Article $id)
     {
         $em = $this->getDoctrine()->getManager();
@@ -235,6 +269,11 @@ class CMSController extends Controller
         return $this->redirect($this->generateUrl('horus_site_articles'));
     }
 
+    /**
+     * Active an article
+     * @param Article $id
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
     public function activearticleAction(Article $id)
     {
         $em = $this->getDoctrine()->getManager();
@@ -249,9 +288,13 @@ class CMSController extends Controller
         return $this->redirect($this->generateUrl('horus_site_articles'));
     }
 
+    /**
+     * Get an article
+     * @param Page $id
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
     public function articleAction(PAge $id)
     {
-
         return $this->render('HorusSiteBundle:CMS:article.html.twig',
             array(
                 'category' => $id,
@@ -259,11 +302,10 @@ class CMSController extends Controller
         );
     }
 
-
-
-
-
-
+    /**
+     * Create a page
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     */
     public function createpageAction()
     {
         $request = $this->getRequest();
@@ -274,18 +316,16 @@ class CMSController extends Controller
         $form = $this->createForm(new PageType(), $page);
         $form->handleRequest($request);
 
-        if ($request->getMethod() === "POST") {
-
-            if ($form->isValid()) {
-                $em->persist($page);
-                $em->flush();
-                $this->get('session')->getFlashBag()->add(
-                    'success',
-                    "La page a bien été ajoutée"
-                );
-                return $this->redirect($this->generateUrl('horus_site_pages'));
-            }
+        if ($form->isValid()) {
+            $em->persist($page);
+            $em->flush();
+            $this->get('session')->getFlashBag()->add(
+                'success',
+                "La page a bien été ajoutée"
+            );
+            return $this->redirect($this->generateUrl('horus_site_pages'));
         }
+
         return $this->render('HorusSiteBundle:CMS:createpage.html.twig',
             array(
                 'form' => $form->createView(),
@@ -295,6 +335,11 @@ class CMSController extends Controller
     }
 
 
+    /**
+     * Remove a page
+     * @param Page $id
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
     public function removepageAction(Page $id)
     {
         $em = $this->getDoctrine()->getManager();
@@ -309,27 +354,30 @@ class CMSController extends Controller
     }
 
 
+    /**
+     * Edit a page
+     * @param Page $id
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     */
     public function editpageAction(Page $id)
     {
         $request = $this->getRequest();
         $em = $this->getDoctrine()->getManager();
 
-
         $form = $this->createForm(new PageType(), $id);
         $form->handleRequest($request);
 
-        if ($request->getMethod() === "POST") {
 
-            if ($form->isValid()) {
-                $em->persist($id);
-                $em->flush();
-                $this->get('session')->getFlashBag()->add(
-                    'success',
-                    "La page a bien été editée"
-                );
-                return $this->redirect($this->generateUrl('horus_site_pages'));
-            }
+        if ($form->isValid()) {
+            $em->persist($id);
+            $em->flush();
+            $this->get('session')->getFlashBag()->add(
+                'success',
+                "La page a bien été editée"
+            );
+            return $this->redirect($this->generateUrl('horus_site_pages'));
         }
+
         return $this->render('HorusSiteBundle:CMS:editpage.html.twig',
             array(
                 'form' => $form->createView(),
@@ -339,6 +387,11 @@ class CMSController extends Controller
 
     }
 
+    /**
+     * Edit a page
+     * @param Page $id
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
     public function desactivepageAction(Page $id)
     {
         $em = $this->getDoctrine()->getManager();
@@ -353,6 +406,11 @@ class CMSController extends Controller
         return $this->redirect($this->generateUrl('horus_site_pages'));
     }
 
+    /**
+     * Active a page
+     * @param Page $id
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
     public function activepageAction(Page $id)
     {
         $em = $this->getDoctrine()->getManager();
@@ -367,17 +425,19 @@ class CMSController extends Controller
         return $this->redirect($this->generateUrl('horus_site_pages'));
     }
 
+    /**
+     * Get a page
+     * @param Page $id
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
     public function pageAction(PAge $id)
     {
-
         return $this->render('HorusSiteBundle:CMS:page.html.twig',
             array(
                 'category' => $id,
             )
         );
     }
-
-
 
 
 }

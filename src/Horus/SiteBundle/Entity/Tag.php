@@ -7,7 +7,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 
 /**
- * Article
+ * Tag
  * @ORM\Entity(repositoryClass="Horus\SiteBundle\Repository\TagRepository")
  * @ORM\Table(name="tag")
  * @ORM\HasLifecycleCallbacks()

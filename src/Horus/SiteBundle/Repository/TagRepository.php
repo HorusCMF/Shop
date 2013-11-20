@@ -1,5 +1,4 @@
 <?php
-// src/Acme/StoreBundle/Entity/ProductRepository.php
 namespace Horus\SiteBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;

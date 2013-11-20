@@ -9,7 +9,7 @@
 {% endblock %}
 
 {% block content %}
-    <div id="searchproduct">
+    <div id="searchproduct" class="page">
 
         {% if produits is not empty %}
             <h1><i class="glyphicon glyphicon-shopping-cart"></i> Produits pour "{{ app.request.query.get('word') }}" <span class="label-danger label pull-right"><i class="glyphicon glyphicon-shopping-cart"></i> {{ produits.getTotalItemCount }} produits</span></h1>
@@ -268,7 +268,5 @@
         <div class="pull-right clearing">
             {{ knp_pagination_render(tags) }}
         </div>
-
-
     </div>
 {% endblock %}

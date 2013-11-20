@@ -5,7 +5,6 @@ namespace Horus\SiteBundle\Controller;
 use Doctrine\Common\Util\Debug;
 use Horus\SiteBundle\Form\SearchType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use JMS\SecurityExtraBundle\Annotation\Secure;
 
 class MainController extends Controller
 {
@@ -20,7 +19,6 @@ class MainController extends Controller
 
     }
 
-
     /**
      * Search Action
      * @return \Symfony\Component\HttpFoundation\Response
@@ -33,6 +31,7 @@ class MainController extends Controller
         $form->handleRequest($request);
         $paginator = $this->get('knp_paginator');
 
+        $paginate_by_page =  $this->container->getParameter('paginate_by_page');
 
         $produits = array();
         $pages = array();
@@ -73,7 +72,7 @@ class MainController extends Controller
         $pagination = $paginator->paginate(
             $produits,
             $this->get('request')->query->get('page1', 1) /*page number*/,
-            2 /*limit per page*/,
+            $paginate_by_page,
             array('pageParameterName' => 'page1')
         );
 
@@ -83,7 +82,7 @@ class MainController extends Controller
         $pagination2 = $paginator->paginate(
             $categories,
             $this->get('request')->query->get('page2', 1) /*page number*/,
-            2 /*limit per page*/,
+            $paginate_by_page,
             array('pageParameterName' => 'page2')
         );
 
@@ -93,7 +92,7 @@ class MainController extends Controller
         $pagination3 = $paginator->paginate(
             $familles,
             $this->get('request')->query->get('page3', 1) /*page number*/,
-            2 /*limit per page*/,
+            $paginate_by_page,
             array('pageParameterName' => 'page3')
         );
 
@@ -104,7 +103,7 @@ class MainController extends Controller
         $pagination4 = $paginator->paginate(
             $tags,
             $this->get('request')->query->get('page4', 1) /*page number*/,
-            2 /*limit per page*/,
+            $paginate_by_page,
             array('pageParameterName' => 'page4')
         );
 
@@ -115,7 +114,7 @@ class MainController extends Controller
         $pagination6 = $paginator->paginate(
             $pages,
             $this->get('request')->query->get('page5', 1) /*page number*/,
-            2 /*limit per page*/,
+            $paginate_by_page,
             array('pageParameterName' => 'page5')
         );
 
@@ -126,10 +125,9 @@ class MainController extends Controller
         $pagination7 = $paginator->paginate(
             $articles,
             $this->get('request')->query->get('page6', 1) /*page number*/,
-            2 /*limit per page*/,
+            $paginate_by_page,
             array('pageParameterName' => 'page6')
         );
-
 
         return $this->render('HorusSiteBundle:Main:search.html.twig',
             array('form' => $form->createView(),

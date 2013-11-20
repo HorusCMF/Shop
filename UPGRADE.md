@@ -2,7 +2,9 @@ UPGRADE FROM 1.0 to 1.1
 =======================
 
 ### General
-
+  * Statistics
+  * Emailing Alerts
+  * Configure your Backend : Name, Theme, Colors, VAD Contrate...
   * Real-Time Process in your orders, products, actions of administrators
   * Handle quantity by buttons
   * Handle Sellers by products

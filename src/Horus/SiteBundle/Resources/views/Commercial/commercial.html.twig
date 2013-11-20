@@ -2,16 +2,19 @@
 
 {% block content %}
 
-    <div class="" id="products">
+    <div class="" id="commercial">
         <h2><i class="glyphicon glyphicon-gift"></i> Action commercial "{{ commercial.title|title }}"</h2>
 
         <p>
             {{ commercial.content }}
         </p>
+
         <h3>La catégorie</h3>
+
         <p>
             {{ commercial.category.name|raw }}
         </p>
+
         <p>{{ commercial.nature }}</p>
         {% if commercial.produit.title is defined %}
             <p>Produit</p>
@@ -23,7 +26,6 @@
         {% endif %}
 
         <p>{{ commercial.isVisible }}</p>
-        <p class="clear"></div>
     </div>
 {% endblock %}
 

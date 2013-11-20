@@ -2,15 +2,11 @@
 
 {% block javascripts %}
     {{ parent() }}
-    {% javascripts '@HorusSiteBundle/Resources/public/js/product.js' %}
-    <script src="{{ asset_url }}" type="text/javascript"></script>
-    {% endjavascripts %}
 {% endblock %}
 
 
 {% block content %}
-
-    <div id="editarticle">
+    <div id="createarticle">
         <a class="btn back btn-danger pull-right" href="{{ path('horus_site_articles') }}">&larr; Revenir à la liste des
             article</a>
 
