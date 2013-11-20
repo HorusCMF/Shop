@@ -1,0 +1,309 @@
+hetic_site_main:
+  pattern:  /backend/
+  defaults: { _controller: HorusSiteBundle:Main:index }
+
+hetic_site_root:
+  pattern:  /
+  defaults: { _controller: HorusSiteBundle:Administrateur:login }
+
+hetic_site_dashboard:
+  pattern:  /backend/dashboard
+  defaults: { _controller: HorusSiteBundle:Main:dashboard }
+
+
+
+###
+### Products
+###
+
+hetic_site_products:
+  pattern:  /backend/produits
+  defaults: { _controller: HorusSiteBundle:Product:products }
+
+hetic_site_remove_product:
+  pattern:  /backend/produit/suppression/{id}
+  defaults: { _controller: HorusSiteBundle:Product:removeproduct }
+
+hetic_site_remove_image_product:
+  pattern:  /backend/produit-image/suppression/{id}
+  defaults: { _controller: HorusSiteBundle:Product:removeimageproduct }
+
+hetic_site_cover_image_product:
+  pattern:  /backend/produit-image/cover/{id}
+  defaults: { _controller: HorusSiteBundle:Product:coverimageproduct }
+
+hetic_site_active_product:
+  pattern:  /backend/produit/activation/{id}
+  defaults: { _controller: HorusSiteBundle:Product:activeproduct }
+
+hetic_site_desactive_product:
+  pattern:  /backend/produit/desactivation/{id}
+  defaults: { _controller: HorusSiteBundle:Product:desactiveproduct }
+
+hetic_site_create_product:
+  pattern:  /backend/creer-un-produit
+  defaults: { _controller: HorusSiteBundle:Product:createproduct }
+
+hetic_site_edit_product:
+  pattern:  /backend/editer-un-produit/{id}
+  defaults: { _controller: HorusSiteBundle:Product:editproduct }
+
+hetic_site_visualize_product:
+  pattern:  /backend/voir-un-produit/{id}
+  defaults: { _controller: HorusSiteBundle:Product:visualizeproduct }
+
+hetic_site_edit_pictures_product:
+  pattern:  /backend/photo-du-produit/{id}
+  defaults: { _controller: HorusSiteBundle:Product:pictureproduct }
+
+hetic_site_commands:
+  pattern:  /backend/commandes
+  defaults: { _controller: HorusSiteBundle:Main:commands }
+
+
+
+
+###
+### Famille
+###
+
+hetic_site_famille:
+  pattern:  /backend/famille/{id}
+  defaults: { _controller: HorusSiteBundle:Category:famille }
+
+hetic_site_familles:
+  pattern:  /backend/familles
+  defaults: { _controller: HorusSiteBundle:Category:familles }
+
+hetic_site_add_famille:
+  pattern:  /backend/familles/ajouter
+  defaults: { _controller: HorusSiteBundle:Category:createfamille }
+
+hetic_site_remove_famille:
+  pattern:  /backend/familles/supprimer/{id}
+  defaults: { _controller: HorusSiteBundle:Category:removefamille }
+
+hetic_site_edit_famille:
+  pattern:  /backend/familles/editer/{id}
+  defaults: { _controller: HorusSiteBundle:Category:editfamille }
+
+
+
+
+###
+### Medias
+###
+
+hetic_site_medias:
+  pattern:  /backend/medias
+  defaults: { _controller: HorusSiteBundle:Medias:medias }
+
+
+
+
+###
+### Categories
+###
+
+hetic_site_categories:
+  pattern:  /backend/categories
+  defaults: { _controller: HorusSiteBundle:Category:categories }
+
+hetic_site_add_category:
+  pattern:  /backend/category/ajouter
+  defaults: { _controller: HorusSiteBundle:Category:createcategory }
+
+hetic_site_edit_image_category:
+  pattern:  /backend/photo-de-category/{id}
+  defaults: { _controller: HorusSiteBundle:Category:picturecategory }
+
+hetic_site_category:
+  pattern:  /backend/category/{id}
+  defaults: { _controller: HorusSiteBundle:Category:category }
+
+hetic_site_cover_image_category:
+  pattern:  /backend/category-image/cover/{id}
+  defaults: { _controller: HorusSiteBundle:Category:coverimagecategory }
+
+hetic_site_remove_image_category:
+  pattern:  /backend/photo-de-category/suppression/{id}
+  defaults: { _controller: HorusSiteBundle:Category:removeimagecategory }
+
+hetic_site_remove_category:
+  pattern:  /backend/category/supprimer/{id}
+  defaults: { _controller: HorusSiteBundle:Category:removecategory }
+
+hetic_site_edit_category:
+  pattern:  /backend/category/editer/{id}
+  defaults: { _controller: HorusSiteBundle:Category:editcategory }
+
+hetic_site_active_category:
+  pattern:  /backend/category/activation/{id}
+  defaults: { _controller: HorusSiteBundle:Category:activecategory }
+
+hetic_site_desactive_category:
+  pattern:  /backend/category/desactivation/{id}
+  defaults: { _controller: HorusSiteBundle:Category:desactivecategory }
+
+
+
+
+###
+### Pages
+###
+hetic_site_page:
+  pattern:  /backend/voir-page/{id}
+  defaults: { _controller: HorusSiteBundle:CMS:page }
+
+hetic_site_pages:
+  pattern:  /backend/pages
+  defaults: { _controller: HorusSiteBundle:CMS:pages }
+
+hetic_site_page_create:
+  pattern:  /backend/page/ajouter
+  defaults: { _controller: HorusSiteBundle:CMS:createpage }
+
+hetic_site_remove_page:
+  pattern:  /backend/page/supprimer/{id}
+  defaults: { _controller: HorusSiteBundle:CMS:removepage }
+
+hetic_site_edit_page:
+  pattern:  /backend/page/editer/{id}
+  defaults: { _controller: HorusSiteBundle:CMS:editpage }
+
+hetic_site_active_page:
+  pattern:  /backend/page/activation/{id}
+  defaults: { _controller: HorusSiteBundle:CMS:activepage }
+
+hetic_site_desactive_page:
+  pattern:  /backend/page/desactivation/{id}
+  defaults: { _controller: HorusSiteBundle:CMS:desactivepage }
+
+
+
+
+
+###
+### Article
+###
+hetic_site_article:
+  pattern:  /backend/voir-article/{id}
+  defaults: { _controller: HorusSiteBundle:CMS:article }
+
+hetic_site_articles:
+  pattern:  /backend/articles
+  defaults: { _controller: HorusSiteBundle:CMS:articles }
+
+hetic_site_article_create:
+  pattern:  /backend/article/ajouter
+  defaults: { _controller: HorusSiteBundle:CMS:createarticle }
+
+hetic_site_remove_article:
+  pattern:  /backend/article/supprimer/{id}
+  defaults: { _controller: HorusSiteBundle:CMS:removearticle }
+
+hetic_site_edit_article:
+  pattern:  /backend/article/editer/{id}
+  defaults: { _controller: HorusSiteBundle:CMS:editarticle }
+
+hetic_site_active_article:
+  pattern:  /backend/article/activation/{id}
+  defaults: { _controller: HorusSiteBundle:CMS:activearticle }
+
+hetic_site_desactive_article:
+  pattern:  /backend/article/desactivation/{id}
+  defaults: { _controller: HorusSiteBundle:CMS:desactivearticle }
+
+
+
+
+
+###
+### Commercials
+###
+hetic_site_commercial:
+  pattern:  /backend/voir-commercial/{id}
+  defaults: { _controller: HorusSiteBundle:Commercial:commercial }
+
+hetic_site_commercials:
+  pattern:  /backend/commercials
+  defaults: { _controller: HorusSiteBundle:Commercial:commercials }
+
+hetic_site_commercial_create:
+  pattern:  /backend/commercial/ajouter
+  defaults: { _controller: HorusSiteBundle:Commercial:createcommercial }
+
+hetic_site_remove_commercial:
+  pattern:  /backend/commercial/supprimer/{id}
+  defaults: { _controller: HorusSiteBundle:Commercial:removecommercial }
+
+hetic_site_edit_commercial:
+  pattern:  /backend/commercial/editer/{id}
+  defaults: { _controller: HorusSiteBundle:Commercial:editcommercial }
+
+hetic_site_active_commercial:
+  pattern:  /backend/commercial/activation/{id}
+  defaults: { _controller: HorusSiteBundle:Commercial:activecommercial }
+
+hetic_site_desactive_commercial:
+  pattern:  /backend/commercial/desactivation/{id}
+  defaults: { _controller: HorusSiteBundle:Commercial:desactivecommercial }
+
+
+
+
+
+
+###
+### Tags
+###
+hetic_site_tag:
+  pattern:  /backend/voir-tag/{id}
+  defaults: { _controller: HorusSiteBundle:CMS:tag }
+
+hetic_site_tags:
+  pattern:  /backend/tags
+  defaults: { _controller: HorusSiteBundle:CMS:tags }
+
+hetic_site_tag_create:
+  pattern:  /backend/tag/ajouter
+  defaults: { _controller: HorusSiteBundle:CMS:createtag }
+
+hetic_site_remove_tag:
+  pattern:  /backend/tag/supprimer/{id}
+  defaults: { _controller: HorusSiteBundle:CMS:removetag }
+
+hetic_site_edit_tag:
+  pattern:  /backend/tag/editer/{id}
+  defaults: { _controller: HorusSiteBundle:CMS:edittag }
+
+
+
+###
+### Statics
+###
+hetic_about:
+  pattern:  /about
+  defaults: { _controller: HorusSiteBundle:Main:about }
+
+hetic_contact:
+  pattern:  /contact
+  defaults: { _controller: HorusSiteBundle:Main:contact }
+
+hetic_search:
+    pattern:  /recherche/
+    defaults: { _controller: HorusSiteBundle:Main:search }
+
+hetic_search_avanced:
+    pattern:  /recherche-avancee/
+    defaults: { _controller: HorusSiteBundle:Main:advancedsearch }
+
+login:
+  pattern:  /login
+  defaults: { _controller: HorusSiteBundle:Administrateur:login }
+
+login_check:
+  pattern:   /backend/login_check
+
+logout:
+  pattern:   /backend/logout

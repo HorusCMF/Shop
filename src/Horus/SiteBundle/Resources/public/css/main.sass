@@ -1,0 +1,510 @@
+@import "compass"
+
+
+/*
+ * Global Variable
+ */
+
+$helvetica: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif
+$blue: #2980b9
+
+
+/*
+ * --------------------------------------------------------------------------------------------------------------------------------
+ */
+
+
+/*
+ * Clear Page
+ */
+@mixin clearfix()
+  &:before,&:after
+    content: ""
+    display: table
+  &:after
+    clear: both
+
+
+/*
+ * Full Page
+ */
+@mixin fullpage()
+  width: 100%
+  height: 100%
+
+/*
+ * Get Compatible property
+ */
+@mixin vendorize($property, $value)
+  -webkit-#{$property}: $value
+  -moz-#{$property}: $value
+  -ms-#{$property}: $value
+  -o-#{$property}: $value
+  #{$property}: $value
+
+
+/*
+ * Get Clear method
+ */
+@mixin clear()
+  &:before, &:after
+    content: "\0020"
+    display: block
+    height: 0
+    overflow: hidden
+  &:after
+    clear: both
+
+/*
+ * Get Test Out of Page
+ */
+@mixin linkTextOffscreen()
+  text-indent: -9999px
+  overflow: hidden
+  text-decoration: none
+  display: block
+  font-size: 0
+  text-align: start
+
+/*
+ * Get Common Property
+ */
+@mixin hoverActiveFocus($property, $value)
+  &:hover, &:active, &:focus
+    #{$property}: $value
+
+
+/*
+ * Get Font Size Responsive
+ */
+@mixin font-size($sizeValue: 1.6)
+  font-size: ($sizeValue * 10) + px
+  font-size: $sizeValue + rem
+
+
+/*
+ * --------------------------------------------------------------------------------------------------------------------------------
+ */
+
+
+
+
+/*
+ * General dom Elements
+ */
+body
+  background: url('https://www.myposeo.com/img/frontend/main_background.jpg')
+  margin: 0
+  padding: 0
+label
+  font-size: 18px
+  color: brown
+  font-family: 'Lobster',cursive
+  margin-top: 15px
+#status
+  label
+    margin-top: 0px
+
+.nav-tabs>li.active>a
+  text-shadow: 1px 1px #631400,1px 1px #631400
+
+.form-control
+  font-size: 16px
+a
+  color: chocolate
+a.list-group-item
+  color: #222
+.navbar-default
+  @include box-shadow(1px 1px 12px #555)
+
+hr.fancy-line
+  border: 0
+  height: 1px
+
+
+hr.fancy-line:before
+  top: -0.5em
+  height: 1em
+
+hr.fancy-line:after
+  content: ''
+  height: 0.5em
+  top: 1px
+
+.iradio_flat-green
+  margin-right: 7px
+hr.fancy-line:before, hr.fancy-line:after
+  content: ''
+  position: absolute
+  width: 100%
+
+hr.fancy-line, hr.fancy-line:before
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 75%)
+
+
+hr.fancy-line:after
+  background: #f4f4f4
+
+.table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td
+  color: #555
+
+.maincontent
+  button[type="submit"]
+    width: 100%
+    margin-top: 5px
+    color: white
+    text-shadow: 1px 1px #160100,1px 1px #160100
+    border: 1px solid #4F0D1C
+    background: #8a1720
+    background: -moz-linear-gradient(top, #8a1720 0%, #601011 100%)
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8a1720), color-stop(100%,#601011))
+    background: -webkit-linear-gradient(top, #8a1720 0%,#601011 100%)
+    background: -o-linear-gradient(top, #8a1720 0%,#601011 100%)
+    background: -ms-linear-gradient(top, #8a1720 0%,#601011 100%)
+    background: linear-gradient(to bottom, #8a1720 0%,#601011 100%)
+
+input:invalid,
+textarea:invalid,
+select:invalid
+  color: #b94a48
+  border-color: #ee5f5b
+  &:focus
+    border-color: darken(#ee5f5b, 10%)
+    @include box-shadow(0 0 6px lighten(#ee5f5b, 20%))
+
+.container-fluid
+  min-height: 700px
+  height: auto !important
+  height: 100%
+  margin: 0 auto 0px
+
+.nav-pills>li>a
+  color: white
+  text-shadow: 1px 1px #49080c, 1px 1px #49080c
+.nav>li>a:hover, .nav>li>a:focus
+  text-decoration: none
+  background-color: #49080c
+  color: white
+
+.media-body
+  min-height: 155px
+
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus
+  background-color: darkslategrey
+  color: white
+
+.navbar-nav>li>.dropdown-menu
+  border: none
+
+#closepanel, #closesearch
+  position: relative
+  top: 15px
+  right: 12px
+
+.table-bordered,.table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td
+  border: 1px solid brown
+
+#advancedsearch
+  .row-fluid
+    .span2
+      width: 10.5%
+      label
+        font-size: 16px
+  button[type="submit"]
+    width: 100%
+    border: 1px solid brown
+    color: #fff
+    background-color: #8a1720
+    &:hover
+      border: 1px solid #8a1720
+
+.pagination>li>a, .pagination>li>span,.pagination>li>a, .pagination>li>span, .pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus, .pagination>.disabled>span, .pagination>.disabled>span:hover, .pagination>.disabled>span:focus, .pagination>.disabled>a, .pagination>.disabled>a:hover, .pagination>.disabled>a:focus
+  background-color: brown
+  border-color: brown
+  color: white
+  text-shadow: 1px 1px #6b0007, 1px 1px #6b0007
+
+.pagination>li>a:hover, .pagination>li>span:hover, .pagination>li>a:focus, .pagination>li>span:focus
+  background-color: chocolate
+
+.dz-default
+  box-shadow: 1px 1px 13px #ccc
+  padding: 50px
+  font-size: 25px
+  border: 6px dashed #ddd
+
+.dz-default:hover, .dz-default:focus
+  background: #eee
+
+.dz-success-mark, .dz-error-mark, .dz-filename, .dz-size, .dz-progress
+  display: none
+
+.modal-content
+  background-color: white
+
+.zoom
+  cursor: pointer
+
+.whitetext
+  color: white
+.span3
+  .panel-body
+    .nav-tabs>li>a
+      font-size: 11px
+      color: white
+    .table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th
+      background-color: brown
+      border: none
+
+    .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td
+      border: none
+      font-size: 11px
+
+#footer
+  background-color: #111
+  height: 150px
+  border: 1px solid black
+
+.clear
+  clear: both
+.clearing
+  background-color: beige
+  width: 100%
+  text-align: right
+  padding-right: 50px
+  margin-top: 10px
+  margin-bottom: 10px
+
+.panel
+  background-color: darkred
+
+.form-signin
+  max-width: 330px
+  padding: 15px
+  margin: 0 auto
+
+.img-thumbnail
+  background-color: transparent
+
+.well
+  background-color: cornsilk
+  border: 1px solid bisque
+
+
+.maincontent
+  img
+    max-width: 100%
+  .tab-content>.tab-pane
+    border: 1px dashed coral
+    padding: 15px
+    background-color: white
+    border-radius: 4px
+
+.panel-primary
+  border: none
+
+.nav-tabs
+  border: none
+
+img.img-thumbnail
+  max-width: 230px
+
+.multiselect-container>li>a>label
+  font-size: 12px
+
+h1, h2
+  color: darkslategrey
+  font-size: 34px
+
+.media
+  img
+    max-width: 200px
+
+.nav-tabs>li>a:hover
+  border-color: transparent transparent brown
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus
+  background-color: brown
+
+#searchmenu
+  background-color: darkred
+  border: none
+  box-shadow: none
+
+.scrollup
+  width: 40px
+  height: 40px
+  opacity: 0.3
+  position: fixed
+  bottom: 50px
+  right: 100px
+  display: none
+  text-indent: -9999px
+  background: url('http://www.pawelkaim.com/img/arrowTop.png')
+
+.container-fluid
+  padding-top: 70px
+
+.panel-body
+  box-shadow: inset 0 0 10px #6b0007
+
+.back
+  font-size: 11px
+  background-color: darkslategrey
+  border: 1px solid #222
+
+@media (max-width: 600px)
+  #searchmenu
+    margin-bottom: 10px
+  .span3
+    .panel
+      display: none
+  .scrollup
+    display: none
+    text-indent: -9999px
+    opacity: 0
+    cursor: none
+    background: none
+  .back
+    display: none
+  label
+    font-size: 16px
+  .nav>li
+    margin-left: 5px
+  .nav-tabs>li>a
+    font-size: 11px
+  .navbar-fixed-top, .navbar-fixed-bottom
+    position: fixed
+  .navbar-default
+    .navbar-brand
+      position: relative
+      left: 50px
+  .label
+    font-size: 64%
+  .navbar-default
+    margin: 0
+  .form-control
+    font-size: 14px
+  h1,h2
+    font-size: 22px
+  h3,h4
+    font-size: 14px
+  .btn
+    font-size: 12px
+  .media-body
+    font-size: 11px
+  .form-control
+    height: 35px
+  p
+    font-size: 11px
+  .nav-pills>li>a
+    font-size: 12px
+  .media-heading
+    font-size: 15px
+  .media
+    .pull-right
+      clear: both
+
+
+/*
+ * --------------------------------------------------------------------------------------------------------------------------------
+ */
+
+//Presentation
+#presentation
+  color: brown
+/*
+ * --------------------------------------------------------------------------------------------------------------------------------
+ */
+
+/*
+ * General blocks
+ */
+//
+//
+///* Main Container */
+.container
+  .maincontent
+    background-color: #fff
+    background-image: linear-gradient(#eee .1em, transparent .1em)
+    background-size: 100% 1.2em
+    border-radius: 5px
+    color: darkgoldenrod
+    padding: 10px
+    border: 1px solid #ddd
+
+//  position: relative
+//  @include fullpage()
+//  left: 0
+//  +transition(left 0.4s ease-in-out)
+//  .open-sidebar
+//    left: 240px
+//
+//  /* Sidebar Element */
+//  #sidebar
+//    position: absolute
+//    left: -240px
+//    background: $blue
+//    width: 240px
+//    height: 100%
+//    @include box-sizing(border-box)
+//    a
+//      padding: 15px 20px
+//      font-size: 16px
+//      font-weight: 100
+//      color: white
+//      text-decoration: none
+//      display: block
+//      border-bottom: 1px solid $blue
+//      +transition(background 0.3s ease-in-out)
+//      cursor: pointer
+//      &:hover
+//        background: #3498db
+//
+//  /* Main Content */
+//  .main-content
+//    @include fullpage()
+//    @include box-sizing(border-box)
+//    padding: 10px
+//    position: relative
+//
+//    /* Content */
+//    .content
+//      @include box-sizing(border-box)
+//      padding-left: 60px
+//      width: 100%
+//      h1
+//        font-weight: 100
+//
+//    /* Sidebar */
+//    #sidebar-toggle
+//      background: $blue
+//      @include border-radius(3px)
+//      display: block
+//      position: relative
+//      padding: 10px 7px
+//      float: left
+//      cursor: pointer
+//      span
+//        display: block
+//        width: 18px
+//        margin-bottom: 3px
+//        height: 2px
+//        background-color: #fff
+//        @include border-radius(1px)
+//        &:last-child
+//          margin-bottom: 0
+//
+
+
+/*
+ * --------------------------------------------------------------------------------------------------------------------------------
+ */
+
+/*
+ * General Classes
+ */
+ .clear
+  both
+
+

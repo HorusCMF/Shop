@@ -1,0 +1,15 @@
+{% block search %}
+    <form action="{{ path('hetic_search_avanced') }}" class="span12" role="search" method="post">
+        <div class="form-group">
+            <div class="col-xs-8">
+                {{ form_widget(form.search, {'attr' : {'value' : app.request.query.get('word')}}) }}
+                {{ form_errors(form.search) }}
+            </div>
+            <button type="submit" class="btn btn-primary"><i
+                        class="glyphicon glyphicon-search"></i></button>
+            <a id="moresearch" class="btn btn-primary"><i
+                        class="glyphicon glyphicon-plus-sign"></i> </a>
+        </div>
+    </form>
+{% endblock %}
+

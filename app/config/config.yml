@@ -1,9 +1,9 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
-    - { resource: '@HeticSiteBundle/Resources/config/config.yml' }
-    - { resource: '@HeticSiteBundle/Resources/config/services.xml' }
-#    - { resource: "@HeticSiteBundle/Resources/config/services.xml" }
+    - { resource: '@HorusSiteBundle/Resources/config/config.yml' }
+    - { resource: '@HorusSiteBundle/Resources/config/services.xml' }
+#    - { resource: "@HorusSiteBundle/Resources/config/services.xml" }
 
 framework:
     esi:             ~
@@ -30,7 +30,7 @@ twig:
     strict_variables: %kernel.debug%
     form:
       resources:
-          - 'HeticSiteBundle:Default:forms.html.twig'
+          - 'HorusSiteBundle:Default:forms.html.twig'
 
 
 
@@ -38,7 +38,7 @@ twig:
 assetic:
     debug:          "%kernel.debug%"
     use_controller: false
-    bundles:        ["HeticSiteBundle"]
+    bundles:        ["HorusSiteBundle"]
     #java: /usr/bin/java
     filters:
          cssrewrite: ~
@@ -124,7 +124,7 @@ jms_security_extra:
 # app/config/config.yml
 knp_menu:
     twig:  # use "twig: false" to disable the Twig extension and the TwigRenderer
-        template: "HeticSiteBundle:Default:menu.html.twig"
+        template: "HorusSiteBundle:Default:menu.html.twig"
     templating: false # if true, enables the helper for PHP templates
     default_renderer: twig # The renderer to use, list is also available by default
 
@@ -176,8 +176,8 @@ fos_elastica:
                          description: { type: string }
                 persistence:
                     driver: orm
-                    model: Hetic\SiteBundle\Entity\Article
-                    repository: Hetic\SiteBundle\Entity\ArticleRepository
+                    model: Horus\SiteBundle\Entity\Article
+                    repository: Horus\SiteBundle\Entity\ArticleRepository
                     provider:
                         query_builder_method: createIsActiveQueryBuilder
                     finder: ~
@@ -197,8 +197,8 @@ fos_elastica:
                          content: { type: string }
                 persistence:
                     driver: orm
-                    model: Hetic\SiteBundle\Entity\Category
-                    repository: Hetic\SiteBundle\Entity\CategoryRepository
+                    model: Horus\SiteBundle\Entity\Category
+                    repository: Horus\SiteBundle\Entity\CategoryRepository
                     provider:
                         query_builder_method: getActiveCategoryQueryBuilder
                     finder: ~
@@ -209,8 +209,8 @@ fos_elastica:
                     content: { type: string }
                 persistence:
                     driver: orm
-                    model: Hetic\SiteBundle\Entity\Commercial
-                    repository: Hetic\SiteBundle\Entity\CommercialRepository
+                    model: Horus\SiteBundle\Entity\Commercial
+                    repository: Horus\SiteBundle\Entity\CommercialRepository
                     provider:
                         query_builder_method: getActiveCommercialQueryBuilder
                     finder: ~
@@ -230,8 +230,8 @@ fos_elastica:
                          content: { type: string }
                 persistence:
                     driver: orm
-                    model: Hetic\SiteBundle\Entity\Famille
-                    repository: Hetic\SiteBundle\Entity\FamilleRepository
+                    model: Horus\SiteBundle\Entity\Famille
+                    repository: Horus\SiteBundle\Entity\FamilleRepository
                     provider:
                         query_builder_method: getActiveFamilleQueryBuilder
                     finder: ~
@@ -242,8 +242,8 @@ fos_elastica:
                     cover: { type: string }
                 persistence:
                     driver: orm
-                    model: Hetic\SiteBundle\Entity\Image
-                    repository: Hetic\SiteBundle\Entity\ImageRepository
+                    model: Horus\SiteBundle\Entity\Image
+                    repository: Horus\SiteBundle\Entity\ImageRepository
                     provider:
                         query_builder_method: getActiveImageQueryBuilder
                     finder: ~
@@ -263,8 +263,8 @@ fos_elastica:
                          content: { type: string }
                 persistence:
                     driver: orm
-                    model: Hetic\SiteBundle\Entity\Page
-                    repository: Hetic\SiteBundle\Entity\PageRepository
+                    model: Horus\SiteBundle\Entity\Page
+                    repository: Horus\SiteBundle\Entity\PageRepository
                     provider:
                         query_builder_method: getActivePageQueryBuilder
                     finder: ~
@@ -309,8 +309,8 @@ fos_elastica:
                     prixTTC: { type: float }
                 persistence:
                     driver: orm
-                    model: Hetic\SiteBundle\Entity\Produit
-                    repository: Hetic\SiteBundle\Entity\ProduitRepository
+                    model: Horus\SiteBundle\Entity\Produit
+                    repository: Horus\SiteBundle\Entity\ProduitRepository
                     provider:
                         query_builder_method: getActiveProduitQueryBuilder
                     finder: ~
@@ -320,8 +320,8 @@ fos_elastica:
                     word: {type: string }
                 persistence:
                     driver: orm
-                    model: Hetic\SiteBundle\Entity\Tag
-                    repository: Hetic\SiteBundle\Entity\CategoryRepository
+                    model: Horus\SiteBundle\Entity\Tag
+                    repository: Horus\SiteBundle\Entity\CategoryRepository
                     provider:
                         query_builder_method: getTags
                     finder: ~

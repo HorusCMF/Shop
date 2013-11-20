@@ -41,7 +41,7 @@ All informations about contributing to Horus CMF can be found on [this page](htt
 Horus CMF on twitter
 -----------------
 
-If you want to keep up with the updates, [follow the official Horus CMF account on twitter](http://twitter.com/Horus CMF).
+If you want to keep up with the updates, [follow the official Horus CMF account on twitter](https://twitter.com/HorusCMF).
 
 Bug tracking
 ------------
@@ -58,4 +58,4 @@ Authors
 -------
 
 Horus CMF was originally created by [Symfomany]
-See the list of [contributors](https://github.com/Horus CMF/Horus CMF/contributors).
+See the list of [contributors](https://github.com/HorusCMF/HorusCMF/contributors).

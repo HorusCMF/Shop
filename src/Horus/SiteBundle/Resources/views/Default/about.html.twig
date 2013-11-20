@@ -1,0 +1,23 @@
+{% extends 'HorusSiteBundle::layout.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {% javascripts '@HorusSiteBundle/Resources/public/js/index.js' filter="cssrewrite" %}
+        <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
+
+{% endblock %}
+
+{% block content %}
+        <div class="row-fluid">
+            <div class="span8">
+                <h2>Crédits</h2>
+                <h3>Cours de Symfony 2 par Boyer Julien</h3>
+                <img src="http://plateforme-depf.mnhn.fr/file.php/1/Images-integration/hetic.jpg" class="pull-right img-polaroid">
+                <p>Application Hetic</p>
+                <p>Symfony 2.4</p>
+
+            </div>
+        </div>
+{% endblock %}
+

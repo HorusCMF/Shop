@@ -1,0 +1,18 @@
+{% extends 'HorusSiteBundle::layout.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {% javascripts '@HorusSiteBundle/Resources/public/js/index.js' filter="cssrewrite" %}
+        <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
+
+{% endblock %}
+
+{% block content %}
+        <div class="row-fluid">
+            <div class="span8">
+                <h2>Page de contact</h2>
+            </div>
+        </div>
+{% endblock %}
+

@@ -1,0 +1,1199 @@
+<?php
+
+namespace Hetic\SiteBundle\Entity;
+
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
+
+/**
+ * Article
+ * @ORM\Entity(repositoryClass="Hetic\SiteBundle\Repository\ProduitRepository")
+ * @ORM\Table(name="produit")
+ * @ORM\HasLifecycleCallbacks()
+ */
+class Produit
+{
+
+    public function __construct(){
+        $this->datePublication = new \Datetime('now');
+        $this->dateCreated = new \Datetime('now');
+        $this->dateUpdated = new \Datetime('now');
+        $this->isShop = true;
+    }
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var integer
+     * @Assert\NotBlank(
+     *     message = "La référence ne doit pas etre vide"
+     * )
+     * @Assert\Length(
+     *      min = "4",
+     *      max = "200",
+     *      minMessage = "Votre référence doit faire au moins {{ limit }} caractères",
+     *      maxMessage = "Votre référence ne peut pas être plus long que {{ limit }} caractères"
+     * )
+     * @ORM\Column(name="reference", type="string", length=200, nullable=false)
+     */
+    private $reference;
+
+    /**
+     * @var integer
+     * @Assert\Length(
+     *      min = "8",
+     *      max = "200",
+     *      minMessage = "Votre video doit faire au moins {{ limit }} caractères",
+     *      maxMessage = "Votre video ne peut pas être plus long que {{ limit }} caractères"
+     * )
+     * @ORM\Column(name="video", type="string", length=200, nullable=false)
+     */
+    private $video;
+
+    /**
+     * @Assert\Length(
+     *      min = "8",
+     *      max = "200",
+     *      minMessage = "Votre service doit faire au moins {{ limit }} caractères",
+     *      maxMessage = "Votre service ne peut pas être plus long que {{ limit }} caractères"
+     * )
+     * @ORM\Column(name="service", type="text", nullable=false)
+     */
+    private $service;
+
+    /**
+     * @var integer
+     * @Assert\Regex(pattern="/^([0-9]){13}$/", message="EAN 13 est invalide")
+     * @ORM\Column(name="ean", type="string", length=200, nullable=false)
+     */
+    private $ean;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="status", type="integer", nullable=false)
+     */
+    private $status;
+
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="isShop", type="boolean", nullable=false)
+     */
+    private $isShop;
+
+
+    /**
+     * @Assert\NotBlank(
+     *     message = "Le prix TTC ne doit pas etre vide"
+     * )
+     * @ORM\Column(name="prixTTC", type="float", nullable=false)
+     */
+    private $prixTTC;
+
+    /**
+     * @Assert\NotBlank(
+     *     message = "Le prix HT ne doit pas etre vide"
+     * )
+     * @ORM\Column(name="prixHT", type="float", nullable=false)
+     */
+    private $prixHT;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="etat", type="integer", nullable=false)
+     */
+    private $etat;
+
+
+    /**
+     * @Assert\NotBlank(
+     *     message = "Le titre ne doit pas etre vide"
+     * )
+     * @Assert\Length(
+     *      min = "5",
+     *      max = "200",
+     *      minMessage = "Votre titre doit faire au moins {{ limit }} caractères",
+     *      maxMessage = "Votre titre ne peut pas être plus long que {{ limit }} caractères"
+     * )
+     * @ORM\Column(name="title", type="string", length=200, nullable=true)
+     */
+    private $title;
+
+
+    /**
+     * @Assert\NotBlank(
+     *     message = "L'accroche ne doit pas etre vide"
+     * )
+     * @Assert\Length(
+     *      min = "5",
+     *      max = "200",
+     *      minMessage = "Votre accroche doit faire au moins {{ limit }} caractères",
+     *      maxMessage = "Votre accroche ne peut pas être plus long que {{ limit }} caractères"
+     * )
+     * @ORM\Column(name="accroche", type="string", length=200, nullable=true)
+     */
+    private $accroche;
+
+
+    /**
+     * @Assert\Choice(choices = {"1","2", "3"}, message = "Choisissez un genre valide.")
+     * @ORM\Column(name="nature", type="integer", length=200, nullable=true)
+     */
+    private $nature;
+
+    /**
+     * @Assert\NotBlank(message = "Le contenu de couverture est vide :(")
+     * @ORM\Column(name="cover", type="text", nullable=true)
+     */
+    private $cover;
+
+    /**
+     * @Assert\NotBlank(message = "La description est vide :(")
+     * @ORM\Column(name="content", type="text", nullable=true)
+     */
+    private $content;
+
+    /**
+     * @ORM\Column(name="extras", type="text", nullable=true)
+     */
+    private $extras;
+
+    /**
+     * @var string
+     * @Assert\DateTime(message = "Votre date de publication est invalide")
+     * @ORM\Column(name="datePublication", type="datetime", nullable=true)
+     */
+    private $datePublication;
+
+    /**
+     * @var string
+     * @ORM\Column(name="isVisible", type="boolean", nullable=true)
+     */
+    private $isVisible;
+
+    /**
+     * @var string
+     * @ORM\Column(name="livraison", type="integer", nullable=true)
+     */
+    private $livraison;
+
+    /**
+     * @var string
+     * @ORM\Column(name="quantity", type="integer", nullable=true)
+     */
+    private $quantity;
+
+    /**
+     * @var string
+     * @ORM\Column(name="tva", type="integer", nullable=true)
+     */
+    private $tva;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="date_created", type="datetime", nullable=true)
+     */
+    private $dateCreated;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="date_updated", type="datetime", nullable=true)
+     */
+    private $dateUpdated;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Category", inversedBy="produits")
+     * @ORM\JoinColumn(name="category_id", referencedColumnName="id")
+     */
+    private $category;
+
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Category", inversedBy="articless")
+     * @ORM\JoinTable(name="produit_category")
+     */
+    private $cates;
+
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Famille", inversedBy="produits")
+     * @ORM\JoinTable(name="produit_famille")
+     */
+    private $familles;
+
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Tag", inversedBy="tags", cascade={"all"},orphanRemoval=true)
+     * @ORM\JoinTable(name="produit_tags")
+     */
+    private $tags;
+
+
+    /**
+     * @var integer
+     * @ORM\Column(name="point", type="integer", nullable=true)
+     */
+    private $point;
+
+
+    /**
+     * @ORM\OneToMany(targetEntity="Seo",mappedBy="produit", cascade={"all"},orphanRemoval=true)
+     */
+    protected $seo;
+
+    /**
+     * @ORM\OneToOne(targetEntity="Produit")
+     * @ORM\JoinColumn(name="parent_id", referencedColumnName="id")
+     */
+    protected $prodparent;
+
+
+    /**
+     * @ORM\OneToMany(targetEntity="Meta",mappedBy="produit", cascade={"all"},orphanRemoval=true)
+     */
+    protected $metas;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Image",mappedBy="produit", cascade={"all"},orphanRemoval=true)
+     */
+    protected $images;
+
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Article", inversedBy="produits", cascade={"all"},orphanRemoval=true)
+     * @ORM\JoinTable(name="article_produit")
+     */
+    protected $articles;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Produit", mappedBy="articlesaccesories")
+     */
+    protected $accesories;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Produit", inversedBy="accesories",cascade={"all"},orphanRemoval=true)
+     * @ORM\JoinTable(name="produit_accessories")
+     */
+    protected $articlesaccesories;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set title
+     *
+     * @param string $title
+     * @return Article
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+    
+        return $this;
+    }
+
+    /**
+     * Set title
+     *
+     * @param text $title
+     * @return Image
+     */
+    public function getStarPicture()
+    {
+        $images = $this->getImages();
+        if(!empty($images))
+            foreach($images as $image){
+               if($image->getCover() == true){
+                   return $image;
+                   break;
+               }
+            }
+
+        return null;
+    }
+
+    /**
+     * Set title
+     *
+     * @param string $title
+     * @return Article
+     */
+    public function __toString()
+    {
+        return $this->title;
+    }
+
+    /**
+     * Get title
+     *
+     * @return string 
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * Set content
+     *
+     * @param string $content
+     * @return Article
+     */
+    public function setContent($content)
+    {
+        $this->content = $content;
+    
+        return $this;
+    }
+
+    /**
+     * Get content
+     *
+     * @return string 
+     */
+    public function getContent()
+    {
+        return $this->content;
+    }
+
+    /**
+     * @ORM\PrePersist
+     */
+    public function setCreatedAtValue()
+    {
+        $this->dateCreated = new \DateTime();
+    }
+    /**
+     */
+    public function getCreatedAtValue()
+    {
+        return $this->dateCreated;
+    }
+
+    /**
+     * Set datePublication
+     *
+     * @param \DateTime $datePublication
+     * @return Article
+     */
+    public function setDatePublication($datePublication)
+    {
+        $this->datePublication = $datePublication;
+    
+        return $this;
+    }
+
+    /**
+     * Get datePublication
+     *
+     * @return \DateTime 
+     */
+    public function getDatePublication()
+    {
+        return $this->datePublication;
+    }
+
+    /**
+     * Set dateCreated
+     *
+     * @param \DateTime $dateCreated
+     * @return Article
+     */
+    public function setDateCreated($dateCreated)
+    {
+        $this->dateCreated = $dateCreated;
+    
+        return $this;
+    }
+
+    /**
+     * Get dateCreated
+     *
+     * @return \DateTime 
+     */
+    public function getDateCreated()
+    {
+        return $this->dateCreated;
+    }
+
+    /**
+     * Set category
+     *
+     * @param \Hetic\SiteBundle\Entity\Category $category
+     * @return Article
+     */
+    public function setCategory(\Hetic\SiteBundle\Entity\Category $category = null)
+    {
+        $this->category = $category;
+    
+        return $this;
+    }
+
+    /**
+     * Get category
+     *
+     * @return \Hetic\SiteBundle\Entity\Category 
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+    /**
+     * Add tags
+     *
+     * @param \Hetic\SiteBundle\Entity\Tag $tags
+     * @return Article
+     */
+    public function addTag(\Hetic\SiteBundle\Entity\Tag $tags)
+    {
+        $this->tags[] = $tags;
+    
+        return $this;
+    }
+
+    /**
+     * Remove tags
+     *
+     * @param \Hetic\SiteBundle\Entity\Tag $tags
+     */
+    public function removeTag(\Hetic\SiteBundle\Entity\Tag $tags)
+    {
+        $this->tags->removeElement($tags);
+    }
+
+    /**
+     * Get tags
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getTags()
+    {
+        return $this->tags;
+    }
+
+    /**
+     * Set isVisible
+     *
+     * @param boolean $isVisible
+     * @return Article
+     */
+    public function setIsVisible($isVisible)
+    {
+        $this->isVisible = $isVisible;
+    
+        return $this;
+    }
+
+    /**
+     * Get isVisible
+     *
+     * @return boolean 
+     */
+    public function getIsVisible()
+    {
+        return $this->isVisible;
+    }
+
+
+    /**
+     * Set point
+     *
+     * @param integer $point
+     * @return Article
+     */
+    public function setPoint($point)
+    {
+        $this->point = $point;
+    
+        return $this;
+    }
+
+    /**
+     * Get point
+     *
+     * @return integer 
+     */
+    public function getPoint()
+    {
+        return $this->point;
+    }
+
+    /**
+     * Set nature
+     *
+     * @param integer $nature
+     * @return Article
+     */
+    public function setNature($nature)
+    {
+        $this->nature = $nature;
+    
+        return $this;
+    }
+
+    /**
+     * Get nature
+     *
+     * @return integer 
+     */
+    public function getNature()
+    {
+        return $this->nature;
+    }
+
+    /**
+     * Set cover
+     *
+     * @param text $cover
+     * @return Article
+     */
+    public function setCover($cover)
+    {
+        $this->cover = $cover;
+        return $this;
+    }
+
+    /**
+     * Get cover
+     *
+     * @return text 
+     */
+    public function getCover()
+    {
+        return $this->cover;
+    }
+
+    /**
+     * Set reference
+     *
+     * @param string $reference
+     * @return Produit
+     */
+    public function setReference($reference)
+    {
+        $this->reference = $reference;
+        return $this;
+    }
+
+    /**
+     * Get reference
+     *
+     * @return string 
+     */
+    public function getReference()
+    {
+        return $this->reference;
+    }
+
+    /**
+     * Set ean
+     *
+     * @param string $ean
+     * @return Produit
+     */
+    public function setEan($ean)
+    {
+        $this->ean = $ean;
+        return $this;
+    }
+
+    /**
+     * Get ean
+     *
+     * @return string 
+     */
+    public function getEan()
+    {
+        return $this->ean;
+    }
+
+    /**
+     * Set status
+     *
+     * @param integer $status
+     * @return Produit
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+        return $this;
+    }
+
+    /**
+     * Get status
+     *
+     * @return integer 
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * Set isShop
+     *
+     * @param boolean $isShop
+     * @return Produit
+     */
+    public function setIsShop($isShop)
+    {
+        $this->isShop = $isShop;
+        return $this;
+    }
+
+    /**
+     * Get isShop
+     *
+     * @return boolean 
+     */
+    public function getIsShop()
+    {
+        return $this->isShop;
+    }
+
+    /**
+     * Set etat
+     *
+     * @param integer $etat
+     * @return Produit
+     */
+    public function setEtat($etat)
+    {
+        $this->etat = $etat;
+        return $this;
+    }
+
+    /**
+     * Get etat
+     *
+     * @return integer 
+     */
+    public function getEtat()
+    {
+        return $this->etat;
+    }
+
+    /**
+     * Set livraison
+     *
+     * @param integer $livraison
+     * @return Produit
+     */
+    public function setLivraison($livraison)
+    {
+        $this->livraison = $livraison;
+        return $this;
+    }
+
+    /**
+     * Get livraison
+     *
+     * @return integer 
+     */
+    public function getLivraison()
+    {
+        return $this->livraison;
+    }
+
+    /**
+     * Set extras
+     *
+     * @param text $extras
+     * @return Produit
+     */
+    public function setExtras($extras)
+    {
+        $this->extras = $extras;
+        return $this;
+    }
+
+    /**
+     * Get extras
+     *
+     * @return text 
+     */
+    public function getExtras()
+    {
+        return $this->extras;
+    }
+
+    /**
+     * Set prixTTC
+     *
+     * @param float $prixTTC
+     * @return Produit
+     */
+    public function setPrixTTC($prixTTC)
+    {
+        $this->prixTTC = $prixTTC;
+        return $this;
+    }
+
+    /**
+     * Get prixTTC
+     *
+     * @return float 
+     */
+    public function getPrixTTC()
+    {
+        return $this->prixTTC;
+    }
+
+    /**
+     * Set prixHT
+     *
+     * @param float $prixHT
+     * @return Produit
+     */
+    public function setPrixHT($prixHT)
+    {
+        $this->prixHT = $prixHT;
+        return $this;
+    }
+
+    /**
+     * Get prixHT
+     *
+     * @return float 
+     */
+    public function getPrixHT()
+    {
+        return $this->prixHT;
+    }
+
+
+    /**
+     * Set tva
+     *
+     * @param integer $tva
+     * @return Produit
+     */
+    public function setTva($tva)
+    {
+        $this->tva = $tva;
+        return $this;
+    }
+
+    /**
+     * Get tva
+     *
+     * @return integer 
+     */
+    public function getTva()
+    {
+        return $this->tva;
+    }
+
+    /**
+     * Set quantity
+     *
+     * @param integer $quantity
+     * @return Produit
+     */
+    public function setQuantity($quantity)
+    {
+        $this->quantity = $quantity;
+        return $this;
+    }
+
+    /**
+     * Get quantity
+     *
+     * @return integer 
+     */
+    public function getQuantity()
+    {
+        return $this->quantity;
+    }
+
+
+    /**
+     * Add seo
+     *
+     * @param Hetic\SiteBundle\Entity\Seo $seo
+     * @return Produit
+     */
+    public function addSeo(\Hetic\SiteBundle\Entity\Seo $seo)
+    {
+        $this->seo[] = $seo;
+        return $this;
+    }
+
+    /**
+     * Remove seo
+     *
+     * @param Hetic\SiteBundle\Entity\Seo $seo
+     */
+    public function removeSeo(\Hetic\SiteBundle\Entity\Seo $seo)
+    {
+        $this->seo->removeElement($seo);
+    }
+
+    /**
+     * Get seo
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getSeo()
+    {
+        return $this->seo;
+    }
+
+    /**
+     * Add metas
+     *
+     * @param Hetic\SiteBundle\Entity\Meta $metas
+     * @return Produit
+     */
+    public function addMeta(\Hetic\SiteBundle\Entity\Meta $metas)
+    {
+        $metas->setProduit($this);
+        $this->metas[] = $metas;
+        return $this;
+    }
+
+    /**
+     * Remove metas
+     *
+     * @param Hetic\SiteBundle\Entity\Meta $metas
+     */
+    public function removeMeta(\Hetic\SiteBundle\Entity\Meta $metas)
+    {
+        $this->metas->removeElement($metas);
+    }
+
+    /**
+     * Get metas
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getMetas()
+    {
+        return $this->metas;
+    }
+
+    /**
+     * Add cates
+     *
+     * @param Hetic\SiteBundle\Entity\Category $cates
+     * @return Produit
+     */
+    public function addCate(\Hetic\SiteBundle\Entity\Category $cates)
+    {
+        $this->cates[] = $cates;
+        return $this;
+    }
+
+    /**
+     * Remove cates
+     *
+     * @param Hetic\SiteBundle\Entity\Category $cates
+     */
+    public function removeCate(\Hetic\SiteBundle\Entity\Category $cates)
+    {
+        $this->cates->removeElement($cates);
+    }
+
+    /**
+     * Get cates
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getCates()
+    {
+        return $this->cates;
+    }
+
+    /**
+     * Set accroche
+     *
+     * @param string $accroche
+     * @return Produit
+     */
+    public function setAccroche($accroche)
+    {
+        $this->accroche = $accroche;
+        return $this;
+    }
+
+    /**
+     * Get accroche
+     *
+     * @return string 
+     */
+    public function getAccroche()
+    {
+        return $this->accroche;
+    }
+
+
+
+    /**
+     * Set prodparent
+     *
+     * @param Hetic\SiteBundle\Entity\Produit $prodparent
+     * @return Produit
+     */
+    public function setProdparent(\Hetic\SiteBundle\Entity\Produit $prodparent = null)
+    {
+        $this->prodparent = $prodparent;
+        return $this;
+    }
+
+    /**
+     * Get prodparent
+     *
+     * @return Hetic\SiteBundle\Entity\Produit 
+     */
+    public function getProdparent()
+    {
+        return $this->prodparent;
+    }
+
+    /**
+     * Add articles
+     *
+     * @param Hetic\SiteBundle\Entity\Article $articles
+     * @return Produit
+     */
+    public function addArticle(\Hetic\SiteBundle\Entity\Article $articles)
+    {
+        $this->articles[] = $articles;
+        return $this;
+    }
+
+    /**
+     * Remove articles
+     *
+     * @param Hetic\SiteBundle\Entity\Article $articles
+     */
+    public function removeArticle(\Hetic\SiteBundle\Entity\Article $articles)
+    {
+        $this->articles->removeElement($articles);
+    }
+
+    /**
+     * Get articles
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getArticles()
+    {
+        return $this->articles;
+    }
+
+    /**
+     * Set video
+     *
+     * @param string $video
+     * @return Produit
+     */
+    public function setVideo($video)
+    {
+        $this->video = $video;
+        return $this;
+    }
+
+    /**
+     * Get video
+     *
+     * @return string 
+     */
+    public function getVideo()
+    {
+        return $this->video;
+    }
+
+    /**
+     * Set service
+     *
+     * @param text $service
+     * @return Produit
+     */
+    public function setService($service)
+    {
+        $this->service = $service;
+        return $this;
+    }
+
+    public function setMetas(ArrayCollection $metas)
+    {
+        foreach ($metas as $meta) {
+            $meta->addMeta($this);
+        }
+
+        $this->metas = $metas;
+    }
+
+    /**
+     * Get service
+     *
+     * @return text 
+     */
+    public function getService()
+    {
+        return $this->service;
+    }
+
+    /**
+     * Add accesories
+     *
+     * @param Hetic\SiteBundle\Entity\Produit $accesories
+     * @return Produit
+     */
+    public function addAccesory(\Hetic\SiteBundle\Entity\Produit $accesories)
+    {
+        $this->accesories[] = $accesories;
+        return $this;
+    }
+
+    /**
+     * Remove accesories
+     *
+     * @param Hetic\SiteBundle\Entity\Produit $accesories
+     */
+    public function removeAccesory(\Hetic\SiteBundle\Entity\Produit $accesories)
+    {
+        $this->accesories->removeElement($accesories);
+    }
+
+    /**
+     * Get accesories
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getAccesories()
+    {
+        return $this->accesories;
+    }
+
+    /**
+     * Add articlesaccesories
+     *
+     * @param Hetic\SiteBundle\Entity\Produit $articlesaccesories
+     * @return Produit
+     */
+    public function addArticlesaccesorie(\Hetic\SiteBundle\Entity\Produit $articlesaccesories)
+    {
+        $this->articlesaccesories[] = $articlesaccesories;
+        return $this;
+    }
+
+    /**
+     * Remove articlesaccesories
+     *
+     * @param Hetic\SiteBundle\Entity\Produit $articlesaccesories
+     */
+    public function removeArticlesaccesorie(\Hetic\SiteBundle\Entity\Produit $articlesaccesories)
+    {
+        $this->articlesaccesories->removeElement($articlesaccesories);
+    }
+
+    /**
+     * Get articlesaccesories
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getArticlesaccesories()
+    {
+        return $this->articlesaccesories;
+    }
+
+    /**
+     * Set dateUpdated
+     *
+     * @param datetime $dateUpdated
+     * @return Produit
+     */
+    public function setDateUpdated($dateUpdated)
+    {
+        $this->dateUpdated = $dateUpdated;
+        return $this;
+    }
+
+    /**
+     * Get dateUpdated
+     *
+     * @return datetime 
+     */
+    public function getDateUpdated()
+    {
+        return $this->dateUpdated;
+    }
+
+    /**
+     * Add accesories
+     *
+     * @param Hetic\SiteBundle\Entity\Produit $accesories
+     * @return Produit
+     */
+    public function addAccesorie(\Hetic\SiteBundle\Entity\Produit $accesories)
+    {
+        $this->accesories[] = $accesories;
+        return $this;
+    }
+
+    /**
+     * Remove accesories
+     *
+     * @param Hetic\SiteBundle\Entity\Produit $accesories
+     */
+    public function removeAccesorie(\Hetic\SiteBundle\Entity\Produit $accesories)
+    {
+        $this->accesories->removeElement($accesories);
+    }
+
+    /**
+     * Add images
+     *
+     * @param Hetic\SiteBundle\Entity\Image $images
+     * @return Produit
+     */
+    public function addImage(\Hetic\SiteBundle\Entity\Image $images)
+    {
+        $this->images[] = $images;
+        return $this;
+    }
+
+    /**
+     * Remove images
+     *
+     * @param Hetic\SiteBundle\Entity\Image $images
+     */
+    public function removeImage(\Hetic\SiteBundle\Entity\Image $images)
+    {
+        $this->images->removeElement($images);
+    }
+
+    /**
+     * Get images
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getImages()
+    {
+        return $this->images;
+    }
+}

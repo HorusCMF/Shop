@@ -1,0 +1,189 @@
+parameters:
+  carte_1 : 4970101122334455
+  carte_2 : 4970101122334463
+  carte_3 : 4970101122334471
+  expiry: 1212 
+  cvv:  123
+  password: secret3
+  url_base: http://www.weekinsport.fr/
+  key_autoloading: 5ghfjhgsddf6aad9gx55sdq12gffh395d2w1gim2ool4yu9idf5595hjgf9552649jyt49r6fdgdf616mv51sf132
+  key_regenerate_password: s6d4gdh8d6fg54hg864dg64f64hdg48h6f8hdsd1561dsq6dqs46d135s1g6h6879y4163535sdfsd65965sdghj
+  facebookAppId: "552592408160039"
+  facebookAppSecret: "befaf20ca0324ef67028b564463f4ccc"
+  email_administrateur: contact@myfuckinjob.com
+  email_membre:  contact@myfuckinjob.com
+#  email_pro: etablissements@weekinsport.fr
+  email_pro:  contact@myfuckinjob.com
+  sujet_mail:
+    0: Une question / Un renseignement
+    1: Mise à jour de mes coordonnées
+    2: Demande de partenariat
+    4: Devenir Partenaire
+    6: Création d'une publicité
+    7: Un problème technique
+    8: Autre
+
+
+  contact_0_7: >
+    <h2>Votre message a bien été envoyé.</h2>
+    <p>Et pendant le temps que vous mettez à lire cette phrase, sachez que l'équipe se chamaille déjà pour désigner le chanceux<br> qui aura l'honneur de vous répondre. Attendez-vous à une réponse rapide et enthousiaste !</p>
+  
+  contact_8: >
+    <h2>Votre souhait de ne pas nous contacter nous est bien parvenu.</h2>
+    <p>Vous ne recevrez rien dans les plus brefs délais.</p>
+    <p>:)</p>
+         
+ 
+
+  payline:
+      #Merchant ID
+      MERCHANT_ID: '74523340176234'
+      # dev : 45487140921333
+      # prod : 12191122155280
+      #Certificate key
+      ACCESS_KEY: 'q52K10EEPaoEBgS51M7K'
+      # dev: L9qyGPFUNur9b7thY1BP
+      # prod: kdVqTbqkfJGoHI9S6kMM
+      #Proxy URL (optional)
+      PROXY_HOST: null
+      #Proxy port number without 'quotes' (optional)
+      PROXY_PORT: null
+      #Proxy login (optional)
+      PROXY_LOGIN: ''
+      #Proxy password (optional)
+      PROXY_PASSWORD: ''
+      #Demonstration (FALSE) or production (TRUE) mode
+      PRODUCTION: FALSE
+      #prod: TRUE
+      #Default payment currency (ex: 978 = EURO)
+      PAYMENT_CURRENCY: 978
+      ORDER_CURRENCY: 978
+      #Protocol (ex: SSL = HTTPS)
+      SECURITY_MODE: ''
+      #Payline pages language
+      LANGUAGE_CODE: ''
+      #Default payment method
+      PAYMENT_ACTION: 101
+      #Default payment mode
+      PAYMENT_MODE: 'CPT'
+      #Default payment template URL
+      CUSTOM_PAYMENT_TEMPLATE_URL: ''
+      CUSTOM_PAYMENT_PAGE_CODE: ''
+      #Contract type default (ex: 001 = CB: 003 = American Express...)
+  #    CONTRACT_NUMBER: '4534580'
+      CONTRACT_NUMBER: '1234567'
+      #prod : 4534580
+      #dev : 1234567
+      #Contract type multiple values (separator: ;)
+      CONTRACT_NUMBER_LIST: ''
+      #Contract type multiple values (separator: ;)
+      SECOND_CONTRACT_NUMBER_LIST: ''
+      #Chemin d'accès au répertoire des fichiers WSDL
+      WSDL_PATH: '../../wsdl/'
+      #Durées du timeout d'appel des webservices
+      SECONDARY_CALL_TIMEOUT: 15
+      #Nombres de tentatives sur les chaines primaire et secondaire par transaction
+      SECONDARY_MAX_FAIL_RETRY: 2
+      #Durées d'attente avant le rejoue de la transaction
+      SECONDARY_REPLAY_TIMER: 15
+      #Codes erreurs payline qui signifie l'échec de la transaction
+      PAYLINE_ERR_CODE: '02101,02102,02103'
+      #Nom des services web autorisés à basculer
+      PAYLINE_WS_SWITCH_ENABLE:  ''
+      #Durées d'attente pour rebasculer en mode nominal
+      PAYLINE_SWITCH_BACK_TIMER: 600
+      #Préfixe du token sur le site primaire
+      PRIMARY_TOKEN_PREFIX: '1'
+      #Préfixe du token sur le site secondaire
+      SECONDARY_TOKEN_PREFIX: '2'
+      #Chemin du fichier ini
+      INI_FILE: '../../properties/HighDefinition.ini'
+      #Préfixe du token sur le site primaire
+      PAYLINE_ERR_TOKEN: '02317,02318'
+      PAYLINE_AUTORIZE_WALLET_CARD : 'CB,VISA,MASTERCARD'
+
+twig:
+    globals:
+      base_url: 'http://www.weekinsport.fr/'
+      imgsite: '/bundles/site/images/'
+      imgproducts: '/uploads/products/'
+      imgcategories: '/uploads/categories/'
+      imguser: '/uploads/users/'
+      imgpartenaire: '/uploads/partenaires/'
+      imgrdvs: '/uploads/rdvs/'
+      imgoffers: '/uploads/offers/'
+      imgsports: '/uploads/sports/'
+      imgremises: '/uploads/remises/'
+      imgpromotions: '/uploads/promotions/'
+      unknowuserfnormal: '/uploads/users/unknow/unknow-f-normal.jpg'
+      unknowuserfbig: '/uploads/users/unknow/unknow-f-medium.jpg'
+      unknowuserf: '/uploads/users/unknow/unknow-f-small.jpg'
+      unknowusersmallf: '/uploads/users/unknow/unknow-f-mini.jpg'
+      unknowusermnormal: '/uploads/users/unknow/unknow-m-normal.jpg'
+      unknowusermbig: '/uploads/users/unknow/unknow-m-medium.jpg'
+      unknowuserm: '/uploads/users/unknow/unknow-m-small.jpg'
+      unknowusersmallm: '/uploads/users/unknow/unknow-m-mini.jpg'
+      imguserunknow: '/images/unknow_user.gif'
+      flashmessages:
+        - { title: News 1,  content: Nouveau site de WKS }
+        - { title: Titre de site 2,  content: Site WKS }
+
+#      allsports:
+#        - {title: 'acrobranche', : src: ''}
+#        - {title: 'alpinisme', src: ''}
+#        - {title: 'apnée', src: ''}
+#        - {title: 'arts-martiaux', src: ''}
+#        - {title: 'athlétisme', src: ''}
+#        - {title: 'aviron', src: ''}
+#        - {title: 'badminton', src: ''}
+#        - {title: 'baseball', src: ''}
+#        - {title: 'basket-ball', src: ''}
+#        - {title: 'beach-soccer', src: ''}
+#        - {title: 'beach-volley', src: ''}
+#        - {title: 'biathlon', src: ''}
+#        - {title: 'billard', src: ''}
+#        - {title: 'bodyboard', src: ''}
+#        - {title: 'bowling', src: ''}
+#        - {title: 'boxe', src: ''}
+#        - {title: 'canoë-kayak', src: ''}
+#        - {title: 'canyoning', src: ''}
+#        - {title: 'capoeira', src: ''}
+#        - {title: 'cricket', src: ''}
+#        - {title: 'deltaplane', src: ''}
+#        - {title: 'escalade', src: ''}
+#        - {title: 'escrime', src: ''}
+#        - {title: 'fitness', src: ''}
+#        - {title: 'flechettes', src: ''}
+#        - {title: 'golf', src: ''}
+#        - {title: 'handball', src: ''}
+#        - {title: 'gymnastique', src: ''}
+#        - {title: 'hockey-en-salle', src: ''}
+#        - {title: 'cyclisme', src: ''}
+#        - {title: 'hockey-en-salle', src: ''}
+#        - {title: 'jorkyball', src: ''}
+#        - {title: 'karting', src: ''}
+#        - {title: 'kitesurf', src: ''}
+#        - {title: 'luge', src: ''}
+#        - {title: 'marathon', src: ''}
+#        - {title: 'marche', src: ''}
+#        - {title: 'natation', src: ''}
+#        - {title: 'paintball', src: ''}
+#        - {title: 'parachutisme', src: ''}
+#        - {title: 'parapente', src: ''}
+#        - {title: 'patinage', src: ''}
+#        - {title: 'pêche', src: ''}
+#        - {title: 'pétanque', src: ''}
+#        - {title: 'ping-pong', src: ''}
+#        - {title: 'planche-à-voile', src: ''}
+#        - {title: 'plongée', src: ''}
+#        - {title: 'plongée-sous-marine', src: ''}
+#        - {title: 'polo', src: ''}
+#        - {title: 'rafting', src: ''}
+#        - {title: 'rafting', src: ''}
+
+      nom_site: WKS
+      slogan:  Réseau social de Sports
+      topmenu:
+        - {label: 'Home', routing: 'wks_site_homepage', icon: '<i class="icon-home"> </i>' }
+      fastactions:
+        - {'label': 'Home', routing: 'wks_site_homepage' }

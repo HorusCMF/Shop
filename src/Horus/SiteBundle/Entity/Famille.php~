@@ -1,0 +1,129 @@
+<?php
+
+namespace Hetic\SiteBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Gedmo\Mapping\Annotation as Gedmo;
+
+
+/**
+ * Article
+ * @Gedmo\Tree(type="nested")
+ * @ORM\Entity(repositoryClass="Hetic\SiteBundle\Repository\FamilleRepository")
+ * @ORM\Table(name="famille")
+ * @ORM\HasLifecycleCallbacks()
+ */
+class Famille
+{
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @Assert\NotBlank(
+     *     message = "Le titre ne doit pas etre vide"
+     * )
+     * @ORM\Column(name="name", type="string", length=200, nullable=true)
+     */
+    private $name;
+
+    /**
+     * @ORM\Column(name="path", type="string", length=3000, nullable=true)
+     */
+    private $path;
+    
+    /**
+     * @Assert\NotBlank()
+     * @ORM\Column(name="description", type="text", nullable=true)
+     */
+    private $description;
+    
+    /**
+     * @ORM\Column(name="cover", type="text", nullable=true)
+     */
+    private $cover;
+
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Produit", mappedBy="familles", cascade={"all"},orphanRemoval=true)
+     */
+    protected $produits;
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="date_created", type="datetime", nullable=true)
+     */
+    private $dateCreated;
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="visible", type="boolean", nullable=true)
+     */
+    private $visible;
+
+
+    /**
+     * @Gedmo\TreeLeft
+     * @ORM\Column(name="lft", type="integer")
+     */
+    private $lft;
+
+    /**
+     * @Gedmo\TreeLevel
+     * @ORM\Column(name="lvl", type="integer")
+     */
+    private $lvl;
+
+    /**
+     * @Gedmo\TreeRight
+     * @ORM\Column(name="rgt", type="integer")
+     */
+    private $rgt;
+
+    /**
+     * @Gedmo\TreeRoot
+     * @ORM\Column(name="root", type="integer", nullable=true)
+     */
+    private $root;
+
+    /**
+     * @Gedmo\TreeParent
+     * @ORM\ManyToOne(targetEntity="Category", inversedBy="children")
+     * @ORM\JoinColumn(name="parent_id", referencedColumnName="id", onDelete="CASCADE")
+     */
+    private $parent;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Category", mappedBy="parent")
+     * @ORM\OrderBy({"lft" = "ASC"})
+     */
+    private $children;
+
+
+    /**
+     * @ORM\OneToMany(targetEntity="ImageCategory",mappedBy="category", cascade={"all"},orphanRemoval=true)
+     */
+    protected $images;
+
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->articles = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->visible = true;
+    }
+
+}

@@ -7,7 +7,7 @@ security:
 
     encoders:
        site:
-         class:  Hetic\SiteBundle\Entity\Administrateur
+         class:  Horus\SiteBundle\Entity\Administrateur
          algorithm: sha512
          encode-as-base64: true
          iterations: 10
@@ -17,7 +17,7 @@ security:
           chain:
               providers: [site]
       site:
-        entity: { class: HeticSiteBundle:Administrateur, property: email }
+        entity: { class: HorusSiteBundle:Administrateur, property: email }
 
     firewalls:
       dev:

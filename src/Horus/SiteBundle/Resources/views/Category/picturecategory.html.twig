@@ -1,0 +1,95 @@
+{% extends 'HorusSiteBundle::layout.html.twig' %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript" src="/js/dropzone.js"></script>
+
+    {% javascripts '@HorusSiteBundle/Resources/public/js/product.js' filter="cssrewrite" %}
+    <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
+
+{% endblock %}
+
+
+{% block content %}
+
+    <div id="picturecategory">
+        <a class="btn back btn-danger pull-right" href="{{ path('hetic_site_categories') }}">&larr; Revenir à la liste
+            de
+            catégories</a>
+
+        <h1><i class="glyphicon glyphicon-camera"></i> Photos "{{ category.name|title }}"</h1>
+        <hr class="clear fancy-line">
+        <h3>Les photos</h3>
+        <table>
+            <tbody>
+            {% for image in category.images %}
+
+                <tr>
+                    <td>
+
+                        {% if image.cover %}
+                            <span class="label label-success">Cette photo a été mise en avant</span><br /><br />
+                        {% endif %}
+
+                        <a class="btn btn-primary"
+                           onclick="return(confirm('Etes-vous sûr de vouloir supprimer cette photo?'));"
+                           href="{{ path('hetic_site_remove_image_category', {'id' : image.id}) }}"><i
+                                    class="glyphicon glyphicon-remove"></i></a>
+                        <a class="btn btn-primary"
+                           onclick="return(confirm('Etes-vous sûr de vouloir mettre en avant cette photo?'));"
+                           href="{{ path('hetic_site_cover_image_category', {'id' : image.id}) }}"><i
+                                    class="glyphicon glyphicon-heart"></i></a>
+
+                    </td>
+                    <td>
+
+                        <a data-toggle="modal" class="zoom" data-target="#myModal{{ loop.index }}">
+                            <img class="img-thumbnail" src="{{ imgcategories ~  category.id ~ '/' ~ image.path }}">
+                        </a>
+
+                        <div class="modal fade" id="myModal{{ loop.index }}" tabindex="-1" role="dialog"
+                             aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <img style="width: 80%"
+                                             src="{{ imgcategories ~  category.id ~ '/' ~ image.path }}">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal"><i
+                                                    class="glyphicon glyphicon-remove"></i> Fermer cette image
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- /.modal-content -->
+                            </div>
+                            <!-- /.modal-dialog -->
+                        </div>
+                        <!-- /.modal -->
+                    </td>
+                </tr>
+
+            {% else %}
+                <div class="alert alert-dismissable alert-warning">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <i class="glyphicon glyphicon-warning-sign"></i> Aucune photo pour le moment
+                </div>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <h3>Ajouter une photo</h3>
+
+        <form action="{{ path('hetic_site_edit_image_category', {'id' : category.id }) }}" class="dropzone"
+              id="my-awesome-dropzone">
+            <div class="fallback">
+                <h3><i class="glyphicon glyphicon-picture"></i> Déposer votre image ici</h3>
+                <input name="file" type="file" multiple/>
+            </div>
+        </form>
+
+    </div>
+{% endblock %}
+

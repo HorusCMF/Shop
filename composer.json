@@ -1,17 +1,8 @@
 {
-    "name": "HorusCMF/Shop",
+    "name": "symfony/framework-standard-edition",
     "license": "MIT",
     "type": "project",
-    "description": "Horus CMF Shop, open source e-commerce solution based on Symfony2",
-    "keywords": ["CMF", "Shop","Symfony2"],
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Symfomany",
-            "email": "julien@meetserious.com"
-        }
-    ],
-    "minimum-stability": "dev",
+    "description": "The \"Symfony Standard Edition\" distribution",
     "autoload": {
         "psr-0": { "": "src/" }
     },
@@ -39,8 +30,11 @@
         "knplabs/knp-menu-bundle":"dev-master",
         "stof/doctrine-extensions-bundle":"dev-master",
         "fg/essence":  "1.4.1",
-        "imagine/Imagine":"0.6.*@dev"
-
+        "imagine/Imagine":"0.6.*@dev",
+        "phpdocumentor/phpdocumentor": "*"
+    },
+    "require-dev": {
+        "artur-gajewski/phpdocumentor-bundle": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [
