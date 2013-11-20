@@ -1,4 +1,4 @@
-Horus CMF [![Build status...](https://secure.travis-ci.org/Horus CMF/Horus CMF.png?branch=master)](http://travis-ci.org/Horus CMF/Horus CMF) [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/Horus CMF/Horus CMF/badges/quality-score.png?s=f6d89b8aad6e15cab61134e7c0544ee1313f7f31)](https://scrutinizer-ci.com/g/Horus CMF/Horus CMF/)
+Horus CMF SHop
 ======
 
 Horus CMF is an open source e-commerce solution for **Developers**, based on the [**Symfony2**](http://symfony.com) framework.
@@ -24,28 +24,6 @@ $ cd Horus CMF
 $ php app/console Horus CMF:install
 ```
 
-[Behat](http://behat.org) scenarios
------------------------------------
-
-You need to copy Behat default configuration file and enter your specific ``base_url``
-option there.
-
-```bash
-$ cp behat.yml.dist behat.yml
-$ vi behat.yml
-```
-
-Then download [Selenium Server](http://seleniumhq.org/download/), and run it.
-
-```bash
-$ java -jar selenium-server-standalone-2.11.0.jar
-```
-
-You can run Behat using the following command.
-
-``` bash
-$ bin/behat
-```
 
 Troubleshooting
 ---------------
