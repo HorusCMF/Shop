@@ -1,4 +1,4 @@
-Horus CMF SHop
+Horus CMF Shop
 ======
 
 Horus CMF is an open source e-commerce solution for **Developers**, based on the [**Symfony2**](http://symfony.com) framework.
