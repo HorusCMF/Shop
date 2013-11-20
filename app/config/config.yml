@@ -136,7 +136,7 @@ knp_paginator:
         sort_direction_name: direction # sort direction query parameter name
         distinct: true                 # ensure distinct results, useful when ORM queries are using GROUP BY statements
     template:
-        pagination: HeticSiteBundle:Default:pagination.html.twig     # sliding pagination controls template
+        pagination: HorusSiteBundle:Default:pagination.html.twig     # sliding pagination controls template
         sortable: KnpPaginatorBundle:Default:pagination.html.twig # sort link template
 
 doctrine_mongodb:
