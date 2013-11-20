@@ -1,8 +1,17 @@
 {
-    "name": "symfony/framework-standard-edition",
+    "name": "HorusCMF/Shop",
     "license": "MIT",
     "type": "project",
-    "description": "The \"Symfony Standard Edition\" distribution",
+    "description": "Horus CMF Shop, open source e-commerce solution based on Symfony2",
+    "keywords": ["CMF", "Shop","Symfony2"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Symfomany",
+            "email": "julien@meetserious.com"
+        }
+    ],
+    "minimum-stability": "dev",
     "autoload": {
         "psr-0": { "": "src/" }
     },

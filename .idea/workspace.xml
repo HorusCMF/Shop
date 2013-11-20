@@ -230,7 +230,7 @@
     <file path="/CestAddArticleCest.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383586147047" ignored="false" />
     <file path="/about.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383323680621" ignored="false" />
     <file path="/contact.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383323882143" ignored="false" />
-    <file path="/README.md" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384961837726" ignored="false" />
+    <file path="/README.md" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384962080211" ignored="false" />
     <file path="/.gitignore" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384944817834" ignored="false" />
     <file path="/app.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383666549779" ignored="false" />
     <file path="/search.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384890420309" ignored="false" />
@@ -423,6 +423,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="composer.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/composer.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="44" selection-start="334" selection-end="334" vertical-scroll-proportion="33.208332">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="config.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/config/config.yml">
           <provider selected="true" editor-type-id="text-editor">
@@ -435,7 +444,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="73" selection-start="459" selection-end="459" vertical-scroll-proportion="0.2967033">
+            <state line="44" column="0" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.53846157">
               <folding />
             </state>
           </provider>
@@ -451,7 +460,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Controller/CommandesController.php" />
         <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Controller/CommercialController.php" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/CMS/createarticle.html.twig" />
@@ -466,6 +474,7 @@
         <option value="$PROJECT_DIR$/app/config/security.yml" />
         <option value="$PROJECT_DIR$/src/Horus/SiteBundle/DependencyInjection/HeticSiteExtension.php" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -868,13 +877,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/CMS/article.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="31" selection-start="552" selection-end="552" vertical-scroll-proportion="-9.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Category/categories.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="20" selection-start="198" selection-end="198" vertical-scroll-proportion="-4.5">
@@ -975,9 +977,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="44" selection-start="334" selection-end="334" vertical-scroll-proportion="33.208332">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="73" selection-start="459" selection-end="459" vertical-scroll-proportion="0.2967033">
+        <state line="44" column="0" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.53846157">
           <folding />
         </state>
       </provider>
