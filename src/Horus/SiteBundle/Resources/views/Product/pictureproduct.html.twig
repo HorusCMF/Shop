@@ -14,7 +14,7 @@
 {% block content %}
 
     <div id="pictureproduct">
-        <a class="btn back btn-danger pull-right" href="{{ path('hetic_site_products') }}">&larr; Revenir à la liste de
+        <a class="btn back btn-danger pull-right" href="{{ path('horus_site_products') }}">&larr; Revenir à la liste de
             produit</a>
 
         <h1><i class="glyphicon glyphicon-camera"></i> Photos "{{ produit.title|title }}"</h1>
@@ -30,10 +30,10 @@
                         {% endif %}
                         <a class="btn btn-primary"
 
-                           href="{{ path('hetic_site_remove_image_product', {'id' : image.id}) }}"><i
+                           href="{{ path('horus_site_remove_image_product', {'id' : image.id}) }}"><i
                                     class="glyphicon glyphicon-remove"></i></a>
                         <a class="btn btn-primary"
-                           href="{{ path('hetic_site_cover_image_product', {'id' : image.id}) }}"><i
+                           href="{{ path('horus_site_cover_image_product', {'id' : image.id}) }}"><i
                                     class="glyphicon glyphicon-heart"></i></a>
                     </td>
                     <td>
@@ -75,7 +75,7 @@
 
         <h3>Ajouter des photos</h3>
 
-        <form action="{{ path('hetic_site_edit_pictures_product', {'id' : produit.id }) }}" class="dropzone"
+        <form action="{{ path('horus_site_edit_pictures_product', {'id' : produit.id }) }}" class="dropzone"
               id="my-awesome-dropzone">
             <div class="fallback">
                 <h3><i class="glyphicon glyphicon-picture"></i> Déposer votre image ici</h3>

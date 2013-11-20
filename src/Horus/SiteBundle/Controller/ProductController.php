@@ -56,7 +56,7 @@ class ProductController extends Controller
             'success',
             "Le produit a bien été activé"
         );
-        return $this->redirect($this->generateUrl('hetic_site_products'));
+        return $this->redirect($this->generateUrl('horus_site_products'));
     }
 
     public function removeimageproductAction(Image $id)
@@ -69,7 +69,7 @@ class ProductController extends Controller
             'success',
             "L'image du produit a bien été activé"
         );
-        return $this->redirect($this->generateUrl('hetic_site_edit_pictures_product', array('id' => $id->getProduit()->getId())));
+        return $this->redirect($this->generateUrl('horus_site_edit_pictures_product', array('id' => $id->getProduit()->getId())));
     }
 
 
@@ -92,7 +92,7 @@ class ProductController extends Controller
             'success',
             "L'image du produit a bien été mise en avant"
         );
-        return $this->redirect($this->generateUrl('hetic_site_edit_pictures_product', array('id' => $id->getProduit()->getId())));
+        return $this->redirect($this->generateUrl('horus_site_edit_pictures_product', array('id' => $id->getProduit()->getId())));
     }
 
     public function pictureproductAction(Produit $id)
@@ -115,7 +115,7 @@ class ProductController extends Controller
                     'success',
                     "L'image a bien été ajouté"
                 );
-                return $this->redirect($this->generateUrl('hetic_site_edit_pictures_product', array('id' => $id->getId())));
+                return $this->redirect($this->generateUrl('horus_site_edit_pictures_product', array('id' => $id->getId())));
             }
         }
         return $this->render('HorusSiteBundle:Product:pictureproduct.html.twig',
@@ -146,7 +146,7 @@ class ProductController extends Controller
             'success',
             "Le produit a bien été désactivé"
         );
-        return $this->redirect($this->generateUrl('hetic_site_products'));
+        return $this->redirect($this->generateUrl('horus_site_products'));
     }
 
     public function activeproductAction(Produit $id)
@@ -160,7 +160,7 @@ class ProductController extends Controller
             'success',
             "Le produit a bien été activé"
         );
-        return $this->redirect($this->generateUrl('hetic_site_products'));
+        return $this->redirect($this->generateUrl('horus_site_products'));
     }
 
     public function createproductAction()
@@ -174,7 +174,7 @@ class ProductController extends Controller
                 'warning',
                 "Avant de gérer le produit, vous devez créer une catégorie"
             );
-            return $this->redirect($this->generateUrl('hetic_site_add_category'));
+            return $this->redirect($this->generateUrl('horus_site_add_category'));
         }
 
         $meta = new Meta();
@@ -197,7 +197,7 @@ class ProductController extends Controller
                     'success',
                     "Le produit a bien été ajouté"
                 );
-                return $this->redirect($this->generateUrl('hetic_site_edit_pictures_product', array('id' => $produit->getId())));
+                return $this->redirect($this->generateUrl('horus_site_edit_pictures_product', array('id' => $produit->getId())));
             }
         }
         return $this->render('HorusSiteBundle:Product:createproduct.html.twig',
@@ -223,7 +223,7 @@ class ProductController extends Controller
                 'warning',
                 "Avant de gérer le produit, vous devez créer une catégorie"
             );
-            return $this->redirect($this->generateUrl('hetic_site_add_category'));
+            return $this->redirect($this->generateUrl('horus_site_add_category'));
         }
 
         $Essence = new \fg\Essence\Essence();
@@ -242,7 +242,7 @@ class ProductController extends Controller
                     'success',
                     "Le produit a bien été edité"
                 );
-                return $this->redirect($this->generateUrl('hetic_site_products'));
+                return $this->redirect($this->generateUrl('horus_site_products'));
             }
         }
         return $this->render('HorusSiteBundle:Product:editproduct.html.twig',

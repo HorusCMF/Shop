@@ -11,13 +11,13 @@
 {% block content %}
 
     <div id="editpage">
-        <a class="btn back btn-danger pull-right" href="{{ path('hetic_site_pages') }}">&larr; Revenir à la liste des
+        <a class="btn back btn-danger pull-right" href="{{ path('horus_site_pages') }}">&larr; Revenir à la liste des
             page</a>
 
         <h1><i class="glyphicon glyphicon-pencil"></i> Editer "{{ page.name }}"</h1>
         <hr class="clear fancy-line">
 
-        <form novalidate="novalidate" action="{{ path('hetic_site_edit_page',{'id' : page.id}) }}" method="post">
+        <form novalidate="novalidate" action="{{ path('horus_site_edit_page',{'id' : page.id}) }}" method="post">
 
             <div class="row-fluid">
                 <div class="span12">

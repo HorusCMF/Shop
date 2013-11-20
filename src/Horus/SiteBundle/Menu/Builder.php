@@ -11,10 +11,10 @@ class Builder extends ContainerAware
     {
         $menu = $factory->createItem('root');
 
-        $menu->addChild('Home', array('route' => 'hetic_site_hello'));
-        $menu->addChild('Dashboard', array('route' => 'hetic_site_dashboard' ));
-        $menu->addChild('Contact', array('route' => 'hetic_contact' ));
-        $menu->addChild('Rechercher', array('route' => 'hetic_search' ));
+        $menu->addChild('Home', array('route' => 'horus_site_hello'));
+        $menu->addChild('Dashboard', array('route' => 'horus_site_dashboard' ));
+        $menu->addChild('Contact', array('route' => 'horus_contact' ));
+        $menu->addChild('Rechercher', array('route' => 'horus_search' ));
 
         return $menu;
     }

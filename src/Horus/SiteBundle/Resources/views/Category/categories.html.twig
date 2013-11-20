@@ -12,14 +12,14 @@
                     </button>
                     <ul class="dropdown-menu">
                         {% if category.visible %}
-                            <li><a onclick="return(confirm('Etes-vous sûr de vouloir désactiver cette catégory ?'));" href="{{ path('hetic_site_desactive_category', {'id' : category.id}) }}"><i class="glyphicon glyphicon-minus-sign"></i> Désactiver</a></li>
+                            <li><a onclick="return(confirm('Etes-vous sûr de vouloir désactiver cette catégory ?'));" href="{{ path('horus_site_desactive_category', {'id' : category.id}) }}"><i class="glyphicon glyphicon-minus-sign"></i> Désactiver</a></li>
                         {% else %}
-                            <li><a onclick="return(confirm('Etes-vous sûr de vouloir activer cette catégory ?'));" href="{{ path('hetic_site_active_category', {'id' : category.id}) }}"><i class="glyphicon glyphicon-ok"></i> Activer</a></li>
+                            <li><a onclick="return(confirm('Etes-vous sûr de vouloir activer cette catégory ?'));" href="{{ path('horus_site_active_category', {'id' : category.id}) }}"><i class="glyphicon glyphicon-ok"></i> Activer</a></li>
                         {% endif %}
-                        <li><a onclick="return(confirm('Etes-vous sûr de vouloir supprimer cette catégory ?'));" href="{{ path('hetic_site_remove_category', {'id' : category.id}) }}"><i class="glyphicon glyphicon-remove"></i> Supprimer</a></li>
-                        <li><a  href="{{ path('hetic_site_edit_category', {'id' : category.id}) }}"><i class="glyphicon glyphicon-pencil"></i> Editer</a></li>
-                        <li><a  href="{{ path('hetic_site_edit_image_category', {'id' : category.id}) }}"><i class="glyphicon glyphicon-camera"></i> Photos</a></li>
-                        <li><a  href="{{ path('hetic_site_category', {'id' : category.id}) }}"><i class="glyphicon glyphicon-search"></i> Voir</a></li>
+                        <li><a onclick="return(confirm('Etes-vous sûr de vouloir supprimer cette catégory ?'));" href="{{ path('horus_site_remove_category', {'id' : category.id}) }}"><i class="glyphicon glyphicon-remove"></i> Supprimer</a></li>
+                        <li><a  href="{{ path('horus_site_edit_category', {'id' : category.id}) }}"><i class="glyphicon glyphicon-pencil"></i> Editer</a></li>
+                        <li><a  href="{{ path('horus_site_edit_image_category', {'id' : category.id}) }}"><i class="glyphicon glyphicon-camera"></i> Photos</a></li>
+                        <li><a  href="{{ path('horus_site_category', {'id' : category.id}) }}"><i class="glyphicon glyphicon-search"></i> Voir</a></li>
                     </ul>
                 </div>
                 <a class="pull-left" href="#">
@@ -31,7 +31,7 @@
                 </a>
 
                 <div class="media-body">
-                    <h4 class="media-heading"><a href="{{ path('hetic_site_category', {'id' : category.id}) }}">{{ category.name }}</a>
+                    <h4 class="media-heading"><a href="{{ path('horus_site_category', {'id' : category.id}) }}">{{ category.name }}</a>
                         {% if category.visible %}
                             <span class="badge badge-success">En ligne</span>
                         {% else %}
@@ -48,7 +48,7 @@
             <div class="alert alert-dismissable alert-danger">
                 <button type="button" class="close" data-dismiss="alert">×</button>
                 <i class="glyphicon glyphicon-info-sign"></i> Aucun produit de créer pour le moment.
-                <a href="{{ path('hetic_site_add_category') }}" class="pull-right btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Créer une catégorie</a>
+                <a href="{{ path('horus_site_add_category') }}" class="pull-right btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Créer une catégorie</a>
             <div class="clear"></div>
         {% endfor %}
         <div class="clear"></div>

@@ -9,8 +9,6 @@ use Symfony\Component\Security\Core\SecurityContext;
 class AdministrateurController extends Controller
 {
 
-
-
     /**
      *  Login Action
      * @return type
@@ -35,6 +33,5 @@ class AdministrateurController extends Controller
             )
         );
     }
-
 
 }

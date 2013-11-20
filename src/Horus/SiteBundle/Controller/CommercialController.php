@@ -43,7 +43,7 @@ class CommercialController extends Controller
                     'success',
                     "L'action commerciale a bien été ajoutée"
                 );
-                return $this->redirect($this->generateUrl('hetic_site_commercials'));
+                return $this->redirect($this->generateUrl('horus_site_commercials'));
             }
         }
         return $this->render('HorusSiteBundle:Commercial:createcommercial.html.twig',
@@ -72,7 +72,7 @@ class CommercialController extends Controller
                     'success',
                     "L'action commerciale a bien été modifiée"
                 );
-                return $this->redirect($this->generateUrl('hetic_site_commercials'));
+                return $this->redirect($this->generateUrl('horus_site_commercials'));
             }
         }
         return $this->render('HorusSiteBundle:Commercial:editcommercial.html.twig',
@@ -94,7 +94,7 @@ class CommercialController extends Controller
             'success',
             "L'action commerciale a bien été supprimée"
         );
-        return $this->redirect($this->generateUrl('hetic_site_commercials'));
+        return $this->redirect($this->generateUrl('horus_site_commercials'));
     }
 
 
@@ -109,7 +109,7 @@ class CommercialController extends Controller
             'success',
             "L'action commerciale a bien été désactivée"
         );
-        return $this->redirect($this->generateUrl('hetic_site_commercials'));
+        return $this->redirect($this->generateUrl('horus_site_commercials'));
     }
 
     public function activecommercialAction(Commercial $id)
@@ -123,7 +123,7 @@ class CommercialController extends Controller
             'success',
             "L'action commerciale a bien été activée"
         );
-        return $this->redirect($this->generateUrl('hetic_site_commercials'));
+        return $this->redirect($this->generateUrl('horus_site_commercials'));
     }
 
 

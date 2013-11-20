@@ -25,7 +25,7 @@
                         <img class="img-thumbnail" src="{{ imgproducts ~  image.produit.id ~ '/' ~ image.path }} "/>
                     </td>
                     <td>
-                        <a href="{{ path('hetic_site_visualize_product', {'id' : image.produit.id }) }}">{{ image.produit.title }}</a>
+                        <a href="{{ path('horus_site_visualize_product', {'id' : image.produit.id }) }}">{{ image.produit.title }}</a>
                     </td>
                     <td>{% if image.cover %}<i class="glyphicon glyphicon-eye-open"></i> {% else %}<i
                                 class="glyphicon glyphicon-eye-close"></i> {% endif %}</td>
@@ -33,13 +33,13 @@
                                 class="glyphicon glyphicon-remove"></i>{% endif %}</td>
                     <td>
                         <a class="btn btn-primary btn-sm"
-                           href="{{ path('hetic_site_edit_pictures_product', {'id' : image.produit.id}) }}"><i class="glyphicon glyphicon-pencil"></i></a>
+                           href="{{ path('horus_site_edit_pictures_product', {'id' : image.produit.id}) }}"><i class="glyphicon glyphicon-pencil"></i></a>
 
                         <a class="btn btn-primary btn-sm"  onclick="return(confirm('Etes-vous sûr de vouloir supprimer cette photo?'));"
-                           href="{{ path('hetic_site_remove_image_product', {'id' : image.id}) }}"><i
+                           href="{{ path('horus_site_remove_image_product', {'id' : image.id}) }}"><i
                                     class="glyphicon glyphicon-remove"></i></a>
                         <a class="btn btn-primary btn-sm"  onclick="return(confirm('Etes-vous sûr de vouloir mettre en avant cette photo?'));"
-                           href="{{ path('hetic_site_cover_image_product', {'id' : image.id}) }}"><i
+                           href="{{ path('horus_site_cover_image_product', {'id' : image.id}) }}"><i
                                     class="glyphicon glyphicon-heart"></i></a>
                     </td>
                 </tr>
@@ -47,7 +47,7 @@
                 <div class="alert alert-dismissable alert-danger">
                     <button type="button" class="close" data-dismiss="alert">×</button>
                     <i class="glyphicon glyphicon-info-sign"></i> Aucun article de créer pour le moment.
-                    <a href="{{ path('hetic_site_article_create') }}" class="btn btn-primary pull-right"><i
+                    <a href="{{ path('horus_site_article_create') }}" class="btn btn-primary pull-right"><i
                                 class="glyphicon glyphicon-plus"></i> Ajouter un article</a>
 
                     <div class="clear"></div>
@@ -84,7 +84,7 @@
                             <img class="img-thumbnail" src="{{ imgcategories ~  image.category.id ~ '/' ~ image.path }} "/>
                     </td>
                     <td>
-                        <a href="{{ path('hetic_site_category', {'id' : image.category.id }) }}">{{ image.category.name }}</a>
+                        <a href="{{ path('horus_site_category', {'id' : image.category.id }) }}">{{ image.category.name }}</a>
                     </td>
                     <td>{% if image.cover %}<i class="glyphicon glyphicon-eye-open"></i> {% else %}<i
                                 class="glyphicon glyphicon-eye-close"></i> {% endif %}</td>
@@ -92,14 +92,14 @@
                                 class="glyphicon glyphicon-remove"></i>{% endif %}</td>
                     <td>
                         <a class="btn btn-primary btn-sm"
-                           href="{{ path('hetic_site_edit_image_category', {'id' : image.category.id}) }}"><i class="glyphicon glyphicon-pencil"></i></a>
+                           href="{{ path('horus_site_edit_image_category', {'id' : image.category.id}) }}"><i class="glyphicon glyphicon-pencil"></i></a>
 
 
                         <a class="btn btn-primary btn-sm"  onclick="return(confirm('Etes-vous sûr de vouloir supprimer cette photo?'));"
-                           href="{{ path('hetic_site_remove_image_product', {'id' : image.id}) }}"><i
+                           href="{{ path('horus_site_remove_image_product', {'id' : image.id}) }}"><i
                                     class="glyphicon glyphicon-remove"></i></a>
                         <a class="btn btn-primary btn-sm"  onclick="return(confirm('Etes-vous sûr de vouloir mettre en avant cette photo?'));"
-                           href="{{ path('hetic_site_cover_image_product', {'id' : image.id}) }}"><i
+                           href="{{ path('horus_site_cover_image_product', {'id' : image.id}) }}"><i
                                     class="glyphicon glyphicon-heart"></i></a>
                     </td>
                 </tr>
@@ -107,7 +107,7 @@
                 <div class="alert alert-dismissable alert-danger">
                     <button type="button" class="close" data-dismiss="alert">×</button>
                     <i class="glyphicon glyphicon-info-sign"></i> Aucun article de créer pour le moment.
-                    <a href="{{ path('hetic_site_article_create') }}" class="btn btn-primary pull-right"><i
+                    <a href="{{ path('horus_site_article_create') }}" class="btn btn-primary pull-right"><i
                                 class="glyphicon glyphicon-plus"></i> Ajouter un article</a>
 
                     <div class="clear"></div>

@@ -1,5 +1,5 @@
 {% block search %}
-    <form action="{{ path('hetic_search_avanced') }}" class="span12" role="search" method="post">
+    <form action="{{ path('horus_search_avanced') }}" class="span12" role="search" method="post">
         <div class="form-group">
             <div class="col-xs-8">
                 {{ form_widget(form.search, {'attr' : {'value' : app.request.query.get('word')}}) }}

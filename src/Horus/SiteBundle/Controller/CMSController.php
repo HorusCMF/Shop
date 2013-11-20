@@ -41,7 +41,7 @@ class CMSController extends Controller
                     'success',
                     "Le tag a bien été ajouté"
                 );
-                return $this->redirect($this->generateUrl('hetic_site_tags'));
+                return $this->redirect($this->generateUrl('horus_site_tags'));
             }
         }
         return $this->render('HorusSiteBundle:CMS:createtag.html.twig',
@@ -70,7 +70,7 @@ class CMSController extends Controller
                     'success',
                     "Le tag a bien été modifié"
                 );
-                return $this->redirect($this->generateUrl('hetic_site_tags'));
+                return $this->redirect($this->generateUrl('horus_site_tags'));
             }
         }
         return $this->render('HorusSiteBundle:CMS:edittag.html.twig',
@@ -126,7 +126,7 @@ class CMSController extends Controller
             'success',
             "Le tag a bien été supprimé"
         );
-        return $this->redirect($this->generateUrl('hetic_site_tags'));
+        return $this->redirect($this->generateUrl('horus_site_tags'));
     }
 
 
@@ -157,7 +157,7 @@ class CMSController extends Controller
                     'success',
                     "L'article a bien été ajouté"
                 );
-                return $this->redirect($this->generateUrl('hetic_site_articles'));
+                return $this->redirect($this->generateUrl('horus_site_articles'));
             }
         }
         return $this->render('HorusSiteBundle:CMS:createarticle.html.twig',
@@ -194,7 +194,7 @@ class CMSController extends Controller
                     'success',
                     "L'article a bien été editée"
                 );
-                return $this->redirect($this->generateUrl('hetic_site_articles'));
+                return $this->redirect($this->generateUrl('horus_site_articles'));
             }
         }
         return $this->render('HorusSiteBundle:CMS:editarticle.html.twig',
@@ -217,7 +217,7 @@ class CMSController extends Controller
             'success',
             "L'article a bien été supprimé"
         );
-        return $this->redirect($this->generateUrl('hetic_site_articles'));
+        return $this->redirect($this->generateUrl('horus_site_articles'));
     }
 
 
@@ -232,7 +232,7 @@ class CMSController extends Controller
             'success',
             "L'article a bien été désactivé"
         );
-        return $this->redirect($this->generateUrl('hetic_site_articles'));
+        return $this->redirect($this->generateUrl('horus_site_articles'));
     }
 
     public function activearticleAction(Article $id)
@@ -246,7 +246,7 @@ class CMSController extends Controller
             'success',
             "L'article a bien été activé"
         );
-        return $this->redirect($this->generateUrl('hetic_site_articles'));
+        return $this->redirect($this->generateUrl('horus_site_articles'));
     }
 
     public function articleAction(PAge $id)
@@ -283,7 +283,7 @@ class CMSController extends Controller
                     'success',
                     "La page a bien été ajoutée"
                 );
-                return $this->redirect($this->generateUrl('hetic_site_pages'));
+                return $this->redirect($this->generateUrl('horus_site_pages'));
             }
         }
         return $this->render('HorusSiteBundle:CMS:createpage.html.twig',
@@ -305,7 +305,7 @@ class CMSController extends Controller
             'success',
             "La page a bien été supprimée"
         );
-        return $this->redirect($this->generateUrl('hetic_site_pages'));
+        return $this->redirect($this->generateUrl('horus_site_pages'));
     }
 
 
@@ -327,7 +327,7 @@ class CMSController extends Controller
                     'success',
                     "La page a bien été editée"
                 );
-                return $this->redirect($this->generateUrl('hetic_site_pages'));
+                return $this->redirect($this->generateUrl('horus_site_pages'));
             }
         }
         return $this->render('HorusSiteBundle:CMS:editpage.html.twig',
@@ -350,7 +350,7 @@ class CMSController extends Controller
             'success',
             "La page a bien été désactivée"
         );
-        return $this->redirect($this->generateUrl('hetic_site_pages'));
+        return $this->redirect($this->generateUrl('horus_site_pages'));
     }
 
     public function activepageAction(Page $id)
@@ -364,7 +364,7 @@ class CMSController extends Controller
             'success',
             "La page a bien été activée"
         );
-        return $this->redirect($this->generateUrl('hetic_site_pages'));
+        return $this->redirect($this->generateUrl('horus_site_pages'));
     }
 
     public function pageAction(PAge $id)

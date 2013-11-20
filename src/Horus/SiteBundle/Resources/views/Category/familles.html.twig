@@ -11,8 +11,8 @@
                         <i class="glyphicon glyphicon-plus"></i> Action <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a onclick="return(confirm('Etes-vous sûr de vouloir supprimer cette catégory ?'));" href="{{ path('hetic_site_remove_famille', {'id' : famille.id}) }}"><i class="glyphicon glyphicon-remove"></i> Supprimer</a></li>
-                        <li><a  href="{{ path('hetic_site_edit_famille', {'id' : famille.id}) }}"><i class="glyphicon glyphicon-pencil"></i> Editer</a></li>
+                        <li><a onclick="return(confirm('Etes-vous sûr de vouloir supprimer cette catégory ?'));" href="{{ path('horus_site_remove_famille', {'id' : famille.id}) }}"><i class="glyphicon glyphicon-remove"></i> Supprimer</a></li>
+                        <li><a  href="{{ path('horus_site_edit_famille', {'id' : famille.id}) }}"><i class="glyphicon glyphicon-pencil"></i> Editer</a></li>
                     </ul>
                 </div>
 
@@ -37,7 +37,7 @@
             <div class="alert alert-dismissable alert-danger">
                 <button type="button" class="close" data-dismiss="alert">×</button>
                 <i class="glyphicon glyphicon-info-sign"></i> Aucun article de créer pour le moment.
-                <a href="{{ path('hetic_site_add_famille') }}" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i> Ajouter une famille</a>
+                <a href="{{ path('horus_site_add_famille') }}" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i> Ajouter une famille</a>
                 <div class="clear"></div>
             </div>
         {% endfor %}

@@ -57,7 +57,7 @@ class DefaultController extends Controller
                     'notice',
                     "L'article a bien été ajouté en base !"
                 );
-                return $this->redirect($this->generateUrl('hetic_site_hello'));
+                return $this->redirect($this->generateUrl('horus_site_hello'));
             }
         }
 

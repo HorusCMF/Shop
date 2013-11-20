@@ -1,7 +1,7 @@
 parameters:
-#    hetic_site.example.class: Horus\SiteBundle\Example
+#    horus_site.example.class: Horus\SiteBundle\Example
 
 services:
-#    hetic_site.example:
-#        class: %hetic_site.example.class%
+#    horus_site.example:
+#        class: %horus_site.example.class%
 #        arguments: [@service_id, "plain_value", %parameter%]

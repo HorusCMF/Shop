@@ -45,11 +45,11 @@ class AuthenticationSiteHandler implements LogoutSuccessHandlerInterface, Authen
         $this->em->flush();
 
         $referer = $request->server->get('HTTP_REFERER');
-        $referer = $this->router->generate('hetic_site_main');
+        $referer = $this->router->generate('horus_site_main');
         $this->session->set('place', $user->getVille());
 
         if($referer == 'http://'.$request->getHttpHost().'/login')
-            $referer = $this->router->generate('hetic_site_main');
+            $referer = $this->router->generate('horus_site_main');
 
         return new RedirectResponse($referer);
     }

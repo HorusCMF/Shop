@@ -11,8 +11,8 @@
                         <i class="glyphicon glyphicon-plus"></i> Action <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a onclick="return(confirm('Etes-vous sûr de vouloir supprimer cette page ?'));" href="{{ path('hetic_site_remove_page', {'id' : page.id}) }}"><i class="glyphicon glyphicon-remove"></i> Supprimer</a></li>
-                        <li><a  href="{{ path('hetic_site_edit_page', {'id' : page.id}) }}"><i class="glyphicon glyphicon-pencil"></i> Editer</a></li>
+                        <li><a onclick="return(confirm('Etes-vous sûr de vouloir supprimer cette page ?'));" href="{{ path('horus_site_remove_page', {'id' : page.id}) }}"><i class="glyphicon glyphicon-remove"></i> Supprimer</a></li>
+                        <li><a  href="{{ path('horus_site_edit_page', {'id' : page.id}) }}"><i class="glyphicon glyphicon-pencil"></i> Editer</a></li>
                     </ul>
                 </div>
 
@@ -36,7 +36,7 @@
             <div class="alert alert-dismissable alert-danger">
                 <button type="button" class="close" data-dismiss="alert">×</button>
                 <i class="glyphicon glyphicon-info-sign"></i> Aucune page de créer pour le moment.
-                <a href="{{ path('hetic_site_page_create') }}" class="pull-right btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Ajouter une page</a>
+                <a href="{{ path('horus_site_page_create') }}" class="pull-right btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Ajouter une page</a>
                 <div class="clear"></div>
             </div>
         {% endfor %}

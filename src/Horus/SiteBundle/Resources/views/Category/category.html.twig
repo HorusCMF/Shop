@@ -11,13 +11,13 @@
             </button>
             <ul class="dropdown-menu">
                 {% if category.visible %}
-                    <li><a onclick="return(confirm('Etes-vous sûr de vouloir désactiver cette catégory ?'));" href="{{ path('hetic_site_desactive_category', {'id' : category.id}) }}"><i class="glyphicon glyphicon-minus-sign"></i> Désactiver</a></li>
+                    <li><a onclick="return(confirm('Etes-vous sûr de vouloir désactiver cette catégory ?'));" href="{{ path('horus_site_desactive_category', {'id' : category.id}) }}"><i class="glyphicon glyphicon-minus-sign"></i> Désactiver</a></li>
                 {% else %}
-                    <li><a onclick="return(confirm('Etes-vous sûr de vouloir activer cette catégory ?'));" href="{{ path('hetic_site_active_category', {'id' : category.id}) }}"><i class="glyphicon glyphicon-ok"></i> Activer</a></li>
+                    <li><a onclick="return(confirm('Etes-vous sûr de vouloir activer cette catégory ?'));" href="{{ path('horus_site_active_category', {'id' : category.id}) }}"><i class="glyphicon glyphicon-ok"></i> Activer</a></li>
                 {% endif %}
-                <li><a onclick="return(confirm('Etes-vous sûr de vouloir supprimer cette catégory ?'));" href="{{ path('hetic_site_remove_category', {'id' : category.id}) }}"><i class="glyphicon glyphicon-remove"></i> Supprimer</a></li>
-                <li><a  href="{{ path('hetic_site_edit_category', {'id' : category.id}) }}"><i class="glyphicon glyphicon-pencil"></i> Editer</a></li>
-                <li><a  href="{{ path('hetic_site_edit_image_category', {'id' : category.id}) }}"><i class="glyphicon glyphicon-camera"></i> Photos</a></li>
+                <li><a onclick="return(confirm('Etes-vous sûr de vouloir supprimer cette catégory ?'));" href="{{ path('horus_site_remove_category', {'id' : category.id}) }}"><i class="glyphicon glyphicon-remove"></i> Supprimer</a></li>
+                <li><a  href="{{ path('horus_site_edit_category', {'id' : category.id}) }}"><i class="glyphicon glyphicon-pencil"></i> Editer</a></li>
+                <li><a  href="{{ path('horus_site_edit_image_category', {'id' : category.id}) }}"><i class="glyphicon glyphicon-camera"></i> Photos</a></li>
             </ul>
         </div>
         <a class="pull-left" href="#">
@@ -42,14 +42,14 @@
                     </button>
                     <ul class="dropdown-menu">
                         {% if produit.isVisible %}
-                            <li><a onclick="return(confirm('Etes-vous sûr de vouloir désactiver cet article?'));" href="{{ path('hetic_site_desactive_product', {'id' : produit.id}) }}"><i class="glyphicon glyphicon-minus-sign"></i> Désactiver</a></li>
+                            <li><a onclick="return(confirm('Etes-vous sûr de vouloir désactiver cet article?'));" href="{{ path('horus_site_desactive_product', {'id' : produit.id}) }}"><i class="glyphicon glyphicon-minus-sign"></i> Désactiver</a></li>
                         {% else %}
-                            <li><a onclick="return(confirm('Etes-vous sûr de vouloir activer cet article?'));" href="{{ path('hetic_site_active_product', {'id' : produit.id}) }}"><i class="glyphicon glyphicon-ok"></i> Activer</a></li>
+                            <li><a onclick="return(confirm('Etes-vous sûr de vouloir activer cet article?'));" href="{{ path('horus_site_active_product', {'id' : produit.id}) }}"><i class="glyphicon glyphicon-ok"></i> Activer</a></li>
                         {% endif %}
-                        <li><a onclick="return(confirm('Etes-vous sûr de vouloir supprimer cet article?'));" href="{{ path('hetic_site_remove_product', {'id' : produit.id}) }}"><i class="glyphicon glyphicon-remove"></i> Supprimer</a></li>
-                        <li><a  href="{{ path('hetic_site_edit_product', {'id' : produit.id}) }}"><i class="glyphicon glyphicon-pencil"></i> Editer</a></li>
-                        <li><a  href="{{ path('hetic_site_edit_pictures_product', {'id' : produit.id}) }}"><i class="glyphicon glyphicon-camera"></i> Photos</a></li>
-                        <li><a  href="{{ path('hetic_site_visualize_product', {'id' : produit.id}) }}"><i class="glyphicon glyphicon-search"></i> Voir</a></li>
+                        <li><a onclick="return(confirm('Etes-vous sûr de vouloir supprimer cet article?'));" href="{{ path('horus_site_remove_product', {'id' : produit.id}) }}"><i class="glyphicon glyphicon-remove"></i> Supprimer</a></li>
+                        <li><a  href="{{ path('horus_site_edit_product', {'id' : produit.id}) }}"><i class="glyphicon glyphicon-pencil"></i> Editer</a></li>
+                        <li><a  href="{{ path('horus_site_edit_pictures_product', {'id' : produit.id}) }}"><i class="glyphicon glyphicon-camera"></i> Photos</a></li>
+                        <li><a  href="{{ path('horus_site_visualize_product', {'id' : produit.id}) }}"><i class="glyphicon glyphicon-search"></i> Voir</a></li>
 
                     </ul>
                 </div>
@@ -79,7 +79,7 @@
                         {% endif %}
                     </h3>
                     <p>
-                        <a href="{{ path('hetic_site_visualize_product', {'id' : produit.id}) }}" class="btn-xs btn btn-warning pull-right"><i class="glyphicon glyphicon-search"></i> Voir le produit</a>
+                        <a href="{{ path('horus_site_visualize_product', {'id' : produit.id}) }}" class="btn-xs btn btn-warning pull-right"><i class="glyphicon glyphicon-search"></i> Voir le produit</a>
                     </p>
                 </div>
             </div>

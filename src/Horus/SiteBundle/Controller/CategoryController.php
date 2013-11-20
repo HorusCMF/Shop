@@ -42,7 +42,7 @@ class CategoryController extends Controller
             'success',
             "La catégory a bien été supprimée"
         );
-        return $this->redirect($this->generateUrl('hetic_site_categories'));
+        return $this->redirect($this->generateUrl('horus_site_categories'));
     }
 
 
@@ -56,7 +56,7 @@ class CategoryController extends Controller
             'success',
             "La famille a bien été supprimée"
         );
-        return $this->redirect($this->generateUrl('hetic_site_familles'));
+        return $this->redirect($this->generateUrl('horus_site_familles'));
     }
 
 
@@ -80,7 +80,7 @@ class CategoryController extends Controller
                     'success',
                     "La catégory a bien été ajoutée"
                 );
-                return $this->redirect($this->generateUrl('hetic_site_edit_image_category', array('id' => $category->getId())));
+                return $this->redirect($this->generateUrl('horus_site_edit_image_category', array('id' => $category->getId())));
             }
         }
         return $this->render('HorusSiteBundle:Category:createcategory.html.twig',
@@ -110,7 +110,7 @@ class CategoryController extends Controller
                     'success',
                     "La catégory a bien été editée"
                 );
-                return $this->redirect($this->generateUrl('hetic_site_familles'));
+                return $this->redirect($this->generateUrl('horus_site_familles'));
             }
         }
         return $this->render('HorusSiteBundle:Category:editfamille.html.twig',
@@ -141,7 +141,7 @@ class CategoryController extends Controller
                     'success',
                     "La catégory a bien été ajoutée"
                 );
-                return $this->redirect($this->generateUrl('hetic_site_familles'));
+                return $this->redirect($this->generateUrl('horus_site_familles'));
             }
         }
         return $this->render('HorusSiteBundle:Category:createfamille.html.twig',
@@ -171,7 +171,7 @@ class CategoryController extends Controller
             'success',
             "L'image de la catégorie a bien été mise en avant"
         );
-        return $this->redirect($this->generateUrl('hetic_site_edit_image_category', array('id' => $id->getCategory()->getId())));
+        return $this->redirect($this->generateUrl('horus_site_edit_image_category', array('id' => $id->getCategory()->getId())));
     }
 
     public function removeimagecategoryAction(ImageCategory $id)
@@ -184,7 +184,7 @@ class CategoryController extends Controller
             'success',
             "L'image de la catégories a bien été activé"
         );
-        return $this->redirect($this->generateUrl('hetic_site_edit_image_category', array('id' => $id->getCategory()->getId())));
+        return $this->redirect($this->generateUrl('horus_site_edit_image_category', array('id' => $id->getCategory()->getId())));
     }
 
 
@@ -199,7 +199,7 @@ class CategoryController extends Controller
             'success',
             "La catégory a bien été désactivé"
         );
-        return $this->redirect($this->generateUrl('hetic_site_categories'));
+        return $this->redirect($this->generateUrl('horus_site_categories'));
     }
 
     public function activecategoryAction(Category $id)
@@ -213,7 +213,7 @@ class CategoryController extends Controller
             'success',
             "La category a bien été activée"
         );
-        return $this->redirect($this->generateUrl('hetic_site_categories'));
+        return $this->redirect($this->generateUrl('horus_site_categories'));
     }
 
     public function categoryAction(Category $id)
@@ -258,7 +258,7 @@ class CategoryController extends Controller
                     'success',
                     "L'image de la catégory a bien été ajouté"
                 );
-                return $this->redirect($this->generateUrl('hetic_site_categories'));
+                return $this->redirect($this->generateUrl('horus_site_categories'));
             }
         }
         return $this->render('HorusSiteBundle:Category:picturecategory.html.twig',
@@ -289,7 +289,7 @@ class CategoryController extends Controller
                     'success',
                     "La catégory a bien été editée"
                 );
-                return $this->redirect($this->generateUrl('hetic_site_categories'));
+                return $this->redirect($this->generateUrl('horus_site_categories'));
             }
         }
         return $this->render('HorusSiteBundle:Category:editcategory.html.twig',

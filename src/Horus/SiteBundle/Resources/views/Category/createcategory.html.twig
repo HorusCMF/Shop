@@ -11,7 +11,7 @@
 {% block content %}
 
     <div id="createcategory">
-        <a class="btn back btn-danger pull-right" href="{{ path('hetic_site_categories') }}">&larr; Revenir à la liste des
+        <a class="btn back btn-danger pull-right" href="{{ path('horus_site_categories') }}">&larr; Revenir à la liste des
             catégories</a>
 
         <h1><i class="glyphicon glyphicon-plus"></i> Créer une catégory</h1>
@@ -23,7 +23,7 @@
             </div>
         {% endif %}
 
-        <form novalidate="novalidate" action="{{ path('hetic_site_add_category') }}" method="post">
+        <form novalidate="novalidate" action="{{ path('horus_site_add_category') }}" method="post">
 
             <div class="row-fluid">
                 <div class="span12">
