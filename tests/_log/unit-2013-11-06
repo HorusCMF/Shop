@@ -1,0 +1,6 @@
+[2013-11-06 19:52:05] ReposArticleTest::testMe.INFO: PASSED [] []
+[2013-11-06 19:52:06] ReposArticleTest::testGetArticlesByCategory.INFO: PASSED [] []
+[2013-11-06 19:52:06] ReposArticleTest::testGetArticlesByTags.INFO: PASSED [] []
+[2013-11-06 19:52:06] ReposArticleTest::testFindCategory.INFO: PASSED [] []
+[2013-11-06 19:52:29] ReposArticleTest::testMe.INFO: PASSED [] []
+[2013-11-06 19:52:29] ReposArticleTest::testGetArticlesByCategory.INFO: PASSED [] []

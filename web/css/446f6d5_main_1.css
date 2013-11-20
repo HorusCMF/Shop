@@ -1,0 +1,102 @@
+/* Global Variable
+ */
+/* --------------------------------------------------------------------------------------------------------------------------------
+ */
+/* Clear Page
+ */
+/* Full Page
+ */
+/* Get Compatible property
+ */
+/* Get Clear method
+ */
+/* Get Test Out of Page
+ */
+/* Get Common Property
+ */
+/* Get Font Size Responsive
+ */
+/* --------------------------------------------------------------------------------------------------------------------------------
+ */
+/* General dom Elements
+ */
+/* line 95, assetic_compassTm3tMd.sass */
+body {
+  background: url("https://www.myposeo.com/img/frontend/main_background.jpg");
+}
+
+/* line 97, assetic_compassTm3tMd.sass */
+label {
+  font-size: 18px;
+}
+
+/* line 99, assetic_compassTm3tMd.sass */
+.form-control {
+  font-size: 16px;
+}
+
+/* line 101, assetic_compassTm3tMd.sass */
+a {
+  color: chocolate;
+}
+
+/* line 103, assetic_compassTm3tMd.sass */
+a.list-group-item {
+  color: #222222;
+}
+
+/* line 105, assetic_compassTm3tMd.sass */
+.navbar-default {
+  -webkit-box-shadow: 1px 1px 12px #555555;
+  -moz-box-shadow: 1px 1px 12px #555555;
+  box-shadow: 1px 1px 12px #555555;
+}
+
+/* line 108, assetic_compassTm3tMd.sass */
+.panel {
+  background-color: darkred;
+}
+
+/* line 111, assetic_compassTm3tMd.sass */
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------
+ */
+/* General blocks
+ */
+/* line 129, assetic_compassTm3tMd.sass */
+.container .maincontent {
+  background-color: white;
+  background-image: linear-gradient(#eeeeee 0.1em, transparent 0.1em);
+  background-size: 100% 1.2em;
+  border: 20px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  -webkit-background-clip: border;
+  -moz-background-clip: border;
+  background-clip: border-box;
+  -webkit-background-clip: border;
+  -moz-background-clip: border;
+  background-clip: border;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-background-clip: content;
+  -moz-background-clip: content;
+  background-clip: content;
+  color: darkgoldenrod;
+  padding: 10px;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------
+ */
+/* General Classes
+ */
+ * .clear
+ *  both */

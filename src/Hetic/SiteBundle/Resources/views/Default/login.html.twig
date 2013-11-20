@@ -1,0 +1,47 @@
+{% extends 'HeticSiteBundle::layout_simple.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {% javascripts '@HeticSiteBundle/Resources/public/js/index.js' filter="cssrewrite" %}
+    <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
+
+{% endblock %}
+
+
+{% block content %}
+    <form class="form-signin" action="{{ path('login_check') }}" method="post">
+        <h2 class="text-center form-signin-heading"><i class="glyphicon glyphicon-off"></i> Authentification</h2>
+        {% if error %}
+            <div class="alert alert-dismissable alert-danger">
+                <button class="close" data-dismiss="alert">×</button>
+                <i class="glyphicon glyphicon-warning-sign"></i> {{ error.message|trans }}
+            </div>
+        {% endif %}
+
+        <div class="input-group">
+            <input name="_username" type="text" class="form-control" placeholder="Email address" required="required">
+              <span class="input-group-btn">
+                  <button class="btn btn-search btn-primary"><i class="glyphicon glyphicon-user"></i></button>
+              </span>
+        </div>
+        <p></p>
+
+        <div class="input-group">
+            <input name="_password" type="password" class="form-control" placeholder="Password" required="required">
+              <span class="input-group-btn">
+                  <button class="btn btn-search btn-primary"><i class="glyphicon glyphicon-flash"></i></button>
+              </span>
+        </div>
+        <label class="checkbox">
+            <input type="checkbox" class="pull-left" value="remember-me" id="remember">
+            <label for="remember">Souvenir de moi</label>
+        </label>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">
+            <i class="glyphicon glyphicon-lock"></i>
+            Connexion
+        </button>
+    </form>
+{% endblock %}
+
+

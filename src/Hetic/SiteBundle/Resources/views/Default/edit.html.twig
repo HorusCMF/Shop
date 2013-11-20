@@ -1,0 +1,39 @@
+{% extends 'HeticSiteBundle::layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets '@HeticSiteBundle/Resources/public/css/index.css' filter="cssrewrite" %}
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}" />
+    {% endstylesheets %}
+
+    {% stylesheets '@HeticSiteBundle/Resources/public/css/test.css' filter="cssrewrite" %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}" />
+    {% endstylesheets %}
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {% javascripts '@HeticSiteBundle/Resources/public/js/index.js' filter="cssrewrite" %}
+        <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+{% block content %}
+    {% block citation %}
+        <h1>Editer mon article</h1>
+    {% endblock %}
+        <div class="row-fluid">
+            <div class="span7">
+                {% for flashMessage in app.session.flashbag.get('notice') %}
+                    <div class="flash-notice alert alert-block">
+                        {{ flashMessage }}
+                    </div>
+                {% endfor %}
+                <form action="{{ path('hetic_site_edit', {'id' : article.id}) }}" method="post">
+                {{ form(form) }}
+                </form>
+            </div><!--/span-->
+        </div><!--/row-->
+{% endblock %}
+

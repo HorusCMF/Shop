@@ -1,0 +1,36 @@
+{% extends 'HeticSiteBundle::layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets '@HeticSiteBundle/Resources/public/css/index.css' filter="cssrewrite" %}
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}" />
+    {% endstylesheets %}
+
+    {% stylesheets '@HeticSiteBundle/Resources/public/css/test.css' filter="cssrewrite" %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}" />
+    {% endstylesheets %}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {% javascripts '@HeticSiteBundle/Resources/public/js/index.js' filter="cssrewrite" %}
+        <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+{% block content %}
+        <img src="https://evbdn.eventbrite.com/s3-s3/eventlogos/29348387/hetic.png" width="250" />
+        <img src="{{ asset('bundles/heticsite/images/nouvelle_equipe.jpg') }}" width="250" class="img-polaroid" />
+        <div class="row-fluid">
+        <div class="span8">
+            <h3>Détail de l'article {{ article.title }}</h3>
+            {% for tag in article.tags %}
+                <div class="badge badge-warning">{{ tag.word }}</div>
+            {% endfor %}
+            <hr />
+            <p>{{ article.content|raw }}</p>
+
+        </div>
+
+{% endblock %}
+

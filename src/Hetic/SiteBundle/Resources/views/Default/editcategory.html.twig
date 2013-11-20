@@ -1,0 +1,11 @@
+{% extends 'HeticSiteBundle::layout.html.twig' %}
+
+{% block content %}
+    <h2>Ajout d'une catégory</h2>
+    <h3>{{ category.name|title }}</h3>
+    <form action="{{ path('hetic_category_edit', {'id' : category.id }) }}" method="post" id="addarticle">
+        <div class="errors">{{ form_errors(form) }}</div>
+        {{ form_widget(form) }}
+        <button class="btn" type="submit">Enregistrer la category</button>
+    </form>
+{% endblock %}

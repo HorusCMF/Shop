@@ -1,0 +1,42 @@
+{% extends 'HeticSiteBundle::layout.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {% javascripts '@HeticSiteBundle/Resources/public/js/product.js' %}
+    <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+
+{% block content %}
+
+    <div id="edittag">
+        <a class="btn back btn-danger pull-right" href="{{ path('hetic_site_tags') }}">&larr; Revenir à la liste des tags</a>
+
+        <h1><i class="glyphicon glyphicon-tag"></i> Modifier ce tag</h1>
+        <hr class="clear fancy-line">
+
+        <form novalidate="novalidate" action="{{ path('hetic_site_edit_tag',{'id' : tag.id}) }}" method="post">
+
+            <div class="row-fluid">
+                <div class="span12">
+                    <label for="title">Mots-Clefs</label>
+                    <div class="input-group">
+                        {{ form_widget(form.word) }}
+                        <span class="input-group-btn">
+                                          <button class="btn btn-search btn-primary"><i
+                                                      class="glyphicon glyphicon-pencil"></i></button>
+                                      </span>
+
+                    </div>
+                    {{ form_errors(form.word) }}
+                </div>
+            </div>
+
+            <button class="btn btn-primary btn-large" type="submit"><i class="glyphicon glyphicon-pencil"></i> Modifier
+                ce tag
+            </button>
+        </form>
+    </div>
+{% endblock %}
+

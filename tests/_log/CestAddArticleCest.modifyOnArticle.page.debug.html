@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Source de Symfony 2 à Hetic</title>
+            
+    <link rel="stylesheet" type="text/css" href="http://getbootstrap.com/2.3.2/assets/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="http://getbootstrap.com/2.3.2/assets/css/bootstrap-responsive.css" />
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic' rel='stylesheet' type='text/css'>    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400" />
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/446f6d5_main_1.css" />
+            <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    </head>
+    <body>
+                <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="brand" href="/">Hetic</a>
+                <div class="nav-collapse collapse">
+                    <p class="navbar-text pull-right">
+                        Logged in as <a href="#" class="navbar-link">Username</a>
+                    </p>
+                    <ul class="nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+    <br /><br />
+    <br /><br />
+
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                                        <div class="row-fluid">
+            <div class="span4">
+                <h2>Ajout d'un article</h2>
+                    <form action="/" method="post" id="addarticle">
+                        <form name="" method="post" action=""><div     ><div><label for="title" class="required">Title</label><input type="text"     id="title" name="title" required="required"        class="input-xlarge" placeholder="Titre de la tâches" /></div><div><label for="category">Category</label><select     id="category" name="category"><option value=""></option><option value="1">Actua BD</option><option value="2">Insolite</option><option value="3">A la une</option><option value="4">Sports extremes</option><option value="5">Titre caté</option><option value="6">Coucou :)</option><option value="7">Nouvelle Caté!</option><option value="8">Nouvelle Caté!</option></select></div><div><label for="point">Point</label><input type="number"     id="point" name="point" /></div><div><label for="tags" class="required">Tags</label><select     id="tags" name="tags[]" required="required" multiple="multiple"><option value="1">footballeur</option><option value="2">Une fillette</option><option value="3">sex-appeal</option><option value="4">NRJ Music Awards</option><option value="5">Lilian Thuram</option><option value="6">Pékin Express</option><option value="7">Duke Nukem </option><option value="8">RMNG</option><option value="9">800 millions d’euros</option><option value="10">migrants africains</option><option value="11">les Bleus</option><option value="12">Dynamo Kiev</option><option value="13">GlaxoSmithKline</option><option value="14">suppressions de postes</option><option value="15">MSC Croisières</option><option value="16">objet ultra-lumineux</option></select></div><div><label class="required">Nature</label><div     id="nature"><input type="radio"     id="nature_0" name="nature" required="required" value="1" /><label for="nature_0" class="required">Brouillon</label><input type="radio"     id="nature_1" name="nature" required="required" value="2" /><label for="nature_1" class="required">Relus</label><input type="radio"     id="nature_2" name="nature" required="required" value="3" /><label for="nature_2" class="required">Final</label></div></div><div><label for="content">Content</label><textarea     id="content" name="content"        style="width: 394px;height: 129px;" rows="5" cols="5" placeholder="Contenu de la tâche"></textarea></div><div><label for="isVisible">Is visible</label><input type="checkbox"     id="isVisible" name="isVisible" value="1" /></div><div><label for="datePublication" class="required">Date publication</label><input type="date"     id="datePublication" name="datePublication" required="required" value="2013-11-01" /></div><div><button type="submit" id="Sauvegarder" name="Sauvegarder" class="btn btn-primary">Sauvegarder</button></div></div></form>
+                    </form>
+                <h2>Ajout d'une catégory</h2>
+<form action="/category-add/" method="post" id="addcategory">
+    <div class="errors">    </div>
+        <div     ><div><label for="name" class="required">Name</label><input type="text"     id="name" name="name" required="required"        class="input-xlarge" placeholder="Titre de la tâches" /></div><div><label for="description" class="required">Description</label><textarea     id="description" name="description" required="required"></textarea></div><div><label for="articles" class="required">Articles</label><select     id="articles" name="articles[]" required="required" multiple="multiple"><option value="25">Sécurité routière : Souriez ! Vous êtes flashés - le retour</option><option value="27">L&#039;Ukraine adversaire de la France en barrages du Mondial 2014 : l&#039;équipe qui était déjà éliminée</option><option value="28">Le groupe pharmaceutique GSK va supprimer 271 postes en France</option><option value="47">Gérard de Villiers, &quot;honorable correspondant&quot; des services secrets français</option><option value="48">Nancy : le Dr Muller acquitté du meurtre de sa femme</option></select></div></div>
+    <button class="btn" type="submit">Enregistrer la category</button>
+</form>
+
+            </div><!--/span-->
+            <div class="span8">
+                <h2>Liste des Category</h2>
+                <div id="action_cates">
+                                        <a class="btn btn-primary" href="/sort-by-category/1">Actua Bd</a>
+                                        <a class="btn btn-primary" href="/sort-by-category/2">Insolite</a>
+                                        <a class="btn btn-primary" href="/sort-by-category/3">A La Une</a>
+                                        <a class="btn btn-primary" href="/sort-by-category/4">Sports Extremes</a>
+                                        <a class="btn btn-primary" href="/sort-by-category/5">Titre Caté</a>
+                                        <a class="btn btn-primary" href="/sort-by-category/6">Coucou :)</a>
+                                        <a class="btn btn-primary" href="/sort-by-category/7">Nouvelle Caté!</a>
+                                        <a class="btn btn-primary" href="/sort-by-category/8">Nouvelle Caté!</a>
+                                    </div>
+                <h2>Liste des Articles par popularité</h2>
+                                <div class="navbar">
+                    <div class="navbar-inner">
+                        <h4>Tags</h4>
+                        <ul class="nav">
+                                                                                                <li> <a href="/articles/Lilian%20Thuram"><i class="icon-comment"></i> Lilian Thuram</a></li>
+                                                                    <li> <a href="/articles/RMNG"><i class="icon-comment"></i> RMNG</a></li>
+                                                                    <li> <a href="/articles/800%20millions%20d%E2%80%99euros"><i class="icon-comment"></i> 800 millions d’euros</a></li>
+                                                                    <li> <a href="/articles/les%20Bleus"><i class="icon-comment"></i> les Bleus</a></li>
+                                                                                                                                <li> <a href="/articles/Lilian%20Thuram"><i class="icon-comment"></i> Lilian Thuram</a></li>
+                                                                    <li> <a href="/articles/RMNG"><i class="icon-comment"></i> RMNG</a></li>
+                                                                    <li> <a href="/articles/les%20Bleus"><i class="icon-comment"></i> les Bleus</a></li>
+                                                                    <li> <a href="/articles/objet%20ultra-lumineux"><i class="icon-comment"></i> objet ultra-lumineux</a></li>
+                                                                                                                                <li> <a href="/articles/RMNG"><i class="icon-comment"></i> RMNG</a></li>
+                                                                                                                                <li> <a href="/articles/800%20millions%20d%E2%80%99euros"><i class="icon-comment"></i> 800 millions d’euros</a></li>
+                                                                    <li> <a href="/articles/les%20Bleus"><i class="icon-comment"></i> les Bleus</a></li>
+                                                                                                                                <li> <a href="/articles/P%C3%A9kin%20Express"><i class="icon-comment"></i> Pékin Express</a></li>
+                                                                    <li> <a href="/articles/suppressions%20de%20postes"><i class="icon-comment"></i> suppressions de postes</a></li>
+                                                                                    </ul>
+                    </div>
+                </div>
+                                                                    <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th><a href="">#</a></th>
+                            <th>Titre</th>
+                            <th>Category</th>
+                            <th>Tags</th>
+                            <th>Contenu</th>
+                            <th>Point</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                                            <tr>
+                            <td><a href="/article-single/47">47</a></td>
+                            <td><h5>
+                                 <a  href="/article-single/47">Gérard De Villiers, &quot;honorable Correspondant&quot; Des Services Secrets Français</a>
+                                </h5></td>
+                            <td><h5><a href="/category/3">A La Une</a></h5></td>
+                            <td>
+                                                                    <div class="btn btn-small">
+                                        <i class="icon-tags"></i>
+                                        <a href="/articles/sortbycategory/3">
+                                            Lilian Thuram
+                                        </a>
+                                    </div>
+                                                                    <div class="btn btn-small">
+                                        <i class="icon-tags"></i>
+                                        <a href="/articles/sortbycategory/3">
+                                            Rmng
+                                        </a>
+                                    </div>
+                                                                    <div class="btn btn-small">
+                                        <i class="icon-tags"></i>
+                                        <a href="/articles/sortbycategory/3">
+                                            800 Millions D’Euros
+                                        </a>
+                                    </div>
+                                                                    <div class="btn btn-small">
+                                        <i class="icon-tags"></i>
+                                        <a href="/articles/sortbycategory/3">
+                                            Les Bleus
+                                        </a>
+                                    </div>
+                                                            </td>
+                            <td><p class="content" style="font-size: 11px">Mort le 31 octobre à 83 ans, Gérard de Villiers n'a jamais fait mystère de ses sources excellentes au sein des services secrets. Français, mais pas seulement... Les personnages imaginaires et folkloriques...</p></td>
+                            <td><span class="badge badge-info">10</span></td>
+                            <td>
+                                <p class="">
+                                    <a class="remove" href="/remove/article/47">
+                                        <i class="icon-remove"></i>
+                                    </a>
+                                </p>
+                                <p class="">
+                                                                            <a class="star" href="/addfavoris/addstar/47">
+                                            <i class="icon-star"></i>
+                                        </a>
+                                                                    </p>
+                                <p class="">
+                                                                            <a class="visible"  href="/invisible/47">
+                                            <i class="icon-ban-circle"></i>
+                                        </a>
+                                                                    </p>
+                                <p class="">
+                                    <a class="edit"  href="/editable/47">
+                                        <i class="icon-pencil"></i>
+                                    </a>
+                                </p>
+                                <p class="">
+                                    <a class="plus"  href="/bonus-article/47">
+                                        <i class="icon-plus"></i>
+                                    </a>
+                                    <a class="less" href="/malus-article/47">
+                                        <i class="icon-minus"></i>
+                                    </a>
+                                </p>
+                            </td>
+                        </tr>
+                                            <tr>
+                            <td><a href="/article-single/48">48</a></td>
+                            <td><h5>
+                                 <a  href="/article-single/48">Nancy : Le Dr Muller Acquitté Du Meurtre De Sa Femme</a>
+                                </h5></td>
+                            <td><h5><a href="/category/4">Sports Extremes</a></h5></td>
+                            <td>
+                                                                    <div class="btn btn-small">
+                                        <i class="icon-tags"></i>
+                                        <a href="/articles/sortbycategory/4">
+                                            Lilian Thuram
+                                        </a>
+                                    </div>
+                                                                    <div class="btn btn-small">
+                                        <i class="icon-tags"></i>
+                                        <a href="/articles/sortbycategory/4">
+                                            Rmng
+                                        </a>
+                                    </div>
+                                                                    <div class="btn btn-small">
+                                        <i class="icon-tags"></i>
+                                        <a href="/articles/sortbycategory/4">
+                                            Les Bleus
+                                        </a>
+                                    </div>
+                                                                    <div class="btn btn-small">
+                                        <i class="icon-tags"></i>
+                                        <a href="/articles/sortbycategory/4">
+                                            Objet Ultra-Lumineux
+                                        </a>
+                                    </div>
+                                                            </td>
+                            <td><p class="content" style="font-size: 11px">La cour d'assises de Meurthe-et-Moselle a acquitté jeudi le docteur Jean-Louis Muller de l'accusation de meurtre de sa femme en 1999. Il comparaissait pour la troisième fois dans cette affaire, après avoir...</p></td>
+                            <td><span class="badge badge-info">9</span></td>
+                            <td>
+                                <p class="">
+                                    <a class="remove" href="/remove/article/48">
+                                        <i class="icon-remove"></i>
+                                    </a>
+                                </p>
+                                <p class="">
+                                                                            <a class="star" href="/addfavoris/addstar/48">
+                                            <i class="icon-star"></i>
+                                        </a>
+                                                                    </p>
+                                <p class="">
+                                                                            <a class="visible"  href="/invisible/48">
+                                            <i class="icon-ban-circle"></i>
+                                        </a>
+                                                                    </p>
+                                <p class="">
+                                    <a class="edit"  href="/editable/48">
+                                        <i class="icon-pencil"></i>
+                                    </a>
+                                </p>
+                                <p class="">
+                                    <a class="plus"  href="/bonus-article/48">
+                                        <i class="icon-plus"></i>
+                                    </a>
+                                    <a class="less" href="/malus-article/48">
+                                        <i class="icon-minus"></i>
+                                    </a>
+                                </p>
+                            </td>
+                        </tr>
+                                            <tr>
+                            <td><a href="/article-single/27">27</a></td>
+                            <td><h5>
+                                 <a  href="/article-single/27">L&#039;ukraine Adversaire De La France En Barrages Du Mondial 2014 : L&#039;équipe Qui Était Déjà Éliminée</a>
+                                </h5></td>
+                            <td><h5><a href="/category/1">Actua Bd</a></h5></td>
+                            <td>
+                                                                    <div class="btn btn-small">
+                                        <i class="icon-tags"></i>
+                                        <a href="/articles/sortbycategory/1">
+                                            Rmng
+                                        </a>
+                                    </div>
+                                                            </td>
+                            <td><p class="content" style="font-size: 11px">Ce sera donc l’Ukraine… Il n’y avait pas besoin de faire preuve d’autant de mesquinerie en pleurnichant sur le classement FIFA : la France retrouvera l’adversaire que la plupart des commentateurs lui souhaitaient....</p></td>
+                            <td><span class="badge badge-info">3</span></td>
+                            <td>
+                                <p class="">
+                                    <a class="remove" href="/remove/article/27">
+                                        <i class="icon-remove"></i>
+                                    </a>
+                                </p>
+                                <p class="">
+                                                                            <a class="star" href="/addfavoris/addstar/27">
+                                            <i class="icon-star"></i>
+                                        </a>
+                                                                    </p>
+                                <p class="">
+                                                                            <a class="visible" href="/visible/27">
+                                            <i class="icon-ok"></i>
+                                        </a>
+                                                                    </p>
+                                <p class="">
+                                    <a class="edit"  href="/editable/27">
+                                        <i class="icon-pencil"></i>
+                                    </a>
+                                </p>
+                                <p class="">
+                                    <a class="plus"  href="/bonus-article/27">
+                                        <i class="icon-plus"></i>
+                                    </a>
+                                    <a class="less" href="/malus-article/27">
+                                        <i class="icon-minus"></i>
+                                    </a>
+                                </p>
+                            </td>
+                        </tr>
+                                            <tr>
+                            <td><a href="/article-single/28">28</a></td>
+                            <td><h5>
+                                 <a  href="/article-single/28">Le Groupe Pharmaceutique Gsk Va Supprimer 271 Postes En France</a>
+                                </h5></td>
+                            <td><h5><a href="/category/4">Sports Extremes</a></h5></td>
+                            <td>
+                                                                    <div class="btn btn-small">
+                                        <i class="icon-tags"></i>
+                                        <a href="/articles/sortbycategory/4">
+                                            800 Millions D’Euros
+                                        </a>
+                                    </div>
+                                                                    <div class="btn btn-small">
+                                        <i class="icon-tags"></i>
+                                        <a href="/articles/sortbycategory/4">
+                                            Les Bleus
+                                        </a>
+                                    </div>
+                                                            </td>
+                            <td><p class="content" style="font-size: 11px">GlaxoSmithKline (GSK) prévoit de supprimer 271 postes dans sa filiale française. Ce sont les syndicats du laboratoire pharmaceutique britannique qui ont annoncé la nouvelle, lundi 21 octobre.
+
+Ce plan,...</p></td>
+                            <td><span class="badge badge-info">3</span></td>
+                            <td>
+                                <p class="">
+                                    <a class="remove" href="/remove/article/28">
+                                        <i class="icon-remove"></i>
+                                    </a>
+                                </p>
+                                <p class="">
+                                                                            <a class="star" href="/addfavoris/addstar/28">
+                                            <i class="icon-star"></i>
+                                        </a>
+                                                                    </p>
+                                <p class="">
+                                                                            <a class="visible" href="/visible/28">
+                                            <i class="icon-ok"></i>
+                                        </a>
+                                                                    </p>
+                                <p class="">
+                                    <a class="edit"  href="/editable/28">
+                                        <i class="icon-pencil"></i>
+                                    </a>
+                                </p>
+                                <p class="">
+                                    <a class="plus"  href="/bonus-article/28">
+                                        <i class="icon-plus"></i>
+                                    </a>
+                                    <a class="less" href="/malus-article/28">
+                                        <i class="icon-minus"></i>
+                                    </a>
+                                </p>
+                            </td>
+                        </tr>
+                                            <tr>
+                            <td><a href="/article-single/25">25</a></td>
+                            <td><h5>
+                                 <a  href="/article-single/25">Sécurité Routière : Souriez ! Vous Êtes Flashés - Le Retour</a>
+                                </h5></td>
+                            <td><h5><a href="/category/2">Insolite</a></h5></td>
+                            <td>
+                                                                    <div class="btn btn-small">
+                                        <i class="icon-tags"></i>
+                                        <a href="/articles/sortbycategory/2">
+                                            Pékin Express
+                                        </a>
+                                    </div>
+                                                                    <div class="btn btn-small">
+                                        <i class="icon-tags"></i>
+                                        <a href="/articles/sortbycategory/2">
+                                            Suppressions De Postes
+                                        </a>
+                                    </div>
+                                                            </td>
+                            <td><p class="content" style="font-size: 11px">									<p style="text-align: justify;"></p><p>Vous connaissiez les radars fixes, les radars de feu rouge, les radars embarqués, les radars de tronçon et plus récemment les nouveaux radars mobiles dits...</p></td>
+                            <td><span class="badge badge-info">2</span></td>
+                            <td>
+                                <p class="">
+                                    <a class="remove" href="/remove/article/25">
+                                        <i class="icon-remove"></i>
+                                    </a>
+                                </p>
+                                <p class="">
+                                                                            <a class="star" href="/addfavoris/addstar/25">
+                                            <i class="icon-star"></i>
+                                        </a>
+                                                                    </p>
+                                <p class="">
+                                                                            <a class="visible" href="/visible/25">
+                                            <i class="icon-ok"></i>
+                                        </a>
+                                                                    </p>
+                                <p class="">
+                                    <a class="edit"  href="/editable/25">
+                                        <i class="icon-pencil"></i>
+                                    </a>
+                                </p>
+                                <p class="">
+                                    <a class="plus"  href="/bonus-article/25">
+                                        <i class="icon-plus"></i>
+                                    </a>
+                                    <a class="less" href="/malus-article/25">
+                                        <i class="icon-minus"></i>
+                                    </a>
+                                </p>
+                            </td>
+                        </tr>
+                    
+                    <tfoot>
+                    <tr>
+                        <th><a href="">#</a></th>
+                        <th>Titre</th>
+                        <th>Category</th>
+                        <th>Tags</th>
+                        <th>Contenu</th>
+                        <th>Point</th>
+                        <th>Actions</th>
+                    </tr>
+                    </tfoot>
+                </table>
+                                                                </div>
+        </div>
+            </div>
+        </div>
+    </div>
+                
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+            <script src="/js/cf7b8d6_index_1.js" type="text/javascript"></script>
+    
+        <script src="/js/aee4d46_index_1.js" type="text/javascript"></script>
+        </body>
+</html>

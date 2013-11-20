@@ -1,0 +1,7 @@
+Bad credentials: "Mauvais login / mot de passe."
+The presented password is invalid: "L'email n'est pas valide"
+The presented password cannot be empty: "Le mot de passe ne doit pas etre nul"
+Your session has timed out, or you have disabled cookies.: "Votre session a expiré"
+User account is disabled.: "Votre compte n'est pas encore activé. Vérifier votre boîte e-mail afin de valider votre compte."
+User credentials have expired.: "Votre session a expiré"
+This form should not contain extra fields.: "Une erreur dans le formulaire s'est produite"

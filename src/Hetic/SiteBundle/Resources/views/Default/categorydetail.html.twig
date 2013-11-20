@@ -1,0 +1,27 @@
+{% extends 'HeticSiteBundle::layout.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {% javascripts '@HeticSiteBundle/Resources/public/js/index.js' filter="cssrewrite" %}
+        <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+{% block content %}
+        <h3>{{ category.name }}</h3>
+        <p>{{ category.description }}</p>
+        <hr class="clear" />
+        <h4>Les articles liés à ma catégorie:</h4>
+        <ul>
+            {% for article in category.articles %}
+                <div class="alert alert-info">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <i class="icon-book"></i> <a href="{{ path('hetic_article_detail', {'id' : article.id}) }}">{{ article.title }}</a>
+                </div>
+            {% endfor %}
+        </ul>
+
+        <a href="{{ path('hetic_category_edit', {'id' : category.id }) }}" class="btn"><i class="icon-pencil"></i> Editer cette catégory</a>
+
+{% endblock %}
+

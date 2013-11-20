@@ -1,0 +1,328 @@
+imports:
+    - { resource: parameters.yml }
+    - { resource: security.yml }
+    - { resource: '@HeticSiteBundle/Resources/config/config.yml' }
+    - { resource: '@HeticSiteBundle/Resources/config/services.xml' }
+#    - { resource: "@HeticSiteBundle/Resources/config/services.xml" }
+
+framework:
+    esi:             ~
+    translator:      { fallback: fr }
+    secret:          %secret%
+    router:
+        resource: "%kernel.root_dir%/config/routing.yml"
+        strict_requirements: ~
+    form:            ~
+    csrf_protection: ~
+    validation:      { enable_annotations: true }
+    templating:
+        engines: ['twig']
+        #assets_version: SomeVersionScheme
+    default_locale:  "%locale%"
+    trusted_proxies: ~
+    session:         ~
+    fragments: { path: /_fragment }
+    http_method_override: true
+
+# Twig Configuration
+twig:
+    debug:            %kernel.debug%
+    strict_variables: %kernel.debug%
+    form:
+      resources:
+          - 'HeticSiteBundle:Default:forms.html.twig'
+
+
+
+# Assetic Configuration
+assetic:
+    debug:          "%kernel.debug%"
+    use_controller: false
+    bundles:        ["HeticSiteBundle"]
+    #java: /usr/bin/java
+    filters:
+         cssrewrite: ~
+         uglifyjs:
+          bin: '/usr/bin/uglifyjs'
+#         less:
+#            node: /usr/local/bin/node
+#            node_paths: [/usr/local/lib/node, /usr/local/lib/node_modules]
+         coffee:
+            bin: /usr/bin/coffee
+            node: /usr/bin/node
+            apply_to: "\.coffee$"
+         sass:
+            bin: /usr/local/bin/sass
+         compass:
+            bin: /usr/local/bin/compass
+            apply_to: "\.s[ac]ss$"
+         yui_css:
+            jar: "%kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar"
+         closure:
+            jar: "%kernel.root_dir%/Resources/java/googleclosure.jar"
+
+# Doctrine Configuration
+doctrine:
+    dbal:
+        driver:   %database_driver%
+        host:     %database_host%
+        port:     %database_port%
+        dbname:   %database_name%
+        user:     %database_user%
+        password: %database_password%
+        charset:  UTF8
+        # if using pdo_sqlite as your database driver, add the path in parameters.yml
+        # e.g. database_path: %kernel.root_dir%/data/data.db3
+        # path:     %database_path%
+
+    orm:
+        auto_generate_proxy_classes: %kernel.debug%
+        auto_mapping: true
+
+# Swiftmailer Configuration
+swiftmailer:
+    transport: %mailer_transport%
+    host:      %mailer_host%
+    username:  %mailer_user%
+    password:  %mailer_password%
+    spool:     { type: memory }
+
+#Symfony2 Extensions
+sensio_framework_extra:
+    router:  { annotations: true }
+    request: { converters: true }
+    view:    { annotations: false }
+    cache:   { annotations: true }
+
+fos_rest:
+    param_fetcher_listener: true
+    body_listener: true
+    format_listener: true
+    routing_loader:
+      default_format: json
+    view:
+        view_response_listener: 'force'
+
+services:
+    twig.extension.text:
+       class: Twig_Extensions_Extension_Text
+       tags:
+           - { name: twig.extension }
+
+jms_security_extra:
+    # Whether you want to secure all services (true), or only secure specific
+    # services (false); see also below
+    secure_all_services: true
+
+    # Enabling this setting will add an additional special attribute "ROLE_IDDQD".
+    # Anybody with this attribute will effectively bypass all security checks.
+    enable_iddqd_attribute: false
+
+    # Enables expression language
+    expressions: true
+
+# app/config/config.yml
+knp_menu:
+    twig:  # use "twig: false" to disable the Twig extension and the TwigRenderer
+        template: "HeticSiteBundle:Default:menu.html.twig"
+    templating: false # if true, enables the helper for PHP templates
+    default_renderer: twig # The renderer to use, list is also available by default
+
+knp_paginator:
+    page_range: 5                      # default page range used in pagination control
+    default_options:
+        page_name: page                # page query parameter name
+        sort_field_name: sort          # sort field query parameter name
+        sort_direction_name: direction # sort direction query parameter name
+        distinct: true                 # ensure distinct results, useful when ORM queries are using GROUP BY statements
+    template:
+        pagination: HeticSiteBundle:Default:pagination.html.twig     # sliding pagination controls template
+        sortable: KnpPaginatorBundle:Default:pagination.html.twig # sort link template
+
+doctrine_mongodb:
+    connections:
+        default:
+            server: mongodb://localhost:27017
+            options: {}
+    default_database: test_database
+    document_managers:
+        default:
+            auto_mapping: true
+
+
+fos_elastica:
+    default_manager: orm
+    clients:
+        default: { host: localhost, port: 9200 }
+    indexes:
+        website:
+            client: default
+            index_name: website_qa
+            types:
+              article:
+                mappings:
+                    title: { type: string }
+                    content: { type: string }
+                    datePublication: { type: date }
+                    tags:
+                      type: "nested"
+                      properties:
+                         word: {type: string }
+                    pages:
+                      type: "nested"
+                      properties:
+                         name: {type: string }
+                         cover: {type: string }
+                         description: { type: string }
+                persistence:
+                    driver: orm
+                    model: Hetic\SiteBundle\Entity\Article
+                    repository: Hetic\SiteBundle\Entity\ArticleRepository
+                    provider:
+                        query_builder_method: createIsActiveQueryBuilder
+                    finder: ~
+                    listener: ~ # by default, listens to "insert", "update" and "delete"
+              category:
+                mappings:
+                    name: {type: string }
+                    cover: { type: string }
+                    description: { type: string }
+                    produits:
+                      type: "nested"
+                      properties:
+                         reference: {type: string }
+                         title: {type: string }
+                         service: {type: string }
+                         cover: {type: string }
+                         content: { type: string }
+                persistence:
+                    driver: orm
+                    model: Hetic\SiteBundle\Entity\Category
+                    repository: Hetic\SiteBundle\Entity\CategoryRepository
+                    provider:
+                        query_builder_method: getActiveCategoryQueryBuilder
+                    finder: ~
+                    listener: ~ # by default, listens to "insert", "update" and "delete"
+              commercial:
+                mappings:
+                    title: {type: string }
+                    content: { type: string }
+                persistence:
+                    driver: orm
+                    model: Hetic\SiteBundle\Entity\Commercial
+                    repository: Hetic\SiteBundle\Entity\CommercialRepository
+                    provider:
+                        query_builder_method: getActiveCommercialQueryBuilder
+                    finder: ~
+                    listener: ~ # by default, listens to "insert", "update" and "delete"
+              famille:
+                mappings:
+                    name: {type: string }
+                    cover: { type: string }
+                    description: { type: string }
+                    produits:
+                      type: "nested"
+                      properties:
+                         reference: {type: string }
+                         title: {type: string }
+                         service: {type: string }
+                         cover: {type: string }
+                         content: { type: string }
+                persistence:
+                    driver: orm
+                    model: Hetic\SiteBundle\Entity\Famille
+                    repository: Hetic\SiteBundle\Entity\FamilleRepository
+                    provider:
+                        query_builder_method: getActiveFamilleQueryBuilder
+                    finder: ~
+                    listener: ~ # by default, listens to "insert", "update" and "delete"
+              images:
+                mappings:
+                    title: {type: string }
+                    cover: { type: string }
+                persistence:
+                    driver: orm
+                    model: Hetic\SiteBundle\Entity\Image
+                    repository: Hetic\SiteBundle\Entity\ImageRepository
+                    provider:
+                        query_builder_method: getActiveImageQueryBuilder
+                    finder: ~
+                    listener: ~ # by default, listens to "insert", "update" and "delete"
+              pages:
+                mappings:
+                    name: {type: string }
+                    cover: {type: string }
+                    description: { type: string }
+                    produits:
+                      type: "nested"
+                      properties:
+                         reference: {type: string }
+                         title: {type: string }
+                         service: {type: string }
+                         cover: {type: string }
+                         content: { type: string }
+                persistence:
+                    driver: orm
+                    model: Hetic\SiteBundle\Entity\Page
+                    repository: Hetic\SiteBundle\Entity\PageRepository
+                    provider:
+                        query_builder_method: getActivePageQueryBuilder
+                    finder: ~
+                    listener: ~ # by default, listens to "insert", "update" and "delete"
+              produit:
+                mappings:
+                    reference: {type: string }
+                    title: {type: string }
+                    service: {type: string }
+                    cover: {type: string }
+                    content: { type: string }
+                    articles:
+                      type: "nested"
+                      properties:
+                         title: { type: string }
+                         content: { type: string }
+                         datePublication: { type: date }
+                    category:
+                      type: "nested"
+                      properties:
+                          name: { type: string }
+                          cover: ~
+                          description: ~
+                    cates:
+                      type: "nested"
+                      properties:
+                          name: { type: string }
+                          cover: ~
+                          description: ~
+                    tags:
+                      type: "nested"
+                      properties:
+                          word: { type: string }
+                    familles:
+                      type: "nested"
+                      properties:
+                          name: { type: string }
+                          cover: ~
+                          description: ~
+                    prixHT: { type: float }
+                    prixTTC: { type: float }
+                    prixTTC: { type: float }
+                persistence:
+                    driver: orm
+                    model: Hetic\SiteBundle\Entity\Produit
+                    repository: Hetic\SiteBundle\Entity\ProduitRepository
+                    provider:
+                        query_builder_method: getActiveProduitQueryBuilder
+                    finder: ~
+                    listener: ~ # by default, listens to "insert", "update" and "delete"
+              tag:
+                mappings:
+                    word: {type: string }
+                persistence:
+                    driver: orm
+                    model: Hetic\SiteBundle\Entity\Tag
+                    repository: Hetic\SiteBundle\Entity\CategoryRepository
+                    provider:
+                        query_builder_method: getTags
+                    finder: ~
+                    listener: ~ # by default, listens to "insert", "update" and "delete"

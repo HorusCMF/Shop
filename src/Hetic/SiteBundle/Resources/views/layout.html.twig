@@ -1,0 +1,317 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Horus Shop CMF{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="http://bootswatch.com/amelia/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="http://getbootstrap.com/2.3.2/assets/css/bootstrap-responsive.css"/>
+    <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.10.3/themes/hot-sneaks/jquery-ui.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="http://davidstutz.github.io/bootstrap-multiselect/css/bootstrap-multiselect.css"/>
+
+    {% stylesheets '@HeticSiteBundle/Resources/public/css/flat/green.css' filter='yui_css' %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+
+    {% stylesheets '@HeticSiteBundle/Resources/public/css/main.sass' filter='yui_css' %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+{% endblock %}
+
+
+{% block body %}
+    <a href="https://github.com/you"><img style="z-index: 50000;position: absolute; top: 0; right: 0; border: 0;"
+                                          src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
+                                          alt="Fork me on GitHub"></a>
+    {% include 'HeticSiteBundle:Default:topmenu.html.twig' %}
+    <div class="container-fluid">
+    <div class="row-fluid">
+    <div class="span12">
+    <div class="container">
+    <div class="row-fluid">
+    <div class="span3">
+        <button id="closepanel" type="button" class="close" data-dismiss="alert"><i
+                    class="glyphicon glyphicon-remove-circle"></i></button>
+        <div class="panel panel-primary">
+            <div class="panel-heading"><h4><i class="glyphicon glyphicon-list-alt"></i> Menu</h4>
+            </div>
+            <div class="panel-body">
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a><i class="glyphicon glyphicon-home"></i> Aujourd'hui</a></li>
+                    <li><a><i class="glyphicon glyphicon-shopping-cart"></i> Gérer mes produits<span
+                                    class="badge">10</span></a></li>
+                    <li><a><i class="glyphicon glyphicon-ok"></i> Gérer mes commandes<span
+                                    class="badge">42</span></a></li>
+                    <li><a><i class="glyphicon glyphicon-cog"></i> Configuration</a></li>
+                </ul>
+            </div>
+            <div class="panel-heading"></div>
+        </div>
+        <button id="closepanel" type="button" class="close" data-dismiss="alert"><i
+                    class="glyphicon glyphicon-remove-circle"></i></button>
+        <div class="panel panel-primary">
+            <div class="panel-heading"><h4><i class="glyphicon glyphicon-stats"></i> Statistique
+                </h4>
+            </div>
+            <div class="panel-body">
+                <div class="bs-example bs-example-tabs">
+                    <ul id="myTab" class="nav nav-tabs">
+                        <li class="active"><a href="#today" data-toggle="tab">A jour</a></li>
+                        <li><a href="#month" data-toggle="tab">Ce mois</a></li>
+                        <li><a href="#year" data-toggle="tab">Cette année</a></li>
+                        </li>
+                    </ul>
+                    <div id="myTabContent" class="tab-content">
+                        <div class="tab-pane fade in active" id="today">
+                            <table class="table table-striped">
+                                <tbody>
+                                <tr>
+                                    <td>Ventes Globales</td>
+                                    <td>2500.00 €</td>
+                                </tr>
+                                <tr>
+                                    <td>Chiffre d'affaires hors expédition</td>
+                                    <td>2000.00 €</td>
+                                </tr>
+                                <tr>
+                                    <td>CA Hier</td>
+                                    <td>1700.00 €</td>
+                                </tr>
+                                <tr>
+                                    <td>Commandes en attentes</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>Commandes en cours</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>Commandes annulés</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Panier moyen</td>
+                                    <td>25.5</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab-pane fade" id="month">
+                            <table class="table table-striped">
+                                <tbody>
+                                <tr>
+                                    <td>Ventes Globales</td>
+                                    <td>2500.00 €</td>
+                                </tr>
+                                <tr>
+                                    <td>Chiffre d'affaires hors expédition</td>
+                                    <td>2000.00 €</td>
+                                </tr>
+                                <tr>
+                                    <td>CA Hier</td>
+                                    <td>1700.00 €</td>
+                                </tr>
+                                <tr>
+                                    <td>Commandes en attentes</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>Commandes en cours</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>Commandes annulés</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Panier moyen</td>
+                                    <td>25.5</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab-pane fade" id="year">
+                            <table class="table table-striped">
+                                <tbody>
+                                <tr>
+                                    <td>Ventes Globales</td>
+                                    <td>2500.00 €</td>
+                                </tr>
+                                <tr>
+                                    <td>Chiffre d'affaires hors expédition</td>
+                                    <td>2000.00 €</td>
+                                </tr>
+                                <tr>
+                                    <td>CA Hier</td>
+                                    <td>1700.00 €</td>
+                                </tr>
+                                <tr>
+                                    <td>Commandes en attentes</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>Commandes en cours</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>Commandes annulés</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Panier moyen</td>
+                                    <td>25.5</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button id="closepanel" type="button" class="close" data-dismiss="alert"><i
+                    class="glyphicon glyphicon-remove-circle"></i></button>
+        <div class="panel panel-primary">
+            <div class="panel-heading"><h4><i class="glyphicon glyphicon-info-sign"></i> Informations
+                </h4>
+            </div>
+            <div class="panel-body">
+                <table class="table table-striped">
+                    <tbody>
+                    <tr>
+                        <td>Clients</td>
+                        <td>45</td>
+                    </tr>
+                    <tr>
+                        <td>Categories</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Products</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>Produits en ligne</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>Produits hors ligne</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Commandes</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Commandes en cours</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>Commandes expédiés</td>
+                        <td>6</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="span9">
+        {#{% include 'HeticSiteBundle:Default:mainmenu.html.twig' %}#}
+
+        <nav id="searchmenu" class="navbar navbar-default" role="navigation">
+            <button id="closesearch" type="button" class="close" data-dismiss="alert"><i
+                        class="glyphicon glyphicon-remove-circle"></i></button>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><i class="glyphicon glyphicon-search"></i>
+                    Rechercher</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                <form action="{{ path('hetic_search_avanced') }}" class="span12" role="search" method="get">
+                    <div class="form-group">
+                        <div class="col-xs-8">
+                            <input type="text" class="form-control" name="word"
+                                   placeholder="Nom, Référence, Description, Catégorie..."
+                                   value="{{ app.request.query.get('word') }}">
+                        </div>
+                        <button type="submit" class="btn btn-primary"><i
+                                    class="glyphicon glyphicon-search"></i></button>
+                        <a id="moresearch" class="btn btn-primary"><i
+                                    class="glyphicon glyphicon-plus-sign"></i> </a>
+                    </div>
+                    {#{{ render(controller('HeticSiteBundle:Main:search', { 'val': app.request.get('search') }) ) }}#}
+            </div>
+            <div class="{% if app.request.query.get('word') is not empty %}hide{% endif %}hide" id="advancedsearch">
+                <div class="row-fluid col-md-offset-1">
+                    <div class="span2">
+                        <input name="produits" id="produits" type="checkbox" {% if app.request.query.get('produits') %}checked="checked"{% endif %}> <label for="produits"
+                                class="whitetext">Produits</label>
+                    </div>
+                    <div class="span2">
+                        <input name="categories" id="categories"  type="checkbox" {% if app.request.query.get('categories') %}checked="checked"{% endif %} > <label for="categories" class="whitetext">Catégories</label>
+                    </div>
+                    <div class="span2">
+                        <input name="familles" id="familles"  type="checkbox" {% if app.request.query.get('familles') %}checked="checked"{% endif %} > <label for="familles" class="whitetext">Famille</label>
+                    </div>
+                    <div class="span2">
+                        <input name="pages" id="pages"   type="checkbox" {% if app.request.query.get('pages') %}checked="checked"{% endif %} > <label for="pages" class="whitetext">Pages</label>
+                    </div>
+                    <div class="span2">
+                        <input name="articles" id="articles" type="checkbox" {% if app.request.query.get('articles') %}checked="checked"{% endif %}> <label for="articles" class="whitetext">Article</label>
+                    </div>
+                    <div class="span2">
+                        <input name="tags" id="tags" type="checkbox" {% if app.request.query.get('tags') %}checked="checked"{% endif %}> <label for="tags" class="whitetext">Tags</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-filter"></i> Filtrer
+                </button>
+            </div>
+            </form>
+        </nav>
+        {% include 'HeticSiteBundle:Default:flashdatas.html.twig' %}
+
+        <div class="maincontent">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <a href="#" class="scrollup">Scroll</a>
+    </div>
+    </div>
+    <div id="footer">
+        <div class="container text-center">
+            <p class="muted credit">Example courtesy <a href="http://martinbean.co.uk">Martin Bean</a> and <a
+                        href="http://ryanfait.com/sticky-footer/">Ryan Fait</a>.</p>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script src="http://damirfoy.com/iCheck/jquery.icheck.min.js?v=0.9.1"></script>
+    <script src="http://davidstutz.github.io/bootstrap-multiselect/js/bootstrap-multiselect.js"></script>
+    <script src="/js/ckeditor/ckeditor.js"></script>
+    <script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+
+    {% javascripts '@HeticSiteBundle/Resources/public/js/main.coffee'  filter='closure' %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
+{% endblock %}

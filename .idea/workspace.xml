@@ -1,0 +1,857 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c3710369-12cf-41a7-b768-bf355bf28dfd" name="Default" comment="" />
+    <ignored path="hetic.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <file path="/app.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381688711343" ignored="false" />
+    <file path="/index.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384942512755" ignored="false" />
+    <file path="/routing_dev.yml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381829618923" ignored="false" />
+    <file path="/DefaultController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384629268610" ignored="false" />
+    <file path="/hello.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382280929118" ignored="false" />
+    <file path="/routing.yml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384936714885" ignored="false" />
+    <file path="/partial.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381814432181" ignored="false" />
+    <file path="/ArticleRepository.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384897092639" ignored="false" />
+    <file path="/Article.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384806169180" ignored="false" />
+    <file path="/layout.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384889240986" ignored="false" />
+    <file path="/another.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381814942330" ignored="false" />
+    <file path="/page2.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381815291193" ignored="false" />
+    <file path="/test.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382288173508" ignored="false" />
+    <file path="/test.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381817139137" ignored="false" />
+    <file path="/hetic.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382015567061" ignored="false" />
+    <file path="/AppKernel.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381850388059" ignored="false" />
+    <file path="/config.yml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384891486079" ignored="false" />
+    <file path="/SearchType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381858398883" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/AbstractType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382374214535" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/FormBuilder.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381858574203" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/KernelInterface.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381858574203" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/FormTypeInterface.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382374214535" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/Response.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811188" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/FormBuilderInterface.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381858574203" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/ContainerAware.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811191" ignored="false" />
+    <file path="/security.yml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384641251862" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bridge/Twig/phpunit.xml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811188" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/phpunit.xml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811188" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Routing/Tests/Fixtures/missing_id.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811188" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Translation/Loader/schema/dic/xliff-core/xml.xsd" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811188" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Console/Tests/Fixtures/input_argument_1.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811188" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Translation/Loader/schema/dic/xliff-core/xliff-core-1.2-strict.xsd" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811188" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/CssSelector/phpunit.xml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811188" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Console/Tests/Fixtures/input_definition_2.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811188" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Console/Tests/Fixtures/command_2.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811188" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Console/Tests/Fixtures/input_argument_2.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811188" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/phpunit.xml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811188" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Templating/phpunit.xml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811188" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Validator/phpunit.xml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811188" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Console/Tests/Fixtures/input_definition_4.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811188" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/config/validation.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811188" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/phpunit.xml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Routing/Loader/schema/routing/routing-1.0.xsd" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Console/Tests/Fixtures/input_option_3.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Yaml/phpunit.xml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Console/Tests/Fixtures/input_definition_3.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bridge/ProxyManager/phpunit.xml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/CssSelector/Tests/XPath/Fixtures/lang.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Tests/DependencyInjection/Fixtures/xml/merge.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Console/Tests/Fixtures/input_argument_3.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Tests/DependencyInjection/Fixtures/xml/custom_acl_provider.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Tests/DependencyInjection/Fixtures/xml/merge_import.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Tests/DependencyInjection/Fixtures/xml/full.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Tests/DependencyInjection/Fixtures/xml/container1.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382955655286" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Tests/DependencyInjection/Fixtures/xml/templating_url_package.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Tests/DependencyInjection/Fixtures/xml/validation_annotations.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Tests/DependencyInjection/Fixtures/xml/profiler.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Tests/DependencyInjection/Fixtures/xml/session.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Console/Tests/Fixtures/input_option_4.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Console/Tests/Fixtures/application_1.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Validator/Tests/Mapping/Loader/constraint-mapping.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Validator/Tests/Mapping/Loader/withdoctype.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Validator/Tests/Mapping/Loader/constraint-mapping-non-strings.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Tests/DependencyInjection/Fixtures/TestBundle/Resources/config/validation.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Security/phpunit.xml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382949011024" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Console/Tests/Fixtures/input_option_2.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/config/templating_php.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/config/security_acl.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/config/security_rememberme.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/config/collectors.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382949011024" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/config/security_listeners.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382949011024" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/phpunit.xml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/config/templating_twig.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Intl/phpunit.xml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/config/security_acl_dbal.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/ClassLoader/phpunit.xml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/config/security.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382955655286" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Debug/phpunit.xml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/config/toolbar.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/config/profiler.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/services5.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bridge/Monolog/phpunit.xml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/services9.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/config/schema/webprofiler-1.0.xsd" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/config/routing/wdt.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/config/routing/profiler.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/withdoctype.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/nonvalid.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/services4_bad_import.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/services8.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/services7.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Config/phpunit.xml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/services6.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382949011024" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/services13.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/services4.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/services3.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/services2.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382949011024" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/services1.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/extension1/services.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/extension2/services.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/extensions/services6.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bridge/Propel1/phpunit.xml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/extensions/services2.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/extensions/services7.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/extensions/services3.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Locale/phpunit.xml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/extensions/services4.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/extensions/services5.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/xml/extensions/services1.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Tests/DependencyInjection/Fixtures/xml/full.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Tests/DependencyInjection/Fixtures/xml/customTemplateEscapingGuesser.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Tests/DependencyInjection/Fixtures/xml/empty.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/BrowserKit/phpunit.xml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Config/Tests/Fixtures/foo.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Translation/phpunit.xml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Process/phpunit.xml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811189" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Config/Tests/Fixtures/Util/valid.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Config/Tests/Fixtures/Util/document_type.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DomCrawler/phpunit.xml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Config/Tests/Fixtures/Util/invalid.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Config/Tests/Fixtures/Util/schema.xsd" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Config/Tests/Fixtures/Util/invalid_schema.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Config/Tests/Fixtures/Again/foo.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/schema/project-1.0.xsd" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/translation.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382949011024" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Console/phpunit.xml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/routing.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/profiling.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/debug.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/collectors.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382955655286" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bridge/Doctrine/phpunit.xml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/debug_prod.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/fragment_renderer.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/annotations.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/validator.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/config/twig.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382955655286" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/fragment_listener.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/config/debug.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Filesystem/phpunit.xml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/templating.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382949011024" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/form.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382949011024" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/config/schema/twig-1.0.xsd" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/esi.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382949011024" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/web.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382949011024" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/templating_debug.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382949011024" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Routing/phpunit.xml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/services.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382949011024" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/test.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/phpunit.xml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/session.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/templating_php.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382955655286" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/form_csrf.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Validator/Mapping/Loader/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/serializer.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/schema/symfony-1.0.xsd" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/phpunit.xml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Loader/schema/dic/services/services-1.0.xsd" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/phpunit.xml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/EventDispatcher/phpunit.xml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Serializer/phpunit.xml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Routing/Tests/Fixtures/nonvalidroute.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Routing/Tests/Fixtures/nonvalidnode.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Routing/Tests/Fixtures/validpattern.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Routing/Tests/Fixtures/missing_path.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/OptionsResolver/phpunit.xml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Routing/Tests/Fixtures/namespaceprefix.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Console/Tests/Fixtures/application_2.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382949011024" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Finder/phpunit.xml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811190" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Routing/Tests/Fixtures/validresource.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811191" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Console/Tests/Fixtures/input_option_1.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811191" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Routing/Tests/Fixtures/nonvalid.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811191" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Routing/Tests/Fixtures/withdoctype.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811191" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Console/Tests/Fixtures/input_definition_1.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811191" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Routing/Tests/Fixtures/foo1.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811191" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Console/Tests/Fixtures/command_1.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811191" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Routing/Tests/Fixtures/foo.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811191" ignored="false" />
+    <file path="/index2.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381937587797" ignored="false" />
+    <file path="/hetic2.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381953299698" ignored="false" />
+    <file path="/BlogType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382036656290" ignored="false" />
+    <file path="/test.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382274156131" ignored="false" />
+    <file path="/lefnav.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382280863282" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/framework/css/body.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273327" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/sensiodistribution/webconfigurator/css/install.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273330" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/framework/css/structure.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273328" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/sensiodistribution/webconfigurator/css/configurator.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382282610866" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/framework/css/exception.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382282610866" ignored="false" />
+    <file path="/topmenu.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384940891359" ignored="false" />
+    <file path="/index.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382347449100" ignored="false" />
+    <file path="/ArticleType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383311020451" ignored="false" />
+    <file path="/edit.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382978485299" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/FormInterface.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382374214535" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Validator/Constraints/Length.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382374214535" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/Form.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382374214535" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382374214535" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/Request.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382374214535" ignored="false" />
+    <file path="/Category.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384809703024" ignored="false" />
+    <file path="/administration.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382376719618" ignored="false" />
+    <file path="/a.dummy" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384777046059" ignored="false" />
+    <file path="/Tags.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382385426953" ignored="false" />
+    <file path="/detail.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382388420900" ignored="false" />
+    <file path="/detail.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382976586741" ignored="false" />
+    <file path="/Tag.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384616086635" ignored="false" />
+    <file path="/CategoryRepository.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384896827567" ignored="false" />
+    <file path="/index.sass" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382974805137" ignored="false" />
+    <file path="/Star.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382907172452" ignored="false" />
+    <file path="/articlesingle.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383045087126" ignored="false" />
+    <file path="/categorydetail.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383044523933" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/orm/tools/sandbox/xml/Entities.User.dcm.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382955655286" ignored="false" />
+    <file path="$PROJECT_DIR$/vendor/doctrine/orm/build.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382955655286" ignored="false" />
+    <file path="/leftnav.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382975148403" ignored="false" />
+    <file path="/main.sass" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384941850494" ignored="false" />
+    <file path="/DefaultControllerTest.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383046329481" ignored="false" />
+    <file path="/fields.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384607180952" ignored="false" />
+    <file path="/AddArticleCept.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383766959319" ignored="false" />
+    <file path="/acceptance.suite.yml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383300065838" ignored="false" />
+    <file path="$PROJECT_DIR$/app/cache/dev/appDevDebugProjectContainer.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384856326894" ignored="false" />
+    <file path="/createcategory.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383036107972" ignored="false" />
+    <file path="/createcategory.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384777056991" ignored="false" />
+    <file path="/editcategory.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384777074858" ignored="false" />
+    <file path="/CategoryType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383301768076" ignored="false" />
+    <file path="/AddArticleFunctionalCept.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383302868497" ignored="false" />
+    <file path="$PROJECT_DIR$/app/cache/test/appTestDebugProjectContainer.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383311799715" ignored="false" />
+    <file path="/AddArticleTest.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383318696905" ignored="false" />
+    <file path="/CestAddArticleCest.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383586147047" ignored="false" />
+    <file path="/about.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383323680621" ignored="false" />
+    <file path="/contact.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383323882143" ignored="false" />
+    <file path="/README.md" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384943362835" ignored="false" />
+    <file path="/.gitignore" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384944817834" ignored="false" />
+    <file path="/app.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383666549779" ignored="false" />
+    <file path="/search.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384890420309" ignored="false" />
+    <file path="/TagRepository.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383752232028" ignored="false" />
+    <file path="/ReposArticleTest.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383764018792" ignored="false" />
+    <file path="$PROJECT_DIR$/tests/_log/acceptance-2013-11-06" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383764679027" ignored="false" />
+    <file path="/CestWelcomeCest.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383765449075" ignored="false" />
+    <file path="/CestModifyArticleCest.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383765671516" ignored="false" />
+    <file path="/mainmenu.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384604136376" ignored="false" />
+    <file path="/LayoutController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384604175487" ignored="false" />
+    <file path="/menu.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384606813337" ignored="false" />
+    <file path="/services.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384605471446" ignored="false" />
+    <file path="/dashboard.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384613669136" ignored="false" />
+    <file path="/forms.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384846781843" ignored="false" />
+    <file path="/index.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384607759691" ignored="false" />
+    <file path="$PROJECT_DIR$/app/cache/dev/twig/72/6b/000154f8aade0cb6faa8898cfecf4164ddee4ceebc0229069539f4f5fa77.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384608119110" ignored="false" />
+    <file path="$PROJECT_DIR$/app/cache/dev/twig/6e/8b/bc632bd19eac186597af58eb68fbfa71109b74c1c135656ef6821dd10061.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384608119110" ignored="false" />
+    <file path="$PROJECT_DIR$/app/cache/dev/twig/ef/df/2c258cd68617d7b476a610719fc6cacb2b358800023ef0e98ec470d167eb.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384608119110" ignored="false" />
+    <file path="$PROJECT_DIR$/app/cache/dev/classes.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384643023321" ignored="false" />
+    <file path="$PROJECT_DIR$/app/cache/dev/appDevDebugProjectContainer.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384610525473" ignored="false" />
+    <file path="$PROJECT_DIR$/app/cache/dev/twig/de/5a/83b120297b906801afc255ac2f3514180276c2533b0638684277e9a17fa6.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384608119110" ignored="false" />
+    <file path="$PROJECT_DIR$/app/cache/dev/twig/0f/ff/0786f80ceb4d69ce6ed6f2d6456863444c37ee1ab7260455b4022e7c0a42.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384608119110" ignored="false" />
+    <file path="/main.coffee" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384897481297" ignored="false" />
+    <file path="/green.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384612400670" ignored="false" />
+    <file path="/Produit.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384766909912" ignored="false" />
+    <file path="/products.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384892390444" ignored="false" />
+    <file path="$PROJECT_DIR$/web/js/ckeditor/samples/plugins/wysiwygarea/fullpage.html" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384617588567" ignored="false" />
+    <file path="$PROJECT_DIR$/web/js/ckeditor/samples/plugins/toolbar/toolbar.html" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384617588567" ignored="false" />
+    <file path="$PROJECT_DIR$/web/js/ckeditor/samples/xhtmlstyle.html" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384617588567" ignored="false" />
+    <file path="$PROJECT_DIR$/web/js/ckeditor/samples/plugins/enterkey/enterkey.html" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384617588567" ignored="false" />
+    <file path="$PROJECT_DIR$/web/js/ckeditor/samples/plugins/dialog/dialog.html" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384617588567" ignored="false" />
+    <file path="/login.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384895995572" ignored="false" />
+    <file path="/topmenu_logout.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384629413739" ignored="false" />
+    <file path="/layout_simple.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384629983438" ignored="false" />
+    <file path="/Demandeur.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384633961788" ignored="false" />
+    <file path="/AuthenticationSiteHandler.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384641538392" ignored="false" />
+    <file path="/AdministrateurController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384640473116" ignored="false" />
+    <file path="/flashdatas.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384638315961" ignored="false" />
+    <file path="/Administrateur.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384643612764" ignored="false" />
+    <file path="/AdministrateurRepository.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384640282667" ignored="false" />
+    <file path="/MainController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384889841923" ignored="false" />
+    <file path="/config_dev.yml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384643455166" ignored="false" />
+    <file path="/.htaccess" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384642574130" ignored="false" />
+    <file path="/ProductController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384896900384" ignored="false" />
+    <file path="/createproduct.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384854855661" ignored="false" />
+    <file path="/ProductType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384766842748" ignored="false" />
+    <file path="/Seo.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384696315748" ignored="false" />
+    <file path="/SeoType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384687843589" ignored="false" />
+    <file path="/Meta.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384689409572" ignored="false" />
+    <file path="/MetaType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384694965339" ignored="false" />
+    <file path="/product.coffee" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384707556669" ignored="false" />
+    <file path="/product.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384898639735" ignored="false" />
+    <file path="/editproduct.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384777164031" ignored="false" />
+    <file path="/flashdatas.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384712731213" ignored="false" />
+    <file path="/pictureproduct.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384941338921" ignored="false" />
+    <file path="/ImageType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384722029004" ignored="false" />
+    <file path="/Image.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384939304376" ignored="false" />
+    <file path="/visualizeproduct.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384767349910" ignored="false" />
+    <file path="/categories.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384892355720" ignored="false" />
+    <file path="/CategoryController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384898168516" ignored="false" />
+    <file path="/ImageCategory.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384732337569" ignored="false" />
+    <file path="/picturecategory.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384941482738" ignored="false" />
+    <file path="/Famille.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384758265386" ignored="false" />
+    <file path="/familles.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384892842577" ignored="false" />
+    <file path="/createfamille.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384759334069" ignored="false" />
+    <file path="/editfamille.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384777088650" ignored="false" />
+    <file path="/category.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384764256167" ignored="false" />
+    <file path="/famille.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384767226139" ignored="false" />
+    <file path="/CMSController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384897302801" ignored="false" />
+    <file path="/Page.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384806891477" ignored="false" />
+    <file path="/pages.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384892732852" ignored="false" />
+    <file path="/createpage.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384777107138" ignored="false" />
+    <file path="/editpage.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384777116987" ignored="false" />
+    <file path="/page.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384770993832" ignored="false" />
+    <file path="/parameters.yml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384780145635" ignored="false" />
+    <file path="/messages.fr.yml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384780465522" ignored="false" />
+    <file path="/articles.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384892792999" ignored="false" />
+    <file path="/article.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384788568257" ignored="false" />
+    <file path="/editarticle.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384806975061" ignored="false" />
+    <file path="/createarticle.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384804104493" ignored="false" />
+    <file path="/tags.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384892623584" ignored="false" />
+    <file path="/createtag.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384808838523" ignored="false" />
+    <file path="/edittag.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384808831478" ignored="false" />
+    <file path="/Commercial.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384811076771" ignored="false" />
+    <file path="/commercials.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384892610936" ignored="false" />
+    <file path="/CommercialController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384812465698" ignored="false" />
+    <file path="/commercial.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384812795335" ignored="false" />
+    <file path="/editcommercial.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384814526852" ignored="false" />
+    <file path="/createcommercial.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384846843294" ignored="false" />
+    <file path="/CommercialType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384846334002" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/flat/purple.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273327" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/flat/_all.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273327" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/minimal/yellow.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273327" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/flat/pink.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273328" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/minimal/minimal.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273328" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/line/blue.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273328" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/line/yellow.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273328" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/minimal/red.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273328" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/line/purple.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273328" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/minimal/blue.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273328" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/line/_all.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273328" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/line/aero.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273328" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/line/line.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273328" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/line/red.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273328" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/minimal/green.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273328" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/line/pink.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273328" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/line/green.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273328" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/line/orange.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273328" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/minimal/orange.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273328" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/line/grey.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273328" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/square/aero.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273329" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/main.sass" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273329" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/minimal/purple.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273329" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/minimal/_all.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273329" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/square/yellow.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273329" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/minimal/pink.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273329" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/flat/aero.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273329" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/polaris/polaris.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273329" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/square/red.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273329" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/square/blue.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273329" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/flat/grey.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273329" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/flat/yellow.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273329" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/futurico/futurico.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273329" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/square/green.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273329" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/flat/flat.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273329" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/flat/red.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273329" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/flat/blue.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273329" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/square/orange.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273329" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/square/pink.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273329" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/flat/green.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273330" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/square/purple.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273330" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/square/_all.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273330" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/flat/orange.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273330" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/minimal/aero.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273330" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/heticsite/css/minimal/grey.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273330" ignored="false" />
+    <file path="/CommercialRepository.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384849511712" ignored="false" />
+    <file path="/ImageRepository.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384849849557" ignored="false" />
+    <file path="/ProduitRepository.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384884239199" ignored="false" />
+    <file path="/search_partial.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384853465751" ignored="false" />
+    <file path="/sliding.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384855256984" ignored="false" />
+    <file path="$PROJECT_DIR$/web/css/e95eeb8.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384900111107" ignored="false" />
+    <file path="$PROJECT_DIR$/web/css/e95eeb8_main_1.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384900111107" ignored="false" />
+    <file path="/PageRepository.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384897354378" ignored="false" />
+    <file path="/MediasController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384935760053" ignored="false" />
+    <file path="/medias.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384939879015" ignored="false" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="hetic" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="0" selection-start="958" selection-end="958" vertical-scroll-proportion="-9.36">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UPGRADE.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UPGRADE.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="composer.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/composer.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="25" selection-start="778" selection-end="778" vertical-scroll-proportion="-16.5">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="11" selection-start="125" selection-end="125" vertical-scroll-proportion="0.2254025">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/Hetic/SiteBundle/Entity/Tag.php" />
+        <option value="$PROJECT_DIR$/src/Hetic/SiteBundle/Resources/views/Medias/createmedia.html.twig" />
+        <option value="$PROJECT_DIR$/src/Hetic/SiteBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/Hetic/SiteBundle/Entity/Image.php" />
+        <option value="$PROJECT_DIR$/src/Hetic/SiteBundle/Entity/ImageCategory.php" />
+        <option value="$PROJECT_DIR$/src/Hetic/SiteBundle/Controller/MediasController.php" />
+        <option value="$PROJECT_DIR$/src/Hetic/SiteBundle/Resources/views/Medias/medias.html.twig" />
+        <option value="$PROJECT_DIR$/src/Hetic/SiteBundle/Resources/views/Default/topmenu.html.twig" />
+        <option value="$PROJECT_DIR$/src/Hetic/SiteBundle/Resources/views/Category/picturecategory.html.twig" />
+        <option value="$PROJECT_DIR$/src/Hetic/SiteBundle/Resources/views/Product/pictureproduct.html.twig" />
+        <option value="$PROJECT_DIR$/src/Hetic/SiteBundle/Resources/public/css/main.sass" />
+        <option value="$PROJECT_DIR$/src/Hetic/SiteBundle/Resources/views/Default/index.html.twig" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/UPGRADE.md" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="352" />
+    <option name="y" value="40" />
+    <option name="width" value="1248" />
+    <option name="height" value="708" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents ProjectPane="true" />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uploads" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="preferences.keymap" />
+    <property name="last_opened_file_path" value="$USER_HOME$/mfj" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="PublishConfig" serverName="Hetic" serverId="0705591e-4c9d-471f-85dd-b1898a488506">
+    <servers>
+      <server id="0705591e-4c9d-471f-85dd-b1898a488506">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </server>
+      <server id="5eeb4549-8503-4614-bb3c-143153024626">
+        <serverdata />
+      </server>
+      <server id="7dbd87a4-4ca0-41c8-8d41-595870340d30">
+        <serverdata />
+      </server>
+      <server id="8ed664a5-9301-4cbd-8267-4dabdd6ea11e">
+        <serverdata />
+      </server>
+    </servers>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Hetic/SiteBundle/Resources/views/Commercial" />
+      <recent name="$PROJECT_DIR$/src/Hetic/SiteBundle/Controller" />
+      <recent name="$PROJECT_DIR$/web/js" />
+      <recent name="$PROJECT_DIR$/src/Hetic/SiteBundle/Resources/views/Pagination" />
+      <recent name="$PROJECT_DIR$/src/Hetic/SiteBundle/Repository" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Hetic/SiteBundle/Resources/views" />
+      <recent name="$PROJECT_DIR$/web/js" />
+      <recent name="$PROJECT_DIR$/src/Hetic/SiteBundle/Resources/public/css" />
+      <recent name="$PROJECT_DIR$/src/Hetic/SiteBundle/Resources/views/Form" />
+      <recent name="$PROJECT_DIR$/tests/acceptance/home" />
+    </key>
+  </component>
+  <component name="RunManager" selected="PHPUnit on Server.DefaultControllerTest on Hetic">
+    <configuration default="false" name="DefaultControllerTest on Hetic" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" temporary="true" class="DefaultControllerTest" path="$PROJECT_DIR$/src/Cours/SiteBundle/Tests/Controller/DefaultControllerTest.php" server_id="0705591e-4c9d-471f-85dd-b1898a488506" server_name="Hetic">
+      <RunnerSettings RunnerId="PhpRunner" />
+      <ConfigurationWrapper RunnerId="PhpRunner" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSRemoteDebuggerConfigurationSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="0705591e-4c9d-471f-85dd-b1898a488506" server_name="Hetic">
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="PHPUnit on Server.DefaultControllerTest on Hetic" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="PHPUnit on Server.DefaultControllerTest on Hetic" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c3710369-12cf-41a7-b768-bf355bf28dfd" name="Default" comment="" />
+      <created>1381688246310</created>
+      <updated>1381688246310</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="352" y="40" width="1248" height="708" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31380418" sideWeight="0.54859334" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24348474" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905295" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905295" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45140666" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="true" />
+    <option name="myTodoPanelSettings">
+      <value>
+        <are-packages-shown value="false" />
+        <are-modules-shown value="false" />
+        <flatten-packages value="false" />
+        <is-autoscroll-to-source value="false" />
+      </value>
+    </option>
+    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
+    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
+    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
+    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
+    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
+    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
+    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
+    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
+    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
+    <option name="LIMIT_HISTORY" value="true" />
+    <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
+    <option name="UPDATE_FILTER_SCOPE_NAME" />
+    <option name="USE_COMMIT_MESSAGE_MARGIN" value="false" />
+    <option name="COMMIT_MESSAGE_MARGIN_SIZE" value="72" />
+    <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
+    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
+    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
+    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
+    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
+    <option name="ACTIVE_VCS_NAME" />
+    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
+    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
+    <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
+    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
+    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Hetic/SiteBundle/Resources/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="19" selection-start="3945" selection-end="3958" vertical-scroll-proportion="0.24930748">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Hetic/SiteBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="115" column="30" selection-start="2926" selection-end="2956" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Hetic/SiteBundle/Resources/views/Default/topmenu.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="109" selection-start="3408" selection-end="3408" vertical-scroll-proportion="-9.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Hetic/SiteBundle/Resources/views/Medias/medias.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="10" selection-start="3767" selection-end="3767" vertical-scroll-proportion="0.28530258">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Hetic/SiteBundle/Resources/public/js/product.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Hetic/SiteBundle/Resources/public/js/product.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="8" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Hetic/SiteBundle/Resources/views/Category/categories.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Hetic/SiteBundle/Resources/views/Category/picturecategory.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="100" selection-start="1016" selection-end="1028" vertical-scroll-proportion="0.4918033">
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Hetic/SiteBundle/Resources/views/Product/pictureproduct.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="30" selection-start="1073" selection-end="1073" vertical-scroll-proportion="0.31034482">
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Hetic/SiteBundle/Resources/public/css/main.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="336" column="0" selection-start="7138" selection-end="7138" vertical-scroll-proportion="0.43953934">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Hetic/SiteBundle/Resources/views/Default/dashboard.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Hetic/SiteBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="0" selection-start="1313" selection-end="1313" vertical-scroll-proportion="0.3821656">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="958" selection-end="958" vertical-scroll-proportion="-9.36">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UPGRADE.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="25" selection-start="778" selection-end="778" vertical-scroll-proportion="-16.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="11" selection-start="125" selection-end="125" vertical-scroll-proportion="0.2254025">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

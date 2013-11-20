@@ -1,0 +1,88 @@
+{% extends 'HeticSiteBundle::layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets '@HeticSiteBundle/Resources/public/css/index.css' filter="cssrewrite" %}
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}" />
+    {% endstylesheets %}
+
+    {% stylesheets '@HeticSiteBundle/Resources/public/css/test.css' filter="cssrewrite" %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}" />
+    {% endstylesheets %}
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {% javascripts '@HeticSiteBundle/Resources/public/js/index.js' filter="cssrewrite" %}
+        <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+{% block content %}
+    <h3 class="text-success">Titre: {{ article.title }}</h3>
+    <h4 class="text-warning">Category: {{ article.category.name }} </h4>
+    <h5 class="text-info">Date de publication de l'article: {{ article.datePublication|date('d-m-Y') }}</h5>
+    <h4>Description de Category: {{ article.category.description }} </h4>
+    <p class="text-success">Tags associés:
+        {% for tag in article.tags %}
+            <div class="badge"> {{ tag.word }} <a href="{{ path('hetic_tag_remove', {'id' : tag.id, 'aid' : article.id }) }}"><i class="icon-remove"></i></a> </div>
+        {% endfor %}
+    </p>
+    <hr />
+    <div class="hero-unit">
+        <p>Description: {{ article.content }}</p>
+    </div>
+
+    {% if article.isVisible == "true" %}
+        <p class="text-success">Cet article est visible</p>
+    {% else %}
+        <p class="text-error">Cet article est invisible</p>
+    {% endif %}
+
+
+    <ul class="nav nav-pills span10">
+        <li class="active">
+            <a href="{{ path('hetic_site_remove', {"id": article.id }) }}">
+                <i class="icon-remove"></i>
+            </a>
+        </li>
+        <li>
+            {% if article.id not in app.session.get('stars') %}
+                <a href="{{ path('hetic_site_add_star', {"id": article.id }) }}">
+                    <i class="icon-star"></i>
+                </a>
+            {% else %}
+                <a href="{{ path('hetic_site_remove_star', {"id": article.id }) }}">
+                    <i class="icon-star-empty"></i>
+                </a>
+            {% endif %}
+        </li>
+        <li>
+            {% if article.isVisible == false %}
+                <a href="{{ path('hetic_site_visible', {"id": article.id }) }}">
+                    <i class="icon-ok"></i>
+                </a>
+            {% else %}
+                <a href="{{ path('hetic_site_invisible', {"id": article.id }) }}">
+                    <i class="icon-ban-circle"></i>
+                </a>
+            {% endif %}
+        </li>
+        <li>
+            <a href="{{ path('hetic_site_edit', {"id": article.id }) }}">
+                <i class="icon-pencil"></i>
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('hetic_article_more', {'id' : article.id }) }}">
+                <i class="icon-plus"></i>
+            </a>
+            <a href="{{ path('hetic_article_less', {'id' : article.id }) }}">
+                <i class="icon-minus"></i>
+            </a>
+        </li>
+    </ul>
+
+{% endblock %}
+

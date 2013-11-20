@@ -1,0 +1,29 @@
+{% extends 'HeticSiteBundle::layout.html.twig' %}
+
+{% block content %}
+
+    <div class="" id="products">
+        <h2><i class="glyphicon glyphicon-gift"></i> Action commercial "{{ commercial.title|title }}"</h2>
+
+        <p>
+            {{ commercial.content }}
+        </p>
+        <h3>La catégorie</h3>
+        <p>
+            {{ commercial.category.name|raw }}
+        </p>
+        <p>{{ commercial.nature }}</p>
+        {% if commercial.produit.title is defined %}
+            <p>Produit</p>
+            <p>{{ commercial.produit.title }}</p>
+        {% endif %}
+        {% if commercial.category.name is defined %}
+            <p>Catégorie</p>
+            <p>{{ commercial.category.name }}</p>
+        {% endif %}
+
+        <p>{{ commercial.isVisible }}</p>
+        <p class="clear"></div>
+    </div>
+{% endblock %}
+

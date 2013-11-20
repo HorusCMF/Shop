@@ -1,0 +1,25 @@
+{% extends 'HeticSiteBundle::layout.html.twig' %}
+
+{% block javascripts %}
+        {{ parent() }}
+    {% javascripts '@HeticSiteBundle/Resources/public/js/index.js' filter="cssrewrite" %}
+        <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
+
+{% endblock %}
+
+
+{% block content %}
+    <h1>Créer un article</h1>
+    <hr class="clear" />
+    <form action="" method="post">
+        {{ form_label(form.title) }}
+        {{ form_widget(form.title) }}
+        {{ form_label(form.content) }}
+        {{ form_widget(form.content) }}
+
+        <button class="btn btn-warning">Ajouter un article</button>
+    </form>
+{% endblock %}
+
+

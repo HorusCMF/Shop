@@ -1,0 +1,60 @@
+#jms_security_extra:
+#    secure_all_services: true
+#    expressions: true
+
+security:
+    access_denied_url:  /access-denied
+
+    encoders:
+       site:
+         class:  Hetic\SiteBundle\Entity\Administrateur
+         algorithm: sha512
+         encode-as-base64: true
+         iterations: 10
+
+    providers:
+      chain_provider:
+          chain:
+              providers: [site]
+      site:
+        entity: { class: HeticSiteBundle:Administrateur, property: email }
+
+    firewalls:
+      dev:
+        pattern:  ^/(_(profiler|wdt)|css|images|js)/
+        security: false
+      login_firewall:
+        pattern:    ^/login
+        security:  false
+      site:
+       pattern:    ^/backend
+       security: true
+       provider: site
+       remember_me:
+         always_remember_me: true
+         key:      g46hqs4d9jqsdsd6g54h6sdyfhgadphfhgdldhjjhgjgm46sdfshg5qd1o
+         lifetime: 720000
+         path:     /
+         domain:   ~ #Defaults to the current domain from $_SERVER
+       form_login:
+         success_handler:  success_handler_site
+         login_path:  /login
+         check_path:  /backend/login_check
+         remember_me: true
+       logout:
+         path:   /backend/logout
+         target: /
+         invalidate_session: false
+
+
+    access_control:
+        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/backend, roles: ROLE_USER }
+    #        - { path: ^/partenaires/administration, roles: ROLE_PARTENAIRE }
+    #        - { path: ^/administrator/, roles: ROLE_ADMIN }
+        - { path: ^/.*, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+
+    role_hierarchy:
+      ROLE_USER:       ROLE_USER
+      ROLE_ADMIN: [ROLE_ADMIN,ROLE_USER,ROLE_ALLOWED_TO_SWITCH]
+#        ROLE_PARTENAIRE: [ROLE_PARTENAIRE,ROLE_USER,ROLE_ALLOWED_TO_SWITCH]

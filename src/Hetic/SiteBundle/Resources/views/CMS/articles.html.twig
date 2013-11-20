@@ -1,0 +1,50 @@
+{% extends 'HeticSiteBundle::layout.html.twig' %}
+
+{% block content %}
+
+    <div class="" id="products">
+        <h2><i class="glyphicon glyphicon-gift"></i> Vos articles</h2>
+        {% for article in articles %}
+            <div class="media">
+                <div class="btn-group pull-right">
+                    <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
+                        <i class="glyphicon glyphicon-plus"></i> Action <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a onclick="return(confirm('Etes-vous sûr de vouloir supprimer cet article ?'));" href="{{ path('hetic_site_remove_article', {'id' : article.id}) }}"><i class="glyphicon glyphicon-remove"></i> Supprimer</a></li>
+                        <li><a  href="{{ path('hetic_site_edit_article', {'id' : article.id}) }}"><i class="glyphicon glyphicon-pencil"></i> Editer</a></li>
+                    </ul>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading"><a href="">{{ article.title }}</a>
+                        {% if article.isVisible %}
+                            <span class="badge badge-success">En ligne</span>
+                        {% else %}
+                                <span class="badge badge-danger">Hors-Ligne</span>
+                        {% endif %}
+                    </h4>
+                    <p>{{ article.cover|raw }}</p>
+                </div>
+            </div>
+            {% if not loop.last %}
+                <hr class="clear fancy-line"/>{% endif %}
+        {% else %}
+            <div class="alert alert-dismissable alert-danger">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <i class="glyphicon glyphicon-info-sign"></i> Aucun article de créer pour le moment.
+                <a href="{{ path('hetic_site_article_create') }}" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i> Ajouter un article</a>
+                <div class="clear"></div>
+            </div>
+        {% endfor %}
+
+        {#<ul class="pagination pull-right">#}
+            {#<li class="disabled"><a href="#"><i class="glyphicon glyphicon-chevron-left"></i></a></li>#}
+            {#<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>#}
+            {#<li class=""><a href="#">2 <span class="sr-only">(current)</span></a></li>#}
+            {#<li class=""><a href="#">3 <span class="sr-only">(current)</span></a></li>#}
+            {#<li class="disabled"><a href="#"><i class="glyphicon glyphicon-chevron-right"></i></a></li>#}
+        {#</ul>#}
+        <div class="clear"></div>
+    </div>
+{% endblock %}
+
