@@ -5,6 +5,8 @@ Horus CMF is an open source e-commerce solution for **Developers**, based on the
 
 Ultimate goal of the project is to create a minimalist webshop engine, which is user-friendly, *loved* by developers and has a helpful community.
 
+Horus with Symfony2 offers all the flexibility of custom development for E-Commerce and can be used to design an application that perfectly meets the expressed needs. It, however, requires development, integration and maintenance related technical expertise.
+
 Using full-stack Symfony Framework 2.3.7, with MongoDB, Node IO/Stream, Elastic Search and Codeception.
 
 Philosophy: **Minimalist** features, **Collaborative** in real time, **Maintainable**, **Pragmatic** and **Responsive** Solution.

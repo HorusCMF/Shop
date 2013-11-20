@@ -2,6 +2,7 @@
     "name": "HorusCMF/Shop",
     "license": "MIT",
     "type": "project",
+    "version": "1.0",
     "description": "Horus CMF Shop, open source e-commerce solution based on Symfony2",
     "keywords": ["CMF", "Shop","Symfony2"],
     "license": "MIT",
