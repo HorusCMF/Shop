@@ -7,6 +7,9 @@ Ultimate goal of the project is to create a minimalist webshop engine, which is 
 
 We're using full-stack Symfony, with MongoDB, Node IO, Elastic Search and Codeception.
 
+Philosophy: Minimalist, Collaborative,  Pragmatic and Responsive Solution.
+
+
 Documentation
 -------------
 
