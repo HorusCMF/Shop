@@ -16,7 +16,7 @@ Philosophy: **Minimalist** features, **Collaborative** in real time, **Maintaina
 
 Screenshots
 
-![Alt text](/screenshots/MainScreen.png "Main Screen")
+![ScreenShot](https://raw.github.com/HorusCMF/Shop/master/screenshots/MainScreen.png)
 
 Documentation
 -------------
