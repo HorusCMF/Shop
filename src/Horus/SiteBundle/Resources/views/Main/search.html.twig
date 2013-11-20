@@ -1,0 +1,274 @@
+{% extends 'HorusSiteBundle::layout.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {% javascripts '@HorusSiteBundle/Resources/public/js/index.js' filter="cssrewrite" %}
+    <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
+
+{% endblock %}
+
+{% block content %}
+    <div id="searchproduct">
+
+        {% if produits is not empty %}
+            <h1><i class="glyphicon glyphicon-shopping-cart"></i> Produits pour "{{ app.request.query.get('word') }}" <span class="label-danger label pull-right"><i class="glyphicon glyphicon-shopping-cart"></i> {{ produits.getTotalItemCount }} produits</span></h1>
+            <hr class="clear fancy-line">
+        {% endif %}
+
+        {% for produit in produits %}
+            <div class="media">
+                <div class="btn-group pull-right">
+                    <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
+                        <i class="glyphicon glyphicon-plus"></i> Action <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        {% if produit.isVisible %}
+                            <li><a onclick="return(confirm('Etes-vous sûr de vouloir désactiver cet article?'));" href="{{ path('horus_site_desactive_product', {'id' : produit.id}) }}"><i class="glyphicon glyphicon-minus-sign"></i> Désactiver</a></li>
+                        {% else %}
+                            <li><a onclick="return(confirm('Etes-vous sûr de vouloir activer cet article?'));" href="{{ path('horus_site_active_product', {'id' : produit.id}) }}"><i class="glyphicon glyphicon-ok"></i> Activer</a></li>
+                        {% endif %}
+                        <li><a onclick="return(confirm('Etes-vous sûr de vouloir supprimer cet article?'));" href="{{ path('horus_site_remove_product', {'id' : produit.id}) }}"><i class="glyphicon glyphicon-remove"></i> Supprimer</a></li>
+                        <li><a  href="{{ path('horus_site_edit_product', {'id' : produit.id}) }}"><i class="glyphicon glyphicon-pencil"></i> Editer</a></li>
+                        <li><a  href="{{ path('horus_site_edit_pictures_product', {'id' : produit.id}) }}"><i class="glyphicon glyphicon-camera"></i> Photos</a></li>
+                        <li><a  href="{{ path('horus_site_product', {'id' : produit.id}) }}"><i class="glyphicon glyphicon-search"></i> Voir</a></li>
+
+                    </ul>
+                </div>
+                <a class="pull-left" href="#">
+                    {% if produit.starPicture  %}
+                        <img src="{{ imgproducts ~  produit.id ~ '/' ~ produit.starPicture.path }} " />
+                    {% else  %}
+                        <img class="media-object img-thumbnail" src="http://placehold.it/150x75" alt="...">
+                    {% endif  %}
+                </a>
+
+                <div class="media-body">
+                    <h4 class="media-heading"><a href="{{ path('horus_site_product', {'id' : produit.id}) }}">{{ produit.title }}</a> de <a href="{{ path('horus_site_category', {'id' : produit.category.id}) }}">{{ produit.category.name }}</a>
+                        {% if produit.isVisible %}
+                            <span class="badge badge-success">En ligne</span>
+                        {% else %}
+                            <span class="badge badge-danger">Hors-Ligne</span>
+                        {% endif %}
+                    </h4>
+                    <h6>Référence: {{ produit.reference }}</h6>
+                    <hr class="fancy-line" />
+                    <p>{{ produit.cover|truncate('400',true)|raw }}</p>
+                    <h3>
+                        {% if produit.quantity > 0 %}
+                            <span class="label label-success pull-left">{{ produit.quantity }} en stock</span>
+                        {% else %}
+                            <span class="label label-danger pull-left">Rupture de stock</span>
+                        {% endif %}
+                    </h3>
+                    <p>
+                        <a href="{{ path('horus_site_product', {'id' : produit.id}) }}" class="btn-xs btn btn-warning pull-right"><i class="glyphicon glyphicon-search"></i> Voir le produit</a>
+                    </p>
+                </div>
+            </div>
+            {% if not loop.last %}
+                <hr class="clear fancy-line"/>{% endif %}
+        {% endfor %}
+
+        <div class="clear"></div>
+        <div class="pull-right clearing">
+            {{ knp_pagination_render(produits) }}
+        </div>
+        <div class="clear"></div>
+
+
+        {% if categories is not empty %}
+            <h1><i class="glyphicon glyphicon-list"></i> Catégories pour "{{ app.request.query.get('word') }}" <span class="label-danger label pull-right"><i class="glyphicon glyphicon-shopping-cart"></i> {{ categories.getTotalItemCount }} catégories</span></h1>
+            <hr class="clear fancy-line">
+        {% endif %}
+
+        {% for category in categories %}
+            <div class="media">
+                <div class="btn-group pull-right">
+                    <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
+                        <i class="glyphicon glyphicon-plus"></i> Action <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        {% if category.visible %}
+                            <li><a onclick="return(confirm('Etes-vous sûr de vouloir désactiver cette catégory ?'));" href="{{ path('horus_site_desactive_category', {'id' : category.id}) }}"><i class="glyphicon glyphicon-minus-sign"></i> Désactiver</a></li>
+                        {% else %}
+                            <li><a onclick="return(confirm('Etes-vous sûr de vouloir activer cette catégory ?'));" href="{{ path('horus_site_active_category', {'id' : category.id}) }}"><i class="glyphicon glyphicon-ok"></i> Activer</a></li>
+                        {% endif %}
+                        <li><a onclick="return(confirm('Etes-vous sûr de vouloir supprimer cette catégory ?'));" href="{{ path('horus_site_remove_category', {'id' : category.id}) }}"><i class="glyphicon glyphicon-remove"></i> Supprimer</a></li>
+                        <li><a  href="{{ path('horus_site_edit_category', {'id' : category.id}) }}"><i class="glyphicon glyphicon-pencil"></i> Editer</a></li>
+                        <li><a  href="{{ path('horus_site_edit_image_category', {'id' : category.id}) }}"><i class="glyphicon glyphicon-camera"></i> Photos</a></li>
+                        <li><a  href="{{ path('horus_site_category', {'id' : category.id}) }}"><i class="glyphicon glyphicon-search"></i> Voir</a></li>
+                    </ul>
+                </div>
+                <a class="pull-left" href="#">
+                    {% if category.starPicture  %}
+                        <img src="{{ imgcategories ~  category.id ~ '/' ~ category.starPicture.path }} " />
+                    {% else  %}
+                        <img class="media-object img-thumbnail" src="http://placehold.it/150x75" alt="...">
+                    {% endif  %}
+                </a>
+
+                <div class="media-body">
+                    <h4 class="media-heading"><a href="{{ path('horus_site_category', {'id' : category.id}) }}">{{ category.name }}</a>
+                        {% if category.visible %}
+                            <span class="badge badge-success">En ligne</span>
+                        {% else %}
+                            <span class="badge badge-danger">Hors-Ligne</span>
+                        {% endif %}
+                    </h4>
+                    <p>{{ category.cover|raw }}</p>
+                    <h4 class="pull-right"><span class="label label-info">{{ category.produits|length|default('0') }} produit(s)</span></h4>
+                </div>
+            </div>
+            {% if not loop.last %}
+                <hr class="clear fancy-line"/>{% endif %}
+        {% endfor %}
+
+        <div class="clear"></div>
+        <div class="pull-right clearing">
+            {{ knp_pagination_render(categories) }}
+        </div>
+        <div class="clear"></div>
+
+
+
+        {% if familles is not empty %}
+            <h1><i class="glyphicon glyphicon-th-list"></i> Familles pour "{{ app.request.query.get('word') }}" <span class="label-danger label pull-right"><i class="glyphicon glyphicon-shopping-cart"></i> {{ familles.getTotalItemCount }} familles</span></h1>
+            <hr class="clear fancy-line">
+        {% endif %}
+
+        {% for famille in familles %}
+            <div class="media">
+                <div class="btn-group pull-right">
+                    <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
+                        <i class="glyphicon glyphicon-plus"></i> Action <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a onclick="return(confirm('Etes-vous sûr de vouloir supprimer cette catégory ?'));" href="{{ path('horus_site_remove_famille', {'id' : famille.id}) }}"><i class="glyphicon glyphicon-remove"></i> Supprimer</a></li>
+                        <li><a  href="{{ path('horus_site_edit_famille', {'id' : famille.id}) }}"><i class="glyphicon glyphicon-pencil"></i> Editer</a></li>
+                    </ul>
+                </div>
+
+                <div class="media-body">
+                    <h4 class="media-heading"><a href="">{{ famille.name }}</a>
+                        {% if famille.visible %}
+                            <span class="badge badge-success">En ligne</span>
+                        {% else %}
+                            <span class="badge badge-danger">Hors-Ligne</span>
+                        {% endif %}
+                    </h4>
+                    <p>{{ famille.cover|raw }}</p>
+                    <h4 class="pull-right"><span class="label label-info">{{ famille.produits|length|default('0') }} produit(s)</span></h4>
+
+                </div>
+            </div>
+            {% if not loop.last %}
+                <hr class="clear fancy-line"/>{% endif %}
+        {% endfor %}
+
+        <div class="clear"></div>
+        <div class="pull-right clearing">
+            {{ knp_pagination_render(categories) }}
+        </div>
+        <div class="clear"></div>
+
+
+        {% if pages is not empty %}
+            <h1><i class="glyphicon glyphicon-list-alt"></i> Pages pour "{{ app.request.query.get('word') }}" <span class="label-danger label pull-right"><i class="glyphicon glyphicon-shopping-cart"></i> {{ pages.getTotalItemCount }} pages</span></h1>
+            <hr class="clear fancy-line">
+        {% endif %}
+
+        {% for page in pages %}
+            <div class="media">
+                <div class="btn-group pull-right">
+                    <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
+                        <i class="glyphicon glyphicon-plus"></i> Action <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a onclick="return(confirm('Etes-vous sûr de vouloir supprimer cette page ?'));" href="{{ path('horus_site_remove_page', {'id' : page.id}) }}"><i class="glyphicon glyphicon-remove"></i> Supprimer</a></li>
+                        <li><a  href="{{ path('horus_site_edit_page', {'id' : page.id}) }}"><i class="glyphicon glyphicon-pencil"></i> Editer</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="media-body">
+                    <h4 class="media-heading"><a href="">{{ page.name }}</a>
+                        {% if page.visible %}
+                            <span class="badge badge-success">En ligne</span>
+                        {% else %}
+                            <span class="badge badge-danger">Hors-Ligne</span>
+                        {% endif %}
+                    </h4>
+                    <p>{{ page.cover|raw }}</p>
+                    <h4 class="pull-right"><span class="label label-info">{{ page.produits|length|default('0') }} produit(s)</span></h4>
+                </div>
+            </div>
+            {% if not loop.last %}
+                <hr class="clear fancy-line"/>{% endif %}
+        {% endfor %}
+
+        <div class="clear"></div>
+        <div class="pull-right clearing">
+            {{ knp_pagination_render(pages) }}
+        </div>
+
+
+        {% if articles is not empty %}
+            <h1><i class="glyphicon glyphicon-pencil"></i> Articles pour "{{ app.request.query.get('word') }}" <span class="label-danger label pull-right"><i class="glyphicon glyphicon-shopping-cart"></i> {{ articles.getTotalItemCount }} articles</span></h1>
+            <hr class="clear fancy-line">
+        {% endif %}
+
+        {% for article in articles %}
+            <div class="media">
+                <div class="btn-group pull-right">
+                    <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
+                        <i class="glyphicon glyphicon-plus"></i> Action <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a onclick="return(confirm('Etes-vous sûr de vouloir supprimer cet article ?'));" href="{{ path('horus_site_remove_article', {'id' : article.id}) }}"><i class="glyphicon glyphicon-remove"></i> Supprimer</a></li>
+                        <li><a  href="{{ path('horus_site_edit_article', {'id' : article.id}) }}"><i class="glyphicon glyphicon-pencil"></i> Editer</a></li>
+                    </ul>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading"><a href="">{{ article.title }}</a>
+                        {% if article.isVisible %}
+                            <span class="badge badge-success">En ligne</span>
+                        {% else %}
+                            <span class="badge badge-danger">Hors-Ligne</span>
+                        {% endif %}
+                    </h4>
+                    <p>{{ article.cover|raw }}</p>
+                </div>
+            </div>
+            {% if not loop.last %}
+                <hr class="clear fancy-line"/>{% endif %}
+        {% endfor %}
+
+        <div class="clear"></div>
+        <div class="pull-right clearing">
+            {{ knp_pagination_render(articles) }}
+        </div>
+
+        {% if tags is not empty %}
+            <h1><i class="glyphicon glyphicon-tags"></i> Tags pour "{{ app.request.query.get('word') }}" <span class="label-danger label pull-right"><i class="glyphicon glyphicon-shopping-cart"></i> {{ tags.getTotalItemCount }} tags</span></h1>
+            <hr class="clear fancy-line">
+        {% endif %}
+
+        {% for tag in tags %}
+            <tr>
+                <td>{{ tag.id }}</td><td><span class="label label-primary">{{ tag.word }}</span> </td>
+                <td>
+                    <a onclick="return(confirm('Etes-vous sûr de vouloir supprimer ce tag ?'));" href="{{ path('horus_site_remove_tag', {'id' : tag.id}) }}" class="btn btn-primary"><i class="glyphicon glyphicon-remove"></i></a>
+                    <a href="{{ path('horus_site_edit_tag', {'id' : tag.id}) }}" class="btn btn-primary"><i class="glyphicon glyphicon-pencil"></i></a>
+                </td>
+            </tr>
+        {% endfor %}
+
+        <div class="clear"></div>
+        <div class="pull-right clearing">
+            {{ knp_pagination_render(tags) }}
+        </div>
+
+
+    </div>
+{% endblock %}

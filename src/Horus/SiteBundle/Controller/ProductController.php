@@ -17,12 +17,6 @@ use JMS\SecurityExtraBundle\Annotation\Secure;
 class ProductController extends Controller
 {
 
-    public function indexAction()
-    {
-        return $this->render('HorusSiteBundle:Default:index.html.twig');
-
-    }
-
     public function commercialAction()
     {
         $em = $this->getDoctrine()->getManager();
@@ -126,7 +120,7 @@ class ProductController extends Controller
         );
     }
 
-    public function visualizeproductAction(Produit $id)
+    public function seeproductAction(Produit $id)
     {
         return $this->render('HorusSiteBundle:Product:visualizeproduct.html.twig',
             array(

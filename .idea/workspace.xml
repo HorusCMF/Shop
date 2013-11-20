@@ -6,21 +6,21 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/app.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381688711343" ignored="false" />
     <file path="/index.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384948640869" ignored="false" />
-    <file path="/routing_dev.yml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381829618923" ignored="false" />
+    <file path="/routing_dev.yml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384966671612" ignored="false" />
     <file path="/DefaultController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384629268610" ignored="false" />
     <file path="/hello.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382280929118" ignored="false" />
-    <file path="/routing.yml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384964703384" ignored="false" />
+    <file path="/routing.yml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384965896590" ignored="false" />
     <file path="/partial.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381814432181" ignored="false" />
     <file path="/ArticleRepository.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384897092639" ignored="false" />
     <file path="/Article.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384806169180" ignored="false" />
-    <file path="/layout.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384889240986" ignored="false" />
+    <file path="/layout.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384966095699" ignored="false" />
     <file path="/another.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381814942330" ignored="false" />
     <file path="/page2.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381815291193" ignored="false" />
     <file path="/test.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382288173508" ignored="false" />
     <file path="/test.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381817139137" ignored="false" />
     <file path="/hetic.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382015567061" ignored="false" />
     <file path="/AppKernel.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384958119943" ignored="false" />
-    <file path="/config.yml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384965139240" ignored="false" />
+    <file path="/config.yml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384966434146" ignored="false" />
     <file path="/SearchType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381858398883" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/AbstractType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382374214535" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/FormBuilder.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381858574203" ignored="false" />
@@ -201,7 +201,7 @@
     <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/Request.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382374214535" ignored="false" />
     <file path="/Category.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384809703024" ignored="false" />
     <file path="/administration.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382376719618" ignored="false" />
-    <file path="/a.dummy" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384964519698" ignored="false" />
+    <file path="/a.dummy" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384966475614" ignored="false" />
     <file path="/Tags.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382385426953" ignored="false" />
     <file path="/detail.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382388420900" ignored="false" />
     <file path="/detail.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382976586741" ignored="false" />
@@ -214,7 +214,7 @@
     <file path="$PROJECT_DIR$/vendor/doctrine/orm/tools/sandbox/xml/Entities.User.dcm.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382955655286" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/doctrine/orm/build.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382955655286" ignored="false" />
     <file path="/leftnav.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382975148403" ignored="false" />
-    <file path="/main.sass" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384948683779" ignored="false" />
+    <file path="/main.sass" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384966559936" ignored="false" />
     <file path="/DefaultControllerTest.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383046329481" ignored="false" />
     <file path="/fields.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384607180952" ignored="false" />
     <file path="/AddArticleCept.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383766959319" ignored="false" />
@@ -385,31 +385,14 @@
     <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Repository/FamilleRepository.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384958003592" ignored="false" />
     <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Tests/Controller/DefaultControllerTest.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384958003592" ignored="false" />
     <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Repository/CommercialRepository.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384958003592" ignored="false" />
-    <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Default/search.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384964531354" ignored="false" />
-    <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Default/administration.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384958578872" ignored="false" />
-    <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Default/detail.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384958578872" ignored="false" />
-    <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Default/edit.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384964531354" ignored="false" />
-    <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Default/contact.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384958578872" ignored="false" />
-    <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Default/categorydetail.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384964531354" ignored="false" />
-    <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Default/login.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384958578872" ignored="false" />
-    <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Default/index.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384958578872" ignored="false" />
-    <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Default/about.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384958578872" ignored="false" />
-    <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Default/dashboard.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384958578872" ignored="false" />
-    <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Default/articlesingle.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384964531354" ignored="false" />
-    <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Product/visualizeproduct.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384964531354" ignored="false" />
+    <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Product/visualizeproduct.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384965757928" ignored="false" />
     <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Product/pictureproduct.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384964531354" ignored="false" />
     <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Product/createproduct.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384964531354" ignored="false" />
     <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Product/editproduct.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384964531354" ignored="false" />
-    <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Default/mainmenu.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384958578872" ignored="false" />
     <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Commercial/commercial.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384958578872" ignored="false" />
-    <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Default/editcategory.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384964531354" ignored="false" />
-    <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Product/products.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384964531354" ignored="false" />
+    <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Product/products.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384965757928" ignored="false" />
     <file path="/composer.json" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384962910687" ignored="false" />
     <file path="/UPGRADE.md" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384963989831" ignored="false" />
-    <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Default/createcategory.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384964531354" ignored="false" />
-    <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Default/menu.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384964531354" ignored="false" />
-    <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Default/topmenu.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384964531354" ignored="false" />
-    <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Default/search_partial.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384964531354" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -428,35 +411,7 @@
     <favorites_list name="hetic" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="MainController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Controller/MainController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="0" selection-start="2831" selection-end="2831" vertical-scroll-proportion="-22.291666">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.yml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/config/config.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="39" selection-start="187" selection-end="187" vertical-scroll-proportion="0.26373628">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routing.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/config/routing.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="294" column="50" selection-start="7695" selection-end="7695" vertical-scroll-proportion="-12.88">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -466,29 +421,29 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/DependencyInjection/HeticSiteExtension.php" />
-        <option value="$PROJECT_DIR$/app/config/config.yml" />
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
-        <option value="$PROJECT_DIR$/UPGRADE.md" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Controller/CMSController.php" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Authentication/AuthenticationSiteHandler.php" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Menu/Builder.php" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/config/services.yml" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/CMS/article.html.twig" />
         <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/CMS/articles.html.twig" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Controller/AdministrateurController.php" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/config/config.yml" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/CMS/page.html.twig" />
         <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Controller/MainController.php" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/config/config.yml" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/layout_simple.html.twig" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Controller/AdministrateurController.php" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Controller/CommandesController.php" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Controller/LayoutController.php" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Controller/ProductController.php" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/public/css/main.sass" />
+        <option value="$PROJECT_DIR$/app/config/routing_dev.yml" />
+        <option value="$PROJECT_DIR$/app/config/routing.yml" />
+        <option value="$PROJECT_DIR$/web/app.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="311" />
-    <option name="y" value="71" />
+    <option name="x" value="472" />
+    <option name="y" value="66" />
     <option name="width" value="1184" />
     <option name="height" value="708" />
   </component>
@@ -547,6 +502,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -570,6 +539,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="SiteBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Horus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SiteBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -625,7 +624,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -651,21 +650,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hetic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hetic" />
+              <option name="myItemId" value="Resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mysql" />
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -680,6 +673,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -725,11 +736,11 @@
       <recent name="$PROJECT_DIR$/src/Hetic/SiteBundle/Resources/views/Pagination" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Slots" />
+      <recent name="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Pages" />
+      <recent name="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Main" />
       <recent name="$PROJECT_DIR$/src/Hetic/SiteBundle/Resources/views" />
       <recent name="$PROJECT_DIR$/web/js" />
-      <recent name="$PROJECT_DIR$/src/Hetic/SiteBundle/Resources/public/css" />
-      <recent name="$PROJECT_DIR$/src/Hetic/SiteBundle/Resources/views/Form" />
-      <recent name="$PROJECT_DIR$/tests/acceptance/home" />
     </key>
   </component>
   <component name="RunManager" selected="PHPUnit on Server.DefaultControllerTest on Hetic">
@@ -791,16 +802,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="311" y="71" width="1184" height="708" extended-state="0" />
-    <editor active="true" />
+    <frame x="472" y="66" width="1184" height="708" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37094018" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36923078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27072757" sideWeight="0.62905985" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27072757" sideWeight="0.63076925" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24348474" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905295" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -875,122 +886,123 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="24" selection-start="178" selection-end="178" vertical-scroll-proportion="0.16100179">
+        <state line="10" column="6" selection-start="157" selection-end="161" vertical-scroll-proportion="-12.285714">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysql/horus.sql">
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Controller/ProductController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="24" selection-start="288" selection-end="288" vertical-scroll-proportion="0.34548944">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UPGRADE.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="25" selection-start="432" selection-end="432" vertical-scroll-proportion="0.450805">
+        <state line="19" column="0" selection-start="467" selection-end="467" vertical-scroll-proportion="-2.1020408">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Controller/LayoutController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="10" selection-start="3111" selection-end="3114" vertical-scroll-proportion="0.43570057">
+        <state line="17" column="51" selection-start="470" selection-end="470" vertical-scroll-proportion="0.2704918">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Controller/CommandesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="38" selection-start="612" selection-end="612" vertical-scroll-proportion="0.22562674">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Controller/CMSController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="28" selection-start="1585" selection-end="1585" vertical-scroll-proportion="-9.75">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Authentication/AuthenticationSiteHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="46" selection-start="2053" selection-end="2053" vertical-scroll-proportion="-11.791667">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Menu/Builder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="5" selection-start="660" selection-end="660" vertical-scroll-proportion="-13.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/CMS/articles.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="37" selection-start="1192" selection-end="1192" vertical-scroll-proportion="-11.791667">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="5" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/CMS/article.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="127" selection-start="694" selection-end="694" vertical-scroll-proportion="0.33524904">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="33" selection-start="1366" selection-end="1377" vertical-scroll-proportion="0.6728972">
+        <state line="15" column="48" selection-start="366" selection-end="366" vertical-scroll-proportion="0.2704918">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Controller/AdministrateurController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="1046" selection-end="1046" vertical-scroll-proportion="1.1775701">
+        <state line="29" column="31" selection-start="868" selection-end="868" vertical-scroll-proportion="0.6557377">
           <folding>
             <element signature="e#48#105#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/config/routing.yml">
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="294" column="50" selection-start="7695" selection-end="7695" vertical-scroll-proportion="-12.88">
-          <folding />
+        <state line="226" column="38" selection-start="10448" selection-end="10448" vertical-scroll-proportion="0.43659943">
+          <folding>
+            <element signature="e#1199#1270#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Controller/MainController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="0" selection-start="2831" selection-end="2831" vertical-scroll-proportion="-22.291666">
+        <state line="54" column="51" selection-start="1441" selection-end="1441" vertical-scroll-proportion="2.0082645">
+          <folding>
+            <element signature="e#47#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="61" selection-start="68" selection-end="68" vertical-scroll-proportion="0.03220036">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/config/config.yml">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="39" selection-start="187" selection-end="187" vertical-scroll-proportion="0.26373628">
+        <state line="1" column="6" selection-start="21" selection-end="21" vertical-scroll-proportion="0.034548946">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="407" selection-end="407" vertical-scroll-proportion="-8.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/public/css/main.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="324" column="14" selection-start="6890" selection-end="6890" vertical-scroll-proportion="2.7639155">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="371" selection-end="439" vertical-scroll-proportion="0.48300537">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="220" column="24" selection-start="7583" selection-end="7583" vertical-scroll-proportion="0.032967035">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.64859813">
           <folding />
         </state>
       </provider>

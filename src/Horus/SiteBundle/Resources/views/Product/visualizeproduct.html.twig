@@ -89,7 +89,7 @@
             {% if produit.prodparent.title is defined %}
                 <p>
                     <strong>Produit parent: </strong> {{ produit.prodparent.title }} <a
-                            href="{{ path('horus_site_visualize_product', {'id' : produit.prodparent.id }) }}">Voir le
+                            href="{{ path('horus_site_product', {'id' : produit.prodparent.id }) }}">Voir le
                         produit</a>
                 </p>
             {% endif %}

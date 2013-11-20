@@ -21,7 +21,7 @@
                         <li><a onclick="return(confirm('Etes-vous sûr de vouloir supprimer cet article?'));" href="{{ path('horus_site_remove_product', {'id' : produit.id}) }}"><i class="glyphicon glyphicon-remove"></i> Supprimer</a></li>
                         <li><a  href="{{ path('horus_site_edit_product', {'id' : produit.id}) }}"><i class="glyphicon glyphicon-pencil"></i> Editer</a></li>
                         <li><a  href="{{ path('horus_site_edit_pictures_product', {'id' : produit.id}) }}"><i class="glyphicon glyphicon-camera"></i> Photos</a></li>
-                        <li><a  href="{{ path('horus_site_visualize_product', {'id' : produit.id}) }}"><i class="glyphicon glyphicon-search"></i> Voir</a></li>
+                        <li><a  href="{{ path('horus_site_product', {'id' : produit.id}) }}"><i class="glyphicon glyphicon-search"></i> Voir</a></li>
 
                     </ul>
                 </div>
@@ -34,7 +34,7 @@
                 </a>
 
                 <div class="media-body">
-                    <h4 class="media-heading"><a href="{{ path('horus_site_visualize_product', {'id' : produit.id}) }}">{{ produit.title }}</a> de <a href="{{ path('horus_site_category', {'id' : produit.category.id}) }}">{{ produit.category.name }}</a>
+                    <h4 class="media-heading"><a href="{{ path('horus_site_product', {'id' : produit.id}) }}">{{ produit.title }}</a> de <a href="{{ path('horus_site_category', {'id' : produit.category.id}) }}">{{ produit.category.name }}</a>
                         {% if produit.isVisible %}
                             <span class="badge badge-success">En ligne</span>
                         {% else %}
@@ -54,7 +54,7 @@
                         {% endif %}
                     </h3>
                     <p>
-                        <a href="{{ path('horus_site_visualize_product', {'id' : produit.id}) }}" class="btn-xs btn btn-warning pull-right"><i class="glyphicon glyphicon-search"></i> Voir le produit</a>
+                        <a href="{{ path('horus_site_product', {'id' : produit.id}) }}" class="btn-xs btn btn-warning pull-right"><i class="glyphicon glyphicon-search"></i> Voir le produit</a>
                     </p>
                 </div>
             </div>

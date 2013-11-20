@@ -96,31 +96,32 @@ body
   background: url('https://www.myposeo.com/img/frontend/main_background.jpg')
   margin: 0
   padding: 0
-label
-  font-size: 18px
-  color: brown
-  font-family: 'Lobster',cursive
-  margin-top: 15px
-#status
+  a
+    color: chocolate
+  a.list-group-item
+    color: #222
   label
-    margin-top: 0px
+    font-size: 18px
+    color: brown
+    font-family: 'Lobster',cursive
+    margin-top: 15px
+  .navbar-default
+    @include box-shadow(1px 1px 12px #555)
+  #status
+    label
+      margin-top: 0px
 
-.nav-tabs>li.active>a
-  text-shadow: 1px 1px #631400,1px 1px #631400
+  .nav-tabs>li.active>a
+    text-shadow: 1px 1px #631400,1px 1px #631400
 
-.form-control
-  font-size: 16px
-a
-  color: chocolate
-a.list-group-item
-  color: #222
-.navbar-default
-  @include box-shadow(1px 1px 12px #555)
+  .form-control
+    font-size: 16px
 
+
+// <hr /> Fancy
 hr.fancy-line
   border: 0
   height: 1px
-
 
 hr.fancy-line:before
   top: -0.5em

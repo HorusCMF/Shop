@@ -30,7 +30,7 @@ twig:
     strict_variables: %kernel.debug%
     form:
       resources:
-          - 'HorusSiteBundle:Default:forms.html.twig'
+          - 'HorusSiteBundle:Slots:forms.html.twig'
 
 
 
@@ -124,7 +124,7 @@ jms_security_extra:
 # app/config/config.yml
 knp_menu:
     twig:  # use "twig: false" to disable the Twig extension and the TwigRenderer
-        template: "HorusSiteBundle:Default:menu.html.twig"
+        template: "HorusSiteBundle:Slots:menu.html.twig"
     templating: false # if true, enables the helper for PHP templates
     default_renderer: twig # The renderer to use, list is also available by default
 
@@ -136,7 +136,7 @@ knp_paginator:
         sort_direction_name: direction # sort direction query parameter name
         distinct: true                 # ensure distinct results, useful when ORM queries are using GROUP BY statements
     template:
-        pagination: HorusSiteBundle:Default:pagination.html.twig     # sliding pagination controls template
+        pagination: HorusSiteBundle:Slots:pagination.html.twig     # sliding pagination controls template
         sortable: KnpPaginatorBundle:Default:pagination.html.twig # sort link template
 
 doctrine_mongodb:

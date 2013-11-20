@@ -25,7 +25,7 @@
                         <img class="img-thumbnail" src="{{ imgproducts ~  image.produit.id ~ '/' ~ image.path }} "/>
                     </td>
                     <td>
-                        <a href="{{ path('horus_site_visualize_product', {'id' : image.produit.id }) }}">{{ image.produit.title }}</a>
+                        <a href="{{ path('horus_site_product', {'id' : image.produit.id }) }}">{{ image.produit.title }}</a>
                     </td>
                     <td>{% if image.cover %}<i class="glyphicon glyphicon-eye-open"></i> {% else %}<i
                                 class="glyphicon glyphicon-eye-close"></i> {% endif %}</td>

@@ -13,6 +13,6 @@ _configurator:
 _main:
     resource: routing.yml
 
-_hetic_demo:
+horus:
     resource: "@HorusSiteBundle/Resources/config/routing.yml"
 

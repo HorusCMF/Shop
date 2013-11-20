@@ -3,9 +3,6 @@
 namespace Horus\SiteBundle\Controller;
 
 use Doctrine\Common\Util\Debug;
-use Horus\SiteBundle\Entity\Article;
-
-use Horus\SiteBundle\Form\ArticleType;
 use Horus\SiteBundle\Form\SearchType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use JMS\SecurityExtraBundle\Annotation\Secure;
@@ -19,7 +16,7 @@ class MainController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('HorusSiteBundle:Default:index.html.twig');
+        return $this->render('HorusSiteBundle:Main:index.html.twig');
 
     }
 
@@ -134,7 +131,7 @@ class MainController extends Controller
         );
 
 
-        return $this->render('HorusSiteBundle:Default:search.html.twig',
+        return $this->render('HorusSiteBundle:Main:search.html.twig',
             array('form' => $form->createView(),
                 'produits' => $pagination,
                 'categories' => $pagination2,

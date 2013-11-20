@@ -27,7 +27,7 @@ class AdministrateurController extends Controller
         }
 
         return $this->get('templating')->renderResponse(
-            'HorusSiteBundle:Default:login.html.twig', array(
+            'HorusSiteBundle:Pages:login.html.twig', array(
                 'last_username' => $session->get(SecurityContext::LAST_USERNAME),
                 'error' => $error
             )

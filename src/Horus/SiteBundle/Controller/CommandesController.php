@@ -13,7 +13,7 @@ class CommandesController extends Controller
 
     public function indexAction()
     {
-        return $this->render('HorusSiteBundle:Default:index.html.twig');
+        return $this->render('HorusSiteBundle:Main:index.html.twig');
 
     }
 

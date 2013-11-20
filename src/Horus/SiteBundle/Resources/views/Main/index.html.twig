@@ -1,0 +1,45 @@
+{% extends 'HorusSiteBundle::layout.html.twig' %}
+
+{% block javascripts %}
+        {{ parent() }}
+    {% javascripts '@HorusSiteBundle/Resources/public/js/index.js' filter="cssrewrite" %}
+        <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="" id="presentation">
+        <img src="http://antikforever.com/Egypte/Dieux/Images/Horus%205b.gif" class="pull-right img-thumbnail" />
+        <h1>Horus CMF</h1>
+        <h3>Modern Solution for E-Commerce for Minimalist Operations</h3>
+        <p>
+            Horus CMF is an open source e-commerce solution for PHP, based on the Symfony2 framework.
+        </p>
+        <p>Ultimate goal of the project is to create a webshop engine, which is user-friendly, loved by developers and has a helpful community.
+        </p>
+        <p>Horus CMF is constructed from fully decoupled components (bundles in Symfony2 glossary), which means that every feature (products catalog, shipping engine, promotions system...) can be used in any other application.
+        </p>
+        <h3>Documentation</h3>
+        <p>Documentation is available at <a href="http://docs.Horus CMF.org">docs.Horus CMF.org</a>.</p>
+
+        <h3>Contributing</h3>
+        <p>All informations about contributing to Horus CMF can be found on <a href="http://docs.Horus CMF.org/en/latest/contributing/index.html">this page</a>.</p>
+
+        <h3>Horus CMF on twitter</h3>
+        <p>If you want to keep up with the updates, <a href="http://twitter.com/Horus CMF">follow the official Horus CMF account on twitter</a>.</p>
+
+        <h3>Bug tracking</h3>
+        <p>Horus CMF uses <a href="https://github.com/Horus CMF/Horus CMF/issues">GitHub issues</a>.
+            If you have found bug, please create an issue.</p>
+
+        <h3>MIT License</h3>
+        <p>License can be found <a href="https://github.com/Sylius/Sylius/blob/master/LICENSE">here</a>.</p>
+
+        <h3>Authors</h3>
+        <p>Sylius was originally created by <a href="">Symfomany</a>.
+            See the list of <a href="https://github.com/Sylius/Sylius/contributors">contributors</a>.</p>
+    </div>
+{% endblock %}
+

@@ -15,7 +15,7 @@ class LayoutController extends Controller
 
     public function mainMenuAction()
     {
-        return $this->render('HorusSiteBundle:Default:mainmenu.html.twig');
+        return $this->render('HorusSiteBundle:Slots:mainmenu.html.twig');
 
     }
 
