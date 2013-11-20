@@ -14,6 +14,10 @@ Technologies: Symfony2, Assetic, Doctrine 2, Node, SASS & COMPASS, MCV, Bootsrap
 Philosophy: **Minimalist** features, **Collaborative** in real time, **Maintainable**, **Pragmatic** and **Responsive** Solution.
 
 
+Screenshots
+
+![Alt text](https://github.com/HorusCMF/Shop/blob/master/screenshots/MainScreen.png "Main Screen")
+
 Documentation
 -------------
 
