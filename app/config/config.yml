@@ -61,6 +61,13 @@ assetic:
          closure:
             jar: "%kernel.root_dir%/Resources/java/googleclosure.jar"
 
+# Doctrine Extensions
+stof_doctrine_extensions:
+    orm:
+      default:
+          sluggable: true
+          timestampable: true
+
 # Doctrine Configuration
 doctrine:
     dbal:
@@ -76,8 +83,13 @@ doctrine:
         # path:     %database_path%
 
     orm:
-        auto_generate_proxy_classes: %kernel.debug%
-        auto_mapping: true
+      auto_generate_proxy_classes: %kernel.debug%
+      default_entity_manager:   default
+      entity_managers:
+        default:
+          connection:       default
+          mappings:
+            HorusSiteBundle: ~
 
 # Swiftmailer Configuration
 swiftmailer:
@@ -108,6 +120,18 @@ services:
        class: Twig_Extensions_Extension_Text
        tags:
            - { name: twig.extension }
+    twig.extension.debug:
+       class: Twig_Extensions_Extension_Debug
+       tags:
+           - { name: twig.extension }
+    twig.extension.intl:
+       class: Twig_Extensions_Extension_Intl
+       tags:
+           - { name: twig.extension }
+    project.twig.extension:
+       class:  Horus\SiteBundle\Extension\Twig\MyTwigExtension
+       tags:
+           -  { name: twig.extension }
 
 jms_security_extra:
     # Whether you want to secure all services (true), or only secure specific
@@ -326,3 +350,4 @@ fos_elastica:
                         query_builder_method: getTags
                     finder: ~
                     listener: ~ # by default, listens to "insert", "update" and "delete"
+

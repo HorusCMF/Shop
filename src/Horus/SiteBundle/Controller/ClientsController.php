@@ -15,10 +15,60 @@ use JMS\SecurityExtraBundle\Annotation\Secure;
 class ClientsController extends Controller
 {
 
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
     public function indexAction()
     {
         return $this->render('HorusSiteBundle:Main:index.html.twig');
+    }
 
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function facturesAction()
+    {
+        return $this->render('HorusSiteBundle:Clients:factures.html.twig');
+    }
+
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function commandesAction()
+    {
+        return $this->render('HorusSiteBundle:Clients:commandes.html.twig');
+    }
+
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function commentairesAction()
+    {
+        return $this->render('HorusSiteBundle:Clients:commentaires.html.twig');
+    }
+
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function clientsAction()
+    {
+        return $this->render('HorusSiteBundle:Clients:clients.html.twig');
+    }
+
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function transportsAction()
+    {
+        return $this->render('HorusSiteBundle:Clients:transports.html.twig');
+    }
+
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function paniersAction()
+    {
+        return $this->render('HorusSiteBundle:Clients:panier.html.twig');
     }
 
 

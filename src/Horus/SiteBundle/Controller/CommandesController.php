@@ -10,7 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
  */
 class CommandesController extends Controller
 {
-    public function indexAction()
+    public function commandesAction()
     {
         return $this->render('HorusSiteBundle:Main:index.html.twig');
     }

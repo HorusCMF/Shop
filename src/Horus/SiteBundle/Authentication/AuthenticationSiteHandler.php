@@ -15,9 +15,19 @@ use Symfony\Component\Routing\RouterInterface,
 
 use Doctrine\Common\Util\Debug as Debug;
 
+/**
+ * Class AuthenticationSiteHandler
+ * @package Horus\SiteBundle\Authentication
+ */
 class AuthenticationSiteHandler implements LogoutSuccessHandlerInterface, AuthenticationSuccessHandlerInterface, AuthenticationFailureHandlerInterface {
 
+    /**
+     * @var \Symfony\Component\Routing\RouterInterface
+     */
     protected $router;
+    /**
+     * @var \Doctrine\ORM\EntityManager
+     */
     protected $em;
 
     /**

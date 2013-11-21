@@ -43,15 +43,16 @@
                     <li class="{% if app.request.attributes.get('_route') == 'horus_site_medias'%}active{% endif %}">
                             <a tabindex="-1" href="{{ path('horus_site_medias') }}"><i class="glyphicon glyphicon-picture"></i> Gérer les médias</a>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown{% if app.request.attributes.get('_route') == 'horus_site_commandes' or app.request.attributes.get('_route') == 'horus_site_factures' or  app.request.attributes.get('_route') == 'horus_site_transports' or  app.request.attributes.get('_route') == 'horus_site_transports'%}active{% endif %}">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download"><i class="glyphicon glyphicon-plus"></i>  Plus<span class="caret"></span></a>
                         <ul class="dropdown-menu" aria-labelledby="download">
-                            <li><a tabindex="-1" href="./bootstrap.min.css"><i class="glyphicon glyphicon-th-list"></i> Gérer les commandes</a></li>
-                            <li><a tabindex="-1" href="./bootstrap.min.css"><i class="glyphicon glyphicon-usd"></i> Gérer les factures</a></li>
-                            <li><a tabindex="-1" href="./bootstrap.min.css"><i class="glyphicon glyphicon-road"></i> Gérer les transports</a></li>
-                            <li><a tabindex="-1" href="./bootstrap.min.css"><i class="glyphicon glyphicon-user"></i> Gérer les clients</a></li>
-                            <li><a tabindex="-1" href="./bootstrap.min.css"><i class="glyphicon glyphicon-shopping-cart"></i> Gérer les paniers</a></li>
-                            <li><a tabindex="-1" href="./bootstrap.min.css"><i class="glyphicon glyphicon-comment"></i> Gérer les commentaires</a></li>
+                            <li><a tabindex="-1" href="{{ path('horus_site_commandes') }}"><i class="glyphicon glyphicon-th-list"></i> Gérer les commandes</a></li>
+                            <li><a tabindex="-1" href="{{ path('horus_site_factures') }}"><i class="glyphicon glyphicon-usd"></i> Gérer les factures</a></li>
+                            <li><a tabindex="-1" href="{{ path('horus_site_transports') }}"><i class="glyphicon glyphicon-road"></i> Gérer les transports</a></li>
+                            <li><a tabindex="-1" href="{{ path('horus_site_clients') }}"><i class="glyphicon glyphicon-user"></i> Gérer les clients</a></li>
+                            <li><a tabindex="-1" href="{{ path('horus_site_paniers') }}"><i class="glyphicon glyphicon-shopping-cart"></i> Gérer les paniers</a></li>
+                            <li><a tabindex="-1" href="{{ path('horus_site_commentaires') }}"><i class="glyphicon glyphicon-comment"></i> Gérer les commentaires</a></li>
+                            <li><a tabindex="-1" href="{{ path('horus_site_charts') }}"><i class="glyphicon glyphicon-stats"></i> Gérer les statistiques</a></li>
                         </ul>
                     </li>
                 </ul>

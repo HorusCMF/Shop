@@ -101,6 +101,66 @@ horus_site_media_remove:
 
 
 
+
+###
+### Commentaire
+###
+
+horus_site_commentaires:
+  pattern:  /backend/commentaires
+  defaults: { _controller: HorusSiteBundle:Clients:commentaires }
+
+
+
+
+###
+### Clients
+###
+
+horus_site_clients:
+  pattern:  /backend/clients
+  defaults: { _controller: HorusSiteBundle:Clients:clients }
+
+
+
+
+###
+### Transports
+###
+
+horus_site_transports:
+  pattern:  /backend/transports
+  defaults: { _controller: HorusSiteBundle:Clients:transports }
+
+
+
+
+
+
+
+###
+### Paniers
+###
+
+horus_site_paniers:
+  pattern:  /backend/paniers
+  defaults: { _controller: HorusSiteBundle:Clients:paniers }
+
+
+
+
+###
+### Charts
+###
+
+horus_site_charts:
+  pattern:  /backend/chart
+  defaults: { _controller: HorusSiteBundle:Chart:main }
+
+
+
+
+
 ###
 ### Categories
 ###
@@ -187,9 +247,9 @@ horus_site_desactive_page:
 ### Orders
 ###
 
-horus_site_commands:
+horus_site_commandes:
   pattern:  /backend/commandes
-  defaults: { _controller: HorusSiteBundle:Main:commands }
+  defaults: { _controller: HorusSiteBundle:Clients:commandes }
 
 
 
@@ -290,6 +350,17 @@ horus_site_remove_tag:
 horus_site_edit_tag:
   pattern:  /backend/tags/editer/{id}
   defaults: { _controller: HorusSiteBundle:CMS:edittag }
+
+
+
+
+###
+### Factures
+###
+horus_site_factures:
+  pattern:  /backend/factures/
+  defaults: { _controller: HorusSiteBundle:Clients:factures }
+
 
 
 

@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "53a69eadcbb740366ef574bb4ed25046",
+    "hash": "dfc7bf2f96ab8487803c401147041289",
     "packages": [
         {
             "name": "behat/mink",
@@ -1690,6 +1690,34 @@
                 "stream"
             ],
             "time": "2013-07-30 22:07:23"
+        },
+        {
+            "name": "hypebeast/wordpress-bundle",
+            "version": "dev-master",
+            "target-dir": "Hypebeast/WordpressBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kayue/WordpressBundle.git",
+                "reference": "f6fc35e2ea120cb0134e24432bc451215b3f7f48"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kayue/WordpressBundle/zipball/f6fc35e2ea120cb0134e24432bc451215b3f7f48",
+                "reference": "f6fc35e2ea120cb0134e24432bc451215b3f7f48",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "stof/doctrine-extensions-bundle": "dev-master"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Hypebeast\\WordpressBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "time": "2013-05-19 15:15:25"
         },
         {
             "name": "imagine/imagine",
@@ -4011,6 +4039,46 @@
             "time": "2013-10-27 12:53:43"
         },
         {
+            "name": "saad-tazi/g-chart-bundle",
+            "version": "dev-master",
+            "target-dir": "SaadTazi/GChartBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/saadtazi/SaadTaziGChartBundle.git",
+                "reference": "a54c4fb47ff5eefdcbc86c75db21b3ffcf751407"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/saadtazi/SaadTaziGChartBundle/zipball/a54c4fb47ff5eefdcbc86c75db21b3ffcf751407",
+                "reference": "a54c4fb47ff5eefdcbc86c75db21b3ffcf751407",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/framework-bundle": "2.*"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "SaadTazi\\GChartBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Saad Tazi"
+                }
+            ],
+            "description": "A super simple Bundle that facilitate the usage of Google Chart Tool, Google Chart Image API and Google Infographics.",
+            "keywords": [
+                "chart",
+                "google"
+            ],
+            "time": "2013-11-09 01:15:39"
+        },
+        {
             "name": "sensio/distribution-bundle",
             "version": "dev-master",
             "target-dir": "Sensio/Bundle/DistributionBundle",
@@ -5310,7 +5378,8 @@
         "whiteoctober/breadcrumbs-bundle": 20,
         "knplabs/knp-menu-bundle": 20,
         "stof/doctrine-extensions-bundle": 20,
-        "imagine/imagine": 20
+        "imagine/imagine": 20,
+        "saad-tazi/g-chart-bundle": 20
     },
     "platform": {
         "php": ">=5.3.3"

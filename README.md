@@ -9,7 +9,7 @@ Horus with Symfony2 offers all the flexibility of custom development for E-Comme
 
 Using full-stack Symfony Framework 2.3.7, with MongoDB, Node IO/Stream, Elastic Search and Codeception.
 
-Technologies: Symfony2, Assetic, Doctrine 2, Node, SASS & COMPASS, MCV, Bootsrap Twitter, PHPUnit, Behat, Twig, YAML, Codeception, PAyline/PAyzen, Coffescript,  Mongo,
+Technologies: Symfony2, Assetic, Doctrine 2, Node, SASS & COMPASS, MVC, Bootsrap Twitter, PHPUnit, Behat, Twig, YAML, Codeception, PAyline/PAyzen, Coffescript,  Mongo,
 
 Philosophy: **Minimalist** features, **Collaborative** in real time, **Maintainable**, **Pragmatic** and **Responsive** Solution.
 

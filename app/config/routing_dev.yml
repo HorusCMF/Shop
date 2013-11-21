@@ -15,4 +15,3 @@ _main:
 
 horus:
     resource: "@HorusSiteBundle/Resources/config/routing.yml"
-

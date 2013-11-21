@@ -41,6 +41,7 @@
         "stof/doctrine-extensions-bundle":"dev-master",
         "fg/essence":  "1.4.1",
         "imagine/Imagine":"0.6.*@dev",
+        "saad-tazi/g-chart-bundle" : "dev-master",
         "phpdocumentor/phpdocumentor": "*"
     },
     "scripts": {
