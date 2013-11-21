@@ -5,6 +5,10 @@
     {% javascripts '@HorusSiteBundle/Resources/public/js/referencement.js' %}
     <script src="{{ asset_url }}" type="text/javascript"></script>
     {% endjavascripts %}
+
+    {% javascripts '@HorusSiteBundle/Resources/public/js/pj.js' %}
+    <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
 {% endblock %}
 
 
@@ -25,7 +29,8 @@
         </div>
     {% endif %}
 
-    <form  id="createproduct" novalidate="novalidate" action="{{ path('horus_site_edit_product', {'id' : produit.id}) }}" method="post">
+    <form enctype="multipart/form-data" id="createproduct" novalidate="novalidate"
+          action="{{ path('horus_site_edit_product', {'id' : produit.id}) }}" method="post">
 
     <div class="bs-example bs-example-tabs">
     <ul id="myTab" class="nav nav-tabs">
@@ -258,8 +263,8 @@
         <div class="row-fluid">
             <div class="span10">
                 {% if form.seo is not empty %}
-                    {{ form_errors(form.seo[0].title)}}
-                    {{ form_errors(form.seo[0].keywords)}}
+                    {{ form_errors(form.seo[0].title) }}
+                    {{ form_errors(form.seo[0].keywords) }}
                     <label for="">Titre</label>
 
                     <div class="input-group">
@@ -289,14 +294,30 @@
     </div>
     <div class="tab-pane fade" id="caracteristiques">
         <div class="row-fluid">
-            <div class="span10">
+            <div class="span2">
+                {{ form_row(form.poid) }}
+            </div>
+            <div class="span2">
+                {{ form_row(form.longueur) }}
+            </div>
+            <div class="span2">
+                {{ form_row(form.largeur) }}
+            </div>
+            <div class="span2">
+                {{ form_row(form.hauteur) }}
+            </div>
+            <div class="span2">
+                {{ form_row(form.profondeur) }}
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12">
                 <div class="metas" data-prototype="{{ form_widget(form.metas.vars.prototype)|e }}">
                     {% for metas in form.metas %}
                         {{ form_row(metas.title) }}
                         {{ form_row(metas.content) }}
                     {% endfor %}
                 </div>
-
             </div>
         </div>
     </div>
@@ -334,13 +355,47 @@
                 {{ form_widget(form.articles, {'attr': { }}) }}
             </div>
         </div>
+        <div class="row-fluid">
+            <div class="span12">
+                    <h3>Vos fichiers joints</h3>
+                {#{% for pj in produit.pjs %}#}
+                {##}
+                {#{% endfor %}#}
+                <div class="pjs" data-prototype="{{ form_widget(form.pjs.vars.prototype)|e }}">
+                    {% for pj in form.pjs %}
+                        <div class="">
+                            <div class="row-fluid">
+                                {% if  pj.vars.value.id is defined and pj.vars.value.id is not empty %}
+                                    <div class="col-md-6">
+                                        <a href="{{ documentsuploads ~ produit.id ~ '/' ~ pj.vars.value.path }}"
+                                           target="_blank">
+                                            <i class="glyphicon glyphicon-file"></i>{{ pj.vars.value.path }}
+                                        </a>
 
-    </div>
+                                            <a onclick="return(confirm('Etes-vous sûr de vouloir supprimer ce fichier?'));"
+                                               href="{{ path('horus_site_media_remove',{'id' : pj.vars.value.id }) }}"
+                                               class="btn-xs btn btn-primary">
+                                                <i class="glyphicon glyphicon-remove"></i>
+                                            </a>
+                                    </div>
+                                {% endif %}
+                                <div class="col-md-3 col-md-offset-2">
+                                    {{ form_row(pj.file) }}
+                                </div>
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class="alert alert-danger">
+                            <i class="glyphicon glyphicon-remove"></i> Aucun fichier joint pour le moment
+                        </div>
+                    {% endfor %}
+                </div>
 
-    </div>
-    </div>
-    <button class="btn btn-primary btn-large" type="submit"><i class="glyphicon glyphicon-pencil"></i> Editer ce produit
-    </button>
+            </div>
+        </div>
+        <button class="btn btn-primary btn-large" type="submit"><i class="glyphicon glyphicon-pencil"></i> Editer ce
+            produit
+        </button>
     </form>
     </div>
 {% endblock %}

@@ -8,16 +8,15 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Image
- * @ORM\Entity(repositoryClass="Horus\SiteBundle\Repository\ImageRepository")
- * @ORM\Table(name="images")
+ * @ORM\Entity(repositoryClass="Horus\SiteBundle\Repository\PjRepository")
+ * @ORM\Table(name="pj")
  * @ORM\HasLifecycleCallbacks()
  */
-class Image
+class Pj
 {
 
     public function __construct(){
         $this->dateCreated = new \Datetime('now');
-        $this->cover = false;
         $this->visible = true;
     }
 
@@ -30,32 +29,16 @@ class Image
      */
     private $id;
 
-
     /**
      * @var string
-     * @ORM\Column(name="title", type="text", nullable=true)
-     */
-    private $title;
-
-    /**
-     * @var string
-     * @ORM\Column(name="picture", type="text", nullable=true)
+     * @ORM\Column(name="path", type="text", nullable=true)
      */
     private $path;
 
     /**
-     * @Assert\Image(
-     *     minWidth = 200,
-     *     minHeight  = 200,
-     *     maxWidth = 3000,
-     *     maxHeight = 3000,
-     *     maxSize = "6000k",
-     *     mimeTypes = {"image/jpg","image/jpeg", "image/png", "image/gif", "image/bmp"},
-     *     mimeTypesMessage = "Image au format non supporté",
-     *    maxWidthMessage = "Image trop grande en largeur {{ width }}px. Le maximum en largeur est de {{ max_width }}px" ,
-     *    minWidthMessage = "Image trop petite en largeur {{ width }}px. Le minimum en largeur est de {{ min_width }}px" ,
-     *    minHeightMessage = "Image trop petite en hauteur {{ height }}px. Le mimum en hauteur est de {{ min_height }}px" ,
-     *    maxHeightMessage = "Image trop grande en hauteur  {{ height }}px. Le maximum en hauteur est de {{ max_height }}px"
+     * @Assert\File(
+     *     maxSize = "10000k",
+     *     mimeTypes = {"image/jpg","image/jpeg", "image/png", "image/gif", "image/bmp", "application/pdf", "application/msword","application/vnd.ms-excel", "text/plain", "text/html" }
      * )
      */
     public $file;
@@ -68,18 +51,18 @@ class Image
     private $dateCreated;
 
     /**
-     * @ORM\Column(name="cover", type="boolean", nullable=true)
-     */
-    private $cover;
-
-    /**
      * @ORM\Column(name="visible", type="boolean", nullable=true)
      */
     private $visible;
 
+    /**
+     * @ORM\Column(name="extension", type="string", nullable=true)
+     */
+    private $extension;
+
 
     /**
-     * @ORM\ManyToOne(targetEntity="Produit",inversedBy="images")
+     * @ORM\ManyToOne(targetEntity="Produit",inversedBy="pjs")
      * @ORM\JoinColumn(name="produit_id", referencedColumnName="id")
      */
     protected $produit;
@@ -105,7 +88,7 @@ class Image
     {
         // on se débarrasse de « __DIR__ » afin de ne pas avoir de problème lorsqu'on affiche
         // le document/image dans la vue.
-        return 'uploads/products/';
+        return 'uploads/documents/';
     }
 
 
@@ -132,9 +115,10 @@ class Image
             return;
         }
 
-        if(!is_dir(@mkdir($this->getUploadRootDir().'/'.$id)))
-            @mkdir($this->getUploadRootDir().'/'.$id);
+        if(!is_dir(@mkdir($this->getUploadRootDir().$id)))
+            @mkdir($this->getUploadRootDir().$id);
 
+        $this->extension = $this->file->guessExtension();
 
         // utilisez le nom de fichier original ici mais
         // vous devriez « l'assainir » pour au moins éviter
@@ -178,30 +162,6 @@ class Image
     {
         return $this->id;
     }
-
-    /**
-     * Set title
-     *
-     * @param text $title
-     * @return Image
-     */
-    public function setTitle($title)
-    {
-        $this->title = $title;
-        return $this;
-    }
-
-
-    /**
-     * Get title
-     *
-     * @return text 
-     */
-    public function getTitle()
-    {
-        return $this->title;
-    }
-
 
 
     /**
@@ -268,28 +228,6 @@ class Image
     public function getPath()
     {
         return $this->path;
-    }
-
-    /**
-     * Set cover
-     *
-     * @param boolean $cover
-     * @return Image
-     */
-    public function setCover($cover)
-    {
-        $this->cover = $cover;
-        return $this;
-    }
-
-    /**
-     * Get cover
-     *
-     * @return boolean 
-     */
-    public function getCover()
-    {
-        return $this->cover;
     }
 
     /**

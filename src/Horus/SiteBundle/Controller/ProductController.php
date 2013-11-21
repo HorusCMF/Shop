@@ -3,9 +3,9 @@
 namespace Horus\SiteBundle\Controller;
 
 use fg\Essence\Essence;
-use fg\Essence\EssenceTest;
 use Horus\SiteBundle\Entity\Image;
 use Horus\SiteBundle\Entity\Meta;
+use Horus\SiteBundle\Entity\Pj;
 use Horus\SiteBundle\Entity\Produit;
 
 use Horus\SiteBundle\Entity\Seo;
@@ -153,6 +153,7 @@ class ProductController extends Controller
         );
     }
 
+
     /**
      * See a product
      * @param Produit $id
@@ -226,17 +227,22 @@ class ProductController extends Controller
         }
 
         $meta = new Meta();
+        $pj = new Pj();
         $produit = new Produit();
         $seo = new Seo();
         $produit->addSeo($seo);
         $produit->addMeta($meta);
+        $produit->addPj($pj);
         $seo->setProduit($produit);
         $meta->setProduit($produit);
+        $pj->setProduit($produit);
 
         $form = $this->createForm(new ProductType(), $produit);
         $form->handleRequest($request);
 
         if ($form->isValid()) {
+            $pj->upload($produit->getId());
+            $em->persist($pj);
             $em->persist($produit);
             $em->flush();
             $this->get('session')->getFlashBag()->add(
@@ -285,6 +291,12 @@ class ProductController extends Controller
 
 
         if ($form->isValid()) {
+            $pjs = $id->getPjs();
+            if (!empty($pjs))
+                foreach ($pjs as $pj) {
+                    $pj->upload($id->getId());
+                    $pj->setProduit($id);
+                }
             $id->setDateUpdated(new \Datetime('now'));
             $em->persist($id);
             $em->flush();

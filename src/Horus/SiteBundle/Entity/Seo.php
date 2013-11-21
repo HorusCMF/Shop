@@ -43,9 +43,6 @@ class Seo
     private $keywords;
 
     /**
-     * @Assert\NotBlank(
-     *     message = "La description ne doit pas etre vide"
-     * )
      * @Assert\Length(
      *      min = "5",
      *      max = "1000",

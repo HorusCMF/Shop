@@ -94,6 +94,11 @@ horus_site_medias:
   defaults: { _controller: HorusSiteBundle:Medias:medias }
 
 
+horus_site_media_remove:
+  pattern:  /backend/medias/remove/{id}
+  defaults: { _controller: HorusSiteBundle:Medias:removemedias }
+
+
 
 
 ###

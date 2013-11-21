@@ -230,6 +230,38 @@ class Produit
 
     /**
      * @var string
+     * @Assert\Regex(pattern="/[0-9]{1,}[.,]{0,1}[0-9]{0,2}/", message="Le prix TTC n'est pas valide")
+     * @ORM\Column(name="poid", type="float", nullable=true)
+     */
+    private $poid;
+
+    /**
+     * @var string
+     * @ORM\Column(name="longueur", type="float", nullable=true)
+     */
+    private $longueur;
+
+    /**
+     * @var string
+     * @ORM\Column(name="largeur", type="float", nullable=true)
+     */
+    private $largeur;
+
+    /**
+     * @var string
+     * @ORM\Column(name="hauteur", type="float", nullable=true)
+     */
+    private $hauteur;
+
+    /**
+     * @var string
+     * @ORM\Column(name="profondeur", type="float", nullable=true)
+     */
+    private $profondeur;
+
+
+    /**
+     * @var string
      *
      * @ORM\Column(name="date_created", type="datetime", nullable=true)
      */
@@ -284,6 +316,12 @@ class Produit
     protected $seo;
 
     /**
+     * @ORM\OneToMany(targetEntity="Pj",mappedBy="produit", cascade={"all"},orphanRemoval=true)
+     * @Assert\Valid
+     */
+    protected $pjs;
+
+    /**
      * @ORM\OneToOne(targetEntity="Produit")
      * @ORM\JoinColumn(name="parent_id", referencedColumnName="id")
      */
@@ -298,6 +336,7 @@ class Produit
 
     /**
      * @ORM\OneToMany(targetEntity="Image",mappedBy="produit", cascade={"all"},orphanRemoval=true)
+     * @Assert\Valid
      * @ORM\OrderBy({"dateCreated" = "DESC"})
      */
     protected $images;
@@ -1259,5 +1298,148 @@ class Produit
     public function getFamilles()
     {
         return $this->familles;
+    }
+
+    /**
+     * Set poid
+     *
+     * @param float $poid
+     * @return Produit
+     */
+    public function setPoid($poid)
+    {
+        $this->poid = $poid;
+        return $this;
+    }
+
+    /**
+     * Get poid
+     *
+     * @return float 
+     */
+    public function getPoid()
+    {
+        return $this->poid;
+    }
+
+    /**
+     * Set longueur
+     *
+     * @param float $longueur
+     * @return Produit
+     */
+    public function setLongueur($longueur)
+    {
+        $this->longueur = $longueur;
+        return $this;
+    }
+
+    /**
+     * Get longueur
+     *
+     * @return float 
+     */
+    public function getLongueur()
+    {
+        return $this->longueur;
+    }
+
+    /**
+     * Set largeur
+     *
+     * @param float $largeur
+     * @return Produit
+     */
+    public function setLargeur($largeur)
+    {
+        $this->largeur = $largeur;
+        return $this;
+    }
+
+    /**
+     * Get largeur
+     *
+     * @return float 
+     */
+    public function getLargeur()
+    {
+        return $this->largeur;
+    }
+
+    /**
+     * Set hauteur
+     *
+     * @param float $hauteur
+     * @return Produit
+     */
+    public function setHauteur($hauteur)
+    {
+        $this->hauteur = $hauteur;
+        return $this;
+    }
+
+    /**
+     * Get hauteur
+     *
+     * @return float 
+     */
+    public function getHauteur()
+    {
+        return $this->hauteur;
+    }
+
+    /**
+     * Set profondeur
+     *
+     * @param float $profondeur
+     * @return Produit
+     */
+    public function setProfondeur($profondeur)
+    {
+        $this->profondeur = $profondeur;
+        return $this;
+    }
+
+    /**
+     * Get profondeur
+     *
+     * @return float 
+     */
+    public function getProfondeur()
+    {
+        return $this->profondeur;
+    }
+
+    /**
+     * Add pjs
+     *
+     * @param Horus\SiteBundle\Entity\Pj $pjs
+     * @return Produit
+     */
+    public function addPj(\Horus\SiteBundle\Entity\Pj $pjs)
+    {
+        $this->pjs[] = $pjs;
+        $pjs->setProduit($this);
+        return $this;
+    }
+
+    /**
+     * Remove pjs
+     *
+     * @param Horus\SiteBundle\Entity\Pj $pjs
+     */
+    public function removePj(\Horus\SiteBundle\Entity\Pj $pjs)
+    {
+        $this->pjs->removeElement($pjs);
+    }
+
+    /**
+     * Get pjs
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getPjs()
+    {
+        return $this->pjs;
     }
 }

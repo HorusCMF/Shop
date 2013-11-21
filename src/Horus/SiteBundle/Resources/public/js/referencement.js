@@ -1,15 +1,7 @@
 
-
-
-
-
-
-
-
-
-
 // Récupère le div qui contient la collection de tags
 var collectionHolder = $('div.metas');
+
 
 // ajoute un lien « add a tag »
 var $addTagLink = $('<a class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Ajouter un caractéristique</a>');

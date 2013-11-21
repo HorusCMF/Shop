@@ -2,11 +2,34 @@
 
 namespace Horus\SiteBundle\Controller;
 
+use Horus\SiteBundle\Entity\Pj;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 
 class MediasController extends Controller
 {
+
+
+
+    /**
+     * Remove a file of product
+     * @param Category $id
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
+    public function removemediasAction(Pj $id)
+    {
+        $product = $id->getProduit();
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($id);
+        $em->flush();
+        $this->get('session')->getFlashBag()->add(
+            'success',
+            "Le fichier a bien été supprimé"
+        );
+
+        return $this->redirect($this->generateUrl('horus_site_edit_product', array('id' => $product->getId())));
+    }
+
 
     /**
      * Get All Medias

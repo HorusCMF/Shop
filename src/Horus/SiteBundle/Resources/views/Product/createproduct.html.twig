@@ -3,7 +3,11 @@
 {% block javascripts %}
     {{ parent() }}
     {% javascripts '@HorusSiteBundle/Resources/public/js/referencement.js' %}
-    <script src="{{ asset_url }}" type="text/javascript"></script>
+        <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
+
+    {% javascripts '@HorusSiteBundle/Resources/public/js/pj.js' %}
+        <script src="{{ asset_url }}" type="text/javascript"></script>
     {% endjavascripts %}
 {% endblock %}
 
@@ -24,7 +28,7 @@
         </div>
     {% endif %}
 
-    <form id="createproduct" novalidate="novalidate" action="{{ path('horus_site_create_product') }}" method="post">
+    <form id="createproduct" novalidate="novalidate" action="{{ path('horus_site_create_product') }}" method="post"  enctype="multipart/form-data">
 
     <div class="bs-example bs-example-tabs">
     <ul id="myTab" class="nav nav-tabs">
@@ -255,11 +259,11 @@
     <div class="tab-pane fade" id="referencement">
         <div class="row-fluid">
             <div class="span10">
-                {{ form_errors(form.seo[0].title)}}
-                {{ form_errors(form.seo[0].keywords)}}
+                {{ form_errors(form.seo[0].title) }}
+                {{ form_errors(form.seo[0].keywords) }}
                 <label for="">Titre</label>
 
-                {{ form_errors(form.seo[0].description)}}
+                {{ form_errors(form.seo[0].description) }}
                 <div class="input-group">
                     {{ form_widget(form.seo[0].title, {'attr': { }}) }}
                                     <span class="input-group-btn">
@@ -282,14 +286,30 @@
     </div>
     <div class="tab-pane fade" id="caracteristiques">
         <div class="row-fluid">
-            <div class="span10">
+            <div class="span2">
+                {{ form_row(form.poid) }}
+            </div>
+            <div class="span2">
+                {{ form_row(form.longueur) }}
+            </div>
+            <div class="span2">
+                {{ form_row(form.largeur) }}
+            </div>
+            <div class="span2">
+                {{ form_row(form.hauteur) }}
+            </div>
+            <div class="span2">
+                {{ form_row(form.profondeur) }}
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12">
                 <div class="metas" data-prototype="{{ form_widget(form.metas.vars.prototype)|e }}">
                     {% for metas in form.metas %}
                         {{ form_row(metas.title) }}
                         {{ form_row(metas.content) }}
                     {% endfor %}
                 </div>
-
             </div>
         </div>
     </div>
@@ -316,6 +336,15 @@
             <div class="span12">
                 <label for="articles">Articles associés</label>
                 {{ form_widget(form.articles, {'attr': { }}) }}
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="pjs" data-prototype="{{ form_widget(form.pjs.vars.prototype)|e }}">
+                    {% for pj in form.pjs %}
+                        {{ form_row(pj.file) }}
+                    {% endfor %}
+                </div>
             </div>
         </div>
 

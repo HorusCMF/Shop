@@ -1,15 +1,16 @@
 <?php
 
-namespace Hetic\SiteBundle\Entity;
+namespace Horus\SiteBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Gedmo\Mapping\Annotation as Gedmo; // gedmo annotations
 
 
 /**
- * Article
- * @ORM\Entity(repositoryClass="Hetic\SiteBundle\Repository\ProduitRepository")
+ * Produit
+ * @ORM\Entity(repositoryClass="Horus\SiteBundle\Repository\ProduitRepository")
  * @ORM\Table(name="produit")
  * @ORM\HasLifecycleCallbacks()
  */
@@ -21,6 +22,7 @@ class Produit
         $this->dateCreated = new \Datetime('now');
         $this->dateUpdated = new \Datetime('now');
         $this->isShop = true;
+        $this->isVisible = true;
     }
     /**
      * @var integer
@@ -38,7 +40,7 @@ class Produit
      * )
      * @Assert\Length(
      *      min = "4",
-     *      max = "200",
+     *      max = "1000",
      *      minMessage = "Votre référence doit faire au moins {{ limit }} caractères",
      *      maxMessage = "Votre référence ne peut pas être plus long que {{ limit }} caractères"
      * )
@@ -48,9 +50,10 @@ class Produit
 
     /**
      * @var integer
+     * @Assert\Url(message="Votre URL de Vidéo n'est pas valide")
      * @Assert\Length(
      *      min = "8",
-     *      max = "200",
+     *      max = "1000",
      *      minMessage = "Votre video doit faire au moins {{ limit }} caractères",
      *      maxMessage = "Votre video ne peut pas être plus long que {{ limit }} caractères"
      * )
@@ -61,7 +64,7 @@ class Produit
     /**
      * @Assert\Length(
      *      min = "8",
-     *      max = "200",
+     *      max = "1000",
      *      minMessage = "Votre service doit faire au moins {{ limit }} caractères",
      *      maxMessage = "Votre service ne peut pas être plus long que {{ limit }} caractères"
      * )
@@ -96,6 +99,7 @@ class Produit
      * @Assert\NotBlank(
      *     message = "Le prix TTC ne doit pas etre vide"
      * )
+     * @Assert\Regex(pattern="/[0-9]{1,}[.,]{0,1}[0-9]{0,2}/", message="Le prix TTC n'est pas valide")
      * @ORM\Column(name="prixTTC", type="float", nullable=false)
      */
     private $prixTTC;
@@ -104,6 +108,7 @@ class Produit
      * @Assert\NotBlank(
      *     message = "Le prix HT ne doit pas etre vide"
      * )
+     * @Assert\Regex(pattern="/[0-9]{1,}[.,]{0,1}[0-9]{0,2}/", message="Le prix TTC n'est pas valide")
      * @ORM\Column(name="prixHT", type="float", nullable=false)
      */
     private $prixHT;
@@ -122,7 +127,7 @@ class Produit
      * )
      * @Assert\Length(
      *      min = "5",
-     *      max = "200",
+     *      max = "1000",
      *      minMessage = "Votre titre doit faire au moins {{ limit }} caractères",
      *      maxMessage = "Votre titre ne peut pas être plus long que {{ limit }} caractères"
      * )
@@ -137,7 +142,7 @@ class Produit
      * )
      * @Assert\Length(
      *      min = "5",
-     *      max = "200",
+     *      max = "1000",
      *      minMessage = "Votre accroche doit faire au moins {{ limit }} caractères",
      *      maxMessage = "Votre accroche ne peut pas être plus long que {{ limit }} caractères"
      * )
@@ -153,18 +158,40 @@ class Produit
     private $nature;
 
     /**
-     * @Assert\NotBlank(message = "Le contenu de couverture est vide :(")
+     * @Assert\NotBlank(
+     *     message = "Le résumé ne doit pas etre vide"
+     * )
+     * @Assert\Length(
+     *      min = "3",
+     *      max = "3000",
+     *      minMessage = "Votre résumé doit faire au moins {{ limit }} caractères",
+     *      maxMessage = "Votre résumé ne peut pas être plus long que {{ limit }} caractères"
+     * )
      * @ORM\Column(name="cover", type="text", nullable=true)
      */
     private $cover;
 
     /**
-     * @Assert\NotBlank(message = "La description est vide :(")
+     * @Assert\NotBlank(
+     *     message = "La description ne doit pas etre vide"
+     * )
+     * @Assert\Length(
+     *      min = "5",
+     *      max = "3000",
+     *      minMessage = "Votre description doit faire au moins {{ limit }} caractères",
+     *      maxMessage = "Votre description ne peut pas être plus long que {{ limit }} caractères"
+     * )
      * @ORM\Column(name="content", type="text", nullable=true)
      */
     private $content;
 
     /**
+     * @Assert\Length(
+     *      min = "8",
+     *      max = "1000",
+     *      minMessage = "Votre commentaire doit faire au moins {{ limit }} caractères",
+     *      maxMessage = "Votre commentaire ne peut pas être plus long que {{ limit }} caractères"
+     * )
      * @ORM\Column(name="extras", type="text", nullable=true)
      */
     private $extras;
@@ -190,6 +217,7 @@ class Produit
 
     /**
      * @var string
+     * @Assert\Type(type="integer", message="La valeur {{ value }} n'est pas un type {{ type }} valide.")
      * @ORM\Column(name="quantity", type="integer", nullable=true)
      */
     private $quantity;
@@ -202,6 +230,38 @@ class Produit
 
     /**
      * @var string
+     * @Assert\Regex(pattern="/[0-9]{1,}[.,]{0,1}[0-9]{0,2}/", message="Le prix TTC n'est pas valide")
+     * @ORM\Column(name="poid", type="float", nullable=true)
+     */
+    private $poid;
+
+    /**
+     * @var string
+     * @ORM\Column(name="longueur", type="float", nullable=true)
+     */
+    private $longueur;
+
+    /**
+     * @var string
+     * @ORM\Column(name="largeur", type="float", nullable=true)
+     */
+    private $largeur;
+
+    /**
+     * @var string
+     * @ORM\Column(name="hauteur", type="float", nullable=true)
+     */
+    private $hauteur;
+
+    /**
+     * @var string
+     * @ORM\Column(name="profondeur", type="float", nullable=true)
+     */
+    private $profondeur;
+
+
+    /**
+     * @var string
      *
      * @ORM\Column(name="date_created", type="datetime", nullable=true)
      */
@@ -209,7 +269,7 @@ class Produit
 
     /**
      * @var string
-     *
+     * @Gedmo\Timestampable(on="update")
      * @ORM\Column(name="date_updated", type="datetime", nullable=true)
      */
     private $dateUpdated;
@@ -251,8 +311,15 @@ class Produit
 
     /**
      * @ORM\OneToMany(targetEntity="Seo",mappedBy="produit", cascade={"all"},orphanRemoval=true)
+     * @Assert\Valid
      */
     protected $seo;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Pj",mappedBy="produit", cascade={"all"},orphanRemoval=true)
+     * @Assert\Valid
+     */
+    protected $pjs;
 
     /**
      * @ORM\OneToOne(targetEntity="Produit")
@@ -263,11 +330,13 @@ class Produit
 
     /**
      * @ORM\OneToMany(targetEntity="Meta",mappedBy="produit", cascade={"all"},orphanRemoval=true)
+     * @Assert\Valid
      */
     protected $metas;
 
     /**
      * @ORM\OneToMany(targetEntity="Image",mappedBy="produit", cascade={"all"},orphanRemoval=true)
+     * @ORM\OrderBy({"dateCreated" = "DESC"})
      */
     protected $images;
 
@@ -280,6 +349,7 @@ class Produit
 
     /**
      * @ORM\ManyToMany(targetEntity="Produit", mappedBy="articlesaccesories")
+     * @ORM\OrderBy({"dateCreated" = "DESC"})
      */
     protected $accesories;
 
@@ -440,10 +510,10 @@ class Produit
     /**
      * Set category
      *
-     * @param \Hetic\SiteBundle\Entity\Category $category
+     * @param \Horus\SiteBundle\Entity\Category $category
      * @return Article
      */
-    public function setCategory(\Hetic\SiteBundle\Entity\Category $category = null)
+    public function setCategory(\Horus\SiteBundle\Entity\Category $category = null)
     {
         $this->category = $category;
     
@@ -453,7 +523,7 @@ class Produit
     /**
      * Get category
      *
-     * @return \Hetic\SiteBundle\Entity\Category 
+     * @return \Horus\SiteBundle\Entity\Category
      */
     public function getCategory()
     {
@@ -463,10 +533,10 @@ class Produit
     /**
      * Add tags
      *
-     * @param \Hetic\SiteBundle\Entity\Tag $tags
+     * @param \Horus\SiteBundle\Entity\Tag $tags
      * @return Article
      */
-    public function addTag(\Hetic\SiteBundle\Entity\Tag $tags)
+    public function addTag(\Horus\SiteBundle\Entity\Tag $tags)
     {
         $this->tags[] = $tags;
     
@@ -476,9 +546,9 @@ class Produit
     /**
      * Remove tags
      *
-     * @param \Hetic\SiteBundle\Entity\Tag $tags
+     * @param \Horus\SiteBundle\Entity\Tag $tags
      */
-    public function removeTag(\Hetic\SiteBundle\Entity\Tag $tags)
+    public function removeTag(\Horus\SiteBundle\Entity\Tag $tags)
     {
         $this->tags->removeElement($tags);
     }
@@ -832,10 +902,10 @@ class Produit
     /**
      * Add seo
      *
-     * @param Hetic\SiteBundle\Entity\Seo $seo
+     * @param Horus\SiteBundle\Entity\Seo $seo
      * @return Produit
      */
-    public function addSeo(\Hetic\SiteBundle\Entity\Seo $seo)
+    public function addSeo(\Horus\SiteBundle\Entity\Seo $seo)
     {
         $this->seo[] = $seo;
         return $this;
@@ -844,9 +914,9 @@ class Produit
     /**
      * Remove seo
      *
-     * @param Hetic\SiteBundle\Entity\Seo $seo
+     * @param Horus\SiteBundle\Entity\Seo $seo
      */
-    public function removeSeo(\Hetic\SiteBundle\Entity\Seo $seo)
+    public function removeSeo(\Horus\SiteBundle\Entity\Seo $seo)
     {
         $this->seo->removeElement($seo);
     }
@@ -864,10 +934,10 @@ class Produit
     /**
      * Add metas
      *
-     * @param Hetic\SiteBundle\Entity\Meta $metas
+     * @param Horus\SiteBundle\Entity\Meta $metas
      * @return Produit
      */
-    public function addMeta(\Hetic\SiteBundle\Entity\Meta $metas)
+    public function addMeta(\Horus\SiteBundle\Entity\Meta $metas)
     {
         $metas->setProduit($this);
         $this->metas[] = $metas;
@@ -877,9 +947,9 @@ class Produit
     /**
      * Remove metas
      *
-     * @param Hetic\SiteBundle\Entity\Meta $metas
+     * @param Horus\SiteBundle\Entity\Meta $metas
      */
-    public function removeMeta(\Hetic\SiteBundle\Entity\Meta $metas)
+    public function removeMeta(\Horus\SiteBundle\Entity\Meta $metas)
     {
         $this->metas->removeElement($metas);
     }
@@ -897,10 +967,10 @@ class Produit
     /**
      * Add cates
      *
-     * @param Hetic\SiteBundle\Entity\Category $cates
+     * @param Horus\SiteBundle\Entity\Category $cates
      * @return Produit
      */
-    public function addCate(\Hetic\SiteBundle\Entity\Category $cates)
+    public function addCate(\Horus\SiteBundle\Entity\Category $cates)
     {
         $this->cates[] = $cates;
         return $this;
@@ -909,9 +979,9 @@ class Produit
     /**
      * Remove cates
      *
-     * @param Hetic\SiteBundle\Entity\Category $cates
+     * @param Horus\SiteBundle\Entity\Category $cates
      */
-    public function removeCate(\Hetic\SiteBundle\Entity\Category $cates)
+    public function removeCate(\Horus\SiteBundle\Entity\Category $cates)
     {
         $this->cates->removeElement($cates);
     }
@@ -953,10 +1023,10 @@ class Produit
     /**
      * Set prodparent
      *
-     * @param Hetic\SiteBundle\Entity\Produit $prodparent
+     * @param Horus\SiteBundle\Entity\Produit $prodparent
      * @return Produit
      */
-    public function setProdparent(\Hetic\SiteBundle\Entity\Produit $prodparent = null)
+    public function setProdparent(\Horus\SiteBundle\Entity\Produit $prodparent = null)
     {
         $this->prodparent = $prodparent;
         return $this;
@@ -965,7 +1035,7 @@ class Produit
     /**
      * Get prodparent
      *
-     * @return Hetic\SiteBundle\Entity\Produit 
+     * @return Horus\SiteBundle\Entity\Produit
      */
     public function getProdparent()
     {
@@ -975,10 +1045,10 @@ class Produit
     /**
      * Add articles
      *
-     * @param Hetic\SiteBundle\Entity\Article $articles
+     * @param Horus\SiteBundle\Entity\Article $articles
      * @return Produit
      */
-    public function addArticle(\Hetic\SiteBundle\Entity\Article $articles)
+    public function addArticle(\Horus\SiteBundle\Entity\Article $articles)
     {
         $this->articles[] = $articles;
         return $this;
@@ -987,9 +1057,9 @@ class Produit
     /**
      * Remove articles
      *
-     * @param Hetic\SiteBundle\Entity\Article $articles
+     * @param Horus\SiteBundle\Entity\Article $articles
      */
-    public function removeArticle(\Hetic\SiteBundle\Entity\Article $articles)
+    public function removeArticle(\Horus\SiteBundle\Entity\Article $articles)
     {
         $this->articles->removeElement($articles);
     }
@@ -1060,10 +1130,10 @@ class Produit
     /**
      * Add accesories
      *
-     * @param Hetic\SiteBundle\Entity\Produit $accesories
+     * @param Horus\SiteBundle\Entity\Produit $accesories
      * @return Produit
      */
-    public function addAccesory(\Hetic\SiteBundle\Entity\Produit $accesories)
+    public function addAccesory(\Horus\SiteBundle\Entity\Produit $accesories)
     {
         $this->accesories[] = $accesories;
         return $this;
@@ -1072,9 +1142,9 @@ class Produit
     /**
      * Remove accesories
      *
-     * @param Hetic\SiteBundle\Entity\Produit $accesories
+     * @param Horus\SiteBundle\Entity\Produit $accesories
      */
-    public function removeAccesory(\Hetic\SiteBundle\Entity\Produit $accesories)
+    public function removeAccesory(\Horus\SiteBundle\Entity\Produit $accesories)
     {
         $this->accesories->removeElement($accesories);
     }
@@ -1092,10 +1162,10 @@ class Produit
     /**
      * Add articlesaccesories
      *
-     * @param Hetic\SiteBundle\Entity\Produit $articlesaccesories
+     * @param Horus\SiteBundle\Entity\Produit $articlesaccesories
      * @return Produit
      */
-    public function addArticlesaccesorie(\Hetic\SiteBundle\Entity\Produit $articlesaccesories)
+    public function addArticlesaccesorie(\Horus\SiteBundle\Entity\Produit $articlesaccesories)
     {
         $this->articlesaccesories[] = $articlesaccesories;
         return $this;
@@ -1104,9 +1174,9 @@ class Produit
     /**
      * Remove articlesaccesories
      *
-     * @param Hetic\SiteBundle\Entity\Produit $articlesaccesories
+     * @param Horus\SiteBundle\Entity\Produit $articlesaccesories
      */
-    public function removeArticlesaccesorie(\Hetic\SiteBundle\Entity\Produit $articlesaccesories)
+    public function removeArticlesaccesorie(\Horus\SiteBundle\Entity\Produit $articlesaccesories)
     {
         $this->articlesaccesories->removeElement($articlesaccesories);
     }
@@ -1146,10 +1216,10 @@ class Produit
     /**
      * Add accesories
      *
-     * @param Hetic\SiteBundle\Entity\Produit $accesories
+     * @param Horus\SiteBundle\Entity\Produit $accesories
      * @return Produit
      */
-    public function addAccesorie(\Hetic\SiteBundle\Entity\Produit $accesories)
+    public function addAccesorie(\Horus\SiteBundle\Entity\Produit $accesories)
     {
         $this->accesories[] = $accesories;
         return $this;
@@ -1158,9 +1228,9 @@ class Produit
     /**
      * Remove accesories
      *
-     * @param Hetic\SiteBundle\Entity\Produit $accesories
+     * @param Horus\SiteBundle\Entity\Produit $accesories
      */
-    public function removeAccesorie(\Hetic\SiteBundle\Entity\Produit $accesories)
+    public function removeAccesorie(\Horus\SiteBundle\Entity\Produit $accesories)
     {
         $this->accesories->removeElement($accesories);
     }
@@ -1168,10 +1238,10 @@ class Produit
     /**
      * Add images
      *
-     * @param Hetic\SiteBundle\Entity\Image $images
+     * @param Horus\SiteBundle\Entity\Image $images
      * @return Produit
      */
-    public function addImage(\Hetic\SiteBundle\Entity\Image $images)
+    public function addImage(\Horus\SiteBundle\Entity\Image $images)
     {
         $this->images[] = $images;
         return $this;
@@ -1180,9 +1250,9 @@ class Produit
     /**
      * Remove images
      *
-     * @param Hetic\SiteBundle\Entity\Image $images
+     * @param Horus\SiteBundle\Entity\Image $images
      */
-    public function removeImage(\Hetic\SiteBundle\Entity\Image $images)
+    public function removeImage(\Horus\SiteBundle\Entity\Image $images)
     {
         $this->images->removeElement($images);
     }
@@ -1195,5 +1265,147 @@ class Produit
     public function getImages()
     {
         return $this->images;
+    }
+
+    /**
+     * Add familles
+     *
+     * @param Horus\SiteBundle\Entity\Famille $familles
+     * @return Produit
+     */
+    public function addFamille(\Horus\SiteBundle\Entity\Famille $familles)
+    {
+        $this->familles[] = $familles;
+        return $this;
+    }
+
+    /**
+     * Remove familles
+     *
+     * @param Horus\SiteBundle\Entity\Famille $familles
+     */
+    public function removeFamille(\Horus\SiteBundle\Entity\Famille $familles)
+    {
+        $this->familles->removeElement($familles);
+    }
+
+    /**
+     * Get familles
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getFamilles()
+    {
+        return $this->familles;
+    }
+
+    /**
+     * Set poid
+     *
+     * @param float $poid
+     * @return Produit
+     */
+    public function setPoid($poid)
+    {
+        $this->poid = $poid;
+        return $this;
+    }
+
+    /**
+     * Get poid
+     *
+     * @return float 
+     */
+    public function getPoid()
+    {
+        return $this->poid;
+    }
+
+    /**
+     * Set longueur
+     *
+     * @param float $longueur
+     * @return Produit
+     */
+    public function setLongueur($longueur)
+    {
+        $this->longueur = $longueur;
+        return $this;
+    }
+
+    /**
+     * Get longueur
+     *
+     * @return float 
+     */
+    public function getLongueur()
+    {
+        return $this->longueur;
+    }
+
+    /**
+     * Set largeur
+     *
+     * @param float $largeur
+     * @return Produit
+     */
+    public function setLargeur($largeur)
+    {
+        $this->largeur = $largeur;
+        return $this;
+    }
+
+    /**
+     * Get largeur
+     *
+     * @return float 
+     */
+    public function getLargeur()
+    {
+        return $this->largeur;
+    }
+
+    /**
+     * Set hauteur
+     *
+     * @param float $hauteur
+     * @return Produit
+     */
+    public function setHauteur($hauteur)
+    {
+        $this->hauteur = $hauteur;
+        return $this;
+    }
+
+    /**
+     * Get hauteur
+     *
+     * @return float 
+     */
+    public function getHauteur()
+    {
+        return $this->hauteur;
+    }
+
+    /**
+     * Set profondeur
+     *
+     * @param float $profondeur
+     * @return Produit
+     */
+    public function setProfondeur($profondeur)
+    {
+        $this->profondeur = $profondeur;
+        return $this;
+    }
+
+    /**
+     * Get profondeur
+     *
+     * @return float 
+     */
+    public function getProfondeur()
+    {
+        return $this->profondeur;
     }
 }
