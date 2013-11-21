@@ -17,10 +17,24 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class LayoutController extends Controller
 {
 
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
     public function mainMenuAction()
     {
         return $this->render('HorusSiteBundle:Slots:mainmenu.html.twig');
-
     }
 
+
+    /**
+     * get Ip Visitor
+     * @return type
+     */
+    public function getIpVisitorAction()
+    {
+        $ip = $this->container->get('request')->getClientIp();
+        return $this->container->get('templating')->renderResponse('HorusSiteBundle:Slots:_ipVisitor.html.twig', array(
+            'ip' => $ip
+        ));
+    }
 }

@@ -26,9 +26,11 @@
     <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
     {% endstylesheets %}
 
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+
     {% if app.user.id is defined %}
-        {#IO#}
-        <script type="text/javascript" src="http://ns3296046.ovh.net:1664/socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="http://www.horus.ju:1665/socket.io/socket.io.js"></script>
         {% javascripts '@HorusSiteBundle/Resources/public/js/io.js'  %}
         <script src="{{ asset_url }}" type="text/javascript"></script>
         {% endjavascripts %}
@@ -44,6 +46,8 @@
     {% include 'HorusSiteBundle:Slots:topmenu.html.twig' %}
     <div class="container-fluid">
         <div class="row-fluid">
+            {% include 'HorusSiteBundle:Slots:notification.html.twig' %}
+
             <div class="span12">
                 <div class="container">
                     <div class="row-fluid">
@@ -51,6 +55,7 @@
                             {% include 'HorusSiteBundle:Slots:statistics.html.twig' %}
                         </div>
                         <div class="span9">
+
                             {#{% include 'HorusSiteBundle:Slots:mainmenu.html.twig' %}#}
                             {% include 'HorusSiteBundle:Slots:search.html.twig' %}
                             {% include 'HorusSiteBundle:Slots:flashdatas.html.twig' %}
@@ -63,6 +68,8 @@
                 </div>
             </div>
             <a class="scrollup">Scroll</a>
+
+            {% include 'HorusSiteBundle:Slots:connected.html.twig' %}
         </div>
     </div>
     <div id="footer">
@@ -70,18 +77,22 @@
             <p class="muted credit">Horus CMF forked by <a href="https://github.com/HorusCMF/Shop">Symfomany</a></p>
         </div>
     </div>
+    {% render controller('HorusSiteBundle:Layout:getIpVisitor') %}
 {% endblock %}
 
 
 {% block javascripts %}
     {{ parent() }}
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+
     <script src="http://damirfoy.com/iCheck/jquery.icheck.min.js?v=0.9.1"></script>
     <script src="http://davidstutz.github.io/bootstrap-multiselect/js/bootstrap-multiselect.js"></script>
     <script src="/js/ckeditor/ckeditor.js"></script>
     <script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <script src="http://modernizr.com/downloads/modernizr-latest.js"></script>
+
+    {% javascripts '@HorusSiteBundle/Resources/public/js/miniNotification.coffee' filter='closure' %}
+    <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
 
     <!--[if (lt IE 6)|(IE 7)]>
     {% javascripts '@HorusSiteBundle/Resources/public/js/nobrowser.coffee' filter='closure' %}
@@ -92,6 +103,8 @@
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+
 
     {% javascripts '@HorusSiteBundle/Resources/public/js/main.coffee'  filter='closure' %}
     <script type="text/javascript" src="{{ asset_url }}"></script>

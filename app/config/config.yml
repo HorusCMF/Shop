@@ -87,6 +87,12 @@ doctrine:
       default_entity_manager:   default
       entity_managers:
         default:
+          dql:
+           numeric_functions:
+               dateformat: Horus\SiteBundle\AST\Functions\DateFormat
+               geo:  Horus\SiteBundle\AST\Functions\Geo
+               age:  Horus\SiteBundle\AST\Functions\Age
+               round:  Horus\SiteBundle\AST\Functions\Round
           connection:       default
           mappings:
             HorusSiteBundle: ~

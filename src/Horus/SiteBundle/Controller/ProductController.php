@@ -254,6 +254,10 @@ class ProductController extends Controller
                 'success',
                 "Le produit a bien été ajouté"
             );
+            $this->get('session')->getFlashBag()->add(
+                'createproduct',
+                "Le produit a bien été ajouté"
+            );
             return $this->redirect($this->generateUrl('horus_site_edit_pictures_product', array('id' => $produit->getId())));
         }
 

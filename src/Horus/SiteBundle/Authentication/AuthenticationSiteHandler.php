@@ -58,6 +58,11 @@ class AuthenticationSiteHandler implements LogoutSuccessHandlerInterface, Authen
         $referer = $this->router->generate('horus_site_main');
         $this->session->set('place', $user->getVille());
 
+        $this->session->getFlashBag()->add(
+            'firstconnect',
+            "Bienvenue sur Horus CMF"
+        );
+
         if($referer == 'http://'.$request->getHttpHost().'/login')
             $referer = $this->router->generate('horus_site_main');
 
@@ -87,10 +92,8 @@ class AuthenticationSiteHandler implements LogoutSuccessHandlerInterface, Authen
         // redirect the user to where they were before the login process begun.
         $referer_url = $request->headers->get('referer');
 
-        if(empty($referer) || $request->get('_route') == 'site_login_check')
-            $referer_url = $this->router->generate('wks_site_homepage');
-
-            $response = new RedirectResponse($referer_url);
+        $referer_url = $this->router->generate('horus_site_main');
+        $response = new RedirectResponse($referer_url);
         return $response;
     }
 

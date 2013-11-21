@@ -1,0 +1,34 @@
+<span class="hide" id="session_id" data-content="{{ app.user.id }}"></span>
+<span class="hide" id="session_firstname" data-content="{{ app.user.firstname }}"></span>
+<span class="hide" id="session_lastname" data-content="{{ app.user.lastname }}"></span>
+{% if app.user.id is defined %}
+    {% if app.session.flashbag.get('firstconnect') is defined and  app.session.flashbag.get('firstconnect') is not empty %}
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var socket = io.connect('http://www.horus.ju:1665');
+                var me = null;
+                // on the client
+                socket.emit('logged', {
+                    id: $('#session_id').attr('data-content'),
+                    firstname: $('#session_firstname').attr('data-content'),
+                    lastname: $('#session_lastname').attr('data-content')
+                });
+            });
+        </script>
+    {% endif %}
+{% endif %}
+
+{% if app.session.flashbag.get('createproduct') is defined and  app.session.flashbag.get('createproduct') is not empty %}
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var socket = io.connect('http://www.horus.ju:1665');
+            var me = null;
+            // on the client
+            socket.emit('createproduct', {
+                id: $('#session_id').attr('data-content'),
+                firstname: $('#session_firstname').attr('data-content'),
+                lastname: $('#session_lastname').attr('data-content')
+            });
+        });
+    </script>
+{% endif %}
