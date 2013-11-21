@@ -11,6 +11,13 @@
     <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.10.3/themes/hot-sneaks/jquery-ui.css"/>
     <link rel="stylesheet" type="text/css" href="http://davidstutz.github.io/bootstrap-multiselect/css/bootstrap-multiselect.css"/>
 
+    <!--[if (lt IE 6)|(IE 7)|(IE 8)]>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic' rel='stylesheet' type='text/css'>    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400" />
+    {% stylesheets '@HorusSiteBundle/Resources/public/css/ie.sass' filter='yui_css' %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+    <![endif]-->
+
     {% stylesheets '@HorusSiteBundle/Resources/public/css/flat/green.css' filter='yui_css' %}
     <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
     {% endstylesheets %}
@@ -18,6 +25,15 @@
     {% stylesheets '@HorusSiteBundle/Resources/public/css/main.sass' filter='yui_css' %}
     <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
     {% endstylesheets %}
+
+    {% if app.user.id is defined %}
+        {#IO#}
+        <script type="text/javascript" src="http://ns3296046.ovh.net:1664/socket.io/socket.io.js"></script>
+        {% javascripts '@HorusSiteBundle/Resources/public/js/io.js'  %}
+        <script src="{{ asset_url }}" type="text/javascript"></script>
+        {% endjavascripts %}
+    {% endif %}
+
 {% endblock %}
 
 
@@ -67,6 +83,15 @@
     <script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <script src="http://modernizr.com/downloads/modernizr-latest.js"></script>
 
+    <!--[if (lt IE 6)|(IE 7)]>
+    {% javascripts '@HorusSiteBundle/Resources/public/js/nobrowser.coffee' filter='closure' %}
+        <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
     {% javascripts '@HorusSiteBundle/Resources/public/js/main.coffee'  filter='closure' %}
     <script type="text/javascript" src="{{ asset_url }}"></script>

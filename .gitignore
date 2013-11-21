@@ -6,3 +6,5 @@
 /app/logs/*
 /vendor/
 /app/config/parameters.yml
+/node_modules/
+/.idea/

@@ -2,6 +2,7 @@ UPGRADE FROM 1.0 to 1.1
 =======================
 
 ### General
+  * Multilanguages
   * Handle Statistics
   * SEO Autocompletion
   * Price TTC HT Interactive
