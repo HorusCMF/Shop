@@ -11,9 +11,9 @@ class SeoType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-                ->add('title', 'text', array('required' => false,'attr' => array('placeholder' => 'Titre de la tâches')))
-                ->add('keywords', 'textarea', array('required' => false,'attr' => array('cols' => 100, 'rows' => 6, 'placeholder' => 'Titre de la tâches')))
-                ->add('description', 'textarea', array('required' => false,'attr' => array('cols' => 100, 'rows' => 6,'placeholder' => 'Titre de la tâches')));
+                ->add('title', 'text', array('required' => false,'attr' => array('placeholder' => 'Titre')))
+                ->add('keywords', 'textarea', array('required' => false,'attr' => array('cols' => 100, 'rows' => 6, 'placeholder' => 'Mot-Clefs')))
+                ->add('description', 'textarea', array('required' => false,'attr' => array('cols' => 100, 'rows' => 6,'placeholder' => 'Description')));
     }
 
     public function getName()

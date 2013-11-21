@@ -13,6 +13,7 @@ use Horus\SiteBundle\Form\ImageType;
 use Horus\SiteBundle\Form\ProductType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use JMS\SecurityExtraBundle\Annotation\Secure;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class ProductController extends Controller
 {
@@ -142,7 +143,7 @@ class ProductController extends Controller
                 'success',
                 "L'image a bien été ajouté"
             );
-            return $this->redirect($this->generateUrl('horus_site_edit_pictures_product', array('id' => $id->getId())));
+            return new JsonResponse(true);
         }
 
         return $this->render('HorusSiteBundle:Product:pictureproduct.html.twig',

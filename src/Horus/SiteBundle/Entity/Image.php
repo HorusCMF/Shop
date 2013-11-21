@@ -127,6 +127,7 @@ class Image
      */
     public function upload($id = null)
     {
+
         // la propriété « file » peut être vide si le champ n'est pas requis
         if (null === $this->file) {
             return;
@@ -143,7 +144,9 @@ class Image
         // la méthode « move » prend comme arguments le répertoire cible et
         // le nom de fichier cible où le fichier doit être déplacé
 
-        $rewritefile = sha1(uniqid(mt_rand(), true)).'.'.$this->file->guessExtension();
+        $rewritename = sha1(uniqid(mt_rand(), true));
+        $rewritefile = $rewritename.'.'.$this->file->guessExtension();
+        $extension = $this->file->guessExtension();
 
         $this->file->move($this->getUploadRootDir().'/'.$id, $rewritefile);
 
@@ -153,6 +156,80 @@ class Image
 
 //        $this->path = sha1(uniqid(mt_rand(), true)).'.'.$this->file->guessExtension();
 
+
+
+        //Original photo
+        $bigfile = $this->getUploadRootDir().'/'.$id.'/'.$rewritefile;
+
+        if ($extension == "jpg" || $extension == "jpeg") {
+            $src_img = imagecreatefromjpeg($bigfile);
+        }
+        if ($extension == "png") {
+            $src_img = imagecreatefrompng($bigfile);
+        }
+        if ($extension == "gif") {
+            $src_img = imagecreatefromgif($bigfile);
+        }
+
+        // Le ratio de l'image uploadée
+        $oldWidth = imageSX($src_img);
+        $oldHeight = imageSY($src_img);
+        $ratio = $oldWidth / $oldHeight;
+
+        $taille = array(
+            array(
+                'name' => 'big',
+                'width' => 500,
+                'height' => 300
+            ),
+            array(
+                'name' => 'medium',
+                'width' => 300,
+                'height' => 260
+            ),
+            array(
+                'name' => 'small',
+                'width' => 250,
+                'height' => 180
+            ),
+        );
+
+        // C'est parti
+        foreach ($taille as $value) {
+
+            // On prépare les valeurs
+            $width = $value['width'] - 1;
+            $height = $value['height'] -1;
+            $ratioImg = $width / $height;
+
+            // On calcule les nouvelles
+            if ($ratioImg > $ratio) {
+                $newWidth = $width;
+                $newHeight = $width / $ratio;
+            } elseif ($ratioImg < $ratio) {
+                $newHeight = $height;
+                $newWidth = $height * $ratio;
+            } else {
+                $newWidth = $width;
+                $newHeight = $height;
+            }
+
+            // Point de départ du crop
+            $x = ($newWidth - $width) / 2;
+            $y = 0;
+
+            // On bosse sur l'image
+            $imagine = new \Imagine\Gd\Imagine();
+            $imagine
+                ->open($bigfile)
+                ->thumbnail(new \Imagine\Image\Box($newWidth, $newHeight))
+                ->save(
+                    $this->getUploadRootDir().'/'.$id.'/' . $rewritename . '-' . $value['name'] . '.' . $extension,
+                    array(
+                        'quality' => 80
+                    )
+                );
+        }
 
         // « nettoie » la propriété « file » comme vous n'en aurez plus besoin
         $this->file = null;
@@ -164,7 +241,7 @@ class Image
     public function removeUpload()
     {
         if ($file = $this->getAbsolutePath()) {
-            unlink($file);
+            @unlink($file);
         }
     }
 

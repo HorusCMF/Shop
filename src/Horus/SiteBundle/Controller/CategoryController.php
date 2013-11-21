@@ -10,6 +10,7 @@ use Horus\SiteBundle\Form\FamilleType;
 use Horus\SiteBundle\Form\ImageCategoryType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use JMS\SecurityExtraBundle\Annotation\Secure;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class CategoryController extends Controller
 {
@@ -319,7 +320,7 @@ class CategoryController extends Controller
                 'success',
                 "L'image de la catégory a bien été ajouté"
             );
-            return $this->redirect($this->generateUrl('horus_site_categories'));
+            return new JsonResponse(true);
         }
 
         return $this->render('HorusSiteBundle:Category:picturecategory.html.twig',

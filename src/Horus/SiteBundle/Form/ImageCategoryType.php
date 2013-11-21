@@ -11,8 +11,7 @@ class ImageCategoryType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('file')
-            ->add('title', 'text', array('required' => false,'attr' => array('placeholder' => 'Titre de la tâches')));
+            ->add('file');
     }
 
     public function getName()

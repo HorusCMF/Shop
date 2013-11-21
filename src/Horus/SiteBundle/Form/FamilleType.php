@@ -11,7 +11,7 @@ class FamilleType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-                ->add('name', 'text', array('attr' => array('placeholder' => 'Titre de la tâches')))
+                ->add('name', 'text', array('attr' => array('placeholder' => "Nom de la famille")))
                 ->add('cover', 'textarea', array('attr' => array("class" => "ckeditor", 'placeholder' => 'Résumé en quelques mots')))
                 ->add('description', 'textarea', array('attr' => array("class" => "ckeditor", 'placeholder' => 'Description complète')))
                 ->add('parent')
