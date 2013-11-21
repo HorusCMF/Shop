@@ -93,17 +93,14 @@ class CategoryController extends Controller
         $form = $this->createForm(new CategoryType(), $category);
         $form->handleRequest($request);
 
-        if ($request->getMethod() === "POST") {
-
-            if ($form->isValid()) {
-                $em->persist($category);
-                $em->flush();
-                $this->get('session')->getFlashBag()->add(
-                    'success',
-                    "La catégory a bien été ajoutée"
-                );
-                return $this->redirect($this->generateUrl('horus_site_edit_image_category', array('id' => $category->getId())));
-            }
+        if ($form->isValid()) {
+            $em->persist($category);
+            $em->flush();
+            $this->get('session')->getFlashBag()->add(
+                'success',
+                "La catégory a bien été ajoutée"
+            );
+            return $this->redirect($this->generateUrl('horus_site_edit_image_category', array('id' => $category->getId())));
         }
 
         return $this->render('HorusSiteBundle:Category:createcategory.html.twig',
