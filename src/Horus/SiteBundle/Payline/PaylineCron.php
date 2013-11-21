@@ -13,11 +13,26 @@ use Doctrine\ORM\EntityManager;
  */
 class PaylineCron {
 
+    /**
+     * @var
+     */
     protected $user;
+    /**
+     * @var \Doctrine\ORM\EntityManager
+     */
     protected $em;
+    /**
+     * @var
+     */
     protected $container;
+    /**
+     * @var
+     */
     protected $payline;
 
+    /**
+     * @param EntityManager $em
+     */
     public function __construct(EntityManager $em) {
         $this->em = $em;
     }

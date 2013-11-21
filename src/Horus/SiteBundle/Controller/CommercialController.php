@@ -8,7 +8,10 @@ use Horus\SiteBundle\Form\TagType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use JMS\SecurityExtraBundle\Annotation\Secure;
 
-
+/**
+ * Class CommercialController
+ * @package Horus\SiteBundle\Controller
+ */
 class CommercialController extends Controller
 {
 

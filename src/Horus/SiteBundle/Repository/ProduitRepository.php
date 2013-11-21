@@ -3,9 +3,17 @@ namespace Horus\SiteBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
 
+/**
+ * Class ProduitRepository
+ * @package Horus\SiteBundle\Repository
+ */
 class ProduitRepository extends EntityRepository
 {
 
+    /**
+     * Get Active Produit
+     * @return \Doctrine\ORM\QueryBuilder
+     */
     public function getActiveProduitQueryBuilder()
     {
         $queryBuilder = $this->getEntityManager()

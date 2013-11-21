@@ -1,0 +1,72 @@
+<?php
+
+namespace Horus\SiteBundle\Controller;
+
+use Horus\SiteBundle\Entity\Pj;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
+/**
+ * Class MediasController
+ * @package Horus\SiteBundle\Controller
+ */
+class MediasController extends Controller
+{
+
+
+
+    /**
+     * Remove a file of product
+     * @param Category $id
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
+    public function removemediasAction(Pj $id)
+    {
+        $product = $id->getProduit();
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($id);
+        $em->flush();
+        $this->get('session')->getFlashBag()->add(
+            'success',
+            "Le fichier a bien été supprimé"
+        );
+
+        return $this->redirect($this->generateUrl('horus_site_edit_product', array('id' => $product->getId())));
+    }
+
+
+    /**
+     * Get All Medias
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function mediasAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $paginator = $this->get('knp_paginator');
+
+        $paginate_by_page =  $this->container->getParameter('paginate_by_page');
+        
+        $medias = $em->getRepository('HorusSiteBundle:Image')->findAll();
+        $mediascat = $em->getRepository('HorusSiteBundle:ImageCategory')->findAll();
+        $pagination = $paginator->paginate(
+            $medias,
+            $this->get('request')->query->get('page1', 1) /*page number*/,
+            $paginate_by_page,
+            array('pageParameterName' => 'page1')
+        );
+
+        $pagination2 = $paginator->paginate(
+            $mediascat,
+            $this->get('request')->query->get('page2', 1) /*page number*/,
+            $paginate_by_page,
+            array('pageParameterName' => 'page2')
+        );
+
+        return $this->render('HorusSiteBundle:Medias:medias.html.twig', array(
+            'medias' => $pagination,
+            'mediascat' => $pagination2
+        ));
+    }
+
+
+}
+

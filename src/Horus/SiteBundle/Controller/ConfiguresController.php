@@ -8,6 +8,10 @@ use Horus\SiteBundle\Form\ArticleType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use JMS\SecurityExtraBundle\Annotation\Secure;
 
+/**
+ * Class ConfiguresController
+ * @package Horus\SiteBundle\Controller
+ */
 class ConfiguresController extends Controller
 {
 

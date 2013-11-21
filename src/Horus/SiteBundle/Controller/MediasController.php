@@ -5,7 +5,10 @@ namespace Horus\SiteBundle\Controller;
 use Horus\SiteBundle\Entity\Pj;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-
+/**
+ * Class MediasController
+ * @package Horus\SiteBundle\Controller
+ */
 class MediasController extends Controller
 {
 

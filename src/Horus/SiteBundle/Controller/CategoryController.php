@@ -12,6 +12,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use JMS\SecurityExtraBundle\Annotation\Secure;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
+/**
+ * Class CategoryController
+ * @package Horus\SiteBundle\Controller
+ */
 class CategoryController extends Controller
 {
 

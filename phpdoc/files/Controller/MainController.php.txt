@@ -1,0 +1,150 @@
+<?php
+
+namespace Horus\SiteBundle\Controller;
+
+use Doctrine\Common\Util\Debug;
+use Horus\SiteBundle\Form\SearchType;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
+/**
+ * Class MainController
+ * @package Horus\SiteBundle\Controller
+ */
+class MainController extends Controller
+{
+
+    /**
+     * Dashboard Homepage
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function indexAction()
+    {
+        return $this->render('HorusSiteBundle:Main:index.html.twig');
+
+    }
+
+    /**
+     * Search Action
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function searchAction()
+    {
+        $request = $this->getRequest();
+
+        $form = $this->createForm(new SearchType());
+        $form->handleRequest($request);
+        $paginator = $this->get('knp_paginator');
+
+        $paginate_by_page =  $this->container->getParameter('paginate_by_page');
+
+        $produits = array();
+        $pages = array();
+        $categories = array();
+        $articles = array();
+        $tags = array();
+        $familles = array();
+
+        $finalword = null;
+
+        /**
+         * Query variables GET
+         */
+        $word_arg = $request->query->get('word');
+        $products_arg = $request->query->get('produits');
+        $categories_arg = $request->query->get('categories');
+        $familles_arg = $request->query->get('familles');
+        $tags_arg = $request->query->get('tags');
+        $pages_arg = $request->query->get('pages');
+        $articles_arg = $request->query->get('articles');
+
+        if (!empty($word_arg))
+            $finalword = $word_arg;
+
+        /**
+         * Finders
+         */
+        $finderProducts = $this->container->get('fos_elastica.finder.website.produit');
+        $finderCategories = $this->container->get('fos_elastica.finder.website.category');
+        $finderArticle = $this->container->get('fos_elastica.finder.website.article');
+        $finderTags = $this->container->get('fos_elastica.finder.website.tag');
+        $finderFamille = $this->container->get('fos_elastica.finder.website.famille');
+        $finderPages = $this->container->get('fos_elastica.finder.website.pages');
+
+        if (!empty($products_arg))
+            $produits = $finderProducts->find($finalword);
+
+        $pagination = $paginator->paginate(
+            $produits,
+            $this->get('request')->query->get('page1', 1) /*page number*/,
+            $paginate_by_page,
+            array('pageParameterName' => 'page1')
+        );
+
+        if (!empty($categories_arg))
+            $categories = $finderCategories->find($finalword);
+
+        $pagination2 = $paginator->paginate(
+            $categories,
+            $this->get('request')->query->get('page2', 1) /*page number*/,
+            $paginate_by_page,
+            array('pageParameterName' => 'page2')
+        );
+
+        if (!empty($familles_arg))
+            $familles = $finderFamille->find($finalword);
+
+        $pagination3 = $paginator->paginate(
+            $familles,
+            $this->get('request')->query->get('page3', 1) /*page number*/,
+            $paginate_by_page,
+            array('pageParameterName' => 'page3')
+        );
+
+
+        if (!empty($tags_arg))
+            $tags = $finderTags->find($finalword);
+
+        $pagination4 = $paginator->paginate(
+            $tags,
+            $this->get('request')->query->get('page4', 1) /*page number*/,
+            $paginate_by_page,
+            array('pageParameterName' => 'page4')
+        );
+
+
+        if (!empty($pages_arg))
+            $pages = $finderPages->find($finalword);
+
+        $pagination6 = $paginator->paginate(
+            $pages,
+            $this->get('request')->query->get('page5', 1) /*page number*/,
+            $paginate_by_page,
+            array('pageParameterName' => 'page5')
+        );
+
+
+        if (!empty($articles_arg))
+            $articles = $finderArticle->find($finalword);
+
+        $pagination7 = $paginator->paginate(
+            $articles,
+            $this->get('request')->query->get('page6', 1) /*page number*/,
+            $paginate_by_page,
+            array('pageParameterName' => 'page6')
+        );
+
+        return $this->render('HorusSiteBundle:Main:search.html.twig',
+            array('form' => $form->createView(),
+                'produits' => $pagination,
+                'categories' => $pagination2,
+                'familles' => $pagination3,
+                'tags' => $pagination4,
+                'pages' => $pagination6,
+                'articles' => $pagination7,
+            )
+        );
+    }
+
+
+}
+

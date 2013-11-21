@@ -6,8 +6,16 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
+/**
+ * Class CommercialType
+ * @package Horus\SiteBundle\Form
+ */
 class CommercialType extends AbstractType
 {
+    /**
+     * @param FormBuilderInterface $builder
+     * @param array $options
+     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
@@ -26,12 +34,17 @@ class CommercialType extends AbstractType
                 ->add('datePublication', 'date', array('widget' => 'single_text','attr' => array('class' => 'date')));
     }
 
+    /**
+     * @return string
+     */
     public function getName()
     {
         return '';
     }
 
-
+    /**
+     * @param OptionsResolverInterface $resolver
+     */
     public function setDefaultOptions(OptionsResolverInterface $resolver){
 
         $resolver->setDefaults(array(

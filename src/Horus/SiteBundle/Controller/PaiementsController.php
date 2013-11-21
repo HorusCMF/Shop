@@ -8,6 +8,10 @@ use Horus\SiteBundle\Form\ArticleType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use JMS\SecurityExtraBundle\Annotation\Secure;
 
+/**
+ * Class PaiementsController
+ * @package Horus\SiteBundle\Controller
+ */
 class PaiementsController extends Controller
 {
 

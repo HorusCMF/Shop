@@ -11,7 +11,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use JMS\SecurityExtraBundle\Annotation\Secure;
 use Horus\SiteBundle\Entity\Article;
 
-
+/**
+ * Class CMSController
+ * @package Horus\SiteBundle\Controller
+ */
 class CMSController extends Controller
 {
 

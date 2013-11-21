@@ -15,6 +15,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use JMS\SecurityExtraBundle\Annotation\Secure;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
+/**
+ * Class ProductController
+ * @package Horus\SiteBundle\Controller
+ */
 class ProductController extends Controller
 {
 

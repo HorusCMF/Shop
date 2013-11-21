@@ -7,8 +7,16 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 
+/**
+ * Class ProductType
+ * @package Horus\SiteBundle\Form
+ */
 class ProductType extends AbstractType
 {
+    /**
+     * @param FormBuilderInterface $builder
+     * @param array $options
+     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
@@ -72,12 +80,18 @@ class ProductType extends AbstractType
             ->add('datePublication', 'date', array('widget' => 'single_text', 'attr' => array('class' => 'form-control','placeholder' => 'Format: AAAA-MM-JJ')));
     }
 
+    /**
+     * @return string
+     */
     public function getName()
     {
         return '';
     }
 
 
+    /**
+     * @param OptionsResolverInterface $resolver
+     */
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
 

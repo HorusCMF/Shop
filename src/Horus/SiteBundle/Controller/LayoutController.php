@@ -10,6 +10,10 @@ use Horus\SiteBundle\Form\CategoryType;
 use Horus\SiteBundle\Form\SearchType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
+/**
+ * Class LayoutController
+ * @package Horus\SiteBundle\Controller
+ */
 class LayoutController extends Controller
 {
 

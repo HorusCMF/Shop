@@ -1,0 +1,1690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>API Documentation</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]-->
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+    <script type="text/javascript">
+    function loadExternalCodeSnippets() {
+        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+            var src = pre.getAttribute('data-src');
+            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+            var language = 'php';
+
+            var code = document.createElement('code');
+            code.className = 'language-' + language;
+
+            pre.textContent = '';
+
+            code.textContent = 'Loading…';
+
+            pre.appendChild(code);
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', src, true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+
+                    if (xhr.status < 400 && xhr.responseText) {
+                        code.textContent = xhr.responseText;
+
+                        Prism.highlightElement(code);
+                    }
+                    else if (xhr.status >= 400) {
+                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                    }
+                    else {
+                        code.textContent = '✖ Error: File does not exist or is empty';
+                    }
+                }
+            };
+
+            xhr.send(null);
+        });
+    }
+
+    $(document).ready(function(){
+        loadExternalCodeSnippets();
+    });
+    $('#source-view').on('shown', function () {
+        loadExternalCodeSnippets();
+    })
+</script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">API Documentation</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                    <li class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">
+                            API Documentation <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                                                        <li><a href="../namespaces/Horus.html">\Horus</a></li>
+                                                    </ul>
+                    </li>
+                    <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../reports/errors.html">
+                                    <i class="icon-list-alt"></i>&#160;Errors
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/markers.html">
+                                    <i class="icon-list-alt"></i>&#160;Markers
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-250864161"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-250864161" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1191399329"></a>
+                                <a href="../namespaces/Horus.html" style="margin-left: 30px; padding-left: 0">Horus</a>
+            </div>
+            <div id="namespace-1191399329" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1894035251"></a>
+                                <a href="../namespaces/Horus.SiteBundle.html" style="margin-left: 30px; padding-left: 0">SiteBundle</a>
+            </div>
+            <div id="namespace-1894035251" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-117585468"></a>
+                                <a href="../namespaces/Horus.SiteBundle.Repository.html" style="margin-left: 30px; padding-left: 0">Repository</a>
+            </div>
+            <div id="namespace-117585468" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Repository.ProduitRepository.html">ProduitRepository</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Repository.FamilleRepository.html">FamilleRepository</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Repository.TagRepository.html">TagRepository</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Repository.PageRepository.html">PageRepository</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Repository.CommercialRepository.html">CommercialRepository</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Repository.ArticleRepository.html">ArticleRepository</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Repository.CategoryRepository.html">CategoryRepository</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Repository.ImageRepository.html">ImageRepository</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Repository.AdministrateurRepository.html">AdministrateurRepository</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Repository.PjRepository.html">PjRepository</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1593203668"></a>
+                                <a href="../namespaces/Horus.SiteBundle.Form.html" style="margin-left: 30px; padding-left: 0">Form</a>
+            </div>
+            <div id="namespace-1593203668" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Form.ArticleType.html">ArticleType</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Form.ImageCategoryType.html">ImageCategoryType</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Form.CommercialType.html">CommercialType</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Form.PageType.html">PageType</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Form.MetaType.html">MetaType</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Form.CategoryType.html">CategoryType</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Form.ImageType.html">ImageType</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Form.TagType.html">TagType</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Form.PjType.html">PjType</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Form.ProductType.html">ProductType</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Form.FamilleType.html">FamilleType</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Form.SeoType.html">SeoType</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Form.SearchType.html">SearchType</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2010446200"></a>
+                                <a href="../namespaces/Horus.SiteBundle.Entity.html" style="margin-left: 30px; padding-left: 0">Entity</a>
+            </div>
+            <div id="namespace-2010446200" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.Administrateur.html">Administrateur</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.Category.html">Category</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.Pj.html">Pj</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.Seo.html">Seo</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.Languages.html">Languages</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.ImageCategory.html">ImageCategory</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.PaylineWalletUsers.html">PaylineWalletUsers</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.PaylineWallet.html">PaylineWallet</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.PaylineCard.html">PaylineCard</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.Tag.html">Tag</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.Villes.html">Villes</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.Produit.html">Produit</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.Article.html">Article</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.Image.html">Image</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.Meta.html">Meta</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.Page.html">Page</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.Famille.html">Famille</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.Metier.html">Metier</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.Commercial.html">Commercial</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2012323208"></a>
+                                <a href="../namespaces/Horus.SiteBundle.Controller.html" style="margin-left: 30px; padding-left: 0">Controller</a>
+            </div>
+            <div id="namespace-2012323208" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Controller.CommercialController.html">CommercialController</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Controller.ClientsController.html">ClientsController</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Controller.PaiementsController.html">PaiementsController</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Controller.CMSController.html">CMSController</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Controller.CommandesController.html">CommandesController</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Controller.LayoutController.html">LayoutController</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Controller.ProductController.html">ProductController</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Controller.MainController.html">MainController</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Controller.ConfiguresController.html">ConfiguresController</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Controller.TransportsController.html">TransportsController</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Controller.AdministrateurController.html">AdministrateurController</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Controller.CategoryController.html">CategoryController</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Controller.MediasController.html">MediasController</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-928442751"></a>
+                                <a href="../namespaces/Horus.SiteBundle.Tests.html" style="margin-left: 30px; padding-left: 0">Tests</a>
+            </div>
+            <div id="namespace-928442751" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1429281317"></a>
+                                <a href="../namespaces/Horus.SiteBundle.Tests.Controller.html" style="margin-left: 30px; padding-left: 0">Controller</a>
+            </div>
+            <div id="namespace-1429281317" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Tests.Controller.DefaultControllerTest.html">DefaultControllerTest</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1844631007"></a>
+                                <a href="../namespaces/Horus.SiteBundle.Authentication.html" style="margin-left: 30px; padding-left: 0">Authentication</a>
+            </div>
+            <div id="namespace-1844631007" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Authentication.AuthenticationSiteHandler.html">AuthenticationSiteHandler</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-611051106"></a>
+                                <a href="../namespaces/Horus.SiteBundle.Menu.html" style="margin-left: 30px; padding-left: 0">Menu</a>
+            </div>
+            <div id="namespace-611051106" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Menu.Builder.html">Builder</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1566091555"></a>
+                                <a href="../namespaces/Horus.SiteBundle.DependencyInjection.html" style="margin-left: 30px; padding-left: 0">DependencyInjection</a>
+            </div>
+            <div id="namespace-1566091555" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Horus.SiteBundle.DependencyInjection.Configuration.html">Configuration</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.DependencyInjection.HorusSiteExtension.html">HorusSiteExtension</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-832430669"></a>
+                                <a href="../namespaces/Horus.SiteBundle.Payline.html" style="margin-left: 30px; padding-left: 0">Payline</a>
+            </div>
+            <div id="namespace-832430669" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Payline.PaylineCron.html">PaylineCron</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Horus.SiteBundle.HorusSiteBundle.html">HorusSiteBundle</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <nav>
+                                                <a href="../namespaces/Horus.SiteBundle.Entity.html">\Horus\SiteBundle\Entity</a> <i class="icon-level-up"></i>
+                                            </nav>
+                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
+
+                    <h1><small>\Horus\SiteBundle\Entity</small>Villes</h1>
+                    <p><em>Villes</em></p>
+                    
+
+
+                    <section id="summary">
+                        <h2>Summary</h2>
+                        <section class="row-fluid heading">
+                            <section class="span4">
+                                <a href="#methods">Methods</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#properties">Properties</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#constants">Constants</a>
+                            </section>
+                        </section>
+                        <section class="row-fluid public">
+                            <section class="span4">
+                                                                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html#method_getId" class="">getId()</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html#method_setDepartement" class="">setDepartement()</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html#method_getDepartement" class="">getDepartement()</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html#method_setNomVille" class="">setNomVille()</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html#method_getNomVille" class="">getNomVille()</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html#method_setNomVilleMaj" class="">setNomVilleMaj()</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html#method_getNomVilleMaj" class="">getNomVilleMaj()</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html#method_setNomVilleUrl" class="">setNomVilleUrl()</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html#method_getNomVilleUrl" class="">getNomVilleUrl()</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html#method_setCodePostal" class="">setCodePostal()</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html#method_getCodePostal" class="">getCodePostal()</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html#method_setCodeInsee" class="">setCodeInsee()</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html#method_getCodeInsee" class="">getCodeInsee()</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html#method_setLatitude" class="">setLatitude()</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html#method_getLatitude" class="">getLatitude()</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html#method_setLongitude" class="">setLongitude()</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html#method_getLongitude" class="">getLongitude()</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html#method_setLatrad" class="">setLatrad()</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html#method_getLatrad" class="">getLatrad()</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html#method_setLonrad" class="">setLonrad()</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html#method_getLonrad" class="">getLonrad()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No public properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No constants found</em>
+                                                            </section>
+                        </section>
+                        <section class="row-fluid protected">
+                            <section class="span4">
+                                                                    <em>No protected methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No protected properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                        <section class="row-fluid private">
+                            <section class="span4">
+                                                                    <em>No private methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html#property_id" class="">$id</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html#property_departement" class="">$departement</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html#property_nomVille" class="">$nomVille</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html#property_nomVilleMaj" class="">$nomVilleMaj</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html#property_nomVilleUrl" class="">$nomVilleUrl</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html#property_codePostal" class="">$codePostal</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html#property_codeInsee" class="">$codeInsee</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html#property_latitude" class="">$latitude</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html#property_longitude" class="">$longitude</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html#property_latrad" class="">$latrad</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html#property_lonrad" class="">$lonrad</a><br />
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+                <aside class="span4 detailsbar">
+                                        
+                    
+                    <dl>
+                        <dt>File</dt>
+                            <dd><a href="../files/Entity.Villes.php.html"><div class="path-wrapper">Entity/Villes.php</div></a></dd>
+                                                <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">\Default</div></dd>
+                                                <dt>Class hierarchy</dt>
+                            <dd class="hierarchy">
+                                                                                                                                                                    <div class="namespace-wrapper">\Horus\SiteBundle\Entity\Villes</div>
+                            </dd>
+
+                        
+                        
+                        
+                                                                        </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                            <tr>
+                            <th>
+                                ORM\Table
+                            </th>
+                            <td>
+                                                                    <p>(name="villes")</p>
+
+                                                            </td>
+                        </tr>
+                                            <tr>
+                            <th>
+                                ORM\Entity
+                            </th>
+                            <td>
+                                                                    <p>(repositoryClass="MyFuckinJob\SiteBundle\Repository\VillesRepository")</p>
+
+                                                            </td>
+                        </tr>
+                                        </table>
+                </aside>
+            </div>
+
+                        
+                                    <a id="properties" name="properties"></a>
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <h2>Properties</h2>
+                </div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_id" name="property_id" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$id</h3>
+                <pre class="signature">$id : integer</pre>
+                <p><em></em></p>
+                
+
+
+                                <h4>Type</h4>
+                integer
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            ORM\Column
+                        </th>
+                        <td>
+                                                            <p>(name="id", type="integer", nullable=false)</p>
+
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            ORM\Id
+                        </th>
+                        <td>
+                                                            
+
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            ORM\GeneratedValue
+                        </th>
+                        <td>
+                                                            <p>(strategy="IDENTITY")</p>
+
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_departement" name="property_departement" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$departement</h3>
+                <pre class="signature">$departement : string</pre>
+                <p><em></em></p>
+                
+
+
+                                <h4>Type</h4>
+                string
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            ORM\Column
+                        </th>
+                        <td>
+                                                            <p>(name="departement", type="string", length=2, nullable=true)</p>
+
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_nomVille" name="property_nomVille" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$nomVille</h3>
+                <pre class="signature">$nomVille : string</pre>
+                <p><em></em></p>
+                
+
+
+                                <h4>Type</h4>
+                string
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            ORM\Column
+                        </th>
+                        <td>
+                                                            <p>(name="nom_ville", type="string", length=255, nullable=true)</p>
+
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_nomVilleMaj" name="property_nomVilleMaj" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$nomVilleMaj</h3>
+                <pre class="signature">$nomVilleMaj : string</pre>
+                <p><em></em></p>
+                
+
+
+                                <h4>Type</h4>
+                string
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            ORM\Column
+                        </th>
+                        <td>
+                                                            <p>(name="nom_ville_maj", type="string", length=255, nullable=true)</p>
+
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_nomVilleUrl" name="property_nomVilleUrl" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$nomVilleUrl</h3>
+                <pre class="signature">$nomVilleUrl : string</pre>
+                <p><em></em></p>
+                
+
+
+                                <h4>Type</h4>
+                string
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            ORM\Column
+                        </th>
+                        <td>
+                                                            <p>(name="nom_ville_url", type="string", length=255, nullable=true)</p>
+
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_codePostal" name="property_codePostal" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$codePostal</h3>
+                <pre class="signature">$codePostal : string</pre>
+                <p><em></em></p>
+                
+
+
+                                <h4>Type</h4>
+                string
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            ORM\Column
+                        </th>
+                        <td>
+                                                            <p>(name="code_postal", type="string", length=5, nullable=true)</p>
+
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_codeInsee" name="property_codeInsee" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$codeInsee</h3>
+                <pre class="signature">$codeInsee : integer</pre>
+                <p><em></em></p>
+                
+
+
+                                <h4>Type</h4>
+                integer
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            ORM\Column
+                        </th>
+                        <td>
+                                                            <p>(name="code_insee", type="integer", nullable=true)</p>
+
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_latitude" name="property_latitude" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$latitude</h3>
+                <pre class="signature">$latitude : float</pre>
+                <p><em></em></p>
+                
+
+
+                                <h4>Type</h4>
+                float
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            ORM\Column
+                        </th>
+                        <td>
+                                                            <p>(name="latitude", type="float", nullable=true)</p>
+
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_longitude" name="property_longitude" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$longitude</h3>
+                <pre class="signature">$longitude : float</pre>
+                <p><em></em></p>
+                
+
+
+                                <h4>Type</h4>
+                float
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            ORM\Column
+                        </th>
+                        <td>
+                                                            <p>(name="longitude", type="float", nullable=true)</p>
+
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_latrad" name="property_latrad" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$latrad</h3>
+                <pre class="signature">$latrad : float</pre>
+                <p><em></em></p>
+                
+
+
+                                <h4>Type</h4>
+                float
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            ORM\Column
+                        </th>
+                        <td>
+                                                            <p>(name="latRad", type="float", nullable=true)</p>
+
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_lonrad" name="property_lonrad" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$lonrad</h3>
+                <pre class="signature">$lonrad : float</pre>
+                <p><em></em></p>
+                
+
+
+                                <h4>Type</h4>
+                float
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            ORM\Column
+                        </th>
+                        <td>
+                                                            <p>(name="lonRad", type="float", nullable=true)</p>
+
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                            
+                                    <a id="methods" name="methods"></a>
+            <div class="row-fluid">
+                <div class="span8 content class"><h2>Methods</h2></div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getId" name="method_getId" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getId()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getId() : integer</pre>
+                <p><em>Get id</em></p>
+                
+
+
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setDepartement" name="method_setDepartement" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setDepartement()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setDepartement(string <span class="argument">$departement</span>) : \Horus\SiteBundle\Entity\Villes</pre>
+                <p><em>Set departement</em></p>
+                
+
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$departement</td>
+                                <td>
+</td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html">\Horus\SiteBundle\Entity\Villes</a>
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getDepartement" name="method_getDepartement" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getDepartement()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getDepartement() : string</pre>
+                <p><em>Get departement</em></p>
+                
+
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setNomVille" name="method_setNomVille" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setNomVille()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setNomVille(string <span class="argument">$nomVille</span>) : \Horus\SiteBundle\Entity\Villes</pre>
+                <p><em>Set nomVille</em></p>
+                
+
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$nomVille</td>
+                                <td>
+</td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html">\Horus\SiteBundle\Entity\Villes</a>
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getNomVille" name="method_getNomVille" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getNomVille()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getNomVille() : string</pre>
+                <p><em>Get nomVille</em></p>
+                
+
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setNomVilleMaj" name="method_setNomVilleMaj" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setNomVilleMaj()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setNomVilleMaj(string <span class="argument">$nomVilleMaj</span>) : \Horus\SiteBundle\Entity\Villes</pre>
+                <p><em>Set nomVilleMaj</em></p>
+                
+
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$nomVilleMaj</td>
+                                <td>
+</td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html">\Horus\SiteBundle\Entity\Villes</a>
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getNomVilleMaj" name="method_getNomVilleMaj" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getNomVilleMaj()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getNomVilleMaj() : string</pre>
+                <p><em>Get nomVilleMaj</em></p>
+                
+
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setNomVilleUrl" name="method_setNomVilleUrl" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setNomVilleUrl()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setNomVilleUrl(string <span class="argument">$nomVilleUrl</span>) : \Horus\SiteBundle\Entity\Villes</pre>
+                <p><em>Set nomVilleUrl</em></p>
+                
+
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$nomVilleUrl</td>
+                                <td>
+</td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html">\Horus\SiteBundle\Entity\Villes</a>
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getNomVilleUrl" name="method_getNomVilleUrl" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getNomVilleUrl()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getNomVilleUrl() : string</pre>
+                <p><em>Get nomVilleUrl</em></p>
+                
+
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setCodePostal" name="method_setCodePostal" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setCodePostal()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setCodePostal(string <span class="argument">$codePostal</span>) : \Horus\SiteBundle\Entity\Villes</pre>
+                <p><em>Set codePostal</em></p>
+                
+
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$codePostal</td>
+                                <td>
+</td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html">\Horus\SiteBundle\Entity\Villes</a>
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getCodePostal" name="method_getCodePostal" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getCodePostal()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getCodePostal() : string</pre>
+                <p><em>Get codePostal</em></p>
+                
+
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setCodeInsee" name="method_setCodeInsee" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setCodeInsee()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setCodeInsee(integer <span class="argument">$codeInsee</span>) : \Horus\SiteBundle\Entity\Villes</pre>
+                <p><em>Set codeInsee</em></p>
+                
+
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$codeInsee</td>
+                                <td>
+</td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html">\Horus\SiteBundle\Entity\Villes</a>
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getCodeInsee" name="method_getCodeInsee" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getCodeInsee()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getCodeInsee() : integer</pre>
+                <p><em>Get codeInsee</em></p>
+                
+
+
+                
+                
+                                    <h4>Returns</h4>
+                    integer
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setLatitude" name="method_setLatitude" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setLatitude()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setLatitude(float <span class="argument">$latitude</span>) : \Horus\SiteBundle\Entity\Villes</pre>
+                <p><em>Set latitude</em></p>
+                
+
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>float</td>
+                                <td>$latitude</td>
+                                <td>
+</td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html">\Horus\SiteBundle\Entity\Villes</a>
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getLatitude" name="method_getLatitude" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getLatitude()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getLatitude() : float</pre>
+                <p><em>Get latitude</em></p>
+                
+
+
+                
+                
+                                    <h4>Returns</h4>
+                    float
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setLongitude" name="method_setLongitude" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setLongitude()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setLongitude(float <span class="argument">$longitude</span>) : \Horus\SiteBundle\Entity\Villes</pre>
+                <p><em>Set longitude</em></p>
+                
+
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>float</td>
+                                <td>$longitude</td>
+                                <td>
+</td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html">\Horus\SiteBundle\Entity\Villes</a>
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getLongitude" name="method_getLongitude" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getLongitude()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getLongitude() : float</pre>
+                <p><em>Get longitude</em></p>
+                
+
+
+                
+                
+                                    <h4>Returns</h4>
+                    float
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setLatrad" name="method_setLatrad" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setLatrad()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setLatrad(float <span class="argument">$latrad</span>) : \Horus\SiteBundle\Entity\Villes</pre>
+                <p><em>Set latrad</em></p>
+                
+
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>float</td>
+                                <td>$latrad</td>
+                                <td>
+</td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html">\Horus\SiteBundle\Entity\Villes</a>
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getLatrad" name="method_getLatrad" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getLatrad()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getLatrad() : float</pre>
+                <p><em>Get latrad</em></p>
+                
+
+
+                
+                
+                                    <h4>Returns</h4>
+                    float
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setLonrad" name="method_setLonrad" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setLonrad()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setLonrad(float <span class="argument">$lonrad</span>) : \Horus\SiteBundle\Entity\Villes</pre>
+                <p><em>Set lonrad</em></p>
+                
+
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>float</td>
+                                <td>$lonrad</td>
+                                <td>
+</td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Horus.SiteBundle.Entity.Villes.html">\Horus\SiteBundle\Entity\Villes</a>
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getLonrad" name="method_getLonrad" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getLonrad()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getLonrad() : float</pre>
+                <p><em>Get lonrad</em></p>
+                
+
+
+                
+                
+                                    <h4>Returns</h4>
+                    float
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                                    </div>
+    </section>
+
+    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="source-view-label">Villes.php</h3>
+        </div>
+        <div class="modal-body">
+            <pre data-src="../files/Entity/Villes.php.txt" class="language-php line-numbers"></pre>
+        </div>
+    </div>
+
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">
+                                                        <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>
+                                                                            <li><a href="../namespaces/Horus.html">\Horus</a></li>
+                                                                    </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="">Errors</a></li>
+                                    <li><a href="">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    on November 21st, 2013 at 15:59.
+                </section>
+            </section>
+        </section>
+    </footer>
+</div>
+
+</body>
+</html>

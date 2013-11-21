@@ -6,6 +6,10 @@ use Doctrine\Common\Util\Debug;
 use Horus\SiteBundle\Form\SearchType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
+/**
+ * Class MainController
+ * @package Horus\SiteBundle\Controller
+ */
 class MainController extends Controller
 {
 

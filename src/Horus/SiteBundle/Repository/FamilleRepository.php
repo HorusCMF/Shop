@@ -3,9 +3,17 @@ namespace Horus\SiteBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
 
+/**
+ * Class FamilleRepository
+ * @package Horus\SiteBundle\Repository
+ */
 class FamilleRepository extends EntityRepository
 {
 
+    /**
+     * Get Active Familles
+     * @return \Doctrine\ORM\QueryBuilder
+     */
     public function getActiveFamilleQueryBuilder()
     {
         $queryBuilder = $this->getEntityManager()

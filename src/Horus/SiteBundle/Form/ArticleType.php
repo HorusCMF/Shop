@@ -6,8 +6,16 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
+/**
+ * Class ArticleType
+ * @package Horus\SiteBundle\Form
+ */
 class ArticleType extends AbstractType
 {
+    /**
+     * @param FormBuilderInterface $builder
+     * @param array $options
+     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
@@ -26,12 +34,17 @@ class ArticleType extends AbstractType
                 ->add('datePublication', 'date', array('widget' => 'single_text'));
     }
 
+    /**
+     * @return string
+     */
     public function getName()
     {
         return '';
     }
 
-
+    /**
+     * @param OptionsResolverInterface $resolver
+     */
     public function setDefaultOptions(OptionsResolverInterface $resolver){
 
         $resolver->setDefaults(array(

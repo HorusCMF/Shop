@@ -3,9 +3,17 @@ namespace Horus\SiteBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
 
+/**
+ * Class PageRepository
+ * @package Horus\SiteBundle\Repository
+ */
 class PageRepository extends EntityRepository
 {
 
+    /**
+     * Get Active Page
+     * @return \Doctrine\ORM\QueryBuilder
+     */
     public function getActivePageQueryBuilder()
     {
         $queryBuilder = $this->getEntityManager()
@@ -17,6 +25,10 @@ class PageRepository extends EntityRepository
     }
 
 
+    /**
+     * Is Article
+     * @return mixed
+     */
     public function isArticle()
     {
         $query = $this->getEntityManager()

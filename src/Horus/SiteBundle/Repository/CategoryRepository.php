@@ -4,8 +4,17 @@ namespace Horus\SiteBundle\Repository;
 use Doctrine\ORM\EntityRepository;
 use Horus\SiteBundle\Entity\Category;
 
+/**
+ * Class CategoryRepository
+ * @package Horus\SiteBundle\Repository
+ */
 class CategoryRepository extends EntityRepository
 {
+    /**
+     * Get articles by Category
+     * @param Category $category
+     * @return mixed
+     */
     public function getArticlesByCategory(Category $category = null)
     {
         $query = $this->getEntityManager()
@@ -17,6 +26,10 @@ class CategoryRepository extends EntityRepository
         return $query->getResult();
     }
 
+    /**
+     * Get Active Category
+     * @return \Doctrine\ORM\QueryBuilder
+     */
     public function getActiveCategoryQueryBuilder()
     {
         $queryBuilder = $this->getEntityManager()
@@ -27,6 +40,10 @@ class CategoryRepository extends EntityRepository
         return $queryBuilder;
     }
 
+    /**
+     * If on category
+     * @return mixed
+     */
     public function isCategory()
     {
         $query = $this->getEntityManager()

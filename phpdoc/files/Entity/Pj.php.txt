@@ -1,0 +1,254 @@
+<?php
+
+namespace Horus\SiteBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
+
+/**
+ * Image
+ * @ORM\Entity(repositoryClass="Horus\SiteBundle\Repository\PjRepository")
+ * @ORM\Table(name="pj")
+ * @ORM\HasLifecycleCallbacks()
+ */
+class Pj
+{
+
+    public function __construct(){
+        $this->dateCreated = new \Datetime('now');
+        $this->visible = true;
+    }
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     * @ORM\Column(name="path", type="text", nullable=true)
+     */
+    private $path;
+
+    /**
+     * @Assert\File(
+     *     maxSize = "10000k",
+     *     mimeTypes = {"image/jpg","image/jpeg", "image/png", "image/gif", "image/bmp", "application/pdf", "application/msword","application/vnd.ms-excel", "text/plain", "text/html" }
+     * )
+     */
+    public $file;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="date_created", type="datetime", nullable=true)
+     */
+    private $dateCreated;
+
+    /**
+     * @ORM\Column(name="visible", type="boolean", nullable=true)
+     */
+    private $visible;
+
+    /**
+     * @ORM\Column(name="extension", type="string", nullable=true)
+     */
+    private $extension;
+
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Produit",inversedBy="pjs")
+     * @ORM\JoinColumn(name="produit_id", referencedColumnName="id")
+     */
+    protected $produit;
+
+
+    public function getAbsolutePath()
+    {
+        return null === $this->path ? null : $this->getUploadRootDir().'/'.$this->getProduit()->getId().'/'.$this->path;
+    }
+
+    public function getWebPath()
+    {
+        return null === $this->path ? null : $this->getUploadDir().'/'.$this->path;
+    }
+
+    protected function getUploadRootDir()
+    {
+        // le chemin absolu du répertoire où les documents uploadés doivent être sauvegardés
+        return __DIR__.'/../../../../web/'.$this->getUploadDir();
+    }
+
+    protected function getUploadDir()
+    {
+        // on se débarrasse de « __DIR__ » afin de ne pas avoir de problème lorsqu'on affiche
+        // le document/image dans la vue.
+        return 'uploads/documents/';
+    }
+
+
+    /**
+     * @ORM\PrePersist()
+     * @ORM\PreUpdate()
+     */
+    public function preUpload()
+    {
+        if (null !== $this->file) {
+            // faites ce que vous voulez pour générer un nom unique
+            $this->path = sha1(uniqid(mt_rand(), true)).'.'.$this->file->guessExtension();
+        }
+    }
+
+    /**
+     * @ORM\PostPersist()
+     * @ORM\PostUpdate()
+     */
+    public function upload($id = null)
+    {
+        // la propriété « file » peut être vide si le champ n'est pas requis
+        if (null === $this->file) {
+            return;
+        }
+
+        if(!is_dir(@mkdir($this->getUploadRootDir().$id)))
+            @mkdir($this->getUploadRootDir().$id);
+
+        $this->extension = $this->file->guessExtension();
+
+        // utilisez le nom de fichier original ici mais
+        // vous devriez « l'assainir » pour au moins éviter
+        // quelconques problèmes de sécurité
+
+        // la méthode « move » prend comme arguments le répertoire cible et
+        // le nom de fichier cible où le fichier doit être déplacé
+
+        $rewritefile = sha1(uniqid(mt_rand(), true)).'.'.$this->file->guessExtension();
+
+        $this->file->move($this->getUploadRootDir().'/'.$id, $rewritefile);
+
+        // définit la propriété « path » comme étant le nom de fichier où vous
+        // avez stocké le fichier
+        $this->path = $rewritefile;
+
+//        $this->path = sha1(uniqid(mt_rand(), true)).'.'.$this->file->guessExtension();
+
+
+        // « nettoie » la propriété « file » comme vous n'en aurez plus besoin
+        $this->file = null;
+    }
+
+    /**
+     * @ORM\PostRemove()
+     */
+    public function removeUpload()
+    {
+        if ($file = $this->getAbsolutePath()) {
+            unlink($file);
+        }
+    }
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+
+    /**
+     * Set produit
+     *
+     * @param Horus\SiteBundle\Entity\Produit $produit
+     * @return Image
+     */
+    public function setProduit(\Horus\SiteBundle\Entity\Produit $produit = null)
+    {
+        $this->produit = $produit;
+        return $this;
+    }
+
+    /**
+     * Get produit
+     *
+     * @return Horus\SiteBundle\Entity\Produit
+     */
+    public function getProduit()
+    {
+        return $this->produit;
+    }
+
+    /**
+     * Set dateCreated
+     *
+     * @param datetime $dateCreated
+     * @return Image
+     */
+    public function setDateCreated($dateCreated)
+    {
+        $this->dateCreated = $dateCreated;
+        return $this;
+    }
+
+    /**
+     * Get dateCreated
+     *
+     * @return datetime 
+     */
+    public function getDateCreated()
+    {
+        return $this->dateCreated;
+    }
+
+    /**
+     * Set path
+     *
+     * @param text $path
+     * @return Image
+     */
+    public function setPath($path)
+    {
+        $this->path = $path;
+        return $this;
+    }
+
+    /**
+     * Get path
+     *
+     * @return text 
+     */
+    public function getPath()
+    {
+        return $this->path;
+    }
+
+    /**
+     * Set visible
+     *
+     * @param boolean $visible
+     * @return Image
+     */
+    public function setVisible($visible)
+    {
+        $this->visible = $visible;
+        return $this;
+    }
+
+    /**
+     * Get visible
+     *
+     * @return boolean 
+     */
+    public function getVisible()
+    {
+        return $this->visible;
+    }
+}

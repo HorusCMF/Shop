@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>API Documentation</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]-->
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+    <script type="text/javascript">
+    function loadExternalCodeSnippets() {
+        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+            var src = pre.getAttribute('data-src');
+            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+            var language = 'php';
+
+            var code = document.createElement('code');
+            code.className = 'language-' + language;
+
+            pre.textContent = '';
+
+            code.textContent = 'Loading…';
+
+            pre.appendChild(code);
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', src, true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+
+                    if (xhr.status < 400 && xhr.responseText) {
+                        code.textContent = xhr.responseText;
+
+                        Prism.highlightElement(code);
+                    }
+                    else if (xhr.status >= 400) {
+                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                    }
+                    else {
+                        code.textContent = '✖ Error: File does not exist or is empty';
+                    }
+                }
+            };
+
+            xhr.send(null);
+        });
+    }
+
+    $(document).ready(function(){
+        loadExternalCodeSnippets();
+    });
+    $('#source-view').on('shown', function () {
+        loadExternalCodeSnippets();
+    })
+</script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">API Documentation</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                    <li class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">
+                            API Documentation <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                                                        <li><a href="../namespaces/Horus.html">\Horus</a></li>
+                                                    </ul>
+                    </li>
+                    <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../reports/errors.html">
+                                    <i class="icon-list-alt"></i>&#160;Errors
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/markers.html">
+                                    <i class="icon-list-alt"></i>&#160;Markers
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-2026754449"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-2026754449" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-451768435"></a>
+                                <a href="../namespaces/Horus.html" style="margin-left: 30px; padding-left: 0">Horus</a>
+            </div>
+            <div id="namespace-451768435" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1517546205"></a>
+                                <a href="../namespaces/Horus.SiteBundle.html" style="margin-left: 30px; padding-left: 0">SiteBundle</a>
+            </div>
+            <div id="namespace-1517546205" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1608983514"></a>
+                                <a href="../namespaces/Horus.SiteBundle.Repository.html" style="margin-left: 30px; padding-left: 0">Repository</a>
+            </div>
+            <div id="namespace-1608983514" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Repository.ProduitRepository.html">ProduitRepository</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Repository.FamilleRepository.html">FamilleRepository</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Repository.TagRepository.html">TagRepository</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Repository.PageRepository.html">PageRepository</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Repository.CommercialRepository.html">CommercialRepository</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Repository.ArticleRepository.html">ArticleRepository</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Repository.CategoryRepository.html">CategoryRepository</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Repository.ImageRepository.html">ImageRepository</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Repository.AdministrateurRepository.html">AdministrateurRepository</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Repository.PjRepository.html">PjRepository</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-471307858"></a>
+                                <a href="../namespaces/Horus.SiteBundle.Form.html" style="margin-left: 30px; padding-left: 0">Form</a>
+            </div>
+            <div id="namespace-471307858" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Form.ArticleType.html">ArticleType</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Form.ImageCategoryType.html">ImageCategoryType</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Form.CommercialType.html">CommercialType</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Form.PageType.html">PageType</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Form.MetaType.html">MetaType</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Form.CategoryType.html">CategoryType</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Form.ImageType.html">ImageType</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Form.TagType.html">TagType</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Form.PjType.html">PjType</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Form.ProductType.html">ProductType</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Form.FamilleType.html">FamilleType</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Form.SeoType.html">SeoType</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Form.SearchType.html">SearchType</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1822527663"></a>
+                                <a href="../namespaces/Horus.SiteBundle.Entity.html" style="margin-left: 30px; padding-left: 0">Entity</a>
+            </div>
+            <div id="namespace-1822527663" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.Administrateur.html">Administrateur</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.Category.html">Category</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.Pj.html">Pj</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.Seo.html">Seo</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.Languages.html">Languages</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.ImageCategory.html">ImageCategory</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.PaylineWalletUsers.html">PaylineWalletUsers</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.PaylineWallet.html">PaylineWallet</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.PaylineCard.html">PaylineCard</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.Tag.html">Tag</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.Villes.html">Villes</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.Produit.html">Produit</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.Article.html">Article</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.Image.html">Image</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.Meta.html">Meta</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.Page.html">Page</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.Famille.html">Famille</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.Metier.html">Metier</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Entity.Commercial.html">Commercial</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1779611749"></a>
+                                <a href="../namespaces/Horus.SiteBundle.Controller.html" style="margin-left: 30px; padding-left: 0">Controller</a>
+            </div>
+            <div id="namespace-1779611749" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Controller.CommercialController.html">CommercialController</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Controller.ClientsController.html">ClientsController</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Controller.PaiementsController.html">PaiementsController</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Controller.CMSController.html">CMSController</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Controller.CommandesController.html">CommandesController</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Controller.LayoutController.html">LayoutController</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Controller.ProductController.html">ProductController</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Controller.MainController.html">MainController</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Controller.ConfiguresController.html">ConfiguresController</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Controller.TransportsController.html">TransportsController</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Controller.AdministrateurController.html">AdministrateurController</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Controller.CategoryController.html">CategoryController</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Controller.MediasController.html">MediasController</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1161858893"></a>
+                                <a href="../namespaces/Horus.SiteBundle.Tests.html" style="margin-left: 30px; padding-left: 0">Tests</a>
+            </div>
+            <div id="namespace-1161858893" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1643237441"></a>
+                                <a href="../namespaces/Horus.SiteBundle.Tests.Controller.html" style="margin-left: 30px; padding-left: 0">Controller</a>
+            </div>
+            <div id="namespace-1643237441" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Tests.Controller.DefaultControllerTest.html">DefaultControllerTest</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2115818489"></a>
+                                <a href="../namespaces/Horus.SiteBundle.Authentication.html" style="margin-left: 30px; padding-left: 0">Authentication</a>
+            </div>
+            <div id="namespace-2115818489" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Authentication.AuthenticationSiteHandler.html">AuthenticationSiteHandler</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1805753253"></a>
+                                <a href="../namespaces/Horus.SiteBundle.Menu.html" style="margin-left: 30px; padding-left: 0">Menu</a>
+            </div>
+            <div id="namespace-1805753253" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Menu.Builder.html">Builder</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1448935785"></a>
+                                <a href="../namespaces/Horus.SiteBundle.DependencyInjection.html" style="margin-left: 30px; padding-left: 0">DependencyInjection</a>
+            </div>
+            <div id="namespace-1448935785" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Horus.SiteBundle.DependencyInjection.Configuration.html">Configuration</a></li>
+                                                    <li class="class"><a href="../classes/Horus.SiteBundle.DependencyInjection.HorusSiteExtension.html">HorusSiteExtension</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-741242512"></a>
+                                <a href="../namespaces/Horus.SiteBundle.Payline.html" style="margin-left: 30px; padding-left: 0">Payline</a>
+            </div>
+            <div id="namespace-741242512" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Horus.SiteBundle.Payline.PaylineCron.html">PaylineCron</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Horus.SiteBundle.HorusSiteBundle.html">HorusSiteBundle</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <nav>
+                                                <a href="../namespaces/Horus.SiteBundle.Controller.html">\Horus\SiteBundle\Controller</a> <i class="icon-level-up"></i>
+                                            </nav>
+                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
+
+                    <h1><small>\Horus\SiteBundle\Controller</small>CategoryController</h1>
+                    <p><em>Class CategoryController</em></p>
+                    
+
+
+                    <section id="summary">
+                        <h2>Summary</h2>
+                        <section class="row-fluid heading">
+                            <section class="span4">
+                                <a href="#methods">Methods</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#properties">Properties</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#constants">Constants</a>
+                            </section>
+                        </section>
+                        <section class="row-fluid public">
+                            <section class="span4">
+                                                                    <a href="../classes/Horus.SiteBundle.Controller.CategoryController.html#method_famillesAction" class="">famillesAction()</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Controller.CategoryController.html#method_categoriesAction" class="">categoriesAction()</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Controller.CategoryController.html#method_removecategoryAction" class="">removecategoryAction()</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Controller.CategoryController.html#method_removefamilleAction" class="">removefamilleAction()</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Controller.CategoryController.html#method_createcategoryAction" class="">createcategoryAction()</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Controller.CategoryController.html#method_editfamilleAction" class="">editfamilleAction()</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Controller.CategoryController.html#method_createfamilleAction" class="">createfamilleAction()</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Controller.CategoryController.html#method_coverimagecategoryAction" class="">coverimagecategoryAction()</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Controller.CategoryController.html#method_removeimagecategoryAction" class="">removeimagecategoryAction()</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Controller.CategoryController.html#method_desactivecategoryAction" class="">desactivecategoryAction()</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Controller.CategoryController.html#method_activecategoryAction" class="">activecategoryAction()</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Controller.CategoryController.html#method_categoryAction" class="">categoryAction()</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Controller.CategoryController.html#method_familleAction" class="">familleAction()</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Controller.CategoryController.html#method_picturecategoryAction" class="">picturecategoryAction()</a><br />
+                                                                    <a href="../classes/Horus.SiteBundle.Controller.CategoryController.html#method_editcategoryAction" class="">editcategoryAction()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No public properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No constants found</em>
+                                                            </section>
+                        </section>
+                        <section class="row-fluid protected">
+                            <section class="span4">
+                                                                    <em>No protected methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No protected properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                        <section class="row-fluid private">
+                            <section class="span4">
+                                                                    <em>No private methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No private properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+                <aside class="span4 detailsbar">
+                                        
+                    
+                    <dl>
+                        <dt>File</dt>
+                            <dd><a href="../files/Controller.CategoryController.php.html"><div class="path-wrapper">Controller/CategoryController.php</div></a></dd>
+                                                <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">\Horus\SiteBundle\Controller</div></dd>
+                                                <dt>Class hierarchy</dt>
+                            <dd class="hierarchy">
+                                                                                                                                                                                                                                                                                                
+                                        <div class="namespace-wrapper">\Symfony\Bundle\FrameworkBundle\Controller\Controller</div>
+                                                                                                    <div class="namespace-wrapper">\Horus\SiteBundle\Controller\CategoryController</div>
+                            </dd>
+
+                        
+                        
+                        
+                                                                        </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                            <tr><td colspan="2"><em>None found</em></td></tr>
+                                        </table>
+                </aside>
+            </div>
+
+                        
+                        
+                                    <a id="methods" name="methods"></a>
+            <div class="row-fluid">
+                <div class="span8 content class"><h2>Methods</h2></div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_famillesAction" name="method_famillesAction" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">famillesAction()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">famillesAction() : \Symfony\Component\HttpFoundation\Response</pre>
+                <p><em>All Familles</em></p>
+                
+
+
+                
+                
+                                    <h4>Returns</h4>
+                    \Symfony\Component\HttpFoundation\Response
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_categoriesAction" name="method_categoriesAction" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">categoriesAction()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">categoriesAction() : \Symfony\Component\HttpFoundation\Response</pre>
+                <p><em>All Categories</em></p>
+                
+
+
+                
+                
+                                    <h4>Returns</h4>
+                    \Symfony\Component\HttpFoundation\Response
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_removecategoryAction" name="method_removecategoryAction" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">removecategoryAction()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">removecategoryAction(\Horus\SiteBundle\Entity\Category <span class="argument">$id</span>) : \Symfony\Component\HttpFoundation\RedirectResponse</pre>
+                <p><em>Remove a category</em></p>
+                
+
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td><a href="../classes/Horus.SiteBundle.Entity.Category.html">\Horus\SiteBundle\Entity\Category</a></td>
+                                <td>$id</td>
+                                <td>
+</td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Symfony\Component\HttpFoundation\RedirectResponse
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_removefamilleAction" name="method_removefamilleAction" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">removefamilleAction()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">removefamilleAction(\Horus\SiteBundle\Entity\Famille <span class="argument">$id</span>) : \Symfony\Component\HttpFoundation\RedirectResponse</pre>
+                <p><em>Remove a family</em></p>
+                
+
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td><a href="../classes/Horus.SiteBundle.Entity.Famille.html">\Horus\SiteBundle\Entity\Famille</a></td>
+                                <td>$id</td>
+                                <td>
+</td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Symfony\Component\HttpFoundation\RedirectResponse
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_createcategoryAction" name="method_createcategoryAction" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">createcategoryAction()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">createcategoryAction() : \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response</pre>
+                <p><em>Create a category</em></p>
+                
+
+
+                
+                
+                                    <h4>Returns</h4>
+                    \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_editfamilleAction" name="method_editfamilleAction" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">editfamilleAction()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">editfamilleAction(\Horus\SiteBundle\Entity\Famille <span class="argument">$id</span>) : \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response</pre>
+                <p><em>Edit a famille</em></p>
+                
+
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td><a href="../classes/Horus.SiteBundle.Entity.Famille.html">\Horus\SiteBundle\Entity\Famille</a></td>
+                                <td>$id</td>
+                                <td>
+</td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_createfamilleAction" name="method_createfamilleAction" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">createfamilleAction()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">createfamilleAction() : \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response</pre>
+                <p><em>Create a famille</em></p>
+                
+
+
+                
+                
+                                    <h4>Returns</h4>
+                    \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_coverimagecategoryAction" name="method_coverimagecategoryAction" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">coverimagecategoryAction()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">coverimagecategoryAction(\Horus\SiteBundle\Entity\ImageCategory <span class="argument">$id</span>) : \Symfony\Component\HttpFoundation\RedirectResponse</pre>
+                <p><em>Cover a image of category</em></p>
+                
+
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td><a href="../classes/Horus.SiteBundle.Entity.ImageCategory.html">\Horus\SiteBundle\Entity\ImageCategory</a></td>
+                                <td>$id</td>
+                                <td>
+</td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Symfony\Component\HttpFoundation\RedirectResponse
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_removeimagecategoryAction" name="method_removeimagecategoryAction" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">removeimagecategoryAction()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">removeimagecategoryAction(\Horus\SiteBundle\Entity\ImageCategory <span class="argument">$id</span>) : \Symfony\Component\HttpFoundation\RedirectResponse</pre>
+                <p><em>Remove a image of category</em></p>
+                
+
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td><a href="../classes/Horus.SiteBundle.Entity.ImageCategory.html">\Horus\SiteBundle\Entity\ImageCategory</a></td>
+                                <td>$id</td>
+                                <td>
+</td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Symfony\Component\HttpFoundation\RedirectResponse
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_desactivecategoryAction" name="method_desactivecategoryAction" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">desactivecategoryAction()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">desactivecategoryAction(\Horus\SiteBundle\Entity\Category <span class="argument">$id</span>) : \Symfony\Component\HttpFoundation\RedirectResponse</pre>
+                <p><em>Desactive a category</em></p>
+                
+
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td><a href="../classes/Horus.SiteBundle.Entity.Category.html">\Horus\SiteBundle\Entity\Category</a></td>
+                                <td>$id</td>
+                                <td>
+</td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Symfony\Component\HttpFoundation\RedirectResponse
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_activecategoryAction" name="method_activecategoryAction" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">activecategoryAction()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">activecategoryAction(\Horus\SiteBundle\Entity\Category <span class="argument">$id</span>) : \Symfony\Component\HttpFoundation\RedirectResponse</pre>
+                <p><em>Active a Category</em></p>
+                
+
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td><a href="../classes/Horus.SiteBundle.Entity.Category.html">\Horus\SiteBundle\Entity\Category</a></td>
+                                <td>$id</td>
+                                <td>
+</td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Symfony\Component\HttpFoundation\RedirectResponse
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_categoryAction" name="method_categoryAction" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">categoryAction()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">categoryAction(\Horus\SiteBundle\Entity\Category <span class="argument">$id</span>) : \Symfony\Component\HttpFoundation\Response</pre>
+                <p><em>Get a Category</em></p>
+                
+
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td><a href="../classes/Horus.SiteBundle.Entity.Category.html">\Horus\SiteBundle\Entity\Category</a></td>
+                                <td>$id</td>
+                                <td>
+</td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Symfony\Component\HttpFoundation\Response
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_familleAction" name="method_familleAction" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">familleAction()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">familleAction(\Horus\SiteBundle\Entity\Famille <span class="argument">$id</span>) : \Symfony\Component\HttpFoundation\Response</pre>
+                <p><em>Get a famille</em></p>
+                
+
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td><a href="../classes/Horus.SiteBundle.Entity.Famille.html">\Horus\SiteBundle\Entity\Famille</a></td>
+                                <td>$id</td>
+                                <td>
+</td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Symfony\Component\HttpFoundation\Response
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_picturecategoryAction" name="method_picturecategoryAction" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">picturecategoryAction()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">picturecategoryAction(\Horus\SiteBundle\Entity\Category <span class="argument">$id</span>) : \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response</pre>
+                <p><em>Get a picture of category</em></p>
+                
+
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td><a href="../classes/Horus.SiteBundle.Entity.Category.html">\Horus\SiteBundle\Entity\Category</a></td>
+                                <td>$id</td>
+                                <td>
+</td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_editcategoryAction" name="method_editcategoryAction" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">editcategoryAction()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">editcategoryAction(\Horus\SiteBundle\Entity\Category <span class="argument">$id</span>) : \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response</pre>
+                <p><em>Edit a category</em></p>
+                
+
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td><a href="../classes/Horus.SiteBundle.Entity.Category.html">\Horus\SiteBundle\Entity\Category</a></td>
+                                <td>$id</td>
+                                <td>
+</td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                                    </div>
+    </section>
+
+    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="source-view-label">CategoryController.php</h3>
+        </div>
+        <div class="modal-body">
+            <pre data-src="../files/Controller/CategoryController.php.txt" class="language-php line-numbers"></pre>
+        </div>
+    </div>
+
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">
+                                                        <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>
+                                                                            <li><a href="../namespaces/Horus.html">\Horus</a></li>
+                                                                    </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="">Errors</a></li>
+                                    <li><a href="">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    on November 21st, 2013 at 15:59.
+                </section>
+            </section>
+        </section>
+    </footer>
+</div>
+
+</body>
+</html>
