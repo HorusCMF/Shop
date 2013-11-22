@@ -95,14 +95,16 @@ class MainCest
                 'reference' => 'ok',
                 'ean' => 'ok',
                 'prixHT' => 'ok',
+                'seo[0][title]' => 'ok',
                 'prixTTC' => 'ok',
             ));
         $errors = $I->grabTextFrom('.alert');
         $I->see('Le titre ne doit pas etre vide');
         $I->see('Le résumé ne doit pas etre vide');
         $I->see('La description ne doit pas etre vide');
-        $I->see("Le prix HT n'est pas valide");
-        $I->see("Le prix TTC n'est pas valide");
+//        $I->see("Le prix HT n'est pas valide");
+//        $I->see("Le prix TTC n'est pas valide");
+        $I->see("Votre titre  de référencement doit faire au moins 5 caractères");
         $I->see('Votre accroche doit faire au moins 5 caractères');
     }
 

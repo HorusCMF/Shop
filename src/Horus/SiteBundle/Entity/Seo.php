@@ -29,8 +29,8 @@ class Seo
      * @Assert\Length(
      *      min = "5",
      *      max = "1000",
-     *      minMessage = "Votre titre doit faire au moins {{ limit }} caractères",
-     *      maxMessage = "Votre titre ne peut pas être plus long que {{ limit }} caractères"
+     *      minMessage = "Votre titre de référencement doit faire au moins {{ limit }} caractères",
+     *      maxMessage = "Votre titre de référencement ne peut pas être plus long que {{ limit }} caractères"
      * )
      * @ORM\Column(name="title", type="text", nullable=true)
      */
@@ -46,9 +46,10 @@ class Seo
      * @Assert\Length(
      *      min = "5",
      *      max = "1000",
-     *      minMessage = "Votre description doit faire au moins {{ limit }} caractères",
-     *      maxMessage = "Votre description ne peut pas être plus long que {{ limit }} caractères"
-     * )     * @ORM\Column(name="description", type="text", nullable=true)
+     *      minMessage = "Votre description de référencement doit faire au moins {{ limit }} caractères",
+     *      maxMessage = "Votre description de référencement ne peut pas être plus long que {{ limit }} caractères"
+     * )
+     * @ORM\Column(name="description", type="text", nullable=true)
      */
     private $description;
 

@@ -110,7 +110,7 @@
 
  <body>
  <div class="layout">
- <h1>Codeception Results <small><span style="color: green">OK</span> (15s)</small></h1>
+ <h1>Codeception Results <small><span style="color: red">FAILED</span> (15s)</small></h1>
 
 
 	 <table border="0" style="width: 100%;">
@@ -120,7 +120,7 @@
  </td>
 </tr>   <tr>
     <td>
-     <p class="scenarioSuccess" onclick="showHide('1', this)">[+] on home (MainCest.onHome) (0.37s)</p>
+     <p class="scenarioSuccess" onclick="showHide('1', this)">[+] on home (MainCest.onHome) (0.36s)</p>
     </td>
    </tr>
    <tr>
@@ -157,7 +157,7 @@
 
    <tr>
     <td>
-     <p class="scenarioSuccess" onclick="showHide('2', this)">[+] on failure auth (MainCest.onFailureAuthentificate) (0.27s)</p>
+     <p class="scenarioSuccess" onclick="showHide('2', this)">[+] on failure auth (MainCest.onFailureAuthentificate) (0.26s)</p>
     </td>
    </tr>
    <tr>
@@ -190,7 +190,7 @@
 
    <tr>
     <td>
-     <p class="scenarioSuccess" onclick="showHide('3', this)">[+] on success authentificate (MainCest.onSuccessAuthentificate) (0.57s)</p>
+     <p class="scenarioSuccess" onclick="showHide('3', this)">[+] on success authentificate (MainCest.onSuccessAuthentificate) (0.58s)</p>
     </td>
    </tr>
    <tr>
@@ -223,7 +223,7 @@
 
    <tr>
     <td>
-     <p class="scenarioSuccess" onclick="showHide('4', this)">[+] in products page (MainCest.onProducts) (0.82s)</p>
+     <p class="scenarioSuccess" onclick="showHide('4', this)">[+] in products page (MainCest.onProducts) (0.8s)</p>
     </td>
    </tr>
    <tr>
@@ -244,7 +244,7 @@
 
    <tr>
     <td>
-     <p class="scenarioSuccess" onclick="showHide('5', this)">[+] in products create page (MainCest.onCreateProducts) (1.02s)</p>
+     <p class="scenarioSuccess" onclick="showHide('5', this)">[+] in products create page (MainCest.onCreateProducts) (0.97s)</p>
     </td>
    </tr>
    <tr>
@@ -265,12 +265,32 @@
 
    <tr>
     <td>
-     <p class="scenarioSuccess" onclick="showHide('6', this)">[+] in products create page (MainCest.onCreateProcessFailureProducts) (1.56s)</p>
+     <p class="scenarioFailed" onclick="showHide('6', this)">[+] in products create page (MainCest.onCreateProcessFailureProducts) (1.42s)</p>
     </td>
    </tr>
    <tr>
     <td>
-     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer6">
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer6">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Authentification"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I submit form <span style="color: #732E81;">"form",{"_username":"test@yahoo.fr","_password":"djscrave"}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Modern Solution for E-Commerce for Minimalist Operations"</span></td>
+      </tr>
+
       <tr>
        <td class="stepName">I am on page <span style="color: #732E81;">"/backend/produits/creer"</span></td>
       </tr>
@@ -280,7 +300,7 @@
       </tr>
 
       <tr>
-       <td class="stepName">I submit form <span style="color: #732E81;">"form#createproduct",{"accroche":"o","reference":"ok","ean":"ok","prixHT":"ok","prixTTC":"ok"}</span></td>
+       <td class="stepName">I submit form <span style="color: #732E81;">"form#createproduct",{"accroche":"o","reference":"ok","ean":"ok","prixHT":"ok","seo[0][title]":"ok","prixTTC":"ok"}</span></td>
       </tr>
 
       <tr>
@@ -300,7 +320,7 @@
       </tr>
 
       <tr>
-       <td class="stepName">I see <span style="color: #732E81;">"Votre accroche doit faire au moins 5 caractères"</span></td>
+       <td class="stepName">I see <span style="color: #732E81;">"Votre titre  de référencement doit faire au moins 5 caractères"</span></td>
       </tr>
 
 
@@ -310,7 +330,7 @@
 
    <tr>
     <td>
-     <p class="scenarioSuccess" onclick="showHide('7', this)">[+] in commercials page (MainCest.onCommercials) (0.73s)</p>
+     <p class="scenarioSuccess" onclick="showHide('7', this)">[+] in commercials page (MainCest.onCommercials) (0.8s)</p>
     </td>
    </tr>
    <tr>
@@ -331,7 +351,7 @@
 
    <tr>
     <td>
-     <p class="scenarioSuccess" onclick="showHide('8', this)">[+] in commercials create page (MainCest.onCommercialCreate) (0.85s)</p>
+     <p class="scenarioSuccess" onclick="showHide('8', this)">[+] in commercials create page (MainCest.onCommercialCreate) (0.87s)</p>
     </td>
    </tr>
    <tr>
@@ -352,7 +372,7 @@
 
    <tr>
     <td>
-     <p class="scenarioSuccess" onclick="showHide('9', this)">[+] in categories page (MainCest.onCategories) (0.78s)</p>
+     <p class="scenarioSuccess" onclick="showHide('9', this)">[+] in categories page (MainCest.onCategories) (0.79s)</p>
     </td>
    </tr>
    <tr>
@@ -394,7 +414,7 @@
 
    <tr>
     <td>
-     <p class="scenarioSuccess" onclick="showHide('11', this)">[+] in families page (MainCest.onFamilies) (0.86s)</p>
+     <p class="scenarioSuccess" onclick="showHide('11', this)">[+] in families page (MainCest.onFamilies) (0.76s)</p>
     </td>
    </tr>
    <tr>
@@ -436,7 +456,7 @@
 
    <tr>
     <td>
-     <p class="scenarioSuccess" onclick="showHide('13', this)">[+] on pages (MainCest.onPages) (0.8s)</p>
+     <p class="scenarioSuccess" onclick="showHide('13', this)">[+] on pages (MainCest.onPages) (0.79s)</p>
     </td>
    </tr>
    <tr>
@@ -457,7 +477,7 @@
 
    <tr>
     <td>
-     <p class="scenarioSuccess" onclick="showHide('14', this)">[+] on pages (MainCest.onCreatePages) (0.83s)</p>
+     <p class="scenarioSuccess" onclick="showHide('14', this)">[+] on pages (MainCest.onCreatePages) (0.84s)</p>
     </td>
    </tr>
    <tr>
@@ -478,7 +498,7 @@
 
    <tr>
     <td>
-     <p class="scenarioSuccess" onclick="showHide('15', this)">[+] on articles (MainCest.onArticles) (0.74s)</p>
+     <p class="scenarioSuccess" onclick="showHide('15', this)">[+] on articles (MainCest.onArticles) (0.75s)</p>
     </td>
    </tr>
    <tr>
@@ -499,7 +519,7 @@
 
    <tr>
     <td>
-     <p class="scenarioSuccess" onclick="showHide('16', this)">[+] on create articles (MainCest.onCreateArticles) (0.91s)</p>
+     <p class="scenarioSuccess" onclick="showHide('16', this)">[+] on create articles (MainCest.onCreateArticles) (0.87s)</p>
     </td>
    </tr>
    <tr>
@@ -520,7 +540,7 @@
 
    <tr>
     <td>
-     <p class="scenarioSuccess" onclick="showHide('17', this)">[+] on tags (MainCest.onTags) (0.72s)</p>
+     <p class="scenarioSuccess" onclick="showHide('17', this)">[+] on tags (MainCest.onTags) (0.77s)</p>
     </td>
    </tr>
    <tr>
@@ -541,7 +561,7 @@
 
    <tr>
     <td>
-     <p class="scenarioSuccess" onclick="showHide('18', this)">[+] create tag (MainCest.onCreateTags) (0.76s)</p>
+     <p class="scenarioSuccess" onclick="showHide('18', this)">[+] create tag (MainCest.onCreateTags) (0.85s)</p>
     </td>
    </tr>
    <tr>
@@ -562,7 +582,7 @@
 
    <tr>
     <td>
-     <p class="scenarioSuccess" onclick="showHide('19', this)">[+] medias (MainCest.onMedias) (0.83s)</p>
+     <p class="scenarioSuccess" onclick="showHide('19', this)">[+] medias (MainCest.onMedias) (0.89s)</p>
     </td>
    </tr>
    <tr>
@@ -589,11 +609,11 @@
       <table border="0">
        <tr>
         <td width="250" class="scenarioSuccess">Successful scenarios:</td>
-        <td class="scenarioSuccessValue"><strong>19</strong></td>
+        <td class="scenarioSuccessValue"><strong>18</strong></td>
        </tr>
        <tr>
         <td class="scenarioFailed">Failed scenarios:</td>
-        <td class="scenarioFailedValue"><strong>0</strong></td>
+        <td class="scenarioFailedValue"><strong>1</strong></td>
        </tr>
        <tr>
         <td class="scenarioSkipped">Skipped scenarios:</td>
