@@ -38,4 +38,18 @@ class AdministrateurController extends Controller
         );
     }
 
+    /**
+     *  All Online Administrateurs
+     * @return type
+     */
+    public function onlineAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $admins = $em->getRepository('HorusSiteBundle:Administrateur')->findAll();
+
+        return $this->get('templating')->renderResponse(
+            'HorusSiteBundle:Administrateurs:online.html.twig', array('admins' => $admins)
+        );
+    }
+
 }

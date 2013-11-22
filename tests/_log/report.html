@@ -110,7 +110,7 @@
 
  <body>
  <div class="layout">
- <h1>Codeception Results <small><span style="color: green">OK</span> (2.3s)</small></h1>
+ <h1>Codeception Results <small><span style="color: green">OK</span> (15s)</small></h1>
 
 
 	 <table border="0" style="width: 100%;">
@@ -120,12 +120,157 @@
  </td>
 </tr>   <tr>
     <td>
-     <p class="scenarioSuccess" onclick="showHide('1', this)">[+] in products create page (MainCest.onCreateProcessFailureProducts) (2.32s)</p>
+     <p class="scenarioSuccess" onclick="showHide('1', this)">[+] on home (MainCest.onHome) (0.37s)</p>
     </td>
    </tr>
    <tr>
     <td>
      <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer1">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Authentification"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Souvenir de moi"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Authentification"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Souvenir de moi"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioSuccess" onclick="showHide('2', this)">[+] on failure auth (MainCest.onFailureAuthentificate) (0.27s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer2">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Authentification"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I submit form <span style="color: #732E81;">"form",{"_username":"test@yahoo.fr","_password":"ok"}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I grab text from <span style="color: #732E81;">".alert"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I <strong>I expect ?</strong></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioSuccess" onclick="showHide('3', this)">[+] on success authentificate (MainCest.onSuccessAuthentificate) (0.57s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer3">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Authentification"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I submit form <span style="color: #732E81;">"form",{"_username":"test@yahoo.fr","_password":"djscrave"}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Modern Solution for E-Commerce for Minimalist Operations"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioSuccess" onclick="showHide('4', this)">[+] in products page (MainCest.onProducts) (0.82s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer4">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend/produits"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Vos produits"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioSuccess" onclick="showHide('5', this)">[+] in products create page (MainCest.onCreateProducts) (1.02s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer5">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend/produits/creer"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Créer un produit"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioSuccess" onclick="showHide('6', this)">[+] in products create page (MainCest.onCreateProcessFailureProducts) (1.56s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer6">
       <tr>
        <td class="stepName">I am on page <span style="color: #732E81;">"/backend/produits/creer"</span></td>
       </tr>
@@ -163,6 +308,279 @@
     </td>
    </tr>
 
+   <tr>
+    <td>
+     <p class="scenarioSuccess" onclick="showHide('7', this)">[+] in commercials page (MainCest.onCommercials) (0.73s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer7">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend/commercials"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Vos actions commerciales"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioSuccess" onclick="showHide('8', this)">[+] in commercials create page (MainCest.onCommercialCreate) (0.85s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer8">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend/commercials/ajouter"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Créer une action"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioSuccess" onclick="showHide('9', this)">[+] in categories page (MainCest.onCategories) (0.78s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer9">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend/categories"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Vos catégories"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioSuccess" onclick="showHide('10', this)">[+] in categories page (MainCest.onCategoriesCreate) (0.81s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer10">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend/categories/ajouter"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Créer une catégorie"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioSuccess" onclick="showHide('11', this)">[+] in families page (MainCest.onFamilies) (0.86s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer11">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend/familles"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Vos familles"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioSuccess" onclick="showHide('12', this)">[+] create a family (MainCest.onFamilyCreate) (0.8s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer12">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend/familles/ajouter"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Créer une famille"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioSuccess" onclick="showHide('13', this)">[+] on pages (MainCest.onPages) (0.8s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer13">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend/pages"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Vos pages"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioSuccess" onclick="showHide('14', this)">[+] on pages (MainCest.onCreatePages) (0.83s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer14">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend/pages/ajouter"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Créer une page"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioSuccess" onclick="showHide('15', this)">[+] on articles (MainCest.onArticles) (0.74s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer15">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend/articles"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Vos articles"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioSuccess" onclick="showHide('16', this)">[+] on create articles (MainCest.onCreateArticles) (0.91s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer16">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend/articles/ajouter"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Créer un article"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioSuccess" onclick="showHide('17', this)">[+] on tags (MainCest.onTags) (0.72s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer17">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend/tags"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Vos tags"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioSuccess" onclick="showHide('18', this)">[+] create tag (MainCest.onCreateTags) (0.76s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer18">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend/tags/ajouter"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Créer un tag"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioSuccess" onclick="showHide('19', this)">[+] medias (MainCest.onMedias) (0.83s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer19">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend/medias"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Vos images"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
 
    <tr>
     <td>
@@ -171,7 +589,7 @@
       <table border="0">
        <tr>
         <td width="250" class="scenarioSuccess">Successful scenarios:</td>
-        <td class="scenarioSuccessValue"><strong>1</strong></td>
+        <td class="scenarioSuccessValue"><strong>19</strong></td>
        </tr>
        <tr>
         <td class="scenarioFailed">Failed scenarios:</td>

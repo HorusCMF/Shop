@@ -101,6 +101,8 @@ class MainCest
         $I->see('Le titre ne doit pas etre vide');
         $I->see('Le résumé ne doit pas etre vide');
         $I->see('La description ne doit pas etre vide');
+        $I->see("Le prix HT n'est pas valide");
+        $I->see("Le prix TTC n'est pas valide");
         $I->see('Votre accroche doit faire au moins 5 caractères');
     }
 

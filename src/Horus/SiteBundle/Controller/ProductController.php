@@ -63,13 +63,20 @@ class ProductController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
+        $this->get('session')->getFlashBag()->add(
+            'messagerealtime',
+            "Le produit ".$id->getTitle()." vient d'être supprimé"
+        );
+
         $em->remove($id);
         $em->flush();
         $this->get('session')->getFlashBag()->add(
             'success',
-            "Le produit a bien été activé"
+            "Le produit a été supprimé"
         );
 
+
+        
         return $this->redirect($this->generateUrl('horus_site_products'));
     }
 
@@ -86,7 +93,7 @@ class ProductController extends Controller
         $em->flush();
         $this->get('session')->getFlashBag()->add(
             'success',
-            "L'image du produit a bien été activé"
+            "L'image du produit a été activé"
         );
 
         return $this->redirect($this->generateUrl('horus_site_edit_pictures_product', array('id' => $id->getProduit()->getId())));
@@ -118,7 +125,7 @@ class ProductController extends Controller
 
         $this->get('session')->getFlashBag()->add(
             'success',
-            "L'image du produit a bien été mise en avant"
+            "L'image du produit a été mise en avant"
         );
 
         return $this->redirect($this->generateUrl('horus_site_edit_pictures_product', array('id' => $id->getProduit()->getId())));
@@ -145,7 +152,7 @@ class ProductController extends Controller
             $em->flush();
             $this->get('session')->getFlashBag()->add(
                 'success',
-                "L'image a bien été ajouté"
+                "L'image a été ajouté"
             );
             return new JsonResponse(true);
         }
@@ -187,8 +194,13 @@ class ProductController extends Controller
         $em->flush();
         $this->get('session')->getFlashBag()->add(
             'success',
-            "Le produit a bien été désactivé"
+            "Le produit a été désactivé"
         );
+        $this->get('session')->getFlashBag()->add(
+            'messagerealtime',
+            "Le produit ".$id->getTitle()." a été desactivé"
+        );
+
 
         return $this->redirect($this->generateUrl('horus_site_products'));
     }
@@ -207,7 +219,11 @@ class ProductController extends Controller
         $em->flush();
         $this->get('session')->getFlashBag()->add(
             'success',
-            "Le produit a bien été activé"
+            "Le produit a été activé"
+        );
+        $this->get('session')->getFlashBag()->add(
+            'messagerealtime',
+            "Le produit ".$id->getTitle()." a été activé"
         );
 
         return $this->redirect($this->generateUrl('horus_site_products'));
@@ -252,11 +268,11 @@ class ProductController extends Controller
             $em->flush();
             $this->get('session')->getFlashBag()->add(
                 'success',
-                "Le produit a bien été ajouté"
+                "Le produit a été ajouté"
             );
             $this->get('session')->getFlashBag()->add(
-                'createproduct',
-                "Le produit a bien été ajouté"
+                'messagerealtime',
+                "Le produit ".$produit->getTitle()." vient d'être crée"
             );
             return $this->redirect($this->generateUrl('horus_site_edit_pictures_product', array('id' => $produit->getId())));
         }
@@ -311,7 +327,12 @@ class ProductController extends Controller
             $em->flush();
             $this->get('session')->getFlashBag()->add(
                 'success',
-                "Le produit a bien été edité"
+                "Le produit a été edité"
+            );
+
+            $this->get('session')->getFlashBag()->add(
+                'messagerealtime',
+                "Le produit ".$id->getTitle()." vient d'être modifié"
             );
             return $this->redirect($this->generateUrl('horus_site_products'));
         }

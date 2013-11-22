@@ -17,6 +17,10 @@ use Gedmo\Mapping\Annotation as Gedmo; // gedmo annotations
 class Produit
 {
 
+
+    /**
+     * Constructor
+     */
     public function __construct(){
         $this->datePublication = new \Datetime('now');
         $this->dateCreated = new \Datetime('now');
@@ -108,7 +112,7 @@ class Produit
      * @Assert\NotBlank(
      *     message = "Le prix HT ne doit pas etre vide"
      * )
-     * @Assert\Regex(pattern="/[0-9]{1,}[.,]{0,1}[0-9]{0,2}/", message="Le prix TTC n'est pas valide")
+     * @Assert\Regex(pattern="/[0-9]{1,}[.,]{0,1}[0-9]{0,2}/", message="Le prix HT n'est pas valide")
      * @ORM\Column(name="prixHT", type="float", nullable=false)
      */
     private $prixHT;
@@ -1109,6 +1113,9 @@ class Produit
         return $this;
     }
 
+    /**
+     * @param ArrayCollection $metas
+     */
     public function setMetas(ArrayCollection $metas)
     {
         foreach ($metas as $meta) {

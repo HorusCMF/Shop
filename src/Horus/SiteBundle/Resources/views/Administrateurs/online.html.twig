@@ -1,0 +1,16 @@
+<button id="closepanel" type="button" class="close" data-dismiss="alert"><i
+            class="glyphicon glyphicon-remove-circle"></i></button>
+<div class="panel panel-primary">
+    <div class="panel-heading"><h4><i class="glyphicon glyphicon-transfer"></i> Qui est en ligne?</h4>
+    </div>
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+            {% for admin in admins %}
+                <li>
+                    {% if admin.online %}<img src="/images/online.png" />{% else %}<img src="/images/offline.png" />{% endif %} {{ admin.firstname|title }} {{ admin.lastname|title }}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="panel-heading"></div>
+</div>

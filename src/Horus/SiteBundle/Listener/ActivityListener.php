@@ -6,7 +6,7 @@ use Symfony\Component\Security\Core\SecurityContext;
 use Doctrine\Bundle\DoctrineBundle\Registry as Doctrine;
 use Symfony\Component\HttpKernel\Event\FilterControllerEvent;
 use Symfony\Component\HttpKernel\HttpKernel;
-use Wks\SiteBundle\Entity\Users;
+use Horus\SiteBundle\Entity\Administrateur;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 use Doctrine\Common\Util\Debug as Debug;
@@ -56,19 +56,15 @@ class ActivityListener
 
         // Nous vérifions qu'un token d'autentification est bien présent avant d'essayer manipuler l'utilisateur courant.
         if ($this->context->getToken()) {
-//            $this->context->setToken(null);
-//            exit(Debug::dump($this->context->getToken()));
-
-
-            /**
-             * Notifications publiques
-             */
             $user = $this->context->getToken()->getUser();
+            $delay = new \DateTime();
+            $delay->setTimestamp(strtotime('5 minutes ago'));
 
-            $request = $this->container->get('request');
-            $routeName = $request->get('_route');
-            $plages = array('site_users_rdv', 'site_users_offer', 'site_user', 'site_partenaires_profil','site_users_rdv_participate' ,'site_users_offer_participate', 'site_users_rdv_add_comm', 'site_users_offers_add_comm', 'site_users_partenaire_add_comm', 'site_partenaire_add_favoris','site_users_friends_confirm', 'site_rdv_create_step2');
-
+            // Nous vérifions que l'utilisateur est bien du bon type pour ne pas appeler getLastActivity() sur un objet autre objet User
+            if ($user instanceof Administrateur && $user->getLastActivity() < $delay) {
+                $user->isActiveNow();
+                $this->em->flush($user);
+            }
 
         }
     }

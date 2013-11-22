@@ -10,14 +10,15 @@ $(document).ready(function () {
 
     // on the client connected
     socket.on('logged', function (user) {
-        $html ='<h3><i class="glyphicon glyphicon-info-sign"></i> '+ user.firstname +' '+ user.lastname +' s\'est connecté</h3>';
+        $html ='<h3><i class="glyphicon glyphicon-info-sign"></i> '+ user.firstname +' '+ user.lastname +' vient de se connecter</h3>';
         $('#mini-notification').html($html);
         $('#mini-notification').miniNotification({closeButton: false});
     });
 
-    // on the client connected
-    socket.on('createproduct', function (user) {
-        $html ='<h3><i class="glyphicon glyphicon-info-sign"></i> '+ user.firstname +' '+ user.lastname +' a créer un produit</h3>';
+
+    // on create action comm
+    socket.on('alerting', function (user) {
+        $html ='<h4><i class="glyphicon glyphicon-info-sign"></i> '+ user.message +' par '+ user.firstname +' '+ user.lastname +'</h4>';
         $('#mini-notification').html($html);
         $('#mini-notification').miniNotification({closeButton: false});
     });

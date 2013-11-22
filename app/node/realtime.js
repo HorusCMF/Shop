@@ -6,6 +6,13 @@ var sockets = {};
 
 
 /**
+ * nohup nodejs app/node/realtime.js > /dev/null 2>&1  & to launch in bg
+ * kill -0
+ * nohup server &
+ * ps -a | grep "nodejs"
+ */
+
+/**
  * Initialisation...
  */
 //var io = require('socket.io').listen(server);
@@ -43,12 +50,45 @@ io.sockets.on('connection', function (socket) {
     });
 
     /**
-     * On User logged
+     * On User create a product
      */
-    socket.on('createproduct', function (user) {
+    socket.on('alerting', function (user) {
         me = user;
-        socket.broadcast.emit('createproduct', me);
+        socket.broadcast.emit('alerting', me);
     });
+
+
+//    /**
+//     * On User edit a product
+//     */
+//    socket.on('editproduct', function (user) {
+//        me = user;
+//        socket.broadcast.emit('editproduct', me);
+//    });
+//
+//    /**
+//     * On User edit a product
+//     */
+//    socket.on('createactioncomm', function (user) {
+//        me = user;
+//        socket.broadcast.emit('createactioncomm', me);
+//    });
+//
+//    /**
+//     * On User edit a product
+//     */
+//    socket.on('removeactioncomm', function (user) {
+//        me = user;
+//        socket.broadcast.emit('createactioncomm', me);
+//    });
+//
+//    /**
+//     * On User edit a product
+//     */
+//    socket.on('editactioncomm', function (user) {
+//        me = user;
+//        socket.broadcast.emit('createactioncomm', me);
+//    });
 
     /**
      * When User Disconnect

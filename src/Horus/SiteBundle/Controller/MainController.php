@@ -132,7 +132,7 @@ class MainController extends Controller
             $paginate_by_page,
             array('pageParameterName' => 'page6')
         );
-
+        ;
         return $this->render('HorusSiteBundle:Main:search.html.twig',
             array('form' => $form->createView(),
                 'produits' => $pagination,

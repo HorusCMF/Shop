@@ -6,17 +6,14 @@
     {{ parent() }}
 
     <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css" href="http://bootswatch.com/amelia/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="http://getbootstrap.com/2.3.2/assets/css/bootstrap-responsive.css"/>
     <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.10.3/themes/hot-sneaks/jquery-ui.css"/>
     <link rel="stylesheet" type="text/css" href="http://davidstutz.github.io/bootstrap-multiselect/css/bootstrap-multiselect.css"/>
 
-    <!--[if (lt IE 6)|(IE 7)|(IE 8)]>
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic' rel='stylesheet' type='text/css'>    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400" />
-    {% stylesheets '@HorusSiteBundle/Resources/public/css/ie.sass' filter='yui_css' %}
-    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+
+    {% stylesheets '@HorusSiteBundle/Resources/public/css/bootswatch.css' filter='yui_css' %}
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
     {% endstylesheets %}
-    <![endif]-->
 
     {% stylesheets '@HorusSiteBundle/Resources/public/css/flat/green.css' filter='yui_css' %}
     <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
@@ -69,7 +66,9 @@
             </div>
             <a class="scrollup">Scroll</a>
 
-            {% include 'HorusSiteBundle:Slots:connected.html.twig' %}
+            {% if app.user.id is defined %}
+                {% include 'HorusSiteBundle:Slots:connected.html.twig' %}
+            {% endif %}
         </div>
     </div>
     <div id="footer">

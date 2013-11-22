@@ -50,7 +50,7 @@ class CMSController extends Controller
             $em->flush();
             $this->get('session')->getFlashBag()->add(
                 'success',
-                "Le tag a bien été ajouté"
+                "Le tag a été ajouté"
             );
 
             return $this->redirect($this->generateUrl('horus_site_tags'));
@@ -81,7 +81,7 @@ class CMSController extends Controller
             $em->flush();
             $this->get('session')->getFlashBag()->add(
                 'success',
-                "Le tag a bien été modifié"
+                "Le tag a été modifié"
             );
 
             return $this->redirect($this->generateUrl('horus_site_tags'));
@@ -147,7 +147,7 @@ class CMSController extends Controller
         $em->flush();
         $this->get('session')->getFlashBag()->add(
             'success',
-            "Le tag a bien été supprimé"
+            "Le tag a été supprimé"
         );
 
         return $this->redirect($this->generateUrl('horus_site_tags'));
@@ -180,7 +180,11 @@ class CMSController extends Controller
             $em->flush();
             $this->get('session')->getFlashBag()->add(
                 'success',
-                "L'article a bien été ajouté"
+                "L'article a été ajouté"
+            );
+            $this->get('session')->getFlashBag()->add(
+                'messagerealtime',
+                "L'article ".$page->getTitle()." vient d'être crée"
             );
             return $this->redirect($this->generateUrl('horus_site_articles'));
         }
@@ -219,7 +223,11 @@ class CMSController extends Controller
             $em->flush();
             $this->get('session')->getFlashBag()->add(
                 'success',
-                "L'article a bien été editée"
+                "L'article a été edité"
+            );
+            $this->get('session')->getFlashBag()->add(
+                'messagerealtime',
+                "L'article ".$id->getTitle()." vient d'être edité"
             );
 
             return $this->redirect($this->generateUrl('horus_site_articles'));
@@ -242,13 +250,17 @@ class CMSController extends Controller
     public function removearticleAction(Article $id)
     {
         $em = $this->getDoctrine()->getManager();
-
+        $this->get('session')->getFlashBag()->add(
+            'messagerealtime',
+            "L'article ".$id->getTitle()." vient d'être supprimé"
+        );
         $em->remove($id);
         $em->flush();
         $this->get('session')->getFlashBag()->add(
             'success',
-            "L'article a bien été supprimé"
+            "L'article a été supprimé"
         );
+
         return $this->redirect($this->generateUrl('horus_site_articles'));
     }
 
@@ -267,7 +279,11 @@ class CMSController extends Controller
         $em->flush();
         $this->get('session')->getFlashBag()->add(
             'success',
-            "L'article a bien été désactivé"
+            "L'article a été désactivé"
+        );
+        $this->get('session')->getFlashBag()->add(
+            'messagerealtime',
+            "L'article ".$id->getTitle()." vient d'être desactivé"
         );
         return $this->redirect($this->generateUrl('horus_site_articles'));
     }
@@ -286,7 +302,11 @@ class CMSController extends Controller
         $em->flush();
         $this->get('session')->getFlashBag()->add(
             'success',
-            "L'article a bien été activé"
+            "L'article a été activé"
+        );
+        $this->get('session')->getFlashBag()->add(
+            'messagerealtime',
+            "L'article ".$id->getTitle()." vient d'être activé"
         );
         return $this->redirect($this->generateUrl('horus_site_articles'));
     }
@@ -324,7 +344,11 @@ class CMSController extends Controller
             $em->flush();
             $this->get('session')->getFlashBag()->add(
                 'success',
-                "La page a bien été ajoutée"
+                "La page a été ajoutée"
+            );
+            $this->get('session')->getFlashBag()->add(
+                'messagerealtime',
+                "La page ".$page->getName()." vient d'être crée"
             );
             return $this->redirect($this->generateUrl('horus_site_pages'));
         }
@@ -346,13 +370,17 @@ class CMSController extends Controller
     public function removepageAction(Page $id)
     {
         $em = $this->getDoctrine()->getManager();
-
+        $this->get('session')->getFlashBag()->add(
+            'messagerealtime',
+            "La page ".$id->getTitle()." vient d'être crée"
+        );
         $em->remove($id);
         $em->flush();
         $this->get('session')->getFlashBag()->add(
             'success',
-            "La page a bien été supprimée"
+            "La page a été supprimée"
         );
+
         return $this->redirect($this->generateUrl('horus_site_pages'));
     }
 
@@ -376,7 +404,11 @@ class CMSController extends Controller
             $em->flush();
             $this->get('session')->getFlashBag()->add(
                 'success',
-                "La page a bien été editée"
+                "La page a été editée"
+            );
+            $this->get('session')->getFlashBag()->add(
+                'messagerealtime',
+                "La page ".$id->getName()." vient d'être editée"
             );
             return $this->redirect($this->generateUrl('horus_site_pages'));
         }
@@ -404,7 +436,11 @@ class CMSController extends Controller
         $em->flush();
         $this->get('session')->getFlashBag()->add(
             'success',
-            "La page a bien été désactivée"
+            "La page a été désactivée"
+        );
+        $this->get('session')->getFlashBag()->add(
+            'messagerealtime',
+            "La page ".$id->getTitle()." vient d'être desactivée"
         );
         return $this->redirect($this->generateUrl('horus_site_pages'));
     }
@@ -423,7 +459,11 @@ class CMSController extends Controller
         $em->flush();
         $this->get('session')->getFlashBag()->add(
             'success',
-            "La page a bien été activée"
+            "La page a été activée"
+        );
+        $this->get('session')->getFlashBag()->add(
+            'messagerealtime',
+            "La page ".$id->getTitle()." vient d'être activée"
         );
         return $this->redirect($this->generateUrl('horus_site_pages'));
     }

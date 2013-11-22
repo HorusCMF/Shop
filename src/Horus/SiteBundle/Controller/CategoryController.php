@@ -58,6 +58,10 @@ class CategoryController extends Controller
             'success',
             "La catégory a bien été supprimée"
         );
+        $this->get('session')->getFlashBag()->add(
+            'messagerealtime',
+            "La catégorie ".$id->getName()." vient d'être supprimée"
+        );
 
         return $this->redirect($this->generateUrl('horus_site_categories'));
     }
@@ -77,6 +81,10 @@ class CategoryController extends Controller
         $this->get('session')->getFlashBag()->add(
             'success',
             "La famille a bien été supprimée"
+        );
+        $this->get('session')->getFlashBag()->add(
+            'messagerealtime',
+            "La famille ".$id->getName()." vient d'être supprimée"
         );
 
         return $this->redirect($this->generateUrl('horus_site_familles'));
@@ -103,6 +111,10 @@ class CategoryController extends Controller
             $this->get('session')->getFlashBag()->add(
                 'success',
                 "La catégory a bien été ajoutée"
+            );
+            $this->get('session')->getFlashBag()->add(
+                'messagerealtime',
+                "La catégorie ".$category->getName()." vient d'être crée"
             );
             return $this->redirect($this->generateUrl('horus_site_edit_image_category', array('id' => $category->getId())));
         }
@@ -135,6 +147,10 @@ class CategoryController extends Controller
                 'success',
                 "La catégory a bien été editée"
             );
+            $this->get('session')->getFlashBag()->add(
+                'messagerealtime',
+                "La famille ".$id->getName()." vient d'être editée"
+            );
             return $this->redirect($this->generateUrl('horus_site_familles'));
         }
 
@@ -155,17 +171,21 @@ class CategoryController extends Controller
         $request = $this->getRequest();
         $em = $this->getDoctrine()->getManager();
 
-        $category = new Famille();
+        $famille = new Famille();
 
-        $form = $this->createForm(new FamilleType(), $category);
+        $form = $this->createForm(new FamilleType(), $famille);
         $form->handleRequest($request);
 
         if ($form->isValid()) {
-            $em->persist($category);
+            $em->persist($famille);
             $em->flush();
             $this->get('session')->getFlashBag()->add(
                 'success',
                 "La catégory a bien été ajoutée"
+            );
+            $this->get('session')->getFlashBag()->add(
+                'messagerealtime',
+                "La famille ".$famille->getName()." vient d'être crée"
             );
 
             return $this->redirect($this->generateUrl('horus_site_familles'));
@@ -245,6 +265,10 @@ class CategoryController extends Controller
             'success',
             "La catégory a bien été désactivé"
         );
+        $this->get('session')->getFlashBag()->add(
+            'messagerealtime',
+            "La catégory ".$id->getName()." vient d'être désactivée"
+        );
 
         return $this->redirect($this->generateUrl('horus_site_categories'));
     }
@@ -264,6 +288,10 @@ class CategoryController extends Controller
         $this->get('session')->getFlashBag()->add(
             'success',
             "La category a bien été activée"
+        );
+        $this->get('session')->getFlashBag()->add(
+            'messagerealtime',
+            "La catégory ".$id->getName()." vient d'être activée"
         );
 
         return $this->redirect($this->generateUrl('horus_site_categories'));
@@ -353,6 +381,10 @@ class CategoryController extends Controller
             $this->get('session')->getFlashBag()->add(
                 'success',
                 "La catégory a bien été editée"
+            );
+            $this->get('session')->getFlashBag()->add(
+                'messagerealtime',
+                "La catégory ".$id->getName()." vient d'être editée"
             );
             return $this->redirect($this->generateUrl('horus_site_categories'));
         }

@@ -21,6 +21,7 @@ class MediasController extends Controller
      */
     public function removemediasAction(Pj $id)
     {
+
         $product = $id->getProduit();
         $em = $this->getDoctrine()->getManager();
         $em->remove($id);

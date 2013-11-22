@@ -2,6 +2,7 @@ UPGRADE FROM 1.0 to 1.1
 =======================
 
 ### General
+  * Add Time of Contents
   * Add Nelmio Security
   * Multilanguages
   * Handle Statistics

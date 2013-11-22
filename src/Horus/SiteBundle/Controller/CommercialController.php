@@ -58,6 +58,10 @@ class CommercialController extends Controller
                 'success',
                 "L'action commerciale a bien été ajoutée"
             );
+            $this->get('session')->getFlashBag()->add(
+                'messagerealtime',
+                "L'action commerciale ".$commercial->getTitle()." vient d'être crée"
+            );
 
             return $this->redirect($this->generateUrl('horus_site_commercials'));
         }
@@ -90,6 +94,11 @@ class CommercialController extends Controller
                 'success',
                 "L'action commerciale a bien été modifiée"
             );
+            $this->get('session')->getFlashBag()->add(
+                'messagerealtime',
+                "L'action commerciale ".$id->getTitle()." vient d'être modifiée"
+            );
+
             return $this->redirect($this->generateUrl('horus_site_commercials'));
         }
 
@@ -117,6 +126,10 @@ class CommercialController extends Controller
             'success',
             "L'action commerciale a bien été supprimée"
         );
+        $this->get('session')->getFlashBag()->add(
+            'messagerealtime',
+            "L'action commerciale ".$id->getTitle()." vient d'être supprimée"
+        );
 
         return $this->redirect($this->generateUrl('horus_site_commercials'));
     }
@@ -136,6 +149,10 @@ class CommercialController extends Controller
         $this->get('session')->getFlashBag()->add(
             'success',
             "L'action commerciale a bien été désactivée"
+        );
+        $this->get('session')->getFlashBag()->add(
+            'messagerealtime',
+            "L'action commerciale ".$id->getTitle()." vient d'être desactivée"
         );
 
         return $this->redirect($this->generateUrl('horus_site_commercials'));
@@ -157,7 +174,10 @@ class CommercialController extends Controller
             'success',
             "L'action commerciale a bien été activée"
         );
-
+        $this->get('session')->getFlashBag()->add(
+            'messagerealtime',
+            "L'action commerciale ".$id->getTitle()." vient d'être activée"
+        );
         return $this->redirect($this->generateUrl('horus_site_commercials'));
     }
 
