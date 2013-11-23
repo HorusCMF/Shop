@@ -33,6 +33,14 @@ horus_site_product:
   pattern:  /backend/produit/{id}
   defaults: { _controller: HorusSiteBundle:Product:seeproduct }
 
+horus_site_product_add_quantity:
+  pattern:  /backend/produit-add-quantity/{id}
+  defaults: { _controller: HorusSiteBundle:Product:addquantityproduct }
+
+horus_site_product_remove_quantity:
+  pattern:  /backend/produit-remove-quantity/{id}
+  defaults: { _controller: HorusSiteBundle:Product:removequantityproduct }
+
 horus_site_remove_product:
   pattern:  /backend/produits/suppression/{id}
   defaults: { _controller: HorusSiteBundle:Product:removeproduct }
@@ -130,10 +138,7 @@ horus_site_clients:
 
 horus_site_transports:
   pattern:  /backend/transports
-  defaults: { _controller: HorusSiteBundle:Clients:transports }
-
-
-
+  defaults: { _controller: HorusSiteBundle:Transports:transports }
 
 
 

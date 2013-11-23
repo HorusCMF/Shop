@@ -10,7 +10,6 @@
     <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.10.3/themes/hot-sneaks/jquery-ui.css"/>
     <link rel="stylesheet" type="text/css" href="http://davidstutz.github.io/bootstrap-multiselect/css/bootstrap-multiselect.css"/>
 
-
     {% stylesheets '@HorusSiteBundle/Resources/public/css/bootswatch.css' filter='yui_css' %}
         <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
     {% endstylesheets %}
@@ -82,10 +81,9 @@
 
 {% block javascripts %}
     {{ parent() }}
-
+    <script src="{{ asset('/js/ckeditor/ckeditor.js') }}"></script>
     <script src="http://damirfoy.com/iCheck/jquery.icheck.min.js?v=0.9.1"></script>
     <script src="http://davidstutz.github.io/bootstrap-multiselect/js/bootstrap-multiselect.js"></script>
-    <script src="/js/ckeditor/ckeditor.js"></script>
     <script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <script src="http://modernizr.com/downloads/modernizr-latest.js"></script>
 
@@ -102,8 +100,6 @@
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
-
 
     {% javascripts '@HorusSiteBundle/Resources/public/js/main.coffee'  filter='closure' %}
     <script type="text/javascript" src="{{ asset_url }}"></script>

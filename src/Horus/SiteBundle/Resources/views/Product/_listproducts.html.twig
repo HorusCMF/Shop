@@ -35,8 +35,7 @@
                 </a>
 
                 <div class="media-body">
-                    <h4 class="media-heading"><a
-                                href="{{ path('horus_site_product', {'id' : produit.id}) }}">{{ produit.title }}</a> de
+                    <h4 class="media-heading"><a href="{{ path('horus_site_product', {'id' : produit.id}) }}">{{ produit.title }}</a> de
                         <a href="{{ path('horus_site_category', {'id' : produit.category.id}) }}">{{ produit.category.name }}</a>
                         {% if produit.isVisible %}
                             <span class="badge badge-success">En ligne</span>
@@ -45,6 +44,10 @@
                         {% endif %}
                     </h4>
                     <h6>Référence: {{ produit.reference }}</h6>
+                    <div class="pull-right">
+                        <a class="btn btn-danger" href="{{ path('horus_site_product_remove_quantity', {'id' : produit.id }) }}"><i class="glyphicon glyphicon-minus-sign"></i></a>
+                        <a class="btn btn-danger" href="{{ path('horus_site_product_add_quantity', {'id' : produit.id }) }}"><i class="glyphicon glyphicon-plus-sign"></i></a>
+                    </div>
                     <hr class="fancy-line"/>
 
                     <p>{{ produit.cover|truncate('400',true)|raw }}</p>

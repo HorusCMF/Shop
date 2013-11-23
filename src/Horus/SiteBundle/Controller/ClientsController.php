@@ -58,14 +58,6 @@ class ClientsController extends Controller
     /**
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function transportsAction()
-    {
-        return $this->render('HorusSiteBundle:Clients:transports.html.twig');
-    }
-
-    /**
-     * @return \Symfony\Component\HttpFoundation\Response
-     */
     public function paniersAction()
     {
         return $this->render('HorusSiteBundle:Clients:panier.html.twig');

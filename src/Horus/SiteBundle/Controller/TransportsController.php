@@ -15,15 +15,20 @@ use JMS\SecurityExtraBundle\Annotation\Secure;
 class TransportsController extends Controller
 {
 
+
     /**
-     * Index Action
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function indexAction()
+    public function transportsAction()
     {
-        return $this->render('HorusSiteBundle:Main:index.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $transports = $em->getRepository('HorusSiteBundle:Transport')->findAll();
 
+        return $this->render('HorusSiteBundle:Clients:transports.html.twig',
+            array('transports' => $transports)
+        );
     }
+
 
 
 }

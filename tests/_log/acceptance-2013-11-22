@@ -360,3 +360,815 @@
 [2013-11-22 11:47:12] MainCest.onMedias.INFO: am on page "/backend/medias" [] []
 [2013-11-22 11:47:12] MainCest.onMedias.INFO: see "Vos images" [] []
 [2013-11-22 11:47:12] MainCest.onMedias.INFO: PASSED [] []
+[2013-11-22 11:50:31] MainCest.onHome.INFO: am on page "/" [] []
+[2013-11-22 11:50:33] MainCest.onHome.INFO: see "Authentification" [] []
+[2013-11-22 11:50:33] MainCest.onHome.INFO: see "Souvenir de moi" [] []
+[2013-11-22 11:50:33] MainCest.onHome.INFO: am on page "/backend" [] []
+[2013-11-22 11:50:33] MainCest.onHome.INFO: see "Authentification" [] []
+[2013-11-22 11:50:33] MainCest.onHome.INFO: see "Souvenir de moi" [] []
+[2013-11-22 11:50:33] MainCest.onHome.INFO: PASSED [] []
+[2013-11-22 11:50:33] MainCest.onFailureAuthentificate.INFO: am on page "/" [] []
+[2013-11-22 11:50:33] MainCest.onFailureAuthentificate.INFO: see "Authentification" [] []
+[2013-11-22 11:50:33] MainCest.onFailureAuthentificate.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"ok"} [] []
+[2013-11-22 11:50:46] MainCest.onCreateProcessFailureProducts.INFO: am on page "/" [] []
+[2013-11-22 11:50:46] MainCest.onCreateProcessFailureProducts.INFO: see "Authentification" [] []
+[2013-11-22 11:50:46] MainCest.onCreateProcessFailureProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 11:50:47] MainCest.onCreateProcessFailureProducts.INFO: am on page "/backend" [] []
+[2013-11-22 11:50:47] MainCest.onCreateProcessFailureProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 11:50:47] MainCest.onCreateProcessFailureProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 11:50:50] MainCest.onCreateProcessFailureProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 11:50:50] MainCest.onCreateProcessFailureProducts.INFO: submit form "form#createproduct",{"accroche":"o","reference":"ok","ean":"ok","prixHT":"ok","seo[0][title]":"ok","prixTTC":"ok"} [] []
+[2013-11-22 11:50:50] MainCest.onCreateProcessFailureProducts.INFO: grab text from ".alert" [] []
+[2013-11-22 11:50:51] MainCest.onCreateProcessFailureProducts.INFO: see "Le titre ne doit pas etre vide" [] []
+[2013-11-22 11:50:51] MainCest.onCreateProcessFailureProducts.INFO: see "Le résumé ne doit pas etre vide" [] []
+[2013-11-22 11:50:51] MainCest.onCreateProcessFailureProducts.INFO: see "La description ne doit pas etre vide" [] []
+[2013-11-22 11:50:51] MainCest.onCreateProcessFailureProducts.INFO: see "référencement doit faire au moins 5 caractères" [] []
+[2013-11-22 11:50:51] MainCest.onCreateProcessFailureProducts.INFO: see "Votre accroche doit faire au moins 5 caractères" [] []
+[2013-11-22 11:50:51] MainCest.onCreateProcessFailureProducts.INFO: PASSED [] []
+[2013-11-22 12:11:31] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:11:31] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:11:31] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:11:32] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:11:32] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:11:32] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:11:33] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:11:33] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"5ad56f1s6df1","prixHT":"15","prixTTC":"21","resume":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","description":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"tva":1,"etat":"Occasion","status":"Occasion","quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2} [] []
+[2013-11-22 12:11:33] MainCest.onCreateProcessSuccessProducts.INFO: see "Le produit a été crée" [] []
+[2013-11-22 12:11:33] MainCest.onCreateProcessSuccessProducts.ALERT: Failed asserting that 
+-->  <bold>/backend/produits/creer</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "le produit a été crée". [] []
+[2013-11-22 12:11:33] MainCest.onCreateProcessSuccessProducts.INFO: # FAILED # [] []
+[2013-11-22 12:11:33] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:12:06] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:12:06] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:12:06] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:12:06] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:12:07] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:12:07] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:12:07] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:12:07] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"5ad56f1s6df1","prixHT":"15","prixTTC":"21","resume":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","description":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"tva":1,"etat":"Occasion","status":"Occasion","quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2} [] []
+[2013-11-22 12:12:08] MainCest.onCreateProcessSuccessProducts.INFO: see "Le produit a été crée" [] []
+[2013-11-22 12:12:08] MainCest.onCreateProcessSuccessProducts.ALERT: Failed asserting that 
+-->  <bold>/backend/produits/creer</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "le produit a été crée". [] []
+[2013-11-22 12:12:08] MainCest.onCreateProcessSuccessProducts.INFO: # FAILED # [] []
+[2013-11-22 12:12:08] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:13:18] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:13:18] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:13:18] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:13:18] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:13:18] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:13:18] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:13:19] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:13:19] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"5ad56f1s6df1","prixHT":"15","prixTTC":"21","resume":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","description":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"tva":1,"etat":"Occasion","status":"Occasion","quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2} [] []
+[2013-11-22 12:13:19] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert" [] []
+[2013-11-22 12:13:19] MainCest.onCreateProcessSuccessProducts.INFO: i expect 
+            ×
+             attention! il y a des erreurs dans
+            votre création de produit
+          [] []
+[2013-11-22 12:13:19] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:13:40] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:13:40] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:13:40] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:13:41] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:13:41] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:13:41] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:13:41] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:13:41] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"5ad56f1s6df1","prixHT":"15","prixTTC":"21","resume":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","description":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"tva":1,"etat":"Occasion","status":"Occasion","quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2} [] []
+[2013-11-22 12:13:42] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert-danger" [] []
+[2013-11-22 12:13:42] MainCest.onCreateProcessSuccessProducts.INFO: i expect × attention! 
+                                    ean 13 est invalide
+                              [] []
+[2013-11-22 12:13:42] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:13:53] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:13:53] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:13:53] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:13:54] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:13:54] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:13:54] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:13:54] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:13:54] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"1234567891234","prixHT":"15","prixTTC":"21","resume":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","description":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"tva":1,"etat":"Occasion","status":"Occasion","quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2} [] []
+[2013-11-22 12:13:55] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert-danger" [] []
+[2013-11-22 12:13:55] MainCest.onCreateProcessSuccessProducts.INFO: i expect × attention! 
+                                    le résumé ne doit pas etre vide
+                              [] []
+[2013-11-22 12:13:55] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:14:28] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:14:28] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:14:28] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:14:28] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:14:28] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:14:28] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:14:29] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:14:29] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"1234567891234","prixHT":"15","prixTTC":"21","cover":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","description":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"tva":1,"etat":"Occasion","status":"Occasion","quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2} [] []
+[2013-11-22 12:14:29] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert-danger" [] []
+[2013-11-22 12:14:29] MainCest.onCreateProcessSuccessProducts.INFO: i expect × attention! 
+                                    la description ne doit pas etre vide
+                              [] []
+[2013-11-22 12:14:29] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:14:46] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:14:47] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:14:47] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:14:47] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:14:47] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:14:47] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:14:47] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:14:47] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"1234567891234","prixHT":"15","prixTTC":"21","cover":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","content":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"tva":1,"etat":"Occasion","status":"Occasion","quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2} [] []
+[2013-11-22 12:14:48] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert-danger" [] []
+[2013-11-22 12:14:48] MainCest.onCreateProcessSuccessProducts.ALERT: The current node list is empty. [] []
+[2013-11-22 12:14:48] MainCest.onCreateProcessSuccessProducts.INFO: # ERROR # [] []
+[2013-11-22 12:14:48] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:17:20] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:17:21] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:17:21] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:17:21] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:17:21] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:17:21] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:17:22] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:17:22] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"1234567891234","prixHT":"15","prixTTC":"21","cover":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","content":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"tva":1,"etat":"Occasion","status":"Occasion","quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2} [] []
+[2013-11-22 12:17:22] MainCest.onCreateProcessSuccessProducts.INFO: see "Le produit a été crée" [] []
+[2013-11-22 12:17:22] MainCest.onCreateProcessSuccessProducts.ALERT: Failed asserting that 
+-->  <bold>/backend/produits/creer</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "le produit a été crée". [] []
+[2013-11-22 12:17:22] MainCest.onCreateProcessSuccessProducts.INFO: # FAILED # [] []
+[2013-11-22 12:17:22] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:17:33] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:17:33] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:17:33] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:17:34] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:17:34] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:17:34] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:17:34] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:17:34] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"1234567891234","prixHT":"15","prixTTC":"21","cover":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","content":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"tva":1,"etat":"Occasion","status":"Occasion","quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2} [] []
+[2013-11-22 12:17:35] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert" [] []
+[2013-11-22 12:17:35] MainCest.onCreateProcessSuccessProducts.INFO: i expect 
+            ×
+             attention! il y a des erreurs dans
+            votre création de produit
+          [] []
+[2013-11-22 12:17:35] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:17:42] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:17:42] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:17:42] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:17:42] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:17:43] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:17:43] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:17:43] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:17:43] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"1234567891234","prixHT":"15","prixTTC":"21","cover":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","content":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"tva":1,"etat":"Occasion","status":"Occasion","quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2} [] []
+[2013-11-22 12:17:44] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert" [] []
+[2013-11-22 12:17:44] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert-danger" [] []
+[2013-11-22 12:17:44] MainCest.onCreateProcessSuccessProducts.ALERT: The current node list is empty. [] []
+[2013-11-22 12:17:44] MainCest.onCreateProcessSuccessProducts.INFO: # ERROR # [] []
+[2013-11-22 12:17:44] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:17:55] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:17:55] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:17:55] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:17:55] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:17:55] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:17:55] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:17:56] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:17:56] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"1234567891234","prixHT":"15","prixTTC":"21","cover":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","content":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"tva":1,"etat":"Occasion","status":"Occasion","quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2} [] []
+[2013-11-22 12:17:56] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert" [] []
+[2013-11-22 12:17:56] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert-warning" [] []
+[2013-11-22 12:17:56] MainCest.onCreateProcessSuccessProducts.INFO: i expect 
+            ×
+             attention! il y a des erreurs dans
+            votre création de produit
+          [] []
+[2013-11-22 12:17:56] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:19:40] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:19:40] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:19:40] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:19:41] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:19:41] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:19:41] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:19:41] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:19:41] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"1234567891234","prixHT":"15","prixTTC":"21","cover":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","content":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"tva":1,"etat":"Occasion","status":"Occasion","quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2} [] []
+[2013-11-22 12:19:42] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert" [] []
+[2013-11-22 12:19:42] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert-warning" [] []
+[2013-11-22 12:19:42] MainCest.onCreateProcessSuccessProducts.INFO: i expect 
+            ×
+             attention! il y a des erreurs dans
+            votre création de produit
+          [] []
+[2013-11-22 12:19:42] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:21:06] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:21:07] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:21:07] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:21:07] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:21:07] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:21:07] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:21:07] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:21:07] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"1234567891234","prixHT":"15","prixTTC":"21","cover":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","content":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7} [] []
+[2013-11-22 12:21:08] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert" [] []
+[2013-11-22 12:21:08] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert-warning" [] []
+[2013-11-22 12:21:08] MainCest.onCreateProcessSuccessProducts.INFO: i expect 
+                    ×
+                     aucune photo pour le moment
+                  [] []
+[2013-11-22 12:21:08] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:21:58] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:21:58] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:21:58] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:21:58] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:21:59] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:21:59] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:21:59] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:21:59] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"1234567891234","prixHT":"15","prixTTC":"21","cover":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","content":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"ok":1} [] []
+[2013-11-22 12:22:00] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert" [] []
+[2013-11-22 12:22:00] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert-warning" [] []
+[2013-11-22 12:22:00] MainCest.onCreateProcessSuccessProducts.INFO: i expect 
+            ×
+             attention! il y a des erreurs dans
+            votre création de produit
+          [] []
+[2013-11-22 12:22:00] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:23:08] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:23:08] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:23:08] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:23:08] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:23:08] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:23:08] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:23:09] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:23:09] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"1234567891234","prixHT":"15","prixTTC":"21","cover":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","content":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"ok":1,"etat":1,"status":1,"quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2} [] []
+[2013-11-22 12:23:09] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert" [] []
+[2013-11-22 12:23:09] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert-warning" [] []
+[2013-11-22 12:23:09] MainCest.onCreateProcessSuccessProducts.INFO: i expect 
+            ×
+             attention! il y a des erreurs dans
+            votre création de produit
+          [] []
+[2013-11-22 12:23:09] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:23:16] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:23:16] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:23:16] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:23:16] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:23:16] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:23:16] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:23:17] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:23:17] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"1234567891234","prixHT":"15","prixTTC":"21","cover":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","content":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"etat":1,"status":1,"quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2} [] []
+[2013-11-22 12:23:17] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert" [] []
+[2013-11-22 12:23:17] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert-warning" [] []
+[2013-11-22 12:23:17] MainCest.onCreateProcessSuccessProducts.INFO: i expect 
+                    ×
+                     aucune photo pour le moment
+                  [] []
+[2013-11-22 12:23:17] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:29:18] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:29:18] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:29:18] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:29:18] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:29:18] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:29:18] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:29:19] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:29:19] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"1234567891234","prixHT":"15","prixTTC":"21","cover":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","content":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"service":"Garantie offerte","video":"http://www.youtube.com/watch?v=IWAD3oKx7Yo","etat":1,"status":1,"quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2} [] []
+[2013-11-22 12:29:20] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert" [] []
+[2013-11-22 12:29:20] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert-warning" [] []
+[2013-11-22 12:29:20] MainCest.onCreateProcessSuccessProducts.INFO: i expect 
+                    ×
+                     aucune photo pour le moment
+                  [] []
+[2013-11-22 12:29:20] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:31:01] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:31:01] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:31:01] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:31:01] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:31:02] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:31:02] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:31:02] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:31:02] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"1234567891234","prixHT":"15","prixTTC":"21","cover":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","content":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"service":"Garantie offerte","video":"http://www.youtube.com/watch?v=IWAD3oKx7Yo","etat":1,"status":1,"quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2} [] []
+[2013-11-22 12:31:03] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert" [] []
+[2013-11-22 12:31:03] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert-warning" [] []
+[2013-11-22 12:31:03] MainCest.onCreateProcessSuccessProducts.INFO: i expect 
+                    ×
+                     aucune photo pour le moment
+                  [] []
+[2013-11-22 12:31:03] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:41:13] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:41:14] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:41:14] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:41:14] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:41:14] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:41:14] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:41:15] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:41:15] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"1234567891234","prixHT":"15","prixTTC":"21","cover":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","content":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"service":"Garantie offerte","video":"http://www.youtube.com/watch?v=IWAD3oKx7Yo","etat":1,"status":1,"quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2} [] []
+[2013-11-22 12:41:15] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert" [] []
+[2013-11-22 12:41:15] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert-warning" [] []
+[2013-11-22 12:41:15] MainCest.onCreateProcessSuccessProducts.INFO: i expect 
+                    ×
+                     aucune photo pour le moment
+                  [] []
+[2013-11-22 12:41:15] MainCest.onCreateProcessSuccessProducts.INFO: i expect upload a image of product  [] []
+[2013-11-22 12:41:15] MainCest.onCreateProcessSuccessProducts.INFO: attach file "input[@name="file"]","tablette.jpg" [] []
+[2013-11-22 12:41:15] MainCest.onCreateProcessSuccessProducts.ALERT: Form field by Label or CSS 'input[@name="file"]' was not found on page. [] []
+[2013-11-22 12:41:15] MainCest.onCreateProcessSuccessProducts.INFO: # FAILED # [] []
+[2013-11-22 12:41:15] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:41:37] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:41:37] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:41:37] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:41:37] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:41:38] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:41:38] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:41:38] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:41:38] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"1234567891234","prixHT":"15","prixTTC":"21","cover":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","content":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"service":"Garantie offerte","video":"http://www.youtube.com/watch?v=IWAD3oKx7Yo","etat":1,"status":1,"quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2} [] []
+[2013-11-22 12:41:39] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert" [] []
+[2013-11-22 12:41:39] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert-warning" [] []
+[2013-11-22 12:41:39] MainCest.onCreateProcessSuccessProducts.INFO: i expect 
+                    ×
+                     aucune photo pour le moment
+                  [] []
+[2013-11-22 12:41:39] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:41:49] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:41:49] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:41:49] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:41:49] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:41:50] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:41:50] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:41:50] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:41:50] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"1234567891234","prixHT":"15","prixTTC":"21","cover":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","content":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"service":"Garantie offerte","video":"http://www.youtube.com/watch?v=IWAD3oKx7Yo","etat":1,"status":1,"quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2} [] []
+[2013-11-22 12:41:51] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert" [] []
+[2013-11-22 12:41:51] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert-warning" [] []
+[2013-11-22 12:41:51] MainCest.onCreateProcessSuccessProducts.INFO: i expect 
+                    ×
+                     aucune photo pour le moment
+                  [] []
+[2013-11-22 12:41:51] MainCest.onCreateProcessSuccessProducts.INFO: i expect upload a image of product  [] []
+[2013-11-22 12:41:51] MainCest.onCreateProcessSuccessProducts.INFO: attach file "input[@type="file"]","tablette.jpg" [] []
+[2013-11-22 12:41:51] MainCest.onCreateProcessSuccessProducts.ALERT: Form field by Label or CSS 'input[@type="file"]' was not found on page. [] []
+[2013-11-22 12:41:51] MainCest.onCreateProcessSuccessProducts.INFO: # FAILED # [] []
+[2013-11-22 12:41:51] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:42:05] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:42:05] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:42:05] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:42:06] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:42:06] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:42:06] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:42:06] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:42:06] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"1234567891234","prixHT":"15","prixTTC":"21","cover":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","content":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"service":"Garantie offerte","video":"http://www.youtube.com/watch?v=IWAD3oKx7Yo","etat":1,"status":1,"quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2} [] []
+[2013-11-22 12:42:07] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert" [] []
+[2013-11-22 12:42:07] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert-warning" [] []
+[2013-11-22 12:42:07] MainCest.onCreateProcessSuccessProducts.INFO: i expect 
+                    ×
+                     aucune photo pour le moment
+                  [] []
+[2013-11-22 12:42:07] MainCest.onCreateProcessSuccessProducts.INFO: i expect upload a image of product  [] []
+[2013-11-22 12:42:07] MainCest.onCreateProcessSuccessProducts.INFO: attach file "input[@type="file"]","tablette.jpg" [] []
+[2013-11-22 12:42:07] MainCest.onCreateProcessSuccessProducts.ALERT: Form field by Label or CSS 'input[@type="file"]' was not found on page. [] []
+[2013-11-22 12:42:07] MainCest.onCreateProcessSuccessProducts.INFO: # FAILED # [] []
+[2013-11-22 12:42:07] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:42:27] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:42:27] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:42:27] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:42:27] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:42:27] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:42:27] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:42:28] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:42:28] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"1234567891234","prixHT":"15","prixTTC":"21","cover":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","content":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"service":"Garantie offerte","video":"http://www.youtube.com/watch?v=IWAD3oKx7Yo","etat":1,"status":1,"quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2} [] []
+[2013-11-22 12:42:28] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert" [] []
+[2013-11-22 12:42:28] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert-warning" [] []
+[2013-11-22 12:42:28] MainCest.onCreateProcessSuccessProducts.INFO: i expect 
+                    ×
+                     aucune photo pour le moment
+                  [] []
+[2013-11-22 12:42:28] MainCest.onCreateProcessSuccessProducts.INFO: i expect upload a image of product  [] []
+[2013-11-22 12:42:28] MainCest.onCreateProcessSuccessProducts.INFO: attach file "*[@name="file"]","tablette.jpg" [] []
+[2013-11-22 12:42:28] MainCest.onCreateProcessSuccessProducts.ALERT: Form field by Label or CSS '*[@name="file"]' was not found on page. [] []
+[2013-11-22 12:42:28] MainCest.onCreateProcessSuccessProducts.INFO: # FAILED # [] []
+[2013-11-22 12:42:28] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:46:33] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:46:34] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:46:34] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:46:34] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:46:34] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:46:34] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:46:35] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:46:35] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"1234567891234","prixHT":"15","prixTTC":"21","cover":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","content":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"service":"Garantie offerte","video":"http://www.youtube.com/watch?v=IWAD3oKx7Yo","etat":1,"status":1,"quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2} [] []
+[2013-11-22 12:46:35] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert" [] []
+[2013-11-22 12:46:35] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert-warning" [] []
+[2013-11-22 12:46:35] MainCest.onCreateProcessSuccessProducts.INFO: i expect 
+                    ×
+                     aucune photo pour le moment
+                  [] []
+[2013-11-22 12:46:35] MainCest.onCreateProcessSuccessProducts.INFO: i expect upload a image of product  [] []
+[2013-11-22 12:46:35] MainCest.onCreateProcessSuccessProducts.INFO: attach file "input[@type="file"]","tablette.jpg" [] []
+[2013-11-22 12:46:35] MainCest.onCreateProcessSuccessProducts.ALERT: Form field by Label or CSS 'input[@type="file"]' was not found on page. [] []
+[2013-11-22 12:46:35] MainCest.onCreateProcessSuccessProducts.INFO: # FAILED # [] []
+[2013-11-22 12:46:35] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:48:32] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:48:32] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:48:32] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:48:32] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:48:33] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:48:33] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:48:33] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:48:33] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"1234567891234","prixHT":"15","prixTTC":"21","cover":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","content":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"service":"Garantie offerte","video":"http://www.youtube.com/watch?v=IWAD3oKx7Yo","etat":1,"status":1,"quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2} [] []
+[2013-11-22 12:48:34] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert" [] []
+[2013-11-22 12:48:34] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert-warning" [] []
+[2013-11-22 12:48:34] MainCest.onCreateProcessSuccessProducts.INFO: i expect 
+                    ×
+                     aucune photo pour le moment
+                  [] []
+[2013-11-22 12:48:34] MainCest.onCreateProcessSuccessProducts.INFO: i expect upload a image of product  [] []
+[2013-11-22 12:48:34] MainCest.onCreateProcessSuccessProducts.INFO: attach file "input[@type="file"]","/images/tablette.jpg" [] []
+[2013-11-22 12:48:34] MainCest.onCreateProcessSuccessProducts.ALERT: Form field by Label or CSS 'input[@type="file"]' was not found on page. [] []
+[2013-11-22 12:48:34] MainCest.onCreateProcessSuccessProducts.INFO: # FAILED # [] []
+[2013-11-22 12:48:34] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:48:39] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:48:39] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:48:39] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:48:40] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:48:40] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:48:40] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:48:40] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:48:40] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"1234567891234","prixHT":"15","prixTTC":"21","cover":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","content":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"service":"Garantie offerte","video":"http://www.youtube.com/watch?v=IWAD3oKx7Yo","etat":1,"status":1,"quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2} [] []
+[2013-11-22 12:48:41] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert" [] []
+[2013-11-22 12:48:41] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert-warning" [] []
+[2013-11-22 12:48:41] MainCest.onCreateProcessSuccessProducts.INFO: i expect 
+                    ×
+                     aucune photo pour le moment
+                  [] []
+[2013-11-22 12:48:41] MainCest.onCreateProcessSuccessProducts.INFO: i expect upload a image of product  [] []
+[2013-11-22 12:48:41] MainCest.onCreateProcessSuccessProducts.INFO: attach file "input[@type="file"]","images/tablette.jpg" [] []
+[2013-11-22 12:48:41] MainCest.onCreateProcessSuccessProducts.ALERT: Form field by Label or CSS 'input[@type="file"]' was not found on page. [] []
+[2013-11-22 12:48:41] MainCest.onCreateProcessSuccessProducts.INFO: # FAILED # [] []
+[2013-11-22 12:48:41] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:49:37] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:49:37] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:49:37] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:49:37] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:49:37] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:49:37] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:49:38] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:49:38] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"1234567891234","prixHT":"15","prixTTC":"21","cover":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","content":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"service":"Garantie offerte","video":"http://www.youtube.com/watch?v=IWAD3oKx7Yo","etat":1,"status":1,"quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2} [] []
+[2013-11-22 12:49:38] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert" [] []
+[2013-11-22 12:49:38] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert-warning" [] []
+[2013-11-22 12:49:38] MainCest.onCreateProcessSuccessProducts.INFO: i expect 
+                    ×
+                     aucune photo pour le moment
+                  [] []
+[2013-11-22 12:49:38] MainCest.onCreateProcessSuccessProducts.INFO: i expect upload a image of product  [] []
+[2013-11-22 12:49:38] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#my-awesome-dropzone",{"file":"images/tablette.jpg"} [] []
+[2013-11-22 12:49:39] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:49:53] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:49:53] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:49:53] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:49:54] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:49:54] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:49:54] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:49:54] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:49:54] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"1234567891234","prixHT":"15","prixTTC":"21","cover":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","content":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"service":"Garantie offerte","video":"http://www.youtube.com/watch?v=IWAD3oKx7Yo","etat":1,"status":1,"quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2} [] []
+[2013-11-22 12:49:55] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert" [] []
+[2013-11-22 12:49:55] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert-warning" [] []
+[2013-11-22 12:49:55] MainCest.onCreateProcessSuccessProducts.INFO: i expect 
+                    ×
+                     aucune photo pour le moment
+                  [] []
+[2013-11-22 12:49:55] MainCest.onCreateProcessSuccessProducts.INFO: i expect upload a image of product  [] []
+[2013-11-22 12:49:55] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#my-awesome-dropzone",{"file":"images/tablette.jpg"} [] []
+[2013-11-22 12:49:55] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert" [] []
+[2013-11-22 12:49:55] MainCest.onCreateProcessSuccessProducts.INFO: i expect 
+                    ×
+                     aucune photo pour le moment
+                  [] []
+[2013-11-22 12:49:55] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:50:19] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:50:19] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:50:19] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:50:19] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:50:20] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:50:20] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:50:20] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:50:20] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"1234567891234","prixHT":"15","prixTTC":"21","cover":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","content":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"service":"Garantie offerte","video":"http://www.youtube.com/watch?v=IWAD3oKx7Yo","etat":1,"status":1,"quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2} [] []
+[2013-11-22 12:50:21] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert" [] []
+[2013-11-22 12:50:21] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert-warning" [] []
+[2013-11-22 12:50:21] MainCest.onCreateProcessSuccessProducts.INFO: i expect 
+                    ×
+                     aucune photo pour le moment
+                  [] []
+[2013-11-22 12:50:21] MainCest.onCreateProcessSuccessProducts.INFO: i expect upload a image of product  [] []
+[2013-11-22 12:50:21] MainCest.onCreateProcessSuccessProducts.INFO: attach file "input[@type="file"]","images/tablette.jpg" [] []
+[2013-11-22 12:50:21] MainCest.onCreateProcessSuccessProducts.ALERT: Form field by Label or CSS 'input[@type="file"]' was not found on page. [] []
+[2013-11-22 12:50:21] MainCest.onCreateProcessSuccessProducts.INFO: # FAILED # [] []
+[2013-11-22 12:50:21] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:54:28] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:54:28] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:54:28] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:54:29] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:54:29] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:54:29] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:54:29] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:54:29] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"1234567891234","prixHT":"15","prixTTC":"21","cover":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","content":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"service":"Garantie offerte","video":"http://www.youtube.com/watch?v=IWAD3oKx7Yo","etat":1,"status":1,"quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2} [] []
+[2013-11-22 12:54:30] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert" [] []
+[2013-11-22 12:54:30] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert-warning" [] []
+[2013-11-22 12:54:30] MainCest.onCreateProcessSuccessProducts.INFO: i expect 
+                    ×
+                     aucune photo pour le moment
+                  [] []
+[2013-11-22 12:54:30] MainCest.onCreateProcessSuccessProducts.INFO: i expect upload a image of product  [] []
+[2013-11-22 12:54:30] MainCest.onCreateProcessSuccessProducts.INFO: attach file "input[@type="file"]","../images/tablette.jpg" [] []
+[2013-11-22 12:54:30] MainCest.onCreateProcessSuccessProducts.ALERT: Form field by Label or CSS 'input[@type="file"]' was not found on page. [] []
+[2013-11-22 12:54:30] MainCest.onCreateProcessSuccessProducts.INFO: # FAILED # [] []
+[2013-11-22 12:54:30] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:54:34] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:54:34] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:54:34] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:54:34] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:54:35] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:54:35] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:54:35] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:54:35] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"1234567891234","prixHT":"15","prixTTC":"21","cover":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","content":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"service":"Garantie offerte","video":"http://www.youtube.com/watch?v=IWAD3oKx7Yo","etat":1,"status":1,"quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2} [] []
+[2013-11-22 12:54:36] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert" [] []
+[2013-11-22 12:54:36] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert-warning" [] []
+[2013-11-22 12:54:36] MainCest.onCreateProcessSuccessProducts.INFO: i expect 
+                    ×
+                     aucune photo pour le moment
+                  [] []
+[2013-11-22 12:54:36] MainCest.onCreateProcessSuccessProducts.INFO: i expect upload a image of product  [] []
+[2013-11-22 12:54:36] MainCest.onCreateProcessSuccessProducts.INFO: attach file "input[@type="file"]","./images/tablette.jpg" [] []
+[2013-11-22 12:54:36] MainCest.onCreateProcessSuccessProducts.ALERT: Form field by Label or CSS 'input[@type="file"]' was not found on page. [] []
+[2013-11-22 12:54:36] MainCest.onCreateProcessSuccessProducts.INFO: # FAILED # [] []
+[2013-11-22 12:54:36] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:54:40] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:54:40] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:54:40] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:54:41] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:54:41] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:54:41] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:54:41] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:54:41] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"1234567891234","prixHT":"15","prixTTC":"21","cover":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","content":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"service":"Garantie offerte","video":"http://www.youtube.com/watch?v=IWAD3oKx7Yo","etat":1,"status":1,"quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2} [] []
+[2013-11-22 12:54:42] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert" [] []
+[2013-11-22 12:54:42] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert-warning" [] []
+[2013-11-22 12:54:42] MainCest.onCreateProcessSuccessProducts.INFO: i expect 
+                    ×
+                     aucune photo pour le moment
+                  [] []
+[2013-11-22 12:54:42] MainCest.onCreateProcessSuccessProducts.INFO: i expect upload a image of product  [] []
+[2013-11-22 12:54:42] MainCest.onCreateProcessSuccessProducts.INFO: attach file "input[@type="file"]","images/tablette.jpg" [] []
+[2013-11-22 12:54:42] MainCest.onCreateProcessSuccessProducts.ALERT: Form field by Label or CSS 'input[@type="file"]' was not found on page. [] []
+[2013-11-22 12:54:42] MainCest.onCreateProcessSuccessProducts.INFO: # FAILED # [] []
+[2013-11-22 12:54:42] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:54:47] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:54:47] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:54:47] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:54:48] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:54:48] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:54:48] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:54:48] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:54:48] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"1234567891234","prixHT":"15","prixTTC":"21","cover":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","content":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"service":"Garantie offerte","video":"http://www.youtube.com/watch?v=IWAD3oKx7Yo","etat":1,"status":1,"quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2} [] []
+[2013-11-22 12:54:49] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert" [] []
+[2013-11-22 12:54:49] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert-warning" [] []
+[2013-11-22 12:54:49] MainCest.onCreateProcessSuccessProducts.INFO: i expect 
+                    ×
+                     aucune photo pour le moment
+                  [] []
+[2013-11-22 12:54:49] MainCest.onCreateProcessSuccessProducts.INFO: i expect upload a image of product  [] []
+[2013-11-22 12:54:49] MainCest.onCreateProcessSuccessProducts.INFO: attach file "input[@type="file"]","tablette.jpg" [] []
+[2013-11-22 12:54:49] MainCest.onCreateProcessSuccessProducts.ALERT: Form field by Label or CSS 'input[@type="file"]' was not found on page. [] []
+[2013-11-22 12:54:49] MainCest.onCreateProcessSuccessProducts.INFO: # FAILED # [] []
+[2013-11-22 12:54:49] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:55:53] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:55:53] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:55:53] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:55:53] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:55:53] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:55:53] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:55:54] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:55:54] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"1234567891234","prixHT":"15","prixTTC":"21","cover":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","content":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"service":"Garantie offerte","video":"http://www.youtube.com/watch?v=IWAD3oKx7Yo","etat":1,"status":1,"quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2} [] []
+[2013-11-22 12:55:54] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert" [] []
+[2013-11-22 12:55:54] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert-warning" [] []
+[2013-11-22 12:55:54] MainCest.onCreateProcessSuccessProducts.INFO: i expect 
+                    ×
+                     aucune photo pour le moment
+                  [] []
+[2013-11-22 12:55:54] MainCest.onCreateProcessSuccessProducts.INFO: i expect upload a image of product  [] []
+[2013-11-22 12:55:54] MainCest.onCreateProcessSuccessProducts.INFO: attach file "input[@type="file"]","tablette.jpg" [] []
+[2013-11-22 12:55:54] MainCest.onCreateProcessSuccessProducts.ALERT: Form field by Label or CSS 'input[@type="file"]' was not found on page. [] []
+[2013-11-22 12:55:54] MainCest.onCreateProcessSuccessProducts.INFO: # FAILED # [] []
+[2013-11-22 12:55:54] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:56:36] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:56:36] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:56:36] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:56:36] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:56:37] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:56:37] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:56:37] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:56:37] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"1234567891234","prixHT":"15","prixTTC":"21","cover":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","content":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"service":"Garantie offerte","video":"http://www.youtube.com/watch?v=IWAD3oKx7Yo","etat":1,"status":1,"quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2} [] []
+[2013-11-22 12:56:38] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert" [] []
+[2013-11-22 12:56:38] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert-warning" [] []
+[2013-11-22 12:56:38] MainCest.onCreateProcessSuccessProducts.INFO: i expect 
+                    ×
+                     aucune photo pour le moment
+                  [] []
+[2013-11-22 12:56:38] MainCest.onCreateProcessSuccessProducts.INFO: i expect upload a image of product  [] []
+[2013-11-22 12:56:38] MainCest.onCreateProcessSuccessProducts.INFO: attach file "input[@type="file"]","tablette.jpg" [] []
+[2013-11-22 12:56:38] MainCest.onCreateProcessSuccessProducts.ALERT: Form field by Label or CSS 'input[@type="file"]' was not found on page. [] []
+[2013-11-22 12:56:38] MainCest.onCreateProcessSuccessProducts.INFO: # FAILED # [] []
+[2013-11-22 12:56:38] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:57:02] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:57:02] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:57:02] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:57:02] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:57:02] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:57:02] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:57:03] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:57:03] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"1234567891234","prixHT":"15","prixTTC":"21","cover":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","content":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"service":"Garantie offerte","video":"http://www.youtube.com/watch?v=IWAD3oKx7Yo","etat":1,"status":1,"quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2} [] []
+[2013-11-22 12:57:03] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert" [] []
+[2013-11-22 12:57:03] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert-warning" [] []
+[2013-11-22 12:57:03] MainCest.onCreateProcessSuccessProducts.INFO: i expect 
+                    ×
+                     aucune photo pour le moment
+                  [] []
+[2013-11-22 12:57:03] MainCest.onCreateProcessSuccessProducts.INFO: i expect upload a image of product  [] []
+[2013-11-22 12:57:03] MainCest.onCreateProcessSuccessProducts.INFO: attach file "input[@name="file"]","images/tablette.jpg" [] []
+[2013-11-22 12:57:04] MainCest.onCreateProcessSuccessProducts.ALERT: Form field by Label or CSS 'input[@name="file"]' was not found on page. [] []
+[2013-11-22 12:57:04] MainCest.onCreateProcessSuccessProducts.INFO: # FAILED # [] []
+[2013-11-22 12:57:04] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-11-22 12:57:08] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-11-22 12:57:09] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-11-22 12:57:09] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-11-22 12:57:09] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-11-22 12:57:09] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-11-22 12:57:09] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend/produits/creer" [] []
+[2013-11-22 12:57:10] MainCest.onCreateProcessSuccessProducts.INFO: see "Créer un produit" [] []
+[2013-11-22 12:57:10] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"1234567891234","prixHT":"15","prixTTC":"21","cover":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","content":"Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"service":"Garantie offerte","video":"http://www.youtube.com/watch?v=IWAD3oKx7Yo","etat":1,"status":1,"quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2} [] []
+[2013-11-22 12:57:10] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert" [] []
+[2013-11-22 12:57:10] MainCest.onCreateProcessSuccessProducts.INFO: grab text from ".alert-warning" [] []
+[2013-11-22 12:57:10] MainCest.onCreateProcessSuccessProducts.INFO: i expect 
+                    ×
+                     aucune photo pour le moment
+                  [] []
+[2013-11-22 12:57:10] MainCest.onCreateProcessSuccessProducts.INFO: i expect upload a image of product  [] []
+[2013-11-22 12:57:10] MainCest.onCreateProcessSuccessProducts.INFO: attach file "input[@name="file"]","images/tablette.jpg" [] []
+[2013-11-22 12:57:10] MainCest.onCreateProcessSuccessProducts.ALERT: Form field by Label or CSS 'input[@name="file"]' was not found on page. [] []
+[2013-11-22 12:57:10] MainCest.onCreateProcessSuccessProducts.INFO: # FAILED # [] []
+[2013-11-22 12:57:10] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []

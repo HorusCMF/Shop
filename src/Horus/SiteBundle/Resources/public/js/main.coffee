@@ -31,10 +31,6 @@ $ ->
     else
       $(".scrollup").fadeOut()
 
-
-#  $('#mini-notification').miniNotification
-#    closeButton: false
-
   $(".scrollup").click ->
     $("html, body").animate
       scrollTop: 0

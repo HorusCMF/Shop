@@ -20,6 +20,8 @@ Screenshots
 ![ScreenShot](https://raw.github.com/HorusCMF/Shop/master/screenshots/MainScreen.png)
 ![ScreenShot](https://raw.github.com/HorusCMF/Shop/master/screenshots/Screen2.png)
 ![ScreenShot](https://raw.github.com/HorusCMF/Shop/master/screenshots/Screen3.png)
+![ScreenShot](https://raw.github.com/HorusCMF/Shop/master/screenshots/Screen3.png)
+![ScreenShot](https://raw.github.com/HorusCMF/Shop/master/screenshots/Screen4.png)
 
 Documentation
 -------------

@@ -1,5 +1,6 @@
 
 
+
 // Récupère le div qui contient la collection de tags
 var collectionHolder2 = $('div.pjs');
 
@@ -42,6 +43,15 @@ function addTagForm2(collectionHolder2, $newLinkLi2) {
 
 
 jQuery(document).ready(function () {
+
+    /**
+     * CAlcul tva
+     */
+    $('#prixHT').on('blur', function (e) {
+        var ttc = parseFloat($('#prixHT').val()) * (1 + parseFloat($("#tva").val())/100).toFixed(2);
+        $('#prixTTC').val(ttc);
+    });
+
 
 // ajoute l'ancre « ajouter un tag » et li à la balise ul
     collectionHolder2.append($newLinkLi2);

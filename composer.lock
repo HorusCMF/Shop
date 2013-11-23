@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "dfc7bf2f96ab8487803c401147041289",
+    "hash": "339873e8f4b66c51ef4d940d6401eae4",
     "packages": [
         {
             "name": "behat/mink",
@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Behat/Mink.git",
-                "reference": "988e3e14dfe6db598ab55c429a627ca58eff7012"
+                "reference": "283ac7a8df3f72f53f26bd848f0e8a44a5c8e0ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Behat/Mink/zipball/988e3e14dfe6db598ab55c429a627ca58eff7012",
-                "reference": "988e3e14dfe6db598ab55c429a627ca58eff7012",
+                "url": "https://api.github.com/repos/Behat/Mink/zipball/283ac7a8df3f72f53f26bd848f0e8a44a5c8e0ab",
+                "reference": "283ac7a8df3f72f53f26bd848f0e8a44a5c8e0ab",
                 "shasum": ""
             },
             "require": {
@@ -58,7 +58,7 @@
                 "testing",
                 "web"
             ],
-            "time": "2013-11-20 08:32:10"
+            "time": "2013-11-22 08:20:04"
         },
         {
             "name": "behat/mink-browserkit-driver",
@@ -66,12 +66,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Behat/MinkBrowserKitDriver.git",
-                "reference": "970b510dcf5d147227066d962d61dbea53d6bec8"
+                "reference": "4d06113478534782c8c85bec2b411613cb28f512"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Behat/MinkBrowserKitDriver/zipball/970b510dcf5d147227066d962d61dbea53d6bec8",
-                "reference": "970b510dcf5d147227066d962d61dbea53d6bec8",
+                "url": "https://api.github.com/repos/Behat/MinkBrowserKitDriver/zipball/4d06113478534782c8c85bec2b411613cb28f512",
+                "reference": "4d06113478534782c8c85bec2b411613cb28f512",
                 "shasum": ""
             },
             "require": {
@@ -113,7 +113,7 @@
                 "browser",
                 "testing"
             ],
-            "time": "2013-11-20 08:05:28"
+            "time": "2013-11-22 09:03:53"
         },
         {
             "name": "behat/mink-goutte-driver",
@@ -1692,34 +1692,6 @@
             "time": "2013-07-30 22:07:23"
         },
         {
-            "name": "hypebeast/wordpress-bundle",
-            "version": "dev-master",
-            "target-dir": "Hypebeast/WordpressBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kayue/WordpressBundle.git",
-                "reference": "f6fc35e2ea120cb0134e24432bc451215b3f7f48"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kayue/WordpressBundle/zipball/f6fc35e2ea120cb0134e24432bc451215b3f7f48",
-                "reference": "f6fc35e2ea120cb0134e24432bc451215b3f7f48",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3",
-                "stof/doctrine-extensions-bundle": "dev-master"
-            },
-            "type": "symfony-bundle",
-            "autoload": {
-                "psr-0": {
-                    "Hypebeast\\WordpressBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "time": "2013-05-19 15:15:25"
-        },
-        {
             "name": "imagine/imagine",
             "version": "dev-develop",
             "source": {
@@ -1830,16 +1802,16 @@
         },
         {
             "name": "instaclick/php-webdriver",
-            "version": "1.1",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/instaclick/php-webdriver.git",
-                "reference": "786ba0dc9c594fb0b9b8171db852b2224b23811e"
+                "reference": "3c219c223043916f51ad4c20ccf810240eb3720d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/instaclick/php-webdriver/zipball/786ba0dc9c594fb0b9b8171db852b2224b23811e",
-                "reference": "786ba0dc9c594fb0b9b8171db852b2224b23811e",
+                "url": "https://api.github.com/repos/instaclick/php-webdriver/zipball/3c219c223043916f51ad4c20ccf810240eb3720d",
+                "reference": "3c219c223043916f51ad4c20ccf810240eb3720d",
                 "shasum": ""
             },
             "require": {
@@ -1884,7 +1856,7 @@
                 "webdriver",
                 "webtest"
             ],
-            "time": "2013-10-15 14:53:05"
+            "time": "2013-11-21 17:15:13"
         },
         {
             "name": "jdorn/sql-formatter",
@@ -2104,12 +2076,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/metadata.git",
-                "reference": "962219a7e30e500f10da7fafbff4f71d77c70df3"
+                "reference": "2457f5c32877842a9b4850ae5b2a4ccd57e5da52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/metadata/zipball/962219a7e30e500f10da7fafbff4f71d77c70df3",
-                "reference": "962219a7e30e500f10da7fafbff4f71d77c70df3",
+                "url": "https://api.github.com/repos/schmittjoh/metadata/zipball/2457f5c32877842a9b4850ae5b2a4ccd57e5da52",
+                "reference": "2457f5c32877842a9b4850ae5b2a4ccd57e5da52",
                 "shasum": ""
             },
             "require": {
@@ -2148,7 +2120,7 @@
                 "xml",
                 "yaml"
             ],
-            "time": "2013-11-18 11:09:03"
+            "time": "2013-11-21 17:28:10"
         },
         {
             "name": "jms/parser-lib",
@@ -4560,12 +4532,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "95b2d02ce90d22b5c8a457d2a5d6f2b3fc8f0b37"
+                "reference": "b74a887cd93d5ba864015e899cca790999262f65"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/95b2d02ce90d22b5c8a457d2a5d6f2b3fc8f0b37",
-                "reference": "95b2d02ce90d22b5c8a457d2a5d6f2b3fc8f0b37",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/b74a887cd93d5ba864015e899cca790999262f65",
+                "reference": "b74a887cd93d5ba864015e899cca790999262f65",
                 "shasum": ""
             },
             "require": {
@@ -4665,7 +4637,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2013-11-21 07:05:43"
+            "time": "2013-11-22 17:42:00"
         },
         {
             "name": "twig/extensions",

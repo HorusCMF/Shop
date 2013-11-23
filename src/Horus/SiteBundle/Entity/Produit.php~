@@ -17,12 +17,18 @@ use Gedmo\Mapping\Annotation as Gedmo; // gedmo annotations
 class Produit
 {
 
+
+    /**
+     * Constructor
+     */
     public function __construct(){
         $this->datePublication = new \Datetime('now');
         $this->dateCreated = new \Datetime('now');
         $this->dateUpdated = new \Datetime('now');
         $this->isShop = true;
         $this->isVisible = true;
+        $this->etat = 1;
+        $this->status = 1;
     }
     /**
      * @var integer
@@ -108,7 +114,7 @@ class Produit
      * @Assert\NotBlank(
      *     message = "Le prix HT ne doit pas etre vide"
      * )
-     * @Assert\Regex(pattern="/[0-9]{1,}[.,]{0,1}[0-9]{0,2}/", message="Le prix TTC n'est pas valide")
+     * @Assert\Regex(pattern="/[0-9]{1,}[.,]{0,1}[0-9]{0,2}/", message="Le prix HT n'est pas valide")
      * @ORM\Column(name="prixHT", type="float", nullable=false)
      */
     private $prixHT;
@@ -218,13 +224,13 @@ class Produit
     /**
      * @var string
      * @Assert\Type(type="integer", message="La valeur {{ value }} n'est pas un type {{ type }} valide.")
-     * @ORM\Column(name="quantity", type="integer", nullable=true)
+     * @ORM\Column(name="quantity", type="string", nullable=true)
      */
     private $quantity;
 
     /**
      * @var string
-     * @ORM\Column(name="tva", type="integer", nullable=true)
+     * @ORM\Column(name="tva", type="float", nullable=true)
      */
     private $tva;
 
@@ -336,6 +342,7 @@ class Produit
 
     /**
      * @ORM\OneToMany(targetEntity="Image",mappedBy="produit", cascade={"all"},orphanRemoval=true)
+     * @Assert\Valid
      * @ORM\OrderBy({"dateCreated" = "DESC"})
      */
     protected $images;
@@ -1108,6 +1115,9 @@ class Produit
         return $this;
     }
 
+    /**
+     * @param ArrayCollection $metas
+     */
     public function setMetas(ArrayCollection $metas)
     {
         foreach ($metas as $meta) {
@@ -1407,5 +1417,38 @@ class Produit
     public function getProfondeur()
     {
         return $this->profondeur;
+    }
+
+    /**
+     * Add pjs
+     *
+     * @param Horus\SiteBundle\Entity\Pj $pjs
+     * @return Produit
+     */
+    public function addPj(\Horus\SiteBundle\Entity\Pj $pjs)
+    {
+        $this->pjs[] = $pjs;
+        $pjs->setProduit($this);
+        return $this;
+    }
+
+    /**
+     * Remove pjs
+     *
+     * @param Horus\SiteBundle\Entity\Pj $pjs
+     */
+    public function removePj(\Horus\SiteBundle\Entity\Pj $pjs)
+    {
+        $this->pjs->removeElement($pjs);
+    }
+
+    /**
+     * Get pjs
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getPjs()
+    {
+        return $this->pjs;
     }
 }

@@ -27,6 +27,8 @@ class Produit
         $this->dateUpdated = new \Datetime('now');
         $this->isShop = true;
         $this->isVisible = true;
+        $this->etat = 1;
+        $this->status = 1;
     }
     /**
      * @var integer
@@ -222,13 +224,13 @@ class Produit
     /**
      * @var string
      * @Assert\Type(type="integer", message="La valeur {{ value }} n'est pas un type {{ type }} valide.")
-     * @ORM\Column(name="quantity", type="integer", nullable=true)
+     * @ORM\Column(name="quantity", type="string", nullable=true)
      */
     private $quantity;
 
     /**
      * @var string
-     * @ORM\Column(name="tva", type="integer", nullable=true)
+     * @ORM\Column(name="tva", type="float", nullable=true)
      */
     private $tva;
 

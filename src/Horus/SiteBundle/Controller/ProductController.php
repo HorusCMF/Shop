@@ -180,6 +180,48 @@ class ProductController extends Controller
         );
     }
 
+
+    /**
+     * See a product
+     * @param Produit $id
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function addquantityproductAction(Produit $id)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $id->setQuantity($id->getQuantity() + 1);
+        $em->persist($id);
+        $em->flush();
+        $this->get('session')->getFlashBag()->add(
+            'success',
+            "La quantité du produit a bien été augmentée"
+        );
+
+        return $this->redirect($this->generateUrl('horus_site_products'));
+    }
+
+
+    /**
+     * See a product
+     * @param Produit $id
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function removequantityproductAction(Produit $id)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $id->setQuantity($id->getQuantity() - 1);
+        $em->persist($id);
+        $em->flush();
+        $this->get('session')->getFlashBag()->add(
+            'success',
+            "La quantité du produit a bien été diminuée"
+        );
+
+        return $this->redirect($this->generateUrl('horus_site_products'));
+    }
+
     /**
      * Desactive a product
      * @param Produit $id
@@ -268,7 +310,7 @@ class ProductController extends Controller
             $em->flush();
             $this->get('session')->getFlashBag()->add(
                 'success',
-                "Le produit a été ajouté"
+                "Le produit a été crée"
             );
             $this->get('session')->getFlashBag()->add(
                 'messagerealtime',

@@ -35,12 +35,13 @@ class ProductType extends AbstractType
                 'attr' => array('class' => 'rad'),
                 'choices' => array(1 => 'Neuf', 2 => 'Occasion', 3 => 'Reconditionné'),
                 'required' => true,
-                'expanded' => true
+                'expanded' => true,
             ))
             ->add('tva', 'choice', array(
                 'attr' => array('class' => 'rad'),
-                'choices' => array(1 => '19.6%', 2 => '20%', 3 => '7%', 4 => '10%', 5 => '5.5%', 6 => '2.1%'),
-                'required' => true
+                'choices' => array("19.6" => '19.6%', "20" => '20%', "7" => '7%', "10" => '10%', "5.5" => '5.5%', "2.1" => '2.1%'),
+                'required' => true,
+                'preferred_choices' => array('19.6')
             ))
             ->add('status', 'choice', array(
                 'attr' => array('class' => 'rad'),
