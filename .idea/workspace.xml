@@ -230,7 +230,7 @@
     <file path="/CestAddArticleCest.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384975435028" ignored="false" />
     <file path="/about.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383323680621" ignored="false" />
     <file path="/contact.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383323882143" ignored="false" />
-    <file path="/README.md" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385062152151" ignored="false" />
+    <file path="/README.md" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385193707674" ignored="false" />
     <file path="/.gitignore" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385062967687" ignored="false" />
     <file path="/app.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383666549779" ignored="false" />
     <file path="/search.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384972907784" ignored="false" />
@@ -458,12 +458,21 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="1264" selection-end="1264" vertical-scroll-proportion="0.7109515">
+            <state line="122" column="0" selection-start="3156" selection-end="3156" vertical-scroll-proportion="0.93536806">
               <folding />
             </state>
           </provider>
           <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
             <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing_dev.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="0" selection-start="372" selection-end="441" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -755,6 +764,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -948,16 +989,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Controller/ProductController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="209" column="41" selection-start="5958" selection-end="5978" vertical-scroll-proportion="-8.306123" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Product/_listproducts.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="87" selection-start="3508" selection-end="3508" vertical-scroll-proportion="0.58064514" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/node/realtime.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="19" selection-start="159" selection-end="159" vertical-scroll-proportion="0.15126051" />
@@ -1035,9 +1066,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="68" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="372" selection-end="441" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="1264" selection-end="1264" vertical-scroll-proportion="0.7109515">
+        <state line="122" column="0" selection-start="3156" selection-end="3156" vertical-scroll-proportion="0.93536806">
           <folding />
         </state>
       </provider>

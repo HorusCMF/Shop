@@ -39,6 +39,89 @@ $ php app/console HorusCMF:install
 ```
 
 
+
+Requirements
+---------------
+
+* Mongo DB
+* Elastic Search
+* Node JS
+* Composer
+* Symfony 2
+
+
+Installation
+------------
+
+### Add the deps for the needed bundles
+
+``` php
+[AcmePizzaBundle]
+    git=https://github.com/HorusCMF/Shop.git
+    target=/bundles/horussite/
+
+```
+Next, run the vendors script to download the bundles:
+
+``` bash
+$ php bin/vendors install
+```
+### Add to autoload.php
+
+``` php
+$loader->registerNamespaces(array(
+    'Horus'             => __DIR__.'/../vendor/bundles',
+    // ...
+```
+### Register AcmePizzaBundle to Kernel
+
+``` php
+<?php
+
+    # app/AppKernel.php
+    //...
+    $bundles = array(
+        //...
+        new Horus\SiteBundle\HorusSiteBundle(),
+    );
+    //...
+```
+
+### Create database and schema
+
+``` bash
+$ php app/console doctrine:database:create
+$ php app/console doctrine:schema:create
+```
+
+
+### Enable routing configuration
+
+``` yaml
+# app/config/routing.yml
+horus:
+    resource: "@HorusSiteBundle/Resources/config/routing.yml"
+```
+### Refresh asset folder
+
+``` bash
+$ php app/console assets:install web/
+```
+
+
+### Data fixtures (optional)
+
+First, make sure that your db parameters are correctly set in `app/config/parameters.ini`.
+You'll need to install ``Doctrine Data Fixtures`` (don't forget to add the
+path to `AppKernel.php`) and then run:
+
+``` bash
+$ php app/console doctrine:fixtures:load
+
+You can read about install instructions in the Symfony2 Cookbook(http://symfony.com/doc/2.0/cookbook/doctrine/doctrine_fixtures.html#setup-and-configuration)
+
+
+
 Troubleshooting
 ---------------
 
