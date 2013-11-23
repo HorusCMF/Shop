@@ -73,7 +73,7 @@ $loader->registerNamespaces(array(
     'Horus'             => __DIR__.'/../vendor/bundles',
     // ...
 ```
-### Register AcmePizzaBundle to Kernel
+### Register HorusSiteBundle to Kernel
 
 ``` php
 <?php
@@ -93,7 +93,6 @@ $loader->registerNamespaces(array(
 $ php app/console doctrine:database:create
 $ php app/console doctrine:schema:create
 ```
-
 
 ### Enable routing configuration
 
