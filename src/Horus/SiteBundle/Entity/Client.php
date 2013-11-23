@@ -38,7 +38,6 @@ class Client extends EntityRepository  implements AdvancedUserInterface, \Serial
         $this->salt = md5(sprintf(
             '%s_%d_%f', uniqid(), rand(0, 99999), microtime(true)
         ));
-        $this->characters = "1,3";
         $this->emailTemp = $this->email;
     }
 
@@ -122,20 +121,6 @@ class Client extends EntityRepository  implements AdvancedUserInterface, \Serial
     public $description;
 
     /**
-     * @var text $extras
-     * @Assert\Length(
-     *      min = 2,
-     *      max = 550,
-     *      minMessage = "Votre description doit faire au moins 2 caractères",
-     *      maxMessage = "Votre description ne peut pas être plus long que 550 caractères",
-     *      groups={"default"}
-     * )
-     * @ORM\Column(name="extras", type="text", nullable=true)
-     */
-    public $extras;
-
-
-    /**
      * @var string $zipcode
      * @ORM\Column(name="zipcode", type="integer", length=11, nullable=true)
      */
@@ -146,6 +131,13 @@ class Client extends EntityRepository  implements AdvancedUserInterface, \Serial
      * @ORM\Column(name="ville", type="string", length=60, nullable=true)
      */
     public $ville;
+
+    /**
+     * @var string $ville
+     * @ORM\Column(name="adresse", type="string", length=60, nullable=true)
+     */
+    public $adresse;
+    
 
     /**
      * @var string $lastActivity
@@ -174,24 +166,6 @@ class Client extends EntityRepository  implements AdvancedUserInterface, \Serial
      * @ORM\Column(name="password", type="string", length=255)
      */
     public $password;
-
-
-
-
-    /**
-     * @var string $titre
-     *
-     * @ORM\Column(name="titre", type="string",  length=128,  unique=true, nullable=false)
-     */
-    protected $titre;
-
-
-    /**
-     * @var string $statut
-     *
-     * @ORM\Column(name="statut", type="text", nullable=false)
-     */
-    protected $statut;
 
 
     /**
@@ -237,12 +211,19 @@ class Client extends EntityRepository  implements AdvancedUserInterface, \Serial
 
 
     /**
+     * @var boolean
+     *
+     * @ORM\Column(name="optin_partenaire", type="boolean", nullable=true)
+     */
+    public $optinPartenaire;
+
+
+    /**
      * @var string
      *
      * @ORM\Column(name="ip", type="string", length=15, nullable=true)
      */
     public $ip;
-
 
 
     /**
@@ -375,19 +356,6 @@ class Client extends EntityRepository  implements AdvancedUserInterface, \Serial
      * @ORM\Column(name="avatar", type="string", length=200, nullable=true)
      */
     private $avatar;
-
-    /**
-     * @ORM\OneToOne(targetEntity="Metier", cascade={"all"}, orphanRemoval=true)
-     */
-    protected $metier;
-
-
-    /**
-     * @ORM\ManyToMany(targetEntity="Languages", mappedBy="demandeurs")
-     * @ORM\JoinTable(name="demandeur_i18n_language_codes")
-     */
-    private $langues;
-
 
 
     /**
@@ -575,7 +543,8 @@ class Client extends EntityRepository  implements AdvancedUserInterface, \Serial
      */
     public function setPassword($password)
     {
-        $this->password = $password;
+        if(!empty($password))
+            $this->password = $password;
     }
 
     /**
@@ -1494,266 +1463,6 @@ class Client extends EntityRepository  implements AdvancedUserInterface, \Serial
 
 
     /**
-     * Set titre
-     *
-     * @param string $titre
-     * @return Demandeur
-     */
-    public function setTitre($titre)
-    {
-        $this->titre = $titre;
-    }
-
-    /**
-     * Get titre
-     *
-     * @return string
-     */
-    public function getTitre()
-    {
-        return $this->titre;
-    }
-
-    /**
-     * Set xpPro
-     *
-     * @param string $xpPro
-     * @return Demandeur
-     */
-    public function setXpPro($xpPro)
-    {
-        $this->xpPro = $xpPro;
-    }
-
-    /**
-     * Get xpPro
-     *
-     * @return string
-     */
-    public function getXpPro()
-    {
-        return $this->xpPro;
-    }
-
-    /**
-     * Set etude
-     *
-     * @param string $etude
-     * @return Demandeur
-     */
-    public function setEtude($etude)
-    {
-        $this->etude = $etude;
-    }
-
-    /**
-     * Get etude
-     *
-     * @return string
-     */
-    public function getEtude()
-    {
-        return $this->etude;
-    }
-
-    /**
-     * Set statut
-     *
-     * @param string $statut
-     * @return Demandeur
-     */
-    public function setStatut($statut)
-    {
-        $this->statut = $statut;
-    }
-
-    /**
-     * Get statut
-     *
-     * @return string
-     */
-    public function getStatut()
-    {
-        return $this->statut;
-    }
-
-    /**
-     * Set permis
-     *
-     * @param integer $permis
-     * @return Demandeur
-     */
-    public function setPermis($permis)
-    {
-        $this->permis = $permis;
-    }
-
-    /**
-     * Get permis
-     *
-     * @return integer
-     */
-    public function getPermis()
-    {
-        return $this->permis;
-    }
-
-    /**
-     * Set mobiliter
-     *
-     * @param integer $mobiliter
-     * @return Demandeur
-     */
-    public function setMobiliter($mobiliter)
-    {
-        $this->mobiliter = $mobiliter;
-    }
-
-    /**
-     * Get mobiliter
-     *
-     * @return integer
-     */
-    public function getMobiliter()
-    {
-        return $this->mobiliter;
-    }
-
-
-
-    /**
-     * Get experiences
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getMea()
-    {
-        return $this->mea;
-    }
-
-    public function setMea($mea)
-    {
-        $this->mea = $mea;
-    }
-
-
-    /**
-     * Set characters
-     *
-     * @param string $characters
-     * @return Demandeur
-     */
-    public function setCharacters($characters)
-    {
-        $this->characters = $characters;
-
-        return $this;
-    }
-
-    /**
-     * Get characters
-     *
-     * @return string
-     */
-    public function getCharacters()
-    {
-        return $this->characters;
-    }
-
-
-
-    /**
-     * Get favoris
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getFavoris()
-    {
-        return $this->favoris;
-    }
-
-    /**
-     * Set metier
-     *
-     * @param \Horus\SiteBundle\Entity\Metier $metier
-     * @return Demandeur
-     */
-    public function setMetier(\Horus\SiteBundle\Entity\Metier $metier = null)
-    {
-        $this->metier = $metier;
-
-        return $this;
-    }
-
-    /**
-     * Get metier
-     *
-     * @return \Horus\SiteBundle\Entity\Metier
-     */
-    public function getMetier()
-    {
-        return $this->metier;
-    }
-
-
-
-    /**
-     * Set extras
-     *
-     * @param string $extras
-     * @return Demandeur
-     */
-    public function setExtras($extras)
-    {
-        $this->extras = $extras;
-
-        return $this;
-    }
-
-    /**
-     * Get extras
-     *
-     * @return string
-     */
-    public function getExtras()
-    {
-        return $this->extras;
-    }
-
-    /**
-     * Add langues
-     *
-     * @param \Horus\SiteBundle\Entity\Languages $langues
-     * @return Demandeur
-     */
-    public function addLangue(\Horus\SiteBundle\Entity\Languages $langues)
-    {
-        $this->langues[] = $langues;
-
-        return $this;
-    }
-
-    /**
-     * Remove langues
-     *
-     * @param \Horus\SiteBundle\Entity\Languages $langues
-     */
-    public function removeLangue(\Horus\SiteBundle\Entity\Languages $langues)
-    {
-        $this->langues->removeElement($langues);
-    }
-
-    /**
-     * Get langues
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getLangues()
-    {
-        return $this->langues;
-    }
-
-    /**
      * Set gender
      *
      * @param boolean $gender
@@ -1870,4 +1579,48 @@ class Client extends EntityRepository  implements AdvancedUserInterface, \Serial
     }
 
 
+
+    /**
+     * Set adresse
+     *
+     * @param string $adresse
+     * @return Client
+     */
+    public function setAdresse($adresse)
+    {
+        $this->adresse = $adresse;
+        return $this;
+    }
+
+    /**
+     * Get adresse
+     *
+     * @return string 
+     */
+    public function getAdresse()
+    {
+        return $this->adresse;
+    }
+
+    /**
+     * Set optinPartenaire
+     *
+     * @param boolean $optinPartenaire
+     * @return Client
+     */
+    public function setOptinPartenaire($optinPartenaire)
+    {
+        $this->optinPartenaire = $optinPartenaire;
+        return $this;
+    }
+
+    /**
+     * Get optinPartenaire
+     *
+     * @return boolean 
+     */
+    public function getOptinPartenaire()
+    {
+        return $this->optinPartenaire;
+    }
 }

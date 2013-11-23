@@ -52,15 +52,16 @@ class CategoryController extends Controller
     public function removecategoryAction(Category $id)
     {
         $em = $this->getDoctrine()->getManager();
+        $this->get('session')->getFlashBag()->add(
+            'messagerealtime',
+            "La catégorie ".$id->getName()." vient d'être supprimée"
+        );
+
         $em->remove($id);
         $em->flush();
         $this->get('session')->getFlashBag()->add(
             'success',
             "La catégory a bien été supprimée"
-        );
-        $this->get('session')->getFlashBag()->add(
-            'messagerealtime',
-            "La catégorie ".$id->getName()." vient d'être supprimée"
         );
 
         return $this->redirect($this->generateUrl('horus_site_categories'));
@@ -75,17 +76,17 @@ class CategoryController extends Controller
     public function removefamilleAction(Famille $id)
     {
         $em = $this->getDoctrine()->getManager();
-
+        $this->get('session')->getFlashBag()->add(
+            'messagerealtime',
+            "La famille ".$id->getName()." vient d'être supprimée"
+        );
         $em->remove($id);
         $em->flush();
         $this->get('session')->getFlashBag()->add(
             'success',
             "La famille a bien été supprimée"
         );
-        $this->get('session')->getFlashBag()->add(
-            'messagerealtime',
-            "La famille ".$id->getName()." vient d'être supprimée"
-        );
+
 
         return $this->redirect($this->generateUrl('horus_site_familles'));
     }

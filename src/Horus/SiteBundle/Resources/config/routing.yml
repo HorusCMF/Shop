@@ -11,6 +11,11 @@ horus_site_main:
   defaults: { _controller: HorusSiteBundle:Main:index }
 
 
+horus_site_denied:
+  pattern:  /access-denied/
+  defaults: { _controller: HorusSiteBundle:Administrateur:login }
+
+
 
 
 ###
@@ -128,6 +133,30 @@ horus_site_commentaires:
 horus_site_clients:
   pattern:  /backend/clients
   defaults: { _controller: HorusSiteBundle:Clients:clients }
+
+horus_site_create_client:
+  pattern:  /backend/clients/creer
+  defaults: { _controller: HorusSiteBundle:Clients:createclient }
+
+horus_site_edit_client:
+  pattern:  /backend/clients/editer/{id}
+  defaults: { _controller: HorusSiteBundle:Clients:editclient }
+
+horus_site_client:
+  pattern:  /backend/client/{id}
+  defaults: { _controller: HorusSiteBundle:Clients:seeclient }
+
+horus_site_remove_client:
+  pattern:  /backend/clients/suppression/{id}
+  defaults: { _controller: HorusSiteBundle:Clients:removeclient }
+
+horus_site_active_client:
+  pattern:  /backend/clients/activation/{id}
+  defaults: { _controller: HorusSiteBundle:Clients:activeclient }
+
+horus_site_desactive_client:
+  pattern:  /backend/clients/desactivation/{id}
+  defaults: { _controller: HorusSiteBundle:Clients:desactiveclient }
 
 
 

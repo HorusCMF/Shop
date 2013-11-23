@@ -50,12 +50,13 @@ security:
 
     access_control:
         - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/backend, roles: ROLE_USER }
+        - { path: ^/backend, roles: ROLE_ADMIN }
     #        - { path: ^/partenaires/administration, roles: ROLE_PARTENAIRE }
     #        - { path: ^/administrator/, roles: ROLE_ADMIN }
         - { path: ^/.*, roles: IS_AUTHENTICATED_ANONYMOUSLY }
 
     role_hierarchy:
       ROLE_USER:       ROLE_USER
-      ROLE_ADMIN: [ROLE_ADMIN,ROLE_USER,ROLE_ALLOWED_TO_SWITCH]
+      ROLE_ADMIN:       ROLE_ADMIN
+      ROLE_SUPER_ADMIN: [ROLE_ADMIN,ROLE_USER,ROLE_ALLOWED_TO_SWITCH]
 #        ROLE_PARTENAIRE: [ROLE_PARTENAIRE,ROLE_USER,ROLE_ALLOWED_TO_SWITCH]

@@ -119,16 +119,16 @@ class CommercialController extends Controller
     public function removecommercialAction(Commercial $id)
     {
         $em = $this->getDoctrine()->getManager();
+        $this->get('session')->getFlashBag()->add(
+            'messagerealtime',
+            "L'action commerciale ".$id->getTitle()." vient d'être supprimée"
+        );
 
         $em->remove($id);
         $em->flush();
         $this->get('session')->getFlashBag()->add(
             'success',
             "L'action commerciale a bien été supprimée"
-        );
-        $this->get('session')->getFlashBag()->add(
-            'messagerealtime',
-            "L'action commerciale ".$id->getTitle()." vient d'être supprimée"
         );
 
         return $this->redirect($this->generateUrl('horus_site_commercials'));
