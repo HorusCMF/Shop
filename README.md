@@ -38,8 +38,6 @@ $ cd HorusCMF
 $ php app/console HorusCMF:install
 ```
 
-
-
 Requirements
 ---------------
 
@@ -56,16 +54,33 @@ Installation
 ### Add the deps for the needed bundles
 
 ``` php
-[AcmePizzaBundle]
+[HorusSiteBundle]
     git=https://github.com/HorusCMF/Shop.git
     target=/bundles/horussite/
 
 ```
+Or add HorusSiteBundle in your composer.json
+
+```js
+{
+    "require": {
+        "HorusCMF/Shop": "*"
+    }
+}
+```
+If you don't have Composer yet, download it following the instructions on
+http://getcomposer.org/ or just run the following command:
+
+```bash
+    curl -s https://getcomposer.org/installer | php
+```
+
 Next, run the vendors script to download the bundles:
 
 ``` bash
 $ php bin/vendors install
 ```
+
 ### Add to autoload.php
 
 ``` php

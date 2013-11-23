@@ -230,7 +230,7 @@
     <file path="/CestAddArticleCest.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384975435028" ignored="false" />
     <file path="/about.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383323680621" ignored="false" />
     <file path="/contact.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383323882143" ignored="false" />
-    <file path="/README.md" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385193885799" ignored="false" />
+    <file path="/README.md" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385194256191" ignored="false" />
     <file path="/.gitignore" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385062967687" ignored="false" />
     <file path="/app.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383666549779" ignored="false" />
     <file path="/search.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384972907784" ignored="false" />
@@ -458,7 +458,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="119" column="3" selection-start="3156" selection-end="3156" vertical-scroll-proportion="0.77378815">
+            <state line="86" column="25" selection-start="2390" selection-end="2392" vertical-scroll-proportion="0.33270678">
               <folding />
             </state>
           </provider>
@@ -1082,7 +1082,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="3" selection-start="3156" selection-end="3156" vertical-scroll-proportion="0.77378815">
+        <state line="86" column="25" selection-start="2390" selection-end="2392" vertical-scroll-proportion="0.33270678">
           <folding />
         </state>
       </provider>
