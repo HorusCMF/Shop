@@ -19,11 +19,11 @@ use Gedmo\Mapping\Annotation as Gedmo;
 
 
 /**
- * @ORM\Table(name="administrateur")
+ * @ORM\Table(name="clients")
  * @UniqueEntity(fields={"email"}, message="Votre email est déjà utilisé")
- * @ORM\Entity(repositoryClass="Horus\SiteBundle\Repository\AdministrateurRepository")
+ * @ORM\Entity(repositoryClass="Horus\SiteBundle\Repository\ClientRepository")
  */
-class Administrateur extends EntityRepository  implements AdvancedUserInterface, \Serializable {
+class Client extends EntityRepository  implements AdvancedUserInterface, \Serializable {
 
     public function __construct() {
         $this->isActive = true;
@@ -489,7 +489,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get description
      *
-     * @return string 
+     * @return string
      */
     public function getDescription()
     {
@@ -519,7 +519,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get zipcode
      *
-     * @return integer 
+     * @return integer
      */
     public function getZipcode()
     {
@@ -560,7 +560,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get tel
      *
-     * @return string 
+     * @return string
      */
     public function getTel()
     {
@@ -581,7 +581,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get password
      *
-     * @return string 
+     * @return string
      */
     public function getPassword()
     {
@@ -602,7 +602,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get dob
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getDob()
     {
@@ -623,7 +623,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get email
      *
-     * @return string 
+     * @return string
      */
     public function getEmail()
     {
@@ -644,7 +644,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get dateCreated
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getDateCreated()
     {
@@ -665,7 +665,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get dateUpdated
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getDateUpdated()
     {
@@ -686,7 +686,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get optin
      *
-     * @return boolean 
+     * @return boolean
      */
     public function getOptin()
     {
@@ -707,7 +707,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get ip
      *
-     * @return string 
+     * @return string
      */
     public function getIp()
     {
@@ -728,7 +728,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get point
      *
-     * @return integer 
+     * @return integer
      */
     public function getPoint()
     {
@@ -749,7 +749,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get salt
      *
-     * @return string 
+     * @return string
      */
     public function getSalt()
     {
@@ -770,7 +770,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get token
      *
-     * @return string 
+     * @return string
      */
     public function getToken()
     {
@@ -791,7 +791,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get updatedAt
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {
@@ -812,7 +812,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get createdAt
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -833,7 +833,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get dateAuth
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getDateAuth()
     {
@@ -854,7 +854,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get enabled
      *
-     * @return boolean 
+     * @return boolean
      */
     public function getEnabled()
     {
@@ -875,7 +875,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get accountnonexpired
      *
-     * @return boolean 
+     * @return boolean
      */
     public function getAccountnonexpired()
     {
@@ -896,7 +896,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get accountnonlocked
      *
-     * @return boolean 
+     * @return boolean
      */
     public function getAccountnonlocked()
     {
@@ -917,7 +917,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get slug
      *
-     * @return string 
+     * @return string
      */
     public function getSlug()
     {
@@ -938,7 +938,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get fid
      *
-     * @return integer 
+     * @return integer
      */
     public function getFid()
     {
@@ -959,7 +959,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get fuser
      *
-     * @return string 
+     * @return string
      */
     public function getFuser()
     {
@@ -980,7 +980,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get guser
      *
-     * @return string 
+     * @return string
      */
     public function getGuser()
     {
@@ -1001,7 +1001,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get lastAction
      *
-     * @return string 
+     * @return string
      */
     public function getLastAction()
     {
@@ -1022,7 +1022,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get lastMyAction
      *
-     * @return string 
+     * @return string
      */
     public function getLastMyAction()
     {
@@ -1043,7 +1043,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get longitude
      *
-     * @return float 
+     * @return float
      */
     public function getLongitude()
     {
@@ -1064,7 +1064,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get latitude
      *
-     * @return float 
+     * @return float
      */
     public function getLatitude()
     {
@@ -1085,7 +1085,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get vue
      *
-     * @return integer 
+     * @return integer
      */
     public function getVue()
     {
@@ -1106,7 +1106,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get avatar
      *
-     * @return string 
+     * @return string
      */
     public function getAvatar()
     {
@@ -1507,7 +1507,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get titre
      *
-     * @return string 
+     * @return string
      */
     public function getTitre()
     {
@@ -1528,7 +1528,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get xpPro
      *
-     * @return string 
+     * @return string
      */
     public function getXpPro()
     {
@@ -1549,7 +1549,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get etude
      *
-     * @return string 
+     * @return string
      */
     public function getEtude()
     {
@@ -1570,7 +1570,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get statut
      *
-     * @return string 
+     * @return string
      */
     public function getStatut()
     {
@@ -1591,7 +1591,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get permis
      *
-     * @return integer 
+     * @return integer
      */
     public function getPermis()
     {
@@ -1612,7 +1612,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get mobiliter
      *
-     * @return integer 
+     * @return integer
      */
     public function getMobiliter()
     {
@@ -1646,14 +1646,14 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     public function setCharacters($characters)
     {
         $this->characters = $characters;
-    
+
         return $this;
     }
 
     /**
      * Get characters
      *
-     * @return string 
+     * @return string
      */
     public function getCharacters()
     {
@@ -1665,7 +1665,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get favoris
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getFavoris()
     {
@@ -1681,14 +1681,14 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     public function setMetier(\Horus\SiteBundle\Entity\Metier $metier = null)
     {
         $this->metier = $metier;
-    
+
         return $this;
     }
 
     /**
      * Get metier
      *
-     * @return \Horus\SiteBundle\Entity\Metier 
+     * @return \Horus\SiteBundle\Entity\Metier
      */
     public function getMetier()
     {
@@ -1706,14 +1706,14 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     public function setExtras($extras)
     {
         $this->extras = $extras;
-    
+
         return $this;
     }
 
     /**
      * Get extras
      *
-     * @return string 
+     * @return string
      */
     public function getExtras()
     {
@@ -1729,7 +1729,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     public function addLangue(\Horus\SiteBundle\Entity\Languages $langues)
     {
         $this->langues[] = $langues;
-    
+
         return $this;
     }
 
@@ -1746,7 +1746,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get langues
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getLangues()
     {
@@ -1762,14 +1762,14 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     public function setGender($gender)
     {
         $this->gender = $gender;
-    
+
         return $this;
     }
 
     /**
      * Get gender
      *
-     * @return boolean 
+     * @return boolean
      */
     public function getGender()
     {
@@ -1785,14 +1785,14 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     public function setEntreprise($entreprise)
     {
         $this->entreprise = $entreprise;
-    
+
         return $this;
     }
 
     /**
      * Get entreprise
      *
-     * @return string 
+     * @return string
      */
     public function getEntreprise()
     {
@@ -1813,14 +1813,14 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     public function setEmailTemp($emailTemp)
     {
         $this->emailTemp = $emailTemp;
-    
+
         return $this;
     }
 
     /**
      * Get emailTemp
      *
-     * @return string 
+     * @return string
      */
     public function getEmailTemp()
     {
