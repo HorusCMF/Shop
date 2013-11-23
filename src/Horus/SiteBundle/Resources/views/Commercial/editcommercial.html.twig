@@ -12,6 +12,8 @@
             des commercials</a>
 
         <h1><i class="glyphicon glyphicon-pencil"></i> Editer "{{ commercial.title }}"</h1>
+        <div class="label label-danger pull-right">Modifié il y a {{ commercial.dateUpdated|created_ago }}</div>
+
         <hr class="clear fancy-line">
 
         <form novalidate="novalidate" action="{{ path('horus_site_edit_commercial',{'id' : commercial.id}) }}"

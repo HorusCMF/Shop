@@ -286,6 +286,12 @@ class Produit
      */
     private $category;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="Transports", inversedBy="produits")
+     * @ORM\JoinColumn(name="transport_id", referencedColumnName="id")
+     */
+    private $transport;
+
 
     /**
      * @ORM\ManyToMany(targetEntity="Category", inversedBy="articless")
@@ -1450,5 +1456,27 @@ class Produit
     public function getPjs()
     {
         return $this->pjs;
+    }
+
+    /**
+     * Set transport
+     *
+     * @param Horus\SiteBundle\Entity\Transports $transport
+     * @return Produit
+     */
+    public function setTransport(\Horus\SiteBundle\Entity\Transports $transport = null)
+    {
+        $this->transport = $transport;
+        return $this;
+    }
+
+    /**
+     * Get transport
+     *
+     * @return Horus\SiteBundle\Entity\Transports 
+     */
+    public function getTransport()
+    {
+        return $this->transport;
     }
 }

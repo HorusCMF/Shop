@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "339873e8f4b66c51ef4d940d6401eae4",
+    "hash": "ebd3ab7481f7c6a1ffdb6feb8fe96233",
     "packages": [
         {
             "name": "behat/mink",
@@ -2743,6 +2743,56 @@
             "time": "2013-11-20 12:44:25"
         },
         {
+            "name": "nelmio/security-bundle",
+            "version": "dev-master",
+            "target-dir": "Nelmio/SecurityBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nelmio/NelmioSecurityBundle.git",
+                "reference": "2f18a8410e1c50dc7d0e68b8bbb8a711c5ce4476"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nelmio/NelmioSecurityBundle/zipball/2f18a8410e1c50dc7d0e68b8bbb8a711c5ce4476",
+                "reference": "2f18a8410e1c50dc7d0e68b8bbb8a711c5ce4476",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/framework-bundle": "~2.1",
+                "symfony/security": "~2.1"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Nelmio\\SecurityBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nelmio",
+                    "homepage": "http://nelm.io"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://github.com/nelmio/NelmioSecurityBundle/contributors"
+                }
+            ],
+            "description": "Extra security-related features for Symfony2: signed/encrypted cookies, HTTPS/SSL/HSTS handling, cookie session storage, ...",
+            "keywords": [
+                "security"
+            ],
+            "time": "2013-10-21 16:07:42"
+        },
+        {
             "name": "nikic/php-parser",
             "version": "dev-master",
             "source": {
@@ -5351,7 +5401,8 @@
         "knplabs/knp-menu-bundle": 20,
         "stof/doctrine-extensions-bundle": 20,
         "imagine/imagine": 20,
-        "saad-tazi/g-chart-bundle": 20
+        "saad-tazi/g-chart-bundle": 20,
+        "nelmio/security-bundle": 20
     },
     "platform": {
         "php": ">=5.3.3"

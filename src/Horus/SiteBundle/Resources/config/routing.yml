@@ -140,6 +140,25 @@ horus_site_transports:
   pattern:  /backend/transports
   defaults: { _controller: HorusSiteBundle:Transports:transports }
 
+horus_site_create_transport:
+  pattern:  /backend/transports/creer
+  defaults: { _controller: HorusSiteBundle:Transports:createtransport }
+
+horus_site_edit_transport:
+  pattern:  /backend/transports/editer/{id}
+  defaults: { _controller: HorusSiteBundle:Transports:edittransport }
+
+horus_site_remove_transport:
+  pattern:  /backend/transports/suppression/{id}
+  defaults: { _controller: HorusSiteBundle:Transports:removetransport }
+
+horus_site_active_transport:
+  pattern:  /backend/transports/activation/{id}
+  defaults: { _controller: HorusSiteBundle:Transports:activetransport }
+
+horus_site_desactive_transport:
+  pattern:  /backend/transports/desactivation/{id}
+  defaults: { _controller: HorusSiteBundle:Transports:desactivetransport }
 
 
 

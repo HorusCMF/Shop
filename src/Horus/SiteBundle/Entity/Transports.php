@@ -17,7 +17,6 @@ use Gedmo\Mapping\Annotation as Gedmo; // gedmo annotations
 class Transports
 {
 
-
     /**
      * Constructor
      */
@@ -25,7 +24,10 @@ class Transports
         $this->dateCreated = new \Datetime('now');
         $this->dateUpdated = new \Datetime('now');
         $this->isVisible = true;
+        $this->etat = true;
+        $this->manutention = false;
     }
+
     /**
      * @var integer
      *
@@ -38,12 +40,6 @@ class Transports
     /**
      * @var integer
      * @Assert\Url(message="Votre URL de Vidéo n'est pas valide")
-     * @Assert\Length(
-     *      min = "8",
-     *      max = "1000",
-     *      minMessage = "Votre video doit faire au moins {{ limit }} caractères",
-     *      maxMessage = "Votre video ne peut pas être plus long que {{ limit }} caractères"
-     * )
      * @ORM\Column(name="video", type="string", length=200, nullable=false)
      */
     private $video;
@@ -81,9 +77,6 @@ class Transports
 
 
     /**
-     * @Assert\NotBlank(
-     *     message = "Le prix TTC ne doit pas etre vide"
-     * )
      * @Assert\Regex(pattern="/[0-9]{1,}[.,]{0,1}[0-9]{0,2}/", message="Le prix TTC n'est pas valide")
      * @ORM\Column(name="prix", type="float", nullable=false)
      */
@@ -96,6 +89,22 @@ class Transports
      * @ORM\Column(name="etat", type="integer", nullable=false)
      */
     private $etat;
+
+    
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="manutention", type="integer", nullable=false)
+     */
+    private $manutention;
+
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="extras", type="text", nullable=false)
+     */
+    private $extras;
 
     /**
      * @var integer
@@ -148,13 +157,13 @@ class Transports
 
     /**
      * @var string
-     * @ORM\Column(name="from", type="float", nullable=true)
+     * @ORM\Column(name="begin", type="float", nullable=true)
      */
     private $from;
 
     /**
      * @var string
-     * @ORM\Column(name="to", type="float", nullable=true)
+     * @ORM\Column(name="end", type="float", nullable=true)
      */
     private $to;
 
@@ -224,11 +233,6 @@ class Transports
      */
     private $dateCreated;
 
-    /**
-     * @var string
-     * @ORM\Column(name="picture", type="string", nullable=true)
-     */
-    private $picture;
 
     /**
      * @var string
@@ -256,6 +260,35 @@ class Transports
      */
     private $point;
 
+
+    /**
+     * @var string
+     * @ORM\Column(name="picture", type="text", nullable=true)
+     */
+    private $path;
+
+    /**
+     * @Assert\Image(
+     *     minWidth = 200,
+     *     minHeight  = 200,
+     *     maxWidth = 3000,
+     *     maxHeight = 3000,
+     *     maxSize = "6000k",
+     *     mimeTypes = {"image/jpg","image/jpeg", "image/png", "image/gif", "image/bmp"},
+     *     mimeTypesMessage = "Image au format non supporté",
+     *    maxWidthMessage = "Image trop grande en largeur {{ width }}px. Le maximum en largeur est de {{ max_width }}px" ,
+     *    minWidthMessage = "Image trop petite en largeur {{ width }}px. Le minimum en largeur est de {{ min_width }}px" ,
+     *    minHeightMessage = "Image trop petite en hauteur {{ height }}px. Le mimum en hauteur est de {{ min_height }}px" ,
+     *    maxHeightMessage = "Image trop grande en hauteur  {{ height }}px. Le maximum en hauteur est de {{ max_height }}px"
+     * )
+     */
+    public $file;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Produit",mappedBy="transport", cascade={"all"},orphanRemoval=true)
+     * @Assert\Valid
+     */
+    protected $produits;
 
 
     /**
@@ -894,25 +927,283 @@ class Transports
         return $this->departement;
     }
 
+
     /**
-     * Set picture
+     * Set extras
      *
-     * @param string $picture
+     * @param text $extras
      * @return Transports
      */
-    public function setPicture($picture)
+    public function setExtras($extras)
     {
-        $this->picture = $picture;
+        $this->extras = $extras;
         return $this;
     }
 
     /**
-     * Get picture
+     * Get extras
      *
-     * @return string 
+     * @return text 
      */
-    public function getPicture()
+    public function getExtras()
     {
-        return $this->picture;
+        return $this->extras;
+    }
+
+
+
+
+
+
+
+    /**
+     *  Upload Images
+     *
+     * @return text
+     */
+
+    public function getAbsolutePath()
+    {
+        return null === $this->path ? null : $this->getUploadRootDir().'/'.$this->path;
+    }
+
+    public function getWebPath()
+    {
+        return null === $this->path ? null : $this->getUploadDir().'/'.$this->path;
+    }
+
+    protected function getUploadRootDir()
+    {
+        // le chemin absolu du répertoire où les documents uploadés doivent être sauvegardés
+        return __DIR__.'/../../../../web/'.$this->getUploadDir();
+    }
+
+    protected function getUploadDir()
+    {
+        // on se débarrasse de « __DIR__ » afin de ne pas avoir de problème lorsqu'on affiche
+        // le document/image dans la vue.
+        return 'uploads/transports/';
+    }
+
+
+
+    /**
+     * @ORM\PrePersist()
+     * @ORM\PreUpdate()
+     */
+    public function preUpload()
+    {
+        if (null !== $this->file) {
+            // faites ce que vous voulez pour générer un nom unique
+            $this->path = sha1(uniqid(mt_rand(), true)).'.'.$this->file->guessExtension();
+        }
+    }
+
+    /**
+     * @ORM\PostPersist()
+     * @ORM\PostUpdate()
+     */
+    public function upload($id = null)
+    {
+
+        // la propriété « file » peut être vide si le champ n'est pas requis
+        if (null === $this->file) {
+            return;
+        }
+
+        if(!is_dir(@mkdir($this->getUploadRootDir().'/'.$id)))
+            @mkdir($this->getUploadRootDir().'/'.$id);
+
+
+        // utilisez le nom de fichier original ici mais
+        // vous devriez « l'assainir » pour au moins éviter
+        // quelconques problèmes de sécurité
+
+        // la méthode « move » prend comme arguments le répertoire cible et
+        // le nom de fichier cible où le fichier doit être déplacé
+
+        $rewritename = sha1(uniqid(mt_rand(), true));
+        $rewritefile = $rewritename.'.'.$this->file->guessExtension();
+        $extension = $this->file->guessExtension();
+
+        $this->file->move($this->getUploadRootDir().'/'.$id, $rewritefile);
+
+        // définit la propriété « path » comme étant le nom de fichier où vous
+        // avez stocké le fichier
+        $this->path = $rewritefile;
+
+//        $this->path = sha1(uniqid(mt_rand(), true)).'.'.$this->file->guessExtension();
+
+        //Original photo
+        $bigfile = $this->getUploadRootDir().'/'.$id.'/'.$rewritefile;
+
+        if ($extension == "jpg" || $extension == "jpeg") {
+            $src_img = imagecreatefromjpeg($bigfile);
+        }
+        if ($extension == "png") {
+            $src_img = imagecreatefrompng($bigfile);
+        }
+        if ($extension == "gif") {
+            $src_img = imagecreatefromgif($bigfile);
+        }
+
+        // Le ratio de l'image uploadée
+        $oldWidth = imageSX($src_img);
+        $oldHeight = imageSY($src_img);
+        $ratio = $oldWidth / $oldHeight;
+
+        $taille = array(
+            array(
+                'name' => 'big',
+                'width' => 500,
+                'height' => 300
+            ),
+            array(
+                'name' => 'medium',
+                'width' => 300,
+                'height' => 260
+            ),
+            array(
+                'name' => 'small',
+                'width' => 250,
+                'height' => 180
+            ),
+        );
+
+        // C'est parti
+        foreach ($taille as $value) {
+
+            // On prépare les valeurs
+            $width = $value['width'] - 1;
+            $height = $value['height'] -1;
+            $ratioImg = $width / $height;
+
+            // On calcule les nouvelles
+            if ($ratioImg > $ratio) {
+                $newWidth = $width;
+                $newHeight = $width / $ratio;
+            } elseif ($ratioImg < $ratio) {
+                $newHeight = $height;
+                $newWidth = $height * $ratio;
+            } else {
+                $newWidth = $width;
+                $newHeight = $height;
+            }
+
+            // Point de départ du crop
+            $x = ($newWidth - $width) / 2;
+            $y = 0;
+
+            // On bosse sur l'image
+            $imagine = new \Imagine\Gd\Imagine();
+            $imagine
+                ->open($bigfile)
+                ->thumbnail(new \Imagine\Image\Box($newWidth, $newHeight))
+                ->save(
+                    $this->getUploadRootDir().'/'.$id.'/' . $rewritename . '-' . $value['name'] . '.' . $extension,
+                    array(
+                        'quality' => 80
+                    )
+                );
+        }
+
+        // « nettoie » la propriété « file » comme vous n'en aurez plus besoin
+        $this->file = null;
+    }
+
+    /**
+     * @ORM\PostRemove()
+     */
+    public function removeUpload()
+    {
+        if ($file = $this->getAbsolutePath()) {
+            @unlink($file);
+        }
+    }
+
+
+
+    /**
+     * Set path
+     *
+     * @param text $path
+     * @return Transports
+     */
+    public function setPath($path)
+    {
+        $this->path = $path;
+        return $this;
+    }
+
+    /**
+     * Get path
+     *
+     * @return text 
+     */
+    public function getPath()
+    {
+        return $this->path;
+    }
+
+    /**
+     * Set manutention
+     *
+     * @param integer $manutention
+     * @return Transports
+     */
+    public function setManutention($manutention)
+    {
+        $this->manutention = $manutention;
+        return $this;
+    }
+
+    /**
+     * Get manutention
+     *
+     * @return integer 
+     */
+    public function getManutention()
+    {
+        return $this->manutention;
+    }
+
+    /**
+     * Add produits
+     *
+     * @param Horus\SiteBundle\Entity\Produit $produits
+     * @return Transports
+     */
+    public function addProduit(\Horus\SiteBundle\Entity\Produit $produits)
+    {
+        $this->produits[] = $produits;
+        return $this;
+    }
+
+    /**
+     * Remove produits
+     *
+     * @param Horus\SiteBundle\Entity\Produit $produits
+     */
+    public function removeProduit(\Horus\SiteBundle\Entity\Produit $produits)
+    {
+        $this->produits->removeElement($produits);
+    }
+
+    /**
+     * Get produits
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getProduits()
+    {
+        return $this->produits;
+    }
+
+    /**
+     * Get a object
+     * @return string
+     */
+    public function __toString(){
+        return $this->getTitle();
     }
 }

@@ -11,6 +11,8 @@
             familles</a>
 
         <h1><i class="glyphicon glyphicon-pencil"></i> Editer une famille</h1>
+        <div class="label label-danger pull-right">Modifié il y a {{ famille.dateCreated|created_ago }}</div>
+
         <hr class="clear fancy-line">
 
         <form novalidate="novalidate" action="{{ path('horus_site_edit_famille', {'id' : famille.id}) }}" method="post">

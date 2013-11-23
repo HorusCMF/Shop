@@ -109,6 +109,7 @@ twig:
       imgsite: '/bundles/site/images/'
       imgproducts: '/uploads/products/'
       imgcategories: '/uploads/categories/'
+      imgtransports: '/uploads/transports/'
       documentsuploads: '/uploads/documents/'
       imguser: '/uploads/users/'
       imgpartenaire: '/uploads/partenaires/'

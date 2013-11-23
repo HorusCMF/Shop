@@ -11,6 +11,8 @@
             page</a>
 
         <h1><i class="glyphicon glyphicon-pencil"></i> Editer "{{ page.name }}"</h1>
+        <div class="label label-danger pull-right">Modifié il y a {{ page.dateCreated|created_ago }}</div>
+
         <hr class="clear fancy-line">
 
         <form novalidate="novalidate" action="{{ path('horus_site_edit_page',{'id' : page.id}) }}" method="post">

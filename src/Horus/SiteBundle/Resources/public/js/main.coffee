@@ -24,6 +24,7 @@ $ ->
   $('form').on "submit", (event) ->
     $(this).find('button[type=submit]').attr 'disabled','disabled'
     $(this).find('button[type=submit]').text('Envoi en cours...')
+    $('#overlay').removeClass('hide')
 
   $(window).scroll ->
     if $(this).scrollTop() > 100

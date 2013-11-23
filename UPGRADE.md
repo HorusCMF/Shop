@@ -2,6 +2,9 @@ UPGRADE FROM 1.0 to 1.1
 =======================
 
 ### General
+  * Add  markdown for product is disable or quantity = 0
+  * Add messages when category is empty, when product quantity = 0
+  * Add a filters
   * Add Time of Contents
   * Add Nelmio Security
   * Multilanguages

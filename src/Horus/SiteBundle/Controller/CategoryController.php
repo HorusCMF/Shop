@@ -141,6 +141,7 @@ class CategoryController extends Controller
         $form->handleRequest($request);
 
         if ($form->isValid()) {
+            $id->setDateCreated(new \Datetime('now'));
             $em->persist($id);
             $em->flush();
             $this->get('session')->getFlashBag()->add(

@@ -43,7 +43,6 @@
     <div class="container-fluid">
         <div class="row-fluid">
             {% include 'HorusSiteBundle:Slots:notification.html.twig' %}
-
             <div class="span12">
                 <div class="container">
                     <div class="row-fluid">
@@ -75,7 +74,10 @@
             <p class="muted credit">Horus CMF forked by <a href="https://github.com/HorusCMF/Shop">Symfomany</a></p>
         </div>
     </div>
-    {% render controller('HorusSiteBundle:Layout:getIpVisitor') %}
+    <div id="overlay" class="overlay hide">
+        <img src="/images/495.GIF" />
+    </div>
+{% render controller('HorusSiteBundle:Layout:getIpVisitor') %}
 {% endblock %}
 
 

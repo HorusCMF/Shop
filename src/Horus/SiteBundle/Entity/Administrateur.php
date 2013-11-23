@@ -38,7 +38,6 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
         $this->salt = md5(sprintf(
             '%s_%d_%f', uniqid(), rand(0, 99999), microtime(true)
         ));
-        $this->experiences = new ArrayCollection();
         $this->characters = "1,3";
         $this->emailTemp = $this->email;
     }
@@ -1621,44 +1620,6 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     }
 
 
-    /**
-     * Add experiences
-     *
-     * @param \MyFuckinJob\SiteBundle\Entity\Experience $experiences
-     * @return Demandeur
-     */
-    public function addExperience(\MyFuckinJob\SiteBundle\Entity\Experience $experiences)
-    {
-        $this->experiences[] = $experiences;
-    
-        return $this;
-    }
-
-    /**
-     * Remove experiences
-     *
-     * @param \MyFuckinJob\SiteBundle\Entity\Experience $experiences
-     */
-    public function removeExperience(\MyFuckinJob\SiteBundle\Entity\Experience $experiences)
-    {
-        $this->experiences->removeElement($experiences);
-    }
-
-    /**
-     * Get experiences
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getExperiences()
-    {
-        return $this->experiences;
-    }
-
-
-    public function setExperiences(ArrayCollection $experiences)
-    {
-        $this->experiences = $experiences;
-    }
 
     /**
      * Get experiences
@@ -1675,39 +1636,6 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
         $this->mea = $mea;
     }
 
-
-    /**
-     * Add certificates
-     *
-     * @param \MyFuckinJob\SiteBundle\Entity\Certificat $certificates
-     * @return Demandeur
-     */
-    public function addCertificate(\MyFuckinJob\SiteBundle\Entity\Certificat $certificates)
-    {
-        $this->certificates[] = $certificates;
-    
-        return $this;
-    }
-
-    /**
-     * Remove certificates
-     *
-     * @param \MyFuckinJob\SiteBundle\Entity\Certificat $certificates
-     */
-    public function removeCertificate(\MyFuckinJob\SiteBundle\Entity\Certificat $certificates)
-    {
-        $this->certificates->removeElement($certificates);
-    }
-
-    /**
-     * Get certificates
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getCertificates()
-    {
-        return $this->certificates;
-    }
 
     /**
      * Set characters
@@ -1747,7 +1675,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Set metier
      *
-     * @param \MyFuckinJob\SiteBundle\Entity\Metier $metier
+     * @param \Horus\SiteBundle\Entity\Metier $metier
      * @return Demandeur
      */
     public function setMetier(\Horus\SiteBundle\Entity\Metier $metier = null)
@@ -1760,7 +1688,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get metier
      *
-     * @return \MyFuckinJob\SiteBundle\Entity\Metier 
+     * @return \Horus\SiteBundle\Entity\Metier 
      */
     public function getMetier()
     {
@@ -1795,7 +1723,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Add langues
      *
-     * @param \MyFuckinJob\SiteBundle\Entity\Languages $langues
+     * @param \Horus\SiteBundle\Entity\Languages $langues
      * @return Demandeur
      */
     public function addLangue(\Horus\SiteBundle\Entity\Languages $langues)
@@ -1808,7 +1736,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Remove langues
      *
-     * @param \MyFuckinJob\SiteBundle\Entity\Languages $langues
+     * @param \Horus\SiteBundle\Entity\Languages $langues
      */
     public function removeLangue(\Horus\SiteBundle\Entity\Languages $langues)
     {

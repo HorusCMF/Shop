@@ -21,6 +21,7 @@ Screenshots
 ![ScreenShot](https://raw.github.com/HorusCMF/Shop/master/screenshots/Screen2.png)
 ![ScreenShot](https://raw.github.com/HorusCMF/Shop/master/screenshots/Screen3.png)
 ![ScreenShot](https://raw.github.com/HorusCMF/Shop/master/screenshots/Screen4.png)
+![ScreenShot](https://raw.github.com/HorusCMF/Shop/master/screenshots/Screen5.png)
 
 Documentation
 -------------
@@ -133,6 +134,27 @@ $ php app/console doctrine:fixtures:load
 
 You can read about install instructions in the Symfony2 Cookbook(http://symfony.com/doc/2.0/cookbook/doctrine/doctrine_fixtures.html#setup-and-configuration)
 ```
+
+
+## Why Horus CMF
+
+- 100% Responsive Backend
+- Based on Powerfully Symfony 2
+- MVC Structure
+- ORM Database with Doctrine 2
+- ODM NoSQL with Mongo
+- Elastic search to the Cloud Big Datas
+- Real-Time App with Node
+- Flexible views with Twig Template Engine
+- Acceptance, Unit & Fct Tests with Codeception
+- Form Classes in services
+- Routing & Configuration & Translation in YAML
+- Sass & Compass & Coffee with Assetic
+- Security with Roles & Permissions
+- E-R Model System with Entities-Repository
+- Datas fixtures for tests
+- Documentation API with Responsive PHPDocumentor 2
+- Crud action for all Modules
 
 
 Troubleshooting

@@ -11,6 +11,8 @@
             tags</a>
 
         <h1><i class="glyphicon glyphicon-tag"></i> Modifier ce tag</h1>
+        <div class="label label-danger pull-right">Modifié il y a {{ tag.dateCreated|created_ago }}</div>
+
         <hr class="clear fancy-line">
 
         <form novalidate="novalidate" action="{{ path('horus_site_edit_tag',{'id' : tag.id}) }}" method="post">

@@ -42,7 +42,8 @@
         "fg/essence":  "1.4.1",
         "imagine/Imagine":"0.6.*@dev",
         "saad-tazi/g-chart-bundle" : "dev-master",
-        "phpdocumentor/phpdocumentor": "*"
+        "phpdocumentor/phpdocumentor": "*",
+        "nelmio/security-bundle": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [

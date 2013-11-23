@@ -19,6 +19,7 @@
         produit</a>
 
     <h1><i class="glyphicon glyphicon-pencil"></i> Editer "{{ produit.title|title }}"</h1>
+    <div class="label label-danger pull-right">Modifié il y a {{ produit.dateUpdated|created_ago }}</div>
     <hr class="clear fancy-line">
 
     {% if not form.vars.valid %}

@@ -286,6 +286,12 @@ class Produit
      */
     private $category;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="Transports", inversedBy="produits")
+     * @ORM\JoinColumn(name="transport_id", referencedColumnName="id")
+     */
+    private $transport;
+
 
     /**
      * @ORM\ManyToMany(targetEntity="Category", inversedBy="articless")

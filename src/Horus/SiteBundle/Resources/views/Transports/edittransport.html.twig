@@ -1,0 +1,158 @@
+{% extends 'HorusSiteBundle::layout.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
+
+
+{% block content %}
+    <div id="createtransport" class="page">
+        <a class="btn back btn-danger pull-right" href="{{ path('horus_site_transports') }}">&larr; Revenir à la liste
+            des transports</a>
+
+        <h1><i class="glyphicon glyphicon-pencil"></i> Editer "{{ transport.title }}"</h1>
+        <hr class="clear fancy-line">
+
+        {% if not form.vars.valid %}
+            <div class="alert alert-error">
+                {{ form_errors(form) }}
+            </div>
+        {% endif %}
+
+        <form novalidate="novalidate" action="{{ path('horus_site_edit_transport', {'id' : transport.id }) }}" method="post" enctype="multipart/form-data">
+
+            <div class="row-fluid">
+                <h3>Présentation</h3>
+                <label for="title">Titre</label>
+
+                <div class="input-group">
+                    {{ form_widget(form.title) }}
+                    <span class="input-group-btn">
+                                          <button class="btn btn-search btn-primary"><i
+                                                      class="glyphicon glyphicon-pencil"></i></button>
+                                      </span>
+
+                </div>
+                {{ form_errors(form.title) }}
+            </div>
+
+            <div class="row-fluid">
+                <div class="span12">
+                    <label for="content">Description</label>
+                    {{ form_widget(form.content,{'attr' : {'class' : 'ckeditor' }}) }}
+                    {{ form_errors(form.content) }}
+                </div>
+            </div>
+            <h3>Caractéristiques</h3>
+
+            <div class="row-fluid">
+                <div class="span12">
+                    {{ form_errors(form.tva) }}
+                    <div class="span3">
+                        <label for="nature">Type de transporteurs</label>
+
+                        <div class="input-group">
+                            {{ form_widget(form.nature) }}
+                        </div>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span3">
+                            {{ form_row(form.etat) }}
+                        </div>
+                        <div class="span3">
+                            {{ form_row(form.manutention) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span3">
+                    <label for="tva">TVA (%)</label>
+                    {{ form_widget(form.tva) }}
+                </div>
+                <div class="span3">
+                    <label for="departement">Departement</label>
+                    {{ form_widget(form.departement) }}
+                </div>
+                <div class="span3">
+                    <label for="from">Tranche de début</label>
+                    {{ form_widget(form.from) }}
+                </div>
+                <div class="span3">
+                    <label for="to">Tranche de fin</label>
+                    {{ form_widget(form.to) }}
+                </div>
+            </div>
+
+
+            <h3>Pack</h3>
+
+            <div class="row-fluid">
+                <div class="span3">
+                    {{ form_row(form.longueur) }}
+                </div>
+                <div class="span3">
+                    {{ form_row(form.largeur) }}
+                </div>
+                <div class="span3">
+                    {{ form_row(form.hauteur) }}
+                </div>
+                <div class="span3">
+                    {{ form_row(form.profondeur) }}
+                </div>
+            </div>
+            <h3>Extras</h3>
+            <div class="row-fluid">
+                <div class="span6">
+                    <label for="service">Service inclus</label>
+                    {{ form_widget(form.service, {'attr': {'class' : 'form-control' }}) }}
+                </div>
+                <div class="span6">
+                    <label for="url">Url</label>
+                    {{ form_widget(form.url) }}
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span6">
+                    <label for="video">Vidéo de présentation</label>
+                    {{ form_widget(form.video, {'attr': { }}) }}
+                    {{ form_errors(form.video) }}
+
+                </div>
+                <div class="span6">
+                    {% if transport.path is not empty %}
+                        <img src="{{ imgtransports ~ transport.path }}" class="img-thumbnail" />
+                    {% endif %}
+                    <label for="file">Photo</label>
+                    {{ form_widget(form.file, {'attr': { }}) }}
+                    {{ form_errors(form.file) }}
+
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span4">
+                    {{ form_widget(form.isVisible, {'attr': { }}) }}
+                    {{ form_errors(form.isVisible) }}
+                    <label for="video">Est-il visible sur la fiche produit?</label>
+                </div>
+                <div class="span4">
+                    <label for="file">Délai de livraison</label>
+                    {{ form_widget(form.delay, {'attr': { }}) }}
+                    {{ form_errors(form.delay) }}
+
+                </div>
+                <div class="span4">
+                    <label for="file">Commentaire</label>
+                    {{ form_widget(form.extras, {'attr': { 'class' : 'form-control' }}) }}
+                    {{ form_errors(form.extras) }}
+
+                </div>
+            </div>
+            <button class="btn btn-primary btn-large" type="submit"><i class="glyphicon glyphicon-pencil"></i> Editer
+                cette transport
+            </button>
+        </form>
+    </div>
+    {#{{ form_rest(form) }}#}
+{% endblock %}
+

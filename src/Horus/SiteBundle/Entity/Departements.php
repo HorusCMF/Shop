@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Villes
  * @ORM\Table(name="departements")
- * @ORM\Entity(repositoryClass="MyFuckinJob\SiteBundle\Repository\DepartementsRepository")
+ * @ORM\Entity(repositoryClass="Horus\SiteBundle\Repository\DepartementsRepository")
  */
 class Departements
 {
@@ -145,5 +145,13 @@ class Departements
     public function getProvinceSlug()
     {
         return $this->provinceSlug;
+    }
+
+    /**
+     * Get Name Province
+     * @return string
+     */
+    public function __toString(){
+        return $this->getNameProvince();
     }
 }

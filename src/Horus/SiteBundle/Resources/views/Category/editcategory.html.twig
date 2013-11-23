@@ -12,6 +12,8 @@
             catégories</a>
 
         <h1><i class="glyphicon glyphicon-pencil"></i> Editer "{{ category.name|title }}"</h1>
+        <div class="label label-danger pull-right">Modifié il y a {{ category.dateUpdated|created_ago }}</div>
+
         <hr class="clear fancy-line">
 
         <form novalidate="novalidate" action="{{ path('horus_site_edit_category', {'id' : category.id}) }}"

@@ -1,0 +1,70 @@
+{% extends 'HorusSiteBundle::layout.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    <div class="page" id="transports">
+        <h1><i class="glyphicon glyphicon-road"></i> Transports</h1>
+
+        {% for transport in transports %}
+            <div class="media">
+                <div class="btn-group pull-right">
+                    <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
+                        <i class="glyphicon glyphicon-plus"></i> Action <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        {% if transport.isVisible %}
+                            <li><a onclick="return(confirm('Etes-vous sûr de vouloir désactiver ce transport?'));"
+                                   href="{{ path('horus_site_desactive_transport', {'id' : transport.id}) }}"><i
+                                            class="glyphicon glyphicon-minus-sign"></i> Désactiver</a></li>
+                        {% else %}
+                            <li><a onclick="return(confirm('Etes-vous sûr de vouloir activer ce transport?'));"
+                                   href="{{ path('horus_site_active_transport', {'id' : transport.id}) }}"><i
+                                            class="glyphicon glyphicon-ok"></i> Activer</a></li>
+                        {% endif %}
+                        <li><a onclick="return(confirm('Etes-vous sûr de vouloir supprimer ce transport?'));"
+                               href="{{ path('horus_site_remove_transport', {'id' : transport.id}) }}"><i
+                                        class="glyphicon glyphicon-remove"></i> Supprimer</a></li>
+                        <li><a href="{{ path('horus_site_edit_transport', {'id' : transport.id}) }}"><i
+                                        class="glyphicon glyphicon-pencil"></i> Editer</a></li>
+
+
+                    </ul>
+                </div>
+                <a class="pull-left" href="#">
+                    {% if transport.path %}
+                        <img src="{{ imgtransports ~ transport.path}} "/>
+                    {% else %}
+                        <img class="media-object img-thumbnail" src="http://placehold.it/150x75" alt="...">
+                    {% endif %}
+                </a>
+
+                <div class="media-body">
+                    <h4 class="media-heading">{{ transport.title }}
+                        {% if transport.isVisible %}
+                            <span class="badge badge-success">En ligne</span>
+                        {% else %}
+                            <span class="badge badge-danger">Hors-Ligne</span>
+                        {% endif %}
+                    </h4>
+                    <hr class="fancy-line"/>
+                    <p>{{ transport.content|truncate('400',true)|raw }}</p>
+                </div>
+            </div>
+        {% else %}
+            <div class="alert alert-dismissable alert-danger">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <i class="glyphicon glyphicon-info-sign"></i> Aucun transport de créer pour le moment.
+                <a href="{{ path('horus_site_create_transport' ) }}" class="pull-right btn btn-primary "><i
+                            class="glyphicon glyphicon-plus"></i> Créer un transport</a>
+
+                <div class="clear"></div>
+            </div>
+        {% endfor %}
+        <a class="pull-right btn btn-danger" href="{{ path('horus_site_create_transport') }}"><i class="glyphicon glyphicon-plus"></i> Ajouter un transport</a>
+        <div class="clear"></div>
+    </div>
+{% endblock %}
+

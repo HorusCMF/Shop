@@ -180,6 +180,37 @@ doctrine_mongodb:
             auto_mapping: true
 
 
+#Security Optimization
+nelmio_security:
+    # signs/verifies all cookies
+#    signed_cookie:
+#        secret: s5ddhg46hj46hgsdf65s46846sd46fsd56d56g4d8f6h4df6g # defaults to global %secret%
+#        hash_algo: sha1 # defaults to sha256
+#        names: ['*']
+    # encrypt all cookies
+    encrypted_cookie:
+        names: ['*']
+    # prevents framing of the entire site
+    clickjacking:
+        paths:
+            '^/.*': DENY
+    # prevents redirections outside the website's domain
+    external_redirects:
+        abort: false
+        log: true
+
+    # forced HTTPS handling, don't combine with flexible mode
+    # and make sure you have SSL working on your site before enabling this
+#    forced_ssl: ~
+#        hsts_max_age: 2592000 # 30 days
+#        hsts_subdomains: true
+
+    # flexible HTTPS handling, read the detailed config info
+    # and make sure you have SSL working on your site before enabling this
+#    flexible_ssl:
+#        cookie_name: auth
+#        unsecured_logout: false
+
 fos_elastica:
     default_manager: orm
     clients:

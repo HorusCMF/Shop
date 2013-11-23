@@ -77,6 +77,7 @@ class CMSController extends Controller
         $form->handleRequest($request);
 
         if ($form->isValid()) {
+            $id->setDateCreated(new \Datetime('now'));
             $em->persist($id);
             $em->flush();
             $this->get('session')->getFlashBag()->add(
@@ -400,6 +401,7 @@ class CMSController extends Controller
 
 
         if ($form->isValid()) {
+            $id->setDateCreated(new \Datetime('now'));
             $em->persist($id);
             $em->flush();
             $this->get('session')->getFlashBag()->add(
