@@ -107,7 +107,6 @@ horus:
 $ php app/console assets:install web/
 ```
 
-
 ### Data fixtures (optional)
 
 First, make sure that your db parameters are correctly set in `app/config/parameters.ini`.
@@ -118,7 +117,7 @@ path to `AppKernel.php`) and then run:
 $ php app/console doctrine:fixtures:load
 
 You can read about install instructions in the Symfony2 Cookbook(http://symfony.com/doc/2.0/cookbook/doctrine/doctrine_fixtures.html#setup-and-configuration)
-
+```
 
 
 Troubleshooting
