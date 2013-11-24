@@ -4,8 +4,6 @@ $(document).ready(function () {
     var me = null;
 
 
-
-
     /*****************Handle All actions******************/
 
     // on the client connected

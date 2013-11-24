@@ -20,7 +20,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Table(name="administrateur")
- * @UniqueEntity(fields={"email"}, message="Votre email est déjà utilisé", groups={"registration"})
+ * @UniqueEntity(fields={"email"}, message="Votre email est déjà utilisé")
  * @ORM\Entity(repositoryClass="Horus\SiteBundle\Repository\AdministrateurRepository")
  */
 class Administrateur extends EntityRepository  implements AdvancedUserInterface, \Serializable {
@@ -38,9 +38,9 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
         $this->salt = md5(sprintf(
             '%s_%d_%f', uniqid(), rand(0, 99999), microtime(true)
         ));
-        $this->experiences = new ArrayCollection();
         $this->characters = "1,3";
         $this->emailTemp = $this->email;
+        $this->groups = new ArrayCollection();
     }
 
     /* ***********************************************  OTHERS  *************************************************** */
@@ -149,8 +149,14 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     public $ville;
 
     /**
+     * @var string $adresse
+     * @ORM\Column(name="adresse", type="string", length=60, nullable=true)
+     */
+    public $adresse;
+
+    /**
      * @var string $lastActivity
-     * @ORM\Column(name="lastActivity", type="string", length=60, nullable=true)
+     * @ORM\Column(name="lastActivity", type="datetime", nullable=true)
      */
     public $lastActivity;
 
@@ -388,6 +394,13 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * @ORM\JoinTable(name="demandeur_i18n_language_codes")
      */
     private $langues;
+
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Group", mappedBy="administrateurs")
+     * @ORM\JoinTable(name="group_administrateur")
+     */
+    private $groups;
 
 
 
@@ -1124,7 +1137,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      */
     public function getRoles()
     {
-        return array('ROLE_USER');
+        return $this->groups->toArray();
     }
 
     /**
@@ -1132,9 +1145,6 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      */
     public function isCredentialsNonExpired()
     {
-        if (is_null($this->password) || !$this->password || strlen($this->password) < 1) {
-            return false;
-        }
         return true;
     }
 
@@ -1164,7 +1174,6 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
 
     public function eraseCredentials()
     {
-        $this->roles = null;
     }
 
     /**
@@ -1477,7 +1486,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     public function isOnline()
     {
         $delay = new \DateTime();
-        $delay->setTimestamp(strtotime('2 minutes ago'));
+        $delay->setTimestamp(strtotime('5 minutes ago'));
         if($this->getLastActivity() < $delay)
             return false;
         return true;
@@ -1621,44 +1630,6 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     }
 
 
-    /**
-     * Add experiences
-     *
-     * @param \MyFuckinJob\SiteBundle\Entity\Experience $experiences
-     * @return Demandeur
-     */
-    public function addExperience(\MyFuckinJob\SiteBundle\Entity\Experience $experiences)
-    {
-        $this->experiences[] = $experiences;
-    
-        return $this;
-    }
-
-    /**
-     * Remove experiences
-     *
-     * @param \MyFuckinJob\SiteBundle\Entity\Experience $experiences
-     */
-    public function removeExperience(\MyFuckinJob\SiteBundle\Entity\Experience $experiences)
-    {
-        $this->experiences->removeElement($experiences);
-    }
-
-    /**
-     * Get experiences
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getExperiences()
-    {
-        return $this->experiences;
-    }
-
-
-    public function setExperiences(ArrayCollection $experiences)
-    {
-        $this->experiences = $experiences;
-    }
 
     /**
      * Get experiences
@@ -1675,39 +1646,6 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
         $this->mea = $mea;
     }
 
-
-    /**
-     * Add certificates
-     *
-     * @param \MyFuckinJob\SiteBundle\Entity\Certificat $certificates
-     * @return Demandeur
-     */
-    public function addCertificate(\MyFuckinJob\SiteBundle\Entity\Certificat $certificates)
-    {
-        $this->certificates[] = $certificates;
-    
-        return $this;
-    }
-
-    /**
-     * Remove certificates
-     *
-     * @param \MyFuckinJob\SiteBundle\Entity\Certificat $certificates
-     */
-    public function removeCertificate(\MyFuckinJob\SiteBundle\Entity\Certificat $certificates)
-    {
-        $this->certificates->removeElement($certificates);
-    }
-
-    /**
-     * Get certificates
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getCertificates()
-    {
-        return $this->certificates;
-    }
 
     /**
      * Set characters
@@ -1747,7 +1685,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Set metier
      *
-     * @param \MyFuckinJob\SiteBundle\Entity\Metier $metier
+     * @param \Horus\SiteBundle\Entity\Metier $metier
      * @return Demandeur
      */
     public function setMetier(\Horus\SiteBundle\Entity\Metier $metier = null)
@@ -1760,7 +1698,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Get metier
      *
-     * @return \MyFuckinJob\SiteBundle\Entity\Metier 
+     * @return \Horus\SiteBundle\Entity\Metier 
      */
     public function getMetier()
     {
@@ -1795,7 +1733,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Add langues
      *
-     * @param \MyFuckinJob\SiteBundle\Entity\Languages $langues
+     * @param \Horus\SiteBundle\Entity\Languages $langues
      * @return Demandeur
      */
     public function addLangue(\Horus\SiteBundle\Entity\Languages $langues)
@@ -1808,7 +1746,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     /**
      * Remove langues
      *
-     * @param \MyFuckinJob\SiteBundle\Entity\Languages $langues
+     * @param \Horus\SiteBundle\Entity\Languages $langues
      */
     public function removeLangue(\Horus\SiteBundle\Entity\Languages $langues)
     {
@@ -1873,7 +1811,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
 
     public function isEqualTo(UserInterface $user)
     {
-        return $this->email === $user->getEmail();
+        return $this->username === $user->getUsername();
     }
 
     /**
@@ -1942,4 +1880,35 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     }
 
 
+    /**
+     * Add groups
+     *
+     * @param Horus\SiteBundle\Entity\Group $groups
+     * @return Administrateur
+     */
+    public function addGroup(\Horus\SiteBundle\Entity\Group $groups)
+    {
+        $this->groups[] = $groups;
+        return $this;
+    }
+
+    /**
+     * Remove groups
+     *
+     * @param Horus\SiteBundle\Entity\Group $groups
+     */
+    public function removeGroup(\Horus\SiteBundle\Entity\Group $groups)
+    {
+        $this->groups->removeElement($groups);
+    }
+
+    /**
+     * Get groups
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getGroups()
+    {
+        return $this->groups;
+    }
 }

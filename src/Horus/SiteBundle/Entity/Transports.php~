@@ -69,6 +69,12 @@ class Transports
 
 
     /**
+     * @ORM\OneToMany(targetEntity="Commandes", mappedBy="transport")
+     */
+    private $commandes;
+
+
+    /**
      * @var integer
      *
      * @ORM\Column(name="status", type="integer", nullable=false)
@@ -1165,5 +1171,77 @@ class Transports
     public function getManutention()
     {
         return $this->manutention;
+    }
+
+    /**
+     * Add produits
+     *
+     * @param Horus\SiteBundle\Entity\Produit $produits
+     * @return Transports
+     */
+    public function addProduit(\Horus\SiteBundle\Entity\Produit $produits)
+    {
+        $this->produits[] = $produits;
+        return $this;
+    }
+
+    /**
+     * Remove produits
+     *
+     * @param Horus\SiteBundle\Entity\Produit $produits
+     */
+    public function removeProduit(\Horus\SiteBundle\Entity\Produit $produits)
+    {
+        $this->produits->removeElement($produits);
+    }
+
+    /**
+     * Get produits
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getProduits()
+    {
+        return $this->produits;
+    }
+
+    /**
+     * Get a object
+     * @return string
+     */
+    public function __toString(){
+        return $this->getTitle();
+    }
+
+    /**
+     * Add commandes
+     *
+     * @param Horus\SiteBundle\Entity\Commandes $commandes
+     * @return Transports
+     */
+    public function addCommande(\Horus\SiteBundle\Entity\Commandes $commandes)
+    {
+        $this->commandes[] = $commandes;
+        return $this;
+    }
+
+    /**
+     * Remove commandes
+     *
+     * @param Horus\SiteBundle\Entity\Commandes $commandes
+     */
+    public function removeCommande(\Horus\SiteBundle\Entity\Commandes $commandes)
+    {
+        $this->commandes->removeElement($commandes);
+    }
+
+    /**
+     * Get commandes
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getCommandes()
+    {
+        return $this->commandes;
     }
 }

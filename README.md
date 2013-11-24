@@ -22,6 +22,7 @@ Screenshots
 ![ScreenShot](https://raw.github.com/HorusCMF/Shop/master/screenshots/Screen3.png)
 ![ScreenShot](https://raw.github.com/HorusCMF/Shop/master/screenshots/Screen4.png)
 ![ScreenShot](https://raw.github.com/HorusCMF/Shop/master/screenshots/Screen5.png)
+![ScreenShot](https://raw.github.com/HorusCMF/Shop/master/screenshots/Screen6.png)
 
 Documentation
 -------------
@@ -150,7 +151,7 @@ You can read about install instructions in the Symfony2 Cookbook(http://symfony.
 - Form Classes in services
 - Routing & Configuration & Translation in YAML
 - Sass & Compass & Coffee with Assetic
-- Security with Roles & Permissions
+- Security with Roles & Permissions & Switch to Roles access
 - E-R Model System with Entities-Repository
 - Datas fixtures for tests
 - Documentation API with Responsive PHPDocumentor 2

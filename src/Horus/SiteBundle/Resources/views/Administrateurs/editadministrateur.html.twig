@@ -1,0 +1,89 @@
+{% extends 'HorusSiteBundle::layout.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    <div class="page" id="createadministrateur">
+        <a class="btn back btn-danger pull-right" href="{{ path('horus_site_administrateurs') }}">&larr; Revenir à la liste des administrateurs</a>
+
+
+        <h1><i class="glyphicon glyphicon-pencil"></i> Editer un administrateur</h1>
+        <div class="label label-danger pull-right">Modifié il y a {{ administrateur.updatedAt|created_ago }}</div>
+
+        <hr class="clear fancy-line">
+
+        <form novalidate="novalidate" action="{{ path('horus_site_edit_administrateur', {'id' : administrateur.id}) }}" method="post">
+
+            <div class="row-fluid">
+                <div class="span3">
+                    {{ form_row(form.gender) }}
+                </div>
+                <div class="span4">
+                    {{ form_row(form.firstname) }}
+                </div>
+                <div class="span4">
+                    {{ form_row(form.lastname) }}
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="span2">
+                    {{ form_row(form.dob['day']) }}
+                </div>
+                <div class="span2">
+                    {{ form_row(form.dob['month']) }}
+                </div>
+                <div class="span2">
+                    {{ form_row(form.dob['year']) }}
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span12">
+                    {{ form_row(form.description) }}
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="span4">
+                    {{ form_row(form.description) }}
+                </div>
+                <div class="span4">
+                    {{ form_row(form.adresse) }}
+                </div>
+                <div class="span2">
+                    {{ form_row(form.zipcode) }}
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="span4">
+                    {{ form_row(form.ville) }}
+                </div>
+                <div class="span4">
+                    {{ form_row(form.email) }}
+                </div>
+                <div class="span4">
+                    {{ form_row(form.password) }}
+                    <div class="label label-warning">Indiquer si changement</div>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="span4">
+                    {{ form_row(form.tel) }}
+                </div>
+                <div class="span4">
+                    {{ form_row(form.entreprise) }}
+                </div>
+            </div>
+            {{ form_rest(form) }}
+
+            <button class="btn btn-primary btn-large" type="submit"><i class="glyphicon glyphicon-pencil"></i> editer
+                cet administrateur
+            </button>
+        </form>
+    </div>
+{% endblock %}
+

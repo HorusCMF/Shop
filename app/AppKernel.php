@@ -28,7 +28,8 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\MongoDBBundle\DoctrineMongoDBBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new SaadTazi\GChartBundle\SaadTaziGChartBundle(),
-            new Nelmio\SecurityBundle\NelmioSecurityBundle()
+            new Nelmio\SecurityBundle\NelmioSecurityBundle(),
+            new Egulias\SecurityDebugCommandBundle\EguliasSecurityDebugCommandBundle()
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

@@ -357,6 +357,17 @@ class Client extends EntityRepository  implements AdvancedUserInterface, \Serial
      */
     private $avatar;
 
+    /**
+     * @ORM\OneToOne(targetEntity="Cart", mappedBy="client")
+     */
+    private $cart;
+
+
+    /**
+     * @ORM\OneToMany(targetEntity="Commentaire",mappedBy="client", cascade={"all"},orphanRemoval=true)
+     */
+    protected $client;
+
 
     /**
      * Get id
@@ -1622,5 +1633,59 @@ class Client extends EntityRepository  implements AdvancedUserInterface, \Serial
     public function getOptinPartenaire()
     {
         return $this->optinPartenaire;
+    }
+
+    /**
+     * Set cart
+     *
+     * @param Horus\SiteBundle\Entity\Cart $cart
+     * @return Client
+     */
+    public function setCart(\Horus\SiteBundle\Entity\Cart $cart = null)
+    {
+        $this->cart = $cart;
+        return $this;
+    }
+
+    /**
+     * Get cart
+     *
+     * @return Horus\SiteBundle\Entity\Cart 
+     */
+    public function getCart()
+    {
+        return $this->cart;
+    }
+
+    /**
+     * Add client
+     *
+     * @param Horus\SiteBundle\Entity\Commentaire $client
+     * @return Client
+     */
+    public function addClient(\Horus\SiteBundle\Entity\Commentaire $client)
+    {
+        $this->client[] = $client;
+        return $this;
+    }
+
+    /**
+     * Remove client
+     *
+     * @param Horus\SiteBundle\Entity\Commentaire $client
+     */
+    public function removeClient(\Horus\SiteBundle\Entity\Commentaire $client)
+    {
+        $this->client->removeElement($client);
+    }
+
+    /**
+     * Get client
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getClient()
+    {
+        return $this->client;
     }
 }

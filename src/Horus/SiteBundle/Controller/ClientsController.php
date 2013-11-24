@@ -105,9 +105,11 @@ class ClientsController extends Controller
 
             $mdp = $form['password']->getData();
 
-            $encoder = new MessageDigestPasswordEncoder('sha512', true, 10);
-            $newpass = $encoder->encodePassword($mdp, $client->getSalt());
-            $client->setPassword($newpass);
+            if(!empty($mdp)){
+                $encoder = new MessageDigestPasswordEncoder('sha512', true, 10);
+                $newpass = $encoder->encodePassword($mdp, $client->getSalt());
+                $client->setPassword($newpass);
+            }
 
             $em->persist($client);
             $em->flush();
@@ -176,6 +178,7 @@ class ClientsController extends Controller
                 $id->setPassword($newpass);
             }
 
+            $id->setDateUpdated(new \Datetime('now'));
             $em->persist($id);
             $em->flush();
             $this->get('session')->getFlashBag()->add(

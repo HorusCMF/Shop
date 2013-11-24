@@ -322,10 +322,21 @@ class Produit
 
 
     /**
+     * @ORM\OneToMany(targetEntity="CommandesProduit",mappedBy="produit", cascade={"all"},orphanRemoval=true)
+     * @Assert\Valid
+     */
+    protected $commandes;
+
+    /**
      * @ORM\OneToMany(targetEntity="Seo",mappedBy="produit", cascade={"all"},orphanRemoval=true)
      * @Assert\Valid
      */
     protected $seo;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Commentaire",mappedBy="produit", cascade={"all"},orphanRemoval=true)
+     */
+    protected $commentaires;
 
     /**
      * @ORM\OneToMany(targetEntity="Pj",mappedBy="produit", cascade={"all"},orphanRemoval=true)
@@ -1478,5 +1489,69 @@ class Produit
     public function getTransport()
     {
         return $this->transport;
+    }
+
+    /**
+     * Add commandes
+     *
+     * @param Horus\SiteBundle\Entity\CommandesProduit $commandes
+     * @return Produit
+     */
+    public function addCommande(\Horus\SiteBundle\Entity\CommandesProduit $commandes)
+    {
+        $this->commandes[] = $commandes;
+        return $this;
+    }
+
+    /**
+     * Remove commandes
+     *
+     * @param Horus\SiteBundle\Entity\CommandesProduit $commandes
+     */
+    public function removeCommande(\Horus\SiteBundle\Entity\CommandesProduit $commandes)
+    {
+        $this->commandes->removeElement($commandes);
+    }
+
+    /**
+     * Get commandes
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getCommandes()
+    {
+        return $this->commandes;
+    }
+
+    /**
+     * Add commentaires
+     *
+     * @param Horus\SiteBundle\Entity\Commentaire $commentaires
+     * @return Produit
+     */
+    public function addCommentaire(\Horus\SiteBundle\Entity\Commentaire $commentaires)
+    {
+        $this->commentaires[] = $commentaires;
+        return $this;
+    }
+
+    /**
+     * Remove commentaires
+     *
+     * @param Horus\SiteBundle\Entity\Commentaire $commentaires
+     */
+    public function removeCommentaire(\Horus\SiteBundle\Entity\Commentaire $commentaires)
+    {
+        $this->commentaires->removeElement($commentaires);
+    }
+
+    /**
+     * Get commentaires
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getCommentaires()
+    {
+        return $this->commentaires;
     }
 }

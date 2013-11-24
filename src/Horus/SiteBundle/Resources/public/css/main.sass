@@ -134,6 +134,7 @@ body
 
   .form-control
     font-size: 16px
+    border-radius: 0px
 
 
 // <hr /> Fancy
@@ -254,7 +255,10 @@ select:invalid
   right: 12px
 
 .table-bordered,.table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td
-  border: 1px solid brown
+  border: 1px dashed brown
+
+.multiselect-container>li>a>label.radio, .multiselect-container>li>a>label.checkbox
+  color: burlywood
 
 #advancedsearch
   .row-fluid
@@ -323,6 +327,10 @@ select:invalid
   background-color: #111
   height: 150px
   border: 1px solid black
+
+.alert-danger
+  padding: 9px
+  font-size: 89%
 
 .clear
   clear: both

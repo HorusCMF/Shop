@@ -84,9 +84,15 @@ class AdministrateurRepository extends EntityRepository
     {
         $class = get_class($user);
         if (!$this->supportsClass($class)) {
-            throw new UnsupportedUserException(sprintf('Instances of "%s" are not supported.', $class));
+            throw new UnsupportedUserException(
+                sprintf(
+                    'Instances of "%s" are not supported.',
+                    $class
+                )
+            );
         }
-        return $this->loadUserByUsername($user->getUsername());
+
+        return $this->find($user->getId());
     }
 
 
@@ -97,7 +103,7 @@ class AdministrateurRepository extends EntityRepository
      */
     public function supportsClass($class)
     {
-        return $class === "Horus\SiteBundle\Entity\Administrateur";
+        return $this->getEntityName() === $class || is_subclass_of($class, $this->getEntityName());
     }
 
     /**

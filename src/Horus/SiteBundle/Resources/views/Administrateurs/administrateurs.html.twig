@@ -1,0 +1,62 @@
+{% extends 'HorusSiteBundle::layout.html.twig' %}
+
+{% block content %}
+    <div class="page" id="administrateurs">
+        <h2><i class="glyphicon glyphicon-list"></i> Les administrateurs</h2>
+
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Nom Prénom</th>
+                <th>Email</th>
+                <th>Tel</th>
+                <th>Roles</th>
+                <th>Dernière connexion</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for administrateur in administrateurs %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ administrateur.firstname|title }} {{ administrateur.lastname|title }}</td>
+                    <td>{{ administrateur.email }}</td>
+                    <td>{{ administrateur.tel }}</td>
+                    <td>
+                        {% for group in administrateur.groups %}
+                            <p><i class="glyphicon glyphicon-ok"></i> {{ group.name }}</p>
+                        {% endfor%}
+                    </td>
+                    <td>{{ administrateur.dateAuth|created_ago|default('Pas encore connecté') }}</td>
+                    <td>
+                        {% if not administrateur.accountnonlocked  %}
+                            <a onclick="return(confirm('Etes-vous sûr de vouloir activer cet administrateur?'));" href="{{ path('horus_site_active_administrateur', {'id' : administrateur.id }) }}" class="btn btn-primary"><i class="glyphicon glyphicon-ok"></i></a>
+                       {% else %}
+                           <a onclick="return(confirm('Etes-vous sûr de vouloir desactiver cet administrateur?'));" href="{{ path('horus_site_desactive_administrateur', {'id' : administrateur.id }) }}" class="btn btn-primary"><i class="glyphicon glyphicon-minus-sign"></i></a>
+                        {% endif %}
+                        <a href="{{ path('horus_site_edit_administrateur', {'id' : administrateur.id }) }}" class="btn btn-primary"><i class="glyphicon glyphicon-pencil"></i></a>
+                        <a onclick="return(confirm('Etes-vous sûr de vouloir supprimer cet administrateur?'));" href="{{ path('horus_site_remove_administrateur', {'id' : administrateur.id }) }}" class="btn btn-primary"><i class="glyphicon glyphicon-remove"></i></a>
+                        <a onclick='return(confirm("Etes-vous sûr de vouloir changer d'utilisateur courant?"));' href='{{ path('horus_site_switch', {'username' : administrateur.email }) }}' class="btn btn-primary"><i class="glyphicon glyphicon-transfer"></i></a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <div class="alert alert-dismissable alert-danger">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        <i class="glyphicon glyphicon-info-sign"></i> Aucun administrateur de créer pour le moment.
+                        <a href="{{ path('horus_site_add_administrateur') }}" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i> Ajouter un administrateur</a>
+                        <div class="clear"></div>
+                    </div>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <a href="{{ path('horus_site_add_administrateur') }}" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i> Ajouter un administrateur</a>
+
+        <div class="clear"></div>
+        </div>
+    </div>
+{% endblock %}
+

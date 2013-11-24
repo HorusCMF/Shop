@@ -1,0 +1,39 @@
+{% extends 'HorusSiteBundle::layout.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
+
+
+{% block content %}
+    <div id="createcommentaire">
+        <a class="btn back btn-danger pull-right" href="{{ path('horus_site_commentaires') }}">&larr; Revenir à la liste
+            des commentaires</a>
+
+        <h1><i class="glyphicon glyphicon-pencil"></i> Editer un commentaire</h1>
+        <hr class="clear fancy-line">
+
+        <form novalidate="novalidate" action="{{ path('horus_site_edit_commentaire', {'id' : commentaire.id}) }}" method="post">
+            <div class="row-fluid">
+                <div class="span12">
+                    <label for="title">Content</label>
+                    {{ form_widget(form.content) }}
+                    {{ form_errors(form.content) }}
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="span12">
+                    <label for="etat">Etat</label>
+                    <div class="clear"></div>
+                    <label for="title">{{ form_widget(form.visible) }}
+                    {{ form_errors(form.visible) }}
+                </div>
+            </div>
+            <button class="btn btn-primary btn-large" type="submit"><i class="glyphicon glyphicon-pencil"></i> Editer
+                ce commentaire
+            </button>
+        </form>
+    </div>
+{% endblock %}
+

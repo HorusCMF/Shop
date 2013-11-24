@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "ebd3ab7481f7c6a1ffdb6feb8fe96233",
+    "hash": "8c95bee8c8a9ef66e4994235e6a605d6",
     "packages": [
         {
             "name": "behat/mink",
@@ -348,12 +348,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/Codeception.git",
-                "reference": "bac92379a97935c6ebc8b2f2f0ade7312b75f80c"
+                "reference": "46f4d3ed0522ed2f18b7ba2966a59bb2207d7641"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/bac92379a97935c6ebc8b2f2f0ade7312b75f80c",
-                "reference": "bac92379a97935c6ebc8b2f2f0ade7312b75f80c",
+                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/46f4d3ed0522ed2f18b7ba2966a59bb2207d7641",
+                "reference": "46f4d3ed0522ed2f18b7ba2966a59bb2207d7641",
                 "shasum": ""
             },
             "require": {
@@ -407,7 +407,7 @@
                 "functional testing",
                 "unit testing"
             ],
-            "time": "2013-11-15 02:57:56"
+            "time": "2013-11-24 00:44:34"
         },
         {
             "name": "dflydev/markdown",
@@ -1123,6 +1123,50 @@
                 "orm"
             ],
             "time": "2012-11-21 13:49:23"
+        },
+        {
+            "name": "egulias/security-debug-command-bundle",
+            "version": "dev-master",
+            "target-dir": "Egulias/SecurityDebugCommandBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/egulias/SecurityDebugCommandBundle.git",
+                "reference": "48447a8f04b29d028d6bcb3ae3994ee96377d412"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/egulias/SecurityDebugCommandBundle/zipball/48447a8f04b29d028d6bcb3ae3994ee96377d412",
+                "reference": "48447a8f04b29d028d6bcb3ae3994ee96377d412",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony/symfony": ">=2.3"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Egulias\\SecurityDebugCommandBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Eduardo Gulias Davis",
+                    "homepage": "http://egulias.com"
+                }
+            ],
+            "description": "Symfony 2 console commands to debug security",
+            "homepage": "https://github.com/egulias/SecurityDebugCommandBundle.git",
+            "keywords": [
+                "debug",
+                "listeners",
+                "security"
+            ],
+            "time": "2013-10-27 19:56:09"
         },
         {
             "name": "fabpot/goutte",
@@ -2681,12 +2725,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "11cb918bbc471da036c6148b995d42f79806428d"
+                "reference": "afaafc91995aff60604db79fcd30b489d2e6e7c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/11cb918bbc471da036c6148b995d42f79806428d",
-                "reference": "11cb918bbc471da036c6148b995d42f79806428d",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/afaafc91995aff60604db79fcd30b489d2e6e7c3",
+                "reference": "afaafc91995aff60604db79fcd30b489d2e6e7c3",
                 "shasum": ""
             },
             "require": {
@@ -2740,7 +2784,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2013-11-20 12:44:25"
+            "time": "2013-11-23 21:58:36"
         },
         {
             "name": "nelmio/security-bundle",
@@ -4006,16 +4050,16 @@
         },
         {
             "name": "ruflin/elastica",
-            "version": "v0.90.5.0",
+            "version": "v0.90.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ruflin/Elastica.git",
-                "reference": "8290c801df17df5ec3dff31f155867a30f793807"
+                "reference": "e36213362ef459f92e8b09167e537e9312f55ae3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ruflin/Elastica/zipball/8290c801df17df5ec3dff31f155867a30f793807",
-                "reference": "8290c801df17df5ec3dff31f155867a30f793807",
+                "url": "https://api.github.com/repos/ruflin/Elastica/zipball/e36213362ef459f92e8b09167e537e9312f55ae3",
+                "reference": "e36213362ef459f92e8b09167e537e9312f55ae3",
                 "shasum": ""
             },
             "require": {
@@ -4031,11 +4075,6 @@
                 "psr/log": "for logging"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.20.5.x-dev"
-                }
-            },
             "autoload": {
                 "psr-0": {
                     "Elastica": "lib/",
@@ -4058,7 +4097,7 @@
                 "client",
                 "search"
             ],
-            "time": "2013-10-27 12:53:43"
+            "time": "2013-11-23 21:35:18"
         },
         {
             "name": "saad-tazi/g-chart-bundle",
@@ -4582,12 +4621,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "b74a887cd93d5ba864015e899cca790999262f65"
+                "reference": "43becff31d124169aa1c1694bc8ca223f12c4bf4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/b74a887cd93d5ba864015e899cca790999262f65",
-                "reference": "b74a887cd93d5ba864015e899cca790999262f65",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/43becff31d124169aa1c1694bc8ca223f12c4bf4",
+                "reference": "43becff31d124169aa1c1694bc8ca223f12c4bf4",
                 "shasum": ""
             },
             "require": {
@@ -4687,7 +4726,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2013-11-22 17:42:00"
+            "time": "2013-11-23 21:17:02"
         },
         {
             "name": "twig/extensions",
@@ -4742,12 +4781,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Twig.git",
-                "reference": "39eb50c00e2c0b8174dbcd63e0ed45815ff7babf"
+                "reference": "f7c00d336f08901ec4742f20d234f9e677dcccab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig/zipball/39eb50c00e2c0b8174dbcd63e0ed45815ff7babf",
-                "reference": "39eb50c00e2c0b8174dbcd63e0ed45815ff7babf",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/f7c00d336f08901ec4742f20d234f9e677dcccab",
+                "reference": "f7c00d336f08901ec4742f20d234f9e677dcccab",
                 "shasum": ""
             },
             "require": {
@@ -4783,7 +4822,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2013-11-14 08:08:49"
+            "time": "2013-11-23 21:24:07"
         },
         {
             "name": "whiteoctober/breadcrumbs-bundle",
@@ -5402,7 +5441,8 @@
         "stof/doctrine-extensions-bundle": 20,
         "imagine/imagine": 20,
         "saad-tazi/g-chart-bundle": 20,
-        "nelmio/security-bundle": 20
+        "nelmio/security-bundle": 20,
+        "egulias/security-debug-command-bundle": 20
     },
     "platform": {
         "php": ">=5.3.3"

@@ -7,6 +7,8 @@
 {% block content %}
     <div class="page" id="clients">
         <h1><i class="glyphicon glyphicon-plus"></i> Créer un client</h1>
+        <a class="btn back btn-danger pull-right" href="{{ path('horus_site_clients') }}">&larr; Revenir à la liste des clients</a>
+
         <hr class="clear fancy-line">
 
         <form novalidate="novalidate" action="{{ path('horus_site_create_client') }}" method="post">

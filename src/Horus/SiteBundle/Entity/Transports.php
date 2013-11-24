@@ -69,6 +69,12 @@ class Transports
 
 
     /**
+     * @ORM\OneToMany(targetEntity="Commandes", mappedBy="transport")
+     */
+    private $commandes;
+
+
+    /**
      * @var integer
      *
      * @ORM\Column(name="status", type="integer", nullable=false)
@@ -1205,5 +1211,37 @@ class Transports
      */
     public function __toString(){
         return $this->getTitle();
+    }
+
+    /**
+     * Add commandes
+     *
+     * @param Horus\SiteBundle\Entity\Commandes $commandes
+     * @return Transports
+     */
+    public function addCommande(\Horus\SiteBundle\Entity\Commandes $commandes)
+    {
+        $this->commandes[] = $commandes;
+        return $this;
+    }
+
+    /**
+     * Remove commandes
+     *
+     * @param Horus\SiteBundle\Entity\Commandes $commandes
+     */
+    public function removeCommande(\Horus\SiteBundle\Entity\Commandes $commandes)
+    {
+        $this->commandes->removeElement($commandes);
+    }
+
+    /**
+     * Get commandes
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getCommandes()
+    {
+        return $this->commandes;
     }
 }

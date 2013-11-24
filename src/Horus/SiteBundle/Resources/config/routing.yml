@@ -10,11 +10,13 @@ horus_site_main:
   pattern:  /backend/
   defaults: { _controller: HorusSiteBundle:Main:index }
 
-
 horus_site_denied:
   pattern:  /access-denied/
   defaults: { _controller: HorusSiteBundle:Administrateur:login }
 
+horus_site_switch:
+  pattern:  /backend/switcher?username={username}
+  defaults: { _controller: HorusSiteBundle:Administrateur:relogadministrateur }
 
 
 
@@ -73,6 +75,39 @@ horus_site_edit_pictures_product:
 
 
 ###
+### Commentaires
+###
+
+horus_site_commentaires:
+  pattern:  /backend/commentaires
+  defaults: { _controller: HorusSiteBundle:Commentaires:commentaires }
+
+horus_site_create_commentaire:
+  pattern:  /backend/commentaires/creer
+  defaults: { _controller: HorusSiteBundle:Commentaires:createcommentaire }
+
+horus_site_edit_commentaire:
+  pattern:  /backend/commentaires/editer/{id}
+  defaults: { _controller: HorusSiteBundle:Commentaires:editcommentaire }
+
+horus_site_commentaire:
+  pattern:  /backend/commentaires/{id}
+  defaults: { _controller: HorusSiteBundle:Commentaires:seecommentaire }
+
+horus_site_remove_commentaire:
+  pattern:  /backend/commentaires/suppression/{id}
+  defaults: { _controller: HorusSiteBundle:Commentaires:removecommentaire }
+
+horus_site_active_commentaire:
+  pattern:  /backend/commentaires/activation/{id}
+  defaults: { _controller: HorusSiteBundle:Commentaires:activecommentaire }
+
+horus_site_desactive_commentaire:
+  pattern:  /backend/commentaires/desactivation/{id}
+  defaults: { _controller: HorusSiteBundle:Commentaires:desactivecommentaire }
+
+
+###
 ### Famille
 ###
 
@@ -111,17 +146,6 @@ horus_site_media_remove:
   pattern:  /backend/medias/remove/{id}
   defaults: { _controller: HorusSiteBundle:Medias:removemedias }
 
-
-
-
-
-###
-### Commentaire
-###
-
-horus_site_commentaires:
-  pattern:  /backend/commentaires
-  defaults: { _controller: HorusSiteBundle:Clients:commentaires }
 
 
 
@@ -203,6 +227,22 @@ horus_site_paniers:
 
 
 ###
+### Configuration
+###
+
+horus_site_configuration:
+  pattern:  /backend/configuration
+  defaults: { _controller: HorusSiteBundle:Administrateur:configuration }
+
+
+horus_site_myaccount:
+  pattern:  /backend/mon-compte
+  defaults: { _controller: HorusSiteBundle:Administrateur:myaccount }
+
+
+
+
+###
 ### Charts
 ###
 
@@ -257,6 +297,42 @@ horus_site_active_category:
 horus_site_desactive_category:
   pattern:  /backend/categories/desactivation/{id}
   defaults: { _controller: HorusSiteBundle:Category:desactivecategory }
+
+
+
+
+
+###
+### Administrateurs
+###
+
+horus_site_administrateurs:
+  pattern:  /backend/administrateurs
+  defaults: { _controller: HorusSiteBundle:Administrateur:administrateurs }
+
+horus_site_add_administrateur:
+  pattern:  /backend/administrateurs/ajouter
+  defaults: { _controller: HorusSiteBundle:Administrateur:createadministrateur }
+
+horus_site_administrateur:
+  pattern:  /backend/administrateur/{id}
+  defaults: { _controller: HorusSiteBundle:Administrateur:administrateur }
+
+horus_site_remove_administrateur:
+  pattern:  /backend/administrateurs/supprimer/{id}
+  defaults: { _controller: HorusSiteBundle:Administrateur:removeadministrateur }
+
+horus_site_edit_administrateur:
+  pattern:  /backend/administrateurs/editer/{id}
+  defaults: { _controller: HorusSiteBundle:Administrateur:editadministrateur }
+
+horus_site_active_administrateur:
+  pattern:  /backend/administrateurs/activation/{id}
+  defaults: { _controller: HorusSiteBundle:Administrateur:activeadministrateur }
+
+horus_site_desactive_administrateur:
+  pattern:  /backend/administrateurs/desactivation/{id}
+  defaults: { _controller: HorusSiteBundle:Administrateur:desactiveadministrateur }
 
 
 

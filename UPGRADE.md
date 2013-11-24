@@ -2,6 +2,12 @@ UPGRADE FROM 1.0 to 1.1
 =======================
 
 ### General
+  * View all actions of Administrateurs
+  * Add Tooltips to help
+  * Resize images
+  * Adresses of Clients
+  * Add Initial Pages: CGVU, Conditions générales
+  * Add message system to clients
   * Add  markdown for product is disable or quantity = 0
   * Add messages when category is empty, when product quantity = 0
   * Add a filters

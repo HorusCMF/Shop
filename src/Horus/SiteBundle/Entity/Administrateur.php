@@ -40,6 +40,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
         ));
         $this->characters = "1,3";
         $this->emailTemp = $this->email;
+        $this->groups = new ArrayCollection();
     }
 
     /* ***********************************************  OTHERS  *************************************************** */
@@ -146,6 +147,12 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * @ORM\Column(name="ville", type="string", length=60, nullable=true)
      */
     public $ville;
+
+    /**
+     * @var string $adresse
+     * @ORM\Column(name="adresse", type="string", length=60, nullable=true)
+     */
+    public $adresse;
 
     /**
      * @var string $lastActivity
@@ -389,6 +396,13 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     private $langues;
 
 
+    /**
+     * @ORM\ManyToMany(targetEntity="Group", mappedBy="administrateurs")
+     * @ORM\JoinTable(name="group_administrateur")
+     */
+    private $groups;
+
+
 
     /**
      * Get id
@@ -575,7 +589,8 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      */
     public function setPassword($password)
     {
-        $this->password = $password;
+        if(!empty($password))
+            $this->password = $password;
     }
 
     /**
@@ -1123,7 +1138,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      */
     public function getRoles()
     {
-        return array('ROLE_ADMIN');
+        return $this->groups->toArray();
     }
 
     /**
@@ -1131,9 +1146,6 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      */
     public function isCredentialsNonExpired()
     {
-        if (is_null($this->password) || !$this->password || strlen($this->password) < 1) {
-            return false;
-        }
         return true;
     }
 
@@ -1163,7 +1175,6 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
 
     public function eraseCredentials()
     {
-        $this->roles = null;
     }
 
     /**
@@ -1801,7 +1812,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
 
     public function isEqualTo(UserInterface $user)
     {
-        return $this->email === $user->getEmail();
+        return $this->username === $user->getUsername();
     }
 
     /**
@@ -1870,4 +1881,57 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     }
 
 
+    /**
+     * Add groups
+     *
+     * @param Horus\SiteBundle\Entity\Group $groups
+     * @return Administrateur
+     */
+    public function addGroup(\Horus\SiteBundle\Entity\Group $groups)
+    {
+        $this->groups[] = $groups;
+        return $this;
+    }
+
+    /**
+     * Remove groups
+     *
+     * @param Horus\SiteBundle\Entity\Group $groups
+     */
+    public function removeGroup(\Horus\SiteBundle\Entity\Group $groups)
+    {
+        $this->groups->removeElement($groups);
+    }
+
+    /**
+     * Get groups
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getGroups()
+    {
+        return $this->groups;
+    }
+
+    /**
+     * Set adresse
+     *
+     * @param string $adresse
+     * @return Administrateur
+     */
+    public function setAdresse($adresse)
+    {
+        $this->adresse = $adresse;
+        return $this;
+    }
+
+    /**
+     * Get adresse
+     *
+     * @return string 
+     */
+    public function getAdresse()
+    {
+        return $this->adresse;
+    }
 }

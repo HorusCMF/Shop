@@ -322,10 +322,21 @@ class Produit
 
 
     /**
+     * @ORM\OneToMany(targetEntity="CommandesProduit",mappedBy="produit", cascade={"all"},orphanRemoval=true)
+     * @Assert\Valid
+     */
+    protected $commandes;
+
+    /**
      * @ORM\OneToMany(targetEntity="Seo",mappedBy="produit", cascade={"all"},orphanRemoval=true)
      * @Assert\Valid
      */
     protected $seo;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Commentaire",mappedBy="produit", cascade={"all"},orphanRemoval=true)
+     */
+    protected $commentaires;
 
     /**
      * @ORM\OneToMany(targetEntity="Pj",mappedBy="produit", cascade={"all"},orphanRemoval=true)
@@ -1456,5 +1467,27 @@ class Produit
     public function getPjs()
     {
         return $this->pjs;
+    }
+
+    /**
+     * Set transport
+     *
+     * @param Horus\SiteBundle\Entity\Transports $transport
+     * @return Produit
+     */
+    public function setTransport(\Horus\SiteBundle\Entity\Transports $transport = null)
+    {
+        $this->transport = $transport;
+        return $this;
+    }
+
+    /**
+     * Get transport
+     *
+     * @return Horus\SiteBundle\Entity\Transports 
+     */
+    public function getTransport()
+    {
+        return $this->transport;
     }
 }
