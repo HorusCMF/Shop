@@ -107,6 +107,7 @@ twig:
     globals:
       base_url: 'http://www.weekinsport.fr/'
       imgsite: '/bundles/site/images/'
+      imgfamilles: '/uploads/familles/'
       imgproducts: '/uploads/products/'
       imgcategories: '/uploads/categories/'
       imgtransports: '/uploads/transports/'

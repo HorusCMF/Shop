@@ -29,6 +29,7 @@ class Produit
         $this->isVisible = true;
         $this->etat = 1;
         $this->status = 1;
+        $this->quantity = 1;
     }
     /**
      * @var integer

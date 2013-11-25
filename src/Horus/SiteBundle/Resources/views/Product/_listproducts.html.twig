@@ -28,7 +28,7 @@
                 </div>
                 <a class="pull-left" href="#">
                     {% if produit.starPicture %}
-                        <img src="{{ imgproducts ~  produit.id ~ '/' ~ produit.starPicture.path }} "/>
+                        <img src="{{ imgproducts ~  produit.id ~ '/' ~ produit.starPicture.path|sizes('medium') }} "/>
                     {% else %}
                         <img class="media-object img-thumbnail" src="http://placehold.it/150x75" alt="...">
                     {% endif %}

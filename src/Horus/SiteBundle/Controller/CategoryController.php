@@ -142,6 +142,7 @@ class CategoryController extends Controller
         $form->handleRequest($request);
 
         if ($form->isValid()) {
+            $id->upload();
             $id->setDateCreated(new \Datetime('now'));
             $em->persist($id);
             $em->flush();
@@ -179,6 +180,7 @@ class CategoryController extends Controller
         $form->handleRequest($request);
 
         if ($form->isValid()) {
+            $famille->upload();
             $em->persist($famille);
             $em->flush();
             $this->get('session')->getFlashBag()->add(

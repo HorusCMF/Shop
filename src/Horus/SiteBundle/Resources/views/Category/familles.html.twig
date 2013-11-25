@@ -17,6 +17,13 @@
                                         class="glyphicon glyphicon-pencil"></i> Editer</a></li>
                     </ul>
                 </div>
+                <a class="pull-left" href="#">
+                    {% if famille.path is not empty %}
+                        <img class="img-polaroid" src="{{ imgfamilles  ~ famille.path|sizes('medium') }}"/>
+                    {% else %}
+                        <img class="media-object img-thumbnail" src="http://placehold.it/150x75" alt="...">
+                    {% endif %}
+                </a>
 
 
                 <div class="media-body">
@@ -55,6 +62,8 @@
         {#<li class="disabled"><a href="#"><i class="glyphicon glyphicon-chevron-right"></i></a></li>#}
         {#</ul>#}
         <div class="clear"></div>
+        <a href="{{ path('horus_site_add_famille') }}" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Ajouter une famille</a>
+
     </div>
 {% endblock %}
 

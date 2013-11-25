@@ -31,7 +31,7 @@ class CommercialType extends AbstractType
                 ))
                 ->add('content', 'textarea', array('attr' => array("class" => "ckeditor", 'placeholder' => 'Description complète')))
                 ->add('isVisible', null, array('required' => false))
-                ->add('datePublication', 'date', array('widget' => 'single_text','attr' => array('class' => 'date')));
+                ->add('datePublication', 'date', array('widget' => 'single_text','attr' => array('class' => 'date form-control')));
     }
 
     /**

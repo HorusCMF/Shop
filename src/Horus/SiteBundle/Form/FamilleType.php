@@ -22,6 +22,7 @@ class FamilleType extends AbstractType
                 ->add('name', 'text', array('attr' => array('placeholder' => "Nom de la famille")))
                 ->add('cover', 'textarea', array('attr' => array("class" => "ckeditor", 'placeholder' => 'Résumé en quelques mots')))
                 ->add('description', 'textarea', array('attr' => array("class" => "ckeditor", 'placeholder' => 'Description complète')))
+                ->add('file')
                 ->add('parent')
                 ->add('produits');
     }

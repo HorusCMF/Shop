@@ -4,7 +4,7 @@ var collectionHolder = $('div.metas');
 
 
 // ajoute un lien « add a tag »
-var $addTagLink = $('<a class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Ajouter un caractéristique</a>');
+var $addTagLink = $('<a class="btn btn-primary addcaracteristiques"><i class="glyphicon glyphicon-plus"></i> Ajouter un caractéristique</a>');
 var $newLinkLi = $('<p></p>').append($addTagLink);
 // ajoute un lien de suppression à tous les éléments li de
 // formulaires de tag existants
@@ -13,7 +13,7 @@ collectionHolder.find('li').each(function () {
 });
 
 function addTagFormDeleteLink($tagFormLi) {
-    var $removeFormA = $('<a class="btn btn-primary"><i class="glyphicon glyphicon-minus"></i> Supprimer cette caractéristique</a>');
+    var $removeFormA = $('<a class="btn btn-primary addcaracteristiques"><i class="glyphicon glyphicon-minus"></i> Supprimer cette caractéristique</a>');
     $tagFormLi.append($removeFormA);
 
     $removeFormA.on('click', function (e) {

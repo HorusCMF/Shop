@@ -5,7 +5,8 @@
         <h2><i class="glyphicon glyphicon-gift"></i> Vos catégories</h2>
         {% include 'HorusSiteBundle:Category:_listcategories.html.twig' %}
         <div class="clear"></div>
-        </div>
+        <a href="{{ path('horus_site_add_category') }}" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Ajouter une catégorie</a>
+
     </div>
 {% endblock %}
 
