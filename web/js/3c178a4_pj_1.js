@@ -49,7 +49,8 @@ jQuery(document).ready(function () {
      */
     $('#prixHT').on('blur', function (e) {
         var ttc = parseFloat($('#prixHT').val()) * (1 + parseFloat($("#tva").val())/100).toFixed(2);
-        $('#prixTTC').val(ttc);
+        if(!empty(ttc))
+            $('#prixTTC').val(ttc);
     });
 
 
