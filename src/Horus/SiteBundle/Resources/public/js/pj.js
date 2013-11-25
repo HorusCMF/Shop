@@ -49,10 +49,14 @@ jQuery(document).ready(function () {
      */
     $('#prixHT').on('blur', function (e) {
         var ttc = parseFloat($('#prixHT').val()) * (1 + parseFloat($("#tva").val())/100).toFixed(2);
-        if(!empty(ttc))
+        if(ttc != "" )
             $('#prixTTC').val(ttc);
     });
-
+    $('#tva').on('change', function (e) {
+        var ttc = parseFloat($('#prixHT').val()) * (1 + parseFloat($("#tva").val())/100).toFixed(2);
+        if(ttc != "" )
+            $('#prixTTC').val(ttc);
+    });
 
 // ajoute l'ancre « ajouter un tag » et li à la balise ul
     collectionHolder2.append($newLinkLi2);

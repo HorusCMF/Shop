@@ -19,7 +19,7 @@ class TransportType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title', 'text', array('attr' => array('placeholder' => "Titre")))
+            ->add('title', 'text', array('attr' => array('placeholder' => "Nom du transporteur")))
             ->add('delay', 'text', array('required' => false, 'attr' => array('placeholder' => "Délai")))
             ->add('url', 'url', array('required' => false, 'attr' => array('placeholder' => "http://www.google.fr")))
             ->add('from', 'text', array('attr' => array('placeholder' => "De")))

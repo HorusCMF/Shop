@@ -46,7 +46,9 @@ class ClientsType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Horus\SiteBundle\Entity\Client'
+            'data_class' => 'Horus\SiteBundle\Entity\Client',
+            'csrf_protection' => false
+
         ));
     }
 

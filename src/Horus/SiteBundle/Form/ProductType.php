@@ -56,7 +56,7 @@ class ProductType extends AbstractType
             ->add('articles')
             ->add('tags')
             ->add('familles')
-            ->add('prodparent')
+            ->add('prodparent', null, array('empty_value' => 'Choisissez un produit'))
             ->add('metas', 'collection', array(
                 'type' => new MetaType(),
                 'by_reference' => true,

@@ -1,5 +1,13 @@
 $ ->
   $('.multiselect').multiselect
+    buttonText: (options, select) ->
+      if options.length is 0
+        "Aucune"
+      else
+        selected = ""
+        options.each ->
+          selected += $(this).text() + ", "
+        selected.substr(0, selected.length - 2) + " <b class=\"caret\"></b>"
     maxHeight: 200
     maxWidth: 200
     buttonWidth: 200

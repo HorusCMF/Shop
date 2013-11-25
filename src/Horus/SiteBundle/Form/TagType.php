@@ -19,7 +19,7 @@ class TagType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('word');
+            ->add('word', null, array('attr' => array('placeholder' => 'Mots-Clefs, Expression, Catégorie...')));
     }
 
     /**

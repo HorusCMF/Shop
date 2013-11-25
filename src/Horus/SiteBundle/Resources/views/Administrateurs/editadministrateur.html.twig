@@ -30,13 +30,19 @@
 
             <div class="row-fluid">
                 <div class="span2">
-                    {{ form_row(form.dob['day']) }}
+                    <label for="day">Jour</label>
+                    {{ form_widget(form.dob['day']) }}
+                    {{ form_errors(form.dob['day']) }}
                 </div>
                 <div class="span2">
-                    {{ form_row(form.dob['month']) }}
+                    <label for="day">Mois</label>
+                    {{ form_widget(form.dob['month']) }}
+                    {{ form_errors(form.dob['month']) }}
                 </div>
                 <div class="span2">
-                    {{ form_row(form.dob['year']) }}
+                    <label for="day">Années</label>
+                    {{ form_widget(form.dob['year']) }}
+                    {{ form_errors(form.dob['year']) }}
                 </div>
             </div>
             <div class="row-fluid">
@@ -47,7 +53,7 @@
 
             <div class="row-fluid">
                 <div class="span4">
-                    {{ form_row(form.description) }}
+                    {{ form_row(form.ville) }}
                 </div>
                 <div class="span4">
                     {{ form_row(form.adresse) }}
@@ -59,14 +65,14 @@
 
             <div class="row-fluid">
                 <div class="span4">
-                    {{ form_row(form.ville) }}
-                </div>
-                <div class="span4">
                     {{ form_row(form.email) }}
                 </div>
                 <div class="span4">
-                    {{ form_row(form.password) }}
+                    {{ form_row(form.password.mdp) }}
                     <div class="label label-warning">Indiquer si changement</div>
+                </div>
+                <div class="span4">
+                    {{ form_row(form.password.mdp_conf) }}
                 </div>
             </div>
 
@@ -76,6 +82,9 @@
                 </div>
                 <div class="span4">
                     {{ form_row(form.entreprise) }}
+                </div>
+                <div class="span4">
+                    {{ form_row(form.groups) }}
                 </div>
             </div>
             {{ form_rest(form) }}

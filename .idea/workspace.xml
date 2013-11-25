@@ -214,7 +214,7 @@
     <file path="$PROJECT_DIR$/vendor/doctrine/orm/tools/sandbox/xml/Entities.User.dcm.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382955655286" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/doctrine/orm/build.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382955655286" ignored="false" />
     <file path="/leftnav.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382975148403" ignored="false" />
-    <file path="/main.sass" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385324587099" ignored="false" />
+    <file path="/main.sass" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385380255115" ignored="false" />
     <file path="/DefaultControllerTest.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383046329481" ignored="false" />
     <file path="/fields.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384607180952" ignored="false" />
     <file path="/AddArticleCept.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383766959319" ignored="false" />
@@ -253,7 +253,7 @@
     <file path="$PROJECT_DIR$/app/cache/dev/appDevDebugProjectContainer.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384610525473" ignored="false" />
     <file path="$PROJECT_DIR$/app/cache/dev/twig/de/5a/83b120297b906801afc255ac2f3514180276c2533b0638684277e9a17fa6.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384608119110" ignored="false" />
     <file path="$PROJECT_DIR$/app/cache/dev/twig/0f/ff/0786f80ceb4d69ce6ed6f2d6456863444c37ee1ab7260455b4022e7c0a42.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384608119110" ignored="false" />
-    <file path="/main.coffee" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385196927338" ignored="false" />
+    <file path="/main.coffee" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385380057882" ignored="false" />
     <file path="/green.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384612400670" ignored="false" />
     <file path="/Produit.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385324408039" ignored="false" />
     <file path="/products.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385323832245" ignored="false" />
@@ -424,7 +424,7 @@
     <file path="/edittransport.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385210520173" ignored="false" />
     <file path="/Client.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385239646241" ignored="false" />
     <file path="/UsersType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385215422103" ignored="false" />
-    <file path="/createclient.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385297230751" ignored="false" />
+    <file path="/createclient.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385378251534" ignored="false" />
     <file path="/ClientsType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385224427006" ignored="false" />
     <file path="/VillesRepository.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385223498256" ignored="false" />
     <file path="/editclient.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385296988470" ignored="false" />
@@ -444,14 +444,18 @@
     <file path="/configuration.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385283602910" ignored="false" />
     <file path="/ConfigurationType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385280748811" ignored="false" />
     <file path="/configuration.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385281574736" ignored="false" />
-    <file path="/myaccount.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385287252858" ignored="false" />
+    <file path="/myaccount.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385376785670" ignored="false" />
     <file path="/Group.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385287421377" ignored="false" />
     <file path="/administrateurs.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385314557066" ignored="false" />
-    <file path="/createadministrateur.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385295930156" ignored="false" />
-    <file path="/editadministrateur.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385297087494" ignored="false" />
+    <file path="/createadministrateur.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385376179097" ignored="false" />
+    <file path="/editadministrateur.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385376281213" ignored="false" />
     <file path="/referencement.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385324201422" ignored="false" />
     <file path="$PROJECT_DIR$/web/css/d8897d8.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385324288243" ignored="false" />
     <file path="/_listcategories.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385370005133" ignored="false" />
+    <file path="$PROJECT_DIR$/web/js/3c178a4_pj_1.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385375808643" ignored="false" />
+    <file path="$PROJECT_DIR$/web/js/3c178a4.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385375808643" ignored="false" />
+    <file path="/TagType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385377472697" ignored="false" />
+    <file path="/PageType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385377513335" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -471,37 +475,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="product.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/public/js/product.coffee">
+      <file leaf-file-name="realtime.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/node/realtime.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="21.12">
+            <state line="0" column="0" selection-start="0" selection-end="59" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/public/js/main.coffee">
+      <file leaf-file-name="TransportType.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Form/TransportType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="8.88">
+            <state line="21" column="94" selection-start="587" selection-end="587" vertical-scroll-proportion="-14.25">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pj.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/public/js/pj.js">
+      <file leaf-file-name="ClientsController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Controller/ClientsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="12" selection-start="1834" selection-end="1834" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="4092" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="composer.json" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/composer.json">
+      <file leaf-file-name="CommentaireType.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Form/CommentaireType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="46" selection-start="1728" selection-end="1765" vertical-scroll-proportion="0.32258064">
+            <state line="21" column="25" selection-start="522" selection-end="522" vertical-scroll-proportion="-14.25">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CategoryType.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Form/CategoryType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="86" selection-start="950" selection-end="950" vertical-scroll-proportion="0.73743016">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PageType.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Form/PageType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="84" selection-start="883" selection-end="937" vertical-scroll-proportion="-16.5">
               <folding />
             </state>
           </provider>
@@ -517,29 +539,29 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Category/categories.html.twig" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/CMS/articles.html.twig" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/CMS/pages.html.twig" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/CMS/tags.html.twig" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Product/_listproducts.html.twig" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Category/_listcategories.html.twig" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Administrateurs/myaccount.html.twig" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Slots/topmenu.html.twig" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Form/TagType.php" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Form/PageType.php" />
         <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Form/FamilleType.php" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Controller/CategoryController.php" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Category/createfamille.html.twig" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/config/config.yml" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Entity/Famille.php" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Category/familles.html.twig" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Category/editfamille.html.twig" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Form/ProductType.php" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Clients/createclient.html.twig" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Clients/editclient.html.twig" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Administrateurs/createadministrateur.html.twig" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Administrateurs/editadministrateur.html.twig" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/public/js/main.coffee" />
         <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/public/css/main.sass" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/public/js/pj.js" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Form/TransportType.php" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Form/CommentaireType.php" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Form/CategoryType.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="301" />
-    <option name="y" value="156" />
+    <option name="x" value="369" />
+    <option name="y" value="24" />
     <option name="width" value="1213" />
     <option name="height" value="744" />
   </component>
@@ -597,240 +619,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hetic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hetic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="saad-tazi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="g-chart-bundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SaadTazi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GChartBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hetic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hetic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="saad-tazi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="g-chart-bundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SaadTazi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GChartBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hetic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hetic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="saad-tazi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="g-chart-bundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SaadTazi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GChartBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hetic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hetic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="saad-tazi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="g-chart-bundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SaadTazi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GChartBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hetic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hetic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="saad-tazi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="g-chart-bundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SaadTazi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GChartBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hetic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hetic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="saad-tazi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="g-chart-bundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SaadTazi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GChartBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hetic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hetic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -884,6 +672,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Horus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SiteBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Slots" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -951,7 +773,41 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Category" />
+              <option name="myItemId" value="Clients" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Horus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SiteBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Administrateurs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1010,10 +866,6 @@
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1044,34 +896,8 @@
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="hetic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hetic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Horus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SiteBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1098,32 +924,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Form" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hetic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hetic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Horus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SiteBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Entity" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1312,7 +1112,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="301" y="156" width="1213" height="744" extended-state="0" />
+    <frame x="369" y="24" width="1213" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1396,114 +1196,114 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/config/config.yml">
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Form/ClientsType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="17" selection-start="3925" selection-end="3936" vertical-scroll-proportion="0.0">
+        <state line="31" column="26" selection-start="1934" selection-end="1934" vertical-scroll-proportion="-10.5">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Entity/Famille.php">
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Clients/createclient.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="559" column="32" selection-start="11440" selection-end="11440" vertical-scroll-proportion="-12.375">
+        <state line="42" column="22" selection-start="947" selection-end="1596" vertical-scroll-proportion="-20.25">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Category/_listcategories.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Clients/editclient.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="16" selection-start="2166" selection-end="2561" vertical-scroll-proportion="-20.25">
+        <state line="44" column="22" selection-start="1783" selection-end="1783" vertical-scroll-proportion="-19.5">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Category/familles.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Administrateurs/createadministrateur.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="50" selection-start="1276" selection-end="1297" vertical-scroll-proportion="-13.5">
+        <state line="42" column="22" selection-start="1633" selection-end="1633" vertical-scroll-proportion="-17.583334">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Category/editfamille.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Administrateurs/editadministrateur.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="0" selection-start="1666" selection-end="1666" vertical-scroll-proportion="-26.25">
+        <state line="45" column="22" selection-start="1787" selection-end="1787" vertical-scroll-proportion="-22.5">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Controller/CategoryController.php">
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Controller/ProductController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="181" column="30" selection-start="5525" selection-end="5525" vertical-scroll-proportion="-5.4489794">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/public/css/main.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="317" column="5" selection-start="7346" selection-end="7372" vertical-scroll-proportion="-7.92">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/public/js/utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.5051546">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/public/js/referencement.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.8556701">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/public/js/product.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/public/js/configuration.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/public/js/product.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="21.12">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/public/js/layout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="66" column="30" selection-start="2027" selection-end="2027" vertical-scroll-proportion="-7.5">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/public/js/main.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="8.88">
+        <state line="7" column="23" selection-start="176" selection-end="176" vertical-scroll-proportion="-5.04">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/public/js/pj.js">
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/public/css/main.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="12" selection-start="1834" selection-end="1834" vertical-scroll-proportion="0.0">
+        <state line="179" column="21" selection-start="3577" selection-end="3577" vertical-scroll-proportion="-8.04">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
+    <entry file="file://$PROJECT_DIR$/app/node/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="46" selection-start="1728" selection-end="1765" vertical-scroll-proportion="0.32258064">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="46" selection-start="1411" selection-end="1524" vertical-scroll-proportion="-21.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/node/realtime.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="59" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Form/TransportType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="94" selection-start="587" selection-end="587" vertical-scroll-proportion="-14.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Controller/ClientsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="4092" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Form/CommentaireType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="25" selection-start="522" selection-end="522" vertical-scroll-proportion="-14.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Form/PageType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="84" selection-start="883" selection-end="937" vertical-scroll-proportion="-16.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Form/CategoryType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="86" selection-start="950" selection-end="950" vertical-scroll-proportion="0.73743016">
           <folding />
         </state>
       </provider>

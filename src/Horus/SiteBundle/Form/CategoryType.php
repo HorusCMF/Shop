@@ -22,7 +22,7 @@ class CategoryType extends AbstractType
                 ->add('name', 'text', array('attr' => array('placeholder' => "Nom de la catégorie")))
                 ->add('cover', 'textarea', array('attr' => array("class" => "ckeditor", 'placeholder' => 'Résumé en quelques mots')))
                 ->add('description', 'textarea', array('attr' => array("class" => "ckeditor", 'placeholder' => 'Description complète')))
-                ->add('parent')
+                ->add('parent', null, array('empty_value' => 'Choisissez une catégorie'))
                 ->add('articles');
     }
 
