@@ -503,7 +503,7 @@
       <file leaf-file-name=".travis.yml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="169" selection-end="169" vertical-scroll-proportion="0.45531198">
+            <state line="16" column="2" selection-start="285" selection-end="285" vertical-scroll-proportion="0.49655172">
               <folding />
             </state>
           </provider>
@@ -528,7 +528,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Entity/ImageMarques.php" />
         <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Controller/MarquesController.php" />
         <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Entity/Produit.php" />
         <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Entity/Category.php" />
@@ -543,14 +542,15 @@
         <option value="$PROJECT_DIR$/src/Horus/FrontBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/Horus/FrontBundle/Resources/views/Slots/topmenu.html.twig" />
         <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/.scrutinizer.yml" />
         <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="798" />
-    <option name="y" value="129" />
+    <option name="x" value="524" />
+    <option name="y" value="112" />
     <option name="width" value="1153" />
     <option name="height" value="742" />
   </component>
@@ -648,11 +648,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/Horus/FrontBundle/Resources/views" />
       <recent name="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Fournisseurs" />
       <recent name="$PROJECT_DIR$/src/Horus/SiteBundle/Form" />
       <recent name="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views" />
-      <recent name="$PROJECT_DIR$/src/Horus/SiteBundle/Repository" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Commandes" />
@@ -721,7 +721,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="798" y="129" width="1153" height="742" extended-state="0" />
+    <frame x="524" y="112" width="1153" height="742" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -805,13 +805,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Horus/FrontBundle/Resources/views/Slots/topmenu.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="38" selection-start="1130" selection-end="1130" vertical-scroll-proportion="0.0" />
@@ -893,9 +886,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.scrutinizer.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="37" selection-start="737" selection-end="737" vertical-scroll-proportion="0.9392917">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="169" selection-end="169" vertical-scroll-proportion="0.45531198">
+        <state line="16" column="2" selection-start="285" selection-end="285" vertical-scroll-proportion="0.49655172">
           <folding />
         </state>
       </provider>

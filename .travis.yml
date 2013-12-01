@@ -7,8 +7,14 @@ php:
 
 script: php codecept.phar run --steps --debug --html
 
+env:
+  - SYMFONY_VERSION='~2.3-dev'
+
 before_script:
   - composer install
+  - composer require --no-update symfony/symfony=$SYMFONY_VERSION
+  - composer install --prefer-source --dev
+  - 'curl -H "Accept: text/plain" https://security.sensiolabs.org/check_lock -F lock=@composer.lock -s | grep "No known"'
 
 branches:
   only:
