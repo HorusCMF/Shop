@@ -5,7 +5,7 @@ php:
   - 5.3
   - 5.4
 
-script: php bin/codecept run --steps --debug --html
+script: php codecept.phar run --steps --debug --html
 
 branches:
   only:
