@@ -1,29 +1,4 @@
 {% block topmenu %}
-    <div class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <a href="{{ path('horus_site_main') }}" class="navbar-brand">Horus CMF</a>
-                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="navbar-collapse collapse" id="navbar-main">
-                <ul class="nav navbar-nav">
-                    <li class="dropdown {% if  app.request.attributes.get('_route') == "horus_site_commercial_create"  or app.request.attributes.get('_route') == "horus_site_edit_marques" or  app.request.attributes.get('_route') == "horus_site_marques" or app.request.attributes.get('_route') == "horus_site_commercials" or app.request.attributes.get('_route') == 'horus_site_products' or app.request.attributes.get('_route') == 'horus_site_create_product' %}active{% endif %}">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes"><i class="glyphicon glyphicon-gift"></i>  Produits <span class="caret"></span></a>
-                        <ul class="dropdown-menu" aria-labelledby="themes">
-                            <li><a  href="{{ path('horus_site_products') }}"><i class="glyphicon glyphicon-list"></i> Mes produits</a></li>
-                            <li><a  href="{{ path('horus_site_create_product') }}"><i class="glyphicon glyphicon-plus-sign"></i> Créer un produit</a></li>
-                            <li><a  href="{{ path('horus_site_marques') }}"><i class="glyphicon glyphicon-bookmark"></i> Mes marques</a></li>
-                            <li><a  href="{{ path('horus_site_commercials') }}"><i class="glyphicon glyphicon-star"></i> Actions commerciales</a></li>
-                            <li><a  href="{{ path('horus_site_commercial_create') }}"><i class="glyphicon glyphicon-star-empty"></i> Créer commerciale</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+
 {% endblock %}
 

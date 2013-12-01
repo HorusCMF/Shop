@@ -1,7 +1,7 @@
 Horus CMF Shop
 ======
 [![Build Status](https://travis-ci.org/HorusCMF/Shop.png?branch=master)](https://travis-ci.org/HorusCMF/Shop)
-
+[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/HorusCMF/Shop/badges/quality-score.png?s=69e973febd5f8f132b22fcd129f70e0ae790fd7d)](https://scrutinizer-ci.com/g/HorusCMF/Shop/)
 
 
 Horus CMF is an open source e-commerce solution for **Developers**, based on the [**Symfony2**](http://symfony.com) framework.
