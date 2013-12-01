@@ -1,0 +1,689 @@
+[2013-12-01 20:14:28] MainCest.onHome.INFO: am on page "/" [] []
+[2013-12-01 20:14:28] MainCest.onHome.INFO: see "Authentification" [] []
+[2013-12-01 20:14:28] MainCest.onHome.INFO: see "Souvenir de moi" [] []
+[2013-12-01 20:14:28] MainCest.onHome.INFO: am on page "/backend" [] []
+[2013-12-01 20:14:28] MainCest.onHome.INFO: see "Authentification" [] []
+[2013-12-01 20:14:28] MainCest.onHome.INFO: see "Souvenir de moi" [] []
+[2013-12-01 20:14:28] MainCest.onHome.INFO: PASSED [] []
+[2013-12-01 20:14:28] MainCest.onFailureAuthentificate.INFO: am on page "/" [] []
+[2013-12-01 20:14:28] MainCest.onFailureAuthentificate.INFO: see "Authentification" [] []
+[2013-12-01 20:14:28] MainCest.onFailureAuthentificate.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"ok"} [] []
+[2013-12-01 20:14:29] MainCest.onFailureAuthentificate.INFO: grab text from ".alert" [] []
+[2013-12-01 20:14:29] MainCest.onFailureAuthentificate.INFO: i expect 
+                    ×
+                     mauvais login ou mot de passe.
+                  [] []
+[2013-12-01 20:14:29] MainCest.onFailureAuthentificate.INFO: PASSED [] []
+[2013-12-01 20:14:29] MainCest.onSuccessAuthentificate.INFO: am on page "/" [] []
+[2013-12-01 20:14:29] MainCest.onSuccessAuthentificate.INFO: see "Authentification" [] []
+[2013-12-01 20:14:29] MainCest.onSuccessAuthentificate.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:14:29] MainCest.onSuccessAuthentificate.INFO: am on page "/backend" [] []
+[2013-12-01 20:14:30] MainCest.onSuccessAuthentificate.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:14:30] MainCest.onSuccessAuthentificate.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:14:30] MainCest.onSuccessAuthentificate.INFO: # FAILED # [] []
+[2013-12-01 20:14:30] MainCest.onSuccessAuthentificate.INFO: PASSED [] []
+[2013-12-01 20:14:30] MainCest.onProducts.INFO: am on page "/" [] []
+[2013-12-01 20:14:30] MainCest.onProducts.INFO: see "Authentification" [] []
+[2013-12-01 20:14:30] MainCest.onProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:14:30] MainCest.onProducts.INFO: am on page "/backend" [] []
+[2013-12-01 20:14:30] MainCest.onProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:14:30] MainCest.onProducts.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:14:30] MainCest.onProducts.INFO: # FAILED # [] []
+[2013-12-01 20:14:30] MainCest.onProducts.INFO: PASSED [] []
+[2013-12-01 20:14:30] MainCest.onCreateProducts.INFO: am on page "/" [] []
+[2013-12-01 20:14:30] MainCest.onCreateProducts.INFO: see "Authentification" [] []
+[2013-12-01 20:14:30] MainCest.onCreateProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:14:30] MainCest.onCreateProducts.INFO: am on page "/backend" [] []
+[2013-12-01 20:14:31] MainCest.onCreateProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:14:31] MainCest.onCreateProducts.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:14:31] MainCest.onCreateProducts.INFO: # FAILED # [] []
+[2013-12-01 20:14:31] MainCest.onCreateProducts.INFO: PASSED [] []
+[2013-12-01 20:14:31] MainCest.onCreateProcessFailureProducts.INFO: am on page "/" [] []
+[2013-12-01 20:14:31] MainCest.onCreateProcessFailureProducts.INFO: see "Authentification" [] []
+[2013-12-01 20:14:31] MainCest.onCreateProcessFailureProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:14:31] MainCest.onCreateProcessFailureProducts.INFO: am on page "/backend" [] []
+[2013-12-01 20:14:31] MainCest.onCreateProcessFailureProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:14:31] MainCest.onCreateProcessFailureProducts.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:14:31] MainCest.onCreateProcessFailureProducts.INFO: # FAILED # [] []
+[2013-12-01 20:14:31] MainCest.onCreateProcessFailureProducts.INFO: PASSED [] []
+[2013-12-01 20:14:31] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-12-01 20:14:31] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-12-01 20:14:31] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:14:31] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-12-01 20:14:32] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:14:32] MainCest.onCreateProcessSuccessProducts.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:14:32] MainCest.onCreateProcessSuccessProducts.INFO: # FAILED # [] []
+[2013-12-01 20:14:32] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-12-01 20:14:32] MainCest.onCommercials.INFO: am on page "/" [] []
+[2013-12-01 20:14:32] MainCest.onCommercials.INFO: see "Authentification" [] []
+[2013-12-01 20:14:32] MainCest.onCommercials.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:14:32] MainCest.onCommercials.INFO: am on page "/backend" [] []
+[2013-12-01 20:14:32] MainCest.onCommercials.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:14:32] MainCest.onCommercials.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:14:32] MainCest.onCommercials.INFO: # FAILED # [] []
+[2013-12-01 20:14:32] MainCest.onCommercials.INFO: PASSED [] []
+[2013-12-01 20:14:32] MainCest.onCommercialCreate.INFO: am on page "/" [] []
+[2013-12-01 20:14:32] MainCest.onCommercialCreate.INFO: see "Authentification" [] []
+[2013-12-01 20:14:32] MainCest.onCommercialCreate.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:14:32] MainCest.onCommercialCreate.INFO: am on page "/backend" [] []
+[2013-12-01 20:14:33] MainCest.onCommercialCreate.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:14:33] MainCest.onCommercialCreate.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:14:33] MainCest.onCommercialCreate.INFO: # FAILED # [] []
+[2013-12-01 20:14:33] MainCest.onCommercialCreate.INFO: PASSED [] []
+[2013-12-01 20:14:33] MainCest.onCategories.INFO: am on page "/" [] []
+[2013-12-01 20:14:33] MainCest.onCategories.INFO: see "Authentification" [] []
+[2013-12-01 20:14:33] MainCest.onCategories.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:14:33] MainCest.onCategories.INFO: am on page "/backend" [] []
+[2013-12-01 20:14:33] MainCest.onCategories.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:14:33] MainCest.onCategories.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:14:33] MainCest.onCategories.INFO: # FAILED # [] []
+[2013-12-01 20:14:33] MainCest.onCategories.INFO: PASSED [] []
+[2013-12-01 20:14:33] MainCest.onCategoriesCreate.INFO: am on page "/" [] []
+[2013-12-01 20:14:33] MainCest.onCategoriesCreate.INFO: see "Authentification" [] []
+[2013-12-01 20:14:33] MainCest.onCategoriesCreate.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:14:34] MainCest.onCategoriesCreate.INFO: am on page "/backend" [] []
+[2013-12-01 20:14:34] MainCest.onCategoriesCreate.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:14:34] MainCest.onCategoriesCreate.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:14:34] MainCest.onCategoriesCreate.INFO: # FAILED # [] []
+[2013-12-01 20:14:34] MainCest.onCategoriesCreate.INFO: PASSED [] []
+[2013-12-01 20:14:34] MainCest.onFamilies.INFO: am on page "/" [] []
+[2013-12-01 20:14:34] MainCest.onFamilies.INFO: see "Authentification" [] []
+[2013-12-01 20:14:34] MainCest.onFamilies.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:14:34] MainCest.onFamilies.INFO: am on page "/backend" [] []
+[2013-12-01 20:14:34] MainCest.onFamilies.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:14:34] MainCest.onFamilies.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:14:34] MainCest.onFamilies.INFO: # FAILED # [] []
+[2013-12-01 20:14:34] MainCest.onFamilies.INFO: PASSED [] []
+[2013-12-01 20:14:34] MainCest.onFamilyCreate.INFO: am on page "/" [] []
+[2013-12-01 20:14:34] MainCest.onFamilyCreate.INFO: see "Authentification" [] []
+[2013-12-01 20:14:34] MainCest.onFamilyCreate.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:14:35] MainCest.onFamilyCreate.INFO: am on page "/backend" [] []
+[2013-12-01 20:14:35] MainCest.onFamilyCreate.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:14:35] MainCest.onFamilyCreate.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:14:35] MainCest.onFamilyCreate.INFO: # FAILED # [] []
+[2013-12-01 20:14:35] MainCest.onFamilyCreate.INFO: PASSED [] []
+[2013-12-01 20:14:35] MainCest.onPages.INFO: am on page "/" [] []
+[2013-12-01 20:14:35] MainCest.onPages.INFO: see "Authentification" [] []
+[2013-12-01 20:14:35] MainCest.onPages.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:14:35] MainCest.onPages.INFO: am on page "/backend" [] []
+[2013-12-01 20:14:35] MainCest.onPages.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:14:35] MainCest.onPages.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:14:35] MainCest.onPages.INFO: # FAILED # [] []
+[2013-12-01 20:14:35] MainCest.onPages.INFO: PASSED [] []
+[2013-12-01 20:14:35] MainCest.onCreatePages.INFO: am on page "/" [] []
+[2013-12-01 20:14:35] MainCest.onCreatePages.INFO: see "Authentification" [] []
+[2013-12-01 20:14:35] MainCest.onCreatePages.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:14:36] MainCest.onCreatePages.INFO: am on page "/backend" [] []
+[2013-12-01 20:14:36] MainCest.onCreatePages.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:14:36] MainCest.onCreatePages.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:14:36] MainCest.onCreatePages.INFO: # FAILED # [] []
+[2013-12-01 20:14:36] MainCest.onCreatePages.INFO: PASSED [] []
+[2013-12-01 20:14:36] MainCest.onArticles.INFO: am on page "/" [] []
+[2013-12-01 20:14:36] MainCest.onArticles.INFO: see "Authentification" [] []
+[2013-12-01 20:14:36] MainCest.onArticles.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:14:36] MainCest.onArticles.INFO: am on page "/backend" [] []
+[2013-12-01 20:14:36] MainCest.onArticles.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:14:36] MainCest.onArticles.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:14:36] MainCest.onArticles.INFO: # FAILED # [] []
+[2013-12-01 20:14:36] MainCest.onArticles.INFO: PASSED [] []
+[2013-12-01 20:14:36] MainCest.onCreateArticles.INFO: am on page "/" [] []
+[2013-12-01 20:14:36] MainCest.onCreateArticles.INFO: see "Authentification" [] []
+[2013-12-01 20:14:36] MainCest.onCreateArticles.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:14:37] MainCest.onCreateArticles.INFO: am on page "/backend" [] []
+[2013-12-01 20:14:37] MainCest.onCreateArticles.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:14:37] MainCest.onCreateArticles.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:14:37] MainCest.onCreateArticles.INFO: # FAILED # [] []
+[2013-12-01 20:14:37] MainCest.onCreateArticles.INFO: PASSED [] []
+[2013-12-01 20:14:37] MainCest.onTags.INFO: am on page "/" [] []
+[2013-12-01 20:14:37] MainCest.onTags.INFO: see "Authentification" [] []
+[2013-12-01 20:14:37] MainCest.onTags.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:14:37] MainCest.onTags.INFO: am on page "/backend" [] []
+[2013-12-01 20:14:37] MainCest.onTags.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:14:37] MainCest.onTags.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:14:37] MainCest.onTags.INFO: # FAILED # [] []
+[2013-12-01 20:14:37] MainCest.onTags.INFO: PASSED [] []
+[2013-12-01 20:14:37] MainCest.onCreateTags.INFO: am on page "/" [] []
+[2013-12-01 20:14:37] MainCest.onCreateTags.INFO: see "Authentification" [] []
+[2013-12-01 20:14:37] MainCest.onCreateTags.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:14:38] MainCest.onCreateTags.INFO: am on page "/backend" [] []
+[2013-12-01 20:14:38] MainCest.onCreateTags.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:14:38] MainCest.onCreateTags.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:14:38] MainCest.onCreateTags.INFO: # FAILED # [] []
+[2013-12-01 20:14:38] MainCest.onCreateTags.INFO: PASSED [] []
+[2013-12-01 20:14:38] MainCest.onMedias.INFO: am on page "/" [] []
+[2013-12-01 20:14:38] MainCest.onMedias.INFO: see "Authentification" [] []
+[2013-12-01 20:14:38] MainCest.onMedias.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:14:38] MainCest.onMedias.INFO: am on page "/backend" [] []
+[2013-12-01 20:14:38] MainCest.onMedias.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:14:38] MainCest.onMedias.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:14:38] MainCest.onMedias.INFO: # FAILED # [] []
+[2013-12-01 20:14:38] MainCest.onMedias.INFO: PASSED [] []
+[2013-12-01 20:14:38] ProduitsCest.onHome.INFO: am on page "/" [] []
+[2013-12-01 20:14:39] ProduitsCest.onHome.INFO: see "Authentification" [] []
+[2013-12-01 20:14:39] ProduitsCest.onHome.INFO: see "Souvenir de moi" [] []
+[2013-12-01 20:14:39] ProduitsCest.onHome.INFO: am on page "/backend" [] []
+[2013-12-01 20:14:39] ProduitsCest.onHome.INFO: see "Authentification" [] []
+[2013-12-01 20:14:39] ProduitsCest.onHome.INFO: see "Souvenir de moi" [] []
+[2013-12-01 20:14:39] ProduitsCest.onHome.INFO: PASSED [] []
+[2013-12-01 20:14:39] ProduitsCest.onFailureAuthentificate.INFO: am on page "/" [] []
+[2013-12-01 20:14:39] ProduitsCest.onFailureAuthentificate.INFO: see "Authentification" [] []
+[2013-12-01 20:14:39] ProduitsCest.onFailureAuthentificate.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"ok"} [] []
+[2013-12-01 20:14:39] ProduitsCest.onFailureAuthentificate.INFO: grab text from ".alert" [] []
+[2013-12-01 20:14:39] ProduitsCest.onFailureAuthentificate.INFO: i expect 
+                    ×
+                     mauvais login ou mot de passe.
+                  [] []
+[2013-12-01 20:14:39] ProduitsCest.onFailureAuthentificate.INFO: PASSED [] []
+[2013-12-01 20:14:39] ProduitsCest.onSuccessAuthentificate.INFO: am on page "/" [] []
+[2013-12-01 20:14:39] ProduitsCest.onSuccessAuthentificate.INFO: see "Authentification" [] []
+[2013-12-01 20:14:39] ProduitsCest.onSuccessAuthentificate.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"ok"} [] []
+[2013-12-01 20:14:55] MainCest.onHome.INFO: am on page "/" [] []
+[2013-12-01 20:14:55] MainCest.onHome.INFO: see "Authentification" [] []
+[2013-12-01 20:14:55] MainCest.onHome.INFO: see "Souvenir de moi" [] []
+[2013-12-01 20:14:55] MainCest.onHome.INFO: am on page "/backend" [] []
+[2013-12-01 20:14:56] MainCest.onHome.INFO: see "Authentification" [] []
+[2013-12-01 20:14:56] MainCest.onHome.INFO: see "Souvenir de moi" [] []
+[2013-12-01 20:14:56] MainCest.onHome.INFO: PASSED [] []
+[2013-12-01 20:14:56] MainCest.onFailureAuthentificate.INFO: am on page "/" [] []
+[2013-12-01 20:14:56] MainCest.onFailureAuthentificate.INFO: see "Authentification" [] []
+[2013-12-01 20:14:56] MainCest.onFailureAuthentificate.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"ok"} [] []
+[2013-12-01 20:14:56] MainCest.onFailureAuthentificate.INFO: grab text from ".alert" [] []
+[2013-12-01 20:14:56] MainCest.onFailureAuthentificate.INFO: i expect 
+                    ×
+                     mauvais login ou mot de passe.
+                  [] []
+[2013-12-01 20:14:56] MainCest.onFailureAuthentificate.INFO: PASSED [] []
+[2013-12-01 20:14:56] MainCest.onSuccessAuthentificate.INFO: am on page "/" [] []
+[2013-12-01 20:14:56] MainCest.onSuccessAuthentificate.INFO: see "Authentification" [] []
+[2013-12-01 20:14:56] MainCest.onSuccessAuthentificate.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:14:56] MainCest.onSuccessAuthentificate.INFO: am on page "/backend" [] []
+[2013-12-01 20:14:56] MainCest.onSuccessAuthentificate.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:14:56] MainCest.onSuccessAuthentificate.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:14:56] MainCest.onSuccessAuthentificate.INFO: # FAILED # [] []
+[2013-12-01 20:14:56] MainCest.onSuccessAuthentificate.INFO: PASSED [] []
+[2013-12-01 20:14:56] MainCest.onProducts.INFO: am on page "/" [] []
+[2013-12-01 20:14:57] MainCest.onProducts.INFO: see "Authentification" [] []
+[2013-12-01 20:14:57] MainCest.onProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:14:57] MainCest.onProducts.INFO: am on page "/backend" [] []
+[2013-12-01 20:14:57] MainCest.onProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:14:57] MainCest.onProducts.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:14:57] MainCest.onProducts.INFO: # FAILED # [] []
+[2013-12-01 20:14:57] MainCest.onProducts.INFO: PASSED [] []
+[2013-12-01 20:14:57] MainCest.onCreateProducts.INFO: am on page "/" [] []
+[2013-12-01 20:14:57] MainCest.onCreateProducts.INFO: see "Authentification" [] []
+[2013-12-01 20:14:57] MainCest.onCreateProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:14:57] MainCest.onCreateProducts.INFO: am on page "/backend" [] []
+[2013-12-01 20:14:57] MainCest.onCreateProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:14:57] MainCest.onCreateProducts.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:14:57] MainCest.onCreateProducts.INFO: # FAILED # [] []
+[2013-12-01 20:14:57] MainCest.onCreateProducts.INFO: PASSED [] []
+[2013-12-01 20:14:57] MainCest.onCreateProcessFailureProducts.INFO: am on page "/" [] []
+[2013-12-01 20:14:57] MainCest.onCreateProcessFailureProducts.INFO: see "Authentification" [] []
+[2013-12-01 20:14:57] MainCest.onCreateProcessFailureProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:14:58] MainCest.onCreateProcessFailureProducts.INFO: am on page "/backend" [] []
+[2013-12-01 20:14:58] MainCest.onCreateProcessFailureProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:14:58] MainCest.onCreateProcessFailureProducts.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:14:58] MainCest.onCreateProcessFailureProducts.INFO: # FAILED # [] []
+[2013-12-01 20:14:58] MainCest.onCreateProcessFailureProducts.INFO: PASSED [] []
+[2013-12-01 20:14:58] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/" [] []
+[2013-12-01 20:14:58] MainCest.onCreateProcessSuccessProducts.INFO: see "Authentification" [] []
+[2013-12-01 20:14:58] MainCest.onCreateProcessSuccessProducts.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:14:58] MainCest.onCreateProcessSuccessProducts.INFO: am on page "/backend" [] []
+[2013-12-01 20:14:58] MainCest.onCreateProcessSuccessProducts.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:14:58] MainCest.onCreateProcessSuccessProducts.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:14:58] MainCest.onCreateProcessSuccessProducts.INFO: # FAILED # [] []
+[2013-12-01 20:14:58] MainCest.onCreateProcessSuccessProducts.INFO: PASSED [] []
+[2013-12-01 20:14:58] MainCest.onCommercials.INFO: am on page "/" [] []
+[2013-12-01 20:14:59] MainCest.onCommercials.INFO: see "Authentification" [] []
+[2013-12-01 20:14:59] MainCest.onCommercials.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:14:59] MainCest.onCommercials.INFO: am on page "/backend" [] []
+[2013-12-01 20:14:59] MainCest.onCommercials.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:14:59] MainCest.onCommercials.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:14:59] MainCest.onCommercials.INFO: # FAILED # [] []
+[2013-12-01 20:14:59] MainCest.onCommercials.INFO: PASSED [] []
+[2013-12-01 20:14:59] MainCest.onCommercialCreate.INFO: am on page "/" [] []
+[2013-12-01 20:14:59] MainCest.onCommercialCreate.INFO: see "Authentification" [] []
+[2013-12-01 20:14:59] MainCest.onCommercialCreate.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:14:59] MainCest.onCommercialCreate.INFO: am on page "/backend" [] []
+[2013-12-01 20:14:59] MainCest.onCommercialCreate.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:14:59] MainCest.onCommercialCreate.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:14:59] MainCest.onCommercialCreate.INFO: # FAILED # [] []
+[2013-12-01 20:14:59] MainCest.onCommercialCreate.INFO: PASSED [] []
+[2013-12-01 20:15:00] MainCest.onCategories.INFO: am on page "/" [] []
+[2013-12-01 20:15:00] MainCest.onCategories.INFO: see "Authentification" [] []
+[2013-12-01 20:15:00] MainCest.onCategories.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:15:00] MainCest.onCategories.INFO: am on page "/backend" [] []
+[2013-12-01 20:15:00] MainCest.onCategories.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:15:00] MainCest.onCategories.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:15:00] MainCest.onCategories.INFO: # FAILED # [] []
+[2013-12-01 20:15:00] MainCest.onCategories.INFO: PASSED [] []
+[2013-12-01 20:15:00] MainCest.onCategoriesCreate.INFO: am on page "/" [] []
+[2013-12-01 20:15:00] MainCest.onCategoriesCreate.INFO: see "Authentification" [] []
+[2013-12-01 20:15:00] MainCest.onCategoriesCreate.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:15:00] MainCest.onCategoriesCreate.INFO: am on page "/backend" [] []
+[2013-12-01 20:15:00] MainCest.onCategoriesCreate.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:15:00] MainCest.onCategoriesCreate.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:15:00] MainCest.onCategoriesCreate.INFO: # FAILED # [] []
+[2013-12-01 20:15:00] MainCest.onCategoriesCreate.INFO: PASSED [] []
+[2013-12-01 20:15:00] MainCest.onFamilies.INFO: am on page "/" [] []
+[2013-12-01 20:15:01] MainCest.onFamilies.INFO: see "Authentification" [] []
+[2013-12-01 20:15:01] MainCest.onFamilies.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:15:01] MainCest.onFamilies.INFO: am on page "/backend" [] []
+[2013-12-01 20:15:01] MainCest.onFamilies.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:15:01] MainCest.onFamilies.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:15:01] MainCest.onFamilies.INFO: # FAILED # [] []
+[2013-12-01 20:15:01] MainCest.onFamilies.INFO: PASSED [] []
+[2013-12-01 20:15:01] MainCest.onFamilyCreate.INFO: am on page "/" [] []
+[2013-12-01 20:15:01] MainCest.onFamilyCreate.INFO: see "Authentification" [] []
+[2013-12-01 20:15:01] MainCest.onFamilyCreate.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:15:01] MainCest.onFamilyCreate.INFO: am on page "/backend" [] []
+[2013-12-01 20:15:01] MainCest.onFamilyCreate.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:15:01] MainCest.onFamilyCreate.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:15:01] MainCest.onFamilyCreate.INFO: # FAILED # [] []
+[2013-12-01 20:15:01] MainCest.onFamilyCreate.INFO: PASSED [] []
+[2013-12-01 20:15:02] MainCest.onPages.INFO: am on page "/" [] []
+[2013-12-01 20:15:02] MainCest.onPages.INFO: see "Authentification" [] []
+[2013-12-01 20:15:02] MainCest.onPages.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:15:02] MainCest.onPages.INFO: am on page "/backend" [] []
+[2013-12-01 20:15:02] MainCest.onPages.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:15:02] MainCest.onPages.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:15:02] MainCest.onPages.INFO: # FAILED # [] []
+[2013-12-01 20:15:02] MainCest.onPages.INFO: PASSED [] []
+[2013-12-01 20:15:02] MainCest.onCreatePages.INFO: am on page "/" [] []
+[2013-12-01 20:15:02] MainCest.onCreatePages.INFO: see "Authentification" [] []
+[2013-12-01 20:15:02] MainCest.onCreatePages.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:15:02] MainCest.onCreatePages.INFO: am on page "/backend" [] []
+[2013-12-01 20:15:02] MainCest.onCreatePages.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:15:02] MainCest.onCreatePages.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:15:02] MainCest.onCreatePages.INFO: # FAILED # [] []
+[2013-12-01 20:15:02] MainCest.onCreatePages.INFO: PASSED [] []
+[2013-12-01 20:15:03] MainCest.onArticles.INFO: am on page "/" [] []
+[2013-12-01 20:15:03] MainCest.onArticles.INFO: see "Authentification" [] []
+[2013-12-01 20:15:03] MainCest.onArticles.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:15:03] MainCest.onArticles.INFO: am on page "/backend" [] []
+[2013-12-01 20:15:03] MainCest.onArticles.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:15:03] MainCest.onArticles.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:15:03] MainCest.onArticles.INFO: # FAILED # [] []
+[2013-12-01 20:15:03] MainCest.onArticles.INFO: PASSED [] []
+[2013-12-01 20:15:03] MainCest.onCreateArticles.INFO: am on page "/" [] []
+[2013-12-01 20:15:03] MainCest.onCreateArticles.INFO: see "Authentification" [] []
+[2013-12-01 20:15:03] MainCest.onCreateArticles.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:15:03] MainCest.onCreateArticles.INFO: am on page "/backend" [] []
+[2013-12-01 20:15:04] MainCest.onCreateArticles.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:15:04] MainCest.onCreateArticles.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:15:04] MainCest.onCreateArticles.INFO: # FAILED # [] []
+[2013-12-01 20:15:04] MainCest.onCreateArticles.INFO: PASSED [] []
+[2013-12-01 20:15:04] MainCest.onTags.INFO: am on page "/" [] []
+[2013-12-01 20:15:04] MainCest.onTags.INFO: see "Authentification" [] []
+[2013-12-01 20:15:04] MainCest.onTags.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:15:04] MainCest.onTags.INFO: am on page "/backend" [] []
+[2013-12-01 20:15:04] MainCest.onTags.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:15:04] MainCest.onTags.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:15:04] MainCest.onTags.INFO: # FAILED # [] []
+[2013-12-01 20:15:04] MainCest.onTags.INFO: PASSED [] []
+[2013-12-01 20:15:04] MainCest.onCreateTags.INFO: am on page "/" [] []
+[2013-12-01 20:15:04] MainCest.onCreateTags.INFO: see "Authentification" [] []
+[2013-12-01 20:15:04] MainCest.onCreateTags.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:15:04] MainCest.onCreateTags.INFO: am on page "/backend" [] []
+[2013-12-01 20:15:05] MainCest.onCreateTags.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:15:05] MainCest.onCreateTags.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:15:05] MainCest.onCreateTags.INFO: # FAILED # [] []
+[2013-12-01 20:15:05] MainCest.onCreateTags.INFO: PASSED [] []
+[2013-12-01 20:15:05] MainCest.onMedias.INFO: am on page "/" [] []
+[2013-12-01 20:15:05] MainCest.onMedias.INFO: see "Authentification" [] []
+[2013-12-01 20:15:05] MainCest.onMedias.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"djscrave"} [] []
+[2013-12-01 20:15:05] MainCest.onMedias.INFO: am on page "/backend" [] []
+[2013-12-01 20:15:05] MainCest.onMedias.INFO: see "Modern Solution for E-Commerce for Minimalist Operations" [] []
+[2013-12-01 20:15:05] MainCest.onMedias.ALERT: Failed asserting that 
+-->  <bold>/login</bold><info><!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Horus CMF is a modern ecommerce solution for PHP, easily customizable and based on the Symfony2 frame</info>
+<debug>[Content too long to display. See complete response in '_log' directory]</debug>
+--> contains "modern solution for e-commerce for minimalist operations". [] []
+[2013-12-01 20:15:05] MainCest.onMedias.INFO: # FAILED # [] []
+[2013-12-01 20:15:05] MainCest.onMedias.INFO: PASSED [] []
+[2013-12-01 20:15:05] ProduitsCest.onHome.INFO: am on page "/" [] []
+[2013-12-01 20:15:05] ProduitsCest.onHome.INFO: see "Authentification" [] []
+[2013-12-01 20:15:05] ProduitsCest.onHome.INFO: see "Souvenir de moi" [] []
+[2013-12-01 20:15:05] ProduitsCest.onHome.INFO: am on page "/backend" [] []
+[2013-12-01 20:15:05] ProduitsCest.onHome.INFO: see "Authentification" [] []
+[2013-12-01 20:15:05] ProduitsCest.onHome.INFO: see "Souvenir de moi" [] []
+[2013-12-01 20:15:05] ProduitsCest.onHome.INFO: PASSED [] []
+[2013-12-01 20:15:05] ProduitsCest.onFailureAuthentificate.INFO: am on page "/" [] []
+[2013-12-01 20:15:05] ProduitsCest.onFailureAuthentificate.INFO: see "Authentification" [] []
+[2013-12-01 20:15:05] ProduitsCest.onFailureAuthentificate.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"ok"} [] []
+[2013-12-01 20:15:06] ProduitsCest.onFailureAuthentificate.INFO: grab text from ".alert" [] []
+[2013-12-01 20:15:06] ProduitsCest.onFailureAuthentificate.INFO: i expect 
+                    ×
+                     mauvais login ou mot de passe.
+                  [] []
+[2013-12-01 20:15:06] ProduitsCest.onFailureAuthentificate.INFO: PASSED [] []
+[2013-12-01 20:15:06] ProduitsCest.onSuccessAuthentificate.INFO: am on page "/" [] []
+[2013-12-01 20:15:06] ProduitsCest.onSuccessAuthentificate.INFO: see "Authentification" [] []
+[2013-12-01 20:15:06] ProduitsCest.onSuccessAuthentificate.INFO: submit form "form",{"_username":"test@yahoo.fr","_password":"ok"} [] []
+[2013-12-01 20:15:06] ProduitsCest.onSuccessAuthentificate.INFO: grab text from ".alert" [] []
+[2013-12-01 20:15:06] ProduitsCest.onSuccessAuthentificate.INFO: i expect 
+                    ×
+                     mauvais login ou mot de passe.
+                  [] []
+[2013-12-01 20:15:06] ProduitsCest.onSuccessAuthentificate.INFO: PASSED [] []
+[2013-12-01 20:15:06] WelcomeCept.php.INFO: PASSED [] []

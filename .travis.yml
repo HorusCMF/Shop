@@ -8,7 +8,8 @@ php:
 before_script:
   - composer install --dev
 
-script: phpunit -c app  --coverage-text
+script: php bin/codecept run --steps --debug --html
+
 
 notifications:
   email:

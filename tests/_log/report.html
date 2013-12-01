@@ -110,22 +110,100 @@
 
  <body>
  <div class="layout">
- <h1>Codeception Results <small><span style="color: red">FAILED</span> (1.7s)</small></h1>
+ <h1>Codeception Results <small><span style="color: red">FAILED</span> (10.8s)</small></h1>
 
 
 	 <table border="0" style="width: 100%;">
 		<tr>
  <td>
+     <h3>Unit Tests</h3>
+ </td>
+</tr><tr>
+ <td>
+     <h3>Functional Tests</h3>
+ </td>
+</tr><tr>
+ <td>
      <h3>Acceptance Tests</h3>
  </td>
 </tr>   <tr>
     <td>
-     <p class="scenarioFailed" onclick="showHide('1', this)">[+] upload a image of product (MainCest.onCreateProcessSuccessProducts) (1.73s)</p>
+     <p class="scenarioSuccess" onclick="showHide('1', this)">[+] on home (MainCest.onHome) (0.42s)</p>
     </td>
    </tr>
    <tr>
     <td>
-     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer1">
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer1">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Authentification"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Souvenir de moi"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Authentification"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Souvenir de moi"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioSuccess" onclick="showHide('2', this)">[+] on failure auth (MainCest.onFailureAuthentificate) (0.29s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer2">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Authentification"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I submit form <span style="color: #732E81;">"form",{"_username":"test@yahoo.fr","_password":"ok"}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I grab text from <span style="color: #732E81;">".alert"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I <strong>I expect ?</strong></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioFailed" onclick="showHide('3', this)">[+] on success authentificate (MainCest.onSuccessAuthentificate) (0.51s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer3">
       <tr>
        <td class="stepName">I am on page <span style="color: #732E81;">"/"</span></td>
       </tr>
@@ -146,20 +224,627 @@
        <td class="stepName">I see <span style="color: #732E81;">"Modern Solution for E-Commerce for Minimalist Operations"</span></td>
       </tr>
 
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioFailed" onclick="showHide('4', this)">[+] in products page (MainCest.onProducts) (0.48s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer4">
       <tr>
-       <td class="stepName">I am on page <span style="color: #732E81;">"/backend/produits/creer"</span></td>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/"</span></td>
       </tr>
 
       <tr>
-       <td class="stepName">I see <span style="color: #732E81;">"Créer un produit"</span></td>
+       <td class="stepName">I see <span style="color: #732E81;">"Authentification"</span></td>
       </tr>
 
       <tr>
-       <td class="stepName">I submit form <span style="color: #732E81;">"form#createproduct",{"title":"Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White","accroche":"La Galaxy Tab qu'il vous faut","reference":"GX07889-B","ean":"1234567891234","prixHT":"15","prixTTC":"21","cover":"Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».","content":"Tout en mobilité
-                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
-                    De nouveaux usages et de nouvelles applications
-                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
-                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.","category":7,"service":"Garantie offerte","video":"http://www.youtube.com/watch?v=IWAD3oKx7Yo","etat":1,"status":1,"quantity":15,"poid":1.5,"longueur":20,"largeur":12,"hauteur":2}</span></td>
+       <td class="stepName">I submit form <span style="color: #732E81;">"form",{"_username":"test@yahoo.fr","_password":"djscrave"}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Modern Solution for E-Commerce for Minimalist Operations"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioFailed" onclick="showHide('5', this)">[+] in products create page (MainCest.onCreateProducts) (0.47s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer5">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Authentification"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I submit form <span style="color: #732E81;">"form",{"_username":"test@yahoo.fr","_password":"djscrave"}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Modern Solution for E-Commerce for Minimalist Operations"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioFailed" onclick="showHide('6', this)">[+] in products create page (MainCest.onCreateProcessFailureProducts) (0.52s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer6">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Authentification"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I submit form <span style="color: #732E81;">"form",{"_username":"test@yahoo.fr","_password":"djscrave"}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Modern Solution for E-Commerce for Minimalist Operations"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioFailed" onclick="showHide('7', this)">[+] in products create page (MainCest.onCreateProcessSuccessProducts) (0.5s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer7">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Authentification"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I submit form <span style="color: #732E81;">"form",{"_username":"test@yahoo.fr","_password":"djscrave"}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Modern Solution for E-Commerce for Minimalist Operations"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioFailed" onclick="showHide('8', this)">[+] in commercials page (MainCest.onCommercials) (0.54s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer8">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Authentification"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I submit form <span style="color: #732E81;">"form",{"_username":"test@yahoo.fr","_password":"djscrave"}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Modern Solution for E-Commerce for Minimalist Operations"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioFailed" onclick="showHide('9', this)">[+] in commercials create page (MainCest.onCommercialCreate) (0.5s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer9">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Authentification"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I submit form <span style="color: #732E81;">"form",{"_username":"test@yahoo.fr","_password":"djscrave"}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Modern Solution for E-Commerce for Minimalist Operations"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioFailed" onclick="showHide('10', this)">[+] in categories page (MainCest.onCategories) (0.45s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer10">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Authentification"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I submit form <span style="color: #732E81;">"form",{"_username":"test@yahoo.fr","_password":"djscrave"}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Modern Solution for E-Commerce for Minimalist Operations"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioFailed" onclick="showHide('11', this)">[+] in categories page (MainCest.onCategoriesCreate) (0.54s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer11">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Authentification"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I submit form <span style="color: #732E81;">"form",{"_username":"test@yahoo.fr","_password":"djscrave"}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Modern Solution for E-Commerce for Minimalist Operations"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioFailed" onclick="showHide('12', this)">[+] in families page (MainCest.onFamilies) (0.54s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer12">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Authentification"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I submit form <span style="color: #732E81;">"form",{"_username":"test@yahoo.fr","_password":"djscrave"}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Modern Solution for E-Commerce for Minimalist Operations"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioFailed" onclick="showHide('13', this)">[+] create a family (MainCest.onFamilyCreate) (0.49s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer13">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Authentification"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I submit form <span style="color: #732E81;">"form",{"_username":"test@yahoo.fr","_password":"djscrave"}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Modern Solution for E-Commerce for Minimalist Operations"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioFailed" onclick="showHide('14', this)">[+] on pages (MainCest.onPages) (0.51s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer14">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Authentification"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I submit form <span style="color: #732E81;">"form",{"_username":"test@yahoo.fr","_password":"djscrave"}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Modern Solution for E-Commerce for Minimalist Operations"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioFailed" onclick="showHide('15', this)">[+] on pages (MainCest.onCreatePages) (0.49s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer15">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Authentification"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I submit form <span style="color: #732E81;">"form",{"_username":"test@yahoo.fr","_password":"djscrave"}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Modern Solution for E-Commerce for Minimalist Operations"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioFailed" onclick="showHide('16', this)">[+] on articles (MainCest.onArticles) (0.54s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer16">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Authentification"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I submit form <span style="color: #732E81;">"form",{"_username":"test@yahoo.fr","_password":"djscrave"}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Modern Solution for E-Commerce for Minimalist Operations"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioFailed" onclick="showHide('17', this)">[+] on create articles (MainCest.onCreateArticles) (0.53s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer17">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Authentification"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I submit form <span style="color: #732E81;">"form",{"_username":"test@yahoo.fr","_password":"djscrave"}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Modern Solution for E-Commerce for Minimalist Operations"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioFailed" onclick="showHide('18', this)">[+] on tags (MainCest.onTags) (0.49s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer18">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Authentification"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I submit form <span style="color: #732E81;">"form",{"_username":"test@yahoo.fr","_password":"djscrave"}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Modern Solution for E-Commerce for Minimalist Operations"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioFailed" onclick="showHide('19', this)">[+] create tag (MainCest.onCreateTags) (0.55s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer19">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Authentification"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I submit form <span style="color: #732E81;">"form",{"_username":"test@yahoo.fr","_password":"djscrave"}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Modern Solution for E-Commerce for Minimalist Operations"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioFailed" onclick="showHide('20', this)">[+] medias (MainCest.onMedias) (0.51s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer20">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Authentification"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I submit form <span style="color: #732E81;">"form",{"_username":"test@yahoo.fr","_password":"djscrave"}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Modern Solution for E-Commerce for Minimalist Operations"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioSuccess" onclick="showHide('21', this)">[+] perform actions and see result (ProduitsCest.onHome) (0.27s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer21">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Authentification"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Souvenir de moi"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/backend"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Authentification"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Souvenir de moi"</span></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioSuccess" onclick="showHide('22', this)">[+] perform actions and see result (ProduitsCest.onFailureAuthentificate) (0.31s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer22">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I see <span style="color: #732E81;">"Authentification"</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName">I submit form <span style="color: #732E81;">"form",{"_username":"test@yahoo.fr","_password":"ok"}</span></td>
       </tr>
 
       <tr>
@@ -167,24 +852,55 @@
       </tr>
 
       <tr>
-       <td class="stepName">I grab text from <span style="color: #732E81;">".alert-warning"</span></td>
+       <td class="stepName">I <strong>I expect ?</strong></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioSuccess" onclick="showHide('23', this)">[+] perform actions and see result (ProduitsCest.onSuccessAuthentificate) (0.32s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer23">
+      <tr>
+       <td class="stepName">I am on page <span style="color: #732E81;">"/"</span></td>
       </tr>
 
       <tr>
-       <td class="stepName">I <strong>I expect 
-                    ×
-                     Aucune photo pour le moment
-                </strong></td>
+       <td class="stepName">I see <span style="color: #732E81;">"Authentification"</span></td>
       </tr>
 
       <tr>
-       <td class="stepName">I <strong>I expect Upload a image of product</strong></td>
+       <td class="stepName">I submit form <span style="color: #732E81;">"form",{"_username":"test@yahoo.fr","_password":"ok"}</span></td>
       </tr>
 
       <tr>
-       <td class="stepName">I attach file <span style="color: #732E81;">"input[@name="file"]","images/tablette.jpg"</span></td>
+       <td class="stepName">I grab text from <span style="color: #732E81;">".alert"</span></td>
       </tr>
 
+      <tr>
+       <td class="stepName">I <strong>I expect ?</strong></td>
+      </tr>
+
+
+     </table>
+    </td>
+   </tr>
+
+   <tr>
+    <td>
+     <p class="scenarioSuccess" onclick="showHide('24', this)">[+]  (WelcomeCept.php) (0.04s)</p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer24">
 
      </table>
     </td>
@@ -198,11 +914,11 @@
       <table border="0">
        <tr>
         <td width="250" class="scenarioSuccess">Successful scenarios:</td>
-        <td class="scenarioSuccessValue"><strong>0</strong></td>
+        <td class="scenarioSuccessValue"><strong>6</strong></td>
        </tr>
        <tr>
         <td class="scenarioFailed">Failed scenarios:</td>
-        <td class="scenarioFailedValue"><strong>1</strong></td>
+        <td class="scenarioFailedValue"><strong>18</strong></td>
        </tr>
        <tr>
         <td class="scenarioSkipped">Skipped scenarios:</td>
