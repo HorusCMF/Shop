@@ -500,19 +500,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name=".travis.yml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name=".travis.yml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="20" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0">
+            <state line="15" column="0" selection-start="169" selection-end="169" vertical-scroll-proportion="0.45531198">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="composer.json" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="composer.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="38" selection-start="1527" selection-end="1527" vertical-scroll-proportion="0.6647834">
+            <state line="38" column="47" selection-start="1400" selection-end="1400" vertical-scroll-proportion="-5.142857">
               <folding />
             </state>
           </provider>
@@ -886,16 +886,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
+    <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="20" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0">
+        <state line="38" column="47" selection-start="1400" selection-end="1400" vertical-scroll-proportion="-5.142857">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="38" selection-start="1527" selection-end="1527" vertical-scroll-proportion="0.6647834">
+        <state line="15" column="0" selection-start="169" selection-end="169" vertical-scroll-proportion="0.45531198">
           <folding />
         </state>
       </provider>
