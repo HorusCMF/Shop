@@ -6,45 +6,48 @@
 
 {% block content %}
     <div class="page" id="clients">
-        <h1><i class="glyphicon glyphicon-user"></i> Clients</h1>
+        <h1><i class="glyphicon glyphicon-user"></i> Client {{ client.firstname|title }} {{ client.lastname|title }}
+        </h1>
+        <a class="btn back btn-danger pull-right" href="{{ path('horus_site_clients') }}">&larr; Revenir à la liste des
+            clients</a>
+
         <hr class="clear fancy-line">
 
-        <table class="table table-striped">
-            <thead>
-            <tr>
-                <th>#</th>
-                <th>Nom Prénom</th>
-                <th>Email</th>
-                <th>Tel</th>
-                <th>Dernières connexions</th>
-                <th>Action</th>
-            </tr>
-            </thead>
-            <tbody>
-                {% for client in clients %}
-                    <tr>
-                        <td>{{ loop.index }}</td>
-                        <td>{{ client.firstname|title }} {{ client.lastname|title }}</td>
-                        <td>{{ client.email }}</td>
-                        <td>{{ client.tel }}</td>
-                        <td>{{ client.dateAuth|created_ago|default('Pas encore connecté') }}</td>
-                        <td>
-                            <a href="{{ path('horus_site_edit_client', {'id' : client.id }) }}" class="btn btn-primary"><i class="glyphicon glyphicon-pencil"></i></a>
-                            <a href="{{ path('horus_site_remove_client', {'id' : client.id }) }}" class="btn btn-primary"><i class="glyphicon glyphicon-remove"></i></a>
-                        </td>
-                    </tr>
-                {% else %}
-                    <tr>
-                        <div class="alert alert-dismissable alert-danger">
-                            <button type="button" class="close" data-dismiss="alert">×</button>
-                            <i class="glyphicon glyphicon-info-sign"></i> Aucun client de créer pour le moment.
-                            <a href="{{ path('horus_site_article_create') }}" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i> Ajouter un article</a>
-                            <div class="clear"></div>
-                        </div>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+
+        <p>Nom / Prénom: {{ client.firstname|title }} {{ client.lastname|title }}</p>
+
+        <p>Email : {{ client.email }}</p>
+
+        <p>Entreprise {{ client.entreprise|default('Aucune') }}</p>
+
+        <p>Description: {{ client.description }}</p>
+
+        <p>Date de naissance: {{ client.dob|date('d/m/Y') }}</p>
+
+        <p>Date de création: {{ client.createdAt|date('d/m/Y') }}</p>
+
+        <p>Date de mise à jour: {{ client.updatedAt|date('d/m/Y') }}</p>
+
+        <p>Adresse primaire: {{ client.adresse }} {{ client.zipcode }}  {{ client.ville }}</p>
+
+        <p>Tel: {{ client.tel }}</p>
+
+        <p>Date de connexion: {{ client.dateAuth|created_ago|default('Pas encore connecté') }}</p>
+
+        <p>
+            <a href="{{ path('horus_site_edit_client', {'id' : client.id }) }}" class="btn btn-primary"><i
+                        class="glyphicon glyphicon-pencil"></i></a>
+            <a href="{{ path('horus_site_remove_client', {'id' : client.id }) }}" class="btn btn-primary"><i
+                        class="glyphicon glyphicon-remove"></i></a>
+        </p>
+
+        {% if  client.addresses is not empty %}
+            <h3>Adresse</h3>
+        {% endif %}
+        {% for adresse in client.addresses %}
+            <p>{{ adresse.adresse }}</p>
+            <p>{{ adresse.zipcode }} {{ adresse.ville|title }}</p>
+        {% endfor %}
     </div>
 {% endblock %}
 

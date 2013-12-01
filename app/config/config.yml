@@ -38,7 +38,7 @@ twig:
 assetic:
     debug:          "%kernel.debug%"
     use_controller: false
-    bundles:        ["HorusSiteBundle"]
+    bundles:        ["HorusSiteBundle","HorusFrontBundle"]
     #java: /usr/bin/java
     filters:
          cssrewrite: ~
@@ -96,6 +96,7 @@ doctrine:
           connection:       default
           mappings:
             HorusSiteBundle: ~
+            HorusFrontBundle: ~
 
 # Swiftmailer Configuration
 swiftmailer:

@@ -5,6 +5,7 @@ namespace Horus\SiteBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\ORM\EntityRepository;
 
+use Horus\SiteBundle\Util\Box;
 use Symfony\Component\Security\Core\User\UserInterface as UserInterface;
 use Symfony\Component\Security\Core\User\AdvancedUserInterface as AdvancedUserInterface;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -1215,7 +1216,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
 
     public function __toString()
     {
-        return $this->email;
+        return Box::limit_words($this->email);
     }
 
     public function getAge()

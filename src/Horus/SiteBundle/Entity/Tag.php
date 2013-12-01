@@ -3,6 +3,7 @@
 namespace Horus\SiteBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Horus\SiteBundle\Util\Box;
 use Symfony\Component\Validator\Constraints as Assert;
 
 
@@ -57,7 +58,7 @@ class Tag
 
 
     public function __toString(){
-        return $this->word;
+        return Box::limit_words($this->word);
     }
 
     /**

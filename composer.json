@@ -44,6 +44,7 @@
         "saad-tazi/g-chart-bundle" : "dev-master",
         "phpdocumentor/phpdocumentor": "*",
         "nelmio/security-bundle": "dev-master",
+        "whiteoctober/tcpdf-bundle": "dev-master",
         "egulias/security-debug-command-bundle": "dev-master"
     },
     "scripts": {

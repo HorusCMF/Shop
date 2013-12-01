@@ -5,6 +5,7 @@ namespace Horus\SiteBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\ORM\EntityRepository;
 
+use Horus\SiteBundle\Util\Box;
 use Symfony\Component\Security\Core\User\UserInterface as UserInterface;
 use Symfony\Component\Security\Core\User\AdvancedUserInterface as AdvancedUserInterface;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -364,10 +365,17 @@ class Client extends EntityRepository  implements AdvancedUserInterface, \Serial
 
 
     /**
-     * @ORM\OneToMany(targetEntity="Commentaire",mappedBy="client", cascade={"all"},orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity="Commentaire", mappedBy="client", cascade={"all"},orphanRemoval=true)
      */
     protected $client;
 
+
+    /**
+     * @ORM\OneToMany(targetEntity="Addresses", mappedBy="client", cascade={"all"}, orphanRemoval=true)
+     * @ORM\OrderBy({"dateCreated" = "DESC"})
+     */
+    protected $addresses;
+    
 
     /**
      * Get id
@@ -621,36 +629,6 @@ class Client extends EntityRepository  implements AdvancedUserInterface, \Serial
         $this->dateCreated = $dateCreated;
     }
 
-    /**
-     * Get dateCreated
-     *
-     * @return \DateTime
-     */
-    public function getDateCreated()
-    {
-        return $this->dateCreated;
-    }
-
-    /**
-     * Set dateUpdated
-     *
-     * @param \DateTime $dateUpdated
-     * @return Demandeur
-     */
-    public function setDateUpdated($dateUpdated)
-    {
-        $this->dateUpdated = $dateUpdated;
-    }
-
-    /**
-     * Get dateUpdated
-     *
-     * @return \DateTime
-     */
-    public function getDateUpdated()
-    {
-        return $this->dateUpdated;
-    }
 
     /**
      * Set optin
@@ -1184,7 +1162,7 @@ class Client extends EntityRepository  implements AdvancedUserInterface, \Serial
 
     public function __toString()
     {
-        return $this->email;
+        return Box::limit_words($this->email);
     }
 
     public function getAge()
@@ -1687,5 +1665,37 @@ class Client extends EntityRepository  implements AdvancedUserInterface, \Serial
     public function getClient()
     {
         return $this->client;
+    }
+
+    /**
+     * Add addresses
+     *
+     * @param Horus\SiteBundle\Entity\Addresses $addresses
+     * @return Client
+     */
+    public function addAddresse(\Horus\SiteBundle\Entity\Addresses $addresses)
+    {
+        $this->addresses[] = $addresses;
+        return $this;
+    }
+
+    /**
+     * Remove addresses
+     *
+     * @param Horus\SiteBundle\Entity\Addresses $addresses
+     */
+    public function removeAddresse(\Horus\SiteBundle\Entity\Addresses $addresses)
+    {
+        $this->addresses->removeElement($addresses);
+    }
+
+    /**
+     * Get addresses
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getAddresses()
+    {
+        return $this->addresses;
     }
 }

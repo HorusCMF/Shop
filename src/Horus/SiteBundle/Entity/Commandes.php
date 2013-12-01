@@ -17,7 +17,6 @@ use Gedmo\Mapping\Annotation as Gedmo; // gedmo annotations
 class Commandes
 {
 
-
     /**
      * Constructor
      */
@@ -88,7 +87,7 @@ class Commandes
 
     /**
      * @ORM\ManyToOne(targetEntity="Client", inversedBy="commandes")
-     * @ORM\JoinColumn(name="clients_id", referencedColumnName="id")
+     * @ORM\JoinColumn(name="client_id", referencedColumnName="id")
      */
     private $client;
 
@@ -112,14 +111,10 @@ class Commandes
      */
     private $transport;
 
-
     /**
      * @ORM\OneToMany(targetEntity="CommandesProduit", mappedBy="commandes")
      */
     private $commandesProduits;
-
-
-
 
 
     /**
@@ -377,10 +372,10 @@ class Commandes
     /**
      * Add commandesProduits
      *
-     * @param Horus\SiteBundle\Entity\CommandesProduits $commandesProduits
+     * @param Horus\SiteBundle\Entity\CommandesProduit $commandesProduit
      * @return Commandes
      */
-    public function addCommandesProduit(\Horus\SiteBundle\Entity\CommandesProduits $commandesProduits)
+    public function addCommandesProduit(\Horus\SiteBundle\Entity\CommandesProduit $commandesProduits)
     {
         $this->commandesProduits[] = $commandesProduits;
         return $this;
@@ -389,9 +384,9 @@ class Commandes
     /**
      * Remove commandesProduits
      *
-     * @param Horus\SiteBundle\Entity\CommandesProduits $commandesProduits
+     * @param Horus\SiteBundle\Entity\CommandesProduit $commandesProduit
      */
-    public function removeCommandesProduit(\Horus\SiteBundle\Entity\CommandesProduits $commandesProduits)
+    public function removeCommandesProduit(\Horus\SiteBundle\Entity\CommandesProduit $commandesProduits)
     {
         $this->commandesProduits->removeElement($commandesProduits);
     }

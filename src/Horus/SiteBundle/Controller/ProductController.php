@@ -386,7 +386,6 @@ class ProductController extends Controller
                 'video' => $media,
             )
         );
-
     }
 
 

@@ -54,9 +54,17 @@ class ClientsController extends Controller
     /**
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function clientAction(Clients $id)
+    public function clientAction(Client $id)
     {
         $em = $this->getDoctrine()->getManager();
+        return $this->render('HorusSiteBundle:Clients:client.html.twig', array('client' => $id));
+    }
+
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function seeclientAction(Client $id)
+    {
         return $this->render('HorusSiteBundle:Clients:client.html.twig', array('client' => $id));
     }
 

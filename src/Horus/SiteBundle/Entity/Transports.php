@@ -4,6 +4,7 @@ namespace Horus\SiteBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use Horus\SiteBundle\Util\Box;
 use Symfony\Component\Validator\Constraints as Assert;
 use Gedmo\Mapping\Annotation as Gedmo; // gedmo annotations
 
@@ -1210,7 +1211,7 @@ class Transports
      * @return string
      */
     public function __toString(){
-        return $this->getTitle();
+        return Box::limit_words($this->getTitle());
     }
 
     /**

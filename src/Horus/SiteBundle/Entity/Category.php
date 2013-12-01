@@ -3,6 +3,7 @@
 namespace Horus\SiteBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Horus\SiteBundle\Util\Box;
 use Symfony\Component\Validator\Constraints as Assert;
 use Gedmo\Mapping\Annotation as Gedmo;
 
@@ -39,6 +40,14 @@ class Category
      * @ORM\Column(name="name", type="string", length=200, nullable=true)
      */
     private $name;
+
+
+    /**
+     * @Gedmo\SortablePosition
+     * @ORM\Column(name="position", type="integer")
+     */
+    private $position;
+
 
     /**
      * @ORM\Column(name="path", type="string", length=3000, nullable=true)
@@ -235,7 +244,7 @@ class Category
 
 
     public function __toString(){
-        return $this->name;
+        return Box::limit_words($this->name);
     }
 
 
@@ -680,5 +689,27 @@ class Category
     public function getCommercials()
     {
         return $this->commercials;
+    }
+
+    /**
+     * Set position
+     *
+     * @param integer $position
+     * @return Category
+     */
+    public function setPosition($position)
+    {
+        $this->position = $position;
+        return $this;
+    }
+
+    /**
+     * Get position
+     *
+     * @return integer 
+     */
+    public function getPosition()
+    {
+        return $this->position;
     }
 }

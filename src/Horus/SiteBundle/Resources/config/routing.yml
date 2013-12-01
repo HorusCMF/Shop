@@ -2,17 +2,10 @@
 ### Main
 ###
 
-horus_site_root:
-  pattern:  /
-  defaults: { _controller: HorusSiteBundle:Administrateur:login }
 
 horus_site_main:
   pattern:  /backend/
   defaults: { _controller: HorusSiteBundle:Main:index }
-
-horus_site_denied:
-  pattern:  /access-denied/
-  defaults: { _controller: HorusSiteBundle:Administrateur:login }
 
 horus_site_switch:
   pattern:  /backend/switcher?username={username}
@@ -71,6 +64,94 @@ horus_site_desactive_product:
 horus_site_edit_pictures_product:
   pattern:  /backend/produits/photo/{id}
   defaults: { _controller: HorusSiteBundle:Product:pictureproduct }
+
+
+
+
+###
+### Marques
+###
+
+horus_site_marques:
+  pattern:  /backend/marques
+  defaults: { _controller: HorusSiteBundle:Marques:marques }
+
+horus_site_create_marques:
+  pattern:  /backend/marques/creer
+  defaults: { _controller: HorusSiteBundle:Marques:createmarque }
+
+horus_site_edit_marques:
+  pattern:  /backend/marques/editer/{id}
+  defaults: { _controller: HorusSiteBundle:Marques:editmarque }
+
+horus_site_remove_marques:
+  pattern:  /backend/marques/suppression/{id}
+  defaults: { _controller: HorusSiteBundle:Marques:removemarque }
+
+horus_site_remove_image_marque:
+  pattern:  /backend/marques/image/suppression/{id}
+  defaults: { _controller: HorusSiteBundle:Marques:removeimagemarque }
+
+horus_site_cover_image_marque:
+  pattern:  /backend/marques/image/cover/{id}
+  defaults: { _controller: HorusSiteBundle:Marques:coverimagemarque }
+
+horus_site_active_marques:
+  pattern:  /backend/marques/activation/{id}
+  defaults: { _controller: HorusSiteBundle:Marques:activemarque }
+
+horus_site_desactive_marques:
+  pattern:  /backend/marques/desactivation/{id}
+  defaults: { _controller: HorusSiteBundle:Marques:desactivemarque }
+
+horus_site_edit_pictures_marques:
+  pattern:  /backend/marques/photo/{id}
+  defaults: { _controller: HorusSiteBundle:Marques:picturemarque }
+
+
+
+
+###
+### Fournisseurs
+###
+
+horus_site_fournisseurs:
+  pattern:  /backend/fournisseurs
+  defaults: { _controller: HorusSiteBundle:Fournisseurs:fournisseurs }
+
+horus_site_create_fournisseurs:
+  pattern:  /backend/fournisseurs/creer
+  defaults: { _controller: HorusSiteBundle:Fournisseurs:createfournisseur }
+
+horus_site_edit_fournisseurs:
+  pattern:  /backend/fournisseurs/editer/{id}
+  defaults: { _controller: HorusSiteBundle:Fournisseurs:editfournisseur }
+
+horus_site_remove_fournisseurs:
+  pattern:  /backend/fournisseurs/suppression/{id}
+  defaults: { _controller: HorusSiteBundle:Fournisseurs:removefournisseur }
+
+horus_site_remove_image_fournisseur:
+  pattern:  /backend/fournisseurs/image/suppression/{id}
+  defaults: { _controller: HorusSiteBundle:Fournisseurs:removeimagefournisseur }
+
+horus_site_cover_image_fournisseur:
+  pattern:  /backend/fournisseurs/image/cover/{id}
+  defaults: { _controller: HorusSiteBundle:Fournisseurs:coverimagefournisseur }
+
+horus_site_active_fournisseurs:
+  pattern:  /backend/fournisseurs/activation/{id}
+  defaults: { _controller: HorusSiteBundle:Fournisseurs:activefournisseur }
+
+horus_site_desactive_fournisseurs:
+  pattern:  /backend/fournisseurs/desactivation/{id}
+  defaults: { _controller: HorusSiteBundle:Fournisseurs:desactivefournisseur }
+
+horus_site_edit_pictures_fournisseurs:
+  pattern:  /backend/fournisseurs/photo/{id}
+  defaults: { _controller: HorusSiteBundle:Fournisseurs:picturefournisseur }
+
+
 
 
 
@@ -378,7 +459,23 @@ horus_site_desactive_page:
 
 horus_site_commandes:
   pattern:  /backend/commandes
-  defaults: { _controller: HorusSiteBundle:Clients:commandes }
+  defaults: { _controller: HorusSiteBundle:Commandes:commandes }
+
+horus_site_commande:
+  pattern:  /backend/commande/{id}
+  defaults: { _controller: HorusSiteBundle:Commandes:commande }
+
+horus_site_commande:
+  pattern:  /backend/commande/{id}
+  defaults: { _controller: HorusSiteBundle:Commandes:commande }
+
+horus_site_edit_commande:
+  pattern:  /backend/editcommande/{id}
+  defaults: { _controller: HorusSiteBundle:Commandes:editcommande }
+
+horus_site_generatefacture:
+  pattern:  /backend/facture/{id}
+  defaults: { _controller: HorusSiteBundle:Commandes:generatefacture }
 
 
 

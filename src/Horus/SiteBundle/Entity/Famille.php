@@ -3,6 +3,7 @@
 namespace Horus\SiteBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Horus\SiteBundle\Util\Box;
 use Symfony\Component\Validator\Constraints as Assert;
 use Gedmo\Mapping\Annotation as Gedmo;
 
@@ -157,6 +158,7 @@ class Famille
      * )
      */
     public $file;
+
 
 
     /**
@@ -523,7 +525,7 @@ class Famille
      */
     public function __toString()
     {
-        return $this->name;
+        return Box::limit_words($this->name);
     }
 
 

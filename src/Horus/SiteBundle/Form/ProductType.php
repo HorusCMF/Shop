@@ -54,6 +54,8 @@ class ProductType extends AbstractType
             ->add('accesories')
             ->add('cates',null, array('property' => 'optionLabel'))
             ->add('articles')
+            ->add('marque')
+            ->add('fournisseur')
             ->add('tags')
             ->add('familles')
             ->add('prodparent', null, array('empty_value' => 'Choisissez un produit'))

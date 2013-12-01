@@ -165,12 +165,15 @@ hr.fancy-line:before, hr.fancy-line:after
 hr.fancy-line, hr.fancy-line:before
   background: radial-gradient(ellipse at center, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 75%)
 
+table>tbody>tr>td
+  border-top: none
 
 hr.fancy-line:after
   background: #f4f4f4
 
 .table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td
   color: #555
+  border: 1px solid #ccc
 
 .page
   h2
@@ -178,6 +181,10 @@ hr.fancy-line:after
 
 .maincontent
   margin-bottom: 50px
+  select.form-control
+    font-size: 13px !important
+    padding-left: 5px
+    
   .multiselect
     background: #eee
     border: 1px solid #ddd
@@ -273,6 +280,7 @@ select:invalid
 
 .multiselect-container>li>a>label.radio, .multiselect-container>li>a>label.checkbox
   color: burlywood
+
 
 #advancedsearch
   .row-fluid
@@ -542,6 +550,30 @@ h1, h2
 
 #mini-notification a.close:hover
   text-decoration: underline
+
+#commandes
+  tr
+    td
+      color: darkred
+      a
+        color: #111
+
+.annule
+  background-color: #ff3200
+.attente
+  background-color: #fcdc6a
+.virrement
+  background-color: #FF0080
+.livraison
+  background-color: #6afcc9
+.erreur
+  background-color: #ff2626
+.livre
+  background-color: #9afc6a
+.paiement
+  background-color: #9b89ff
+.preparation
+  background-color: #ef89ff
 
 
 /*

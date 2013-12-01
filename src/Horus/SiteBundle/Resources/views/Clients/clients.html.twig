@@ -31,8 +31,9 @@
                         <td>
                             <a onclick="return(confirm('Etes-vous sûr de vouloir activer ce client?'));" href="{{ path('horus_site_active_client', {'id' : client.id }) }}" class="btn btn-primary"><i class="glyphicon glyphicon-ok"></i></a>
                             <a onclick="return(confirm('Etes-vous sûr de vouloir desactiver ce client?'));" href="{{ path('horus_site_desactive_client', {'id' : client.id }) }}" class="btn btn-primary"><i class="glyphicon glyphicon-minus-sign"></i></a>
-                            <a  href="{{ path('horus_site_edit_client', {'id' : client.id }) }}" class="btn btn-primary"><i class="glyphicon glyphicon-pencil"></i></a>
-                            <a onclick="return(confirm('Etes-vous sûr de vouloir supprimer cetclient?'));" href="{{ path('horus_site_remove_client', {'id' : client.id }) }}" class="btn btn-primary"><i class="glyphicon glyphicon-remove"></i></a>
+                            <a href="{{ path('horus_site_edit_client', {'id' : client.id }) }}" class="btn btn-primary"><i class="glyphicon glyphicon-pencil"></i></a>
+                            <a onclick="return(confirm('Etes-vous sûr de vouloir supprimer ce client?'));" href="{{ path('horus_site_remove_client', {'id' : client.id }) }}" class="btn btn-primary"><i class="glyphicon glyphicon-remove"></i></a>
+                            <a href="{{ path('horus_site_client', {'id' : client.id }) }}" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></a>
                         </td>
                     </tr>
                 {% else %}

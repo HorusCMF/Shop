@@ -4,6 +4,7 @@ namespace Horus\SiteBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use Horus\SiteBundle\Util\Box;
 use Symfony\Component\Validator\Constraints as Assert;
 use Gedmo\Mapping\Annotation as Gedmo; // gedmo annotations
 
@@ -93,6 +94,12 @@ class Produit
      */
     private $status;
 
+    /**
+     * @Gedmo\SortablePosition
+     * @ORM\Column(name="position", type="integer")
+     */
+    private $position;
+    
 
     /**
      * @var integer
@@ -282,6 +289,18 @@ class Produit
     private $dateUpdated;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Marques", inversedBy="produits")
+     * @ORM\JoinColumn(name="marque_id", referencedColumnName="id")
+     */
+    private $marque;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Fournisseurs", inversedBy="produits")
+     * @ORM\JoinColumn(name="fournisseur_id", referencedColumnName="id")
+     */
+    private $fournisseur;
+
+    /**
      * @ORM\ManyToOne(targetEntity="Category", inversedBy="produits")
      * @ORM\JoinColumn(name="category_id", referencedColumnName="id")
      */
@@ -436,7 +455,7 @@ class Produit
      */
     public function __toString()
     {
-        return $this->title;
+        return Box::limit_words($this->title);
     }
 
     /**
@@ -1554,5 +1573,71 @@ class Produit
     public function getCommentaires()
     {
         return $this->commentaires;
+    }
+
+    /**
+     * Set marque
+     *
+     * @param Horus\SiteBundle\Entity\Marque $marque
+     * @return Produit
+     */
+    public function setMarque(\Horus\SiteBundle\Entity\Marques $marque = null)
+    {
+        $this->marque = $marque;
+        return $this;
+    }
+
+    /**
+     * Get marque
+     *
+     * @return Horus\SiteBundle\Entity\Marque 
+     */
+    public function getMarque()
+    {
+        return $this->marque;
+    }
+
+    /**
+     * Set fournisseur
+     *
+     * @param Horus\SiteBundle\Entity\Fournisseurs $fournisseur
+     * @return Produit
+     */
+    public function setFournisseur(\Horus\SiteBundle\Entity\Fournisseurs $fournisseur = null)
+    {
+        $this->fournisseur = $fournisseur;
+        return $this;
+    }
+
+    /**
+     * Get fournisseur
+     *
+     * @return Horus\SiteBundle\Entity\Fournisseurs 
+     */
+    public function getFournisseur()
+    {
+        return $this->fournisseur;
+    }
+
+    /**
+     * Set position
+     *
+     * @param integer $position
+     * @return Produit
+     */
+    public function setPosition($position)
+    {
+        $this->position = $position;
+        return $this;
+    }
+
+    /**
+     * Get position
+     *
+     * @return integer 
+     */
+    public function getPosition()
+    {
+        return $this->position;
     }
 }

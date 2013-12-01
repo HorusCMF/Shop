@@ -1,0 +1,31 @@
+<h1>Commande <i>{{ commande.reference }}</i></h1>
+
+<h3>Bon de commande</h3>
+
+<table cellspacing="0" cellpadding="1" border="1">
+    <tr>
+        <td rowspan="3">
+            <div>
+                <h3>Client</h3>
+                <p>{{ commande.client.firstname|title }} {{ commande.client.lastname|title }}</p>
+                <p>{{ commande.client.adresse }}</p>
+                <p>{{ commande.client.zipcode }} {{ commande.client.ville|title }}</p>
+                <p>Tel: {{ commande.client.tel }}</p>
+                <p>Email: {{ commande.client.email }}</p>
+            </div>
+        </td>
+        <td>
+            <div>
+                <h3>Produits</h3>
+                    {% for commande in commande.commandesProduits %}
+                        <h3>Produit {{ commande.produit.title }}</h3>
+                        <div>
+                            Quantité: {{ commande.produit.quantity }}
+                            Total HT: {{ commande.produit.prixHT }}
+                            Total TTC: {{ commande.produit.prixTTC }}
+                        </div>
+                    {% endfor %}
+            </div>
+        </td>
+    </tr>
+</table>

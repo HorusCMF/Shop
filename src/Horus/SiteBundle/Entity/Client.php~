@@ -370,6 +370,13 @@ class Client extends EntityRepository  implements AdvancedUserInterface, \Serial
 
 
     /**
+     * @ORM\OneToMany(targetEntity="Addresses", mappedBy="client", cascade={"all"},orphanRemoval=true)
+     * @ORM\OrderBy({"dateCreated" = "DESC"})
+     */
+    protected $addresses;
+    
+
+    /**
      * Get id
      *
      * @return integer
@@ -1655,5 +1662,37 @@ class Client extends EntityRepository  implements AdvancedUserInterface, \Serial
     public function getCart()
     {
         return $this->cart;
+    }
+
+    /**
+     * Add client
+     *
+     * @param Horus\SiteBundle\Entity\Commentaire $client
+     * @return Client
+     */
+    public function addClient(\Horus\SiteBundle\Entity\Commentaire $client)
+    {
+        $this->client[] = $client;
+        return $this;
+    }
+
+    /**
+     * Remove client
+     *
+     * @param Horus\SiteBundle\Entity\Commentaire $client
+     */
+    public function removeClient(\Horus\SiteBundle\Entity\Commentaire $client)
+    {
+        $this->client->removeElement($client);
+    }
+
+    /**
+     * Get client
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getClient()
+    {
+        return $this->client;
     }
 }

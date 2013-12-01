@@ -3,6 +3,7 @@
 namespace Horus\SiteBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Horus\SiteBundle\Util\Box;
 
 /**
  * Metier
@@ -93,7 +94,7 @@ class Metier {
 
     public function __toString()
     {
-        return $this->getTitle();
+        return Box::limit_words($this->getTitle());
     }
 
 }

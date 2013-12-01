@@ -4,6 +4,7 @@ namespace Horus\SiteBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use Horus\SiteBundle\Util\Box;
 use Symfony\Component\Security\Core\Role\RoleInterface;
 
 
@@ -134,6 +135,6 @@ class Group implements RoleInterface {
      * @return string
      */
     public function __toString(){
-        return $this->getName();
+        return Box::limit_words($this->getName());
     }
 }

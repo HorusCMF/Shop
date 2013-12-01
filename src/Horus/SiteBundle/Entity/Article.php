@@ -3,6 +3,7 @@
 namespace Horus\SiteBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Horus\SiteBundle\Util\Box;
 use Symfony\Component\Validator\Constraints as Assert;
 use Gedmo\Mapping\Annotation as Gedmo; // gedmo annotations
 
@@ -146,6 +147,8 @@ class Article
     protected $commercials;
 
 
+
+
     /**
      * Get id
      *
@@ -177,7 +180,7 @@ class Article
      */
     public function __toString()
     {
-        return $this->title;
+        return Box::limit_words($this->title);
     }
 
     /**

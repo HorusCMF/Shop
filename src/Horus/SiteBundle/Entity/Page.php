@@ -3,6 +3,7 @@
 namespace Horus\SiteBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Horus\SiteBundle\Util\Box;
 use Symfony\Component\Validator\Constraints as Assert;
 use Gedmo\Mapping\Annotation as Gedmo;
 
@@ -497,6 +498,6 @@ class Page
     }
 
     public function __toString(){
-        return $this->getName();
+        return Box::limit_words($this->getName());
     }
 }

@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "8c95bee8c8a9ef66e4994235e6a605d6",
+    "hash": "f49800e2a8e6721a508df2ff8c68481a",
     "packages": [
         {
             "name": "behat/mink",
@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Behat/Mink.git",
-                "reference": "283ac7a8df3f72f53f26bd848f0e8a44a5c8e0ab"
+                "reference": "7c2ceb716b0bc1984ac31f59ba12c775e38d4cb9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Behat/Mink/zipball/283ac7a8df3f72f53f26bd848f0e8a44a5c8e0ab",
-                "reference": "283ac7a8df3f72f53f26bd848f0e8a44a5c8e0ab",
+                "url": "https://api.github.com/repos/Behat/Mink/zipball/7c2ceb716b0bc1984ac31f59ba12c775e38d4cb9",
+                "reference": "7c2ceb716b0bc1984ac31f59ba12c775e38d4cb9",
                 "shasum": ""
             },
             "require": {
@@ -58,7 +58,7 @@
                 "testing",
                 "web"
             ],
-            "time": "2013-11-22 08:20:04"
+            "time": "2013-11-30 18:57:53"
         },
         {
             "name": "behat/mink-browserkit-driver",
@@ -670,12 +670,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineBundle.git",
-                "reference": "2ed46398aae1b7699f6fe7467faf54493b4f2a24"
+                "reference": "c65e5a21d1db794511d11fe28918f41bd6072f8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/2ed46398aae1b7699f6fe7467faf54493b4f2a24",
-                "reference": "2ed46398aae1b7699f6fe7467faf54493b4f2a24",
+                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/c65e5a21d1db794511d11fe28918f41bd6072f8f",
+                "reference": "c65e5a21d1db794511d11fe28918f41bd6072f8f",
                 "shasum": ""
             },
             "require": {
@@ -686,7 +686,7 @@
                 "symfony/framework-bundle": "~2.2"
             },
             "require-dev": {
-                "doctrine/orm": ">=2.2,<2.5-dev",
+                "doctrine/orm": "~2.2",
                 "symfony/validator": "~2.2",
                 "symfony/yaml": "~2.2"
             },
@@ -731,7 +731,7 @@
                 "orm",
                 "persistence"
             ],
-            "time": "2013-10-20 15:21:43"
+            "time": "2013-11-25 17:33:45"
         },
         {
             "name": "doctrine/inflector",
@@ -865,12 +865,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/mongodb.git",
-                "reference": "401796e7a5ec3cea099d993fd0034235b917f1a8"
+                "reference": "58f80c00be3593aefa16c0a83357a9a8573873ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/mongodb/zipball/401796e7a5ec3cea099d993fd0034235b917f1a8",
-                "reference": "401796e7a5ec3cea099d993fd0034235b917f1a8",
+                "url": "https://api.github.com/repos/doctrine/mongodb/zipball/58f80c00be3593aefa16c0a83357a9a8573873ae",
+                "reference": "58f80c00be3593aefa16c0a83357a9a8573873ae",
                 "shasum": ""
             },
             "require": {
@@ -895,7 +895,7 @@
                     "homepage": "http://avalanche123.com"
                 },
                 {
-                    "name": "Jonathan Wage",
+                    "name": "Jonathan H. Wage",
                     "email": "jonwage@gmail.com",
                     "homepage": "http://www.jwage.com/",
                     "role": "Creator"
@@ -918,7 +918,7 @@
                 "mongodb",
                 "persistence"
             ],
-            "time": "2013-11-01 17:12:21"
+            "time": "2013-11-26 20:46:20"
         },
         {
             "name": "doctrine/mongodb-odm",
@@ -1388,12 +1388,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSRestBundle.git",
-                "reference": "a6eff7a910a4bd87b31fdb4b1110b869d4b46e01"
+                "reference": "e0def4f4f3699f9629f46ca4ed3dbde250d78d96"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSRestBundle/zipball/a6eff7a910a4bd87b31fdb4b1110b869d4b46e01",
-                "reference": "a6eff7a910a4bd87b31fdb4b1110b869d4b46e01",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSRestBundle/zipball/e0def4f4f3699f9629f46ca4ed3dbde250d78d96",
+                "reference": "e0def4f4f3699f9629f46ca4ed3dbde250d78d96",
                 "shasum": ""
             },
             "require": {
@@ -1423,7 +1423,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "1.1-dev"
                 }
             },
             "autoload": {
@@ -1455,7 +1455,7 @@
             "keywords": [
                 "rest"
             ],
-            "time": "2013-11-04 21:23:23"
+            "time": "2013-11-28 09:03:02"
         },
         {
             "name": "gedmo/doctrine-extensions",
@@ -1846,16 +1846,16 @@
         },
         {
             "name": "instaclick/php-webdriver",
-            "version": "1.1.1",
+            "version": "1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/instaclick/php-webdriver.git",
-                "reference": "3c219c223043916f51ad4c20ccf810240eb3720d"
+                "reference": "4e43ece4e3ad1c0601791bb9b376f24f51632ef5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/instaclick/php-webdriver/zipball/3c219c223043916f51ad4c20ccf810240eb3720d",
-                "reference": "3c219c223043916f51ad4c20ccf810240eb3720d",
+                "url": "https://api.github.com/repos/instaclick/php-webdriver/zipball/4e43ece4e3ad1c0601791bb9b376f24f51632ef5",
+                "reference": "4e43ece4e3ad1c0601791bb9b376f24f51632ef5",
                 "shasum": ""
             },
             "require": {
@@ -1900,7 +1900,7 @@
                 "webdriver",
                 "webtest"
             ],
-            "time": "2013-11-21 17:15:13"
+            "time": "2013-11-27 16:39:54"
         },
         {
             "name": "jdorn/sql-formatter",
@@ -1908,12 +1908,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jdorn/sql-formatter.git",
-                "reference": "51a660e97b59f91b814eeee6e0a38e3cd726dd30"
+                "reference": "8859d664737492d313c34796731b35eca851b362"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jdorn/sql-formatter/zipball/51a660e97b59f91b814eeee6e0a38e3cd726dd30",
-                "reference": "51a660e97b59f91b814eeee6e0a38e3cd726dd30",
+                "url": "https://api.github.com/repos/jdorn/sql-formatter/zipball/8859d664737492d313c34796731b35eca851b362",
+                "reference": "8859d664737492d313c34796731b35eca851b362",
                 "shasum": ""
             },
             "require": {
@@ -1950,7 +1950,7 @@
                 "highlight",
                 "sql"
             ],
-            "time": "2013-09-18 14:43:47"
+            "time": "2013-11-27 22:51:13"
         },
         {
             "name": "jms/aop-bundle",
@@ -2208,12 +2208,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/JMSSecurityExtraBundle.git",
-                "reference": "b342e02983e9cd522d9dce1c0dfeef27c8a25850"
+                "reference": "60dfc92443a6b3e093c961e5d85920384670834c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/JMSSecurityExtraBundle/zipball/b342e02983e9cd522d9dce1c0dfeef27c8a25850",
-                "reference": "b342e02983e9cd522d9dce1c0dfeef27c8a25850",
+                "url": "https://api.github.com/repos/schmittjoh/JMSSecurityExtraBundle/zipball/60dfc92443a6b3e093c961e5d85920384670834c",
+                "reference": "60dfc92443a6b3e093c961e5d85920384670834c",
                 "shasum": ""
             },
             "require": {
@@ -2270,7 +2270,7 @@
                 "secure",
                 "security"
             ],
-            "time": "2013-11-06 16:12:19"
+            "time": "2013-11-27 11:37:02"
         },
         {
             "name": "jms/serializer",
@@ -2278,12 +2278,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/serializer.git",
-                "reference": "3eeb721fe0144971bc49bc8a7cb9b362d2c27780"
+                "reference": "ce84c9ed33a8e81cdd3d30aa151a6e72882488d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/serializer/zipball/3eeb721fe0144971bc49bc8a7cb9b362d2c27780",
-                "reference": "3eeb721fe0144971bc49bc8a7cb9b362d2c27780",
+                "url": "https://api.github.com/repos/schmittjoh/serializer/zipball/ce84c9ed33a8e81cdd3d30aa151a6e72882488d6",
+                "reference": "ce84c9ed33a8e81cdd3d30aa151a6e72882488d6",
                 "shasum": ""
             },
             "require": {
@@ -2338,7 +2338,7 @@
                 "serialization",
                 "xml"
             ],
-            "time": "2013-10-31 10:46:05"
+            "time": "2013-11-25 17:03:13"
         },
         {
             "name": "jms/serializer-bundle",
@@ -2347,12 +2347,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/JMSSerializerBundle.git",
-                "reference": "7bf5700aafbd40ba5c2ac3e10548158cec1919c5"
+                "reference": "692db4cf401a475c5a0cdcf80799080e046bf5e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/JMSSerializerBundle/zipball/7bf5700aafbd40ba5c2ac3e10548158cec1919c5",
-                "reference": "7bf5700aafbd40ba5c2ac3e10548158cec1919c5",
+                "url": "https://api.github.com/repos/schmittjoh/JMSSerializerBundle/zipball/692db4cf401a475c5a0cdcf80799080e046bf5e7",
+                "reference": "692db4cf401a475c5a0cdcf80799080e046bf5e7",
                 "shasum": ""
             },
             "require": {
@@ -2408,7 +2408,7 @@
                 "serialization",
                 "xml"
             ],
-            "time": "2013-10-16 00:35:01"
+            "time": "2013-11-25 17:04:21"
         },
         {
             "name": "knplabs/knp-components",
@@ -2416,12 +2416,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/knp-components.git",
-                "reference": "71ae73c8098b256e5e516349d88d4288ae2d30c5"
+                "reference": "69fa307c827db1ae3c1f916cf5769828b52d47f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/knp-components/zipball/71ae73c8098b256e5e516349d88d4288ae2d30c5",
-                "reference": "71ae73c8098b256e5e516349d88d4288ae2d30c5",
+                "url": "https://api.github.com/repos/KnpLabs/knp-components/zipball/69fa307c827db1ae3c1f916cf5769828b52d47f0",
+                "reference": "69fa307c827db1ae3c1f916cf5769828b52d47f0",
                 "shasum": ""
             },
             "require": {
@@ -2469,7 +2469,7 @@
                 "pager",
                 "paginator"
             ],
-            "time": "2013-09-23 07:23:42"
+            "time": "2013-11-26 10:40:51"
         },
         {
             "name": "knplabs/knp-menu",
@@ -2725,12 +2725,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "afaafc91995aff60604db79fcd30b489d2e6e7c3"
+                "reference": "6f5b3d2a9c63a857d40d200f1bb9f62991c07bf8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/afaafc91995aff60604db79fcd30b489d2e6e7c3",
-                "reference": "afaafc91995aff60604db79fcd30b489d2e6e7c3",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/6f5b3d2a9c63a857d40d200f1bb9f62991c07bf8",
+                "reference": "6f5b3d2a9c63a857d40d200f1bb9f62991c07bf8",
                 "shasum": ""
             },
             "require": {
@@ -2784,7 +2784,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2013-11-23 21:58:36"
+            "time": "2013-11-25 13:58:14"
         },
         {
             "name": "nelmio/security-bundle",
@@ -2842,12 +2842,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "7f4ab26732c6c0dcfeef98ee94452977ac26e82c"
+                "reference": "0353c921bd12980399e3e6404ea3931b3356e15a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/7f4ab26732c6c0dcfeef98ee94452977ac26e82c",
-                "reference": "7f4ab26732c6c0dcfeef98ee94452977ac26e82c",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/0353c921bd12980399e3e6404ea3931b3356e15a",
+                "reference": "0353c921bd12980399e3e6404ea3931b3356e15a",
                 "shasum": ""
             },
             "require": {
@@ -2879,7 +2879,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2013-11-15 19:27:56"
+            "time": "2013-11-27 19:33:56"
         },
         {
             "name": "phpcollection/phpcollection",
@@ -4187,17 +4187,17 @@
         },
         {
             "name": "sensio/framework-extra-bundle",
-            "version": "dev-master",
+            "version": "2.3.x-dev",
             "target-dir": "Sensio/Bundle/FrameworkExtraBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioFrameworkExtraBundle.git",
-                "reference": "d9b04ebff77407597b4a419e2714cea0682f297b"
+                "reference": "27d3ee9591465a64eb779c17a3f19bd3eea5f992"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/d9b04ebff77407597b4a419e2714cea0682f297b",
-                "reference": "d9b04ebff77407597b4a419e2714cea0682f297b",
+                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/27d3ee9591465a64eb779c17a3f19bd3eea5f992",
+                "reference": "27d3ee9591465a64eb779c17a3f19bd3eea5f992",
                 "shasum": ""
             },
             "require": {
@@ -4230,7 +4230,7 @@
                 "annotations",
                 "controllers"
             ],
-            "time": "2013-11-21 06:40:22"
+            "time": "2013-11-25 18:59:23"
         },
         {
             "name": "sensio/generator-bundle",
@@ -4239,12 +4239,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioGeneratorBundle.git",
-                "reference": "6e08995d9d23d0d58a68ff13165bbd9daf6e227a"
+                "reference": "38cce07d6b27d8ac2b6000560309f0cd5ce63577"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioGeneratorBundle/zipball/6e08995d9d23d0d58a68ff13165bbd9daf6e227a",
-                "reference": "6e08995d9d23d0d58a68ff13165bbd9daf6e227a",
+                "url": "https://api.github.com/repos/sensiolabs/SensioGeneratorBundle/zipball/38cce07d6b27d8ac2b6000560309f0cd5ce63577",
+                "reference": "38cce07d6b27d8ac2b6000560309f0cd5ce63577",
                 "shasum": ""
             },
             "require": {
@@ -4278,7 +4278,7 @@
                 }
             ],
             "description": "This bundle generates code for you",
-            "time": "2013-11-12 11:13:00"
+            "time": "2013-11-25 20:47:16"
         },
         {
             "name": "stof/doctrine-extensions-bundle",
@@ -4398,12 +4398,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/AsseticBundle.git",
-                "reference": "65bd076341ac54ebfcd845d8471044fc4afa73d2"
+                "reference": "099e0bb5d80e7039af20db384a41017fde521f21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/AsseticBundle/zipball/65bd076341ac54ebfcd845d8471044fc4afa73d2",
-                "reference": "65bd076341ac54ebfcd845d8471044fc4afa73d2",
+                "url": "https://api.github.com/repos/symfony/AsseticBundle/zipball/099e0bb5d80e7039af20db384a41017fde521f21",
+                "reference": "099e0bb5d80e7039af20db384a41017fde521f21",
                 "shasum": ""
             },
             "require": {
@@ -4452,7 +4452,7 @@
                 "compression",
                 "minification"
             ],
-            "time": "2013-06-04 14:18:43"
+            "time": "2013-11-25 16:34:50"
         },
         {
             "name": "symfony/icu",
@@ -4621,12 +4621,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "43becff31d124169aa1c1694bc8ca223f12c4bf4"
+                "reference": "db4f5515272874eac36fb46a9d45737c2a1319ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/43becff31d124169aa1c1694bc8ca223f12c4bf4",
-                "reference": "43becff31d124169aa1c1694bc8ca223f12c4bf4",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/db4f5515272874eac36fb46a9d45737c2a1319ef",
+                "reference": "db4f5515272874eac36fb46a9d45737c2a1319ef",
                 "shasum": ""
             },
             "require": {
@@ -4692,7 +4692,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.4-dev"
+                    "dev-master": "2.5-dev"
                 }
             },
             "autoload": {
@@ -4726,7 +4726,64 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2013-11-23 21:17:02"
+            "time": "2013-11-28 10:27:35"
+        },
+        {
+            "name": "tecnick.com/tcpdf",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git://git.code.sf.net/p/tcpdf/code",
+                "reference": "3cd2637a803d9ff9ca9bb0c178d688eb43b44e0b"
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "fonts",
+                    "config",
+                    "include",
+                    "tcpdf.php",
+                    "tcpdf_parser.php",
+                    "tcpdf_import.php",
+                    "tcpdf_barcodes_1d.php",
+                    "tcpdf_barcodes_2d.php",
+                    "include/tcpdf_colors.php",
+                    "include/tcpdf_filters.php",
+                    "include/tcpdf_font_data.php",
+                    "include/tcpdf_fonts.php",
+                    "include/tcpdf_images.php",
+                    "include/tcpdf_static.php",
+                    "include/barcodes/datamatrix.php",
+                    "include/barcodes/pdf417.php",
+                    "include/barcodes/qrcode.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPLv3"
+            ],
+            "authors": [
+                {
+                    "name": "Nicola Asuni",
+                    "email": "info@tecnick.com",
+                    "homepage": "http://nicolaasuni.tecnick.com"
+                }
+            ],
+            "description": "TCPDF is a PHP class for generating PDF documents.",
+            "homepage": "http://www.tcpdf.org/",
+            "keywords": [
+                "PDFD32000-2008",
+                "TCPDF",
+                "barcodes",
+                "datamatrix",
+                "pdf",
+                "pdf417",
+                "qrcode"
+            ],
+            "time": "2013-11-27 20:18:34"
         },
         {
             "name": "twig/extensions",
@@ -4734,12 +4791,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Twig-extensions.git",
-                "reference": "d4dc27cc824b2b4faf7edbfbe652e3fdaec696b6"
+                "reference": "0fdc8ca874d415b65c7a0d31376cac9c9ed775af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig-extensions/zipball/d4dc27cc824b2b4faf7edbfbe652e3fdaec696b6",
-                "reference": "d4dc27cc824b2b4faf7edbfbe652e3fdaec696b6",
+                "url": "https://api.github.com/repos/fabpot/Twig-extensions/zipball/0fdc8ca874d415b65c7a0d31376cac9c9ed775af",
+                "reference": "0fdc8ca874d415b65c7a0d31376cac9c9ed775af",
                 "shasum": ""
             },
             "require": {
@@ -4773,7 +4830,7 @@
                 "i18n",
                 "text"
             ],
-            "time": "2013-11-11 19:09:41"
+            "time": "2013-11-27 18:19:39"
         },
         {
             "name": "twig/twig",
@@ -4781,12 +4838,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Twig.git",
-                "reference": "f7c00d336f08901ec4742f20d234f9e677dcccab"
+                "reference": "cab9fd9a100e74aafa201a03ca31aeeb4097c9bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig/zipball/f7c00d336f08901ec4742f20d234f9e677dcccab",
-                "reference": "f7c00d336f08901ec4742f20d234f9e677dcccab",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/cab9fd9a100e74aafa201a03ca31aeeb4097c9bc",
+                "reference": "cab9fd9a100e74aafa201a03ca31aeeb4097c9bc",
                 "shasum": ""
             },
             "require": {
@@ -4822,7 +4879,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2013-11-23 21:24:07"
+            "time": "2013-11-24 18:36:20"
         },
         {
             "name": "whiteoctober/breadcrumbs-bundle",
@@ -4869,17 +4926,62 @@
             "time": "2013-09-10 17:26:20"
         },
         {
+            "name": "whiteoctober/tcpdf-bundle",
+            "version": "dev-master",
+            "target-dir": "WhiteOctober/TCPDFBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/whiteoctober/WhiteOctoberTCPDFBundle.git",
+                "reference": "0e82ad14ad19ad752e7d35656a252100c8578e8b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/whiteoctober/WhiteOctoberTCPDFBundle/zipball/0e82ad14ad19ad752e7d35656a252100c8578e8b",
+                "reference": "0e82ad14ad19ad752e7d35656a252100c8578e8b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "symfony/framework-bundle": ">=2.0",
+                "tecnick.com/tcpdf": "*"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "WhiteOctober\\TCPDFBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rich Sage",
+                    "email": "rich.sage@gmail.com",
+                    "homepage": "http://www.richsage.co.uk/"
+                }
+            ],
+            "description": "A bundle to easily integrate TCPDF into Symfony2",
+            "homepage": "https://github.com/whiteoctober/WhiteOctoberTCPDFBundle",
+            "keywords": [
+                "TCPDF",
+                "pdf"
+            ],
+            "time": "2013-06-18 13:52:41"
+        },
+        {
             "name": "willdurand/negotiation",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/willdurand/Negotiation.git",
-                "reference": "d5d080d5405e3e0895038b5b578458884cdf8af6"
+                "reference": "366e31cfc247946dfe8c622bc00041964e9b294f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/willdurand/Negotiation/zipball/d5d080d5405e3e0895038b5b578458884cdf8af6",
-                "reference": "d5d080d5405e3e0895038b5b578458884cdf8af6",
+                "url": "https://api.github.com/repos/willdurand/Negotiation/zipball/366e31cfc247946dfe8c622bc00041964e9b294f",
+                "reference": "366e31cfc247946dfe8c622bc00041964e9b294f",
                 "shasum": ""
             },
             "require": {
@@ -4916,7 +5018,7 @@
                 "header",
                 "negotiation"
             ],
-            "time": "2013-11-21 10:29:12"
+            "time": "2013-11-26 14:42:16"
         },
         {
             "name": "zendframework/zend-cache",
@@ -5442,6 +5544,7 @@
         "imagine/imagine": 20,
         "saad-tazi/g-chart-bundle": 20,
         "nelmio/security-bundle": 20,
+        "whiteoctober/tcpdf-bundle": 20,
         "egulias/security-debug-command-bundle": 20
     },
     "platform": {

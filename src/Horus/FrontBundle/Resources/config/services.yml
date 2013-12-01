@@ -1,0 +1,7 @@
+parameters:
+#    horus_front.example.class: Horus\FrontBundle\Example
+
+services:
+#    horus_front.example:
+#        class: %horus_front.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

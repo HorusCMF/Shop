@@ -1,2 +1,20 @@
+horus_front:
+    resource: "@HorusFrontBundle/Resources/config/routing.yml"
+    prefix:   /
+
+horus_site_root:
+  pattern:  /
+  defaults: { _controller: HorusSiteBundle:Administrateur:login }
+
+horus_site_denied:
+  pattern:  /access-denied/
+  defaults: { _controller: HorusSiteBundle:Administrateur:login }
+
+
 horus:
-    resource: "@HorusSiteBundle/Resources/config/routing.yml"
+  resource: "@HorusSiteBundle/Resources/config/routing.yml"
+  prefix:   /backend
+
+horus_backend:
+  resource: "@HorusFrontBundle/Resources/config/routing.yml"
+  prefix:   /frontend

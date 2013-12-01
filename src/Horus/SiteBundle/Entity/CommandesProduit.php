@@ -11,7 +11,7 @@ use Gedmo\Mapping\Annotation as Gedmo; // gedmo annotations
 /**
  * CommandesProduit
  * @ORM\Entity(repositoryClass="Horus\SiteBundle\Repository\CommandesProduitRepository")
- * @ORM\Table(name="commandes")
+ * @ORM\Table(name="commandes_produit")
  * @ORM\HasLifecycleCallbacks()
  */
 class CommandesProduit
@@ -48,7 +48,7 @@ class CommandesProduit
 
     /**
      * @ORM\ManyToOne(targetEntity="Produit", inversedBy="commandes")
-     * @ORM\JoinColumn(name="transport_id", referencedColumnName="id")
+     * @ORM\JoinColumn(name="produit_id", referencedColumnName="id")
      */
     private $produit;
 

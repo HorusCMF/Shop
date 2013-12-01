@@ -1,16 +1,17 @@
 <?php
 
-namespace Hetic\SiteBundle\Entity;
+namespace Horus\SiteBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Horus\SiteBundle\Util\Box;
 use Symfony\Component\Validator\Constraints as Assert;
 use Gedmo\Mapping\Annotation as Gedmo;
 
 
 /**
- * Article
+ * Category
  * @Gedmo\Tree(type="nested")
- * @ORM\Entity(repositoryClass="Hetic\SiteBundle\Repository\CategoryRepository")
+ * @ORM\Entity(repositoryClass="Horus\SiteBundle\Repository\CategoryRepository")
  * @ORM\Table(name="category")
  * @ORM\HasLifecycleCallbacks()
  */
@@ -32,13 +33,21 @@ class Category
      * )
      * @Assert\Length(
      *      min = "3",
-     *      max = "1000",
+     *      max = "3000",
      *      minMessage = "Votre titre doit faire au moins {{ limit }} caractères",
      *      maxMessage = "Votre titre ne peut pas être plus long que {{ limit }} caractères"
      * )
      * @ORM\Column(name="name", type="string", length=200, nullable=true)
      */
     private $name;
+
+
+    /**
+     * @Gedmo\SortablePosition
+     * @ORM\Column(name="position", type="integer")
+     */
+    private $position;
+
 
     /**
      * @ORM\Column(name="path", type="string", length=3000, nullable=true)
@@ -51,7 +60,7 @@ class Category
      * )
      * @Assert\Length(
      *      min = "5",
-     *      max = "1000",
+     *      max = "5000",
      *      minMessage = "Votre description doit faire au moins {{ limit }} caractères",
      *      maxMessage = "Votre description ne peut pas être plus long que {{ limit }} caractères"
      * )
@@ -65,7 +74,7 @@ class Category
      * )
      * @Assert\Length(
      *      min = "3",
-     *      max = "1000",
+     *      max = "3000",
      *      minMessage = "Votre résumé doit faire au moins {{ limit }} caractères",
      *      maxMessage = "Votre résumé ne peut pas être plus long que {{ limit }} caractères"
      * )
@@ -235,7 +244,7 @@ class Category
 
 
     public function __toString(){
-        return $this->name;
+        return Box::limit_words($this->name);
     }
 
 
@@ -263,10 +272,10 @@ class Category
     /**
      * Add articles
      *
-     * @param \Hetic\SiteBundle\Entity\Article $articles
+     * @param \Horus\SiteBundle\Entity\Article $articles
      * @return Category
      */
-    public function addArticle(\Hetic\SiteBundle\Entity\Article $articles)
+    public function addArticle(\Horus\SiteBundle\Entity\Article $articles)
     {
         $this->articles[] = $articles;
     
@@ -276,9 +285,9 @@ class Category
     /**
      * Remove articles
      *
-     * @param \Hetic\SiteBundle\Entity\Article $articles
+     * @param \Horus\SiteBundle\Entity\Article $articles
      */
-    public function removeArticle(\Hetic\SiteBundle\Entity\Article $articles)
+    public function removeArticle(\Horus\SiteBundle\Entity\Article $articles)
     {
         $this->articles->removeElement($articles);
     }
@@ -296,10 +305,10 @@ class Category
     /**
      * Add articless
      *
-     * @param Hetic\SiteBundle\Entity\Article $articless
+     * @param Horus\SiteBundle\Entity\Article $articless
      * @return Category
      */
-    public function addArticles(\Hetic\SiteBundle\Entity\Article $articless)
+    public function addArticles(\Horus\SiteBundle\Entity\Article $articless)
     {
         $this->articless[] = $articless;
         return $this;
@@ -308,9 +317,9 @@ class Category
     /**
      * Remove articless
      *
-     * @param Hetic\SiteBundle\Entity\Article $articless
+     * @param Horus\SiteBundle\Entity\Article $articless
      */
-    public function removeArticles(\Hetic\SiteBundle\Entity\Article $articless)
+    public function removeArticles(\Horus\SiteBundle\Entity\Article $articless)
     {
         $this->articless->removeElement($articless);
     }
@@ -460,10 +469,10 @@ class Category
     /**
      * Set parent
      *
-     * @param Hetic\SiteBundle\Entity\Category $parent
+     * @param Horus\SiteBundle\Entity\Category $parent
      * @return Category
      */
-    public function setParent(\Hetic\SiteBundle\Entity\Category $parent = null)
+    public function setParent(\Horus\SiteBundle\Entity\Category $parent = null)
     {
         $this->parent = $parent;
         return $this;
@@ -472,7 +481,7 @@ class Category
     /**
      * Get parent
      *
-     * @return Hetic\SiteBundle\Entity\Category 
+     * @return Horus\SiteBundle\Entity\Category
      */
     public function getParent()
     {
@@ -482,10 +491,10 @@ class Category
     /**
      * Add children
      *
-     * @param Hetic\SiteBundle\Entity\Category $children
+     * @param Horus\SiteBundle\Entity\Category $children
      * @return Category
      */
-    public function addChildren(\Hetic\SiteBundle\Entity\Category $children)
+    public function addChildren(\Horus\SiteBundle\Entity\Category $children)
     {
         $this->children[] = $children;
         return $this;
@@ -494,9 +503,9 @@ class Category
     /**
      * Remove children
      *
-     * @param Hetic\SiteBundle\Entity\Category $children
+     * @param Horus\SiteBundle\Entity\Category $children
      */
-    public function removeChildren(\Hetic\SiteBundle\Entity\Category $children)
+    public function removeChildren(\Horus\SiteBundle\Entity\Category $children)
     {
         $this->children->removeElement($children);
     }
@@ -567,10 +576,10 @@ class Category
     /**
      * Add produits
      *
-     * @param Hetic\SiteBundle\Entity\Produit $produits
+     * @param Horus\SiteBundle\Entity\Produit $produits
      * @return Category
      */
-    public function addProduit(\Hetic\SiteBundle\Entity\Produit $produits)
+    public function addProduit(\Horus\SiteBundle\Entity\Produit $produits)
     {
         $this->produits[] = $produits;
         return $this;
@@ -579,9 +588,9 @@ class Category
     /**
      * Remove produits
      *
-     * @param Hetic\SiteBundle\Entity\Produit $produits
+     * @param Horus\SiteBundle\Entity\Produit $produits
      */
-    public function removeProduit(\Hetic\SiteBundle\Entity\Produit $produits)
+    public function removeProduit(\Horus\SiteBundle\Entity\Produit $produits)
     {
         $this->produits->removeElement($produits);
     }
@@ -599,10 +608,10 @@ class Category
     /**
      * Add images
      *
-     * @param Hetic\SiteBundle\Entity\ImageCategory $images
+     * @param Horus\SiteBundle\Entity\ImageCategory $images
      * @return Category
      */
-    public function addImage(\Hetic\SiteBundle\Entity\ImageCategory $images)
+    public function addImage(\Horus\SiteBundle\Entity\ImageCategory $images)
     {
         $this->images[] = $images;
         return $this;
@@ -611,9 +620,9 @@ class Category
     /**
      * Remove images
      *
-     * @param Hetic\SiteBundle\Entity\ImageCategory $images
+     * @param Horus\SiteBundle\Entity\ImageCategory $images
      */
-    public function removeImage(\Hetic\SiteBundle\Entity\ImageCategory $images)
+    public function removeImage(\Horus\SiteBundle\Entity\ImageCategory $images)
     {
         $this->images->removeElement($images);
     }
@@ -648,5 +657,37 @@ class Category
     public function getDateUpdated()
     {
         return $this->dateUpdated;
+    }
+
+    /**
+     * Add commercials
+     *
+     * @param Horus\SiteBundle\Entity\Commercial $commercials
+     * @return Category
+     */
+    public function addCommercial(\Horus\SiteBundle\Entity\Commercial $commercials)
+    {
+        $this->commercials[] = $commercials;
+        return $this;
+    }
+
+    /**
+     * Remove commercials
+     *
+     * @param Horus\SiteBundle\Entity\Commercial $commercials
+     */
+    public function removeCommercial(\Horus\SiteBundle\Entity\Commercial $commercials)
+    {
+        $this->commercials->removeElement($commercials);
+    }
+
+    /**
+     * Get commercials
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getCommercials()
+    {
+        return $this->commercials;
     }
 }

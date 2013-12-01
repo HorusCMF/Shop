@@ -1,0 +1,62 @@
+{% extends 'HorusSiteBundle::layout.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    <div class="page" id="commande">
+        <h1><i class="glyphicon glyphicon-pencil"></i> Editer la commande</h1>
+        <hr class="clear fancy-line">
+
+        <a href="{{ path('horus_site_commandes') }}" class="btn btn-primary pull-right">Retour aux commandes</a>
+        <form novalidate="novalidate" action="{{ path('horus_site_edit_commande', {'id' : commande.id }) }}" method="post">
+            <div class="row-fluid">
+                <div class="span12">
+                    <label for="title">Etat</label>
+                    {{ form_widget(form.etat) }}
+                    {{ form_errors(form.etat) }}
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span12">
+                    <label for="title">Contenu</label>
+                    {{ form_widget(form.content) }}
+                    {{ form_errors(form.content) }}
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span12">
+                    <label for="title">Message</label>
+                    {{ form_widget(form.message) }}
+                    {{ form_errors(form.message) }}
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span12">
+                    <label for="title">Transport</label>
+                    {{ form_widget(form.transport) }}
+                    {{ form_errors(form.transport) }}
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span12">
+                    <label for="title">Total TTC €</label>
+                    {{ form_widget(form.totalTTC) }}
+                    {{ form_errors(form.totalTTC) }}
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span12">
+                    <label for="title">Total HT €</label>
+                    {{ form_widget(form.totalHT) }}
+                    {{ form_errors(form.totalHT) }}
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-pencil"></i> Editer cette commande</button>
+        </form>
+    </div>
+
+{% endblock %}
+

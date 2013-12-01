@@ -1,0 +1,71 @@
+{% block search %}
+    <nav id="searchmenu" class="navbar navbar-default" role="navigation">
+        <button id="closesearch" type="button" class="close" data-dismiss="alert"><i
+                    class="glyphicon glyphicon-remove-circle"></i></button>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-2">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><i class="glyphicon glyphicon-search"></i>
+                Rechercher</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+            <form action="{{ path('horus_search_avanced') }}" class="span12" role="search" method="get">
+                <div class="form-group">
+                    <div class="col-xs-8">
+                        <input type="text" class="form-control" name="word"
+                               placeholder="Nom, Référence, Description, Catégorie..."
+                               value="{{ app.request.query.get('word') }}">
+                    </div>
+                    <button type="submit" class="btn btn-primary"><i
+                                class="glyphicon glyphicon-search"></i></button>
+                    <a id="moresearch" class="btn btn-primary"><i
+                                class="glyphicon glyphicon-plus-sign"></i> </a>
+                </div>
+                {#{{ render(controller('HorusSiteBundle:Main:search', { 'val': app.request.get('search') }) ) }}#}
+        </div>
+        <div class="{% if app.request.query.get('word') is not empty %}hide{% endif %}hide" id="advancedsearch">
+            <div class="row-fluid col-md-offset-1">
+                <div class="span2">
+                    <input name="produits" id="produits" type="checkbox"
+                           {% if app.request.query.get('produits') %}checked="checked"{% endif %}> <label
+                            for="produits"
+                            class="whitetext">Produits</label>
+                </div>
+                <div class="span2">
+                    <input name="categories" id="categories" type="checkbox"
+                           {% if app.request.query.get('categories') %}checked="checked"{% endif %} > <label
+                            for="categories" class="whitetext">Catégories</label>
+                </div>
+                <div class="span2">
+                    <input name="familles" id="familles" type="checkbox"
+                           {% if app.request.query.get('familles') %}checked="checked"{% endif %} > <label
+                            for="familles" class="whitetext">Famille</label>
+                </div>
+                <div class="span2">
+                    <input name="pages" id="pages" type="checkbox"
+                           {% if app.request.query.get('pages') %}checked="checked"{% endif %} > <label for="pages"
+                                                                                                        class="whitetext">Pages</label>
+                </div>
+                <div class="span2">
+                    <input name="articles" id="articles" type="checkbox"
+                           {% if app.request.query.get('articles') %}checked="checked"{% endif %}> <label
+                            for="articles" class="whitetext">Article</label>
+                </div>
+                <div class="span2">
+                    <input name="tags" id="tags" type="checkbox"
+                           {% if app.request.query.get('tags') %}checked="checked"{% endif %}> <label for="tags"
+                                                                                                      class="whitetext">Tags</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-filter"></i> Filtrer
+            </button>
+        </div>
+        </form>
+    </nav>
+{% endblock %}
+

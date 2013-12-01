@@ -1,0 +1,28 @@
+{% extends 'HorusSiteBundle::layout.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    <div class="page" id="commande">
+        <h1><i class="glyphicon glyphicon-retweet"></i> Commande</h1>
+
+        <a href="{{ path('horus_site_commandes') }}" class="btn back btn-danger back pull-right">&larr; Retour aux commandes</a>
+           <p>Référence <strong>{{ commande.reference }}</strong></p>
+           <p>Contenu {{ commande.content }}</p>
+           <p>Message {{ commande.message }}</p>
+           <p>Transport {{ commande.transport.title }}</p>
+           <p>Prix(TTC) {{ commande.totalTTC }}€</p>
+           <p>Prix(HT) {{ commande.totalHT }}€</p>
+           <p>Etat: <span class="label {{ commande.etat|commandesclasses }}">{{ commande.etat|commandes }}</span></p>
+           <p>Client <a href="">{{ commande.client.firstname|title }} {{ commande.client.lastname|title }} de {{ commande.client.ville }} ({{ commande.client.zipcode }})</a></p>
+           <p><i>Date: Il y a {{ commande.dateCreated|created_ago }}</i> ({{ commande.dateCreated|date('d/m//Y H:i:s') }})</p>
+
+
+           <a class="btn btn-primary" href="{{ path('horus_site_generatefacture', {'id' : commande.id}) }}"><i class="glyphicon glyphicon-cloud-download"></i> Générer la facture</a>
+
+    </div>
+
+{% endblock %}
+

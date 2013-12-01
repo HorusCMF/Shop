@@ -3,6 +3,7 @@
 namespace Horus\SiteBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Horus\SiteBundle\Util\Box;
 
 /**
  * Villes
@@ -152,6 +153,6 @@ class Departements
      * @return string
      */
     public function __toString(){
-        return $this->getNameProvince();
+        return Box::limit_words($this->getNameProvince());
     }
 }

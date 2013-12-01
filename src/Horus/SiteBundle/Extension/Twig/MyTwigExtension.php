@@ -76,6 +76,8 @@ class MyTwigExtension extends \Twig_Extension
             'typesujets' => new \Twig_Filter_Method($this, 'typesujets'),
             'status' => new \Twig_Filter_Method($this, 'status'),
             'etudes' => new \Twig_Filter_Method($this, 'etudes'),
+            'commandes' => new \Twig_Filter_Method($this, 'commandes'),
+            'commandesclasses' => new \Twig_Filter_Method($this, 'commandesclasses'),
             'characters' => new \Twig_Filter_Method($this, 'characters')
         );
     }
@@ -152,6 +154,60 @@ class MyTwigExtension extends \Twig_Extension
         } elseif ($expr == 6) {
             return 'Autre';
         } else {
+            return "Autre";
+        }
+    }
+
+    /**
+     * @param int $expr
+     * @return string
+     */
+    public function commandes($expr = 1)
+    {
+        if ($expr == 1) {
+            return 'Annulé';
+        } elseif ($expr == 2) {
+            return "En attente de réaprovisionement";
+        } elseif ($expr == 3) {
+            return 'En attente de virrement';
+        } elseif ($expr == 4) {
+            return 'En cours de livraison';
+        } elseif ($expr == 5) {
+            return 'Erreur de paiement';
+        } elseif ($expr == 6) {
+            return 'Livré';
+        } elseif ($expr == 7) {
+            return 'Paiement accepté';
+        } elseif ($expr == 8) {
+            return 'Préparation en cours';
+        }else {
+            return "Autre";
+        }
+    }
+
+    /**
+     * @param int $expr
+     * @return string
+     */
+    public function commandesclasses($expr = 1)
+    {
+        if ($expr == 1) {
+            return 'annule';
+        } elseif ($expr == 2) {
+            return "attente";
+        } elseif ($expr == 3) {
+            return 'virrement';
+        } elseif ($expr == 4) {
+            return 'livraison';
+        } elseif ($expr == 5) {
+            return 'erreur';
+        } elseif ($expr == 6) {
+            return 'livre';
+        } elseif ($expr == 7) {
+            return 'paiement';
+        } elseif ($expr == 8) {
+            return 'preparation';
+        }else {
             return "Autre";
         }
     }

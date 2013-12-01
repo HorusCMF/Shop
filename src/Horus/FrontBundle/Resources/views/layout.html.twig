@@ -1,0 +1,105 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Horus Shop CMF Front{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="http://getbootstrap.com/2.3.2/assets/css/bootstrap-responsive.css" />
+    <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.10.3/themes/hot-sneaks/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="http://davidstutz.github.io/bootstrap-multiselect/css/bootstrap-multiselect.css" />
+
+    {% stylesheets '@HorusSiteBundle/Resources/public/css/bootswatch.css' filter='yui_css' %}
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+
+    {% stylesheets '@HorusSiteBundle/Resources/public/css/flat/green.css' filter='yui_css' %}
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+
+    {% stylesheets '@HorusSiteBundle/Resources/public/css/main.sass' filter='yui_css' %}
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+
+    {% if app.user.id is defined %}
+        <script type="text/javascript" src="http://{{ app.request.host }}:1665/socket.io/socket.io.js"></script>
+        {% javascripts '@HorusSiteBundle/Resources/public/js/io.js'  %}
+        <script src="{{ asset_url }}" type="text/javascript"></script>
+        {% endjavascripts %}
+    {% endif %}
+
+{% endblock %}
+
+
+{% block body %}
+    <a href="https://github.com/HorusCMF/Shop"><img style="z-index: 50000;position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+    {% include 'HorusFrontBundle:Slots:topmenu.html.twig' %}
+    <div class="container-fluid">
+        <div class="row-fluid">
+            {% include 'HorusSiteBundle:Slots:notification.html.twig' %}
+            <div class="span12">
+                <div class="container">
+                    <div class="row-fluid">
+                        <div class="span3">
+                            {% include 'HorusSiteBundle:Slots:statistics.html.twig' %}
+                        </div>
+                        <div class="span9">
+                            {#{% include 'HorusSiteBundle:Slots:mainmenu.html.twig' %}#}
+                            {% include 'HorusSiteBundle:Slots:flashdatas.html.twig' %}
+                            <div class="maincontent">
+                                {% block content %}
+                                {% endblock %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="scrollup">Scroll</a>
+
+            {% if app.user.id is defined %}
+                {% include 'HorusSiteBundle:Slots:connected.html.twig' %}
+            {% endif %}
+        </div>
+    </div>
+    <div id="footer">
+        <div class="container text-center">
+            <p class="muted credit">Horus CMF forked by <a href="https://github.com/HorusCMF/Shop">Symfomany</a></p>
+        </div>
+    </div>
+    <div id="overlay" class="overlay hide">
+        <img src="/images/495.GIF" />
+    </div>
+{% render controller('HorusSiteBundle:Layout:getIpVisitor') %}
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('/js/ckeditor/ckeditor.js') }}"></script>
+    <script src="http://damirfoy.com/iCheck/jquery.icheck.min.js?v=0.9.1"></script>
+    <script src="http://davidstutz.github.io/bootstrap-multiselect/js/bootstrap-multiselect.js"></script>
+    <script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="http://modernizr.com/downloads/modernizr-latest.js"></script>
+
+    {% javascripts '@HorusSiteBundle/Resources/public/js/miniNotification.coffee' filter='closure' %}
+    <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
+
+    <!--[if (lt IE 6)|(IE 7)]>
+    {% javascripts '@HorusSiteBundle/Resources/public/js/nobrowser.coffee' filter='closure' %}
+        <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    {% javascripts '@HorusSiteBundle/Resources/public/js/main.coffee'  filter='closure' %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}

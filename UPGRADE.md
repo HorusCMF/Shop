@@ -2,6 +2,7 @@ UPGRADE FROM 1.0 to 1.1
 =======================
 
 ### General
+  * Add Position to Product, Categories...
   * View all actions of Administrateurs
   * Add Tooltips to help
   * Resize images
