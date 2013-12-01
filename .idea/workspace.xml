@@ -230,7 +230,7 @@
     <file path="/CestAddArticleCest.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384975435028" ignored="false" />
     <file path="/about.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383323680621" ignored="false" />
     <file path="/contact.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383323882143" ignored="false" />
-    <file path="/README.md" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385290460382" ignored="false" />
+    <file path="/README.md" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385903324483" ignored="false" />
     <file path="/.gitignore" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385062967687" ignored="false" />
     <file path="/app.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383666549779" ignored="false" />
     <file path="/search.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384972907784" ignored="false" />
@@ -516,10 +516,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Main/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="51" selection-end="51" vertical-scroll-proportion="0.06451613">
+            <state line="2" column="0" selection-start="51" selection-end="51" vertical-scroll-proportion="-1.5">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="187" column="4" selection-start="4923" selection-end="4923" vertical-scroll-proportion="0.48294434">
               <folding />
             </state>
           </provider>
@@ -535,7 +547,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Fournisseurs/editfournisseur.html.twig" />
         <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Fournisseurs/fournisseurs.html.twig" />
         <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Fournisseurs/picturefournisseur.html.twig" />
         <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Controller/FournisseursController.php" />
@@ -551,6 +562,7 @@
         <option value="$PROJECT_DIR$/src/Horus/FrontBundle/Resources/views/Default/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Horus/FrontBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Main/index.html.twig" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -942,11 +954,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="32" selection-start="3114" selection-end="3146" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Controller/MarquesController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="93" column="34" selection-start="2732" selection-end="2732" vertical-scroll-proportion="0.39344263" />
@@ -1032,7 +1039,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Main/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="51" selection-end="51" vertical-scroll-proportion="0.06451613">
+        <state line="2" column="0" selection-start="51" selection-end="51" vertical-scroll-proportion="-1.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="187" column="4" selection-start="4923" selection-end="4923" vertical-scroll-proportion="0.48294434">
           <folding />
         </state>
       </provider>

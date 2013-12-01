@@ -185,6 +185,11 @@ Bug tracking
 Horus CMF uses [GitHub issues](https://github.com/HorusCMF/Shop/issues).
 If you have found bug, please create an issue.
 
+Travis CI
+------------
+Follow all changes & testing [here](https://travis-ci.org/HorusCMF/Shop).
+
+
 MIT License
 -----------
 
