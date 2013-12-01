@@ -35,6 +35,7 @@
         "knplabs/knp-paginator-bundle": "dev-master",
         "codeception/codeception": "*",
         "friendsofsymfony/elastica-bundle": "3.0.*@dev",
+        "doctrine/mongodb-odm-bundle": "3.0.*",
         "whiteoctober/breadcrumbs-bundle": "dev-master",
         "knplabs/knp-menu-bundle":"dev-master",
         "stof/doctrine-extensions-bundle":"dev-master",
