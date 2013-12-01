@@ -500,10 +500,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name=".travis.yml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name=".travis.yml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="28" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0">
+            <state line="9" column="39" selection-start="122" selection-end="122" vertical-scroll-proportion="0.21428572">
               <folding />
             </state>
           </provider>
@@ -522,18 +522,6 @@
         <entry file="file://$PROJECT_DIR$/src/Horus/FrontBundle/Tests/Controller/DefaultControllerTest.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="11" column="48" selection-start="286" selection-end="286" vertical-scroll-proportion="-8.25">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="193" column="12" selection-start="5140" selection-end="5140" vertical-scroll-proportion="0.5988858">
               <folding />
             </state>
           </provider>
@@ -572,8 +560,8 @@
         <option value="$PROJECT_DIR$/app/config/parameters.yml.dist" />
         <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Tests/Controller/DefaultControllerTest.php" />
         <option value="$PROJECT_DIR$/src/Horus/FrontBundle/Tests/Controller/DefaultControllerTest.php" />
-        <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
   </component>
@@ -996,6 +984,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="193" column="12" selection-start="5140" selection-end="5140" vertical-scroll-proportion="0.5988858">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Horus/FrontBundle/Tests/Controller/DefaultControllerTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="48" selection-start="286" selection-end="286" vertical-scroll-proportion="-8.25">
@@ -1005,17 +1003,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="28" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="193" column="12" selection-start="5140" selection-end="5140" vertical-scroll-proportion="0.5988858">
+        <state line="9" column="39" selection-start="122" selection-end="122" vertical-scroll-proportion="0.21428572">
           <folding />
         </state>
       </provider>
