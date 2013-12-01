@@ -12,4 +12,6 @@ parameters:
     mailer_password:   ~
 
     locale:            en
-    secret:            ThisTokenIsNotSoSecretChangeIt
+    secret:            65e89h666fg48h6j46gfd61hgf48j646gf65f1dsfg46hf48n6
+    before_script:
+      - cp app/config/parameters.yml.dist app/config/parameters.yml

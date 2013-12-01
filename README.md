@@ -1,5 +1,8 @@
 Horus CMF Shop
 ======
+[![Build Status](https://travis-ci.org/HorusCMF/Shop.png?branch=master)](https://travis-ci.org/HorusCMF/Shop)
+
+
 
 Horus CMF is an open source e-commerce solution for **Developers**, based on the [**Symfony2**](http://symfony.com) framework.
 
@@ -188,6 +191,7 @@ If you have found bug, please create an issue.
 Travis CI
 ------------
 Follow all changes & testing [here](https://travis-ci.org/HorusCMF/Shop).
+For coverage: phpunit -c app  --coverage-text
 
 
 MIT License
