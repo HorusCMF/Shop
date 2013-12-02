@@ -250,7 +250,7 @@ class MarquesController extends Controller
 
 
         if ($form->isValid()) {
-
+            $id->upload();
             $id->setDateUpdated(new \Datetime('now'));
             $em->persist($id);
             $em->flush();

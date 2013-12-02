@@ -26,7 +26,7 @@
 
                     </ul>
                 </div>
-                <a class="pull-left" href="{{ path('horus_site_product', {'id' : produit.id}) }}">>
+                <a class="pull-left" href="{{ path('horus_site_product', {'id' : produit.id}) }}">
                     {% if produit.starPicture %}
                             <img src="{{ imgproducts ~  produit.id ~ '/' ~ produit.starPicture.path|sizes('medium') }} "/>
                     {% else %}

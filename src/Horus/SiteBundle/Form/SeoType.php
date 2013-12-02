@@ -20,8 +20,8 @@ class SeoType extends AbstractType
     {
         $builder
                 ->add('title', 'text', array('required' => false,'attr' => array('placeholder' => 'Titre')))
-                ->add('keywords', 'textarea', array('required' => false,'attr' => array('cols' => 100, 'rows' => 6, 'placeholder' => 'Mot-Clefs')))
-                ->add('description', 'textarea', array('required' => false,'attr' => array('cols' => 100, 'rows' => 6,'placeholder' => 'Description')));
+                ->add('keywords', 'textarea', array('required' => false,'attr' => array('class' => 'form-control','cols' => 100, 'rows' => 6, 'placeholder' => 'Mot-Clefs')))
+                ->add('description', 'textarea', array('required' => false,'attr' => array('class' => 'form-control','cols' => 100, 'rows' => 6,'placeholder' => 'Description')));
     }
 
     /**

@@ -11,8 +11,7 @@ env:
   - SYMFONY_VERSION='~2.3-dev'
 
 before_script:
-  - sudo apt-get update
-  - sudo apt-get install -y --force-yes apache2 libapache2-mod-php5 php5-curl wkhtmltopdf
+  -  sudo apt-get install -y --force-yes apache2 libapache2-mod-php5 php5-curl wkhtmltopdf
   -  wget http://pecl.php.net/get/mongo-1.2.10.tgz
   -  tar -xzf mongo-1.2.10.tgz
   -  sh -c "cd mongo-1.2.10 && phpize && ./configure && sudo make install"

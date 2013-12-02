@@ -3,6 +3,7 @@
 namespace Horus\SiteBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Horus\SiteBundle\Util\Box;
 use Symfony\Component\Validator\Constraints as Assert;
 use Gedmo\Mapping\Annotation as Gedmo;
 
@@ -161,6 +162,12 @@ class Famille
 
 
     /**
+     * @Gedmo\SortablePosition
+     * @ORM\Column(name="position", type="integer")
+     */
+    private $position;
+    
+    /**
      * Constructor
      */
     public function __construct()
@@ -266,7 +273,10 @@ class Famille
      */
     public function getCover()
     {
-        return $this->cover;
+        if(!empty($this->cover))
+            return $this->cover;
+        else
+            return Box::limit_words($this->description);
     }
 
     /**
@@ -524,7 +534,7 @@ class Famille
      */
     public function __toString()
     {
-        return $this->name;
+        return Box::limit_words($this->name);
     }
 
 

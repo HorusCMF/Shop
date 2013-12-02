@@ -30,6 +30,7 @@ class ProductType extends AbstractType
             ->add('longueur', 'text', array('required' => false,'label' => 'Longeur(cm.)', 'attr' => array('class' => 'form-control', 'placeholder' => 'Ex: 35')))
             ->add('largeur', 'text', array('required' => false,'label' => 'Largeur(cm.)', 'attr' => array('class' => 'form-control', 'placeholder' => 'Ex: 25')))
             ->add('profondeur', 'text', array('required' => false,'label' => 'Profondeur(cm.)', 'attr' => array('class' => 'form-control', 'placeholder' => 'Ex: 15')))
+            ->add('position', 'integer', array('required' => false,'label' => 'Positionnement', 'attr' => array('class' => 'form-control', 'placeholder' => 'Ex: 15')))
             ->add('hauteur', 'text', array('required' => false,'label' => 'Hauteur(cm.)', 'attr' => array('class' => 'form-control', 'placeholder' => 'Ex: 15')))
             ->add('etat', 'choice', array(
                 'attr' => array('class' => 'rad'),

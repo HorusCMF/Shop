@@ -39,8 +39,8 @@ class MainCest
         $I->see('Authentification');
         $I->submitForm('form',
             array(
-                '_username' => 'test@yahoo.fr',
-                '_password' => 'ok',
+                '_username' => 'bidon@free.fr',
+                '_password' => 'djscrave',
             ));
         $errors = $I->grabTextFrom('.alert');
         $I->expect($errors);
@@ -57,7 +57,7 @@ class MainCest
         $I->see('Authentification');
         $I->submitForm('form',
             array(
-                '_username' => 'test@yahoo.fr',
+                '_username' => 'zuzu38080@gmail.com',
                 '_password' => 'djscrave',
             ));
         $I->amOnPage('/backend');
@@ -122,6 +122,49 @@ class MainCest
     {
         $I->wantTo('In Products Create Page');
         $I->amOnPage('/backend/produits/creer');
+        $I->see('Créer un produit');
+        $I->submitForm('form#createproduct',
+            array(
+                'title' => "Galaxy Note 8.0 - Tablette Tactile 8'' Capacitif - Processeur Quad Core (1,6 Ghz) - RAM 2048 Mo - 16 Go - Wi-Fi - Bluetooth - Android 4.1 Jelly Bean - White",
+                'accroche' => "La Galaxy Tab qu'il vous faut",
+                'reference' => 'GX07889-B',
+                'ean' => '1234567891234',
+                'tva' => 19.6,
+                'prixHT' => '15',
+                'prixTTC' => '21',
+                'cover' => "Le GALAXY Note 8.0 propose de nombreuses solutions innovantes, simples d’utilisation : une option multifenêtres offre la possibilité de diviser en plusieurs parties l'écran 8 pouces pour gérer plusieurs applications en même temps; la technologie S Pen améliorée offre de nouvelles fonctionnalités; l’application S Note permet de créer, d'éditer, de gérer et de partager différents modèles de prise de note; une résolution parfaite pour un confort de lecture des e-books. De nouvelles fonctionnalités sont également offertes dans le Galaxy Note 8.0 avec pour la première fois dans une tablette Samsung : « Flipboard » et « Awesome Note ».",
+                'content' => "Tout en mobilité
+                    Avec son écran 8 pouces, le Galaxy Note 8.0 adopte la taille idéale pour allier mobilité et confort de navigation. Il devient possible de lire, regarder des vidéos, surfer, communiquer et même créer, le tout en mobilité. Conçu pour stocker et gérer toutes les données personnelles et professionnelles de manière efficace, le Galaxy Note 8.0 est l'accessoire de poche parfait pour l'organisation de son quotidien ainsi avec « S Note » et « S Calendrier » l’utilisateur peut prendre des notes en réunion, créer des listes de tâches, ou même tenir un journal personnel. Le nouveau S Pen offre une prise de note facile, rapide et plus précise que jamais.
+                    De nouveaux usages et de nouvelles applications
+                    Le « Mode Lecture » transforme le GALAXY Note 8.0 en livre électronique avec un confort de lecture optimal. Il est également possible d’utiliser sa tablette comme télécommande universelle grâce à Smart Remote pour contrôler son téléviseur, lecteur DVD et Blu-ray.
+                    Le GALAXY Note 8.0 offre aussi de nouvelles applications embarquées telles que Awesome Note qui permet de réunir toutes les notes et tâches au même endroit (mémo, journal, liste de tâches etc). L’application Flipboard, optimisée pour le Galaxy Note 8.0, permet instantanément de feuilleter page à page son actualité préférée ainsi que les articles et photos de ses amis postés sur les différents réseaux sociaux.",
+                'category' => 7,
+                'service' => 'Garantie offerte',
+                'video' => 'http://www.youtube.com/watch?v=IWAD3oKx7Yo',
+                'etat' => 1,
+                'status' => 1,
+                'quantity' => 15,
+                'poid' => 1.5,
+                'longueur' => 20,
+                'largeur' => 12,
+                'hauteur' => 2
+            ));
+
+
+        $errors = $I->grabTextFrom('.alert');
+        $errors = $I->grabTextFrom('.alert-warning');
+        $I->expect($errors);
+
+    }
+
+
+    /**
+     * @before onSuccessAuthentificate
+     */
+    public function onEditProcessSuccessProducts(WebGuy $I)
+    {
+        $I->wantTo('In Products Create Page');
+        $I->amOnPage('/backend/produits');
         $I->see('Créer un produit');
         $I->submitForm('form#createproduct',
             array(

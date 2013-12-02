@@ -39,7 +39,7 @@ class Box
      * @param $string
      * @return string
      */
-    public static function limit_words($words, $limit = 25, $append = ' ...', $break=".") {
+    public static function limit_words($words, $limit = 30, $append = ' ...', $break=".") {
         if(strlen($words) <= $limit) return $words;
         // is $break present between $limit and the end of the string?
         if(false !== ($breakpoint = strpos($words, $break, $limit)))

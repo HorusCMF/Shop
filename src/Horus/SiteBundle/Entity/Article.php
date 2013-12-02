@@ -421,7 +421,10 @@ class Article
      */
     public function getCover()
     {
-        return $this->cover;
+        if(!empty($this->cover))
+            return $this->cover;
+        else
+            return Box::limit_words($this->content);
     }
 
     /**

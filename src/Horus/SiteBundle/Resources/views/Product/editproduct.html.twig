@@ -228,6 +228,7 @@
         </div>
     </div>
     <div class="tab-pane fade" id="categorie">
+
         <div class="row-fluid">
             <div class="span6">
                 <label for="status_0">Fournisseur</label>
@@ -245,6 +246,13 @@
             <div class="span12">
                 <label for="status_0">Catégorie secondaires</label>
                 {{ form_widget(form.cates, {'attr': {'class' : 'rad' }}) }}
+            </div>
+        </div>
+        <p></p>
+        <div class="row-fluid">
+            <div class="span3">
+                <label for="position">Positionnement</label>
+                {{ form_widget(form.position) }}
             </div>
         </div>
         <p></p>

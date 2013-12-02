@@ -188,6 +188,16 @@ Bug tracking
 Horus CMF uses [GitHub issues](https://github.com/HorusCMF/Shop/issues).
 If you have found bug, please create an issue.
 
+Fixtures
+------------
+All fixtures in Bundles use Doctrine Fixtures and can be loaded by php app/console doctrine:fixtures:load
+
+
+Testing
+------------
+All tests use Codeception and can be launched in console by: php bin/codecept run --steps --debug --html
+
+
 Travis CI
 ------------
 Follow all changes & testing [here](https://travis-ci.org/HorusCMF/Shop).

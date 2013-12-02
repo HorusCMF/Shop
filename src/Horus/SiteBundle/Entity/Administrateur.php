@@ -391,8 +391,8 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
 
 
     /**
-     * @ORM\ManyToMany(targetEntity="Languages", mappedBy="demandeurs")
-     * @ORM\JoinTable(name="demandeur_i18n_language_codes")
+     * @ORM\ManyToMany(targetEntity="Languages", mappedBy="Administrateurs")
+     * @ORM\JoinTable(name="Administrateur_i18n_language_codes")
      */
     private $langues;
 
@@ -494,7 +494,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set description
      *
      * @param string $description
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setDescription($description)
     {
@@ -515,7 +515,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set zipcode
      *
      * @param integer $zipcode
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setZipcode($zipcode)
     {
@@ -545,7 +545,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set ville
      *
      * @param string $ville
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setVille($ville)
     {
@@ -565,7 +565,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set tel
      *
      * @param string $tel
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setTel($tel)
     {
@@ -586,7 +586,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set password
      *
      * @param string $password
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setPassword($password)
     {
@@ -608,7 +608,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set dob
      *
      * @param \DateTime $dob
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setDob($dob)
     {
@@ -629,7 +629,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set email
      *
      * @param string $email
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setEmail($email)
     {
@@ -650,7 +650,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set dateCreated
      *
      * @param \DateTime $dateCreated
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setDateCreated($dateCreated)
     {
@@ -671,7 +671,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set dateUpdated
      *
      * @param \DateTime $dateUpdated
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setDateUpdated($dateUpdated)
     {
@@ -692,7 +692,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set optin
      *
      * @param boolean $optin
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setOptin($optin)
     {
@@ -713,7 +713,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set ip
      *
      * @param string $ip
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setIp($ip)
     {
@@ -734,7 +734,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set point
      *
      * @param integer $point
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setPoint($point)
     {
@@ -755,7 +755,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set salt
      *
      * @param string $salt
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setSalt($salt)
     {
@@ -776,7 +776,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set token
      *
      * @param string $token
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setToken($token)
     {
@@ -797,7 +797,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set updatedAt
      *
      * @param \DateTime $updatedAt
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setUpdatedAt($updatedAt)
     {
@@ -818,7 +818,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set createdAt
      *
      * @param \DateTime $createdAt
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setCreatedAt($createdAt)
     {
@@ -839,7 +839,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set dateAuth
      *
      * @param \DateTime $dateAuth
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setDateAuth($dateAuth)
     {
@@ -860,7 +860,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set enabled
      *
      * @param boolean $enabled
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setEnabled($enabled)
     {
@@ -881,7 +881,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set accountnonexpired
      *
      * @param boolean $accountnonexpired
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setAccountnonexpired($accountnonexpired)
     {
@@ -902,7 +902,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set accountnonlocked
      *
      * @param boolean $accountnonlocked
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setAccountnonlocked($accountnonlocked)
     {
@@ -923,7 +923,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set slug
      *
      * @param string $slug
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setSlug($slug)
     {
@@ -944,7 +944,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set fid
      *
      * @param integer $fid
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setFid($fid)
     {
@@ -965,7 +965,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set fuser
      *
      * @param string $fuser
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setFuser($fuser)
     {
@@ -986,7 +986,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set guser
      *
      * @param string $guser
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setGuser($guser)
     {
@@ -1007,7 +1007,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set lastAction
      *
      * @param string $lastAction
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setLastAction($lastAction)
     {
@@ -1028,7 +1028,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set lastMyAction
      *
      * @param string $lastMyAction
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setLastMyAction($lastMyAction)
     {
@@ -1049,7 +1049,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set longitude
      *
      * @param float $longitude
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setLongitude($longitude)
     {
@@ -1070,7 +1070,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set latitude
      *
      * @param float $latitude
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setLatitude($latitude)
     {
@@ -1091,7 +1091,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set vue
      *
      * @param integer $vue
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setVue($vue)
     {
@@ -1112,7 +1112,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set avatar
      *
      * @param string $avatar
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setAvatar($avatar)
     {
@@ -1509,7 +1509,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set titre
      *
      * @param string $titre
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setTitre($titre)
     {
@@ -1530,7 +1530,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set xpPro
      *
      * @param string $xpPro
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setXpPro($xpPro)
     {
@@ -1551,7 +1551,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set etude
      *
      * @param string $etude
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setEtude($etude)
     {
@@ -1572,7 +1572,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set statut
      *
      * @param string $statut
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setStatut($statut)
     {
@@ -1593,7 +1593,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set permis
      *
      * @param integer $permis
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setPermis($permis)
     {
@@ -1614,7 +1614,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set mobiliter
      *
      * @param integer $mobiliter
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setMobiliter($mobiliter)
     {
@@ -1653,7 +1653,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set characters
      *
      * @param string $characters
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setCharacters($characters)
     {
@@ -1688,7 +1688,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set metier
      *
      * @param \Horus\SiteBundle\Entity\Metier $metier
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setMetier(\Horus\SiteBundle\Entity\Metier $metier = null)
     {
@@ -1713,7 +1713,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set extras
      *
      * @param string $extras
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setExtras($extras)
     {
@@ -1736,7 +1736,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Add langues
      *
      * @param \Horus\SiteBundle\Entity\Languages $langues
-     * @return Demandeur
+     * @return Administrateur
      */
     public function addLangue(\Horus\SiteBundle\Entity\Languages $langues)
     {
@@ -1769,7 +1769,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set gender
      *
      * @param boolean $gender
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setGender($gender)
     {
@@ -1792,7 +1792,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set entreprise
      *
      * @param string $entreprise
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setEntreprise($entreprise)
     {
@@ -1820,7 +1820,7 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      * Set emailTemp
      *
      * @param string $emailTemp
-     * @return Demandeur
+     * @return Administrateur
      */
     public function setEmailTemp($emailTemp)
     {

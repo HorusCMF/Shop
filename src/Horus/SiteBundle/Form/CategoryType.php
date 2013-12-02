@@ -21,6 +21,7 @@ class CategoryType extends AbstractType
         $builder
                 ->add('name', 'text', array('attr' => array('placeholder' => "Nom de la catégorie")))
                 ->add('cover', 'textarea', array('attr' => array("class" => "ckeditor", 'placeholder' => 'Résumé en quelques mots')))
+                ->add('position', 'integer', array('required' => false,'label' => 'Positionnement', 'attr' => array('class' => 'form-control', 'placeholder' => 'Ex: 15')))
                 ->add('description', 'textarea', array('attr' => array("class" => "ckeditor", 'placeholder' => 'Description complète')))
                 ->add('parent', null, array('empty_value' => 'Choisissez une catégorie'))
                 ->add('articles');

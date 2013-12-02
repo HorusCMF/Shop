@@ -87,7 +87,7 @@ class Marques
     protected $path;
 
     /**
-     * @var string $picture
+     * @var string $metaTitle
      *
      * @ORM\Column(name="meta_title", type="text")
      * @Assert\Length(
@@ -419,7 +419,10 @@ class Marques
      */
     public function getResume()
     {
-        return $this->resume;
+        if(!empty($this->resume))
+            return $this->resume;
+        else
+            return Box::limit_words($this->description);
     }
 
     /**

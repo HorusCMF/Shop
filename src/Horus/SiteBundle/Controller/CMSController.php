@@ -373,7 +373,7 @@ class CMSController extends Controller
         $em = $this->getDoctrine()->getManager();
         $this->get('session')->getFlashBag()->add(
             'messagerealtime',
-            "La page ".$id->getTitle()." vient d'être crée"
+            "La page ".$id->getName()." vient d'être crée"
         );
         $em->remove($id);
         $em->flush();

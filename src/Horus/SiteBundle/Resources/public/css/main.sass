@@ -362,6 +362,8 @@ li
   border: none
   border-radius: 0px
   margin: 0px
+  margin-top: 10px
+  margin-bottom: 10px
 
 .clear
   clear: both
@@ -459,11 +461,15 @@ h1, h2
   border: 1px solid #222
 
 @media (min-width: 500px) and (max-width: 800px)
+  .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td
+    font-size: 80%
   .nav>li>a
     font-size: 12px
 
 
 @media (max-width: 600px)
+  .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td
+    font-size: 80%
   #searchmenu
     margin-bottom: 10px
   .span3

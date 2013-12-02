@@ -308,9 +308,11 @@ class CategoryController extends Controller
      */
     public function categoryAction(Category $id)
     {
+        $produits = $id->getProduits();
         return $this->render('HorusSiteBundle:Category:category.html.twig',
             array(
                 'category' => $id,
+                'produits' => $produits
             )
         );
     }

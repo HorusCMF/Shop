@@ -162,6 +162,12 @@ class Famille
 
 
     /**
+     * @Gedmo\SortablePosition
+     * @ORM\Column(name="position", type="integer")
+     */
+    private $position;
+    
+    /**
      * Constructor
      */
     public function __construct()
@@ -267,7 +273,10 @@ class Famille
      */
     public function getCover()
     {
-        return $this->cover;
+        if(!empty($this->cover))
+            return $this->cover;
+        else
+            return Box::limit_words($this->description);
     }
 
     /**
@@ -699,4 +708,26 @@ class Famille
     }
 
 
+
+    /**
+     * Set position
+     *
+     * @param integer $position
+     * @return Famille
+     */
+    public function setPosition($position)
+    {
+        $this->position = $position;
+        return $this;
+    }
+
+    /**
+     * Get position
+     *
+     * @return integer 
+     */
+    public function getPosition()
+    {
+        return $this->position;
+    }
 }

@@ -382,7 +382,10 @@ class Fournisseurs
      */
     public function getResume()
     {
-        return $this->resume;
+        if(!empty($this->resume))
+            return $this->resume;
+        else
+            return Box::limit_words($this->description);
     }
 
     /**
