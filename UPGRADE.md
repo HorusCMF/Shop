@@ -2,6 +2,7 @@ UPGRADE FROM 1.0 to 1.1
 =======================
 
 ### General
+  * Right Bloc in real time to actions
   * Add Position to Product, Categories...
   * View all actions of Administrateurs
   * Add Tooltips to help

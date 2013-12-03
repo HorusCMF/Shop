@@ -14,14 +14,14 @@
                                    href="{{ path('horus_site_active_category', {'id' : category.id}) }}"><i
                                             class="glyphicon glyphicon-ok"></i> Activer</a></li>
                         {% endif %}
-                        <li><a onclick="return(confirm('Etes-vous sûr de vouloir supprimer cette catégory ?'));"
+                            <li><a onclick="return(confirm('Etes-vous sûr de vouloir supprimer cette catégory ?'));"
                                href="{{ path('horus_site_remove_category', {'id' : category.id}) }}"><i
                                         class="glyphicon glyphicon-remove"></i> Supprimer</a></li>
-                        <li><a href="{{ path('horus_site_edit_category', {'id' : category.id}) }}"><i
+                            <li><a href="{{ path('horus_site_edit_category', {'id' : category.id}) }}"><i
                                         class="glyphicon glyphicon-pencil"></i> Editer</a></li>
-                        <li><a href="{{ path('horus_site_edit_image_category', {'id' : category.id}) }}"><i
+                            <li><a href="{{ path('horus_site_edit_image_category', {'id' : category.id}) }}"><i
                                         class="glyphicon glyphicon-camera"></i> Photos</a></li>
-                        <li><a href="{{ path('horus_site_category', {'id' : category.id}) }}"><i
+                            <li><a href="{{ path('horus_site_category', {'id' : category.id}) }}"><i
                                         class="glyphicon glyphicon-search"></i> Voir</a></li>
                     </ul>
                 </div>
@@ -42,10 +42,8 @@
                             <span class="badge badge-danger">Hors-Ligne</span>
                         {% endif %}
                     </h4>
-
                     <p>{{ category.cover|raw }}</p>
-                    <h4 class="pull-right"><span class="label label-info">{{ category.produits|length|default('0') }}
-                            produit(s)</span></h4>
+                    <h4 class="pull-right"><span class="label label-info">{{ category.produits|length|default('0') }} produit(s)</span></h4>
                 </div>
             </div>
             {% if not loop.last %}

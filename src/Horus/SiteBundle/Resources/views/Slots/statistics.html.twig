@@ -1,21 +1,5 @@
 {% block statistics %}
-    <button id="closepanel" type="button" class="close" data-dismiss="alert"><i
-                class="glyphicon glyphicon-remove-circle"></i></button>
-    <div class="panel panel-primary">
-        <div class="panel-heading"><h4><i class="glyphicon glyphicon-list-alt"></i> Menu</h4>
-        </div>
-        <div class="panel-body">
-            <ul class="nav nav-pills nav-stacked">
-                <li><a><i class="glyphicon glyphicon-home"></i> Aujourd'hui</a></li>
-                <li><a><i class="glyphicon glyphicon-shopping-cart"></i> Gérer mes produits<span
-                                class="badge">10</span></a></li>
-                <li><a><i class="glyphicon glyphicon-ok"></i> Gérer mes commandes<span
-                                class="badge">42</span></a></li>
-                <li><a><i class="glyphicon glyphicon-cog"></i> Configuration</a></li>
-            </ul>
-        </div>
-        <div class="panel-heading"></div>
-    </div>
+
     {% render controller('HorusSiteBundle:Administrateur:online') %}
 
     <button id="closepanel" type="button" class="close" data-dismiss="alert"><i

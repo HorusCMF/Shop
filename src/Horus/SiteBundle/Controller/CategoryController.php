@@ -38,7 +38,7 @@ class CategoryController extends Controller
     public function categoriesAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $categories = $em->getRepository('HorusSiteBundle:Category')->findAll();
+        $categories = $em->getRepository('HorusSiteBundle:Category')->findBy(array('parent' => null));
 
         return $this->render('HorusSiteBundle:Category:categories.html.twig', array('categories' => $categories));
     }
