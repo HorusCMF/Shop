@@ -12,6 +12,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
 
 
 /**
+ * Class Marques
  * @ORM\Table(name="marques")
  * @ORM\Entity(repositoryClass="Horus\SiteBundle\Repository\MarquesRepository")
  * @Gedmo\Tree(type="nested")
@@ -186,13 +187,13 @@ class Marques
 
     /**
      * @Gedmo\TreeParent
-     * @ORM\ManyToOne(targetEntity="Category", inversedBy="children")
+     * @ORM\ManyToOne(targetEntity="Marques", inversedBy="children")
      * @ORM\JoinColumn(name="parent_id", referencedColumnName="id", onDelete="CASCADE")
      */
     private $parent;
 
     /**
-     * @ORM\OneToMany(targetEntity="Category", mappedBy="parent")
+     * @ORM\OneToMany(targetEntity="Marques", mappedBy="parent")
      * @ORM\OrderBy({"lft" = "ASC"})
      */
     private $children;

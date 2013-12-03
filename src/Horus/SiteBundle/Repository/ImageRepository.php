@@ -24,4 +24,16 @@ class ImageRepository extends EntityRepository
         return $queryBuilder;
     }
 
+
+    /**
+     * If on category
+     * @return mixed
+     */
+    public function isFirstImage($id = null)
+    {
+        $query = $this->getEntityManager()
+            ->createQuery("SELECT COUNT(a) nombre FROM HorusSiteBundle:Image a WHERE a.produit = :produit")->setParameter('produit', $id);
+        return $query->getOneOrNullResult();
+    }
+
 }

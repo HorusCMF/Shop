@@ -41,6 +41,13 @@
                         class="glyphicon glyphicon-remove"></i></a>
         </p>
 
+        {% if  client.cart is not empty %}
+            <h3>Panier</h3>
+            <p>Total TTC: {{ client.cart.totalTTC }} euros</p>
+            <p>Total HT: {{ client.cart.totalHT }} euros</p>
+            <p>Date de création: {{ client.cart.dateCreated|date('d/m/Y') }}</p>
+        {% endif %}
+
         {% if  client.addresses is not empty %}
             <h3>Adresse</h3>
         {% endif %}

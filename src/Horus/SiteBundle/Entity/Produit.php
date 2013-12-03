@@ -191,7 +191,7 @@ class Produit
      * )
      * @Assert\Length(
      *      min = "5",
-     *      max = "3000",
+     *      max = "10000",
      *      minMessage = "Votre description doit faire au moins {{ limit }} caractères",
      *      maxMessage = "Votre description ne peut pas être plus long que {{ limit }} caractères"
      * )

@@ -147,6 +147,11 @@ class ProductController extends Controller
         $form->handleRequest($request);
 
         if ($form->isValid()) {
+
+            $isfirst = $em->getRepository('HorusSiteBundle:Image')->isFirstImage($id);
+            if ((int)$isfirst['nombre'] == 0)
+                $image->setCover(true);
+
             $image->upload($id->getId());
             $em->persist($image);
             $em->flush();

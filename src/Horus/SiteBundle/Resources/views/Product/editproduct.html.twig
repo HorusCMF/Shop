@@ -26,11 +26,11 @@
         <div class="alert alert-dismissable alert-warning">
             <button type="button" class="close" data-dismiss="alert">×</button>
             <strong><i class="glyphicon glyphicon-exclamation-sign"></i> Attention!</strong> il y a des erreurs dans
-            votre création de produit
+            votre edition de produit
         </div>
     {% endif %}
 
-    <form enctype="multipart/form-data" id="createproduct" novalidate="novalidate"
+    <form enctype="multipart/form-data" id="editproduct" novalidate="novalidate"
           action="{{ path('horus_site_edit_product', {'id' : produit.id}) }}" method="post">
 
     <div class="bs-example bs-example-tabs">
@@ -350,7 +350,6 @@
                     {{ video.html|raw }}
                 </div>
             </div>
-
         {% endif %}
 
         <div class="row-fluid">

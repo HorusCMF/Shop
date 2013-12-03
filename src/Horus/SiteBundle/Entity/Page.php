@@ -46,13 +46,25 @@ class Page
      * )
      * @Assert\Length(
      *      min = "5",
-     *      max = "1000",
+     *      max = "10000",
      *      minMessage = "Votre description doit faire au moins {{ limit }} caractères",
      *      maxMessage = "Votre description ne peut pas être plus long que {{ limit }} caractères"
      * )
      * @ORM\Column(name="description", type="text", nullable=true)
      */
     private $description;
+
+
+    /**
+     * @Assert\Length(
+     *      min = "5",
+     *      max = "1000",
+     *      minMessage = "Votre chapeau doit faire au moins {{ limit }} caractères",
+     *      maxMessage = "Votre chapeau ne peut pas être plus long que {{ limit }} caractères"
+     * )
+     * @ORM\Column(name="chapeau", type="text", nullable=true)
+     */
+    private $chapeau;
     
     /**
      * @Assert\NotBlank(
@@ -68,6 +80,19 @@ class Page
      */
     private $cover;
 
+
+    /**
+     * @var integer
+     * @Assert\Url(message="Votre URL de Vidéo n'est pas valide")
+     * @Assert\Length(
+     *      min = "8",
+     *      max = "1000",
+     *      minMessage = "Votre video doit faire au moins {{ limit }} caractères",
+     *      maxMessage = "Votre video ne peut pas être plus long que {{ limit }} caractères"
+     * )
+     * @ORM\Column(name="video", type="string", length=200, nullable=false)
+     */
+    private $video;
 
     /**
      * @ORM\ManyToMany(targetEntity="Produit")
@@ -117,13 +142,13 @@ class Page
 
     /**
      * @Gedmo\TreeParent
-     * @ORM\ManyToOne(targetEntity="Category", inversedBy="children")
+     * @ORM\ManyToOne(targetEntity="Page", inversedBy="children")
      * @ORM\JoinColumn(name="parent_id", referencedColumnName="id", onDelete="CASCADE")
      */
     private $parent;
 
     /**
-     * @ORM\OneToMany(targetEntity="Category", mappedBy="parent")
+     * @ORM\OneToMany(targetEntity="Page", mappedBy="parent")
      * @ORM\OrderBy({"lft" = "ASC"})
      */
     private $children;
@@ -420,7 +445,7 @@ class Page
      * @param Horus\SiteBundle\Entity\Category $parent
      * @return Page
      */
-    public function setParent(\Horus\SiteBundle\Entity\Category $parent = null)
+    public function setParent(\Horus\SiteBundle\Entity\Page $parent = null)
     {
         $this->parent = $parent;
         return $this;
@@ -442,7 +467,7 @@ class Page
      * @param Horus\SiteBundle\Entity\Category $children
      * @return Page
      */
-    public function addChildren(\Horus\SiteBundle\Entity\Category $children)
+    public function addChildren(\Horus\SiteBundle\Entity\Page $children)
     {
         $this->children[] = $children;
         return $this;
@@ -453,7 +478,7 @@ class Page
      *
      * @param Horus\SiteBundle\Entity\Category $children
      */
-    public function removeChildren(\Horus\SiteBundle\Entity\Category $children)
+    public function removeChildren(\Horus\SiteBundle\Entity\Page $children)
     {
         $this->children->removeElement($children);
     }
@@ -502,5 +527,49 @@ class Page
 
     public function __toString(){
         return Box::limit_words($this->getName());
+    }
+
+    /**
+     * Set chapeau
+     *
+     * @param text $chapeau
+     * @return Page
+     */
+    public function setChapeau($chapeau)
+    {
+        $this->chapeau = $chapeau;
+        return $this;
+    }
+
+    /**
+     * Get chapeau
+     *
+     * @return text 
+     */
+    public function getChapeau()
+    {
+        return $this->chapeau;
+    }
+
+    /**
+     * Set video
+     *
+     * @param string $video
+     * @return Page
+     */
+    public function setVideo($video)
+    {
+        $this->video = $video;
+        return $this;
+    }
+
+    /**
+     * Get video
+     *
+     * @return string 
+     */
+    public function getVideo()
+    {
+        return $this->video;
     }
 }

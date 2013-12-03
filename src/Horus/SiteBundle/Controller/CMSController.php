@@ -399,6 +399,12 @@ class CMSController extends Controller
         $form = $this->createForm(new PageType(), $id);
         $form->handleRequest($request);
 
+        $Essence = new \fg\Essence\Essence();
+        $media = $Essence->embed($id->getVideo(), array(
+            'maxwidth' => 400,
+            'maxheight' => 200
+        ));
+
 
         if ($form->isValid()) {
             $id->setDateCreated(new \Datetime('now'));
@@ -419,6 +425,8 @@ class CMSController extends Controller
             array(
                 'form' => $form->createView(),
                 'page' => $id,
+                'video' => $media
+
             )
         );
 

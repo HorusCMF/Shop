@@ -21,6 +21,8 @@ class PageType extends AbstractType
         $builder
                 ->add('name', 'text', array('attr' => array('placeholder' => 'Titre de la page')))
                 ->add('cover', 'textarea', array('attr' => array("class" => "ckeditor", 'placeholder' => 'Résumé en quelques mots')))
+                ->add('chapeau', 'textarea', array('attr' => array("class" => "ckeditor", 'placeholder' => 'Chapeau du texte')))
+                ->add('video', 'text', array('required' => false, 'attr' => array( 'placeholder' => "Ex:  http://www.youtube.com/watch?v=BQjqM24uWr8")))
                 ->add('description', 'textarea', array('attr' => array("class" => "ckeditor", 'placeholder' => 'Description complète')))
                 ->add('parent', null, array('empty_value' => 'Choisissez une page'))
                 ->add('produits');

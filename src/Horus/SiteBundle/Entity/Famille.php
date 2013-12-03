@@ -52,7 +52,7 @@ class Famille
      * )
      * @Assert\Length(
      *      min = "5",
-     *      max = "1000",
+     *      max = "5000",
      *      minMessage = "Votre description doit faire au moins {{ limit }} caractères",
      *      maxMessage = "Votre description ne peut pas être plus long que {{ limit }} caractères"
      * )
@@ -123,13 +123,13 @@ class Famille
 
     /**
      * @Gedmo\TreeParent
-     * @ORM\ManyToOne(targetEntity="Category", inversedBy="children")
+     * @ORM\ManyToOne(targetEntity="Famille", inversedBy="children")
      * @ORM\JoinColumn(name="parent_id", referencedColumnName="id", onDelete="CASCADE")
      */
     private $parent;
 
     /**
-     * @ORM\OneToMany(targetEntity="Category", mappedBy="parent")
+     * @ORM\OneToMany(targetEntity="Famille", mappedBy="parent")
      * @ORM\OrderBy({"lft" = "ASC"})
      */
     private $children;
@@ -449,7 +449,7 @@ class Famille
      * @param Horus\SiteBundle\Entity\Category $parent
      * @return Famille
      */
-    public function setParent(\Horus\SiteBundle\Entity\Category $parent = null)
+    public function setParent(\Horus\SiteBundle\Entity\Famille $parent = null)
     {
         $this->parent = $parent;
         return $this;
@@ -471,7 +471,7 @@ class Famille
      * @param Horus\SiteBundle\Entity\Category $children
      * @return Famille
      */
-    public function addChildren(\Horus\SiteBundle\Entity\Category $children)
+    public function addChildren(\Horus\SiteBundle\Entity\Famille $children)
     {
         $this->children[] = $children;
         return $this;
@@ -482,7 +482,7 @@ class Famille
      *
      * @param Horus\SiteBundle\Entity\Category $children
      */
-    public function removeChildren(\Horus\SiteBundle\Entity\Category $children)
+    public function removeChildren(\Horus\SiteBundle\Entity\Famille $children)
     {
         $this->children->removeElement($children);
     }

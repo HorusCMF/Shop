@@ -148,11 +148,11 @@ class CategoryController extends Controller
             $em->flush();
             $this->get('session')->getFlashBag()->add(
                 'success',
-                "La catégory a bien été editée"
+                "La famille a bien été modifiée"
             );
             $this->get('session')->getFlashBag()->add(
                 'messagerealtime',
-                "La famille ".$id->getName()." vient d'être editée"
+                "La famille ".$id->getName()." vient d'être modifiée"
             );
             return $this->redirect($this->generateUrl('horus_site_familles'));
         }
@@ -185,7 +185,7 @@ class CategoryController extends Controller
             $em->flush();
             $this->get('session')->getFlashBag()->add(
                 'success',
-                "La catégory a bien été ajoutée"
+                "La famille a bien été ajoutée"
             );
             $this->get('session')->getFlashBag()->add(
                 'messagerealtime',
@@ -348,6 +348,10 @@ class CategoryController extends Controller
         $form->handleRequest($request);
 
         if ($form->isValid()) {
+            $isfirst = $em->getRepository('HorusSiteBundle:ImageCategory')->isFirstImage($id);
+            if ((int)$isfirst['nombre'] == 0)
+                $image->setCover(true);
+
             $image->upload($id->getId());
             $em->persist($image);
             $em->flush();

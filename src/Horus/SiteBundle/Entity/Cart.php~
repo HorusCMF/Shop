@@ -35,9 +35,9 @@ class Cart
 
     /**
      * @var integer
-     * @ORM\Column(name="quantity", type="integer", nullable=false)
+     * @ORM\Column(name="content", type="text", nullable=false)
      */
-    private $quantity;
+    private $content;
 
     /**
      * @var string
@@ -45,18 +45,6 @@ class Cart
      * @ORM\Column(name="date_created", type="datetime", nullable=true)
      */
     private $dateCreated;
-
-    /**
-     * @ORM\ManyToOne(targetEntity="Produit", inversedBy="commandes")
-     * @ORM\JoinColumn(name="transport_id", referencedColumnName="id")
-     */
-    private $produit;
-
-    /**
-     * @ORM\ManyToOne(targetEntity="Commandes", inversedBy="commandesProduits")
-     * @ORM\JoinColumn(name="commandes_id", referencedColumnName="id")
-     */
-    private $commandes;
 
 
     /**
@@ -78,4 +66,102 @@ class Cart
      */
     private $totalHT;
 
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set dateCreated
+     *
+     * @param datetime $dateCreated
+     * @return Cart
+     */
+    public function setDateCreated($dateCreated)
+    {
+        $this->dateCreated = $dateCreated;
+        return $this;
+    }
+
+    /**
+     * Get dateCreated
+     *
+     * @return datetime 
+     */
+    public function getDateCreated()
+    {
+        return $this->dateCreated;
+    }
+
+    /**
+     * Set totalTTC
+     *
+     * @param float $totalTTC
+     * @return Cart
+     */
+    public function setTotalTTC($totalTTC)
+    {
+        $this->totalTTC = $totalTTC;
+        return $this;
+    }
+
+    /**
+     * Get totalTTC
+     *
+     * @return float 
+     */
+    public function getTotalTTC()
+    {
+        return $this->totalTTC;
+    }
+
+    /**
+     * Set totalHT
+     *
+     * @param float $totalHT
+     * @return Cart
+     */
+    public function setTotalHT($totalHT)
+    {
+        $this->totalHT = $totalHT;
+        return $this;
+    }
+
+    /**
+     * Get totalHT
+     *
+     * @return float 
+     */
+    public function getTotalHT()
+    {
+        return $this->totalHT;
+    }
+
+    /**
+     * Set client
+     *
+     * @param Horus\SiteBundle\Entity\Client $client
+     * @return Cart
+     */
+    public function setClient(\Horus\SiteBundle\Entity\Client $client = null)
+    {
+        $this->client = $client;
+        return $this;
+    }
+
+    /**
+     * Get client
+     *
+     * @return Horus\SiteBundle\Entity\Client 
+     */
+    public function getClient()
+    {
+        return $this->client;
+    }
 }

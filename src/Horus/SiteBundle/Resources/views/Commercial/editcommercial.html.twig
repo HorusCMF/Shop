@@ -2,6 +2,9 @@
 
 {% block javascripts %}
     {{ parent() }}
+    {% javascripts '@HorusSiteBundle/Resources/public/js/remise.js' filter="cssrewrite" %}
+    <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
 {% endblock %}
 
 

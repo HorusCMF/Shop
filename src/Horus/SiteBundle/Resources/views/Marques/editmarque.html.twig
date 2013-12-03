@@ -9,10 +9,10 @@
     <div id="editarticle">
         <a class="btn back btn-danger pull-right" href="{{ path('horus_site_marques') }}">&larr; Revenir à la liste des marques</a>
 
-        <h1><i class="glyphicon glyphicon-plus"></i> Editer une marque</h1>
+        <h1><i class="glyphicon glyphicon-pencil"></i> Editer "{{ marque.title }}"</h1>
         <hr class="clear fancy-line">
 
-        <form novalidate="novalidate" action="{{ path('horus_site_edit_marques', {'id' : marque.id}) }}" method="post" enctype="multipart/form-data">
+        <form id="editmarque" novalidate="novalidate" action="{{ path('horus_site_edit_marques', {'id' : marque.id}) }}" method="post" enctype="multipart/form-data">
 
             <div class="row-fluid">
                 <div class="span12">

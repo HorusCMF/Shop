@@ -136,6 +136,10 @@ body
     font-size: 16px
     border-radius: 0px
 
+.row-fluid, .row-fluid:focus
+  .span12,.span12:focus
+    width: 100%
+    margin: 0
 
 // <hr /> Fancy
 hr.fancy-line
@@ -465,6 +469,10 @@ h1, h2
     font-size: 80%
   .nav>li>a
     font-size: 12px
+
+@media (min-width: 1200px)
+  .container
+    width: 1300px
 
 
 @media (max-width: 600px)

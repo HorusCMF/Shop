@@ -27,7 +27,7 @@ class MarquesType extends AbstractType
                 ->add('metaDescription', 'textarea', array('required' => false,'attr' => array('class' => 'form-control', 'rows' => 7, 'cols' => 80,'placeholder' => "Description de la marque")))
                 ->add('metaKeywords', 'textarea', array('required' => false,'attr' => array('class' => 'form-control','rows' => 7, 'cols' => 80,'placeholder' => "Mots Clefs de la marque")))
                 ->add('active')
-                ->add('parent',  null, array('empty_value' => 'Choisissez une famille'));
+                ->add('parent',  null, array('empty_value' => 'Choisissez une marque'));
     }
 
     /**

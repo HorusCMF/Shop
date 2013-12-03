@@ -35,9 +35,9 @@ class Cart
 
     /**
      * @var integer
-     * @ORM\Column(name="quantity", type="integer", nullable=false)
+     * @ORM\Column(name="content", type="text", nullable=false)
      */
-    private $quantity;
+    private $content;
 
     /**
      * @var string
@@ -45,18 +45,6 @@ class Cart
      * @ORM\Column(name="date_created", type="datetime", nullable=true)
      */
     private $dateCreated;
-
-    /**
-     * @ORM\ManyToOne(targetEntity="Produit", inversedBy="commandes")
-     * @ORM\JoinColumn(name="produit_id", referencedColumnName="id")
-     */
-    private $produit;
-
-    /**
-     * @ORM\ManyToOne(targetEntity="Commandes", inversedBy="commandesProduits")
-     * @ORM\JoinColumn(name="commandes_id", referencedColumnName="id")
-     */
-    private $commandes;
 
 
     /**
@@ -87,28 +75,6 @@ class Cart
     public function getId()
     {
         return $this->id;
-    }
-
-    /**
-     * Set quantity
-     *
-     * @param integer $quantity
-     * @return Cart
-     */
-    public function setQuantity($quantity)
-    {
-        $this->quantity = $quantity;
-        return $this;
-    }
-
-    /**
-     * Get quantity
-     *
-     * @return integer 
-     */
-    public function getQuantity()
-    {
-        return $this->quantity;
     }
 
     /**
@@ -178,50 +144,6 @@ class Cart
     }
 
     /**
-     * Set produit
-     *
-     * @param Horus\SiteBundle\Entity\Produit $produit
-     * @return Cart
-     */
-    public function setProduit(\Horus\SiteBundle\Entity\Produit $produit = null)
-    {
-        $this->produit = $produit;
-        return $this;
-    }
-
-    /**
-     * Get produit
-     *
-     * @return Horus\SiteBundle\Entity\Produit 
-     */
-    public function getProduit()
-    {
-        return $this->produit;
-    }
-
-    /**
-     * Set commandes
-     *
-     * @param Horus\SiteBundle\Entity\Commandes $commandes
-     * @return Cart
-     */
-    public function setCommandes(\Horus\SiteBundle\Entity\Commandes $commandes = null)
-    {
-        $this->commandes = $commandes;
-        return $this;
-    }
-
-    /**
-     * Get commandes
-     *
-     * @return Horus\SiteBundle\Entity\Commandes 
-     */
-    public function getCommandes()
-    {
-        return $this->commandes;
-    }
-
-    /**
      * Set client
      *
      * @param Horus\SiteBundle\Entity\Client $client
@@ -241,5 +163,27 @@ class Cart
     public function getClient()
     {
         return $this->client;
+    }
+
+    /**
+     * Set content
+     *
+     * @param text $content
+     * @return Cart
+     */
+    public function setContent($content)
+    {
+        $this->content = $content;
+        return $this;
+    }
+
+    /**
+     * Get content
+     *
+     * @return text 
+     */
+    public function getContent()
+    {
+        return $this->content;
     }
 }

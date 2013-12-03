@@ -12,6 +12,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
 
 
 /**
+ * Class Fournisseurs
  * @ORM\Table(name="fournisseurs")
  * @ORM\Entity(repositoryClass="Horus\SiteBundle\Repository\FournisseursRepository")
  * @ORM\HasLifecycleCallbacks()
