@@ -85,6 +85,7 @@ class ProductType extends AbstractType
             ->add('prixTTC', 'text', array('attr' => array( 'placeholder' => 'Ex: 19€')))
             ->add('cover', 'textarea', array('attr' => array("class" => "ckeditor", 'placeholder' => 'Résumé en quelques mots')))
             ->add('service', 'textarea', array('attr' => array("class" => "ckeditor", 'placeholder' => 'Ex: Garantie, Installation etc... ')))
+            ->add('securite', 'textarea', array('attr' => array("class" => "ckeditor", 'placeholder' => 'Ex: Consignes de sécurité ')))
             ->add('extras', 'textarea', array('required' => false, 'attr' => array('class' => 'form-control','cols' => 50, 'rows' => 6, 'placeholder' => 'Commentaire sur le produit')))
             ->add('tags')
             ->add('content', 'textarea', array('attr' => array("class" => "ckeditor", 'placeholder' => 'La description complè')))

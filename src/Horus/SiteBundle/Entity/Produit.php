@@ -81,6 +81,17 @@ class Produit
     private $service;
 
     /**
+     * @Assert\Length(
+     *      min = "8",
+     *      max = "1000",
+     *      minMessage = "Votre securite doit faire au moins {{ limit }} caractères",
+     *      maxMessage = "Votre securite ne peut pas être plus long que {{ limit }} caractères"
+     * )
+     * @ORM\Column(name="securite", type="text", nullable=false)
+     */
+    private $securite;
+
+    /**
      * @var integer
      * @Assert\Regex(pattern="/^([0-9]){13}$/", message="EAN 13 est invalide")
      * @ORM\Column(name="ean", type="string", length=200, nullable=false)
@@ -1708,5 +1719,27 @@ class Produit
     public function getLiens()
     {
         return $this->liens;
+    }
+
+    /**
+     * Set securite
+     *
+     * @param text $securite
+     * @return Produit
+     */
+    public function setSecurite($securite)
+    {
+        $this->securite = $securite;
+        return $this;
+    }
+
+    /**
+     * Get securite
+     *
+     * @return text 
+     */
+    public function getSecurite()
+    {
+        return $this->securite;
     }
 }
