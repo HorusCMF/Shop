@@ -706,10 +706,10 @@ class Marques
     /**
      * Set parent
      *
-     * @param Horus\SiteBundle\Entity\Category $parent
+     * @param Horus\SiteBundle\Entity\Marques $parent
      * @return Marques
      */
-    public function setParent(\Horus\SiteBundle\Entity\Category $parent = null)
+    public function setParent(\Horus\SiteBundle\Entity\Marques $parent = null)
     {
         $this->parent = $parent;
         return $this;
@@ -718,7 +718,7 @@ class Marques
     /**
      * Get parent
      *
-     * @return Horus\SiteBundle\Entity\Category 
+     * @return Horus\SiteBundle\Entity\Marques
      */
     public function getParent()
     {
@@ -728,10 +728,10 @@ class Marques
     /**
      * Add children
      *
-     * @param Horus\SiteBundle\Entity\Category $children
+     * @param Horus\SiteBundle\Entity\Marques $children
      * @return Marques
      */
-    public function addChildren(\Horus\SiteBundle\Entity\Category $children)
+    public function addChildren(\Horus\SiteBundle\Entity\Marques $children)
     {
         $this->children[] = $children;
         return $this;
@@ -740,9 +740,9 @@ class Marques
     /**
      * Remove children
      *
-     * @param Horus\SiteBundle\Entity\Category $children
+     * @param Horus\SiteBundle\Entity\Marques $children
      */
-    public function removeChildren(\Horus\SiteBundle\Entity\Category $children)
+    public function removeChildren(\Horus\SiteBundle\Entity\Marques $children)
     {
         $this->children->removeElement($children);
     }
@@ -760,10 +760,10 @@ class Marques
     /**
      * Add images
      *
-     * @param Horus\SiteBundle\Entity\ImageCategory $images
+     * @param Horus\SiteBundle\Entity\ImageMarques $images
      * @return Marques
      */
-    public function addImage(\Horus\SiteBundle\Entity\ImageCategory $images)
+    public function addImage(\Horus\SiteBundle\Entity\ImageMarques $images)
     {
         $this->images[] = $images;
         return $this;
@@ -772,9 +772,9 @@ class Marques
     /**
      * Remove images
      *
-     * @param Horus\SiteBundle\Entity\ImageCategory $images
+     * @param Horus\SiteBundle\Entity\ImageMarques $images
      */
-    public function removeImage(\Horus\SiteBundle\Entity\ImageCategory $images)
+    public function removeImage(\Horus\SiteBundle\Entity\ImageMarques $images)
     {
         $this->images->removeElement($images);
     }
@@ -850,4 +850,15 @@ class Marques
     {
         return $this->keywords;
     }
+
+
+
+    public function getOptionLabel()
+    {
+        return str_repeat(
+            html_entity_decode('>>', ENT_QUOTES, 'UTF-8'),
+            ($this->getLvl() + 1) * 2
+        ) . $this->getTitle();
+    }
+
 }

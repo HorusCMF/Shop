@@ -23,7 +23,10 @@ class CategoryType extends AbstractType
                 ->add('cover', 'textarea', array('attr' => array("class" => "ckeditor", 'placeholder' => 'Résumé en quelques mots')))
                 ->add('position', 'integer', array('required' => false,'label' => 'Positionnement', 'attr' => array('class' => 'form-control', 'placeholder' => 'Ex: 15')))
                 ->add('description', 'textarea', array('attr' => array("class" => "ckeditor", 'placeholder' => 'Description complète')))
-                ->add('parent', null, array('empty_value' => 'Choisissez une catégorie'))
+                ->add('parent', 'entity', array(
+                    'class' => 'HorusSiteBundle:Category',
+                    'property' => 'OptionLabel',
+                ))
                 ->add('articles');
     }
 

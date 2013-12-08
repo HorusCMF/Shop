@@ -24,7 +24,10 @@ class FamilleType extends AbstractType
                 ->add('description', 'textarea', array('attr' => array("class" => "ckeditor", 'placeholder' => 'Description complète')))
                 ->add('file')
                 ->add('position', 'integer', array('required' => false,'label' => 'Positionnement', 'attr' => array('class' => 'form-control', 'placeholder' => 'Ex: 15')))
-                ->add('parent',  null, array('empty_value' => 'Choisissez une famille'))
+                ->add('parent', 'entity', array(
+                    'class' => 'HorusSiteBundle:Famille',
+                    'property' => 'OptionLabel',
+                ))
                 ->add('produits');
     }
 
