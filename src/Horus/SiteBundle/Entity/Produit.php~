@@ -365,6 +365,12 @@ class Produit
     protected $commandes;
 
     /**
+     * @ORM\OneToMany(targetEntity="Rate",mappedBy="produit", cascade={"all"},orphanRemoval=true)
+     * @Assert\Valid
+     */
+    protected $rates;
+
+    /**
      * @ORM\OneToMany(targetEntity="Seo",mappedBy="produit", cascade={"all"},orphanRemoval=true)
      * @Assert\Valid
      */
@@ -1719,5 +1725,27 @@ class Produit
     public function getLiens()
     {
         return $this->liens;
+    }
+
+    /**
+     * Set securite
+     *
+     * @param text $securite
+     * @return Produit
+     */
+    public function setSecurite($securite)
+    {
+        $this->securite = $securite;
+        return $this;
+    }
+
+    /**
+     * Get securite
+     *
+     * @return text 
+     */
+    public function getSecurite()
+    {
+        return $this->securite;
     }
 }

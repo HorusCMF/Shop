@@ -365,6 +365,12 @@ class Produit
     protected $commandes;
 
     /**
+     * @ORM\OneToMany(targetEntity="Rate",mappedBy="produit", cascade={"all"},orphanRemoval=true)
+     * @Assert\Valid
+     */
+    protected $rates;
+
+    /**
      * @ORM\OneToMany(targetEntity="Seo",mappedBy="produit", cascade={"all"},orphanRemoval=true)
      * @Assert\Valid
      */
@@ -1741,5 +1747,54 @@ class Produit
     public function getSecurite()
     {
         return $this->securite;
+    }
+
+    /**
+     * Add rates
+     *
+     * @param Horus\SiteBundle\Entity\Rate $rates
+     * @return Produit
+     */
+    public function addRate(\Horus\SiteBundle\Entity\Rate $rates)
+    {
+        $this->rates[] = $rates;
+        return $this;
+    }
+
+    /**
+     * Remove rates
+     *
+     * @param Horus\SiteBundle\Entity\Rate $rates
+     */
+    public function removeRate(\Horus\SiteBundle\Entity\Rate $rates)
+    {
+        $this->rates->removeElement($rates);
+    }
+
+    /**
+     * Get rates
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getRates()
+    {
+        return $this->rates;
+    }
+
+    /**
+     * Get rates
+     *
+     * @return Doctrine\Common\Collections\Collection
+     */
+    public function getAverage()
+    {
+        if(!empty($this->rates) && count($this->rates) > 0){
+            $sumrate = 0;
+            foreach($this->rates as $rate){
+                $sumrate += $rate->getRate();
+            }
+            return $sumrate / count($this->rates);
+        }
+        return 0;
     }
 }

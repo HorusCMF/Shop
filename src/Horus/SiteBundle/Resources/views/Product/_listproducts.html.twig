@@ -43,7 +43,10 @@
                             <span class="badge badge-danger">Hors-Ligne</span>
                         {% endif %}
                     </h4>
+
                     <h6>Référence: {{ produit.reference }}</h6>
+                    <div class="star" data-average="{{ produit.average }}"></div>
+                    <div class="clear"></div>
                     <div class="pull-right">
                         <a class="btn btn-default" href="{{ path('horus_site_product_remove_quantity', {'id' : produit.id }) }}"><i class="glyphicon glyphicon-minus-sign"></i></a>
                         <a class="btn btn-default" href="{{ path('horus_site_product_add_quantity', {'id' : produit.id }) }}"><i class="glyphicon glyphicon-plus-sign"></i></a>

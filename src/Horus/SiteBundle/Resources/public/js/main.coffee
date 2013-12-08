@@ -1,4 +1,11 @@
 $ ->
+  $(".star").jRating
+    isDisabled : true
+    bigStarsPath: '/images/stars.png'
+    length : 5
+    rateMax : 5
+
+
   $('.multiselect').multiselect
     buttonText: (options, select) ->
       if options.length is 0

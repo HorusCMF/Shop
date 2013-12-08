@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="http://getbootstrap.com/2.3.2/assets/css/bootstrap-responsive.css"/>
     <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.10.3/themes/hot-sneaks/jquery-ui.css"/>
     <link rel="stylesheet" type="text/css" href="http://davidstutz.github.io/bootstrap-multiselect/css/bootstrap-multiselect.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/horussite/css/jRating.jquery.css') }}"/>
 
     {% stylesheets '@HorusSiteBundle/Resources/public/css/bootswatch.css' filter='yui_css' %}
         <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
@@ -90,6 +91,7 @@
     <script src="http://davidstutz.github.io/bootstrap-multiselect/js/bootstrap-multiselect.js"></script>
     <script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <script src="http://modernizr.com/downloads/modernizr-latest.js"></script>
+    <script src="{{ asset('bundles/horussite/js/jRating.jquery.min.js') }}"></script>
 
     {% javascripts '@HorusSiteBundle/Resources/public/js/miniNotification.coffee' filter='closure' %}
     <script src="{{ asset_url }}" type="text/javascript"></script>
