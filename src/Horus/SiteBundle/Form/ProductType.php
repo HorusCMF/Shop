@@ -82,6 +82,7 @@ class ProductType extends AbstractType
             ->add('tags')
             ->add('content', 'textarea', array('attr' => array("class" => "ckeditor", 'placeholder' => 'La description complè')))
             ->add('isVisible', null, array('required' => false))
+            ->add('threeTime', null, array('required' => false))
             ->add('datePublication', 'date', array('widget' => 'single_text', 'attr' => array('class' => 'form-control','placeholder' => 'Format: AAAA-MM-JJ')));
     }
 

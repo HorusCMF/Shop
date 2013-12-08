@@ -151,6 +151,12 @@ class Produit
 
 
     /**
+     * @ORM\Column(name="three_time", type="boolean",  nullable=true)
+     */
+    private $threeTime;
+
+
+    /**
      * @Assert\NotBlank(
      *     message = "L'accroche ne doit pas etre vide"
      * )
@@ -1642,5 +1648,27 @@ class Produit
     public function getPosition()
     {
         return $this->position;
+    }
+
+    /**
+     * Set threeTime
+     *
+     * @param integer $threeTime
+     * @return Produit
+     */
+    public function setThreeTime($threeTime)
+    {
+        $this->threeTime = $threeTime;
+        return $this;
+    }
+
+    /**
+     * Get threeTime
+     *
+     * @return integer 
+     */
+    public function getThreeTime()
+    {
+        return $this->threeTime;
     }
 }

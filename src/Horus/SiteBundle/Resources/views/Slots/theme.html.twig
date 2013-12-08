@@ -1,0 +1,14 @@
+{% block theme %}
+    <style type="text/css">
+        body{
+            background: {{ configuration.background }} !important;
+        }
+        label, p{
+            color: {{ configuration.color }} !important;
+        }
+        h2,h1{
+            color: {{ configuration.title }} !important;
+        }
+    </style>
+{% endblock %}
+

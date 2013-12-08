@@ -82,7 +82,7 @@
 
             <div class="row-fluid">
                 {{ form_errors(form.background) }}
-                <div class="span4">
+                <div class="span3">
                     <label for="background">Background-Color</label>
                     <div class="input-group">
                         {{ form_widget(form.background) }}
@@ -92,7 +92,7 @@
                     </div>
                 </div>
 
-                <div class="span4">
+                <div class="span3">
                     <label for="color">Couleur</label>
                     {{ form_errors(form.color) }}
                     <div class="input-group">
@@ -103,7 +103,7 @@
                     </div>
                 </div>
 
-                <div class="span4">
+                <div class="span3">
                     <label for="panel">Couleur des panels</label>
                     {{ form_errors(form.panel) }}
                     <div class="input-group">
@@ -113,6 +113,18 @@
                           </span>
                     </div>
                 </div>
+
+                <div class="span3">
+                    <label for="panel">Couleur des titres</label>
+                    {{ form_errors(form.title) }}
+                    <div class="input-group">
+                        {{ form_widget(form.title) }}
+                        <span class="input-group-btn">
+                              <button class="btn btn-search btn-primary"><i class="glyphicon glyphicon-tint"></i></button>
+                          </span>
+                    </div>
+                </div>
+
             </div>
 
             <h3>Catalogue</h3>

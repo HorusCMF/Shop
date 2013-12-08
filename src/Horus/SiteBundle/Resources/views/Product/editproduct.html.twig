@@ -223,6 +223,10 @@
                     <label for="quantity" class="pull-left">Quantité (nombre)</label>
                     {{ form_widget(form.quantity, {'attr': {'class' : 'form-control pull-left' }}) }}
                 </div>
+                <div class="span3">
+                    {{ form_widget(form.threeTime, {'attr': {'class' : '' }}) }}
+                    <label for="threeTime">Payable en 3x</label>
+                </div>
             </div>
 
         </div>

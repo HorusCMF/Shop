@@ -151,6 +151,12 @@ class Produit
 
 
     /**
+     * @ORM\Column(name="three_time", type="integer",  nullable=true)
+     */
+    private $threeTime;
+
+
+    /**
      * @Assert\NotBlank(
      *     message = "L'accroche ne doit pas etre vide"
      * )
@@ -191,7 +197,7 @@ class Produit
      * )
      * @Assert\Length(
      *      min = "5",
-     *      max = "3000",
+     *      max = "10000",
      *      minMessage = "Votre description doit faire au moins {{ limit }} caractères",
      *      maxMessage = "Votre description ne peut pas être plus long que {{ limit }} caractères"
      * )
@@ -696,7 +702,10 @@ class Produit
      */
     public function getCover()
     {
-        return $this->cover;
+        if(!empty($this->cover))
+            return $this->cover;
+        else
+            return Box::limit_words($this->content);
     }
 
     /**

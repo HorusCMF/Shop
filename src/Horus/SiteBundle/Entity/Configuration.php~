@@ -24,6 +24,10 @@ class Configuration
     public function __construct(){
         $this->dateCreated = new \Datetime('now');
         $this->nombreParPage = 5;
+        $this->quantity = true;
+        $this->emballage = true;
+        $this->etat = true;
+        $this->horsStock = true;
     }
 
     /**
@@ -69,6 +73,16 @@ class Configuration
      * @ORM\Column(name="color", type="string", nullable=false)
      */
     private $color;
+
+    /**
+     * @ORM\Column(name="title", type="string", nullable=false)
+     */
+    private $title;
+
+    /**
+     * @ORM\Column(name="menu", type="string", nullable=false)
+     */
+    private $menu;
 
     /**
      * @ORM\Column(name="emballage", type="boolean", nullable=false)
@@ -511,5 +525,49 @@ class Configuration
     public function getHorsStock()
     {
         return $this->horsStock;
+    }
+
+    /**
+     * Set quantity
+     *
+     * @param boolean $quantity
+     * @return Configuration
+     */
+    public function setQuantity($quantity)
+    {
+        $this->quantity = $quantity;
+        return $this;
+    }
+
+    /**
+     * Get quantity
+     *
+     * @return boolean 
+     */
+    public function getQuantity()
+    {
+        return $this->quantity;
+    }
+
+    /**
+     * Set title
+     *
+     * @param string $title
+     * @return Configuration
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+        return $this;
+    }
+
+    /**
+     * Get title
+     *
+     * @return string 
+     */
+    public function getTitle()
+    {
+        return $this->title;
     }
 }

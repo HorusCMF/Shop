@@ -75,6 +75,16 @@ class Configuration
     private $color;
 
     /**
+     * @ORM\Column(name="title", type="string", nullable=false)
+     */
+    private $title;
+
+    /**
+     * @ORM\Column(name="menu", type="string", nullable=false)
+     */
+    private $menu;
+
+    /**
      * @ORM\Column(name="emballage", type="boolean", nullable=false)
      */
     private $emballage;
@@ -537,5 +547,49 @@ class Configuration
     public function getQuantity()
     {
         return $this->quantity;
+    }
+
+    /**
+     * Set title
+     *
+     * @param string $title
+     * @return Configuration
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+        return $this;
+    }
+
+    /**
+     * Get title
+     *
+     * @return string 
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * Set menu
+     *
+     * @param string $menu
+     * @return Configuration
+     */
+    public function setMenu($menu)
+    {
+        $this->menu = $menu;
+        return $this;
+    }
+
+    /**
+     * Get menu
+     *
+     * @return string 
+     */
+    public function getMenu()
+    {
+        return $this->menu;
     }
 }
