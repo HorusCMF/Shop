@@ -74,6 +74,7 @@ class ProductType extends AbstractType
             ))
             ->add('seo', 'collection', array('type' => new SeoType()))
             ->add('transport', null, array('required' => true))
+            ->add('livraison', 'checkbox', array('label' => 'Livraison gratuite','attr' => array()))
             ->add('prixHT', 'text', array('attr' => array( 'placeholder' => 'Ex: 15€')))
             ->add('prixTTC', 'text', array('attr' => array( 'placeholder' => 'Ex: 19€')))
             ->add('cover', 'textarea', array('attr' => array("class" => "ckeditor", 'placeholder' => 'Résumé en quelques mots')))

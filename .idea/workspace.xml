@@ -283,7 +283,7 @@
     <file path="/MetaType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384694965339" ignored="false" />
     <file path="/product.coffee" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384707556669" ignored="false" />
     <file path="/product.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384898639735" ignored="false" />
-    <file path="/editproduct.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385998727415" ignored="false" />
+    <file path="/editproduct.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1386514119149" ignored="false" />
     <file path="/flashdatas.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384712731213" ignored="false" />
     <file path="/pictureproduct.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385121349813" ignored="false" />
     <file path="/ImageType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384722029004" ignored="false" />
@@ -524,46 +524,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="layout.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/layout.html.twig">
+      <file leaf-file-name="ProductController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Controller/ProductController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="54" selection-start="1796" selection-end="1801" vertical-scroll-proportion="-4.0408163">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="31.5">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LayoutController.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Controller/LayoutController.php">
+      <file leaf-file-name="Produit.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Entity/Produit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="99" selection-start="919" selection-end="1032" vertical-scroll-proportion="0.6966292">
+            <state line="235" column="22" selection-start="6639" selection-end="6649" vertical-scroll-proportion="-4.3265305">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="configuration.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Pages/configuration.html.twig">
+      <file leaf-file-name="ProductType.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Form/ProductType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="126" column="0" selection-start="4681" selection-end="4681" vertical-scroll-proportion="-27.75">
+            <state line="76" column="28" selection-start="4176" selection-end="4185" vertical-scroll-proportion="-5.142857">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Configuration.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Entity/Configuration.php">
+      <file leaf-file-name="editproduct.html.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Product/editproduct.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="17" selection-start="2200" selection-end="2200" vertical-scroll-proportion="342.375">
+            <state line="253" column="14" selection-start="10684" selection-end="10684" vertical-scroll-proportion="-10.081633">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConfigurationType.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Form/ConfigurationType.php">
+      <file leaf-file-name="createproduct.html.twig" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Product/createproduct.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="0" selection-start="1325" selection-end="1325" vertical-scroll-proportion="-13.5">
+            <state line="252" column="14" selection-start="10698" selection-end="10698" vertical-scroll-proportion="0.7563851">
               <folding />
             </state>
           </provider>
@@ -585,16 +585,16 @@
         <option value="$PROJECT_DIR$/src/Horus/FrontBundle/Resources/views/Slots/leftmenu.html.twig" />
         <option value="$PROJECT_DIR$/src/Horus/FrontBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Form/ProductType.php" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Entity/Produit.php" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Product/createproduct.html.twig" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Product/editproduct.html.twig" />
         <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Controller/LayoutController.php" />
         <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Entity/Configuration.php" />
         <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Form/ConfigurationType.php" />
         <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Pages/configuration.html.twig" />
         <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Slots/theme.html.twig" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Entity/Produit.php" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Form/ProductType.php" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Product/editproduct.html.twig" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Product/createproduct.html.twig" />
       </list>
     </option>
   </component>
@@ -746,7 +746,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Pages" />
+              <option name="myItemId" value="Product" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -799,58 +799,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Form" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hetic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hetic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Horus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SiteBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Entity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hetic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hetic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Horus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SiteBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1064,35 +1012,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Product/createproduct.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="230" column="22" selection-start="9714" selection-end="9902" vertical-scroll-proportion="-19.5" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Product/editproduct.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="236" column="31" selection-start="10043" selection-end="10043" vertical-scroll-proportion="1.0527307" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Entity/Produit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="153" column="51" selection-start="4169" selection-end="4169" vertical-scroll-proportion="0.3561151" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/FrontBundle/Controller/MainController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/autoload.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="46" selection-start="356" selection-end="356" vertical-scroll-proportion="0.36197442">
@@ -1128,13 +1047,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="54" selection-start="1796" selection-end="1801" vertical-scroll-proportion="-4.0408163">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Form/ConfigurationType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="0" selection-start="1325" selection-end="1325" vertical-scroll-proportion="-13.5">
@@ -1149,13 +1061,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Pages/configuration.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="0" selection-start="4681" selection-end="4681" vertical-scroll-proportion="-27.75">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Slots/theme.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="16" selection-start="153" selection-end="153" vertical-scroll-proportion="0.12658228">
@@ -1166,6 +1071,55 @@
     <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Controller/LayoutController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="99" selection-start="919" selection-end="1032" vertical-scroll-proportion="0.6966292">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="54" selection-start="1796" selection-end="1801" vertical-scroll-proportion="0.38899803">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Pages/configuration.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="126" column="0" selection-start="4681" selection-end="4681" vertical-scroll-proportion="1.2">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Controller/ProductController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="31.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Entity/Produit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="235" column="22" selection-start="6639" selection-end="6649" vertical-scroll-proportion="-4.3265305">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Form/ProductType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="28" selection-start="4176" selection-end="4185" vertical-scroll-proportion="-5.142857">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Product/editproduct.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="253" column="14" selection-start="10684" selection-end="10684" vertical-scroll-proportion="-10.081633">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Product/createproduct.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="252" column="14" selection-start="10698" selection-end="10698" vertical-scroll-proportion="0.7563851">
           <folding />
         </state>
       </provider>

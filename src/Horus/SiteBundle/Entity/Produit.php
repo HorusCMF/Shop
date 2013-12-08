@@ -231,7 +231,7 @@ class Produit
 
     /**
      * @var string
-     * @ORM\Column(name="livraison", type="integer", nullable=true)
+     * @ORM\Column(name="livraison", type="boolean", nullable=true)
      */
     private $livraison;
 
