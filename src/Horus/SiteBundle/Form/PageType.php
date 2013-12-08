@@ -24,7 +24,10 @@ class PageType extends AbstractType
                 ->add('chapeau', 'textarea', array('attr' => array("class" => "ckeditor", 'placeholder' => 'Chapeau du texte')))
                 ->add('video', 'text', array('required' => false, 'attr' => array( 'placeholder' => "Ex:  http://www.youtube.com/watch?v=BQjqM24uWr8")))
                 ->add('description', 'textarea', array('attr' => array("class" => "ckeditor", 'placeholder' => 'Description complète')))
-                ->add('parent', null, array('empty_value' => 'Choisissez une page'))
+                ->add('parent', 'entity', array(
+                    'class' => 'HorusSiteBundle:Page',
+                    'property' => 'OptionLabel',
+                ))
                 ->add('produits');
     }
 

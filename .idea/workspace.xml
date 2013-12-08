@@ -219,7 +219,7 @@
     <file path="/fields.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384607180952" ignored="false" />
     <file path="/AddArticleCept.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383766959319" ignored="false" />
     <file path="/acceptance.suite.yml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384978708662" ignored="false" />
-    <file path="$PROJECT_DIR$/app/cache/dev/appDevDebugProjectContainer.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1386538359341" ignored="false" />
+    <file path="$PROJECT_DIR$/app/cache/dev/appDevDebugProjectContainer.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1386538799791" ignored="false" />
     <file path="/createcategory.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383036107972" ignored="false" />
     <file path="/createcategory.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385993312428" ignored="false" />
     <file path="/editcategory.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384777074858" ignored="false" />
@@ -515,24 +515,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Produit.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Entity/Produit.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1795" column="49" selection-start="36735" selection-end="36735" vertical-scroll-proportion="-23.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_listproducts.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Product/_listproducts.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="19" selection-start="3229" selection-end="3401" vertical-scroll-proportion="-18.75">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="editproduct.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Product/editproduct.html.twig">
           <provider selected="true" editor-type-id="text-editor">
@@ -569,6 +551,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="PageType.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Form/PageType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="16" selection-start="1323" selection-end="1323" vertical-scroll-proportion="-16.5">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="MarquesType.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Form/MarquesType.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -587,6 +578,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Page.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Entity/Page.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="583" column="4" selection-start="11250" selection-end="11250" vertical-scroll-proportion="0.9325843">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Marques.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Entity/Marques.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -596,10 +596,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.yml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="config.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/config/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="19" selection-start="3039" selection-end="3313" vertical-scroll-proportion="0.9354839">
+            <state line="106" column="19" selection-start="3039" selection-end="3313" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -615,8 +615,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/web/.htaccess" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Slots/theme.html.twig" />
         <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Entity/Rate.php" />
         <option value="$PROJECT_DIR$/web/bundles/horussite/css/jRating.jquery.css" />
         <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/layout.html.twig" />
@@ -631,6 +629,8 @@
         <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Form/MarquesType.php" />
         <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Entity/Marques.php" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Form/PageType.php" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Entity/Page.php" />
       </list>
     </option>
   </component>
@@ -1260,18 +1260,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Slots/theme.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="14" selection-start="288" selection-end="370" vertical-scroll-proportion="0.2535211" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="6" selection-start="4220" selection-end="4220" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Entity/Rate.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="59" column="19" selection-start="1030" selection-end="1034" vertical-scroll-proportion="-0.75">
@@ -1335,20 +1323,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Form/FamilleType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="16" selection-start="1078" selection-end="1236" vertical-scroll-proportion="-6.75">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Entity/Famille.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="732" column="0" selection-start="16090" selection-end="16294" vertical-scroll-proportion="-4.877551">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Form/MarquesType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="46" selection-start="1711" selection-end="1722" vertical-scroll-proportion="-17.75">
@@ -1365,7 +1339,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="19" selection-start="3039" selection-end="3313" vertical-scroll-proportion="0.9354839">
+        <state line="106" column="19" selection-start="3039" selection-end="3313" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Form/FamilleType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="16" selection-start="1078" selection-end="1236" vertical-scroll-proportion="-6.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Form/PageType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="16" selection-start="1323" selection-end="1323" vertical-scroll-proportion="-16.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Entity/Famille.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="732" column="0" selection-start="16090" selection-end="16294" vertical-scroll-proportion="-4.877551">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Entity/Page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="583" column="4" selection-start="11250" selection-end="11250" vertical-scroll-proportion="0.9325843">
           <folding />
         </state>
       </provider>
