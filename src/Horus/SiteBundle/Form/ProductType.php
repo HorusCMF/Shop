@@ -66,6 +66,12 @@ class ProductType extends AbstractType
                 'allow_delete' => true,
                 'allow_add' => true
             ))
+            ->add('liens', 'collection', array(
+                'type' => new LiensType(),
+                'by_reference' => true,
+                'allow_delete' => true,
+                'allow_add' => true
+            ))
             ->add('pjs', 'collection', array(
                 'type' => new PjType(),
                 'by_reference' => true,

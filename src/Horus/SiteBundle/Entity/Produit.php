@@ -384,6 +384,12 @@ class Produit
     protected $metas;
 
     /**
+     * @ORM\OneToMany(targetEntity="Liens",mappedBy="produit", cascade={"all"},orphanRemoval=true)
+     * @Assert\Valid
+     */
+    protected $liens;
+
+    /**
      * @ORM\OneToMany(targetEntity="Image",mappedBy="produit", cascade={"all"},orphanRemoval=true)
      * @Assert\Valid
      * @ORM\OrderBy({"dateCreated" = "DESC"})
@@ -1670,5 +1676,37 @@ class Produit
     public function getThreeTime()
     {
         return $this->threeTime;
+    }
+
+    /**
+     * Add liens
+     *
+     * @param Horus\SiteBundle\Entity\Liens $liens
+     * @return Produit
+     */
+    public function addLien(\Horus\SiteBundle\Entity\Liens $liens)
+    {
+        $this->liens[] = $liens;
+        return $this;
+    }
+
+    /**
+     * Remove liens
+     *
+     * @param Horus\SiteBundle\Entity\Liens $liens
+     */
+    public function removeLien(\Horus\SiteBundle\Entity\Liens $liens)
+    {
+        $this->liens->removeElement($liens);
+    }
+
+    /**
+     * Get liens
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getLiens()
+    {
+        return $this->liens;
     }
 }

@@ -4,6 +4,7 @@ namespace Horus\SiteBundle\Controller;
 
 use fg\Essence\Essence;
 use Horus\SiteBundle\Entity\Image;
+use Horus\SiteBundle\Entity\Liens;
 use Horus\SiteBundle\Entity\Meta;
 use Horus\SiteBundle\Entity\Pj;
 use Horus\SiteBundle\Entity\Produit;
@@ -295,14 +296,17 @@ class ProductController extends Controller
         }
 
         $meta = new Meta();
+        $lien = new Liens();
         $pj = new Pj();
         $produit = new Produit();
         $seo = new Seo();
         $produit->addSeo($seo);
         $produit->addMeta($meta);
+        $produit->addLien($lien);
         $produit->addPj($pj);
         $seo->setProduit($produit);
         $meta->setProduit($produit);
+        $lien->setProduit($produit);
         $pj->setProduit($produit);
 
         $form = $this->createForm(new ProductType(), $produit);
@@ -369,6 +373,13 @@ class ProductController extends Controller
                     $pj->upload($id->getId());
                     $pj->setProduit($id);
                 }
+
+            $liens = $id->getLiens();
+            if (!empty($liens))
+                foreach ($liens as $lien) {
+                    $lien->setProduit($id);
+                }
+
             $id->setDateUpdated(new \Datetime('now'));
             $em->persist($id);
             $em->flush();

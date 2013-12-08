@@ -1,0 +1,46 @@
+<?php
+
+namespace Horus\SiteBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
+
+/**
+ * Liens
+ * @ORM\Entity
+ * @ORM\Table(name="produit_liens")
+ * @ORM\HasLifecycleCallbacks()
+ */
+class Liens
+{
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+
+    /**
+     * @Assert\Url(message = "Le lien n'est pas valide")
+     * @ORM\Column(name="title", type="string", nullable=true)
+     */
+    private $link;
+
+    /**
+     * @ORM\Column(name="aliasing", type="string", nullable=true)
+     */
+    private $aliasing;
+
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Produit",inversedBy="seo")
+     * @ORM\JoinColumn(name="produit_id", referencedColumnName="id")
+     */
+    protected $produit;
+
+}

@@ -151,7 +151,7 @@ class Produit
 
 
     /**
-     * @ORM\Column(name="three_time", type="integer",  nullable=true)
+     * @ORM\Column(name="three_time", type="boolean",  nullable=true)
      */
     private $threeTime;
 
@@ -231,7 +231,7 @@ class Produit
 
     /**
      * @var string
-     * @ORM\Column(name="livraison", type="integer", nullable=true)
+     * @ORM\Column(name="livraison", type="boolean", nullable=true)
      */
     private $livraison;
 
@@ -382,6 +382,12 @@ class Produit
      * @Assert\Valid
      */
     protected $metas;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Liens",mappedBy="produit", cascade={"all"},orphanRemoval=true)
+     * @Assert\Valid
+     */
+    protected $liens;
 
     /**
      * @ORM\OneToMany(targetEntity="Image",mappedBy="produit", cascade={"all"},orphanRemoval=true)
@@ -1648,5 +1654,27 @@ class Produit
     public function getPosition()
     {
         return $this->position;
+    }
+
+    /**
+     * Set threeTime
+     *
+     * @param integer $threeTime
+     * @return Produit
+     */
+    public function setThreeTime($threeTime)
+    {
+        $this->threeTime = $threeTime;
+        return $this;
+    }
+
+    /**
+     * Get threeTime
+     *
+     * @return integer 
+     */
+    public function getThreeTime()
+    {
+        return $this->threeTime;
     }
 }

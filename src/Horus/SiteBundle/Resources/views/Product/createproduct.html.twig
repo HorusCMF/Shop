@@ -3,11 +3,15 @@
 {% block javascripts %}
     {{ parent() }}
     {% javascripts '@HorusSiteBundle/Resources/public/js/referencement.js' %}
-        <script src="{{ asset_url }}" type="text/javascript"></script>
+    <script src="{{ asset_url }}" type="text/javascript"></script>
     {% endjavascripts %}
 
     {% javascripts '@HorusSiteBundle/Resources/public/js/pj.js' %}
-        <script src="{{ asset_url }}" type="text/javascript"></script>
+    <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
+
+    {% javascripts '@HorusSiteBundle/Resources/public/js/liens.js' %}
+    <script src="{{ asset_url }}" type="text/javascript"></script>
     {% endjavascripts %}
 {% endblock %}
 
@@ -28,7 +32,8 @@
         </div>
     {% endif %}
 
-    <form id="createproduct" novalidate="novalidate" action="{{ path('horus_site_create_product') }}" method="post"  enctype="multipart/form-data">
+    <form id="createproduct" novalidate="novalidate" action="{{ path('horus_site_create_product') }}" method="post"
+          enctype="multipart/form-data">
 
     <div class="bs-example bs-example-tabs">
     <ul id="myTab" class="nav nav-tabs">
@@ -38,6 +43,7 @@
         <li><a href="#categorie" data-toggle="tab">Catégorie</a></li>
         <li><a href="#referencement" data-toggle="tab">Référencement</a></li>
         <li><a href="#caracteristiques" data-toggle="tab">Fiches techniques</a></li>
+        <li><a href="#liens" data-toggle="tab">Liens</a></li>
         <li><a href="#extras" data-toggle="tab">Extras</a></li>
         {#<li class="dropdown">#}
         {#<a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>#}
@@ -247,7 +253,7 @@
         </div>
         <div class="row-fluid">
             <div class="span6">
-                {{ form_widget(form.livraison, {'attr': {}}) }}
+                {{ form_widget(form.livraison, {'attr': { }}) }}
                 <label for="livraison">Livraison gratuite</label>
             </div>
         </div>
@@ -258,6 +264,7 @@
             </div>
         </div>
         <p></p>
+
         <div class="row-fluid">
             <div class="span3">
                 <label for="position">Positionnement</label>
@@ -345,45 +352,58 @@
             </div>
         </div>
     </div>
-    <div class="tab-pane fade" id="extras">
+    <div class="tab-pane fade" id="liens">
         <div class="row-fluid">
             <div class="span12">
-                <label for="service">Service inclus</label>
-                {{ form_widget(form.service, {'attr': {'class' : 'ckeditor' }}) }}
-            </div>
-        </div>
-        <div class="row-fluid">
-            <div class="span6">
-                <label for="video">Vidéo de présentation</label>
-                {{ form_widget(form.video, {'attr': { }}) }}
-                {{ form_errors(form.video) }}
-
-            </div>
-            <div class="span6">
-                <label for="extras">Commentaire</label>
-                {{ form_widget(form.extras, {'attr': { }}) }}
-            </div>
-        </div>
-        <div class="row-fluid">
-            <div class="span12">
-                <label for="articles">Articles associés</label>
-                {{ form_widget(form.articles, {'attr': { }}) }}
-            </div>
-        </div>
-        <div class="row-fluid">
-            <div class="span12">
-                <div class="pjs" data-prototype="{{ form_widget(form.pjs.vars.prototype)|e }}">
-                    {% for pj in form.pjs %}
-                        {{ form_row(pj.file) }}
+                <div class="liens" data-prototype="{{ form_widget(form.liens.vars.prototype)|e }}">
+                    {% for lien in form.liens %}
+                        <div class="clear">{{ form_row(lien.link) }}</div>
+                        <div class="clear">{{ form_row(lien.aliasing) }}</div>
                     {% endfor %}
                 </div>
             </div>
         </div>
     </div>
+        <div class="tab-pane fade" id="extras">
+            <div class="row-fluid">
+                <div class="span12">
+                    <label for="service">Service inclus</label>
+                    {{ form_widget(form.service, {'attr': {'class' : 'ckeditor' }}) }}
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span6">
+                    <label for="video">Vidéo de présentation</label>
+                    {{ form_widget(form.video, {'attr': { }}) }}
+                    {{ form_errors(form.video) }}
+
+                </div>
+                <div class="span6">
+                    <label for="extras">Commentaire</label>
+                    {{ form_widget(form.extras, {'attr': { }}) }}
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span12">
+                    <label for="articles">Articles associés</label>
+                    {{ form_widget(form.articles, {'attr': { }}) }}
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="pjs" data-prototype="{{ form_widget(form.pjs.vars.prototype)|e }}">
+                        {% for pj in form.pjs %}
+                            {{ form_row(pj.file) }}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
     </div>
-    <button class="btn btn-primary btn-large" type="submit"><i class="glyphicon glyphicon-plus"></i> Ajouter ce produit</button>
+    <button class="btn btn-primary btn-large" type="submit"><i class="glyphicon glyphicon-plus"></i> Ajouter ce produit
+    </button>
     </form>
     </div>
 {% endblock %}
