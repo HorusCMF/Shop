@@ -54,6 +54,19 @@ class Marques
     protected $title;
 
     /**
+     * @var string $title
+     *
+     * @ORM\Column(name="keywords", type="string", length=32)
+     * @Assert\Length(
+     *      min = "4",
+     *      max = "600",
+     *      minMessage = "Vos mots-clefs doit faire au minimum {{ limit }} caractères",
+     *      maxMessage = "Vos mots-clefs doit faire au maximum {{ limit }} caractères"
+     *  )
+     */
+    protected $keywords;
+
+    /**
      * @var string $resume
      *
      * @ORM\Column(name="resume", type="string", length=32)
@@ -814,5 +827,27 @@ class Marques
      */
     public function __toString(){
         return Box::limit_words($this->getTitle());
+    }
+
+    /**
+     * Set keywords
+     *
+     * @param string $keywords
+     * @return Marques
+     */
+    public function setKeywords($keywords)
+    {
+        $this->keywords = $keywords;
+        return $this;
+    }
+
+    /**
+     * Get keywords
+     *
+     * @return string 
+     */
+    public function getKeywords()
+    {
+        return $this->keywords;
     }
 }

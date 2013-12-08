@@ -4,6 +4,7 @@ namespace Horus\SiteBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+use Horus\SiteBundle\Util\Box;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
@@ -11,6 +12,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
 
 
 /**
+ * Class Marques
  * @ORM\Table(name="marques")
  * @ORM\Entity(repositoryClass="Horus\SiteBundle\Repository\MarquesRepository")
  * @Gedmo\Tree(type="nested")
@@ -52,6 +54,19 @@ class Marques
     protected $title;
 
     /**
+     * @var string $title
+     *
+     * @ORM\Column(name="keywords", type="string", length=32)
+     * @Assert\Length(
+     *      min = "4",
+     *      max = "600",
+     *      minMessage = "Vos mots-clefs doit faire au minimum {{ limit }} caractères",
+     *      maxMessage = "Vos mots-clefs doit faire au maximum {{ limit }} caractères"
+     *  )
+     */
+    protected $keywords;
+
+    /**
      * @var string $resume
      *
      * @ORM\Column(name="resume", type="string", length=32)
@@ -86,7 +101,7 @@ class Marques
     protected $path;
 
     /**
-     * @var string $picture
+     * @var string $metaTitle
      *
      * @ORM\Column(name="meta_title", type="text")
      * @Assert\Length(
@@ -185,24 +200,24 @@ class Marques
 
     /**
      * @Gedmo\TreeParent
-     * @ORM\ManyToOne(targetEntity="Category", inversedBy="children")
+     * @ORM\ManyToOne(targetEntity="Marques", inversedBy="children")
      * @ORM\JoinColumn(name="parent_id", referencedColumnName="id", onDelete="CASCADE")
      */
     private $parent;
 
     /**
-     * @ORM\OneToMany(targetEntity="Category", mappedBy="parent")
+     * @ORM\OneToMany(targetEntity="Marques", mappedBy="parent")
      * @ORM\OrderBy({"lft" = "ASC"})
      */
     private $children;
 
     /**
-     * @ORM\OneToMany(targetEntity="Marques", mappedBy="marque")
+     * @ORM\OneToMany(targetEntity="Produit", mappedBy="marque")
      */
     private $marques;
 
     /**
-     * @ORM\OneToMany(targetEntity="ImageCategory",mappedBy="category", cascade={"all"},orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity="ImageMarques", mappedBy="marque", cascade={"all"},orphanRemoval=true)
      * @ORM\OrderBy({"dateCreated" = "DESC"})
      */
     protected $images;
@@ -345,7 +360,7 @@ class Marques
 
     public function getAbsolutePath()
     {
-        return null === $this->path ? null : $this->getUploadRootDir().'/'.$this->getProduit()->getId().'/'.$this->path;
+        return null === $this->path ? null : $this->getUploadRootDir().'/'.$this->path;
     }
 
     public function getWebPath()
@@ -418,7 +433,10 @@ class Marques
      */
     public function getResume()
     {
-        return $this->resume;
+        if(!empty($this->resume))
+            return $this->resume;
+        else
+            return Box::limit_words($this->description);
     }
 
     /**
@@ -769,5 +787,45 @@ class Marques
     public function getImages()
     {
         return $this->images;
+    }
+
+    /**
+     * Add marques
+     *
+     * @param Horus\SiteBundle\Entity\Marques $marques
+     * @return Marques
+     */
+    public function addMarque(\Horus\SiteBundle\Entity\Marques $marques)
+    {
+        $this->marques[] = $marques;
+        return $this;
+    }
+
+    /**
+     * Remove marques
+     *
+     * @param Horus\SiteBundle\Entity\Marques $marques
+     */
+    public function removeMarque(\Horus\SiteBundle\Entity\Marques $marques)
+    {
+        $this->marques->removeElement($marques);
+    }
+
+    /**
+     * Get marques
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getMarques()
+    {
+        return $this->marques;
+    }
+
+    /**
+     * Get Title
+     * @return string
+     */
+    public function __toString(){
+        return Box::limit_words($this->getTitle());
     }
 }
