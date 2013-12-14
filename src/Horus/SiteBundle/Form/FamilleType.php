@@ -27,6 +27,9 @@ class FamilleType extends AbstractType
                 ->add('parent', 'entity', array(
                     'class' => 'HorusSiteBundle:Famille',
                     'property' => 'OptionLabel',
+                    'required' => false,
+                    'empty_value' => 'Choisissez une famille parente',
+                    'label' => 'Famille parente'
                 ))
                 ->add('produits');
     }

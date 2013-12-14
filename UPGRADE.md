@@ -2,6 +2,7 @@ UPGRADE FROM 1.0 to 1.1
 =======================
 
 ### General
+  * Autocompletion tags words + Autocompletion search
   * Udate Create Tags several separate with comma
   * Update/Upgrade Product & Categories View Loop
   * Right Bloc in real time to actions

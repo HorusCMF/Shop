@@ -3,7 +3,7 @@
 {% block content %}
 
     <div class="page" id="commercials">
-        <h2><i class="glyphicon glyphicon-star"></i> Vos actions commerciales</h2>
+        <h2><i class="glyphicon glyphicon-star"></i> Vos actions commerciales({{ commercials|length }})</h2>
         {% include 'HorusSiteBundle:Slots:display.html.twig' %}
 
         {% if commercials is not empty %}
@@ -69,8 +69,9 @@
 
         <div class="clear"></div>
         <div class="action">
-            <a href="{{ path('horus_site_commercial_create') }}" class="pull-right  btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Ajouter une action commerciale</a>
+            <a href="{{ path('horus_site_commercial_create') }}" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Ajouter une action commerciale</a>
         </div>
+        <div class="clear"></div>
     </div>
 {% endblock %}
 

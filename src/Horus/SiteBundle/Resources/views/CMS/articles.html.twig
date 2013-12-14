@@ -5,6 +5,7 @@
     <div class="page" id="articles">
         <h2><i class="glyphicon glyphicon-tags"></i> Vos articles({{ articles|length }})</h2>
         {% include 'HorusSiteBundle:Slots:display.html.twig' %}
+        {% include 'HorusSiteBundle:CMS:_states.html.twig' %}
 
         {% for article in articles %}
             <div class="media">
@@ -18,7 +19,7 @@
                     </ul>
                 </div>
                 <div class="media-body">
-                    <h4 class="media-heading"><a href="">{{ article.title }}</a>
+                    <h4 class="media-heading"><a href="{{ path('horus_site_edit_article', {'id' : article.id}) }}">{{ article.title }}</a>
                         {% if article.isVisible %}
                             <span class="badge badge-success">En ligne</span>
                         {% else %}

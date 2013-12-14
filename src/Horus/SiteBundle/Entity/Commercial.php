@@ -93,6 +93,12 @@ class Commercial
 
     /**
      * @var string
+     * @ORM\Column(name="dateFinPublication", type="datetime", nullable=true)
+     */
+    private $dateFinPublication;
+
+    /**
+     * @var string
      * @ORM\Column(name="isVisible", type="boolean", nullable=true)
      */
     private $isVisible;
@@ -400,5 +406,27 @@ class Commercial
     public function getNature()
     {
         return $this->nature;
+    }
+
+    /**
+     * Set dateFinPublication
+     *
+     * @param datetime $dateFinPublication
+     * @return Commercial
+     */
+    public function setDateFinPublication($dateFinPublication)
+    {
+        $this->dateFinPublication = $dateFinPublication;
+        return $this;
+    }
+
+    /**
+     * Get dateFinPublication
+     *
+     * @return datetime 
+     */
+    public function getDateFinPublication()
+    {
+        return $this->dateFinPublication;
     }
 }

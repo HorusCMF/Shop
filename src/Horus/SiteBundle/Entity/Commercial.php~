@@ -1,6 +1,6 @@
 <?php
 
-namespace Hetic\SiteBundle\Entity;
+namespace Horus\SiteBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -9,7 +9,7 @@ use Gedmo\Mapping\Annotation as Gedmo; // gedmo annotations
 
 /**
  * Commercial
- * @ORM\Entity(repositoryClass="Hetic\SiteBundle\Repository\CommercialRepository")
+ * @ORM\Entity(repositoryClass="Horus\SiteBundle\Repository\CommercialRepository")
  * @ORM\Table(name="commercial")
  * @ORM\HasLifecycleCallbacks()
  */
@@ -18,6 +18,7 @@ class Commercial
 
     public function __construct(){
         $this->datePublication = new \Datetime('now');
+        $this->dateFinPublication = new \Datetime('+1 month');
         $this->dateCreated = new \Datetime('now');
         $this->dateUpdated = new \Datetime('now');
         $this->isVisible = true;
@@ -90,6 +91,12 @@ class Commercial
      * @ORM\Column(name="datePublication", type="datetime", nullable=true)
      */
     private $datePublication;
+
+    /**
+     * @var string
+     * @ORM\Column(name="dateFinPublication", type="datetime", nullable=true)
+     */
+    private $dateFinPublication;
 
     /**
      * @var string
@@ -273,10 +280,10 @@ class Commercial
     /**
      * Set category
      *
-     * @param Hetic\SiteBundle\Entity\Category $category
+     * @param Horus\SiteBundle\Entity\Category $category
      * @return Commercial
      */
-    public function setCategory(\Hetic\SiteBundle\Entity\Category $category = null)
+    public function setCategory(\Horus\SiteBundle\Entity\Category $category = null)
     {
         $this->category = $category;
         return $this;
@@ -285,7 +292,7 @@ class Commercial
     /**
      * Get category
      *
-     * @return Hetic\SiteBundle\Entity\Category 
+     * @return Horus\SiteBundle\Entity\Category
      */
     public function getCategory()
     {
@@ -295,10 +302,10 @@ class Commercial
     /**
      * Set produit
      *
-     * @param Hetic\SiteBundle\Entity\Produit $produit
+     * @param Horus\SiteBundle\Entity\Produit $produit
      * @return Commercial
      */
-    public function setProduit(\Hetic\SiteBundle\Entity\Produit $produit = null)
+    public function setProduit(\Horus\SiteBundle\Entity\Produit $produit = null)
     {
         $this->produit = $produit;
         return $this;
@@ -307,7 +314,7 @@ class Commercial
     /**
      * Get produit
      *
-     * @return Hetic\SiteBundle\Entity\Produit 
+     * @return Horus\SiteBundle\Entity\Produit
      */
     public function getProduit()
     {
@@ -378,5 +385,49 @@ class Commercial
     public function getOffert()
     {
         return $this->offert;
+    }
+
+    /**
+     * Set nature
+     *
+     * @param integer $nature
+     * @return Commercial
+     */
+    public function setNature($nature)
+    {
+        $this->nature = $nature;
+        return $this;
+    }
+
+    /**
+     * Get nature
+     *
+     * @return integer 
+     */
+    public function getNature()
+    {
+        return $this->nature;
+    }
+
+    /**
+     * Set dateFinPublication
+     *
+     * @param datetime $dateFinPublication
+     * @return Commercial
+     */
+    public function setDateFinPublication($dateFinPublication)
+    {
+        $this->dateFinPublication = $dateFinPublication;
+        return $this;
+    }
+
+    /**
+     * Get dateFinPublication
+     *
+     * @return datetime 
+     */
+    public function getDateFinPublication()
+    {
+        return $this->dateFinPublication;
     }
 }

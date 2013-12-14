@@ -42,7 +42,7 @@
                             <span class="badge badge-danger">Hors-Ligne</span>
                         {% endif %}
                     </h4>
-                    <p>{{ category.cover|raw }}</p>
+                    <p>{{ category.cover|striptags|truncate(900,'...')|raw }}</p>
                     <h4 class="pull-right"><span class="label label-info">{{ category.produits|length|default('0') }} produit(s)</span></h4>
                 </div>
             </div>

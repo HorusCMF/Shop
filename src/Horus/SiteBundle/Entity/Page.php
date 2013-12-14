@@ -81,6 +81,14 @@ class Page
     private $cover;
 
 
+
+    /**
+     * @Assert\Choice(choices = {"1","2", "3"}, message = "Choisissez un genre valide.")
+     * @ORM\Column(name="nature", type="integer", length=200, nullable=true)
+     */
+    private $nature;
+
+
     /**
      * @var integer
      * @Assert\Url(message="Votre URL de Vidéo n'est pas valide")
@@ -170,6 +178,7 @@ class Page
         $this->articles = new \Doctrine\Common\Collections\ArrayCollection();
         $this->visible = true;
         $this->dateCreated = new \DateTime('now');
+        $this->nature = 3;
     }
 
 
@@ -582,4 +591,26 @@ class Page
         ) . $this->getName();
     }
 
+
+    /**
+     * Set nature
+     *
+     * @param integer $nature
+     * @return Page
+     */
+    public function setNature($nature)
+    {
+        $this->nature = $nature;
+        return $this;
+    }
+
+    /**
+     * Get nature
+     *
+     * @return integer 
+     */
+    public function getNature()
+    {
+        return $this->nature;
+    }
 }

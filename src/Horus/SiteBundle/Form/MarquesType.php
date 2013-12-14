@@ -24,9 +24,9 @@ class MarquesType extends AbstractType
                 ->add('resume', 'textarea', array('attr' => array("class" => "ckeditor", 'placeholder' => 'Résumé en quelques mots')))
                 ->add('description', 'textarea', array('attr' => array("class" => "ckeditor", 'placeholder' => 'Description complète')))
                 ->add('file')
-                ->add('metaTitle', 'text', array('required' => false,'attr' => array('placeholder' => "Titre de la marque")))
-                ->add('metaDescription', 'textarea', array('required' => false,'attr' => array('class' => 'form-control', 'rows' => 7, 'cols' => 80,'placeholder' => "Description de la marque")))
-                ->add('metaKeywords', 'textarea', array('required' => false,'attr' => array('class' => 'form-control','rows' => 7, 'cols' => 80,'placeholder' => "Mots Clefs de la marque")))
+                ->add('metaTitle', 'text', array('label' => 'Titre de référencement','required' => false,'attr' => array('placeholder' => "Titre de la marque")))
+                ->add('metaDescription', 'textarea', array('label' => 'Description de référencement','required' => false,'attr' => array('class' => 'form-control', 'rows' => 7, 'cols' => 80,'placeholder' => "Description de la marque")))
+                ->add('metaKeywords', 'textarea', array('label' => 'Mots-clefs de référencement','required' => false,'attr' => array('class' => 'form-control','rows' => 7, 'cols' => 80,'placeholder' => "Mots Clefs de la marque")))
                 ->add('active')
                 ->add('parent', 'entity', array(
                     'required' => false,

@@ -22,6 +22,7 @@ class Article
         $this->dateCreated = new \Datetime('now');
         $this->dateUpdated = new \Datetime('now');
         $this->isVisible = true;
+        $this->nature = 3;
 
     }
     /**

@@ -11,6 +11,9 @@
     <div class="page" id="pages">
         <h2><i class="glyphicon glyphicon-file"></i> Vos pages({{ pages|length }})</h2>
         {% include 'HorusSiteBundle:Slots:display.html.twig' %}
+        {% include 'HorusSiteBundle:CMS:_states.html.twig' %}
+
+
 
         {% for page in pages %}
             <div class="media">

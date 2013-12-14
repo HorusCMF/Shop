@@ -52,7 +52,7 @@ class Famille
      * )
      * @Assert\Length(
      *      min = "5",
-     *      max = "5000",
+     *      max = "60000",
      *      minMessage = "Votre description doit faire au moins {{ limit }} caractères",
      *      maxMessage = "Votre description ne peut pas être plus long que {{ limit }} caractères"
      * )
@@ -66,7 +66,7 @@ class Famille
      * )
      * @Assert\Length(
      *      min = "3",
-     *      max = "1000",
+     *      max = "10000",
      *      minMessage = "Votre résumé doit faire au moins {{ limit }} caractères",
      *      maxMessage = "Votre résumé ne peut pas être plus long que {{ limit }} caractères"
      * )
@@ -145,7 +145,7 @@ class Famille
     /**
      * @Assert\Image(
      *     minWidth = 200,
-     *     minHeight  = 200,
+     *     minHeight  = 100,
      *     maxWidth = 3000,
      *     maxHeight = 3000,
      *     maxSize = "6000k",

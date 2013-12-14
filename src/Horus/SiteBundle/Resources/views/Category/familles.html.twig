@@ -1,8 +1,8 @@
 {% extends 'HorusSiteBundle::layout.html.twig' %}
 
 {% block content %}
-    <div class="" id="familles">
-        <h2><i class="glyphicon glyphicon-gift"></i> Vos familles</h2>
+    <div class="page" id="familles">
+        <h2><i class="glyphicon glyphicon-th"></i> Vos familles({{ familles|length }})</h2>
         {% include 'HorusSiteBundle:Slots:display.html.twig' %}
 
         {% for famille in familles %}
@@ -37,7 +37,7 @@
                         {% endif %}
                     </h4>
 
-                    <p>{{ famille.cover|raw }}</p>
+                    <p>{{ famille.cover|striptags|truncate(900,'...')|raw }}</p>
                     <h4 class="pull-right"><span class="label label-info">{{ famille.produits|length|default('0') }}
                             produit(s)</span></h4>
 
@@ -64,8 +64,9 @@
         {#<li class="disabled"><a href="#"><i class="glyphicon glyphicon-chevron-right"></i></a></li>#}
         {#</ul>#}
         <div class="clear"></div>
-        <a href="{{ path('horus_site_add_famille') }}" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Ajouter une famille</a>
-
+        <div class="action">
+            <a href="{{ path('horus_site_add_famille') }}" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Ajouter une famille</a>
+        </div>
     </div>
 {% endblock %}
 

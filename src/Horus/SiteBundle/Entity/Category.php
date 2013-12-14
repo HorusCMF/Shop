@@ -60,7 +60,7 @@ class Category
      * )
      * @Assert\Length(
      *      min = "5",
-     *      max = "5000",
+     *      max = "10000",
      *      minMessage = "Votre description doit faire au moins {{ limit }} caractères",
      *      maxMessage = "Votre description ne peut pas être plus long que {{ limit }} caractères"
      * )
@@ -74,7 +74,7 @@ class Category
      * )
      * @Assert\Length(
      *      min = "3",
-     *      max = "3000",
+     *      max = "6000",
      *      minMessage = "Votre résumé doit faire au moins {{ limit }} caractères",
      *      maxMessage = "Votre résumé ne peut pas être plus long que {{ limit }} caractères"
      * )

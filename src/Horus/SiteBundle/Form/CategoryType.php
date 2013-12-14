@@ -26,7 +26,10 @@ class CategoryType extends AbstractType
                 ->add('parent', 'entity', array(
                     'class' => 'HorusSiteBundle:Category',
                     'property' => 'OptionLabel',
-                ))
+                    'required' => false,
+                    'empty_value' => 'Choisissez une catégorie parente',
+                    'label' => 'Catégorie parente'
+            ))
                 ->add('articles');
     }
 
