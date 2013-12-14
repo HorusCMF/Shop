@@ -581,5 +581,5 @@ class Page
             ($this->getLvl() + 1) * 2
         ) . $this->getName();
     }
-    
+
 }

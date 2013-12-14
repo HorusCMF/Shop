@@ -4,7 +4,7 @@
     "type": "project",
     "version": "1.0",
     "description": "Horus CMF Shop, open source e-commerce solution based on Symfony2",
-    "keywords": ["CMF", "Shop","Symfony2"],
+    "keywords": ["CMF", "Shop", "Symfony2"],
     "license": "MIT",
     "authors": [
         {
@@ -14,11 +14,13 @@
     ],
     "minimum-stability": "dev",
     "autoload": {
-        "psr-0": { "": "src/" }
+        "psr-0": {
+            "": "src/"
+        }
     },
     "require": {
         "php": ">=5.3.3",
-        "symfony/symfony": "~2.3",
+        "symfony/symfony": "~2.4",
         "doctrine/orm": ">=2.2.3,<2.3",
         "doctrine/doctrine-bundle": "1.2.*",
         "twig/extensions": "1.0.*",
@@ -37,18 +39,17 @@
         "friendsofsymfony/elastica-bundle": "3.0.*@dev",
         "doctrine/mongodb-odm-bundle": "3.0.*",
         "whiteoctober/breadcrumbs-bundle": "dev-master",
-        "knplabs/knp-menu-bundle":"dev-master",
-        "stof/doctrine-extensions-bundle":"dev-master",
-        "fg/essence":  "1.4.1",
-        "imagine/Imagine":"0.6.*@dev",
-        "saad-tazi/g-chart-bundle" : "dev-master",
-        "phpdocumentor/phpdocumentor": "*",
+        "stof/doctrine-extensions-bundle": "dev-master",
+        "fg/essence": "1.4.1",
+        "imagine/Imagine": "0.6.*@dev",
+        "saad-tazi/g-chart-bundle": "dev-master",
         "nelmio/security-bundle": "dev-master",
         "whiteoctober/tcpdf-bundle": "dev-master",
         "egulias/security-debug-command-bundle": "dev-master",
-        "doctrine/doctrine-fixtures-bundle": "dev-master"
-
+        "doctrine/doctrine-fixtures-bundle": "dev-master",
+        "knplabs/knp-menu-bundle": "dev-master"
     },
+
     "scripts": {
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
@@ -76,7 +77,7 @@
             "file": "app/config/parameters.yml"
         },
         "branch-alias": {
-            "dev-master": "2.3-dev"
+            "dev-master": "2.4-dev"
         }
     }
 }

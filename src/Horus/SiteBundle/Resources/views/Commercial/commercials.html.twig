@@ -4,6 +4,8 @@
 
     <div class="" id="commercials">
         <h2><i class="glyphicon glyphicon-star"></i> Vos actions commerciales</h2>
+        {% include 'HorusSiteBundle:Slots:display.html.twig' %}
+
         {% if commercials is not empty %}
             <table class="table table-bordered">
             <thead>

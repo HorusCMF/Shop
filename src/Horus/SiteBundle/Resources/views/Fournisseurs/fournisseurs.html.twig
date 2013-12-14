@@ -4,6 +4,8 @@
 
     <div class="" id="marques">
         <h2><i class="glyphicon glyphicon-gift"></i> Vos fournisseurs</h2>
+        {% include 'HorusSiteBundle:Slots:display.html.twig' %}
+
         {% for fournisseur in fournisseurs %}
             <div class="media">
                 <div class="btn-group pull-right">

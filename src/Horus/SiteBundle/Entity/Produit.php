@@ -366,7 +366,6 @@ class Produit
 
     /**
      * @ORM\OneToMany(targetEntity="Rate",mappedBy="produit", cascade={"all"},orphanRemoval=true)
-     * @Assert\Valid
      */
     protected $rates;
 

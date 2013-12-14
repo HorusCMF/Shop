@@ -48,8 +48,8 @@ assetic:
 #            node: /usr/local/bin/node
 #            node_paths: [/usr/local/lib/node, /usr/local/lib/node_modules]
          coffee:
-            bin: /usr/bin/coffee
-            node: /usr/bin/node
+            bin: /usr/local/bin/coffee
+            node: /usr/local/bin/node
             apply_to: "\.coffee$"
          sass:
             bin: /usr/local/bin/sass

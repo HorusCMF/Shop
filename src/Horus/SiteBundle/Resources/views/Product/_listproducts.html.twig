@@ -38,9 +38,9 @@
                     <h4 class="media-heading"><a href="{{ path('horus_site_product', {'id' : produit.id}) }}">{{ produit.title }}</a> de
                         <a href="{{ path('horus_site_category', {'id' : produit.category.id}) }}">{{ produit.category.name }}</a>
                         {% if produit.isVisible %}
-                            <span class="badge badge-success">En ligne</span>
+                            <span class="pull-right badge badge-success">En ligne</span>
                         {% else %}
-                            <span class="badge badge-danger">Hors-Ligne</span>
+                            <span class="pull-right badge badge-danger">Hors-Ligne</span>
                         {% endif %}
                     </h4>
 

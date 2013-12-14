@@ -13,8 +13,3 @@ horus_site_denied:
 
 horus:
   resource: "@HorusSiteBundle/Resources/config/routing.yml"
-  prefix:   /backend
-
-horus_backend:
-  resource: "@HorusFrontBundle/Resources/config/routing.yml"
-  prefix:   /frontend

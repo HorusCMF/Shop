@@ -3,6 +3,8 @@
 {% block content %}
     <div class="" id="pages">
         <h2><i class="glyphicon glyphicon-gift"></i> Vos pages</h2>
+        {% include 'HorusSiteBundle:Slots:display.html.twig' %}
+
         {% for page in pages %}
             <div class="media">
                 <div class="btn-group pull-right">

@@ -3,6 +3,8 @@
 {% block content %}
     <div class="" id="familles">
         <h2><i class="glyphicon glyphicon-gift"></i> Vos familles</h2>
+        {% include 'HorusSiteBundle:Slots:display.html.twig' %}
+
         {% for famille in familles %}
             <div class="media">
                 <div class="btn-group pull-right">

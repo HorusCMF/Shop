@@ -4,6 +4,8 @@
 
     <div class="" id="articles">
         <h2><i class="glyphicon glyphicon-gift"></i> Vos articles</h2>
+        {% include 'HorusSiteBundle:Slots:display.html.twig' %}
+
         {% for article in articles %}
             <div class="media">
                 <div class="btn-group pull-right">

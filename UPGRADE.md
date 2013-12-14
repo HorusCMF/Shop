@@ -2,9 +2,10 @@ UPGRADE FROM 1.0 to 1.1
 =======================
 
 ### General
+  * Update/Upgrade Product & Categories View Loop
   * Right Bloc in real time to actions
   * Add Position to Product, Categories...
-  * View all actions of Administrateurs
+  * View all actions of administrateurs
   * Add Tooltips to help
   * Resize images
   * Adresses of Clients

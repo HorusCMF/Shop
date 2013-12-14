@@ -155,6 +155,14 @@ hr.fancy-line:after
   height: 0.5em
   top: 1px
 
+#advancedsearch
+  label
+    color: white !important
+
+.media-heading
+  a:hover, a:focus
+    color: brown
+
 .addcaracteristiques
   float: left
   margin: 10px
@@ -289,7 +297,6 @@ select:invalid
 #advancedsearch
   .row-fluid
     .span2
-      width: 10.5%
       label
         font-size: 16px
   button[type="submit"]
@@ -344,7 +351,6 @@ li
 .span3
   .panel-body
     .nav-tabs>li>a
-      font-size: 11px
       color: white
     .table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th
       background-color: brown
@@ -414,6 +420,12 @@ li
 .panel-primary
   border: none
 
+.open>.dropdown-menu
+  li
+    a:hover, a:focus
+      label
+        color: white !important
+
 .nav-tabs
   border: none
 
@@ -464,11 +476,27 @@ h1, h2
   background-color: darkslategrey
   border: 1px solid #222
 
-@media (min-width: 500px) and (max-width: 800px)
+@media (max-width: 1200px)
+  .navbar-default .navbar-nav>li>a
+    font-size: 12px
+  .navbar-right
+    display: none !important
+  .row-fluid > .span3
+    display: none
+  .span3
+    .panel-body
+      font-size: 12px
+    .panel-heading
+      h4
+        font-size: 16px
+
+@media (min-width: 500px) and (max-width: 900px)
   .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td
     font-size: 80%
   .nav>li>a
     font-size: 12px
+
+
 
 @media (min-width: 1200px)
   .container
@@ -476,6 +504,24 @@ h1, h2
 
 
 @media (max-width: 600px)
+  #advancedsearch
+    .row-fluid
+      .span2
+        width: 90px
+        float: left
+        margin-left: 25px
+  .label
+    font-size: 90%
+  .badge
+    font-size: 15px
+    margin: 5px
+  .page
+    h2
+      font-size: 27px
+  .btn
+    font-size: 11px
+  .media-body
+    clear: both
   .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td
     font-size: 80%
   #searchmenu
@@ -496,15 +542,13 @@ h1, h2
   .nav>li
     margin-left: 5px
   .nav-tabs>li>a
-    font-size: 11px
+    margin: 0
   .navbar-fixed-top, .navbar-fixed-bottom
     position: fixed
   .navbar-default
     .navbar-brand
       position: relative
       left: 50px
-  .label
-    font-size: 64%
   .navbar-default
     margin: 0
   .form-control

@@ -23,7 +23,7 @@
         produit</a>
 
     <h1><i class="glyphicon glyphicon-pencil"></i> Editer "{{ produit.title|title }}"</h1>
-    <h6>Référence: {{ produit.reference }}</h6>
+    <h6 class="pull-right">Référence: {{ produit.reference }}</h6>
     <div class="star" data-average="{{ produit.average }}"></div>
     <div>({{ produit.rates|length }} votes)</div>
     <div class="clear"></div>
@@ -376,7 +376,7 @@
         </div>
     </div>
     <div class="tab-pane fade" id="extras">
-        {% if video.html is defined and video.html is not empty %}
+        {% if video.html is defined %}
             <h3>La vidéo de votre produit</h3>
             <div class="row-fluid well">
                 <div class="span12">
