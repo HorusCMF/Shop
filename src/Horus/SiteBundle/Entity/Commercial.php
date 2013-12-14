@@ -56,6 +56,8 @@ class Commercial
     private $title;
 
 
+
+
     /**
      * @Assert\NotBlank(
      *     message = "La description ne doit pas etre vide"
@@ -132,6 +134,30 @@ class Commercial
      */
     private $produit;
 
+
+
+    /**
+     * @Assert\Image(
+     *     minWidth = 200,
+     *     minHeight  = 100,
+     *     maxWidth = 3000,
+     *     maxHeight = 3000,
+     *     maxSize = "6000k",
+     *     mimeTypes = {"image/jpg","image/jpeg", "image/png", "image/gif", "image/bmp"},
+     *     mimeTypesMessage = "Image au format non supporté",
+     *    maxWidthMessage = "Image trop grande en largeur {{ width }}px. Le maximum en largeur est de {{ max_width }}px" ,
+     *    minWidthMessage = "Image trop petite en largeur {{ width }}px. Le minimum en largeur est de {{ min_width }}px" ,
+     *    minHeightMessage = "Image trop petite en hauteur {{ height }}px. Le mimum en hauteur est de {{ min_height }}px" ,
+     *    maxHeightMessage = "Image trop grande en hauteur  {{ height }}px. Le maximum en hauteur est de {{ max_height }}px"
+     * )
+     */
+    public $file;
+
+
+    /**
+     * @ORM\Column(name="path", type="string", length=3000, nullable=true)
+     */
+    private $path;
 
 
     /**
@@ -428,5 +454,194 @@ class Commercial
     public function getDateFinPublication()
     {
         return $this->dateFinPublication;
+    }
+
+
+
+
+
+
+    /**
+     *  Upload Images
+     *
+     * @return text
+     */
+
+    public function getAbsolutePath()
+    {
+        return null === $this->path ? null : $this->getUploadRootDir().'/'.$this->path;
+    }
+
+    public function getWebPath()
+    {
+        return null === $this->path ? null : $this->getUploadDir().'/'.$this->path;
+    }
+
+    protected function getUploadRootDir()
+    {
+        // le chemin absolu du répertoire où les documents uploadés doivent être sauvegardés
+        return __DIR__.'/../../../../web/'.$this->getUploadDir();
+    }
+
+    protected function getUploadDir()
+    {
+        // on se débarrasse de « __DIR__ » afin de ne pas avoir de problème lorsqu'on affiche
+        // le document/image dans la vue.
+        return 'uploads/commercials/';
+    }
+
+
+    /**
+     * @ORM\PrePersist()
+     * @ORM\PreUpdate()
+     */
+    public function preUpload()
+    {
+        if (null !== $this->file) {
+            // faites ce que vous voulez pour générer un nom unique
+            $this->path = sha1(uniqid(mt_rand(), true)).'.'.$this->file->guessExtension();
+        }
+    }
+
+    /**
+     * @ORM\PostPersist()
+     * @ORM\PostUpdate()
+     */
+    public function upload($id = null)
+    {
+
+        // la propriété « file » peut être vide si le champ n'est pas requis
+        if (null === $this->file) {
+            return;
+        }
+
+
+        if(!is_dir(@mkdir($this->getUploadRootDir().'/'.$id)))
+            @mkdir($this->getUploadRootDir().'/'.$id);
+
+
+        // utilisez le nom de fichier original ici mais
+        // vous devriez « l'assainir » pour au moins éviter
+        // quelconques problèmes de sécurité
+
+        // la méthode « move » prend comme arguments le répertoire cible et
+        // le nom de fichier cible où le fichier doit être déplacé
+
+        $rewritename = sha1(uniqid(mt_rand(), true));
+        $rewritefile = $rewritename.'.'.$this->file->guessExtension();
+        $extension = $this->file->guessExtension();
+
+        $this->file->move($this->getUploadRootDir().'/'.$id, $rewritefile);
+
+
+        // définit la propriété « path » comme étant le nom de fichier où vous
+        // avez stocké le fichier
+        $this->path = $rewritefile;
+
+//        $this->path = sha1(uniqid(mt_rand(), true)).'.'.$this->file->guessExtension();
+
+        //Original photo
+        $bigfile = $this->getUploadRootDir().'/'.$id.'/'.$rewritefile;
+
+        if ($extension == "jpg" || $extension == "jpeg") {
+            $src_img = imagecreatefromjpeg($bigfile);
+        }
+        if ($extension == "png") {
+            $src_img = imagecreatefrompng($bigfile);
+        }
+        if ($extension == "gif") {
+            $src_img = imagecreatefromgif($bigfile);
+        }
+
+        // Le ratio de l'image uploadée
+        $oldWidth = imageSX($src_img);
+        $oldHeight = imageSY($src_img);
+        $ratio = $oldWidth / $oldHeight;
+
+        $taille = array(
+            array(
+                'name' => 'medium',
+                'width' => 300,
+                'height' => 260
+            ),
+            array(
+                'name' => 'small',
+                'width' => 250,
+                'height' => 180
+            ),
+        );
+
+        // C'est parti
+        foreach ($taille as $value) {
+
+            // On prépare les valeurs
+            $width = $value['width'] - 1;
+            $height = $value['height'] -1;
+            $ratioImg = $width / $height;
+
+            // On calcule les nouvelles
+            if ($ratioImg > $ratio) {
+                $newWidth = $width;
+                $newHeight = $width / $ratio;
+            } elseif ($ratioImg < $ratio) {
+                $newHeight = $height;
+                $newWidth = $height * $ratio;
+            } else {
+                $newWidth = $width;
+                $newHeight = $height;
+            }
+
+            // Point de départ du crop
+            $x = ($newWidth - $width) / 2;
+            $y = 0;
+
+            // On bosse sur l'image
+            $imagine = new \Imagine\Gd\Imagine();
+            $imagine
+                ->open($bigfile)
+                ->thumbnail(new \Imagine\Image\Box($newWidth, $newHeight))
+                ->save(
+                    $this->getUploadRootDir().'/'.$id.'/' . $rewritename . '-' . $value['name'] . '.' . $extension,
+                    array(
+                        'quality' => 80
+                    )
+                );
+        }
+        // « nettoie » la propriété « file » comme vous n'en aurez plus besoin
+        $this->file = null;
+    }
+
+    /**
+     * @ORM\PostRemove()
+     */
+    public function removeUpload()
+    {
+        if ($file = $this->getAbsolutePath()) {
+            @unlink($file);
+        }
+    }
+
+
+
+    /**
+     * Set path
+     *
+     * @param string $path
+     * @return Commercial
+     */
+    public function setPath($path)
+    {
+        $this->path = $path;
+        return $this;
+    }
+
+    /**
+     * Get path
+     *
+     * @return string 
+     */
+    public function getPath()
+    {
+        return $this->path;
     }
 }

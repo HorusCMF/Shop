@@ -52,6 +52,7 @@ class CommercialController extends Controller
         $form->handleRequest($request);
 
         if ($form->isValid()) {
+            $commercial->upload();
             $em->persist($commercial);
             $em->flush();
             $this->get('session')->getFlashBag()->add(
@@ -88,6 +89,7 @@ class CommercialController extends Controller
         $form->handleRequest($request);
 
         if ($form->isValid()) {
+            $id->upload();
             $em->persist($id);
             $em->flush();
             $this->get('session')->getFlashBag()->add(

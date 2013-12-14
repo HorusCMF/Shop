@@ -116,6 +116,7 @@ twig:
       documentsuploads: '/uploads/documents/'
       imguser: '/uploads/users/'
       imgpartenaire: '/uploads/partenaires/'
+      imgcommercials: '/uploads/commercials/'
       imgrdvs: '/uploads/rdvs/'
       imgoffers: '/uploads/offers/'
       imgsports: '/uploads/sports/'

@@ -25,6 +25,7 @@ class CommercialType extends AbstractType
                 ->add('remiseNet')
                 ->add('remiseVar')
                 ->add('offert')
+                ->add('file')
                 ->add('nature','choice', array(
                     'choices'   => array(1 => 'Remise Nette (€)', 2 => 'Remise Variable (%)', 3 => 'Produit offert (+)'),
                     'required'  => true,

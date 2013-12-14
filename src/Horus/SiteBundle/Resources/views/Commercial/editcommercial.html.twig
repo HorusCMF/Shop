@@ -19,7 +19,7 @@
 
         <hr class="clear fancy-line">
 
-        <form novalidate="novalidate" action="{{ path('horus_site_edit_commercial',{'id' : commercial.id}) }}"
+        <form enctype="multipart/form-data" novalidate="novalidate" action="{{ path('horus_site_edit_commercial',{'id' : commercial.id}) }}"
               method="post">
 
             <div class="row-fluid">
@@ -59,6 +59,18 @@
                     <label for="content">Description</label>
                     {{ form_widget(form.content) }}
                     {{ form_errors(form.content) }}
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span12">
+                    <label for="title">Image</label>
+                    {{ form_widget(form.file) }}
+                    {{ form_errors(form.file) }}
+                    {% if commercial.path is not empty %}
+                        <img class="img-responsive"  src="{{ imgcommercials  ~ commercial.path|sizes('small') }}"/>
+                    {% else %}
+                        <img class="media-object img-thumbnail" src="http://placehold.it/150x75" alt="...">
+                    {% endif %}
                 </div>
             </div>
             <div class="row-fluid">
