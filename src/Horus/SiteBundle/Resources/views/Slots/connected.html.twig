@@ -5,7 +5,7 @@
 {% if app.session.flashbag.get('firstconnect') is defined and  app.session.flashbag.get('firstconnect') is not empty %}
     <script type="text/javascript">
         $(document).ready(function () {
-            var socket = io.connect('http://www.horus.ju:1665');
+            var socket = io.connect('{{ app.request.host }}:1665');
             // on the client
             socket.emit('logged', {
                 id: $('#session_id').attr('data-content'),
@@ -20,7 +20,7 @@
 {% for flashMessage in app.session.flashbag.get('messagerealtime') %}
     <script type="text/javascript">
         $(document).ready(function () {
-            var socket = io.connect('http://www.horus.ju:1665');
+            var socket = io.connect('{{ app.request.host }}:1665');
             socket.emit('alerting', {
                 id: $('#session_id').attr('data-content'),
                 firstname: $('#session_firstname').attr('data-content'),

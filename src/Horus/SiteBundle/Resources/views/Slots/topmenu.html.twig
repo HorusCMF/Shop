@@ -14,31 +14,31 @@
                     <li class="dropdown {% if  app.request.attributes.get('_route') == "horus_site_commercial_create"  or app.request.attributes.get('_route') == "horus_site_edit_marques" or  app.request.attributes.get('_route') == "horus_site_marques" or app.request.attributes.get('_route') == "horus_site_commercials" or app.request.attributes.get('_route') == 'horus_site_products' or app.request.attributes.get('_route') == 'horus_site_create_product' %}active{% endif %}">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes"><i class="glyphicon glyphicon-gift"></i>  Produits <span class="caret"></span></a>
                         <ul class="dropdown-menu" aria-labelledby="themes">
-                            <li><a  href="{{ path('horus_site_products') }}"><i class="glyphicon glyphicon-list"></i> Mes produits</a></li>
-                            <li><a  href="{{ path('horus_site_create_product') }}"><i class="glyphicon glyphicon-plus-sign"></i> Créer un produit</a></li>
-                            <li><a  href="{{ path('horus_site_marques') }}"><i class="glyphicon glyphicon-bookmark"></i> Mes marques</a></li>
-                            <li><a  href="{{ path('horus_site_commercials') }}"><i class="glyphicon glyphicon-star"></i> Actions commerciales</a></li>
-                            <li><a  href="{{ path('horus_site_commercial_create') }}"><i class="glyphicon glyphicon-star-empty"></i> Créer commerciale</a></li>
+                            <li  {% if  app.request.attributes.get('_route') == "horus_site_products" %} class="active" {% endif %}><a  href="{{ path('horus_site_products') }}"><i class="glyphicon glyphicon-list"></i> Mes produits</a></li>
+                            <li {% if  app.request.attributes.get('_route') == "horus_site_create_product" %} class="active" {% endif %}><a  href="{{ path('horus_site_create_product') }}"><i class="glyphicon glyphicon-plus-sign"></i> Créer un produit</a></li>
+                            <li {% if  app.request.attributes.get('_route') == "horus_site_marques" %} class="active" {% endif %}><a  href="{{ path('horus_site_marques') }}"><i class="glyphicon glyphicon-bookmark"></i> Mes marques</a></li>
+                            <li {% if  app.request.attributes.get('_route') == "horus_site_commercials" %} class="active" {% endif %}><a  href="{{ path('horus_site_commercials') }}"><i class="glyphicon glyphicon-star"></i> Actions commerciales</a></li>
+                            <li {% if  app.request.attributes.get('_route') == "horus_site_commercial_create" %} class="active" {% endif %}><a  href="{{ path('horus_site_commercial_create') }}"><i class="glyphicon glyphicon-star-empty"></i> Créer commerciale</a></li>
                         </ul>
                     </li>
                     <li class="dropdown {% if app.request.attributes.get('_route') == 'horus_site_add_famille' or  app.request.attributes.get('_route') == 'horus_site_familles' or app.request.attributes.get('_route') == 'horus_site_categories' or app.request.attributes.get('_route') == 'horus_site_add_category' %}active{% endif %}">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download"><i class="glyphicon glyphicon-folder-open"></i>  Catégories<span class="caret"></span></a>
                         <ul class="dropdown-menu" aria-labelledby="download">
-                            <li><a  href="{{ path('horus_site_categories') }}"><i class="glyphicon glyphicon-folder-close"></i> Gérer les catégories</a></li>
-                            <li><a  href="{{ path('horus_site_add_category') }}"><i class="glyphicon glyphicon-folder-open"></i> Créer une catégorie</a></li>
-                            <li><a  href="{{ path('horus_site_familles') }}"><i class="glyphicon glyphicon-briefcase"></i> Mes familles</a></li>
-                            <li><a  href="{{ path('horus_site_add_famille') }}"><i class="glyphicon glyphicon-bookmark"></i> Créer une famille</a></li>
+                            <li {% if  app.request.attributes.get('_route') == "horus_site_categories" %} class="active" {% endif %}><a  href="{{ path('horus_site_categories') }}"><i class="glyphicon glyphicon-folder-close"></i> Gérer les catégories</a></li>
+                            <li {% if  app.request.attributes.get('_route') == "horus_site_add_category" %} class="active" {% endif %}><a  href="{{ path('horus_site_add_category') }}"><i class="glyphicon glyphicon-folder-open"></i> Créer une catégorie</a></li>
+                            <li {% if  app.request.attributes.get('_route') == "horus_site_familles" %} class="active" {% endif %}><a  href="{{ path('horus_site_familles') }}"><i class="glyphicon glyphicon-briefcase"></i> Mes familles</a></li>
+                            <li {% if  app.request.attributes.get('_route') == "horus_site_add_famille" %} class="active" {% endif %}><a  href="{{ path('horus_site_add_famille') }}"><i class="glyphicon glyphicon-bookmark"></i> Créer une famille</a></li>
                         </ul>
                     </li>
                     <li class="dropdown {% if  app.request.attributes.get('_route') == 'horus_site_tag_create' or  app.request.attributes.get('_route') == 'horus_site_tags' or app.request.attributes.get('_route') == 'horus_site_pages' or  app.request.attributes.get('_route') == 'horus_site_page_create' or app.request.attributes.get('_route') == 'horus_site_articles' or app.request.attributes.get('_route') == 'horus_site_article_create' %}active{% endif %}">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes"><i class="glyphicon glyphicon-list-alt"></i>  Contenu <span class="caret"></span></a>
                         <ul class="dropdown-menu" aria-labelledby="themes">
-                            <li><a  href="{{ path('horus_site_pages') }}"><i class="glyphicon glyphicon-book"></i> Mes pages</a></li>
-                            <li><a  href="{{ path('horus_site_page_create') }}"><i class="glyphicon glyphicon-file"></i> Créer une page</a></li>
-                            <li><a  href="{{ path('horus_site_articles') }}"><i class="glyphicon glyphicon-tags"></i> Mes articles</a></li>
-                            <li><a  href="{{ path('horus_site_article_create') }}"><i class="glyphicon glyphicon-pencil"></i> Créer une article</a></li>
-                            <li><a  href="{{ path('horus_site_tags') }}"><i class="glyphicon glyphicon-tags"></i> Mes tags</a></li>
-                            <li><a  href="{{ path('horus_site_tag_create') }}"><i class="glyphicon glyphicon-tag"></i> Créer un tag</a></li>
+                            <li {% if  app.request.attributes.get('_route') == "horus_site_pages" %} class="active" {% endif %}><a  href="{{ path('horus_site_pages') }}"><i class="glyphicon glyphicon-book"></i> Mes pages</a></li>
+                            <li {% if  app.request.attributes.get('_route') == "horus_site_page_create" %} class="active" {% endif %}><a  href="{{ path('horus_site_page_create') }}"><i class="glyphicon glyphicon-file"></i> Créer une page</a></li>
+                            <li {% if  app.request.attributes.get('_route') == "horus_site_articles" %} class="active" {% endif %}><a  href="{{ path('horus_site_articles') }}"><i class="glyphicon glyphicon-tags"></i> Mes articles</a></li>
+                            <li {% if  app.request.attributes.get('_route') == "horus_site_article_create" %} class="active" {% endif %}><a  href="{{ path('horus_site_article_create') }}"><i class="glyphicon glyphicon-pencil"></i> Créer une article</a></li>
+                            <li {% if  app.request.attributes.get('_route') == "horus_site_tags" %} class="active" {% endif %}><a  href="{{ path('horus_site_tags') }}"><i class="glyphicon glyphicon-tags"></i> Mes tags</a></li>
+                            <li {% if  app.request.attributes.get('_route') == "horus_site_tag_create" %} class="active" {% endif %}><a  href="{{ path('horus_site_tag_create') }}"><i class="glyphicon glyphicon-tag"></i> Créer un tag</a></li>
                         </ul>
                     </li>
                     <li class="{% if app.request.attributes.get('_route') == 'horus_site_medias'%}active{% endif %}">
@@ -47,14 +47,14 @@
                     <li class="dropdown {% if app.request.attributes.get('_route') == 'horus_site_fournisseurs' or app.request.attributes.get('_route') == 'horus_site_commandes' or app.request.attributes.get('_route') == 'horus_site_factures' or  app.request.attributes.get('_route') == 'horus_site_transports' or  app.request.attributes.get('_route') == 'horus_site_transports' or  app.request.attributes.get('_route') == 'horus_site_clients' or  app.request.attributes.get('_route') == 'horus_site_paniers'  or  app.request.attributes.get('_route') == 'horus_site_commentaires'   or  app.request.attributes.get('_route') == 'horus_site_charts' %}active{% endif %}">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download"><i class="glyphicon glyphicon-plus"></i>  Plus<span class="caret"></span></a>
                         <ul class="dropdown-menu" aria-labelledby="download">
-                            <li><a  href="{{ path('horus_site_commandes') }}"><i class="glyphicon glyphicon-th-list"></i> Gérer les commandes</a></li>
-                            <li><a  href="{{ path('horus_site_fournisseurs') }}"><i class="glyphicon glyphicon-tower"></i> Gérer les fournisseurs</a></li>
-                            <li><a  href="{{ path('horus_site_factures') }}"><i class="glyphicon glyphicon-usd"></i> Gérer les factures</a></li>
-                            <li><a  href="{{ path('horus_site_transports') }}"><i class="glyphicon glyphicon-road"></i> Gérer les transports</a></li>
-                            <li><a  href="{{ path('horus_site_clients') }}"><i class="glyphicon glyphicon-user"></i> Gérer les clients</a></li>
-                            <li><a  href="{{ path('horus_site_paniers') }}"><i class="glyphicon glyphicon-shopping-cart"></i> Gérer les paniers</a></li>
-                            <li><a  href="{{ path('horus_site_commentaires') }}"><i class="glyphicon glyphicon-comment"></i> Gérer les commentaires</a></li>
-                            <li><a  href="{{ path('horus_site_charts') }}"><i class="glyphicon glyphicon-stats"></i> Gérer les statistiques</a></li>
+                            <li {% if  app.request.attributes.get('_route') == "horus_site_commandes" %} class="active" {% endif %}><a  href="{{ path('horus_site_commandes') }}"><i class="glyphicon glyphicon-th-list"></i> Gérer les commandes</a></li>
+                            <li {% if  app.request.attributes.get('_route') == "horus_site_fournisseurs" %} class="active" {% endif %}><a  href="{{ path('horus_site_fournisseurs') }}"><i class="glyphicon glyphicon-tower"></i> Gérer les fournisseurs</a></li>
+                            <li {% if  app.request.attributes.get('_route') == "horus_site_factures" %} class="active" {% endif %}><a  href="{{ path('horus_site_factures') }}"><i class="glyphicon glyphicon-usd"></i> Gérer les factures</a></li>
+                            <li {% if  app.request.attributes.get('_route') == "horus_site_transports" %} class="active" {% endif %}><a  href="{{ path('horus_site_transports') }}"><i class="glyphicon glyphicon-road"></i> Gérer les transports</a></li>
+                            <li {% if  app.request.attributes.get('_route') == "horus_site_clients" %} class="active" {% endif %}><a  href="{{ path('horus_site_clients') }}"><i class="glyphicon glyphicon-user"></i> Gérer les clients</a></li>
+                            <li {% if  app.request.attributes.get('_route') == "horus_site_paniers" %} class="active" {% endif %}><a  href="{{ path('horus_site_paniers') }}"><i class="glyphicon glyphicon-shopping-cart"></i> Gérer les paniers</a></li>
+                            <li {% if  app.request.attributes.get('_route') == "horus_site_commentaires" %} class="active" {% endif %}><a  href="{{ path('horus_site_commentaires') }}"><i class="glyphicon glyphicon-comment"></i> Gérer les commentaires</a></li>
+                            <li {% if  app.request.attributes.get('_route') == "horus_site_charts" %} class="active" {% endif %}><a  href="{{ path('horus_site_charts') }}"><i class="glyphicon glyphicon-stats"></i> Gérer les statistiques</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -63,12 +63,12 @@
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="configuration"><i class="glyphicon glyphicon-cog"></i> Configuration<span class="caret"></span></a>
                         <ul class="dropdown-menu" aria-labelledby="download">
-                            <li><a  href="{{ path('horus_site_configuration') }}"><i class="glyphicon glyphicon-shopping-cart"></i> Ma Boutique</a></li>
-                            <li><a  href="{{ path('horus_site_myaccount') }}"><i class="glyphicon glyphicon-lock"></i> Mon Compte</a></li>
-                            <li><a  href="{{ path('horus_site_administrateurs') }}"><i class="glyphicon glyphicon-tasks"></i> Mes Administrateurs</a></li>
+                            <li  {% if  app.request.attributes.get('_route') == "horus_site_configuration" %} class="active" {% endif %}><a  href="{{ path('horus_site_configuration') }}"><i class="glyphicon glyphicon-shopping-cart"></i> Ma Boutique</a></li>
+                            <li  {% if  app.request.attributes.get('_route') == "horus_site_myaccount" %} class="active" {% endif %}><a  href="{{ path('horus_site_myaccount') }}"><i class="glyphicon glyphicon-lock"></i> Mon Compte</a></li>
+                            <li  {% if  app.request.attributes.get('_route') == "horus_site_administrateurs" %} class="active" {% endif %}><a  href="{{ path('horus_site_administrateurs') }}"><i class="glyphicon glyphicon-tasks"></i> Mes Administrateurs</a></li>
                             <li class="divider"></li>
-                            <li><a  href="./variables.less"><i class="glyphicon glyphicon-list"></i> Mon Catalogue</a></li>
-                            <li><a  href="./variables.less"><i class="glyphicon glyphicon-folder-open"></i> Mon Contrat VAD</a></li>
+                            <li  {% if  app.request.attributes.get('_route') == "horus_site_charts" %} class="active" {% endif %}><a  href="./variables.less"><i class="glyphicon glyphicon-list"></i> Mon Catalogue</a></li>
+                            <li  {% if  app.request.attributes.get('_route') == "horus_site_charts" %} class="active" {% endif %}><a  href="./variables.less"><i class="glyphicon glyphicon-folder-open"></i> Mon Contrat VAD</a></li>
                         </ul>
                     </li>
                     <li>

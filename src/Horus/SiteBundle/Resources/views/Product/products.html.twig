@@ -15,8 +15,9 @@
             {{ knp_pagination_render(produits) }}
         </div>
 
-        <a href="{{ path('horus_site_create_product') }}" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Ajouter une produit</a>
-
+        <div class="action">
+            <a href="{{ path('horus_site_create_product') }}" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Ajouter une produit</a>
+        </div>
         <div class="clear"></div>
     </div>
 {% endblock %}

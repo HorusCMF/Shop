@@ -60,7 +60,7 @@ class Article
      * )
      * @Assert\Length(
      *      min = "3",
-     *      max = "1000",
+     *      max = "7000",
      *      minMessage = "Votre résumé doit faire au moins {{ limit }} caractères",
      *      maxMessage = "Votre résumé ne peut pas être plus long que {{ limit }} caractères"
      * )
@@ -74,7 +74,7 @@ class Article
      * )
      * @Assert\Length(
      *      min = "5",
-     *      max = "1000",
+     *      max = "70000",
      *      minMessage = "Votre description doit faire au moins {{ limit }} caractères",
      *      maxMessage = "Votre description ne peut pas être plus long que {{ limit }} caractères"
      * )

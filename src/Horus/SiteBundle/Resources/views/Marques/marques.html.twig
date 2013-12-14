@@ -2,7 +2,7 @@
 
 {% block content %}
 
-    <div class="" id="marques">
+    <div class="page" id="marques">
         <h2><i class="glyphicon glyphicon-gift"></i> Vos marques</h2>
         {% include 'HorusSiteBundle:Slots:display.html.twig' %}
 
@@ -49,8 +49,9 @@
         {% endfor %}
 
         <div class="clear"></div>
-        <a href="{{ path('horus_site_create_marques') }}" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Ajouter une marque</a>
-
+        <div class="page">
+            <a href="{{ path('horus_site_create_marques') }}" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Ajouter une marque</a>
+        </div>
     </div>
 {% endblock %}
 

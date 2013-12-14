@@ -63,7 +63,9 @@
                 <div class="clear"></div>
             </div>
         {% endfor %}
-        <a class="pull-right btn btn-danger" href="{{ path('horus_site_create_transport') }}"><i class="glyphicon glyphicon-plus"></i> Ajouter un transport</a>
+        <div class="action">
+            <a class="pull-right btn btn-danger" href="{{ path('horus_site_create_transport') }}"><i class="glyphicon glyphicon-plus"></i> Ajouter un transport</a>
+        </div>
         <div class="clear"></div>
     </div>
 {% endblock %}

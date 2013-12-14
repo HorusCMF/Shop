@@ -2,7 +2,7 @@
 
 {% block content %}
 
-    <div class="" id="tags">
+    <div class="page" id="tags">
         <h2><i class="glyphicon glyphicon-tags"></i> Vos tags</h2>
         {% include 'HorusSiteBundle:Slots:display.html.twig' %}
 
@@ -44,7 +44,9 @@
                 <div class="clear"></div>
             </div>
         {% endif %}
-        <a href="{{ path('horus_site_tag_create') }}" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Ajouter un tag</a>
+        <div class="action">
+            <a href="{{ path('horus_site_tag_create') }}" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Ajouter un tag</a>
+        </div>
 
     </div>
 {% endblock %}

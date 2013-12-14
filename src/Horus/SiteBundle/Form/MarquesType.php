@@ -29,6 +29,8 @@ class MarquesType extends AbstractType
                 ->add('metaKeywords', 'textarea', array('required' => false,'attr' => array('class' => 'form-control','rows' => 7, 'cols' => 80,'placeholder' => "Mots Clefs de la marque")))
                 ->add('active')
                 ->add('parent', 'entity', array(
+                    'required' => false,
+                    'empty_value' => 'Choisissez une marque parente',
                     'class' => 'HorusSiteBundle:Marques',
                     'property' => 'OptionLabel',
                 ));

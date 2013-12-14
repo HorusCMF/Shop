@@ -21,7 +21,7 @@ class ArticleType extends AbstractType
         $builder
                 ->add('title', 'text', array('attr' => array('placeholder' => "Nom de l'article")))
                 ->add('category')
-                ->add('tags')
+                ->add('tags', null, array( 'label' => 'Mots-clefs associés'))
                 ->add('pages')
                 ->add('nature','choice', array(
                     'choices'   => array(1 => 'Brouillon', 2 => 'Relus', 3 => 'Final'),

@@ -1,8 +1,15 @@
 {% extends 'HorusSiteBundle::layout.html.twig' %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets '@HorusSiteBundle/Resources/public/css/pages.sass' filter='yui_css' %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+{% endblock %}
+
 {% block content %}
-    <div class="" id="pages">
-        <h2><i class="glyphicon glyphicon-gift"></i> Vos pages</h2>
+    <div class="page" id="pages">
+        <h2><i class="glyphicon glyphicon-file"></i> Vos pages({{ pages|length }})</h2>
         {% include 'HorusSiteBundle:Slots:display.html.twig' %}
 
         {% for page in pages %}
@@ -19,14 +26,14 @@
 
 
                 <div class="media-body">
-                    <h4 class="media-heading"><a href="">{{ page.name }}</a>
+                    <h4 class="media-heading"><a href="{{ path('horus_site_edit_page', {'id' : page.id}) }}">{{ page.name }}</a>
                         {% if page.visible %}
                             <span class="badge badge-success">En ligne</span>
                         {% else %}
                                 <span class="badge badge-danger">Hors-Ligne</span>
                         {% endif %}
                     </h4>
-                    <p>{{ page.cover|raw }}</p>
+                    <p>{{ page.cover|striptags|truncate(900,'...')|raw }}</p>
                         <h4 class="pull-right"><span class="label label-info">{{ page.produits|length|default('0') }} produit(s)</span></h4>
                 </div>
             </div>
@@ -43,8 +50,9 @@
         {% endfor %}
 
         <div class="clear"></div>
-        <a href="{{ path('horus_site_page_create') }}" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Ajouter un page</a>
-
+        <div class="action">
+            <a href="{{ path('horus_site_page_create') }}" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Ajouter un page</a>
+        </div>
     </div>
 {% endblock %}
 

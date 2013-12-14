@@ -73,7 +73,7 @@ class Marques
      * @Assert\NotBlank(message = "Votre resume ne peut être vite")
      * @Assert\Length(
      *      min = "5",
-     *      max = "600",
+     *      max = "7000",
      *      minMessage = "Votre resume doit faire au minimum {{ limit }} caractères",
      *      maxMessage = "Votre resume doit faire au maximum {{ limit }} caractères"
      *  )
@@ -87,7 +87,7 @@ class Marques
      * @Assert\NotBlank(message = "Votre description ne peut être vite")
      * @Assert\Length(
      *      min = "5",
-     *      max = "600",
+     *      max = "10000",
      *      minMessage = "Votre description doit faire au minimum {{ limit }} caractères",
      *      maxMessage = "Votre description doit faire au maximum {{ limit }} caractères"
      *  )

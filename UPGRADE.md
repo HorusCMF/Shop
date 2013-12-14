@@ -2,6 +2,7 @@ UPGRADE FROM 1.0 to 1.1
 =======================
 
 ### General
+  * Udate Create Tags several separate with comma
   * Update/Upgrade Product & Categories View Loop
   * Right Bloc in real time to actions
   * Add Position to Product, Categories...

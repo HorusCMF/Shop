@@ -46,7 +46,7 @@ class Page
      * )
      * @Assert\Length(
      *      min = "5",
-     *      max = "10000",
+     *      max = "50000",
      *      minMessage = "Votre description doit faire au moins {{ limit }} caractères",
      *      maxMessage = "Votre description ne peut pas être plus long que {{ limit }} caractères"
      * )
@@ -58,7 +58,7 @@ class Page
     /**
      * @Assert\Length(
      *      min = "5",
-     *      max = "1000",
+     *      max = "30000",
      *      minMessage = "Votre chapeau doit faire au moins {{ limit }} caractères",
      *      maxMessage = "Votre chapeau ne peut pas être plus long que {{ limit }} caractères"
      * )
@@ -72,7 +72,7 @@ class Page
      * )
      * @Assert\Length(
      *      min = "3",
-     *      max = "1000",
+     *      max = "6000",
      *      minMessage = "Votre résumé doit faire au moins {{ limit }} caractères",
      *      maxMessage = "Votre résumé ne peut pas être plus long que {{ limit }} caractères"
      * )
