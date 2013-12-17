@@ -6,6 +6,7 @@ imports:
 #    - { resource: "@HorusSiteBundle/Resources/config/services.xml" }
 
 framework:
+
     esi:             ~
     translator:      { fallback: fr }
     secret:          %secret%
@@ -48,8 +49,8 @@ assetic:
 #            node: /usr/local/bin/node
 #            node_paths: [/usr/local/lib/node, /usr/local/lib/node_modules]
          coffee:
-            bin: /usr/local/bin/coffee
-            node: /usr/local/bin/node
+            bin: /usr/bin/coffee
+            node: /usr/bin/node
             apply_to: "\.coffee$"
          sass:
             bin: /usr/local/bin/sass
@@ -90,8 +91,11 @@ doctrine:
       entity_managers:
         default:
           dql:
-           numeric_functions:
+           datetime_functions:
+               datediff: Horus\SiteBundle\AST\Functions\DateDiff
                dateformat: Horus\SiteBundle\AST\Functions\DateFormat
+               day: Horus\SiteBundle\AST\Functions\Day
+           numeric_functions:
                geo:  Horus\SiteBundle\AST\Functions\Geo
                age:  Horus\SiteBundle\AST\Functions\Age
                round:  Horus\SiteBundle\AST\Functions\Round
@@ -183,7 +187,7 @@ doctrine_mongodb:
         default:
             server: mongodb://localhost:27017
             options: {}
-    default_database: test_database
+    default_database: horus
     document_managers:
         default:
             auto_mapping: true

@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.10.3/themes/hot-sneaks/jquery-ui.css"/>
     <link rel="stylesheet" type="text/css" href="http://davidstutz.github.io/bootstrap-multiselect/css/bootstrap-multiselect.css"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('bundles/horussite/css/jRating.jquery.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.css" />
 
     {% stylesheets '@HorusSiteBundle/Resources/public/css/bootswatch.css' filter='yui_css' %}
         <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
@@ -40,9 +41,8 @@
 {% block body %}
     {% render controller('HorusSiteBundle:Layout:theme') %}
 
-    <a href="https://github.com/HorusCMF/Shop"><img
-                style="z-index: 50000;position: absolute; top: 0; right: 0; border: 0;"
-                src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+    <a href="https://github.com/HorusCMF/Shop">
+        <img style="z-index: 50000;position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
     {% include 'HorusSiteBundle:Slots:topmenu.html.twig' %}
     <div class="container-fluid">
         <div class="row-fluid">
@@ -50,10 +50,12 @@
             <div class="span12">
                 <div class="container">
                     <div class="row-fluid">
-                        <div class="span3">
-                            {% include 'HorusSiteBundle:Slots:statistics.html.twig' %}
+                        <div class="span3" id="leftmenu">
+                            {{ render(controller('HorusSiteBundle:Layout:leftmenu')) }}
+
+                            {#{% include 'HorusSiteBundle:Slots:statistics.html.twig' %}#}
                         </div>
-                        <div class="span9">
+                        <div class="span9" id="content">
 
                             {#{% include 'HorusSiteBundle:Slots:mainmenu.html.twig' %}#}
                             {% include 'HorusSiteBundle:Slots:search.html.twig' %}
@@ -92,7 +94,9 @@
     <script src="http://davidstutz.github.io/bootstrap-multiselect/js/bootstrap-multiselect.js"></script>
     <script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <script src="http://modernizr.com/downloads/modernizr-latest.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/hinclude/0.9.5/hinclude.min.js"></script>
     <script src="{{ asset('bundles/horussite/js/jRating.jquery.min.js') }}"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
 
     {% javascripts '@HorusSiteBundle/Resources/public/js/miniNotification.coffee' filter='closure' %}
     <script src="{{ asset_url }}" type="text/javascript"></script>

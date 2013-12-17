@@ -39,6 +39,7 @@
                         <a href="{{ path('horus_site_edit_administrateur', {'id' : administrateur.id }) }}" class="btn btn-primary"><i class="glyphicon glyphicon-pencil"></i></a>
                         <a onclick="return(confirm('Etes-vous sûr de vouloir supprimer cet administrateur?'));" href="{{ path('horus_site_remove_administrateur', {'id' : administrateur.id }) }}" class="btn btn-primary"><i class="glyphicon glyphicon-remove"></i></a>
                         <a onclick='return(confirm("Etes-vous sûr de vouloir changer d'utilisateur courant?"));' href='{{ path('horus_site_switch', {'username' : administrateur.email }) }}' class="btn btn-primary"><i class="glyphicon glyphicon-transfer"></i></a>
+                        <a href='{{ path('horus_site_administrateur_history', {'id' : administrateur.id }) }}' class="btn btn-primary"><i class="glyphicon glyphicon-calendar"></i></a>
                     </td>
                 </tr>
             {% else %}

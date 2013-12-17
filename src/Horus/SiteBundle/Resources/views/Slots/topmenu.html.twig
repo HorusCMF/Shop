@@ -54,12 +54,15 @@
                             <li {% if  app.request.attributes.get('_route') == "horus_site_clients" %} class="active" {% endif %}><a  href="{{ path('horus_site_clients') }}"><i class="glyphicon glyphicon-user"></i> Gérer les clients</a></li>
                             <li {% if  app.request.attributes.get('_route') == "horus_site_paniers" %} class="active" {% endif %}><a  href="{{ path('horus_site_paniers') }}"><i class="glyphicon glyphicon-shopping-cart"></i> Gérer les paniers</a></li>
                             <li {% if  app.request.attributes.get('_route') == "horus_site_commentaires" %} class="active" {% endif %}><a  href="{{ path('horus_site_commentaires') }}"><i class="glyphicon glyphicon-comment"></i> Gérer les commentaires</a></li>
-                            <li {% if  app.request.attributes.get('_route') == "horus_site_charts" %} class="active" {% endif %}><a  href="{{ path('horus_site_charts') }}"><i class="glyphicon glyphicon-stats"></i> Gérer les statistiques</a></li>
+                            {#<li {% if  app.request.attributes.get('_route') == "horus_site_charts" %} class="active" {% endif %}><a  href="{{ path('horus_site_charts') }}"><i class="glyphicon glyphicon-stats"></i> Gérer les statistiques</a></li>#}
                         </ul>
                     </li>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        {% render controller('HorusSiteBundle:Layout:notifications') %}
+                    </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="configuration"><i class="glyphicon glyphicon-cog"></i> Configuration<span class="caret"></span></a>
                         <ul class="dropdown-menu" aria-labelledby="download">
@@ -69,10 +72,11 @@
                             <li class="divider"></li>
                             <li  {% if  app.request.attributes.get('_route') == "horus_site_charts" %} class="active" {% endif %}><a  href="./variables.less"><i class="glyphicon glyphicon-list"></i> Mon Catalogue</a></li>
                             <li  {% if  app.request.attributes.get('_route') == "horus_site_charts" %} class="active" {% endif %}><a  href="./variables.less"><i class="glyphicon glyphicon-folder-open"></i> Mon Contrat VAD</a></li>
+                            <li class="divider"></li>
+                            <li><a  href="{{ path('logout') }}" id="customisation"><i class="glyphicon glyphicon-off"></i> Deconnexion</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a  href="{{ path('logout') }}" id="customisation"><i class="glyphicon glyphicon-off"></i> Deconnexion</a>
                     </li>
                 </ul>
             </div>

@@ -52,5 +52,32 @@ class CategoryRepository extends EntityRepository
     }
 
 
+    /**
+     * Get articles by Category
+     * @param Category $category
+     * @return mixed
+     */
+    public function getCategoryIsProductNull()
+    {
+        $query = $this->getEntityManager()
+            ->createQuery("SELECT COUNT(a.id) FROM HorusSiteBundle:Category a INNER JOIN a.produits p WHERE a.produits IS EMPTY");
+        return $query->getSingleScalarResult();
+    }
+
+    /**
+     * Get articles by Category
+     * @param Category $category
+     * @return mixed
+     */
+    public function getCategoryIsDesactive()
+    {
+        $query = $this->getEntityManager()
+            ->createQuery("SELECT COUNT(a.id) FROM HorusSiteBundle:Category a WHERE a.visible = :visible")
+            ->setParameter('visible', false);
+        return $query->getSingleScalarResult();
+    }
+
+
+
 
 }

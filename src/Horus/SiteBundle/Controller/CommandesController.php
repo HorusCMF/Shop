@@ -21,6 +21,13 @@ class CommandesController extends Controller
 
         return $this->render('HorusSiteBundle:Commandes:commandes.html.twig', array('commandes' => $commandes));
     }
+   public function lastcommandesAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $commandes = $em->getRepository('HorusSiteBundle:Commandes')->findAll(array(), array('dateCreated' => 'DESC'),7);
+
+        return $this->render('HorusSiteBundle:Commandes:lastcommandes.html.twig', array('commandes' => $commandes));
+    }
 
     public function commandeAction(Commandes $id)
     {
@@ -44,7 +51,13 @@ class CommandesController extends Controller
                 "La commande a été ajouté"
             );
 
-            return $this->redirect($this->generateUrl('horus_site_tags'));
+            /**
+             * Notifications
+             */
+            $this->container->get('lastactions_listener')->insertActions('Edition', 'a édité une commande','glyphicon glyphicon-pencil');
+
+
+            return $this->redirect($this->generateUrl('horus_site_commandes'));
         }
 
         return $this->render('HorusSiteBundle:Commandes:editcommande.html.twig', array('commande' => $id, 'form' => $form->createView()));

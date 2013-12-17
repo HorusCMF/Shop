@@ -1,0 +1,35 @@
+{% block charts %}
+    <script type="text/javascript">
+        google.load("visualization", "1", {packages:["corechart"]});
+        google.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Jour', 'Chiffres', 'Commandes'],
+                ['15/12',  1000,      400],
+                ['14/12',  1000,      400],
+                ['13/12',  1170,      460],
+                ['12/12',  660,       1120],
+                ['11/12',  1030,      540],
+                ['10/12',  1000,      600],
+                ['09/12',  950,      400],
+                ['08/12',  1200,      800],
+                ['07/12',  1225,      600],
+                ['06/12',  1320,      700],
+                ['05/12',  1100,      800],
+                ['04/12',  1200,      1000],
+                ['03/12',  1300,      950],
+                ['02/12',  1500,      900],
+                ['01/12',  1110,      800],
+            ]);
+
+            var options = {
+                title: "Chiffre d'affaire hebdomaiare"
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div2'));
+            chart.draw(data, options);
+        }
+    </script>
+    <div id="chart_div2"></div>
+{% endblock %}
+

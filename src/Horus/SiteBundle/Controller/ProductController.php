@@ -45,6 +45,9 @@ class ProductController extends Controller
         $products = $em->getRepository('HorusSiteBundle:Produit')->findAll();
         $paginate_by_page = $this->container->getParameter('paginate_by_page');
 
+        $products = $em->getRepository('HorusSiteBundle:Produit')->findAll();
+
+
         $paginator = $this->get('knp_paginator');
         $pagination = $paginator->paginate(
             $products,
@@ -76,6 +79,11 @@ class ProductController extends Controller
             "Le produit a été supprimé"
         );
 
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Suppression', 'a supprimé un produit','glyphicon glyphicon-remove',  $this->generateUrl('horus_site_products'));
+
 
         
         return $this->redirect($this->generateUrl('horus_site_products'));
@@ -96,6 +104,8 @@ class ProductController extends Controller
             'success',
             "L'image du produit a été activé"
         );
+
+
 
         return $this->redirect($this->generateUrl('horus_site_edit_pictures_product', array('id' => $id->getProduit()->getId())));
     }
@@ -128,6 +138,12 @@ class ProductController extends Controller
             'success',
             "L'image du produit a été mise en avant"
         );
+
+
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Image', 'a mis en avant une image','glyphicon glyphicon-picture', $this->generateUrl('horus_site_edit_pictures_product', array('id' => $id->getProduit()->getId())));
 
         return $this->redirect($this->generateUrl('horus_site_edit_pictures_product', array('id' => $id->getProduit()->getId())));
     }
@@ -204,6 +220,11 @@ class ProductController extends Controller
             "La quantité du produit a bien été augmentée"
         );
 
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Augmentation', 'a augmenté une quantité','glyphicon glyphicon-plus', $this->generateUrl('horus_site_product', array('id' => $id->getId())));
+
         return $this->redirect($this->generateUrl('horus_site_products'));
     }
 
@@ -224,6 +245,12 @@ class ProductController extends Controller
             'success',
             "La quantité du produit a bien été diminuée"
         );
+
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Diminution', 'a diminué une quantité','glyphicon glyphicon-minus',  $this->generateUrl('horus_site_product', array('id' => $id->getId())));
+
 
         return $this->redirect($this->generateUrl('horus_site_products'));
     }
@@ -249,6 +276,10 @@ class ProductController extends Controller
             "Le produit ".$id->getTitle()." a été desactivé"
         );
 
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Désactivation', 'a désactivé un produit','glyphicon glyphicon-minus-sign',  $this->generateUrl('horus_site_product', array('id' => $id->getId())));
 
         return $this->redirect($this->generateUrl('horus_site_products'));
     }
@@ -273,6 +304,12 @@ class ProductController extends Controller
             'messagerealtime',
             "Le produit ".$id->getTitle()." a été activé"
         );
+
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Activation', 'a activé un produit','glyphicon glyphicon-check',  $this->generateUrl('horus_site_product', array('id' => $id->getId())));
+
 
         return $this->redirect($this->generateUrl('horus_site_products'));
     }
@@ -325,6 +362,12 @@ class ProductController extends Controller
                 'messagerealtime',
                 "Le produit ".$produit->getTitle()." vient d'être crée"
             );
+
+            /**
+             * Notifications
+             */
+            $this->container->get('lastactions_listener')->insertActions('Création', 'a crée un produit','glyphicon glyphicon-plus',  $this->generateUrl('horus_site_product', array('id' => $produit->getId())));
+
             return $this->redirect($this->generateUrl('horus_site_edit_pictures_product', array('id' => $produit->getId())));
         }
 
@@ -346,6 +389,9 @@ class ProductController extends Controller
     {
         $request = $this->getRequest();
         $em = $this->getDoctrine()->getManager();
+
+//        $produit = $em->getRepository('HorusSiteBundle:Produits')->getProductsIsQuantityNull();
+//        exit(var_dump($produit));
 
         $form = $this->createForm(new ProductType($id), $id);
         $form->handleRequest($request);
@@ -392,6 +438,13 @@ class ProductController extends Controller
                 'messagerealtime',
                 "Le produit ".$id->getTitle()." vient d'être modifié"
             );
+
+            /**
+             * Notifications
+             */
+            $this->container->get('lastactions_listener')->insertActions('Edition', 'a édité un produit','glyphicon glyphicon-pencil', $this->generateUrl('horus_site_product', array('id' => $id->getId())));
+
+
             return $this->redirect($this->generateUrl('horus_site_products'));
         }
 

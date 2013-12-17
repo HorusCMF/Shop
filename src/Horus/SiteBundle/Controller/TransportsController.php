@@ -56,6 +56,13 @@ class TransportsController extends Controller
                 'messagerealtime',
                 "Le transport ".$transport->getTitle()." vient d'être crée"
             );
+
+            /**
+             * Notifications
+             */
+            $this->container->get('lastactions_listener')->insertActions('Création', 'a crée un transport','glyphicon glyphicon-plus', $this->generateUrl('horus_site_edit_transport', array('id' => $transport->getId())));
+
+
             return $this->redirect($this->generateUrl('horus_site_transports'));
         }
 
@@ -92,6 +99,12 @@ class TransportsController extends Controller
                 'messagerealtime',
                 "Le transporteur ".$id->getTitle()." vient d'être modifié"
             );
+
+            /**
+             * Notifications
+             */
+            $this->container->get('lastactions_listener')->insertActions('Edition', 'a édité un transport','glyphicon glyphicon-pencil', $this->generateUrl('horus_site_edit_transport', array('id' => $id->getId())));
+
             return $this->redirect($this->generateUrl('horus_site_transports'));
         }
 
@@ -126,6 +139,11 @@ class TransportsController extends Controller
             "Le transport a été supprimé"
         );
 
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Suppresion', 'a supprimé un transport','glyphicon glyphicon-remove');
+
 
         return $this->redirect($this->generateUrl('horus_site_transports'));
     }
@@ -153,6 +171,11 @@ class TransportsController extends Controller
         );
 
 
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Desactivation', 'a desactivé un transport','glyphicon glyphicon-minus-sign', $this->generateUrl('horus_site_edit_transport', array('id' => $id->getId())));
+
         return $this->redirect($this->generateUrl('horus_site_transports'));
     }
 
@@ -176,6 +199,12 @@ class TransportsController extends Controller
             'messagerealtime',
             "Le transport ".$id->getTitle()." a été activé"
         );
+
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Activation', 'a desactivé un transport','glyphicon glyphicon-check', $this->generateUrl('horus_site_edit_transport', array('id' => $id->getId())));
+
 
         return $this->redirect($this->generateUrl('horus_site_transports'));
     }

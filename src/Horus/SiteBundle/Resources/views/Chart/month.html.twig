@@ -1,0 +1,34 @@
+{% block charts %}
+    <script type="text/javascript">
+        google.load("visualization", "1", {packages:["corechart"]});
+        google.setOnLoadCallback(drawChart2);
+        function drawChart2() {
+            var data = google.visualization.arrayToDataTable([
+                ['Mois', 'Ventes', 'Consommateurs', 'Commandes'],
+                ["Janvier",1000,400,600],
+                ["Février",1170,460,800],
+                ['Mars', 660,1120,500],
+                ['Avril', 1030,540,650],
+                ['Mai', 1030,540,300],
+                ['Juin', 1030,540,800],
+                ['Juillet', 1030,540,750],
+                ['Août', 1030,540,300],
+                ['Septembre', 1030,540,400],
+                ['Octobre', 1030,540,150],
+                ['Novembre', 1030,540,700],
+                ['Décembre', 1030,540,900]
+            ]);
+
+            var options = {
+                title: "Evolution mensuelle",
+                hAxis: {title: 'Mois', titleTextStyle: {color: 'red'}}
+            };
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        }
+
+    </script>
+    <div id="chart_div"></div>
+{% endblock %}
+

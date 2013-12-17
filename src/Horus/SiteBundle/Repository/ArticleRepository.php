@@ -35,4 +35,22 @@ class ArticleRepository extends EntityRepository
         return $query->getOneOrNullResult();
     }
 
+
+    public function getArticlesIsDesactive()
+    {
+        $query = $this->getEntityManager()
+            ->createQuery("SELECT COUNT(a.id) FROM HorusSiteBundle:Article a WHERE a.nature = :visible")
+            ->setParameter('visible', 1);
+        return $query->getSingleScalarResult();
+    }
+
+
+    public function getArticlesWait()
+    {
+        $query = $this->getEntityManager()
+            ->createQuery("SELECT COUNT(a.id) FROM HorusSiteBundle:Article a WHERE a.nature = :visible")
+            ->setParameter('visible', 2);
+        return $query->getSingleScalarResult();
+    }
+
 }

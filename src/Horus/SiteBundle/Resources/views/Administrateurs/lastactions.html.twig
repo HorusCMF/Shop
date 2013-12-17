@@ -1,0 +1,30 @@
+<div id="lastactions-panel">
+    <button id="closepanel" type="button" class="close" data-dismiss="alert"><i
+                class="glyphicon glyphicon-remove-circle"></i></button>
+    <div class="panel panel-primary">
+        <div class="panel-heading"><h4><i class="glyphicon glyphicon-refresh"></i> Dernières actions</h4>
+        </div>
+        <div class="panel-body" id="lastactions">
+            <ul class="nav nav-pills nav-stacked">
+                {% for action in actions %}
+                    <li>
+                        <h6 class="pull-left">{{ action.titre|raw }}</h6>
+                        <span class="pull-right"><small><i class="glyphicon glyphicon-time"></i> {{ action.dateCreated|date('d/m/Y H:i:') }}</small></span>
+                        <div class="clear"></div>
+                        <p>{{ action.content|raw }}</p>
+                    </li>
+                {% else %}
+                    <div class="alert">
+                        <p>Aucune action pour le moment</p>
+                    </div>
+                {% endfor %}
+            </ul>
+        </div>
+        {% if actions is not empty %}
+            <div class="panel-heading">
+                <a href="{{ path('horus_site_history') }}" class="pull-right btn btn-xs btn-primary"><i class="glyphicon glyphicon-share-alt"></i> Voir l'historique</a>
+                <div class="clear"></div>
+            </div>
+        {% endif %}
+    </div>
+</div>

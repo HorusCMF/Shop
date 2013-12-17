@@ -50,7 +50,7 @@ io.sockets.on('connection', function (socket) {
     });
 
     /**
-     * On User create a product
+     * On User alerting
      */
     socket.on('alerting', function (user) {
         me = user;

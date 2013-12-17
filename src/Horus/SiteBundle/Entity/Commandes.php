@@ -10,7 +10,7 @@ use Gedmo\Mapping\Annotation as Gedmo; // gedmo annotations
 
 /**
  * Produit
- * @ORM\Entity(repositoryClass="Horus\SiteBundle\Repository\CommandesRepository")
+ * @ORM\Entity(repositoryClass="Horus\SiteBundle\Repository\CommandesProduitRepository")
  * @ORM\Table(name="commandes")
  * @ORM\HasLifecycleCallbacks()
  */

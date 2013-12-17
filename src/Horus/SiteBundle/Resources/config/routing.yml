@@ -110,51 +110,6 @@ horus_site_edit_pictures_marques:
 
 
 
-
-###
-### Fournisseurs
-###
-
-horus_site_fournisseurs:
-  pattern:  /backend/fournisseurs
-  defaults: { _controller: HorusSiteBundle:Fournisseurs:fournisseurs }
-
-horus_site_create_fournisseurs:
-  pattern:  /backend/fournisseurs/creer
-  defaults: { _controller: HorusSiteBundle:Fournisseurs:createfournisseur }
-
-horus_site_edit_fournisseurs:
-  pattern:  /backend/fournisseurs/editer/{id}
-  defaults: { _controller: HorusSiteBundle:Fournisseurs:editfournisseur }
-
-horus_site_remove_fournisseurs:
-  pattern:  /backend/fournisseurs/suppression/{id}
-  defaults: { _controller: HorusSiteBundle:Fournisseurs:removefournisseur }
-
-horus_site_remove_image_fournisseur:
-  pattern:  /backend/fournisseurs/image/suppression/{id}
-  defaults: { _controller: HorusSiteBundle:Fournisseurs:removeimagefournisseur }
-
-horus_site_cover_image_fournisseur:
-  pattern:  /backend/fournisseurs/image/cover/{id}
-  defaults: { _controller: HorusSiteBundle:Fournisseurs:coverimagefournisseur }
-
-horus_site_active_fournisseurs:
-  pattern:  /backend/fournisseurs/activation/{id}
-  defaults: { _controller: HorusSiteBundle:Fournisseurs:activefournisseur }
-
-horus_site_desactive_fournisseurs:
-  pattern:  /backend/fournisseurs/desactivation/{id}
-  defaults: { _controller: HorusSiteBundle:Fournisseurs:desactivefournisseur }
-
-horus_site_edit_pictures_fournisseurs:
-  pattern:  /backend/fournisseurs/photo/{id}
-  defaults: { _controller: HorusSiteBundle:Fournisseurs:picturefournisseur }
-
-
-
-
-
 ###
 ### Commentaires
 ###
@@ -211,6 +166,64 @@ horus_site_remove_famille:
 horus_site_edit_famille:
   pattern:  /backend/familles/editer/{id}
   defaults: { _controller: HorusSiteBundle:Category:editfamille }
+
+horus_site_active_famille:
+  pattern:  /backend/familles/activation/{id}
+  defaults: { _controller: HorusSiteBundle:Category:activefamille }
+
+horus_site_desactive_famille:
+  pattern:  /backend/familles/desactivation/{id}
+  defaults: { _controller: HorusSiteBundle:Category:desactivefamille }
+
+
+
+
+###
+### Categories
+###
+
+horus_site_categories:
+  pattern:  /backend/categories
+  defaults: { _controller: HorusSiteBundle:Category:categories }
+
+horus_site_add_category:
+  pattern:  /backend/categories/ajouter
+  defaults: { _controller: HorusSiteBundle:Category:createcategory }
+
+horus_site_edit_image_category:
+  pattern:  /backend/categories/image/voir/{id}
+  defaults: { _controller: HorusSiteBundle:Category:picturecategory }
+
+horus_site_category:
+  pattern:  /backend/categorie/{id}
+  defaults: { _controller: HorusSiteBundle:Category:category }
+
+horus_site_cover_image_category:
+  pattern:  /backend/categories/image/cover/{id}
+  defaults: { _controller: HorusSiteBundle:Category:coverimagecategory }
+
+horus_site_remove_image_category:
+  pattern:  /backend/categories/image/suppression/{id}
+  defaults: { _controller: HorusSiteBundle:Category:removeimagecategory }
+
+horus_site_remove_category:
+  pattern:  /backend/categories/supprimer/{id}
+  defaults: { _controller: HorusSiteBundle:Category:removecategory }
+
+horus_site_edit_category:
+  pattern:  /backend/categories/editer/{id}
+  defaults: { _controller: HorusSiteBundle:Category:editcategory }
+
+horus_site_active_category:
+  pattern:  /backend/categories/activation/{id}
+  defaults: { _controller: HorusSiteBundle:Category:activecategory }
+
+horus_site_desactive_category:
+  pattern:  /backend/categories/desactivation/{id}
+  defaults: { _controller: HorusSiteBundle:Category:desactivecategory }
+
+
+
 
 
 
@@ -296,6 +309,52 @@ horus_site_desactive_transport:
 
 
 
+
+
+###
+### Fournisseurs
+###
+
+horus_site_fournisseurs:
+  pattern:  /backend/fournisseurs
+  defaults: { _controller: HorusSiteBundle:Fournisseurs:fournisseurs }
+
+horus_site_create_fournisseurs:
+  pattern:  /backend/fournisseurs/creer
+  defaults: { _controller: HorusSiteBundle:Fournisseurs:createfournisseur }
+
+horus_site_edit_fournisseurs:
+  pattern:  /backend/fournisseurs/editer/{id}
+  defaults: { _controller: HorusSiteBundle:Fournisseurs:editfournisseur }
+
+horus_site_remove_fournisseurs:
+  pattern:  /backend/fournisseurs/suppression/{id}
+  defaults: { _controller: HorusSiteBundle:Fournisseurs:removefournisseur }
+
+horus_site_remove_image_fournisseur:
+  pattern:  /backend/fournisseurs/image/suppression/{id}
+  defaults: { _controller: HorusSiteBundle:Fournisseurs:removeimagefournisseur }
+
+horus_site_cover_image_fournisseur:
+  pattern:  /backend/fournisseurs/image/cover/{id}
+  defaults: { _controller: HorusSiteBundle:Fournisseurs:coverimagefournisseur }
+
+horus_site_active_fournisseurs:
+  pattern:  /backend/fournisseurs/activation/{id}
+  defaults: { _controller: HorusSiteBundle:Fournisseurs:activefournisseur }
+
+horus_site_desactive_fournisseurs:
+  pattern:  /backend/fournisseurs/desactivation/{id}
+  defaults: { _controller: HorusSiteBundle:Fournisseurs:desactivefournisseur }
+
+horus_site_edit_pictures_fournisseurs:
+  pattern:  /backend/fournisseurs/photo/{id}
+  defaults: { _controller: HorusSiteBundle:Fournisseurs:picturefournisseur }
+
+
+
+
+
 ###
 ### Paniers
 ###
@@ -334,55 +393,6 @@ horus_site_charts:
 
 
 
-
-###
-### Categories
-###
-
-horus_site_categories:
-  pattern:  /backend/categories
-  defaults: { _controller: HorusSiteBundle:Category:categories }
-
-horus_site_add_category:
-  pattern:  /backend/categories/ajouter
-  defaults: { _controller: HorusSiteBundle:Category:createcategory }
-
-horus_site_edit_image_category:
-  pattern:  /backend/categories/image/voir/{id}
-  defaults: { _controller: HorusSiteBundle:Category:picturecategory }
-
-horus_site_category:
-  pattern:  /backend/categorie/{id}
-  defaults: { _controller: HorusSiteBundle:Category:category }
-
-horus_site_cover_image_category:
-  pattern:  /backend/categories/image/cover/{id}
-  defaults: { _controller: HorusSiteBundle:Category:coverimagecategory }
-
-horus_site_remove_image_category:
-  pattern:  /backend/categories/image/suppression/{id}
-  defaults: { _controller: HorusSiteBundle:Category:removeimagecategory }
-
-horus_site_remove_category:
-  pattern:  /backend/categories/supprimer/{id}
-  defaults: { _controller: HorusSiteBundle:Category:removecategory }
-
-horus_site_edit_category:
-  pattern:  /backend/categories/editer/{id}
-  defaults: { _controller: HorusSiteBundle:Category:editcategory }
-
-horus_site_active_category:
-  pattern:  /backend/categories/activation/{id}
-  defaults: { _controller: HorusSiteBundle:Category:activecategory }
-
-horus_site_desactive_category:
-  pattern:  /backend/categories/desactivation/{id}
-  defaults: { _controller: HorusSiteBundle:Category:desactivecategory }
-
-
-
-
-
 ###
 ### Administrateurs
 ###
@@ -415,6 +425,9 @@ horus_site_desactive_administrateur:
   pattern:  /backend/administrateurs/desactivation/{id}
   defaults: { _controller: HorusSiteBundle:Administrateur:desactiveadministrateur }
 
+horus_site_administrateur_history:
+  pattern:  /backend/administrateurs/historique/{id}
+  defaults: { _controller: HorusSiteBundle:Administrateur:allactionsbyadministrators }
 
 
 
@@ -476,9 +489,6 @@ horus_site_edit_commande:
 horus_site_generatefacture:
   pattern:  /backend/facture/{id}
   defaults: { _controller: HorusSiteBundle:Commandes:generatefacture }
-
-
-
 
 
 
@@ -602,8 +612,20 @@ horus_contact:
   defaults: { _controller: HorusSiteBundle:Main:contact }
 
 horus_search_avanced:
-    pattern:  /recherche/
+    pattern:  /backend/recherche/
     defaults: { _controller: HorusSiteBundle:Main:search }
+
+horus_site_history:
+  pattern:  /backend/historique
+  defaults: { _controller: HorusSiteBundle:Administrateur:allactions }
+
+horus_site_last_actions:
+  pattern:  /backend/dernieres-actions
+  defaults: { _controller: HorusSiteBundle:Administrateur:lastactions }
+
+horus_site_last_notifications:
+  pattern:  /backend/dernieres-notifications
+  defaults: { _controller: HorusSiteBundle:Administrateur:allnotifications }
 
 login:
   pattern:  /login

@@ -37,30 +37,9 @@
 
                     </td>
                     <td>
-
-                        <a data-toggle="modal" class="zoom" data-target="#myModal{{ loop.index }}">
+                        <a rel="group" class="pull-left fancybox" href="{{ imgcategories ~  category.id ~ '/' ~ image.path }}">
                             <img class="img-thumbnail" src="{{ imgcategories ~  category.id ~ '/' ~ image.path }}">
                         </a>
-
-                        <div class="modal fade" id="myModal{{ loop.index }}" tabindex="-1" role="dialog"
-                             aria-labelledby="myModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-body">
-                                        <img style="width: 80%"
-                                             src="{{ imgcategories ~  category.id ~ '/' ~ image.path }}">
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-primary" data-dismiss="modal"><i
-                                                    class="glyphicon glyphicon-remove"></i> Fermer cette image
-                                        </button>
-                                    </div>
-                                </div>
-                                <!-- /.modal-content -->
-                            </div>
-                            <!-- /.modal-dialog -->
-                        </div>
-                        <!-- /.modal -->
                     </td>
                 </tr>
 

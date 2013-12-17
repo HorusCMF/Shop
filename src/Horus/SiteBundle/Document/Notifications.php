@@ -17,11 +17,6 @@ class Notifications
     protected $id;
 
     /**
-     * @MongoDB\Int
-     */
-    protected $action;
-
-    /**
      * @MongoDB\String
      */
     protected $token;
@@ -32,17 +27,17 @@ class Notifications
     protected $titre;
 
     /**
+     * @MongoDB\Int
+     */
+    protected $nature;
+
+    /**
      * @MongoDB\String
      */
     protected $content;
 
     /**
-     * @MongoDB\String
-     */
-    protected $datas;
-
-    /**
-     * @MongoDB\String
+     * @MongoDB\Timestamp
      */
     protected $dateCreated;
 
@@ -51,9 +46,8 @@ class Notifications
      *
      */
     public function __construct(){
-        $this->token = sha1(time());
-        $this->dateCreated = new \Datetime('now');
-        $this->dateCreated = $this->dateCreated->format('d/m/y H:i:s');
+        $this->token = sha1($this->titre.$this->content);
+        $this->dateCreated = time();
     }
 
 
@@ -132,28 +126,29 @@ class Notifications
         return $this->content;
     }
 
-
     /**
-     * Set datas
+     * Set nature
      *
-     * @param string $datas
+     * @param string $nature
      * @return self
      */
-    public function setDatas($datas)
+    public function setNature($nature)
     {
-        $this->datas = serialize($datas);
+        $this->nature = $nature;
         return $this;
     }
 
     /**
-     * Get datas
+     * Get nature
      *
-     * @return string $datas
+     * @return string $nature
      */
-    public function getDatas()
+    public function getNature()
     {
-        return $this->datas;
+        return $this->nature;
     }
+
+
 
     /**
      * Set dateCreated
@@ -177,25 +172,4 @@ class Notifications
         return $this->dateCreated;
     }
 
-    /**
-     * Set action
-     *
-     * @param int $action
-     * @return self
-     */
-    public function setAction($action)
-    {
-        $this->action = $action;
-        return $this;
-    }
-
-    /**
-     * Get action
-     *
-     * @return int $action
-     */
-    public function getAction()
-    {
-        return $this->action;
-    }
 }

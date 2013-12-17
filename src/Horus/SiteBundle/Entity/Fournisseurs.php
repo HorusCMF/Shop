@@ -44,7 +44,7 @@ class Fournisseurs
      * @ORM\Column(name="title", type="string", length=32)
      * @Assert\NotBlank(message = "Votre titre ne peut être vite")
      * @Assert\Length(
-     *      min = "5",
+     *      min = "3",
      *      max = "600",
      *      minMessage = "Votre titre doit faire au minimum {{ limit }} caractères",
      *      maxMessage = "Votre titre doit faire au maximum {{ limit }} caractères"
@@ -59,7 +59,7 @@ class Fournisseurs
      * @Assert\NotBlank(message = "Votre resume ne peut être vite")
      * @Assert\Length(
      *      min = "5",
-     *      max = "600",
+     *      max = "6000",
      *      minMessage = "Votre resume doit faire au minimum {{ limit }} caractères",
      *      maxMessage = "Votre resume doit faire au maximum {{ limit }} caractères"
      *  )
@@ -73,7 +73,7 @@ class Fournisseurs
      * @Assert\NotBlank(message = "Votre description ne peut être vite")
      * @Assert\Length(
      *      min = "5",
-     *      max = "600",
+     *      max = "10000",
      *      minMessage = "Votre description doit faire au minimum {{ limit }} caractères",
      *      maxMessage = "Votre description doit faire au maximum {{ limit }} caractères"
      *  )

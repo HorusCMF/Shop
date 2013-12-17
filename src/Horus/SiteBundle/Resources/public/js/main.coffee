@@ -1,10 +1,43 @@
 $ ->
+
+  $(".fancybox").fancybox()
+
+  $poped = $('#notifications')
+  $poped.popover(
+    content: $("#notifications-content").html()
+    html: true).click (evt) ->
+      evt.stopPropagation()
+      $(this).popover "show"
+
+
+  $("html").click ->
+    $poped.popover "hide"
+
+  # Trigger for the hiding
+#  $("html:not(#notifications)").on "click.popover.data-api", ->
+#    $poped.popover "hide"
+
   $(".star").jRating
     isDisabled : true
     bigStarsPath: '/images/stars.png'
     length : 5
     rateMax : 5
 
+  $(window).scroll ->
+    if $(document).scrollTop() >= 100
+      $('body .navbar-default').stop(true,true).animate
+        opacity: 0.8
+    else
+      $('body .navbar-default').stop(true,true).animate
+        opacity: 1
+
+  $("body .navbar-default").hover (->
+    $(this).stop(true,true).animate
+      opacity: 1
+  ), ->
+    if $(document).scrollTop() >= 100
+      $('body .navbar-default').stop(true,true).animate
+        opacity: 0.8
 
   $('.multiselect').multiselect
     buttonText: (options, select) ->

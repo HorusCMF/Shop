@@ -16,14 +16,21 @@
                     <ul class="dropdown-menu">
                         <li><a onclick="return(confirm('Etes-vous sûr de vouloir supprimer cet article ?'));" href="{{ path('horus_site_remove_article', {'id' : article.id}) }}"><i class="glyphicon glyphicon-remove"></i> Supprimer</a></li>
                         <li><a  href="{{ path('horus_site_edit_article', {'id' : article.id}) }}"><i class="glyphicon glyphicon-pencil"></i> Editer</a></li>
+                        {% if article.nature == 1 %}
+                            <li><a  href="{{ path('horus_site_active_article', {'id' : article.id}) }}"><i class="glyphicon glyphicon-check"></i> Publier</a></li>
+                        {% else %}
+                            <li><a  href="{{ path('horus_site_desactive_article', {'id' : article.id}) }}"><i class="glyphicon glyphicon-minus-sign"></i> Dépublier</a></li>
+                        {% endif %}
                     </ul>
                 </div>
                 <div class="media-body">
                     <h4 class="media-heading"><a href="{{ path('horus_site_edit_article', {'id' : article.id}) }}">{{ article.title }}</a>
-                        {% if article.isVisible %}
+                        {% if article.nature == 3 %}
                             <span class="badge badge-success">En ligne</span>
+                        {% elseif article.nature == 2  %}
+                            <span class="badge badge-warning">En cours de relecture</span>
                         {% else %}
-                                <span class="badge badge-danger">Hors-Ligne</span>
+                            <span class="badge badge-danger">Hors-Ligne</span>
                         {% endif %}
                     </h4>
                     <p>{{ article.cover|striptags|truncate(900,'...')|raw }}</p>

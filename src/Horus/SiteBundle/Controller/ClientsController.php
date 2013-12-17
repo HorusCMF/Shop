@@ -54,6 +54,16 @@ class ClientsController extends Controller
     /**
      * @return \Symfony\Component\HttpFoundation\Response
      */
+    public function lastclientsAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $clients = $em->getRepository('HorusSiteBundle:Client')->findAll(array(), array('cateCreated' => 'DESC', 7));
+        return $this->render('HorusSiteBundle:Clients:lastclients.html.twig', array('clients' => $clients));
+    }
+
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
     public function clientAction(Client $id)
     {
         $em = $this->getDoctrine()->getManager();
@@ -130,6 +140,12 @@ class ClientsController extends Controller
                 "Le client " . $client->getFirstname() . " " . $client->getLastname() . " vient d'être crée"
             );
 
+            /**
+             * Notifications
+             */
+            $this->container->get('lastactions_listener')->insertActions('Creation', 'a ajouté un client','glyphicon glyphicon-plus', $this->generateUrl('horus_site_client', array('id' => $client->getId())));
+
+
             return $this->redirect($this->generateUrl('horus_site_clients'));
         }
 
@@ -198,6 +214,11 @@ class ClientsController extends Controller
                 "Le client " . $id->getFirstname() . " " . $id->getLastname() . " vient d'être modifié"
             );
 
+            /**
+             * Notifications
+             */
+            $this->container->get('lastactions_listener')->insertActions('Creation', 'a edité un client','glyphicon glyphicon-pencil', $this->generateUrl('horus_site_client', array('id' => $id->getId())));
+
             return $this->redirect($this->generateUrl('horus_site_clients'));
         }
 
@@ -222,6 +243,11 @@ class ClientsController extends Controller
             'success',
             "Le client a bien été supprimé"
         );
+
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Suppression', 'a supprimé un client','glyphicon glyphicon-remove');
 
         return $this->redirect($this->generateUrl('horus_site_clients'));
     }
@@ -256,6 +282,12 @@ class ClientsController extends Controller
             "Le client " . $id->getFirstname() . " " . $id->getLastname() . " vient d'être désactivé"
         );
 
+
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Desactivation', 'a désactivé un client','glyphicon glyphicon-minus-sign', $this->generateUrl('horus_site_client', array('id' => $id->getId())));
+
         return $this->redirect($this->generateUrl('horus_site_clients'));
     }
 
@@ -279,6 +311,12 @@ class ClientsController extends Controller
             'messagerealtime',
             "Le client " . $id->getFirstname() . " " . $id->getLastname() . " vient d'être activé"
         );
+
+
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Activation', 'a activé un client','glyphicon glyphicon-check', $this->generateUrl('horus_site_client', array('id' => $id->getId())));
 
         return $this->redirect($this->generateUrl('horus_site_clients'));
     }

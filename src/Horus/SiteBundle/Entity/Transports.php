@@ -126,7 +126,7 @@ class Transports
      *     message = "Le titre ne doit pas etre vide"
      * )
      * @Assert\Length(
-     *      min = "5",
+     *      min = "3",
      *      max = "1000",
      *      minMessage = "Votre titre doit faire au moins {{ limit }} caractères",
      *      maxMessage = "Votre titre ne peut pas être plus long que {{ limit }} caractères"
@@ -142,7 +142,7 @@ class Transports
      * )
      * @Assert\Length(
      *      min = "5",
-     *      max = "3000",
+     *      max = "10000",
      *      minMessage = "Votre description doit faire au moins {{ limit }} caractères",
      *      maxMessage = "Votre description ne peut pas être plus long que {{ limit }} caractères"
      * )

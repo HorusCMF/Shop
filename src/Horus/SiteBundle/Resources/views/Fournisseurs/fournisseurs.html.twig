@@ -2,8 +2,8 @@
 
 {% block content %}
 
-    <div class="page" id="marques">
-        <h2><i class="glyphicon glyphicon-gift"></i> Vos fournisseurs</h2>
+    <div class="page" id="fournisseurs">
+        <h2><i class="glyphicon glyphicon-tower"></i> Vos fournisseurs</h2>
         {% include 'HorusSiteBundle:Slots:display.html.twig' %}
 
         {% for fournisseur in fournisseurs %}
@@ -34,7 +34,7 @@
                                 <span class="badge badge-danger">Hors-Ligne</span>
                         {% endif %}
                     </h4>
-                    <p>{{ fournisseur.resume|raw }}</p>
+                    <p>{{ fournisseur.resume|striptags|truncate(900,'...')|raw }}</p>
                 </div>
             </div>
             {% if not loop.last %}

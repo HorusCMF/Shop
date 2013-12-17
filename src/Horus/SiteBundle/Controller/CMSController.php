@@ -53,6 +53,11 @@ class CMSController extends Controller
                 "Le tag a été ajouté"
             );
 
+            /**
+             * Notifications
+             */
+            $this->container->get('lastactions_listener')->insertActions('Creation', 'a crée un tag','glyphicon glyphicon-plus',$this->generateUrl('horus_site_tags'));
+
             return $this->redirect($this->generateUrl('horus_site_tags'));
         }
 
@@ -84,6 +89,11 @@ class CMSController extends Controller
                 'success',
                 "Le tag a été modifié"
             );
+
+            /**
+             * Notifications
+             */
+            $this->container->get('lastactions_listener')->insertActions('Edition', 'a édité un tag','glyphicon glyphicon-pencil',$this->generateUrl('horus_site_edit_tag', array('id' => $id->getId())));
 
             return $this->redirect($this->generateUrl('horus_site_tags'));
         }
@@ -151,6 +161,12 @@ class CMSController extends Controller
             "Le tag a été supprimé"
         );
 
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Suppression', 'a supprimé un tag','glyphicon glyphicon-remove');
+
+
         return $this->redirect($this->generateUrl('horus_site_tags'));
     }
 
@@ -164,8 +180,8 @@ class CMSController extends Controller
         $request = $this->getRequest();
         $em = $this->getDoctrine()->getManager();
 
-        $page = new Article();
-        $form = $this->createForm(new ArticleType(), $page);
+        $article = new Article();
+        $form = $this->createForm(new ArticleType(), $article);
         $form->handleRequest($request);
 
         $ispage = $em->getRepository('HorusSiteBundle:Article')->isPage();
@@ -177,7 +193,7 @@ class CMSController extends Controller
         }
 
         if ($form->isValid()) {
-            $em->persist($page);
+            $em->persist($article);
             $em->flush();
             $this->get('session')->getFlashBag()->add(
                 'success',
@@ -185,8 +201,14 @@ class CMSController extends Controller
             );
             $this->get('session')->getFlashBag()->add(
                 'messagerealtime',
-                "L'article ".$page->getTitle()." vient d'être crée"
+                "L'article ".$article->getTitle()." vient d'être crée"
             );
+
+            /**
+             * Notifications
+             */
+            $this->container->get('lastactions_listener')->insertActions('Creation', 'a crée un article','glyphicon glyphicon-plus', $this->generateUrl('horus_site_article', array('id' => $article->getId())));
+
             return $this->redirect($this->generateUrl('horus_site_articles'));
         }
 
@@ -231,6 +253,13 @@ class CMSController extends Controller
                 "L'article ".$id->getTitle()." vient d'être edité"
             );
 
+
+            /**
+             * Notifications
+             */
+            $this->container->get('lastactions_listener')->insertActions('Edition', 'a édité un article','glyphicon glyphicon-pencil',  $this->generateUrl('horus_site_article', array('id' => $id->getId())));
+
+
             return $this->redirect($this->generateUrl('horus_site_articles'));
         }
 
@@ -262,6 +291,11 @@ class CMSController extends Controller
             "L'article a été supprimé"
         );
 
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Suppression', 'a supprimé un article','glyphicon glyphicon-remove', $this->generateUrl('horus_site_articles'));
+
         return $this->redirect($this->generateUrl('horus_site_articles'));
     }
 
@@ -275,7 +309,7 @@ class CMSController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $id->setIsVisible(false);
+        $id->setNature(1);
         $em->persist($id);
         $em->flush();
         $this->get('session')->getFlashBag()->add(
@@ -286,6 +320,14 @@ class CMSController extends Controller
             'messagerealtime',
             "L'article ".$id->getTitle()." vient d'être desactivé"
         );
+
+
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Desactivation', 'a désactivé un article','glyphicon glyphicon-minus-sign', $this->generateUrl('horus_site_articles'));
+
+
         return $this->redirect($this->generateUrl('horus_site_articles'));
     }
 
@@ -298,7 +340,7 @@ class CMSController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $id->setIsVisible(true);
+        $id->setNature(3);
         $em->persist($id);
         $em->flush();
         $this->get('session')->getFlashBag()->add(
@@ -309,6 +351,12 @@ class CMSController extends Controller
             'messagerealtime',
             "L'article ".$id->getTitle()." vient d'être activé"
         );
+
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Activation', 'a activé un article','glyphicon glyphicon-check', $this->generateUrl('horus_site_articles'));
+
         return $this->redirect($this->generateUrl('horus_site_articles'));
     }
 
@@ -351,6 +399,14 @@ class CMSController extends Controller
                 'messagerealtime',
                 "La page ".$page->getName()." vient d'être crée"
             );
+
+
+            /**
+             * Notifications
+             */
+            $this->container->get('lastactions_listener')->insertActions('Creation', 'a crée une page','glyphicon glyphicon-plus',$this->generateUrl('horus_site_page', array('id' => $page->getId())));
+
+
             return $this->redirect($this->generateUrl('horus_site_pages'));
         }
 
@@ -381,6 +437,12 @@ class CMSController extends Controller
             'success',
             "La page a été supprimée"
         );
+
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Suppression', 'a supprimé une page','glyphicon glyphicon-remove');
+
 
         return $this->redirect($this->generateUrl('horus_site_pages'));
     }
@@ -418,6 +480,12 @@ class CMSController extends Controller
                 'messagerealtime',
                 "La page ".$id->getName()." vient d'être editée"
             );
+
+            /**
+             * Notifications
+             */
+            $this->container->get('lastactions_listener')->insertActions('Edition', 'a édité une page','glyphicon glyphicon-pencil', $this->generateUrl('horus_site_edit_page', array('id' => $id->getId())));
+
             return $this->redirect($this->generateUrl('horus_site_pages'));
         }
 
@@ -441,7 +509,7 @@ class CMSController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $id->setVisible(false);
+        $id->setNature(1);
         $em->persist($id);
         $em->flush();
         $this->get('session')->getFlashBag()->add(
@@ -450,8 +518,16 @@ class CMSController extends Controller
         );
         $this->get('session')->getFlashBag()->add(
             'messagerealtime',
-            "La page ".$id->getTitle()." vient d'être desactivée"
+            "La page ".$id->getName()." vient d'être desactivée"
         );
+
+
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Desactivation', 'a désactivé une page','glyphicon glyphicon-minus-sign', $this->generateUrl('horus_site_edit_page', array('id' => $id->getId())));
+
+
         return $this->redirect($this->generateUrl('horus_site_pages'));
     }
 
@@ -464,7 +540,7 @@ class CMSController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $id->setVisible(true);
+        $id->setNature(3);
         $em->persist($id);
         $em->flush();
         $this->get('session')->getFlashBag()->add(
@@ -473,8 +549,16 @@ class CMSController extends Controller
         );
         $this->get('session')->getFlashBag()->add(
             'messagerealtime',
-            "La page ".$id->getTitle()." vient d'être activée"
+            "La page ".$id->getName()." vient d'être activée"
         );
+
+
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Activation', 'a activé une page','glyphicon glyphicon-check', $this->generateUrl('horus_site_edit_page', array('id' => $id->getId())));
+
+
         return $this->redirect($this->generateUrl('horus_site_pages'));
     }
 

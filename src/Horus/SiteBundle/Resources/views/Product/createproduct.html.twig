@@ -56,6 +56,12 @@
     <div id="myTabContent" class="tab-content">
     <div class="tab-pane fade active in" id="presentation">
         <div class="row-fluid">
+            <div class="span3">
+                {{ form_widget(form.isVisible, {'attr': {'class' : 'pull-left' }}) }}
+                <label for="isVisible" class="pull-left">Ce produit est ligne</label>
+            </div>
+        </div>
+        <div class="row-fluid">
             <div class="span6">
                 <label for="title">Titre</label>
 
@@ -129,9 +135,6 @@
         <label for="content">Description</label>
         {{ form_widget(form.content,{'attr' : {'class' : 'ckeditor' }}) }}
         {{ form_errors(form.content) }}
-        {{ form_widget(form.isVisible, {'attr': {'class' : 'rad pull-left' }}) }}
-        <p><label for="isVisible" class="pull-left">Ce produit est ligne</label></p>
-
         <div class="clear"></div>
     </div>
     <div class="tab-pane fade" id="prix">

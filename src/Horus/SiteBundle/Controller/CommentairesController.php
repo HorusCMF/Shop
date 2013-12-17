@@ -34,6 +34,18 @@ class CommentairesController extends Controller
     }
 
     /**
+     * Last Commentaires
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function lastcommentairesAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $commentaires = $em->getRepository('HorusSiteBundle:Commentaire')->findAll(array(), array('dateCreated' => 'DESC'), 7);
+
+        return $this->render('HorusSiteBundle:Commentaires:lastcommentaires.html.twig', array('commentaires' => $commentaires));
+    }
+
+    /**
      * Get a Commentaire
      * @return \Symfony\Component\HttpFoundation\Response
      */
@@ -63,6 +75,13 @@ class CommentairesController extends Controller
             "Le commentaire a bien été supprimée"
         );
 
+
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Suppression', 'a supprimé un commentaire','glyphicon glyphicon-remove');
+
+
         return $this->redirect($this->generateUrl('horus_site_commentaires'));
     }
 
@@ -71,7 +90,7 @@ class CommentairesController extends Controller
      * Create a commentaire
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
      */
-    public function createcommentaireAction(Produit $id)
+    public function createcommentaireAction()
     {
         $request = $this->getRequest();
         $em = $this->getDoctrine()->getManager();
@@ -92,7 +111,14 @@ class CommentairesController extends Controller
                 'messagerealtime',
                 "Le commentaire vient d'être crée"
             );
-            return $this->redirect('horus_site_commentaires');
+
+
+            /**
+             * Notifications
+             */
+            $this->container->get('lastactions_listener')->insertActions('Creation', 'a crée un commentaire','glyphicon glyphicon-plus');
+
+            return $this->redirect($this->generateUrl('horus_site_commentaires'));
         }
 
         return $this->render('HorusSiteBundle:Commentaires:createcommentaire.html.twig',
@@ -128,6 +154,14 @@ class CommentairesController extends Controller
                 'messagerealtime',
                 "Le commentaire vient d'être editée"
             );
+
+
+            /**
+             * Notifications
+             */
+            $this->container->get('lastactions_listener')->insertActions('Edition', 'a édité un commentaire','glyphicon glyphicon-pencil');
+
+
             return $this->redirect($this->generateUrl('horus_site_commentaires'));
         }
 
@@ -148,7 +182,7 @@ class CommentairesController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $id->setVisible(false);
+        $id->setVisible(1);
         $em->persist($id);
         $em->flush();
         $this->get('session')->getFlashBag()->add(
@@ -159,6 +193,13 @@ class CommentairesController extends Controller
             'messagerealtime',
             "La commentaire vient d'être désactivée"
         );
+
+
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Desactivation', 'a desactivé un commentaire','glyphicon glyphicon-minus-sign');
+
 
         return $this->redirect($this->generateUrl('horus_site_commentaires'));
     }
@@ -172,7 +213,7 @@ class CommentairesController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $id->setVisible(true);
+        $id->setVisible(3);
         $em->persist($id);
         $em->flush();
         $this->get('session')->getFlashBag()->add(
@@ -183,6 +224,13 @@ class CommentairesController extends Controller
             'messagerealtime',
             "Le commentaire  vient d'être activée"
         );
+
+
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Activation', 'a activé un commentaire','glyphicon glyphicon-check');
+
 
         return $this->redirect($this->generateUrl('horus_site_commentaires'));
     }

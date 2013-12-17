@@ -61,6 +61,13 @@ class FournisseursController extends Controller
             "La fournisseur a été supprimé"
         );
 
+
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Suppression', 'a supprimé un fournisseur','glyphicon glyphicon-remove');
+
+
         return $this->redirect($this->generateUrl('horus_site_fournisseurs'));
     }
 
@@ -171,6 +178,12 @@ class FournisseursController extends Controller
             "Le fournisseur ".$id->getTitle()." a été desactivé"
         );
 
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Desactivation', 'a desactivé un fournisseur','glyphicon glyphicon-minus-sign', $this->generateUrl('horus_site_edit_fournisseurs', array('id' => $id->getId())));
+
+
 
         return $this->redirect($this->generateUrl('horus_site_fournisseurs'));
     }
@@ -225,6 +238,14 @@ class FournisseursController extends Controller
                 'messagerealtime',
                 "Le fournisseur vient d'être crée"
             );
+
+
+            /**
+             * Notifications
+             */
+            $this->container->get('lastactions_listener')->insertActions('Création', 'a crée un fournisseur','glyphicon glyphicon-plus', $this->generateUrl('horus_site_edit_fournisseurs', array('id' => $fournisseur->getId())));
+
+
             return $this->redirect($this->generateUrl('horus_site_edit_pictures_fournisseurs', array('id' => $fournisseur->getId())));
         }
 
@@ -265,6 +286,13 @@ class FournisseursController extends Controller
                 'messagerealtime',
                 "Le fournisseur ".$id->getTitle()." vient d'être modifié"
             );
+
+            /**
+             * Notifications
+             */
+            $this->container->get('lastactions_listener')->insertActions('Edition', 'a edité un fournisseur','glyphicon glyphicon-pencil', $this->generateUrl('horus_site_edit_fournisseurs', array('id' => $id->getId())));
+
+
             return $this->redirect($this->generateUrl('horus_site_fournisseurs'));
         }
 

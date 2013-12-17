@@ -1,0 +1,63 @@
+{% for famille in familles %}
+    <div class="media">
+        <div class="btn-group pull-right">
+            <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
+                <i class="glyphicon glyphicon-plus"></i> Action <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                {% if famille.visible %}
+                    <li><a onclick="return(confirm('Etes-vous sûr de vouloir désactiver cette famille ?'));"
+                           href="{{ path('horus_site_desactive_famille', {'id' : famille.id}) }}"><i
+                                    class="glyphicon glyphicon-minus-sign"></i> Désactiver</a></li>
+                {% else %}
+                    <li><a onclick="return(confirm('Etes-vous sûr de vouloir activer cette famille ?'));"
+                           href="{{ path('horus_site_active_famille', {'id' : famille.id}) }}"><i
+                                    class="glyphicon glyphicon-ok"></i> Activer</a></li>
+                {% endif %}
+
+                <li><a onclick="return(confirm('Etes-vous sûr de vouloir supprimer cette catégory ?'));"
+                       href="{{ path('horus_site_remove_famille', {'id' : famille.id}) }}"><i
+                                class="glyphicon glyphicon-remove"></i> Supprimer</a></li>
+                <li><a href="{{ path('horus_site_edit_famille', {'id' : famille.id}) }}"><i
+                                class="glyphicon glyphicon-pencil"></i> Editer</a></li>
+            </ul>
+        </div>
+        <a class="pull-left">
+            {% if famille.path is not empty %}
+                <a rel="group" class="pull-left fancybox" href="{{ imgfamilles  ~ famille.path|sizes('big') }}">
+                    <img class="img-polaroid" src="{{ imgfamilles  ~ famille.path|sizes('medium') }}"/>
+                </a>
+            {% else %}
+                <img class="media-object img-thumbnail" src="http://placehold.it/150x75" alt="...">
+            {% endif %}
+        </a>
+
+
+        <div class="media-body">
+            <h4 class="media-heading"><a href="">{{ famille.name }}</a>
+                {% if famille.visible %}
+                    <span class="badge badge-success">En ligne</span>
+                {% else %}
+                    <span class="badge badge-danger">Hors-Ligne</span>
+                {% endif %}
+            </h4>
+
+            <p>{{ famille.cover|striptags|truncate(900,'...')|raw }}</p>
+            <h4 class="pull-right"><span class="label label-info">{{ famille.produits|length|default('0') }}
+                    produit(s)</span></h4>
+
+        </div>
+    </div>
+    {% if not loop.last %}
+        <hr class="clear fancy-line"/>{% endif %}
+
+{% else %}
+    <div class="alert alert-dismissable alert-danger">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <i class="glyphicon glyphicon-info-sign"></i> Aucun article de créer pour le moment.
+        <a href="{{ path('horus_site_add_famille') }}" class="btn btn-primary pull-right"><i
+                    class="glyphicon glyphicon-plus"></i> Ajouter une famille</a>
+
+        <div class="clear"></div>
+    </div>
+{% endfor %}

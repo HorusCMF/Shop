@@ -36,6 +36,27 @@ class LayoutController extends Controller
         return $this->render('HorusSiteBundle:Slots:theme.html.twig', array('configuration' => $configuration));
     }
 
+    /**
+     * Custom Theme
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function leftmenuAction()
+    {
+        return $this->render('HorusSiteBundle:Slots:leftmenu.html.twig');
+    }
+
+    /**
+     * Custom Theme
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function notificationsAction()
+    {
+        $dm = $this->get('doctrine_mongodb')->getManager();
+        $notifications = $dm->getRepository('HorusSiteBundle:Notifications')->findBy(array(), array('dateCreated' => 'DESC'), 5);
+
+        return $this->render('HorusSiteBundle:Slots:notifications.html.twig', array('notifications' => $notifications));
+    }
+
 
     /**
      * get Ip Visitor

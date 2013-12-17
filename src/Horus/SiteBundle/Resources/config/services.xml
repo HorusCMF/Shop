@@ -9,25 +9,37 @@
         <parameter key="mailer.class">Zend_Mail</parameter>
     </parameters>
     <services>
-        <service id="success_handler_site" class="Horus\SiteBundle\Authentication\AuthenticationSiteHandler"
-                 public="false">
+        <service id="success_handler_site" class="Horus\SiteBundle\Authentication\AuthenticationSiteHandler" public="false">
             <argument type="service" id="router"></argument>
             <argument type="service" id="doctrine.orm.entity_manager"></argument>
             <argument type="service" id="session"></argument>
         </service>
+
         <service id="activity_listener" class="Horus\SiteBundle\Listener\ActivityListener" scope="request">
-            <argument type="service" id="security.context" />
-            <argument type="service" id="doctrine" />
-            <argument type="service" id="service_container" />
+            <argument type="service" id="security.context"/>
+            <argument type="service" id="doctrine"/>
+            <argument type="service" id="service_container"/>
             <tag name="kernel.event_listener" event="kernel.controller" method="onCoreController"/>
         </service>
 
-        <service id="twig.myextension"
-                 class="Horus\SiteBundle\Twig\Extension\DemoExtension"
-                 public="false">
+        <service id="lastactions_listener" class="Horus\SiteBundle\Listener\LastActionsListener">
+            <argument type="service" id="security.context"/>
+            <argument type="service" id="doctrine_mongodb.odm.document_manager"/>
+        </service>
+
+        <service id="produits_listener" class="Horus\SiteBundle\Listener\NotificationsListener">
+            <tag name="doctrine.event_listener" event="postUpdate" />
+            <tag name="doctrine.event_listener" event="postPersist" />
+            <tag name="doctrine.event_listener" event="postRemove" />
+            <argument type="service" id="doctrine_mongodb.odm.document_manager"/>
+        </service>
+
+
+        <service id="twig.myextension" class="Horus\SiteBundle\Twig\Extension\DemoExtension" public="false">
             <tag name="twig.extension"/>
             <argument type="service" id="twig.loader"/>
         </service>
+
         <service id="method_listener" class="Horus\SiteBundle\Listener\PreMethodListener" public="true">
             <tag name="kernel.event_listener" event="kernel.controller" method="onCoreController"/>
         </service>

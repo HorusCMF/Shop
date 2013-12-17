@@ -24,7 +24,7 @@ class ArticleType extends AbstractType
                 ->add('tags', null, array( 'label' => 'Mots-clefs associés'))
                 ->add('pages')
                 ->add('nature','choice', array(
-                    'choices'   => array(1 => 'Brouillon', 2 => 'Relus', 3 => 'Final'),
+                    'choices'   => array(1 => 'Brouillon', 2 => 'En attente de relecture', 3 => 'Final'),
                     'required'  => true,
                     'expanded' => true
                 ))

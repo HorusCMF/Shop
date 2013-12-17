@@ -33,7 +33,6 @@ class CommercialController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $commercials = $em->getRepository('HorusSiteBundle:Commercial')->findAll();
-
         return $this->render('HorusSiteBundle:Commercial:commercials.html.twig', array('commercials' => $commercials));
     }
 
@@ -63,6 +62,11 @@ class CommercialController extends Controller
                 'messagerealtime',
                 "L'action commerciale ".$commercial->getTitle()." vient d'être crée"
             );
+
+            /**
+             * Notifications
+             */
+            $this->container->get('lastactions_listener')->insertActions('Création', 'a crée une action commerciale','glyphicon glyphicon-plus',  $this->generateUrl('horus_site_edit_commercial', array('id' => $commercial->getId())));
 
             return $this->redirect($this->generateUrl('horus_site_commercials'));
         }
@@ -100,6 +104,10 @@ class CommercialController extends Controller
                 'messagerealtime',
                 "L'action commerciale ".$id->getTitle()." vient d'être modifiée"
             );
+            /**
+             * Notifications
+             */
+            $this->container->get('lastactions_listener')->insertActions('Création', 'a edité une action commerciale','glyphicon glyphicon-pencil',  $this->generateUrl('horus_site_edit_commercial', array('id' => $id->getId())));
 
             return $this->redirect($this->generateUrl('horus_site_commercials'));
         }
@@ -132,6 +140,10 @@ class CommercialController extends Controller
             'success',
             "L'action commerciale a bien été supprimée"
         );
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Suppression', 'a supprimé une action commerciale','glyphicon glyphicon-remove',  $this->generateUrl('horus_site_commercials'));
 
         return $this->redirect($this->generateUrl('horus_site_commercials'));
     }
@@ -156,6 +168,11 @@ class CommercialController extends Controller
             'messagerealtime',
             "L'action commerciale ".$id->getTitle()." vient d'être desactivée"
         );
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Désactivation', 'a désactivé une action commerciale','glyphicon glyphicon-minus-sign',  $this->generateUrl('horus_site_edit_commercial', array('id' => $id->getId())));
+
 
         return $this->redirect($this->generateUrl('horus_site_commercials'));
     }
@@ -180,6 +197,11 @@ class CommercialController extends Controller
             'messagerealtime',
             "L'action commerciale ".$id->getTitle()." vient d'être activée"
         );
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Activation', 'a activé une action commerciale','glyphicon glyphicon-check',  $this->generateUrl('horus_site_edit_commercial', array('id' => $id->getId())));
+
         return $this->redirect($this->generateUrl('horus_site_commercials'));
     }
 

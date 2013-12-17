@@ -24,4 +24,33 @@ class FamilleRepository extends EntityRepository
         return $queryBuilder;
     }
 
+
+
+    /**
+     * Get articles by Category
+     * @param Category $category
+     * @return mixed
+     */
+    public function getFamilleIsProductNull()
+    {
+        $query = $this->getEntityManager()
+            ->createQuery("SELECT COUNT(a.id) FROM HorusSiteBundle:Famille a INNER JOIN a.produits p WHERE a.produits IS EMPTY");
+        return $query->getSingleScalarResult();
+    }
+
+    /**
+     * Get articles by Category
+     * @param Category $category
+     * @return mixed
+     */
+    public function getFamilleIsDesactive()
+    {
+        $query = $this->getEntityManager()
+            ->createQuery("SELECT COUNT(a.id) FROM HorusSiteBundle:Famille a WHERE a.visible = :visible")
+            ->setParameter('visible', false);
+        return $query->getSingleScalarResult();
+    }
+
+
+
 }

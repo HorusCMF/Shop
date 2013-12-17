@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    var socket = io.connect('http://www.horus.ju:1665');
+    var socket = io.connect('http://www.freakinjob.com:1665');
     var me = null;
 
 
@@ -14,11 +14,22 @@ $(document).ready(function () {
     });
 
 
-    // on create action comm
+
+    // on alerting
     socket.on('alerting', function (user) {
         $html ='<h4><i class="glyphicon glyphicon-info-sign"></i> '+ user.message +' par '+ user.firstname +' '+ user.lastname +'</h4>';
         $('#mini-notification').html($html);
         $('#mini-notification').miniNotification({closeButton: false});
+
+        var response = '';
+        $.ajax({ type: "GET",
+            url: "/app_dev.php/backend/dernieres-actions",
+            success : function(text)
+            {
+                response = text;
+                $('#lastactions-panel').html(response);
+            }
+        });
     });
 
 

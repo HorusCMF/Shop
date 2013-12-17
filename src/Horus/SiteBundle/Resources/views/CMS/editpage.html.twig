@@ -80,6 +80,13 @@
 
             <div class="row-fluid">
                 <div class="span12">
+                    <label for="title">Articles asocciés à la page</label>
+                    {{ form_widget(form.articles) }}
+                    {{ form_errors(form.articles) }}
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span12">
                     <label for="title">Produits asocciés à la page</label>
                     {{ form_widget(form.produits) }}
                     {{ form_errors(form.produits) }}

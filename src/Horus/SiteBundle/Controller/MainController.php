@@ -3,6 +3,7 @@
 namespace Horus\SiteBundle\Controller;
 
 use Doctrine\Common\Util\Debug;
+use Horus\SiteBundle\Document\Actions;
 use Horus\SiteBundle\Form\SearchType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -20,7 +21,6 @@ class MainController extends Controller
     public function indexAction()
     {
         return $this->render('HorusSiteBundle:Main:index.html.twig');
-
     }
 
     /**
@@ -56,6 +56,12 @@ class MainController extends Controller
         $tags_arg = $request->query->get('tags');
         $pages_arg = $request->query->get('pages');
         $articles_arg = $request->query->get('articles');
+
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Recherche', 'a effectué une recherche sur "'.$word_arg.'"','glyphicon glyphicon-search');
+
 
         if (!empty($word_arg))
             $finalword = $word_arg;

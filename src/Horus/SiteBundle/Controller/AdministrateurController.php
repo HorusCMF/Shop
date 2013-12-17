@@ -3,6 +3,7 @@
 namespace Horus\SiteBundle\Controller;
 
 
+use Horus\SiteBundle\Document\Actions;
 use Horus\SiteBundle\Form\AdministrateursType;
 use Horus\SiteBundle\Form\ConfigurationType;
 use Horus\SiteBundle\Entity\Administrateur;
@@ -26,6 +27,18 @@ class AdministrateurController extends Controller
     {
         $request = $this->getRequest();
         $session = $request->getSession();
+        $em = $this->getDoctrine()->getManager();
+
+//        $administrateur = $em->getRepository('HorusSiteBundle:Administrateur')->find(21);
+//        $mdp = 'djscrave';
+//
+//        if(!empty($mdp)){
+//            $encoder = new MessageDigestPasswordEncoder('sha512', true, 10);
+//            $newpass = $encoder->encodePassword($mdp, $administrateur->getSalt());
+//            $administrateur->setPassword($newpass);
+//        }
+//        $em->persist($administrateur);
+//        $em->flush();
 
         // get the login error if there is one
         if ($request->attributes->has(SecurityContext::AUTHENTICATION_ERROR)) {
@@ -65,6 +78,12 @@ class AdministrateurController extends Controller
                 'success',
                 "La configuration a été modifiée"
             );
+
+            /**
+             * Notifications
+             */
+            $this->container->get('lastactions_listener')->insertActions('Configuration', 'a édité la configuration','glyphicon glyphicon-cog');
+
 
             return $this->redirect($this->generateUrl('horus_site_main'));
         }
@@ -107,6 +126,66 @@ class AdministrateurController extends Controller
     }
 
     /**
+     *  All last actions of administrateurs
+     * @return type
+     */
+    public function lastactionsAction()
+    {
+        $dm = $this->get('doctrine_mongodb')->getManager();
+        $actions = $dm->getRepository('HorusSiteBundle:Actions')->findBy(array(), array('dateCreated' => 'DESC'), 5);
+
+        return $this->get('templating')->renderResponse(
+            'HorusSiteBundle:Administrateurs:lastactions.html.twig', array('actions' => $actions)
+        );
+    }
+
+    /**
+     *  All actions of administrateurs
+     * @return type
+     */
+    public function allactionsAction()
+    {
+        $dm = $this->get('doctrine_mongodb')->getManager();
+        $actions = $dm->getRepository('HorusSiteBundle:Actions')->findBy(array(), array('dateCreated' => 'DESC'));
+
+        return $this->get('templating')->renderResponse(
+            'HorusSiteBundle:Administrateurs:allactions.html.twig', array('actions' => $actions)
+        );
+    }
+
+
+    /**
+     *  All actions of administrateurs
+     * @return type
+     */
+    public function allnotificationsAction()
+    {
+        $dm = $this->get('doctrine_mongodb')->getManager();
+        $notifs = $dm->getRepository('HorusSiteBundle:Notifications')->findBy(array(), array('dateCreated' => 'DESC'));
+
+        return $this->get('templating')->renderResponse(
+            'HorusSiteBundle:Administrateurs:allnotifications.html.twig', array('notifs' => $notifs)
+        );
+    }
+
+    /**
+     *  All actions of  one administrateur
+     * @return type
+     */
+    public function allactionsbyadministratorsAction(Administrateur $id)
+    {
+        $dm = $this->get('doctrine_mongodb')->getManager();
+        $actions = $dm->getRepository('HorusSiteBundle:Actions')->findByAid($id->getId());
+        return $this->get('templating')->renderResponse(
+            'HorusSiteBundle:Administrateurs:allactionsbyadministrateurs.html.twig',
+            array(
+                'actions' => $actions,
+                'administrateur' => $id,
+            )
+        );
+    }
+
+    /**
      * @return type
      */
     public function myaccountAction()
@@ -138,9 +217,11 @@ class AdministrateurController extends Controller
 
             $mdp = $form['password']->getData();
 
-            $encoder = new MessageDigestPasswordEncoder('sha512', true, 10);
-            $newpass = $encoder->encodePassword($mdp, $administrateur->getSalt());
-            $administrateur->setPassword($newpass);
+            if(!empty($mdp)){
+                $encoder = new MessageDigestPasswordEncoder('sha512', true, 10);
+                $newpass = $encoder->encodePassword($mdp, $administrateur->getSalt());
+                $administrateur->setPassword($newpass);
+            }
 
             $em->persist($administrateur);
             $em->flush();
@@ -148,6 +229,12 @@ class AdministrateurController extends Controller
                 'success',
                 "Le compte a été modifiée"
             );
+
+            /**
+             * Notifications
+             */
+            $this->container->get('lastactions_listener')->insertActions('Edition', 'a édité son compte','glyphicon glyphicon-user');
+
 
             return $this->redirect($this->generateUrl('horus_site_main'));
         }
@@ -180,6 +267,11 @@ class AdministrateurController extends Controller
             "L'administrateur a bien été supprimée"
         );
 
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Suppression', 'a supprimé un administrateur','glyphicon glyphicon-remove');
+
         return $this->redirect($this->generateUrl('horus_site_administrateurs'));
     }
 
@@ -209,6 +301,13 @@ class AdministrateurController extends Controller
                 'messagerealtime',
                 "L'administrateur  ".$id->getFirstname()." ".$id->getLastname()." vient d'être modifié"
             );
+
+            /**
+             * Notifications
+             */
+            $this->container->get('lastactions_listener')->insertActions('Edition', 'a édité un administrateur','glyphicon glyphicon-pencil');
+
+
             return $this->redirect($this->generateUrl('horus_site_administrateurs'));
         }
 
@@ -272,6 +371,13 @@ class AdministrateurController extends Controller
                 'messagerealtime',
                 "L'administrateur  ".$administrateur->getFirstname()." ".$administrateur->getLastname()." vient d'être crée"
             );
+
+            /**
+             * Notifications
+             */
+            $this->container->get('lastactions_listener')->insertActions('Creation', 'a crée un administrateur','glyphicon glyphicon-plus');
+
+
             return $this->redirect($this->generateUrl('horus_site_administrateurs'));
         }
 
@@ -293,6 +399,13 @@ class AdministrateurController extends Controller
             'success',
             "L'administrateur a bien été switché avec ".$username
         );
+
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Switch', 'a basculé sous un autre administrateur','glyphicon glyphicon-transfer');
+
+
         return $this->redirect($this->generateUrl('horus_site_main')."?compte_switch=".$username);
     }
 
@@ -318,6 +431,12 @@ class AdministrateurController extends Controller
             "L'administrateur  ".$id->getFirstname()." ".$id->getLastname()." vient d'être désactivée"
         );
 
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Desactivation', 'a désactivé un administrateur','glyphicon glyphicon-minus-sign');
+
+
         return $this->redirect($this->generateUrl('horus_site_administrateurs'));
     }
 
@@ -341,6 +460,12 @@ class AdministrateurController extends Controller
             'messagerealtime',
             "L'administrateur  ".$id->getFirstname()." ".$id->getLastname()." vient d'être désactivée"
         );
+
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Activation', 'a activé un administrateur','glyphicon glyphicon-plus');
+
 
         return $this->redirect($this->generateUrl('horus_site_administrateurs'));
     }

@@ -61,6 +61,12 @@ class MarquesController extends Controller
             "La marque a été supprimée"
         );
 
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Suppression', 'a supprimé une marque','glyphicon glyphicon-remove',  $this->generateUrl('horus_site_marques'));
+
+
         return $this->redirect($this->generateUrl('horus_site_marques'));
     }
 
@@ -175,6 +181,12 @@ class MarquesController extends Controller
         );
 
 
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Désactivation', 'a désactivé une marque','glyphicon glyphicon-minus-sign',  $this->generateUrl('horus_site_marques'));
+
+
         return $this->redirect($this->generateUrl('horus_site_marques'));
     }
 
@@ -198,6 +210,12 @@ class MarquesController extends Controller
             'messagerealtime',
             "Le produit ".$id->getTitle()." a été activé"
         );
+
+
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Activation', 'a activé une marque','glyphicon glyphicon-check',  $this->generateUrl('horus_site_marques'));
 
         return $this->redirect($this->generateUrl('horus_site_marques'));
     }
@@ -228,6 +246,12 @@ class MarquesController extends Controller
                 'messagerealtime',
                 "La marque vient d'être crée"
             );
+
+            /**
+             * Notifications
+             */
+            $this->container->get('lastactions_listener')->insertActions('Création', 'a crée une marque','glyphicon glyphicon-plus',  $this->generateUrl('horus_site_edit_marques', array('id' => $marque->getId())));
+
             return $this->redirect($this->generateUrl('horus_site_edit_pictures_marques', array('id' => $marque->getId())));
         }
 
@@ -267,6 +291,11 @@ class MarquesController extends Controller
                 'messagerealtime',
                 "Le produit ".$id->getTitle()." vient d'être modifié"
             );
+            /**
+             * Notifications
+             */
+            $this->container->get('lastactions_listener')->insertActions('Edition', 'a edité une marque','glyphicon glyphicon-edit',  $this->generateUrl('horus_site_edit_marques', array('id' => $id->getId())));
+
             return $this->redirect($this->generateUrl('horus_site_marques'));
         }
 

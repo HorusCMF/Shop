@@ -61,8 +61,15 @@ class CategoryController extends Controller
         $em->flush();
         $this->get('session')->getFlashBag()->add(
             'success',
-            "La catégory a bien été supprimée"
+            "La catégorie a bien été supprimée"
         );
+
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Suppression', 'a supprimé une categorie','glyphicon glyphicon-remove');
+
+
 
         return $this->redirect($this->generateUrl('horus_site_categories'));
     }
@@ -88,6 +95,12 @@ class CategoryController extends Controller
         );
 
 
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Suppression', 'a supprimé une famille','glyphicon glyphicon-remove');
+
+
         return $this->redirect($this->generateUrl('horus_site_familles'));
     }
 
@@ -111,14 +124,22 @@ class CategoryController extends Controller
             $em->flush();
             $this->get('session')->getFlashBag()->add(
                 'success',
-                "La catégory a bien été ajoutée"
+                "La catégorie a bien été ajoutée"
             );
             $this->get('session')->getFlashBag()->add(
                 'messagerealtime',
                 "La catégorie ".$category->getName()." vient d'être crée"
             );
+
+            /**
+             * Notifications
+             */
+            $this->container->get('lastactions_listener')->insertActions('Création', 'a crée une categorie','glyphicon glyphicon-plus', $this->generateUrl('horus_site_category', array('id' => $category->getId())));
+
+
             return $this->redirect($this->generateUrl('horus_site_edit_image_category', array('id' => $category->getId())));
         }
+
 
         return $this->render('HorusSiteBundle:Category:createcategory.html.twig',
             array(
@@ -154,6 +175,13 @@ class CategoryController extends Controller
                 'messagerealtime',
                 "La famille ".$id->getName()." vient d'être modifiée"
             );
+
+            /**
+             * Notifications
+             */
+            $this->container->get('lastactions_listener')->insertActions('Edition', 'a edité une famille','glyphicon glyphicon-pencil',  $this->generateUrl('horus_site_famille', array('id' => $id->getId())));
+
+
             return $this->redirect($this->generateUrl('horus_site_familles'));
         }
 
@@ -191,6 +219,11 @@ class CategoryController extends Controller
                 'messagerealtime',
                 "La famille ".$famille->getName()." vient d'être crée"
             );
+            /**
+             * Notifications
+             */
+            $this->container->get('lastactions_listener')->insertActions('Création', 'a crée une famille','glyphicon glyphicon-plus',  $this->generateUrl('horus_site_famille', array('id' => $famille->getId())));
+
 
             return $this->redirect($this->generateUrl('horus_site_familles'));
         }
@@ -232,6 +265,9 @@ class CategoryController extends Controller
             "L'image de la catégorie a bien été mise en avant"
         );
 
+        $this->container->get('lastactions_listener')->insertActions('Image', 'a mis une image en avant','glyphicon glyphicon-picture',  'horus_site_edit_image_category', array('id' => $id->getCategory()->getId()));
+
+
         return $this->redirect($this->generateUrl('horus_site_edit_image_category', array('id' => $id->getCategory()->getId())));
     }
 
@@ -249,6 +285,9 @@ class CategoryController extends Controller
             'success',
             "L'image de la catégories a bien été activé"
         );
+
+        $this->container->get('lastactions_listener')->insertActions('Image', 'a supprimé une image','glyphicon glyphicon-picture',  'horus_site_edit_image_category', array('id' => $id->getCategory()->getId()));
+
 
         return $this->redirect($this->generateUrl('horus_site_edit_image_category', array('id' => $id->getCategory()->getId())));
     }
@@ -273,6 +312,11 @@ class CategoryController extends Controller
             'messagerealtime',
             "La catégory ".$id->getName()." vient d'être désactivée"
         );
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Désactivation', 'a désactivé une categorie','glyphicon glyphicon-minus-sign', $this->generateUrl('horus_site_category', array('id' => $id->getId())));
+
 
         return $this->redirect($this->generateUrl('horus_site_categories'));
     }
@@ -298,7 +342,72 @@ class CategoryController extends Controller
             "La catégory ".$id->getName()." vient d'être activée"
         );
 
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Activation', 'a activé une catégorie','glyphicon glyphicon-check',$this->generateUrl('horus_site_category', array('id' => $id->getId())));
+
+
         return $this->redirect($this->generateUrl('horus_site_categories'));
+    }
+
+    /**
+     * Desactive a category
+     * @param Category $id
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
+    public function desactivefamilleAction(Famille $id)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $id->setVisible(false);
+        $em->persist($id);
+        $em->flush();
+        $this->get('session')->getFlashBag()->add(
+            'success',
+            "La famille a bien été désactivé"
+        );
+        $this->get('session')->getFlashBag()->add(
+            'messagerealtime',
+            "La famille ".$id->getName()." vient d'être désactivée"
+        );
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Désactivation', 'a désactivé une famille','glyphicon glyphicon-minus-sign', $this->generateUrl('horus_site_famille', array('id' => $id->getId())));
+
+
+        return $this->redirect($this->generateUrl('horus_site_familles'));
+    }
+
+    /**
+     * Active a Category
+     * @param Category $id
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
+    public function activefamilleAction(Famille $id)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $id->setVisible(true);
+        $em->persist($id);
+        $em->flush();
+        $this->get('session')->getFlashBag()->add(
+            'success',
+            "La famille a bien été activée"
+        );
+        $this->get('session')->getFlashBag()->add(
+            'messagerealtime',
+            "La famille ".$id->getName()." vient d'être activée"
+        );
+
+        /**
+         * Notifications
+         */
+        $this->container->get('lastactions_listener')->insertActions('Activation', 'a activé une famille','glyphicon glyphicon-check',$this->generateUrl('horus_site_famille', array('id' => $id->getId())));
+
+
+        return $this->redirect($this->generateUrl('horus_site_familles'));
     }
 
     /**
@@ -359,6 +468,12 @@ class CategoryController extends Controller
                 'success',
                 "L'image de la catégory a bien été ajouté"
             );
+            /**
+             * Notifications
+             */
+            $this->container->get('lastactions_listener')->insertActions('Image', 'a ajouté une image dans un catégorie','glyphicon glyphicon-picture', $this->generateUrl('horus_site_category', array('id' => $id->getId())));
+
+
             return new JsonResponse(true);
         }
 
@@ -396,6 +511,12 @@ class CategoryController extends Controller
                 'messagerealtime',
                 "La catégory ".$id->getName()." vient d'être editée"
             );
+            /**
+             * Notifications
+             */
+            $this->container->get('lastactions_listener')->insertActions('Edition', 'a edité une categorie','glyphicon glyphicon-pencil',$this->generateUrl('horus_site_category', array('id' => $id->getId())));
+
+
             return $this->redirect($this->generateUrl('horus_site_categories'));
         }
 

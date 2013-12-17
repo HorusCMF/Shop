@@ -31,6 +31,7 @@ class AdministrateursType extends AbstractType
             ->add('email', 'email', array('required' => true, 'attr' => array('placeholder' => 'Email')))
             ->add('tel', null, array('label' => 'Téléphone', 'attr' => array('placeholder' => '06XXXXXXXX',  'maxlength' => 17), 'required' => false))
             ->add('password', 'repeated', array(
+                'required' => false,
                 'type' => 'password',
                 'first_name' => 'mdp',
                 'second_name' => 'mdp_conf',

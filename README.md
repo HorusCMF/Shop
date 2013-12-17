@@ -31,7 +31,7 @@ Screenshots
 Documentation
 -------------
 
-Documentation is available at [docs.Horus CMF.org](http://docs.Horus CMF.org).
+Documentation is available at [docs.Horus CMF.org](http://www.freakinjob.com/phpdoc/index.html).
 
 
 Quick Installation

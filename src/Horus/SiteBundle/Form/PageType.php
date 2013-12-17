@@ -25,7 +25,7 @@ class PageType extends AbstractType
                 ->add('video', 'text', array('required' => false, 'attr' => array( 'placeholder' => "Ex:  http://www.youtube.com/watch?v=BQjqM24uWr8")))
                 ->add('description', 'textarea', array('attr' => array("class" => "ckeditor", 'placeholder' => 'Description complète')))
                 ->add('nature','choice', array(
-                    'choices'   => array(1 => 'Brouillon', 2 => 'Relus', 3 => 'Final'),
+                    'choices'   => array(1 => 'Brouillon', 2 => 'En attente de relecture', 3 => 'Final'),
                     'required'  => true,
                     'expanded' => true
                 ))
@@ -36,6 +36,7 @@ class PageType extends AbstractType
                     'required' => false,
                     'empty_value' => 'Choisissez une page parente'
                 ))
+                ->add('articles')
                 ->add('produits');
     }
 
