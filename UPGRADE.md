@@ -2,8 +2,11 @@ UPGRADE FROM 1.0 to 1.1
 =======================
 
 ### General
+
+  * 	
+  * Flash promotion for products => Enchere inversée timepicker
   * Hinclude with render and cache HTTP
-  * Warning if product & categor & famille is same or similar title
+  * Warning if product & category & famille is same or similar title
   * Whene Search simply check all
   * Autocompletion tags words + Autocompletion search
   * Udate Create Tags several separate with comma

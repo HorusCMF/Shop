@@ -1,6 +1,5 @@
 {% extends 'HorusSiteBundle::layout.html.twig' %}
 
-
 {% block javascripts %}
         {{ parent() }}
     {% javascripts '@HorusSiteBundle/Resources/public/js/index.js' filter="cssrewrite" %}
@@ -12,14 +11,14 @@
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 
     <div class="page" id="main">
-        <h3><i class="glyphicon glyphicon-stats"></i> Statistiques</h3>
+        <h3><i class="glyphicon glyphicon-stats"></i> {{  "Statistiques"|trans }}</h3>
         {{ render(controller('HorusSiteBundle:Chart:months')) }}
         {{ render(controller('HorusSiteBundle:Chart:days')) }}
-        <h3><i class="glyphicon glyphicon-th-list"></i> Dernières commandes</h3>
+        <h3><i class="glyphicon glyphicon-th-list"></i> {{  "Dernières commandes"|trans }}</h3>
         {{ render_hinclude(controller('HorusSiteBundle:Commandes:lastcommandes')) }}
-        <h3><i class="glyphicon glyphicon-user"></i> Derniers clients</h3>
+        <h3><i class="glyphicon glyphicon-user"></i> {{  "Derniers clients"|trans }}</h3>
         {{ render_hinclude(controller('HorusSiteBundle:Clients:lastclients')) }}
-        <h3><i class="glyphicon glyphicon-comment"></i> Derniers commentaires</h3>
+        <h3><i class="glyphicon glyphicon-comment"></i> {{  "Derniers commentaires"|trans }}</h3>
         {{ render_hinclude(controller('HorusSiteBundle:Commentaires:lastcommentaires')) }}
 
     </div>

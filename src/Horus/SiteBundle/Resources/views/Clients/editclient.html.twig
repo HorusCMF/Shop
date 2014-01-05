@@ -9,7 +9,7 @@
         <a class="btn back btn-danger pull-right" href="{{ path('horus_site_clients') }}">&larr; Revenir à la liste des clients</a>
 
         <h1><i class="glyphicon glyphicon-pencil"></i> Editer le client {{ client.firstname|title }} {{ client.lastname|title }}</h1>
-        <div class="label label-danger pull-right">Modifié il y a {{ client.updatedAt|created_ago }}</div>
+        <div class="label label-danger pull-right"><i class="glyphicon glyphicon-time"></i> Modifié il y a {{ client.updatedAt|created_ago }}</div>
 
         <hr class="clear fancy-line">
 

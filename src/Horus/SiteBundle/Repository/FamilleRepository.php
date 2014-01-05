@@ -34,7 +34,7 @@ class FamilleRepository extends EntityRepository
     public function getFamilleIsProductNull()
     {
         $query = $this->getEntityManager()
-            ->createQuery("SELECT COUNT(a.id) FROM HorusSiteBundle:Famille a INNER JOIN a.produits p WHERE a.produits IS EMPTY");
+            ->createQuery("SELECT COUNT(a.id) FROM HorusSiteBundle:Famille a  WHERE a.produits IS EMPTY");
         return $query->getSingleScalarResult();
     }
 

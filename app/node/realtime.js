@@ -4,6 +4,8 @@ var io = require("socket.io");
 var io = io.listen(app);
 var sockets = {};
 
+var mongojs = require('mongojs');
+var db = mongojs('mongodb://localhost/horus');
 
 /**
  * nohup nodejs app/node/realtime.js > /dev/null 2>&1  & to launch in bg
@@ -58,6 +60,40 @@ io.sockets.on('connection', function (socket) {
     });
 
 
+    /**
+     * On User alerting
+     */
+    socket.on('notify', function (user) {
+        me = user;
+        socket.broadcast.emit('notify', me);
+    });
+
+
+    /**
+     * Suscribe
+     */
+    socket.on('messagerie', function (user) {
+
+        var db = mongojs('horus');
+        var mycollection = db.collection('Messagerie');
+
+        firstname = user.firstname;
+        lastname = user.lastname;
+        mess = user.message;
+        $title = firstname + " " + lastname + " a dit:";
+
+
+        var d = new Date();
+        var n = Math.round(+new Date()/1000);
+
+        mycollection.save({title: $title, description: mess, dateCreated:  n});
+        me = user;
+        socket.broadcast.emit('messagerie', me);
+    });
+
+
+
+
 //    /**
 //     * On User edit a product
 //     */
@@ -106,11 +142,15 @@ io.sockets.on('connection', function (socket) {
      * Suscribe
      */
     socket.on('write', function (user) {
-        iduser = user.id;
-        destinataire = user.destinataire;
-        firstname = user.firstname;
-        var socketid = sockets[destinataire];
-        io.sockets.socket(socketid).emit('writing', user);
+        io.sockets.emit('writing', user);
+    });
+
+
+    /**
+     * Not Suscribe
+     */
+    socket.on('notwrite', function (user) {
+        io.sockets.emit('notwriting', user);
     });
 
     /**
@@ -144,16 +184,6 @@ io.sockets.on('connection', function (socket) {
         io.sockets.socket(socketid).emit('addmessagelalerting', user);
     });
 
-    /**
-     * Not Suscribe
-     */
-    socket.on('notwrite', function (user) {
-        iduser = user.id;
-        destinataire = user.destinataire;
-        firstname = user.firstname;
-        var socketid = sockets[destinataire];
-        io.sockets.socket(socketid).emit('notwriting', user);
-    });
 
 //    /**
 //     * Tchats

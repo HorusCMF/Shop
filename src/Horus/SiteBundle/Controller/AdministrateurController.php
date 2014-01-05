@@ -4,6 +4,7 @@ namespace Horus\SiteBundle\Controller;
 
 
 use Horus\SiteBundle\Document\Actions;
+use Horus\SiteBundle\Document\Messagerie;
 use Horus\SiteBundle\Form\AdministrateursType;
 use Horus\SiteBundle\Form\ConfigurationType;
 use Horus\SiteBundle\Entity\Administrateur;
@@ -90,7 +91,21 @@ class AdministrateurController extends Controller
 
         return $this->get('templating')->renderResponse(
             'HorusSiteBundle:Pages:configuration.html.twig', array(
-                'form' => $form->createView()
+                'form' => $form->createView(),
+                'configuration' => $configuration
+            )
+        );
+    }
+
+    /**
+     * Statistiques
+     * @return type
+     */
+    public function infosAction()
+    {
+
+        return $this->get('templating')->renderResponse(
+            'HorusSiteBundle:Slots:infos.html.twig', array(
             )
         );
     }
@@ -126,6 +141,42 @@ class AdministrateurController extends Controller
     }
 
     /**
+     *  All last messages of administrateurs
+     * @return type
+     */
+    public function lastmessagerieAction()
+    {
+        $dm = $this->get('doctrine_mongodb')->getManager();
+
+//        $message = new Messagerie();
+//        $message->setDescription('ok');
+//        $message->setTitle('ok');
+//        $dm->persist($message);
+//        $dm->flush();
+
+//        $messages = $dm->getRepository('HorusSiteBundle:Messagerie')->findAll();
+        $messages = $dm->getRepository('HorusSiteBundle:Messagerie')->findBy(array(), array('_id' => 'DESC'), 15);
+
+        return $this->get('templating')->renderResponse(
+            'HorusSiteBundle:Administrateurs:lastmessages.html.twig', array('messages' => $messages)
+        );
+    }
+
+    /**
+     *  All last messages of administrateurs
+     * @return type
+     */
+    public function allmessagerieAction()
+    {
+        $dm = $this->get('doctrine_mongodb')->getManager();
+        $messages = $dm->getRepository('HorusSiteBundle:Messagerie')->findBy(array(), array('_id' => 'DESC'));
+
+        return $this->get('templating')->renderResponse(
+            'HorusSiteBundle:Administrateurs:allmessages.html.twig', array('messages' => $messages)
+        );
+    }
+
+    /**
      *  All last actions of administrateurs
      * @return type
      */
@@ -155,6 +206,21 @@ class AdministrateurController extends Controller
 
 
     /**
+     *  Last notify of administrateurs
+     * @return type
+     */
+    public function lastnotifyAction()
+    {
+        $dm = $this->get('doctrine_mongodb')->getManager();
+        $notifs = $dm->getRepository('HorusSiteBundle:Notifications')->findBy(array(), array('dateCreated' => 'DESC'), 5);
+
+        return $this->get('templating')->renderResponse(
+            'HorusSiteBundle:Administrateurs:lastnotify.html.twig', array('notifications' => $notifs)
+        );
+    }
+
+
+    /**
      *  All actions of administrateurs
      * @return type
      */
@@ -175,7 +241,7 @@ class AdministrateurController extends Controller
     public function allactionsbyadministratorsAction(Administrateur $id)
     {
         $dm = $this->get('doctrine_mongodb')->getManager();
-        $actions = $dm->getRepository('HorusSiteBundle:Actions')->findByAid($id->getId());
+        $actions = $dm->getRepository('HorusSiteBundle:Actions')->findBy(array('aid' => $id->getId()), array('dateCreated' => 'DESC'));
         return $this->get('templating')->renderResponse(
             'HorusSiteBundle:Administrateurs:allactionsbyadministrateurs.html.twig',
             array(

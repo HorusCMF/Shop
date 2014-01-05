@@ -2,7 +2,7 @@
 
 {% block content %}
     <div class="page" id="administrateurs">
-        <h2><i class="glyphicon glyphicon-list"></i> Les administrateurs</h2>
+        <h2><i class="glyphicon glyphicon-cog"></i> Les administrateurs</h2>
 
 
         <table class="table table-striped">
@@ -13,15 +13,15 @@
                 <th>Email</th>
                 <th>Tel</th>
                 <th>Roles</th>
-                <th>Dernière connexion</th>
+                <th>Dernière utilisation</th>
                 <th>Action</th>
             </tr>
             </thead>
             <tbody>
             {% for administrateur in administrateurs %}
                 <tr>
-                    <td>{{ loop.index }}</td>
-                    <td>{{ administrateur.firstname|title }} {{ administrateur.lastname|title }}</td>
+                    <td><a href="">{{ loop.index }}</a></td>
+                    <td><a href="">{{ administrateur.firstname|title }} {{ administrateur.lastname|title }}</a></td>
                     <td>{{ administrateur.email }}</td>
                     <td>{{ administrateur.tel }}</td>
                     <td>
@@ -29,17 +29,17 @@
                             <p><i class="glyphicon glyphicon-ok"></i> {{ group.name }}</p>
                         {% endfor%}
                     </td>
-                    <td>{{ administrateur.dateAuth|created_ago|default('Pas encore connecté') }}</td>
+                    <td>{{ administrateur.lastActivity|created_ago|default('Pas encore connecté') }}</td>
                     <td>
+                        <a href="{{ path('horus_site_edit_administrateur', {'id' : administrateur.id }) }}" class="btn btn-primary btn-sm"><i class="glyphicon glyphicon-pencil"></i></a>
+                        <a href='{{ path('horus_site_administrateur_history', {'id' : administrateur.id }) }}' class="btn btn-primary btn-sm"><i class="glyphicon glyphicon-calendar"></i></a>
+                        <a onclick="return(confirm('Etes-vous sûr de vouloir supprimer cet administrateur?'));" href="{{ path('horus_site_remove_administrateur', {'id' : administrateur.id }) }}" class="btn btn-primary btn-sm"><i class="glyphicon glyphicon-remove"></i></a>
+                        <a onclick='return(confirm("Etes-vous sûr de vouloir changer d\'utilisateur courant?"));' href='{{ path('horus_site_switch', {'username' : administrateur.email }) }}' class="btn-sm btn btn-primary"><i class="glyphicon glyphicon-transfer"></i></a>
                         {% if not administrateur.accountnonlocked  %}
-                            <a onclick="return(confirm('Etes-vous sûr de vouloir activer cet administrateur?'));" href="{{ path('horus_site_active_administrateur', {'id' : administrateur.id }) }}" class="btn btn-primary"><i class="glyphicon glyphicon-ok"></i></a>
-                       {% else %}
-                           <a onclick="return(confirm('Etes-vous sûr de vouloir desactiver cet administrateur?'));" href="{{ path('horus_site_desactive_administrateur', {'id' : administrateur.id }) }}" class="btn btn-primary"><i class="glyphicon glyphicon-minus-sign"></i></a>
+                            <a onclick="return(confirm('Etes-vous sûr de vouloir activer cet administrateur?'));" href="{{ path('horus_site_active_administrateur', {'id' : administrateur.id }) }}" class="btn btn-primary btn-sm"><i class="glyphicon glyphicon-ok"></i></a>
+                        {% else %}
+                            <a onclick="return(confirm('Etes-vous sûr de vouloir desactiver cet administrateur?'));" href="{{ path('horus_site_desactive_administrateur', {'id' : administrateur.id }) }}" class="btn btn-primary btn-sm"><i class="glyphicon glyphicon-minus-sign"></i></a>
                         {% endif %}
-                        <a href="{{ path('horus_site_edit_administrateur', {'id' : administrateur.id }) }}" class="btn btn-primary"><i class="glyphicon glyphicon-pencil"></i></a>
-                        <a onclick="return(confirm('Etes-vous sûr de vouloir supprimer cet administrateur?'));" href="{{ path('horus_site_remove_administrateur', {'id' : administrateur.id }) }}" class="btn btn-primary"><i class="glyphicon glyphicon-remove"></i></a>
-                        <a onclick='return(confirm("Etes-vous sûr de vouloir changer d'utilisateur courant?"));' href='{{ path('horus_site_switch', {'username' : administrateur.email }) }}' class="btn btn-primary"><i class="glyphicon glyphicon-transfer"></i></a>
-                        <a href='{{ path('horus_site_administrateur_history', {'id' : administrateur.id }) }}' class="btn btn-primary"><i class="glyphicon glyphicon-calendar"></i></a>
                     </td>
                 </tr>
             {% else %}

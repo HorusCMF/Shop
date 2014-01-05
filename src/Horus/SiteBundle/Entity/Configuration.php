@@ -40,6 +40,47 @@ class Configuration
     private $id;
 
     /**
+     * @ORM\Column(name="horaires", type="string", nullable=false)
+     */
+    private $horaires;
+
+    /**
+     * @ORM\Column(name="siret", type="string", nullable=false)
+     */
+    private $siret;
+
+
+    /**
+     * @ORM\Column(name="name", type="string", nullable=false)
+     */
+    private $name;
+
+    /**
+     * @ORM\Column(name="ville", type="string", nullable=false)
+     */
+    private $ville;
+
+    /**
+     * @ORM\Column(name="zipcode", type="string", nullable=false)
+     */
+    private $zipcode;
+
+    /**
+     * @ORM\Column(name="adresse", type="string", nullable=false)
+     */
+    private $adresse;
+
+    /**
+     * @ORM\Column(name="tel", type="string", nullable=false)
+     */
+    private $tel;
+
+    /**
+     * @ORM\Column(name="description", type="string", nullable=false)
+     */
+    private $description;
+
+    /**
      * @ORM\Column(name="nom", type="string", nullable=false)
      */
     private $nom;
@@ -591,5 +632,181 @@ class Configuration
     public function getMenu()
     {
         return $this->menu;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     * @return Configuration
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string 
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set ville
+     *
+     * @param string $ville
+     * @return Configuration
+     */
+    public function setVille($ville)
+    {
+        $this->ville = $ville;
+        return $this;
+    }
+
+    /**
+     * Get ville
+     *
+     * @return string 
+     */
+    public function getVille()
+    {
+        return $this->ville;
+    }
+
+    /**
+     * Set zipcode
+     *
+     * @param string $zipcode
+     * @return Configuration
+     */
+    public function setZipcode($zipcode)
+    {
+        $this->zipcode = $zipcode;
+        return $this;
+    }
+
+    /**
+     * Get zipcode
+     *
+     * @return string 
+     */
+    public function getZipcode()
+    {
+        return $this->zipcode;
+    }
+
+    /**
+     * Set adresse
+     *
+     * @param string $adresse
+     * @return Configuration
+     */
+    public function setAdresse($adresse)
+    {
+        $this->adresse = $adresse;
+        return $this;
+    }
+
+    /**
+     * Get adresse
+     *
+     * @return string 
+     */
+    public function getAdresse()
+    {
+        return $this->adresse;
+    }
+
+    /**
+     * Set tel
+     *
+     * @param string $tel
+     * @return Configuration
+     */
+    public function setTel($tel)
+    {
+        $this->tel = $tel;
+        return $this;
+    }
+
+    /**
+     * Get tel
+     *
+     * @return string 
+     */
+    public function getTel()
+    {
+        return $this->tel;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     * @return Configuration
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string 
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set horaires
+     *
+     * @param string $horaires
+     * @return Configuration
+     */
+    public function setHoraires($horaires)
+    {
+        $this->horaires = $horaires;
+        return $this;
+    }
+
+    /**
+     * Get horaires
+     *
+     * @return string 
+     */
+    public function getHoraires()
+    {
+        return $this->horaires;
+    }
+
+    /**
+     * Set siret
+     *
+     * @param string $siret
+     * @return Configuration
+     */
+    public function setSiret($siret)
+    {
+        $this->siret = $siret;
+        return $this;
+    }
+
+    /**
+     * Get siret
+     *
+     * @return string 
+     */
+    public function getSiret()
+    {
+        return $this->siret;
     }
 }

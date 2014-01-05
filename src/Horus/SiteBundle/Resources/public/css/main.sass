@@ -121,7 +121,7 @@ body
     font-size: 18px
     color: brown
     font-family: 'Lobster',cursive
-    margin-top: 15px
+    margin-top: 0px
     margin-right: 10px
   .navbar-default
     @include box-shadow(1px 1px 12px #555)
@@ -145,6 +145,7 @@ body
 hr.fancy-line
   border: 0
   height: 1px
+  display: none
 
 hr.fancy-line:before
   top: -0.5em
@@ -162,6 +163,11 @@ hr.fancy-line:after
 .media-heading
   a:hover, a:focus
     color: brown
+
+.tab-content
+  [class*="span"]
+    margin-top: 15px
+    margin-bottom: 15px
 
 .addcaracteristiques
   float: left
@@ -190,13 +196,22 @@ hr.fancy-line:after
 .page
   h2
     text-align: center
+    margin-bottom: 30px
 
 .maincontent
   margin-bottom: 50px
+  .popover
+    min-width: 250px
+    min-height: 80px
   select.form-control
     font-size: 13px !important
     padding-left: 5px
-    
+    background: #ddd
+    color: #222
+    text-shadow: 1px 1px #fff,1px 1px #fff
+
+  .multiselect-container>li.active
+    color: white
   .multiselect
     background: #eee
     border: 1px solid #ddd
@@ -276,11 +291,11 @@ select:invalid
   min-height: 155px
 
 .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus
-  background-color: darkslategrey
-  color: white
+  color: white !important
 
 .navbar-nav>li>.dropdown-menu
   border: none
+  border-radius: 0px
 
 #closepanel, #closesearch
   position: relative
@@ -301,6 +316,44 @@ table
 .multiselect-container>li>a>label.radio, .multiselect-container>li>a>label.checkbox
   color: burlywood
 
+h3#btn-tchat
+  font-size: 18px
+  position: fixed
+  top: 150px
+  right: -6px
+
+#messagerie
+  z-index: 9000
+  .datin
+    font-size: 11px
+  button[type="submit"]
+    margin-top: 5px
+  textarea
+    font-size: 13px !important
+    height: 110px
+  font-size: 13px
+  padding: 5px
+  #messages
+    height: 201px
+    overflow: auto
+    .content
+      text-align: justify
+    .title
+      font-weight: bold
+      color: darkcyan
+      margin-right: 9px
+  p
+    color: #222
+    font-size: 13px
+  color: #222
+  background-color: white
+  width: 600px
+  height: 456px
+  position: fixed
+  top: 250px
+  right: 500px
+  border: 20px solid rgba(200, 200, 200, 0.6)
+  @include background-clip(padding-box)
 
 #advancedsearch
   .row-fluid
@@ -314,6 +367,9 @@ table
     background-color: #8a1720
     &:hover
       border: 1px solid #8a1720
+
+.popover
+  z-index: 5
 
 .pagination>li>a, .pagination>li>span,.pagination>li>a, .pagination>li>span, .pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus, .pagination>.disabled>span, .pagination>.disabled>span:hover, .pagination>.disabled>span:focus, .pagination>.disabled>a, .pagination>.disabled>a:hover, .pagination>.disabled>a:focus
   background-color: brown
@@ -432,7 +488,7 @@ li
       @include opacity(0.6)
 
   .tab-content>.tab-pane
-    border: 1px dashed coral
+    border: 1px dotted brown
     padding: 15px
     background-color: white
     border-radius: 4px
@@ -460,7 +516,8 @@ img.img-thumbnail
 
 h1, h2
   color: darkslategrey
-  font-size: 34px
+  font-size: 28px
+  margin-bottom: 40px
 
 .media
   img
@@ -526,6 +583,8 @@ h1, h2
 
 
 @media (max-width: 600px)
+  #btn-tchat
+    display: none
   #advancedsearch
     .row-fluid
       .span2
@@ -663,6 +722,22 @@ h1, h2
   border: 2px dotted white
   margin: 10px
 
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br
+  border-radius: 0px !important
+  font-size: 12px !important
+
+#advancedsearch
+  #labels
+    margin-left: 25px
+  .span2
+    width: 10.2%
+    margin: 0 auto
+    text-align: center
+  label
+    font-size: 14px !important
+
+
+
 /*
  * --------------------------------------------------------------------------------------------------------------------------------
  */
@@ -681,6 +756,9 @@ h1, h2
     p
       font-size: 11px
 
+textarea
+  width: 534px
+  height: 250px
 
 /*
  * --------------------------------------------------------------------------------------------------------------------------------
@@ -695,12 +773,11 @@ h1, h2
 .container
   .maincontent
     background-color: #fff
-    background-image: linear-gradient(#eee .1em, transparent .1em)
     background-size: 100% 1.2em
-    border-radius: 5px
     color: darkgoldenrod
     padding: 10px
     border: 1px solid #ddd
+    box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.1)
 
 //  position: relative
 //  @include fullpage()

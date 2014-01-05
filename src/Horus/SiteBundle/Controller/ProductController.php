@@ -15,6 +15,7 @@ use Horus\SiteBundle\Form\ProductType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use JMS\SecurityExtraBundle\Annotation\Secure;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Class ProductController
@@ -42,11 +43,9 @@ class ProductController extends Controller
     public function productsAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $products = $em->getRepository('HorusSiteBundle:Produit')->findAll();
         $paginate_by_page = $this->container->getParameter('paginate_by_page');
 
-        $products = $em->getRepository('HorusSiteBundle:Produit')->findAll();
-
+        $products = $em->getRepository('HorusSiteBundle:Produit')->findBy(array(), array('position' => "DESC"));
 
         $paginator = $this->get('knp_paginator');
         $pagination = $paginator->paginate(
@@ -106,8 +105,81 @@ class ProductController extends Controller
         );
 
 
-
         return $this->redirect($this->generateUrl('horus_site_edit_pictures_product', array('id' => $id->getProduit()->getId())));
+    }
+
+    /**
+     * Up sorted product
+     * @param Image $id
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
+    public function upproductAction(Produit $id)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $id->setPosition($id->getPosition() + 1);
+        $em->persist($id);
+        $em->flush();
+        $this->get('session')->getFlashBag()->add(
+            'success',
+            "Le changement d'ordre a été effectué"
+        );
+
+        return $this->redirect($this->generateUrl('horus_site_products'));
+    }
+
+    /**
+     * Down sorted product
+     * @param Image $id
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
+    public function downproductAction(Produit $id)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $id->setPosition($id->getPosition() - 1);
+        $em->persist($id);
+        $em->flush();
+        $this->get('session')->getFlashBag()->add(
+            'success',
+            "Le changement d'ordre a été effectué"
+        );
+
+        return $this->redirect($this->generateUrl('horus_site_products'));
+    }
+    /**
+     * Down sorted product
+     * @param Image $id
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
+    public function getProductByAjaxAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $request = $this->getRequest();
+
+        $idarg = $request->query->get('id');
+
+        $id = $em->getRepository('HorusSiteBundle:Produit')->find($idarg);
+
+//        exit(var_dump($id))
+        $form = $this->createForm(new ProductType($id), $id);
+
+        $Essence = new \fg\Essence\Essence();
+        $media = $Essence->embed($id->getVideo(), array(
+            'maxwidth' => 400,
+            'maxheight' => 200
+        ));
+
+        $html = $this->renderView('HorusSiteBundle:Product:productajax.html.twig',
+            array(
+                'produit' => $id,
+                'form' => $form->createView(),
+                'video' => $media
+            )
+        );
+
+        return new Response($html);
+
     }
 
     /**
@@ -346,8 +418,15 @@ class ProductController extends Controller
         $lien->setProduit($produit);
         $pj->setProduit($produit);
 
+        $idarg = $request->query->get('produitref');
+        if(!empty($idarg)){
+            $produit = $em->getRepository('HorusSiteBundle:Produit')->find($idarg);
+        }
+
         $form = $this->createForm(new ProductType(), $produit);
         $form->handleRequest($request);
+
+
 
         if ($form->isValid()) {
             $pj->upload($produit->getId());
@@ -392,6 +471,7 @@ class ProductController extends Controller
 
 //        $produit = $em->getRepository('HorusSiteBundle:Produits')->getProductsIsQuantityNull();
 //        exit(var_dump($produit));
+
 
         $form = $this->createForm(new ProductType($id), $id);
         $form->handleRequest($request);

@@ -17,7 +17,11 @@ security:
         User account has expired. : "Votre compte est exipré"
         User credentials have expired. : "Vos droits ont expiré"
 
-#Custom generics files
+Statistiques: Stats
+Dernières commandes: Dernières commandes
+Derniers clients: Derniers clients
+Derniers commentaires: Derniers commentaires
+
 Bad credentials: "Mauvais login ou mot de passe."
 The presented password is invalid: "Votre email n'est pas valide"
 The presented password cannot be empty: "Votre mot de passe ne doit pas etre nul"

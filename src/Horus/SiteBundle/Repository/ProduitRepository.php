@@ -54,6 +54,32 @@ class ProduitRepository extends EntityRepository
         return $query->getSingleScalarResult();
     }
 
+
+    /**
+     * Get articles by Category
+     * @param Category $category
+     * @return mixed
+     */
+    public function getProductsIsImagesNull()
+    {
+        $query = $this->getEntityManager()
+            ->createQuery("SELECT COUNT(a.id) FROM HorusSiteBundle:Produit a  WHERE a.images IS EMPTY");
+        return $query->getSingleScalarResult();
+    }
+
+
+    /**
+     * Get articles by Category
+     * @param Category $category
+     * @return mixed
+     */
+    public function getProductsIsFournisseursNull()
+    {
+        $query = $this->getEntityManager()
+            ->createQuery("SELECT COUNT(a.id) FROM HorusSiteBundle:Produit a WHERE a.fournisseur IS NULL");
+        return $query->getSingleScalarResult();
+    }
+
     /**
      * Get articles by Category
      * @param Category $category
@@ -64,6 +90,22 @@ class ProduitRepository extends EntityRepository
         $query = $this->getEntityManager()
             ->createQuery("SELECT COUNT(a.id) FROM HorusSiteBundle:Produit a WHERE a.isVisible = :visible")
             ->setParameter('visible', false);
+        return $query->getSingleScalarResult();
+    }
+
+
+    /**
+     * Get articles by Category
+     * @param Category $category
+     * @return mixed
+     */
+    public function getProductsSoonBegin()
+    {
+        $query = $this->getEntityManager()
+            ->createQuery("SELECT COUNT(a.id) FROM HorusSiteBundle:Produit a WHERE DATE_DIFF(a.datePublication,:dateend) <= 3 AND DATE_DIFF(a.datePublication,:dateend) >= 0  AND a.isVisible = :visible")
+            ->setParameter('dateend', new \Datetime('now'))
+            ->setParameter('visible', true);
+
         return $query->getSingleScalarResult();
     }
 

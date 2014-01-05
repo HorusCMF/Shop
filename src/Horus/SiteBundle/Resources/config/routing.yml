@@ -4,11 +4,15 @@
 
 
 horus_site_main:
-  pattern:  /backend/
+  pattern:  /
   defaults: { _controller: HorusSiteBundle:Main:index }
 
+horus_site_langues:
+  pattern:  /languages/{langue}
+  defaults: { _controller: HorusSiteBundle:Main:langues,langue: fr }
+
 horus_site_switch:
-  pattern:  /backend/switcher?username={username}
+  pattern:  /switcher?username={username}
   defaults: { _controller: HorusSiteBundle:Administrateur:relogadministrateur }
 
 
@@ -17,53 +21,69 @@ horus_site_switch:
 ### Products
 ###
 
+horus_site_products_ajax:
+  pattern:  /produits-ajax
+  defaults: { _controller: HorusSiteBundle:Main:searchAjax }
+
+horus_site_product_ajax:
+  pattern:  /produit-ajax/{id}
+  defaults: { _controller: HorusSiteBundle:Product:getProductByAjax }
+
 horus_site_products:
-  pattern:  /backend/produits
+  pattern:  /produits
   defaults: { _controller: HorusSiteBundle:Product:products }
 
 horus_site_create_product:
-  pattern:  /backend/produits/creer
+  pattern:  /produits/creer
   defaults: { _controller: HorusSiteBundle:Product:createproduct }
 
 horus_site_edit_product:
-  pattern:  /backend/produits/editer/{id}
+  pattern:  /produits/editer/{id}
   defaults: { _controller: HorusSiteBundle:Product:editproduct }
 
 horus_site_product:
-  pattern:  /backend/produit/{id}
+  pattern:  /produit/{id}
   defaults: { _controller: HorusSiteBundle:Product:seeproduct }
 
 horus_site_product_add_quantity:
-  pattern:  /backend/produit-add-quantity/{id}
+  pattern:  /produit-add-quantity/{id}
   defaults: { _controller: HorusSiteBundle:Product:addquantityproduct }
 
 horus_site_product_remove_quantity:
-  pattern:  /backend/produit-remove-quantity/{id}
+  pattern:  /produit-remove-quantity/{id}
   defaults: { _controller: HorusSiteBundle:Product:removequantityproduct }
 
 horus_site_remove_product:
-  pattern:  /backend/produits/suppression/{id}
+  pattern:  /produits/suppression/{id}
   defaults: { _controller: HorusSiteBundle:Product:removeproduct }
 
 horus_site_remove_image_product:
-  pattern:  /backend/produits/image/suppression/{id}
+  pattern:  /produits/image/suppression/{id}
   defaults: { _controller: HorusSiteBundle:Product:removeimageproduct }
 
 horus_site_cover_image_product:
-  pattern:  /backend/produits/image/cover/{id}
+  pattern:  /produits/image/cover/{id}
   defaults: { _controller: HorusSiteBundle:Product:coverimageproduct }
 
 horus_site_active_product:
-  pattern:  /backend/produits/activation/{id}
+  pattern:  /produits/activation/{id}
   defaults: { _controller: HorusSiteBundle:Product:activeproduct }
 
 horus_site_desactive_product:
-  pattern:  /backend/produits/desactivation/{id}
+  pattern:  /produits/desactivation/{id}
   defaults: { _controller: HorusSiteBundle:Product:desactiveproduct }
 
 horus_site_edit_pictures_product:
-  pattern:  /backend/produits/photo/{id}
+  pattern:  /produits/photo/{id}
   defaults: { _controller: HorusSiteBundle:Product:pictureproduct }
+
+horus_site_moveup_product:
+  pattern:  /produits/moveup/{id}
+  defaults: { _controller: HorusSiteBundle:Product:upproduct }
+
+horus_site_movedown_product:
+  pattern:  /produits/movedown/{id}
+  defaults: { _controller: HorusSiteBundle:Product:downproduct }
 
 
 
@@ -73,39 +93,39 @@ horus_site_edit_pictures_product:
 ###
 
 horus_site_marques:
-  pattern:  /backend/marques
+  pattern:  /marques
   defaults: { _controller: HorusSiteBundle:Marques:marques }
 
 horus_site_create_marques:
-  pattern:  /backend/marques/creer
+  pattern:  /marques/creer
   defaults: { _controller: HorusSiteBundle:Marques:createmarque }
 
 horus_site_edit_marques:
-  pattern:  /backend/marques/editer/{id}
+  pattern:  /marques/editer/{id}
   defaults: { _controller: HorusSiteBundle:Marques:editmarque }
 
 horus_site_remove_marques:
-  pattern:  /backend/marques/suppression/{id}
+  pattern:  /marques/suppression/{id}
   defaults: { _controller: HorusSiteBundle:Marques:removemarque }
 
 horus_site_remove_image_marque:
-  pattern:  /backend/marques/image/suppression/{id}
+  pattern:  /marques/image/suppression/{id}
   defaults: { _controller: HorusSiteBundle:Marques:removeimagemarque }
 
 horus_site_cover_image_marque:
-  pattern:  /backend/marques/image/cover/{id}
+  pattern:  /marques/image/cover/{id}
   defaults: { _controller: HorusSiteBundle:Marques:coverimagemarque }
 
 horus_site_active_marques:
-  pattern:  /backend/marques/activation/{id}
+  pattern:  /marques/activation/{id}
   defaults: { _controller: HorusSiteBundle:Marques:activemarque }
 
 horus_site_desactive_marques:
-  pattern:  /backend/marques/desactivation/{id}
+  pattern:  /marques/desactivation/{id}
   defaults: { _controller: HorusSiteBundle:Marques:desactivemarque }
 
 horus_site_edit_pictures_marques:
-  pattern:  /backend/marques/photo/{id}
+  pattern:  /marques/photo/{id}
   defaults: { _controller: HorusSiteBundle:Marques:picturemarque }
 
 
@@ -115,31 +135,31 @@ horus_site_edit_pictures_marques:
 ###
 
 horus_site_commentaires:
-  pattern:  /backend/commentaires
+  pattern:  /commentaires
   defaults: { _controller: HorusSiteBundle:Commentaires:commentaires }
 
 horus_site_create_commentaire:
-  pattern:  /backend/commentaires/creer
+  pattern:  /commentaires/creer
   defaults: { _controller: HorusSiteBundle:Commentaires:createcommentaire }
 
 horus_site_edit_commentaire:
-  pattern:  /backend/commentaires/editer/{id}
+  pattern:  /commentaires/editer/{id}
   defaults: { _controller: HorusSiteBundle:Commentaires:editcommentaire }
 
 horus_site_commentaire:
-  pattern:  /backend/commentaires/{id}
+  pattern:  /commentaires/{id}
   defaults: { _controller: HorusSiteBundle:Commentaires:seecommentaire }
 
 horus_site_remove_commentaire:
-  pattern:  /backend/commentaires/suppression/{id}
+  pattern:  /commentaires/suppression/{id}
   defaults: { _controller: HorusSiteBundle:Commentaires:removecommentaire }
 
 horus_site_active_commentaire:
-  pattern:  /backend/commentaires/activation/{id}
+  pattern:  /commentaires/activation/{id}
   defaults: { _controller: HorusSiteBundle:Commentaires:activecommentaire }
 
 horus_site_desactive_commentaire:
-  pattern:  /backend/commentaires/desactivation/{id}
+  pattern:  /commentaires/desactivation/{id}
   defaults: { _controller: HorusSiteBundle:Commentaires:desactivecommentaire }
 
 
@@ -148,31 +168,31 @@ horus_site_desactive_commentaire:
 ###
 
 horus_site_familles:
-  pattern:  /backend/familles
+  pattern:  /familles
   defaults: { _controller: HorusSiteBundle:Category:familles }
 
 horus_site_famille:
-  pattern:  /backend/famille/{id}
+  pattern:  /famille/{id}
   defaults: { _controller: HorusSiteBundle:Category:famille }
 
 horus_site_add_famille:
-  pattern:  /backend/familles/ajouter
+  pattern:  /familles/ajouter
   defaults: { _controller: HorusSiteBundle:Category:createfamille }
 
 horus_site_remove_famille:
-  pattern:  /backend/familles/supprimer/{id}
+  pattern:  /familles/supprimer/{id}
   defaults: { _controller: HorusSiteBundle:Category:removefamille }
 
 horus_site_edit_famille:
-  pattern:  /backend/familles/editer/{id}
+  pattern:  /familles/editer/{id}
   defaults: { _controller: HorusSiteBundle:Category:editfamille }
 
 horus_site_active_famille:
-  pattern:  /backend/familles/activation/{id}
+  pattern:  /familles/activation/{id}
   defaults: { _controller: HorusSiteBundle:Category:activefamille }
 
 horus_site_desactive_famille:
-  pattern:  /backend/familles/desactivation/{id}
+  pattern:  /familles/desactivation/{id}
   defaults: { _controller: HorusSiteBundle:Category:desactivefamille }
 
 
@@ -183,43 +203,43 @@ horus_site_desactive_famille:
 ###
 
 horus_site_categories:
-  pattern:  /backend/categories
+  pattern:  /categories
   defaults: { _controller: HorusSiteBundle:Category:categories }
 
 horus_site_add_category:
-  pattern:  /backend/categories/ajouter
+  pattern:  /categories/ajouter
   defaults: { _controller: HorusSiteBundle:Category:createcategory }
 
 horus_site_edit_image_category:
-  pattern:  /backend/categories/image/voir/{id}
+  pattern:  /categories/image/voir/{id}
   defaults: { _controller: HorusSiteBundle:Category:picturecategory }
 
 horus_site_category:
-  pattern:  /backend/categorie/{id}
+  pattern:  /categorie/{id}
   defaults: { _controller: HorusSiteBundle:Category:category }
 
 horus_site_cover_image_category:
-  pattern:  /backend/categories/image/cover/{id}
+  pattern:  /categories/image/cover/{id}
   defaults: { _controller: HorusSiteBundle:Category:coverimagecategory }
 
 horus_site_remove_image_category:
-  pattern:  /backend/categories/image/suppression/{id}
+  pattern:  /categories/image/suppression/{id}
   defaults: { _controller: HorusSiteBundle:Category:removeimagecategory }
 
 horus_site_remove_category:
-  pattern:  /backend/categories/supprimer/{id}
+  pattern:  /categories/supprimer/{id}
   defaults: { _controller: HorusSiteBundle:Category:removecategory }
 
 horus_site_edit_category:
-  pattern:  /backend/categories/editer/{id}
+  pattern:  /categories/editer/{id}
   defaults: { _controller: HorusSiteBundle:Category:editcategory }
 
 horus_site_active_category:
-  pattern:  /backend/categories/activation/{id}
+  pattern:  /categories/activation/{id}
   defaults: { _controller: HorusSiteBundle:Category:activecategory }
 
 horus_site_desactive_category:
-  pattern:  /backend/categories/desactivation/{id}
+  pattern:  /categories/desactivation/{id}
   defaults: { _controller: HorusSiteBundle:Category:desactivecategory }
 
 
@@ -232,12 +252,12 @@ horus_site_desactive_category:
 ###
 
 horus_site_medias:
-  pattern:  /backend/medias
+  pattern:  /medias
   defaults: { _controller: HorusSiteBundle:Medias:medias }
 
 
 horus_site_media_remove:
-  pattern:  /backend/medias/remove/{id}
+  pattern:  /medias/remove/{id}
   defaults: { _controller: HorusSiteBundle:Medias:removemedias }
 
 
@@ -249,31 +269,31 @@ horus_site_media_remove:
 ###
 
 horus_site_clients:
-  pattern:  /backend/clients
+  pattern:  /clients
   defaults: { _controller: HorusSiteBundle:Clients:clients }
 
 horus_site_create_client:
-  pattern:  /backend/clients/creer
+  pattern:  /clients/creer
   defaults: { _controller: HorusSiteBundle:Clients:createclient }
 
 horus_site_edit_client:
-  pattern:  /backend/clients/editer/{id}
+  pattern:  /clients/editer/{id}
   defaults: { _controller: HorusSiteBundle:Clients:editclient }
 
 horus_site_client:
-  pattern:  /backend/client/{id}
+  pattern:  /client/{id}
   defaults: { _controller: HorusSiteBundle:Clients:seeclient }
 
 horus_site_remove_client:
-  pattern:  /backend/clients/suppression/{id}
+  pattern:  /clients/suppression/{id}
   defaults: { _controller: HorusSiteBundle:Clients:removeclient }
 
 horus_site_active_client:
-  pattern:  /backend/clients/activation/{id}
+  pattern:  /clients/activation/{id}
   defaults: { _controller: HorusSiteBundle:Clients:activeclient }
 
 horus_site_desactive_client:
-  pattern:  /backend/clients/desactivation/{id}
+  pattern:  /clients/desactivation/{id}
   defaults: { _controller: HorusSiteBundle:Clients:desactiveclient }
 
 
@@ -284,27 +304,27 @@ horus_site_desactive_client:
 ###
 
 horus_site_transports:
-  pattern:  /backend/transports
+  pattern:  /transports
   defaults: { _controller: HorusSiteBundle:Transports:transports }
 
 horus_site_create_transport:
-  pattern:  /backend/transports/creer
+  pattern:  /transports/creer
   defaults: { _controller: HorusSiteBundle:Transports:createtransport }
 
 horus_site_edit_transport:
-  pattern:  /backend/transports/editer/{id}
+  pattern:  /transports/editer/{id}
   defaults: { _controller: HorusSiteBundle:Transports:edittransport }
 
 horus_site_remove_transport:
-  pattern:  /backend/transports/suppression/{id}
+  pattern:  /transports/suppression/{id}
   defaults: { _controller: HorusSiteBundle:Transports:removetransport }
 
 horus_site_active_transport:
-  pattern:  /backend/transports/activation/{id}
+  pattern:  /transports/activation/{id}
   defaults: { _controller: HorusSiteBundle:Transports:activetransport }
 
 horus_site_desactive_transport:
-  pattern:  /backend/transports/desactivation/{id}
+  pattern:  /transports/desactivation/{id}
   defaults: { _controller: HorusSiteBundle:Transports:desactivetransport }
 
 
@@ -316,39 +336,39 @@ horus_site_desactive_transport:
 ###
 
 horus_site_fournisseurs:
-  pattern:  /backend/fournisseurs
+  pattern:  /fournisseurs
   defaults: { _controller: HorusSiteBundle:Fournisseurs:fournisseurs }
 
 horus_site_create_fournisseurs:
-  pattern:  /backend/fournisseurs/creer
+  pattern:  /fournisseurs/creer
   defaults: { _controller: HorusSiteBundle:Fournisseurs:createfournisseur }
 
 horus_site_edit_fournisseurs:
-  pattern:  /backend/fournisseurs/editer/{id}
+  pattern:  /fournisseurs/editer/{id}
   defaults: { _controller: HorusSiteBundle:Fournisseurs:editfournisseur }
 
 horus_site_remove_fournisseurs:
-  pattern:  /backend/fournisseurs/suppression/{id}
+  pattern:  /fournisseurs/suppression/{id}
   defaults: { _controller: HorusSiteBundle:Fournisseurs:removefournisseur }
 
 horus_site_remove_image_fournisseur:
-  pattern:  /backend/fournisseurs/image/suppression/{id}
+  pattern:  /fournisseurs/image/suppression/{id}
   defaults: { _controller: HorusSiteBundle:Fournisseurs:removeimagefournisseur }
 
 horus_site_cover_image_fournisseur:
-  pattern:  /backend/fournisseurs/image/cover/{id}
+  pattern:  /fournisseurs/image/cover/{id}
   defaults: { _controller: HorusSiteBundle:Fournisseurs:coverimagefournisseur }
 
 horus_site_active_fournisseurs:
-  pattern:  /backend/fournisseurs/activation/{id}
+  pattern:  /fournisseurs/activation/{id}
   defaults: { _controller: HorusSiteBundle:Fournisseurs:activefournisseur }
 
 horus_site_desactive_fournisseurs:
-  pattern:  /backend/fournisseurs/desactivation/{id}
+  pattern:  /fournisseurs/desactivation/{id}
   defaults: { _controller: HorusSiteBundle:Fournisseurs:desactivefournisseur }
 
 horus_site_edit_pictures_fournisseurs:
-  pattern:  /backend/fournisseurs/photo/{id}
+  pattern:  /fournisseurs/photo/{id}
   defaults: { _controller: HorusSiteBundle:Fournisseurs:picturefournisseur }
 
 
@@ -360,7 +380,7 @@ horus_site_edit_pictures_fournisseurs:
 ###
 
 horus_site_paniers:
-  pattern:  /backend/paniers
+  pattern:  /paniers
   defaults: { _controller: HorusSiteBundle:Clients:paniers }
 
 
@@ -371,12 +391,12 @@ horus_site_paniers:
 ###
 
 horus_site_configuration:
-  pattern:  /backend/configuration
+  pattern:  /configuration
   defaults: { _controller: HorusSiteBundle:Administrateur:configuration }
 
 
 horus_site_myaccount:
-  pattern:  /backend/mon-compte
+  pattern:  /mon-compte
   defaults: { _controller: HorusSiteBundle:Administrateur:myaccount }
 
 
@@ -387,7 +407,7 @@ horus_site_myaccount:
 ###
 
 horus_site_charts:
-  pattern:  /backend/chart
+  pattern:  /chart
   defaults: { _controller: HorusSiteBundle:Chart:main }
 
 
@@ -398,35 +418,35 @@ horus_site_charts:
 ###
 
 horus_site_administrateurs:
-  pattern:  /backend/administrateurs
+  pattern:  /administrateurs
   defaults: { _controller: HorusSiteBundle:Administrateur:administrateurs }
 
 horus_site_add_administrateur:
-  pattern:  /backend/administrateurs/ajouter
+  pattern:  /administrateurs/ajouter
   defaults: { _controller: HorusSiteBundle:Administrateur:createadministrateur }
 
 horus_site_administrateur:
-  pattern:  /backend/administrateur/{id}
+  pattern:  /administrateur/{id}
   defaults: { _controller: HorusSiteBundle:Administrateur:administrateur }
 
 horus_site_remove_administrateur:
-  pattern:  /backend/administrateurs/supprimer/{id}
+  pattern:  /administrateurs/supprimer/{id}
   defaults: { _controller: HorusSiteBundle:Administrateur:removeadministrateur }
 
 horus_site_edit_administrateur:
-  pattern:  /backend/administrateurs/editer/{id}
+  pattern:  /administrateurs/editer/{id}
   defaults: { _controller: HorusSiteBundle:Administrateur:editadministrateur }
 
 horus_site_active_administrateur:
-  pattern:  /backend/administrateurs/activation/{id}
+  pattern:  /administrateurs/activation/{id}
   defaults: { _controller: HorusSiteBundle:Administrateur:activeadministrateur }
 
 horus_site_desactive_administrateur:
-  pattern:  /backend/administrateurs/desactivation/{id}
+  pattern:  /administrateurs/desactivation/{id}
   defaults: { _controller: HorusSiteBundle:Administrateur:desactiveadministrateur }
 
 horus_site_administrateur_history:
-  pattern:  /backend/administrateurs/historique/{id}
+  pattern:  /administrateurs/historique/{id}
   defaults: { _controller: HorusSiteBundle:Administrateur:allactionsbyadministrators }
 
 
@@ -435,31 +455,31 @@ horus_site_administrateur_history:
 ### Pages
 ###
 horus_site_page:
-  pattern:  /backend/page/{id}
+  pattern:  /page/{id}
   defaults: { _controller: HorusSiteBundle:CMS:page }
 
 horus_site_pages:
-  pattern:  /backend/pages
+  pattern:  /pages
   defaults: { _controller: HorusSiteBundle:CMS:pages }
 
 horus_site_page_create:
-  pattern:  /backend/pages/ajouter
+  pattern:  /pages/ajouter
   defaults: { _controller: HorusSiteBundle:CMS:createpage }
 
 horus_site_remove_page:
-  pattern:  /backend/pages/supprimer/{id}
+  pattern:  /pages/supprimer/{id}
   defaults: { _controller: HorusSiteBundle:CMS:removepage }
 
 horus_site_edit_page:
-  pattern:  /backend/pages/editer/{id}
+  pattern:  /pages/editer/{id}
   defaults: { _controller: HorusSiteBundle:CMS:editpage }
 
 horus_site_active_page:
-  pattern:  /backend/pages/activation/{id}
+  pattern:  /pages/activation/{id}
   defaults: { _controller: HorusSiteBundle:CMS:activepage }
 
 horus_site_desactive_page:
-  pattern:  /backend/pages/desactivation/{id}
+  pattern:  /pages/desactivation/{id}
   defaults: { _controller: HorusSiteBundle:CMS:desactivepage }
 
 
@@ -471,23 +491,23 @@ horus_site_desactive_page:
 ###
 
 horus_site_commandes:
-  pattern:  /backend/commandes
+  pattern:  /commandes
   defaults: { _controller: HorusSiteBundle:Commandes:commandes }
 
 horus_site_commande:
-  pattern:  /backend/commande/{id}
+  pattern:  /commande/{id}
   defaults: { _controller: HorusSiteBundle:Commandes:commande }
 
 horus_site_commande:
-  pattern:  /backend/commande/{id}
+  pattern:  /commande/{id}
   defaults: { _controller: HorusSiteBundle:Commandes:commande }
 
 horus_site_edit_commande:
-  pattern:  /backend/editcommande/{id}
+  pattern:  /editcommande/{id}
   defaults: { _controller: HorusSiteBundle:Commandes:editcommande }
 
 horus_site_generatefacture:
-  pattern:  /backend/facture/{id}
+  pattern:  /facture/{id}
   defaults: { _controller: HorusSiteBundle:Commandes:generatefacture }
 
 
@@ -497,31 +517,31 @@ horus_site_generatefacture:
 ### Article
 ###
 horus_site_article:
-  pattern:  /backend/article/{id}
+  pattern:  /article/{id}
   defaults: { _controller: HorusSiteBundle:CMS:article }
 
 horus_site_articles:
-  pattern:  /backend/articles
+  pattern:  /articles
   defaults: { _controller: HorusSiteBundle:CMS:articles }
 
 horus_site_article_create:
-  pattern:  /backend/articles/ajouter
+  pattern:  /articles/ajouter
   defaults: { _controller: HorusSiteBundle:CMS:createarticle }
 
 horus_site_remove_article:
-  pattern:  /backend/articles/supprimer/{id}
+  pattern:  /articles/supprimer/{id}
   defaults: { _controller: HorusSiteBundle:CMS:removearticle }
 
 horus_site_edit_article:
-  pattern:  /backend/articles/editer/{id}
+  pattern:  /articles/editer/{id}
   defaults: { _controller: HorusSiteBundle:CMS:editarticle }
 
 horus_site_active_article:
-  pattern:  /backend/articles/activation/{id}
+  pattern:  /articles/activation/{id}
   defaults: { _controller: HorusSiteBundle:CMS:activearticle }
 
 horus_site_desactive_article:
-  pattern:  /backend/articles/desactivation/{id}
+  pattern:  /articles/desactivation/{id}
   defaults: { _controller: HorusSiteBundle:CMS:desactivearticle }
 
 
@@ -532,31 +552,31 @@ horus_site_desactive_article:
 ### Commercials
 ###
 horus_site_commercial:
-  pattern:  /backend/commercial/{id}
+  pattern:  /commercial/{id}
   defaults: { _controller: HorusSiteBundle:Commercial:commercial }
 
 horus_site_commercials:
-  pattern:  /backend/commercials
+  pattern:  /commercials
   defaults: { _controller: HorusSiteBundle:Commercial:commercials }
 
 horus_site_commercial_create:
-  pattern:  /backend/commercials/ajouter
+  pattern:  /commercials/ajouter
   defaults: { _controller: HorusSiteBundle:Commercial:createcommercial }
 
 horus_site_remove_commercial:
-  pattern:  /backend/commercials/supprimer/{id}
+  pattern:  /commercials/supprimer/{id}
   defaults: { _controller: HorusSiteBundle:Commercial:removecommercial }
 
 horus_site_edit_commercial:
-  pattern:  /backend/commercials/editer/{id}
+  pattern:  /commercials/editer/{id}
   defaults: { _controller: HorusSiteBundle:Commercial:editcommercial }
 
 horus_site_active_commercial:
-  pattern:  /backend/commercials/activation/{id}
+  pattern:  /commercials/activation/{id}
   defaults: { _controller: HorusSiteBundle:Commercial:activecommercial }
 
 horus_site_desactive_commercial:
-  pattern:  /backend/commercials/desactivation/{id}
+  pattern:  /commercials/desactivation/{id}
   defaults: { _controller: HorusSiteBundle:Commercial:desactivecommercial }
 
 
@@ -568,23 +588,23 @@ horus_site_desactive_commercial:
 ### Tags
 ###
 horus_site_tag:
-  pattern:  /backend/tag/{id}
+  pattern:  /tag/{id}
   defaults: { _controller: HorusSiteBundle:CMS:tag }
 
 horus_site_tags:
-  pattern:  /backend/tags
+  pattern:  /tags
   defaults: { _controller: HorusSiteBundle:CMS:tags }
 
 horus_site_tag_create:
-  pattern:  /backend/tags/ajouter
+  pattern:  /tags/ajouter
   defaults: { _controller: HorusSiteBundle:CMS:createtag }
 
 horus_site_remove_tag:
-  pattern:  /backend/tags/supprimer/{id}
+  pattern:  /tags/supprimer/{id}
   defaults: { _controller: HorusSiteBundle:CMS:removetag }
 
 horus_site_edit_tag:
-  pattern:  /backend/tags/editer/{id}
+  pattern:  /tags/editer/{id}
   defaults: { _controller: HorusSiteBundle:CMS:edittag }
 
 
@@ -594,7 +614,7 @@ horus_site_edit_tag:
 ### Factures
 ###
 horus_site_factures:
-  pattern:  /backend/factures/
+  pattern:  /factures/
   defaults: { _controller: HorusSiteBundle:Clients:factures }
 
 
@@ -612,27 +632,25 @@ horus_contact:
   defaults: { _controller: HorusSiteBundle:Main:contact }
 
 horus_search_avanced:
-    pattern:  /backend/recherche/
+    pattern:  /recherche/
     defaults: { _controller: HorusSiteBundle:Main:search }
 
 horus_site_history:
-  pattern:  /backend/historique
+  pattern:  /historique
   defaults: { _controller: HorusSiteBundle:Administrateur:allactions }
 
 horus_site_last_actions:
-  pattern:  /backend/dernieres-actions
+  pattern:  /dernieres-actions
   defaults: { _controller: HorusSiteBundle:Administrateur:lastactions }
 
+horus_site_last_notify:
+  pattern:  /dernieres-notify
+  defaults: { _controller: HorusSiteBundle:Administrateur:lastnotify }
+
 horus_site_last_notifications:
-  pattern:  /backend/dernieres-notifications
+  pattern:  /dernieres-notifications
   defaults: { _controller: HorusSiteBundle:Administrateur:allnotifications }
 
-login:
-  pattern:  /login
-  defaults: { _controller: HorusSiteBundle:Administrateur:login }
-
-login_check:
-  pattern:   /backend/login_check
-
-logout:
-  pattern:   /backend/logout
+horus_site_all_messsages:
+  pattern:  /tous-les-messages
+  defaults: { _controller: HorusSiteBundle:Administrateur:allmessagerie }

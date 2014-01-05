@@ -70,6 +70,7 @@
                             <li  {% if  app.request.attributes.get('_route') == "horus_site_myaccount" %} class="active" {% endif %}><a  href="{{ path('horus_site_myaccount') }}"><i class="glyphicon glyphicon-lock"></i> Mon Compte</a></li>
                             <li  {% if  app.request.attributes.get('_route') == "horus_site_administrateurs" %} class="active" {% endif %}><a  href="{{ path('horus_site_administrateurs') }}"><i class="glyphicon glyphicon-tasks"></i> Mes Administrateurs</a></li>
                             <li class="divider"></li>
+                            <li  {% if  app.request.attributes.get('_route') == "horus_site_administrateur_history" %} class="active" {% endif %}><a  href="{{ path('horus_site_administrateur_history', {'id' : app.user.id}) }}"><i class="glyphicon glyphicon-calendar"></i> Mon Historique</a></li>
                             <li  {% if  app.request.attributes.get('_route') == "horus_site_charts" %} class="active" {% endif %}><a  href="./variables.less"><i class="glyphicon glyphicon-list"></i> Mon Catalogue</a></li>
                             <li  {% if  app.request.attributes.get('_route') == "horus_site_charts" %} class="active" {% endif %}><a  href="./variables.less"><i class="glyphicon glyphicon-folder-open"></i> Mon Contrat VAD</a></li>
                             <li class="divider"></li>

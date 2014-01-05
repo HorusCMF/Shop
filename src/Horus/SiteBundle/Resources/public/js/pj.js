@@ -1,6 +1,3 @@
-
-
-
 // Récupère le div qui contient la collection de tags
 var collectionHolder2 = $('div.pjs');
 
@@ -36,9 +33,9 @@ function addTagForm2(collectionHolder2, $newLinkLi2) {
     var newForm = prototype.replace(/__name__/g, collectionHolder2.children().length);
 
     // Affiche le formulaire dans la page dans un li, avant le lien "ajouter un tag"
-    var $newFormLi = $('<li></li>').append(newForm);
-    $newLinkLi2.before($newFormLi);
-    addTagForm2DeleteLink2($newFormLi);
+    var $newFormLi2 = $('<li></li>').append(newForm);
+    $newLinkLi2.before($newFormLi2);
+    addTagForm2DeleteLink2($newFormLi2);
 }
 
 
@@ -48,13 +45,13 @@ jQuery(document).ready(function () {
      * CAlcul tva
      */
     $('#prixHT').on('blur', function (e) {
-        var ttc = parseFloat($('#prixHT').val()) * (1 + parseFloat($("#tva").val())/100).toFixed(2);
-        if(ttc != "" )
+        var ttc = parseFloat($('#prixHT').val()) * (1 + parseFloat($("#tva").val()) / 100).toFixed(2);
+        if (ttc != "")
             $('#prixTTC').val(ttc);
     });
     $('#tva').on('change', function (e) {
-        var ttc = parseFloat($('#prixHT').val()) * (1 + parseFloat($("#tva").val())/100).toFixed(2);
-        if(ttc != "" )
+        var ttc = parseFloat($('#prixHT').val()) * (1 + parseFloat($("#tva").val()) / 100).toFixed(2);
+        if (ttc != "")
             $('#prixTTC').val(ttc);
     });
 

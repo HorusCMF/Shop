@@ -1,0 +1,24 @@
+{% extends 'HorusSiteBundle::layout.html.twig' %}
+
+{% block content %}
+    <div class="page" id="administrateurs">
+        <h2><i class="glyphicon glyphicon-comment"></i> Tous les messages de la Messagerie interne</h2>
+
+        <div id="all-messages">
+            <ul>
+                {% for message in messages|reverse %}
+                    <li>
+                        <span class="title">{{ message.title }}</span>
+                        <span class="content">{{ message.description }} <span class="datin pull-right"><i
+                                        class="glyphicon glyphicon-time"></i> {{ message.dateCreated|date('d/m/Y H:i') }}</span> </span>
+                    </li>
+                {% else %}
+                    <div class="alert alert-dismissable alert-danger">
+                        <i class="glyphicon glyphicon-info-sign"></i> Aucun message pour le moment.
+                        <div class="clear"></div>
+                    </div>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock content %}

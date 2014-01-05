@@ -1,3 +1,4 @@
+Statistiques: Statistics
 Bad credentials: "Mauvais login/ mot de passe."
 The presented password is invalid: "L'email n'est pas valide"
 The presented password cannot be empty: "Le mot de passe ne doit pas etre nul"
@@ -5,3 +6,9 @@ Your session has timed out, or you have disabled cookies.: "Votre session a expi
 User account is disabled.: "Votre compte est désactivé. Veillez l'activé avant"
 User credentials have expired.: "Votre session a expiré"
 This form should not contain extra fields.: "Une erreur dans le formulaire s'est produite"
+
+
+Statistiques: Stats
+Dernières commandes: Dernières commandes
+Derniers clients: Derniers clients
+Derniers commentaires: Derniers commentaires

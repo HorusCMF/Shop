@@ -32,15 +32,15 @@ class AdministrateursType extends AbstractType
             ->add('tel', null, array('label' => 'Téléphone', 'attr' => array('placeholder' => '06XXXXXXXX',  'maxlength' => 17), 'required' => false))
             ->add('password', 'repeated', array(
                 'required' => false,
+                'attr' => array('autcomplete', 'off'),
                 'type' => 'password',
                 'first_name' => 'mdp',
                 'second_name' => 'mdp_conf',
                 'invalid_message' => "Le mot de passe n'est pas le même",
                 'error_bubbling' => true,
-                'first_options' => array('label' => 'Mot de passe', 'attr' => array('placeholder' => 'Au moins 6 caractères', 'pattern' => '.{6,}')),
-                'second_options' => array('label' => 'Confirmation du mot de passe', 'attr' => array('placeholder' => 'Retaper votre mot de passe', 'pattern' => '.{6,}'))
-            ))
-            ->add('dob', 'date', array('label' => 'Date de naissance', 'format' => 'dd - MMMM - yyyy', 'widget' => 'choice', 'years' => range($minDob->format('Y'), $maxDob->format('Y'))));
+                'first_options' => array('label' => 'Mot de passe', 'attr' => array('value' => '','autcomplete', 'off','placeholder' => 'Au moins 6 caractères', 'pattern' => '.{6,}')),
+                'second_options' => array('label' => 'Confirmation du mot de passe', 'attr' => array('value' => '','autcomplete', 'off','placeholder' => 'Retaper votre mot de passe', 'pattern' => '.{6,}'))
+            ));
     }
 
     public function setDefaultOptions(OptionsResolverInterface $resolver)

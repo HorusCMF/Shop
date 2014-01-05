@@ -548,7 +548,7 @@ class Category
     public function getOptionLabel()
     {
         return str_repeat(
-            html_entity_decode('>>', ENT_QUOTES, 'UTF-8'),
+            html_entity_decode('...', ENT_QUOTES, 'UTF-8'),
             ($this->getLvl() + 1) * 2
         ) . $this->getName();
     }

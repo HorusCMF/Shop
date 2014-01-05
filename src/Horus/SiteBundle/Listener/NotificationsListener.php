@@ -14,7 +14,7 @@ use Horus\SiteBundle\Entity\Commandes;
 use Horus\SiteBundle\Entity\Commentaire;
 use Horus\SiteBundle\Entity\Commercial;
 use Doctrine\ODM\MongoDB\DocumentManager;
-
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Class ProductsListener
@@ -28,14 +28,19 @@ class NotificationsListener
      */
     protected $dm;
 
+    /**
+     * @var $container
+     */
+    protected $container;
 
     /**
      * @param SecurityContext $context
      * @param Doctrine $doctrine
      * @param ContainerInterface $container
      */
-    public function __construct(DocumentManager $dm)
+    public function __construct(ContainerInterface $container, DocumentManager $dm)
     {
+        $this->container = $container;
         $this->dm = $dm;
     }
 
@@ -83,7 +88,10 @@ class NotificationsListener
          * For Product
          */
         if ($entity instanceof Produit) {
-
+            $this->container->get('session')->getFlashBag()->add(
+                'notify',
+                'okay'
+            );
             $productquantity = $entityManager->getRepository('HorusSiteBundle:Produit')->getProductsIsQuantityNull();
             $token = sha1("1" . "q" . date('m/Y'));
             $notification = $this->dm->getRepository('HorusSiteBundle:Notifications')->findOneByToken($token);
@@ -100,6 +108,7 @@ class NotificationsListener
                 $this->dm->persist($notification);
                 $this->dm->flush();
 
+
             } else {
                 if ($notification) {
                     $this->dm->remove($notification);
@@ -115,7 +124,7 @@ class NotificationsListener
                 if (!$notification)
                     $notification = new Notifications();
                 $notification->setContent('Il y a ' . $productdesactivate . ' produits dépubliés');
-                $notification->setTitre('<i class="glyphicon glyphicon-eye-close"></i> Produit inactifs');
+                $notification->setTitre('<i class="glyphicon glyphicon-eye-close"></i> Produit inactif');
                 $notification->setNature(1);
                 $notification->setToken($token);
                 $this->dm->persist($notification);
@@ -128,6 +137,75 @@ class NotificationsListener
                     $this->dm->flush();
                 }
             }
+
+
+            $soonbegin = $entityManager->getRepository('HorusSiteBundle:Produit')->getProductsSoonBegin();
+            $token = sha1("1" . "b" . date('m/Y'));
+            $notification = $this->dm->getRepository('HorusSiteBundle:Notifications')->findOneByToken($token);
+
+            if ((int)$soonbegin > 0) {
+                if (!$notification)
+                    $notification = new Notifications();
+
+                $notification->setContent('Il y a ' . $soonbegin . ' produits qui seront bientôt en ligne');
+                $notification->setTitre('<i class="glyphicon glyphicon-time"></i> Produit bientôt disponible');
+                $notification->setNature(1);
+                $notification->setToken($token);
+                $this->dm->persist($notification);
+                $this->dm->flush();
+
+            } else {
+                if ($notification) {
+                    $this->dm->remove($notification);
+                    $this->dm->flush();
+                }
+            }
+
+            $quantity = $entityManager->getRepository('HorusSiteBundle:Produit')->getProductsIsImagesNull();
+            $token = sha1("1" . "f" . date('m/Y'));
+            $notification = $this->dm->getRepository('HorusSiteBundle:Notifications')->findOneByToken($token);
+
+            if ((int)$quantity > 0) {
+                if (!$notification)
+                    $notification = new Notifications();
+
+                $notification->setContent('Il y a ' . $quantity . ' produits qui ont aucune image');
+                $notification->setTitre('<i class="glyphicon glyphicon-info-sign"></i> Images de produit');
+                $notification->setNature(1);
+                $notification->setToken($token);
+                $this->dm->persist($notification);
+                $this->dm->flush();
+
+            } else {
+                if ($notification) {
+                    $this->dm->remove($notification);
+                    $this->dm->flush();
+                }
+            }
+
+            $quantity = $entityManager->getRepository('HorusSiteBundle:Produit')->getProductsIsFournisseursNull();
+            $token = sha1("1" . "fo" . date('m/Y'));
+            $notification = $this->dm->getRepository('HorusSiteBundle:Notifications')->findOneByToken($token);
+
+            if ((int)$quantity > 0) {
+                if (!$notification)
+                    $notification = new Notifications();
+
+                $notification->setContent('Il y a ' . $quantity . ' produits qui ont aucun fournisseur');
+                $notification->setTitre('<i class="glyphicon glyphicon-warning-sign"></i> Fournisseur de produit');
+                $notification->setNature(1);
+                $notification->setToken($token);
+                $this->dm->persist($notification);
+                $this->dm->flush();
+
+            } else {
+                if ($notification) {
+                    $this->dm->remove($notification);
+                    $this->dm->flush();
+                }
+            }
+
+
         }
 
 
@@ -145,8 +223,8 @@ class NotificationsListener
                 if (!$notification)
                     $notification = new Notifications();
 
-                $notification->setContent('Il y a ' . $categoryquantity . ' catégorie vide de produits');
-                $notification->setTitre('<i class="glyphicon glyphicon-info-sign"></i> Catégorie vide');
+                $notification->setContent('Il y a ' . $categoryquantity . ' catégorie vides');
+                $notification->setTitre('<i class="glyphicon glyphicon-warning-sign"></i> Catégorie vide');
                 $notification->setNature(2);
                 $notification->setToken($token);
                 $this->dm->persist($notification);
@@ -167,7 +245,7 @@ class NotificationsListener
                 if (!$notification)
                     $notification = new Notifications();
 
-                $notification->setContent('Il y a ' . $categorydesactivate . ' catégories désactivées');
+                $notification->setContent('Il y a ' . $categorydesactivate . ' catégories dépubliées');
                 $notification->setTitre('<i class="glyphicon  glyphicon-eye-close"></i> Catégorie dépubliée');
                 $notification->setNature(2);
                 $notification->setToken($token);
@@ -198,7 +276,7 @@ class NotificationsListener
                     $notification = new Notifications();
 
                 $notification->setContent('Il y a ' . $famillequantity . ' famille vide de produits');
-                $notification->setTitre('<i class="glyphicon glyphicon-info-sign"></i> Famille vide');
+                $notification->setTitre('<i class="glyphicon glyphicon-warning-sign"></i> Famille vide');
                 $notification->setNature(3);
                 $notification->setToken($token);
                 $this->dm->persist($notification);
@@ -219,7 +297,7 @@ class NotificationsListener
                 if (!$notification)
                     $notification = new Notifications();
 
-                $notification->setContent('Il y a ' . $familledesactivate . ' familles désactivées');
+                $notification->setContent('Il y a ' . $familledesactivate . ' familles dépubliées');
                 $notification->setTitre('<i class="glyphicon glyphicon-eye-close"></i> Famille dépubliée');
                 $notification->setNature(3);
                 $notification->setToken($token);
@@ -295,7 +373,7 @@ class NotificationsListener
                     $notification = new Notifications();
 
                 $notification->setContent('Il y a ' . $pageswait . ' pages en attente de relecture');
-                $notification->setTitre('<i class="glyphicon glyphicon-warning-sign"></i> Page en attente');
+                $notification->setTitre('<i class="glyphicon glyphicon-refresh"></i> Page en attente');
                 $notification->setNature(4);
                 $notification->setToken($token);
                 $this->dm->persist($notification);
@@ -324,8 +402,8 @@ class NotificationsListener
                 if (!$notification)
                     $notification = new Notifications();
 
-                $notification->setContent('Il y a ' . $pagesdesactivate . ' articles désactivées');
-                $notification->setTitre('<i class="glyphicon glyphicon-warning-sign"></i> Article inactif');
+                $notification->setContent('Il y a ' . $pagesdesactivate . ' articles dépubliés');
+                $notification->setTitre('<i class="glyphicon glyphicon-eye-close"></i> Article dépublié');
                 $notification->setNature(5);
                 $notification->setToken($token);
                 $this->dm->persist($notification);
@@ -346,7 +424,7 @@ class NotificationsListener
                 if (!$notification)
                     $notification = new Notifications();
                 $notification->setContent('Il y a ' . $pageswait . ' articles en attente de relecture');
-                $notification->setTitre('<i class="glyphicon glyphicon-warning-sign"></i> Article en attente');
+                $notification->setTitre('<i class="glyphicon glyphicon-refresh"></i> Article en attente');
                 $notification->setNature(5);
                 $notification->setToken($token);
                 $this->dm->persist($notification);
@@ -375,7 +453,7 @@ class NotificationsListener
                     $notification = new Notifications();
 
                 $notification->setContent('Il y a ' . $quantity . ' commandes en attente de réaprovisionement');
-                $notification->setTitre('<i class="glyphicon glyphicon-warning-sign"></i> Commandes en attente');
+                $notification->setTitre('<i class="glyphicon glyphicon-random"></i> Commandes en attente');
                 $notification->setNature(6);
                 $notification->setToken($token);
                 $this->dm->persist($notification);
@@ -398,7 +476,7 @@ class NotificationsListener
                     $notification = new Notifications();
 
                 $notification->setContent('Il y a ' . $quantity . ' commandes en attente de virrement');
-                $notification->setTitre('<i class="glyphicon glyphicon-warning-sign"></i> Commandes en attente');
+                $notification->setTitre('<i class="glyphicon glyphicon-record"></i> Commandes en attente');
                 $notification->setNature(6);
                 $notification->setToken($token);
                 $this->dm->persist($notification);
@@ -421,7 +499,7 @@ class NotificationsListener
                     $notification = new Notifications();
 
                 $notification->setContent('Il y a ' . $quantity . ' commandes en attente de livraison');
-                $notification->setTitre('<i class="glyphicon glyphicon-warning-sign"></i> Commandes en attente');
+                $notification->setTitre('<i class="glyphicon glyphicon-retweet"></i> Commandes en attente');
                 $notification->setNature(6);
                 $notification->setToken($token);
                 $this->dm->persist($notification);
@@ -444,7 +522,7 @@ class NotificationsListener
                     $notification = new Notifications();
 
                 $notification->setContent('Il y a ' . $quantity . ' erreurs de commandes');
-                $notification->setTitre('<i class="glyphicon glyphicon-warning-sign"></i> Commandes en attente');
+                $notification->setTitre('<i class="glyphicon glyphicon-remove-circle"></i> Commandes en attente');
                 $notification->setNature(6);
                 $notification->setToken($token);
                 $this->dm->persist($notification);
@@ -467,7 +545,7 @@ class NotificationsListener
                     $notification = new Notifications();
 
                 $notification->setContent('Il y a ' . $quantity . ' préparation en cours');
-                $notification->setTitre('<i class="glyphicon glyphicon-warning-sign"></i> Commandes en attente');
+                $notification->setTitre('<i class="glyphicon glyphicon-share-alt"></i> Commandes en attente');
                 $notification->setNature(6);
                 $notification->setToken($token);
                 $this->dm->persist($notification);
@@ -495,8 +573,8 @@ class NotificationsListener
                 if (!$notification)
                     $notification = new Notifications();
 
-                $notification->setContent('Il y a ' . $pagesdesactivate . ' commentaires désactivés');
-                $notification->setTitre('<i class="glyphicon glyphicon-warning-sign"></i> Commentaire inactif');
+                $notification->setContent('Il y a ' . $pagesdesactivate . ' commentaires dépubliés');
+                $notification->setTitre('<i class="glyphicon glyphicon-eye-close"></i> Commentaire dépublié');
                 $notification->setNature(7);
                 $notification->setToken($token);
                 $this->dm->persist($notification);
@@ -517,7 +595,7 @@ class NotificationsListener
                 if (!$notification)
                     $notification = new Notifications();
                 $notification->setContent('Il y a ' . $pageswait . ' commentaires en attente de relecture');
-                $notification->setTitre('<i class="glyphicon glyphicon-warning-sign"></i> Commentaire en attente');
+                $notification->setTitre('<i class="glyphicon glyphicon-refresh"></i> Commentaire en attente');
                 $notification->setNature(7);
                 $notification->setToken($token);
                 $this->dm->persist($notification);
@@ -546,8 +624,8 @@ class NotificationsListener
                 if (!$notification)
                     $notification = new Notifications();
 
-                $notification->setContent('Il y a ' . $desactivation . ' actions commerciales désactivées');
-                $notification->setTitre('<i class="glyphicon glyphicon-warning-sign"></i> Action commerciale inactive');
+                $notification->setContent('Il y a ' . $desactivation . ' actions commerciales dépubliés');
+                $notification->setTitre('<i class="glyphicon glyphicon-eye-close"></i> Action commerciale dépubliée');
                 $notification->setNature(8);
                 $notification->setToken($token);
                 $this->dm->persist($notification);
@@ -569,7 +647,7 @@ class NotificationsListener
                     $notification = new Notifications();
 
                 $notification->setContent('Il y a ' . $soonbegin . ' actions commerciales qui vont commencé dans moins de 3 jour');
-                $notification->setTitre('<i class="glyphicon glyphicon-warning-sign"></i> Action commerciale');
+                $notification->setTitre('<i class="glyphicon glyphicon-time"></i> Action commerciale');
                 $notification->setNature(8);
                 $notification->setToken($token);
                 $this->dm->persist($notification);
@@ -580,13 +658,29 @@ class NotificationsListener
                     $this->dm->remove($notification);
                     $this->dm->flush();
                 }
-
-
-
             }
 
+            $soonbegin = $entityManager->getRepository('HorusSiteBundle:Commercial')->getCommercialSoonEnd();
+            $token = sha1("8" . "e" . date('m/Y'));
+            $notification = $this->dm->getRepository('HorusSiteBundle:Notifications')->findOneByToken($token);
 
+            if ((int)$soonbegin > 0) {
+                if (!$notification)
+                    $notification = new Notifications();
 
+                $notification->setContent('Il y a ' . $soonbegin . ' actions commerciales qui se terminent dans moins de 3 jour');
+                $notification->setTitre('<i class="glyphicon glyphicon-time"></i> Action commerciale');
+                $notification->setNature(8);
+                $notification->setToken($token);
+                $this->dm->persist($notification);
+                $this->dm->flush();
+
+            } else {
+                if ($notification) {
+                    $this->dm->remove($notification);
+                    $this->dm->flush();
+                }
+            }
 
 
         }

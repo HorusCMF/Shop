@@ -1,0 +1,24 @@
+<div id="messagerie" class="cache">
+    <button type="button"class="closemessagerie btn-danger btn pull-right btn-sm"><i class="glyphicon glyphicon-remove"></i></button>
+    <h3 class="text-center"><i class="glyphicon glyphicon-comment"></i> Messagerie interne</h3>
+    <div id="messages">
+        <ul>
+            {% for message in messages|reverse %}
+                <li>
+                    <span class="title">{{ message.title }}</span>
+                    <span class="content">{{ message.description }} <span class="datin pull-right"><i class="glyphicon glyphicon-time"></i> {{ message.dateCreated|date('d/m/Y H:i') }}</span> </span>
+                </li>
+            {% else  %}
+            <div class="alert alert-dismissable alert-danger">
+                    <i class="glyphicon glyphicon-info-sign"></i> Aucun message pour le moment.
+                    <div class="clear"></div>
+                </div>
+            {% endfor  %}
+        </ul>
+    </div>
+    <a href="{{ path('horus_site_all_messsages') }}" class="pull-right"><i class="glyphicon glyphicon-search"></i> Voir tous les messages</a>
+
+    <textarea pattern=".{3,100}" title="3 caractères minimum" required="required" name="message" id="message" class="form-control" placeholder="Votre message"></textarea>
+    <div class="pull-left" id="writin"></div>
+    <button id="sended" class="pull-right btn btn-danger btn-sm"><i class="glyphicon glyphicon-pencil"></i> Répondre</button>
+</div>

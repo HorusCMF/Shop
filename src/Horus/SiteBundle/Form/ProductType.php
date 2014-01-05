@@ -20,13 +20,13 @@ class ProductType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title', 'text', array('attr' => array( 'placeholder' => 'Ex:  Kindle Paperwhite')))
-            ->add('accroche', 'text', array('attr' => array( 'placeholder' => "Ex:  Le meilleur appareil pour lecture, un point c'est tout")))
-            ->add('video', 'text', array('required' => false, 'attr' => array( 'placeholder' => "Ex:  http://www.youtube.com/watch?v=BQjqM24uWr8")))
-            ->add('reference', 'text', array('required' => true, 'attr' => array( 'placeholder' => 'Ex: EAX09-A')))
+            ->add('title', 'text', array('attr' => array( 'class' => 'popov form-control','placeholder' => 'Ex:  Kindle Paperwhite',"data-content" => "Un titre exlicite à votre produit")))
+            ->add('accroche', 'text', array('attr' => array('class' => 'popov form-control',"data-content" => "Une accroche attractive de votre produit", 'placeholder' => "Ex:  Le meilleur appareil pour lecture, un point c'est tout")))
+            ->add('video', 'text', array('required' => false, 'attr' => array('class' => 'popov form-control',"data-content" => "Une vidéo Youtube, Dailymotion, Vimeo de présentation",'placeholder' => "Ex:  http://www.youtube.com/watch?v=BQjqM24uWr8")))
+            ->add('reference', 'text', array('required' => true, 'attr' => array('class' => 'popov form-control',"data-content" => "Une référence unique", 'placeholder' => 'Ex: EAX09-A')))
             ->add('ean', 'text', array('required' => false, 'attr' => array( 'placeholder' => 'Ex: 471-9-5120-0288-x')))
             ->add('quantity', 'integer', array('required' => true, 'attr' => array('class' => 'form-control', 'placeholder' => 'Ex: 12')))
-            ->add('poid', 'text', array('required' => false,'label' => 'Poid(Kg.)', 'attr' => array('class' => 'form-control', 'placeholder' => 'Ex: 5')))
+            ->add('poid', 'text', array('required' => false,'label' => 'Poid(Kg.)', 'attr' => array('class' => 'popov form-control',"data-content" => "Un poid en kilo pour le transport", 'placeholder' => 'Ex: 5')))
             ->add('longueur', 'text', array('required' => false,'label' => 'Longeur(cm.)', 'attr' => array('class' => 'form-control', 'placeholder' => 'Ex: 35')))
             ->add('largeur', 'text', array('required' => false,'label' => 'Largeur(cm.)', 'attr' => array('class' => 'form-control', 'placeholder' => 'Ex: 25')))
             ->add('profondeur', 'text', array('required' => false,'label' => 'Profondeur(cm.)', 'attr' => array('class' => 'form-control', 'placeholder' => 'Ex: 15')))

@@ -3,6 +3,9 @@
 
 {% block title %}Horus Shop CMF{% endblock %}
 
+{#
+    StylSheets
+#}
 {% block stylesheets %}
     {{ parent() }}
 
@@ -11,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.10.3/themes/hot-sneaks/jquery-ui.css"/>
     <link rel="stylesheet" type="text/css" href="http://davidstutz.github.io/bootstrap-multiselect/css/bootstrap-multiselect.css"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('bundles/horussite/css/jRating.jquery.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/horussite/css/jquery.cssemoticons.css') }}"/>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.css" />
 
     {% stylesheets '@HorusSiteBundle/Resources/public/css/bootswatch.css' filter='yui_css' %}
@@ -38,11 +42,13 @@
 {% endblock %}
 
 
+{#
+    BODY
+#}
 {% block body %}
     {% render controller('HorusSiteBundle:Layout:theme') %}
-
-    <a href="https://github.com/HorusCMF/Shop">
-        <img style="z-index: 50000;position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+    {#<a href="https://github.com/HorusCMF/Shop">#}
+        {#<img style="z-index: 50000;position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>#}
     {% include 'HorusSiteBundle:Slots:topmenu.html.twig' %}
     <div class="container-fluid">
         <div class="row-fluid">
@@ -52,12 +58,8 @@
                     <div class="row-fluid">
                         <div class="span3" id="leftmenu">
                             {{ render(controller('HorusSiteBundle:Layout:leftmenu')) }}
-
-                            {#{% include 'HorusSiteBundle:Slots:statistics.html.twig' %}#}
                         </div>
                         <div class="span9" id="content">
-
-                            {#{% include 'HorusSiteBundle:Slots:mainmenu.html.twig' %}#}
                             {% include 'HorusSiteBundle:Slots:search.html.twig' %}
                             {% include 'HorusSiteBundle:Slots:flashdatas.html.twig' %}
                             <div class="maincontent">
@@ -69,37 +71,44 @@
                 </div>
             </div>
             <a class="scrollup">Scroll</a>
-
+            <h3 class="btn btn-primary" id="btn-tchat"><i class="glyphicon glyphicon-comment"></i> {{ "Messagerie"|trans }}</h3>
+            {{  render(controller('HorusSiteBundle:Administrateur:lastmessagerie')) }}
             {% if app.user.id is defined %}
                 {% include 'HorusSiteBundle:Slots:connected.html.twig' %}
             {% endif %}
         </div>
     </div>
+
     <div id="footer">
         <div class="container text-center">
-            <p class="muted credit">Horus CMF forked by <a href="https://github.com/HorusCMF/Shop">Symfomany</a></p>
+            <p>Copyright © 2013 Horus Shop. Tous droits réservés.</p>
+            <p class="muted credit">Horus CMF propulsed by <a href="https://github.com/HorusCMF/Shop">Symfomany</a></p>
         </div>
     </div>
     <div id="overlay" class="overlay hide">
-        <img src="/images/495.GIF" />
+        <img src="/images/loader.gif" />
     </div>
-{% render controller('HorusSiteBundle:Layout:getIpVisitor') %}
+    {% render controller('HorusSiteBundle:Layout:getIpVisitor') %}
+
 {% endblock %}
 
 
+{#
+    Javascripts
+#}
 {% block javascripts %}
     {{ parent() }}
-    <script src="{{ asset('/js/ckeditor/ckeditor.js') }}"></script>
-    <script src="http://damirfoy.com/iCheck/jquery.icheck.min.js?v=0.9.1"></script>
     <script src="http://davidstutz.github.io/bootstrap-multiselect/js/bootstrap-multiselect.js"></script>
     <script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <script src="http://modernizr.com/downloads/modernizr-latest.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/hinclude/0.9.5/hinclude.min.js"></script>
     <script src="{{ asset('bundles/horussite/js/jRating.jquery.min.js') }}"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+    <script src="{{ asset('bundles/horussite/js/jquery.cssemoticons.min.js') }}"></script>
+    <script src="{{ asset('/js/ckeditor/ckeditor.js') }}"></script>
 
     {% javascripts '@HorusSiteBundle/Resources/public/js/miniNotification.coffee' filter='closure' %}
-    <script src="{{ asset_url }}" type="text/javascript"></script>
+        <script src="{{ asset_url }}" type="text/javascript"></script>
     {% endjavascripts %}
 
     <!--[if (lt IE 6)|(IE 7)]>

@@ -56,15 +56,24 @@
                 <a class="btn btn-default btn-sm"
                    href="{{ path('horus_site_product_remove_quantity', {'id' : produit.id }) }}"><i
                             class="glyphicon glyphicon-minus-sign"></i></a>
-                <a class="btn btn-default btn-sm"
+                <a class="btn btn-default btn-sm btn-primary"
                    href="{{ path('horus_site_product_add_quantity', {'id' : produit.id }) }}"><i
                             class="glyphicon glyphicon-plus-sign"></i></a>
+                <a class="btn btn-default btn-sm"
+                   href="{{ path('horus_site_moveup_product', {'id' : produit.id }) }}"><i
+                            class="glyphicon glyphicon-arrow-up"></i></a>
+                <a class="btn btn-default btn-sm btn-primary"
+                   href="{{ path('horus_site_movedown_product', {'id' : produit.id }) }}"><i
+                            class="glyphicon glyphicon-arrow-down"></i></a>
             </div>
+            <div class="clear"></div>
+
+            <div class="clear"></div>
             <hr class="fancy-line"/>
 
             <p>{{ produit.cover|striptags|truncate(500,'...')|raw }}</p>
 
-            <h3>
+            <h4 class="pull-right">
                 {% if produit.quantity > 0 and produit.quantity > 3 %}
                     <span class="label label-success pull-left">{{ produit.quantity }} en stock</span>
                 {% elseif produit.quantity <= 3 and produit.quantity > 0 %}
@@ -73,13 +82,7 @@
                 {% else %}
                     <span class="label label-danger pull-left"><i class="glyphicon glyphicon-remove-circle"></i> Rupture de stock</span>
                 {% endif %}
-            </h3>
-
-            <p>
-                <a href="{{ path('horus_site_product', {'id' : produit.id}) }}"
-                   class="btn-xs btn btn-default pull-right"><i class="glyphicon glyphicon-search"></i> Voir le
-                    produit</a>
-            </p>
+            </h4>
         </div>
     </div>
     {% if not loop.last %}

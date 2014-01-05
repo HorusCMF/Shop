@@ -60,7 +60,7 @@ class CategoryRepository extends EntityRepository
     public function getCategoryIsProductNull()
     {
         $query = $this->getEntityManager()
-            ->createQuery("SELECT COUNT(a.id) FROM HorusSiteBundle:Category a INNER JOIN a.produits p WHERE a.produits IS EMPTY");
+            ->createQuery("SELECT COUNT(a.id) FROM HorusSiteBundle:Category a  WHERE a.produits IS EMPTY");
         return $query->getSingleScalarResult();
     }
 

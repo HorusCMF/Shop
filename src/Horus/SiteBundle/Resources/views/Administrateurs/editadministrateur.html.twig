@@ -6,16 +6,24 @@
 
 {% block content %}
     <div class="page" id="createadministrateur">
-        <a class="btn back btn-danger pull-right" href="{{ path('horus_site_administrateurs') }}">&larr; Revenir à la liste des administrateurs</a>
+        <div class="label label-danger pull-right"><i class="glyphicon glyphicon-time"></i> Modifié il y a {{ administrateur.updatedAt|created_ago }}</div>
 
 
-        <h1><i class="glyphicon glyphicon-pencil"></i> Editer un administrateur</h1>
-        <div class="label label-danger pull-right">Modifié il y a {{ administrateur.updatedAt|created_ago }}</div>
+        <h1><i class="glyphicon glyphicon-pencil"></i> Editer l'administrateur {{ administrateur.firstname|title }} {{ administrateur.lastname|title }}</h1>
+        <a href="{{ path('horus_site_administrateur_history', {'id' : administrateur.id }) }}" class="btn-sm pull-right btn btn-danger"><i class="glyphicon glyphicon-search"></i> Voir ses dernières actions</a>
 
         <hr class="clear fancy-line">
 
+        <p>Dernière activité: <strong>{{ administrateur.lastActivity|created_ago }}</strong></p>
         <form novalidate="novalidate" action="{{ path('horus_site_edit_administrateur', {'id' : administrateur.id}) }}" method="post">
 
+            <h3>Rôle sur la plateforme</h3>
+            <div class="row-fluid">
+                <div class="span8">
+                    {{ form_row(form.groups) }}
+                </div>
+            </div>
+            <h3>Informations</h3>
             <div class="row-fluid">
                 <div class="span3">
                     {{ form_row(form.gender) }}
@@ -28,23 +36,6 @@
                 </div>
             </div>
 
-            <div class="row-fluid">
-                <div class="span2">
-                    <label for="day">Jour</label>
-                    {{ form_widget(form.dob['day']) }}
-                    {{ form_errors(form.dob['day']) }}
-                </div>
-                <div class="span2">
-                    <label for="day">Mois</label>
-                    {{ form_widget(form.dob['month']) }}
-                    {{ form_errors(form.dob['month']) }}
-                </div>
-                <div class="span2">
-                    <label for="day">Années</label>
-                    {{ form_widget(form.dob['year']) }}
-                    {{ form_errors(form.dob['year']) }}
-                </div>
-            </div>
             <div class="row-fluid">
                 <div class="span12">
                     {{ form_row(form.description) }}
@@ -68,7 +59,7 @@
                     {{ form_row(form.email) }}
                 </div>
                 <div class="span4">
-                    {{ form_row(form.password.mdp) }}
+                    {{ form_row(form.password.mdp,{'value' : '', 'attr': {'autocomplete' : 'off'}}) }}
                     <div class="label label-warning">Indiquer si changement</div>
                 </div>
                 <div class="span4">
@@ -83,15 +74,10 @@
                 <div class="span4">
                     {{ form_row(form.entreprise) }}
                 </div>
-                <div class="span4">
-                    {{ form_row(form.groups) }}
-                </div>
             </div>
             {{ form_rest(form) }}
 
-            <button class="btn btn-primary btn-large" type="submit"><i class="glyphicon glyphicon-pencil"></i> editer
-                cet administrateur
-            </button>
+            <button class="btn btn-primary btn-large" type="submit"><i class="glyphicon glyphicon-pencil"></i> Editer</button>
         </form>
     </div>
 {% endblock %}

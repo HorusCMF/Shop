@@ -1,4 +1,33 @@
 $ ->
+  if $("#search_input").length > 0
+    $("#search_input").autocomplete(
+      minLength: 2
+      scrollHeight: 220
+      source: (req, add) ->
+        $.ajax
+          url: $("#search_input").attr('data-url')
+          type: "get"
+          dataType: "json"
+          data: "query="+req.term
+          async: true
+          cache: true
+          success: (data) ->
+            add $.map(data, (item) ->
+              nom: item.nom
+              url: item.url
+            )
+
+      focus: (event, ui) ->
+        $(this).val ui.item.nom
+        false
+
+      select: (event, ui) ->
+        window.location.href = ui.item.url
+        false
+    ).data("ui-autocomplete")._renderItem = (ul, item) ->
+      $("<li></li>").data("ui-autocomplete-item", item).  append("<a href=\"" + item.url + "\">" + item.nom + "</span></a>").appendTo ul.addClass("list-row")
+
+
 
   $(".fancybox").fancybox()
 
@@ -9,6 +38,20 @@ $ ->
       evt.stopPropagation()
       $(this).popover "show"
 
+  $('.popov').popover
+    original-title: "<i class='glyphicon glyphicon-question-sign'></i> Aide"
+    placement: "bottom"
+    trigger: 'focus'
+    content: $(this).attr('data-content')
+    html: true
+
+  $('#messages').emoticonize()
+
+  $("#btn-tchat").click (evt) ->
+    $('#messagerie').show()
+
+  $(".closemessagerie").click ->
+    $('#messagerie').hide()
 
   $("html").click ->
     $poped.popover "hide"
@@ -61,13 +104,10 @@ $ ->
   $('#moresearch').click ->
     $('#advancedsearch').toggleClass('hide','')
 
-  $('#closepanel').click ->
-    $('.row-fluid .span9').toggleClass('span9','span12')
-
-  $('.check, .rad').iCheck
-    checkboxClass: 'icheckbox_flat-green'
-    radioClass: 'iradio_flat-green'
-    increaseArea: '20%'
+#  $('.check, .rad').iCheck
+#    checkboxClass: 'icheckbox_flat-green'
+#    radioClass: 'iradio_flat-green'
+#    increaseArea: '20%'
 
   $('form').on "submit", (event) ->
     $(this).find('button[type=submit]').attr 'disabled','disabled'

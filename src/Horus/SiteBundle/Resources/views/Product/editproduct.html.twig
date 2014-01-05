@@ -28,7 +28,7 @@
     <div>({{ produit.rates|length }} votes)</div>
     <div class="clear"></div>
 
-    <div class="label label-danger pull-right">Modifié il y a {{ produit.dateUpdated|created_ago }}</div>
+    <div class="label label-danger pull-right"><i class="glyphicon glyphicon-time"></i> Modifié il y a {{ produit.dateUpdated|created_ago }}</div>
     <hr class="clear fancy-line">
 
     {% if not form.vars.valid %}
@@ -62,10 +62,10 @@
     </ul>
     <div id="myTabContent" class="tab-content">
     <div class="tab-pane fade active in" id="presentation">
-        <div class="row-fluid">
-            <div class="span3">
+        <div class="row-fluid pull-right">
+            <div class="pull-right">
                 {{ form_widget(form.isVisible, {'attr': {'class' : 'pull-left' }}) }}
-               <label for="isVisible" class="pull-left">Ce produit est ligne</label>
+                <label for="isVisible" class="pull-left">Ce produit est ligne</label>
             </div>
         </div>
         <div class="row-fluid">
@@ -137,12 +137,21 @@
             </div>
         </div>
 
-        <label for="cover">Résumé</label>
-        {{ form_widget(form.cover,{'attr' : {'class' : 'ckeditor' }}) }}
-        {{ form_errors(form.cover) }}
-        <label for="content">Description</label>
-        {{ form_widget(form.content,{'attr' : {'class' : 'ckeditor' }}) }}
-        {{ form_errors(form.content) }}
+
+        <div class="row-fluid">
+            <div class="span12">
+                <label for="cover">Petit résumé de votre produit</label>
+                {{ form_widget(form.cover,{'attr' : {'class' : 'ckeditor' }}) }}
+                {{ form_errors(form.cover) }}
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12">
+                <label for="content">Description complète du produit</label>
+                {{ form_widget(form.content,{'attr' : {'class' : 'ckeditor' }}) }}
+                {{ form_errors(form.content) }}
+            </div>
+        </div>
 
         <div class="clear"></div>
     </div>

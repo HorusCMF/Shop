@@ -13,51 +13,7 @@
         {% include 'HorusSiteBundle:Slots:display.html.twig' %}
         {% include 'HorusSiteBundle:CMS:_states.html.twig' %}
 
-
-
-        {% for page in pages %}
-            <div class="media">
-                <div class="btn-group pull-right">
-                    <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
-                        <i class="glyphicon glyphicon-plus"></i> Action <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a onclick="return(confirm('Etes-vous sûr de vouloir supprimer cette page ?'));" href="{{ path('horus_site_remove_page', {'id' : page.id}) }}"><i class="glyphicon glyphicon-remove"></i> Supprimer</a></li>
-                        <li><a  href="{{ path('horus_site_edit_page', {'id' : page.id}) }}"><i class="glyphicon glyphicon-pencil"></i> Editer</a></li>
-                        {% if page.nature == 1 %}
-                            <li><a  href="{{ path('horus_site_active_page', {'id' : page.id}) }}"><i class="glyphicon glyphicon-check"></i> Publier</a></li>
-                        {% else %}
-                            <li><a  href="{{ path('horus_site_desactive_page', {'id' : page.id}) }}"><i class="glyphicon glyphicon-minus-sign"></i> Dépublier</a></li>
-                        {% endif %}
-                    </ul>
-                </div>
-
-
-                <div class="media-body">
-                    <h4 class="media-heading"><a href="{{ path('horus_site_edit_page', {'id' : page.id}) }}">{{ page.name }}</a>
-                        {% if page.nature == 3 %}
-                            <span class="badge badge-success">En ligne</span>
-                        {% elseif page.nature == 2  %}
-                            <span class="badge badge-warning">En cours de relecture</span>
-                        {% else %}
-                                <span class="badge badge-danger">Hors-Ligne</span>
-                        {% endif %}
-                    </h4>
-                    <p>{{ page.cover|striptags|truncate(900,'...')|raw }}</p>
-                        <h4 class="pull-right"><span class="label label-info">{{ page.produits|length|default('0') }} produit(s)</span></h4>
-                </div>
-            </div>
-            {% if not loop.last %}
-                <hr class="clear fancy-line"/>{% endif %}
-
-        {% else %}
-            <div class="alert alert-dismissable alert-danger">
-                <button type="button" class="close" data-dismiss="alert">×</button>
-                <i class="glyphicon glyphicon-info-sign"></i> Aucune page de créer pour le moment.
-                <a href="{{ path('horus_site_page_create') }}" class="pull-right btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Ajouter une page</a>
-                <div class="clear"></div>
-            </div>
-        {% endfor %}
+        {% include 'HorusSiteBundle:CMS:_listpages.html.twig' %}
 
         <div class="clear"></div>
         <div class="action">

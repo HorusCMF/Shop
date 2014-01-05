@@ -1,0 +1,12 @@
+    {% for notification in notifications %}
+        <div>
+            <h6>{{ notification.titre|raw }}</h6>
+            <p>{{ notification.content|raw }}</p>
+        </div>
+    {% else %}
+        <div class="alert">
+            <p>Aucune notification pour le moment</p>
+        </div>
+    {% endfor %}
+    <a href="{{ path('horus_site_last_notifications') }}" class="pull-right btn btn-xs btn-primary"><i class="glyphicon glyphicon-share-alt"></i> Voir les notifications</a>
+    <div class="clear"></div>

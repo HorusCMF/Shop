@@ -17,7 +17,7 @@
             <form action="{{ path('horus_search_avanced') }}" class="span12" role="search" method="get">
                 <div class="form-group">
                     <div class="col-xs-8">
-                        <input type="text" class="form-control" name="word"
+                        <input type="text" data-url="{{ path('horus_site_products_ajax') }}" id="search_input" class="form-control" name="word"
                                placeholder="Nom, Référence, Description, Catégorie..."
                                value="{{ app.request.query.get('word') }}">
                     </div>
@@ -29,10 +29,10 @@
                 {#{{ render(controller('HorusSiteBundle:Main:search', { 'val': app.request.get('search') }) ) }}#}
         </div>
         <div class="{% if app.request.query.get('word') is not empty %}hide{% endif %}hide" id="advancedsearch">
-            <div class="row-fluid col-md-offset-1">
+            <div class="row-fluid" id="labels">
                 <div class="span2">
                     <input name="produits" id="produits" type="checkbox"
-                           {% if app.request.query.get('produits') %}checked="checked"{% endif %}> <label
+                           checked="checked"> <label
                             for="produits"
                             class="whitetext">Produits</label>
                 </div>
@@ -60,6 +60,10 @@
                     <input name="tags" id="tags" type="checkbox"
                            {% if app.request.query.get('tags') %}checked="checked"{% endif %}> <label for="tags"
                                                                                                       class="whitetext">Tags</label>
+                </div>
+                <div class="span2">
+                    <input name="marques" id="marques" type="checkbox"
+                           {% if app.request.query.get('marques') %}checked="checked"{% endif %}> <label for="marques" class="whitetext">Marques</label>
                 </div>
             </div>
             <button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-filter"></i> Filtrer

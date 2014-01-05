@@ -8,7 +8,7 @@
             {% for action in actions %}
                 <li>
                     <h4 class="pull-left">{{ action.titre|raw }}</h4>
-                    <span class="pull-right"><small><i class="glyphicon glyphicon-time"></i> {{ action.dateCreated }}</small></span>
+                    <span class="pull-right"><small><i class="glyphicon glyphicon-time"></i> {{ action.dateCreated|date('d/m/Y H:i:') }}</small></span>
                     <div class="clear"></div>
                     <p>{{ action.content|raw }}</p>
                 </li>

@@ -1,5 +1,4 @@
 
-
 _wdt:
     resource: "@WebProfilerBundle/Resources/config/routing/wdt.xml"
     prefix:   /_wdt
@@ -15,5 +14,13 @@ _configurator:
 _main:
     resource: routing.yml
 
-horus:
-    resource: "@HorusSiteBundle/Resources/config/routing.yml"
+
+login:
+  pattern:  /login
+  defaults: { _controller: HorusSiteBundle:Administrateur:login }
+
+login_check:
+  pattern:   /backend/login_check
+
+logout:
+  pattern:   /backend/logout

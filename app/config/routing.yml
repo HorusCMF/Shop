@@ -10,6 +10,22 @@ horus_site_denied:
   pattern:  /access-denied/
   defaults: { _controller: HorusSiteBundle:Administrateur:login }
 
-
 horus:
-  resource: "@HorusSiteBundle/Resources/config/routing.yml"
+    resource: "@HorusSiteBundle/Resources/config/routing.yml"
+    prefix:   /backend
+
+horus_site_main_en:
+  pattern:  /{_locale}/backend
+  defaults: { _controller: HorusSiteBundle:Main:index, _locale: en  }
+  requirements:
+      _locale: en|fr|de
+
+login:
+  pattern:  /login
+  defaults: { _controller: HorusSiteBundle:Administrateur:login }
+
+login_check:
+  pattern:   /backend/login_check
+
+logout:
+  pattern:   /backend/logout

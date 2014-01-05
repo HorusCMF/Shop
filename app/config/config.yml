@@ -6,9 +6,8 @@ imports:
 #    - { resource: "@HorusSiteBundle/Resources/config/services.xml" }
 
 framework:
-
     esi:             ~
-    translator:      { fallback: fr }
+    translator:      { fallback: de }
     secret:          %secret%
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -18,6 +17,7 @@ framework:
     validation:      { enable_annotations: true }
     templating:
         engines: ['twig']
+        hinclude_default_template: HorusSiteBundle::hinclude.html.twig
         #assets_version: SomeVersionScheme
     default_locale:  "%locale%"
     trusted_proxies: ~
@@ -254,6 +254,49 @@ fos_elastica:
                     repository: Horus\SiteBundle\Entity\ArticleRepository
                     provider:
                         query_builder_method: createIsActiveQueryBuilder
+                    finder: ~
+                    listener: ~ # by default, listens to "insert", "update" and "delete"
+              marques:
+                mappings:
+                    title: { type: string }
+                    keywords: { type: string }
+                    resume: { type: string }
+                    description: { type: string }
+                    marques:
+                      type: "nested"
+                      properties:
+                       reference: {type: string }
+                       title: {type: string }
+                       service: {type: string }
+                       cover: {type: string }
+                       content: { type: string }
+                persistence:
+                    driver: orm
+                    model: Horus\SiteBundle\Entity\Marques
+                    repository: Horus\SiteBundle\Entity\MarquesRepository
+                    provider:
+                        query_builder_method: getActivePageQueryBuilder
+                    finder: ~
+                    listener: ~ # by default, listens to "insert", "update" and "delete"
+              fournisseurs:
+                mappings:
+                  title: { type: string }
+                  resume: { type: string }
+                  description: { type: string }
+                  fournisseurs:
+                    type: "nested"
+                    properties:
+                     reference: {type: string }
+                     title: {type: string }
+                     service: {type: string }
+                     cover: {type: string }
+                     content: { type: string }
+                persistence:
+                    driver: orm
+                    model: Horus\SiteBundle\Entity\Fournisseurs
+                    repository: Horus\SiteBundle\Entity\FournisseursRepository
+                    provider:
+                        query_builder_method: getActivePageQueryBuilder
                     finder: ~
                     listener: ~ # by default, listens to "insert", "update" and "delete"
               category:
