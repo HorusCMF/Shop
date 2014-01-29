@@ -1,0 +1,74 @@
+{% extends 'HorusSiteBundle::layout.html.twig' %}
+
+
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/horussite/js/jRating.jquery.min.js') }}"></script>
+    {% javascripts '@HorusSiteBundle/Resources/public/js/pages/produits.js' %}
+    <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/horussite/css/jRating.jquery.css') }}"/>
+
+    {% stylesheets '@HorusSiteBundle/Resources/public/css/pages/category.sass' filter='yui_css' %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+{% endblock %}
+
+{% block content %}
+<div id="visualizeproduct" class="page">
+    <div class="span3 pull-right">
+        {% if produit.starPicture %}
+            <a href="{{ imgproducts ~  produit.id ~ '/' ~ produit.starPicture.path|sizes('big') }}" rel="group"
+               class="pull-right fancybox">
+                <img class="media-object img-thumbnail"
+                     src="{{ imgproducts ~  produit.id ~ '/' ~ produit.starPicture.path|sizes('small') }}"/>
+            </a>
+        {% else %}
+            <img class="media-object  pull-right img-thumbnail" src="http://placehold.it/150x75" alt="...">
+        {% endif %}
+    </div>
+    <h1><i class="glyphicon glyphicon-search"></i> "{{ produit.title|title }}"</h1>
+
+    <p>
+        <strong>Référence:</strong> {{ produit.reference|default('Aucune     pour le moment') }}
+    </p>
+
+    <div class="star" data-average="{{ produit.average }}"></div>
+
+
+    <h3>Ses commandes</h3>
+    {% include 'HorusSiteBundle:Commandes:_states.html.twig' %}
+
+    {% if commandes is not empty %}
+    <table class="table">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Référence</th>
+            <th>Client</th>
+            <th>Prix TTC</th>
+            <th>Transporteur</th>
+            <th>Etat</th>
+            <th>Date</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% include 'HorusSiteBundle:Commandes:_listcommandesinline.html.twig' with {'commandes' : commandes} %}
+        </tbody>
+    </table>
+    {% else %}
+        <div class="alert alert-dismissable alert-danger">
+            <i class="glyphicon glyphicon-info-sign"></i> Aucune commandes pour le moment sur ce produit.
+            <div class="clear"></div>
+        </div>
+    {% endif %}
+
+</div>
+{% endblock %}
+

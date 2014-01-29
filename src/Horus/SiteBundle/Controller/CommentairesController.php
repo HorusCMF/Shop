@@ -187,11 +187,11 @@ class CommentairesController extends Controller
         $em->flush();
         $this->get('session')->getFlashBag()->add(
             'success',
-            "La commentaire a bien été désactivé"
+            "Le commentaire a bien été désactivé"
         );
         $this->get('session')->getFlashBag()->add(
             'messagerealtime',
-            "La commentaire vient d'être désactivée"
+            "Le commentaire vient d'être désactivée"
         );
 
 

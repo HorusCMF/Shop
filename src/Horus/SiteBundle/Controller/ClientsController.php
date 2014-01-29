@@ -4,6 +4,7 @@ namespace Horus\SiteBundle\Controller;
 
 
 use Horus\SiteBundle\Entity\Client;
+use Horus\SiteBundle\Form\ClientsAdressesType;
 use Horus\SiteBundle\Form\ClientsType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Horus\SiteBundle\Entity\Clients;
@@ -48,7 +49,16 @@ class ClientsController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $clients = $em->getRepository('HorusSiteBundle:Client')->findAll();
-        return $this->render('HorusSiteBundle:Clients:clients.html.twig', array('clients' => $clients));
+        $display = $this->container->get('request')->get('display', 5);
+
+        $paginator = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $clients,
+            $this->get('request')->query->get('page', 1) /*page number*/,
+            $display
+        );
+
+        return $this->render('HorusSiteBundle:Clients:clients.html.twig', array('clients' => $pagination));
     }
 
     /**
@@ -71,11 +81,97 @@ class ClientsController extends Controller
     }
 
     /**
+     * Get Commandes of Client
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function commandesclientAction(Client $id)
+    {
+        $display = $this->container->get('request')->get('display', 5);
+
+        $paginator = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $id->getCommandes(),
+            $this->get('request')->query->get('page', 1) /*page number*/,
+            $display
+        );
+
+        return $this->render('HorusSiteBundle:Clients:clientcommande.html.twig',
+            array(
+                'client' => $id,
+                'commandes' => $pagination
+            ));
+    }
+
+    /**
+     * Get Commandes of Client
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function adressesclientAction(Client $id)
+    {
+
+        $request = $this->getRequest();
+        $em = $this->getDoctrine()->getManager();
+
+        $form = $this->createForm(new ClientsAdressesType(), $id);
+        $form->handleRequest($request);
+
+
+        if ($form->isValid()) {
+            $adresses = $id->getAddresses();
+            if (!empty($adresses))
+                foreach ($adresses as $adresse) {
+                    $adresse->setClient($id);
+                }
+
+            $em->persist($id);
+            $em->flush();
+            $this->get('session')->getFlashBag()->add(
+                'success',
+                "L'adresse du client a été modifiée"
+            );
+
+            $this->get('session')->getFlashBag()->add(
+                'messagerealtime',
+                "L'adresse du client ".$id->getFirstname()." ".$id->getLastname()." vient d'être modifiée"
+            );
+
+            /**
+             * Notifications
+             */
+            $this->container->get('lastactions_listener')->insertActions('Edition', "a modifié l'adresse d'un client",'glyphicon glyphicon-pencil');
+
+            return $this->redirect($this->generateUrl('horus_site_clients'));
+        }
+
+            return $this->render('HorusSiteBundle:Clients:adresses.html.twig',
+            array(
+                'client' => $id,
+                'addresses' => $id->getAddresses(),
+                'form' => $form->createView()
+            ));
+    }
+
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function panierclientAction(Client $id)
+    {
+        return $this->render('HorusSiteBundle:Clients:panierclient.html.twig',
+            array(
+                'client' => $id,
+                'panier' => $id->getCart()
+            ));
+    }
+    /**
      * @return \Symfony\Component\HttpFoundation\Response
      */
     public function seeclientAction(Client $id)
     {
-        return $this->render('HorusSiteBundle:Clients:client.html.twig', array('client' => $id));
+        return $this->render('HorusSiteBundle:Clients:client.html.twig',
+            array(
+                'client' => $id,
+                'addresses' => $id->getAddresses()
+            ));
     }
 
     /**

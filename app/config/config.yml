@@ -39,7 +39,7 @@ twig:
 assetic:
     debug:          "%kernel.debug%"
     use_controller: false
-    bundles:        ["HorusSiteBundle","HorusFrontBundle"]
+    bundles:        ["HorusSiteBundle"]
     #java: /usr/bin/java
     filters:
          cssrewrite: ~
@@ -125,15 +125,6 @@ sensio_framework_extra:
     view:    { annotations: false }
     cache:   { annotations: true }
 
-fos_rest:
-    param_fetcher_listener: true
-    body_listener: true
-    format_listener: true
-    routing_loader:
-      default_format: json
-    view:
-        view_response_listener: 'force'
-
 services:
     twig.extension.text:
        class: Twig_Extensions_Extension_Text
@@ -164,13 +155,6 @@ jms_security_extra:
     # Enables expression language
     expressions: true
 
-# app/config/config.yml
-knp_menu:
-    twig:  # use "twig: false" to disable the Twig extension and the TwigRenderer
-        template: "HorusSiteBundle:Slots:menu.html.twig"
-    templating: false # if true, enables the helper for PHP templates
-    default_renderer: twig # The renderer to use, list is also available by default
-
 knp_paginator:
     page_range: 5                      # default page range used in pagination control
     default_options:
@@ -191,38 +175,6 @@ doctrine_mongodb:
     document_managers:
         default:
             auto_mapping: true
-
-
-#Security Optimization
-nelmio_security:
-    # signs/verifies all cookies
-#    signed_cookie:
-#        secret: s5ddhg46hj46hgsdf65s46846sd46fsd56d56g4d8f6h4df6g # defaults to global %secret%
-#        hash_algo: sha1 # defaults to sha256
-#        names: ['*']
-    # encrypt all cookies
-    encrypted_cookie:
-        names: ['*']
-    # prevents framing of the entire site
-    clickjacking:
-        paths:
-            '^/.*': DENY
-    # prevents redirections outside the website's domain
-    external_redirects:
-        abort: false
-        log: true
-
-    # forced HTTPS handling, don't combine with flexible mode
-    # and make sure you have SSL working on your site before enabling this
-#    forced_ssl: ~
-#        hsts_max_age: 2592000 # 30 days
-#        hsts_subdomains: true
-
-    # flexible HTTPS handling, read the detailed config info
-    # and make sure you have SSL working on your site before enabling this
-#    flexible_ssl:
-#        cookie_name: auth
-#        unsecured_logout: false
 
 fos_elastica:
     default_manager: orm
@@ -274,6 +226,24 @@ fos_elastica:
                     driver: orm
                     model: Horus\SiteBundle\Entity\Marques
                     repository: Horus\SiteBundle\Entity\MarquesRepository
+                    provider:
+                        query_builder_method: getActivePageQueryBuilder
+                    finder: ~
+                    listener: ~ # by default, listens to "insert", "update" and "delete"
+              clients:
+                mappings:
+                    firstname: { type: string }
+                    lastname: { type: string }
+                    description: { type: string }
+                    entreprise: { type: string }
+                    zipcode: { type: string }
+                    ville: { type: string }
+                    tel: { type: string }
+                    email: { type: string }
+                persistence:
+                    driver: orm
+                    model: Horus\SiteBundle\Entity\Client
+                    repository: Horus\SiteBundle\Entity\ClientRepository
                     provider:
                         query_builder_method: getActivePageQueryBuilder
                     finder: ~
@@ -337,6 +307,7 @@ fos_elastica:
                     name: {type: string }
                     cover: { type: string }
                     description: { type: string }
+                    keywords: { type: string }
                     produits:
                       type: "nested"
                       properties:

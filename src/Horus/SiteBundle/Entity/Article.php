@@ -69,6 +69,12 @@ class Article
      */
     private $cover;
 
+
+    /**
+     * @ORM\OneToMany(targetEntity="CommentaireArticle",mappedBy="article", cascade={"all"},orphanRemoval=true)
+     */
+    private $commentaires;
+
     /**
      * @Assert\NotBlank(
      *     message = "La description ne doit pas etre vide"
@@ -112,10 +118,10 @@ class Article
 
 
     /**
-     * @ORM\ManyToOne(targetEntity="Category", inversedBy="articles")
-     * @ORM\JoinColumn(name="category_id", referencedColumnName="id")
+     * @ORM\ManyToMany(targetEntity="Category", mappedBy="articles", cascade={"all"},orphanRemoval=true)
+     * @ORM\JoinTable(name="article_categories")
      */
-    private $category;
+    private $categories;
 
 
     /**
@@ -148,9 +154,14 @@ class Article
     protected $commercials;
 
 
-
-
     /**
+     * @var integer
+     *
+     * @ORM\Column(name="home", type="boolean", nullable=false)
+     */
+    private $home;
+
+        /**
      * Get id
      *
      * @return integer 
@@ -277,28 +288,6 @@ class Article
         return $this->dateCreated;
     }
 
-    /**
-     * Set category
-     *
-     * @param \Horus\SiteBundle\Entity\Category $category
-     * @return Article
-     */
-    public function setCategory(\Horus\SiteBundle\Entity\Category $category = null)
-    {
-        $this->category = $category;
-    
-        return $this;
-    }
-
-    /**
-     * Get category
-     *
-     * @return \Horus\SiteBundle\Entity\Category
-     */
-    public function getCategory()
-    {
-        return $this->category;
-    }
 
     /**
      * Add tags
@@ -544,5 +533,91 @@ class Article
     public function getCommercials()
     {
         return $this->commercials;
+    }
+
+    /**
+     * Add categories
+     *
+     * @param Horus\SiteBundle\Entity\Category $categories
+     * @return Article
+     */
+    public function addCategorie(\Horus\SiteBundle\Entity\Category $categories)
+    {
+        $this->categories[] = $categories;
+        return $this;
+    }
+
+    /**
+     * Remove categories
+     *
+     * @param Horus\SiteBundle\Entity\Category $categories
+     */
+    public function removeCategorie(\Horus\SiteBundle\Entity\Category $categories)
+    {
+        $this->categories->removeElement($categories);
+    }
+
+    /**
+     * Get categories
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getCategories()
+    {
+        return $this->categories;
+    }
+
+    /**
+     * Add commentaires
+     *
+     * @param Horus\SiteBundle\Entity\CommentaireArticle $commentaires
+     * @return Article
+     */
+    public function addCommentaire(\Horus\SiteBundle\Entity\CommentaireArticle $commentaires)
+    {
+        $this->commentaires[] = $commentaires;
+        return $this;
+    }
+
+    /**
+     * Remove commentaires
+     *
+     * @param Horus\SiteBundle\Entity\CommentaireArticle $commentaires
+     */
+    public function removeCommentaire(\Horus\SiteBundle\Entity\CommentaireArticle $commentaires)
+    {
+        $this->commentaires->removeElement($commentaires);
+    }
+
+    /**
+     * Get commentaires
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getCommentaires()
+    {
+        return $this->commentaires;
+    }
+
+    /**
+     * Set home
+     *
+     * @param boolean $home
+     * @return Article
+     */
+    public function setHome($home)
+    {
+        $this->home = $home;
+        return $this;
+    }
+
+    /**
+     * Get home
+     *
+     * @return boolean 
+     */
+    public function getHome()
+    {
+        return $this->home;
     }
 }

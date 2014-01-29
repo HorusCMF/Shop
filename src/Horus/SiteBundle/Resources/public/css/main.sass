@@ -164,7 +164,7 @@ hr.fancy-line:after
   a:hover, a:focus
     color: brown
 
-.tab-content
+.page
   [class*="span"]
     margin-top: 15px
     margin-bottom: 15px
@@ -292,6 +292,7 @@ select:invalid
 
 .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus
   color: white !important
+  text-shadow: 1px 1px #00aaba, 1px 1px #00aaba
 
 .navbar-nav>li>.dropdown-menu
   border: none
@@ -328,11 +329,16 @@ h3#btn-tchat
     font-size: 11px
   button[type="submit"]
     margin-top: 5px
+    margin-top: 3px
+    width: 100%
   textarea
     font-size: 13px !important
     height: 110px
   font-size: 13px
   padding: 5px
+  #sended
+    width: 100%
+    margin-top: 10px
   #messages
     height: 201px
     overflow: auto
@@ -347,8 +353,8 @@ h3#btn-tchat
     font-size: 13px
   color: #222
   background-color: white
-  width: 600px
-  height: 456px
+  width: 660px
+  height: 495px
   position: fixed
   top: 250px
   right: 500px
@@ -574,7 +580,16 @@ h1, h2
     font-size: 80%
   .nav>li>a
     font-size: 12px
-
+  #messagerie
+    font-size: 12px
+    right: 100px
+    top: 10px
+    #messages
+      height: 201px
+      overflow: auto
+    p
+      color: #222
+      font-size: 12px
 
 
 @media (min-width: 1200px)
@@ -583,6 +598,17 @@ h1, h2
 
 
 @media (max-width: 600px)
+  #messagerie
+    font-size: 12px
+    right: 80px
+    top: 10px
+    #messages
+      height: 201px
+      overflow: auto
+    p
+      color: #222
+      font-size: 12px
+
   #btn-tchat
     display: none
   #advancedsearch
@@ -678,6 +704,25 @@ h1, h2
   margin:  0 auto
   padding-right: 60px
 
+.contenthtml
+  background-color: white
+  padding: 5px
+  border: 1px solid #eeeeee
+  color: black !important
+  img
+    max-width: 180px !important
+  .right
+    float: right !important
+    padding: 5px
+    margin: 5px
+    clear: both
+  .left
+    float: left !important
+    padding: 5px
+    margin: 5px
+    clear: both
+  .italic
+    font-style: italic !important
 
 
 #mini-notification .close
@@ -736,7 +781,30 @@ h1, h2
   label
     font-size: 14px !important
 
+input.parsley-success, textarea.parsley-success
+  color: #468847 !important
+  background-color: #DFF0D8 !important
+  border: 1px solid #D6E9C6 !important
 
+input.parsley-error, textarea.parsley-error
+  color: #B94A48 !important
+  background-color: antiquewhite !important
+  border: 1px dashed crimson !important
+
+ul.parsley-error-list
+  font-size: 11px
+  margin: 2px
+  list-style-type: none
+  li
+    line-height: 11px
+
+#map-canvas
+  width: 920px
+  height: 350px
+  margin: 0px
+  padding: 5px
+  border: 10px dashed brown
+  border-radius: 5px
 
 /*
  * --------------------------------------------------------------------------------------------------------------------------------
@@ -759,6 +827,16 @@ h1, h2
 textarea
   width: 534px
   height: 250px
+
+.label-warning
+  background-color: chocolate
+
+.ishome
+  color: #aaa
+  cursor: pointer
+
+.highlight
+  background-color: yellow
 
 /*
  * --------------------------------------------------------------------------------------------------------------------------------

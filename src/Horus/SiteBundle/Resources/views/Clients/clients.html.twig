@@ -6,53 +6,17 @@
 
 {% block content %}
     <div class="page" id="clients">
-        <h2><i class="glyphicon glyphicon-user"></i> Clients</h2>
+        <h2><i class="glyphicon glyphicon-user"></i> Clients ({{ clients.getTotalItemCount }} clients)</h2>
         {% include 'HorusSiteBundle:Slots:display.html.twig' %}
 
         <hr class="clear fancy-line">
+        {% include 'HorusSiteBundle:Clients:_listclients.html.twig' %}
 
-        <table class="table table-striped">
-            <thead>
-            <tr>
-                <th>#</th>
-                <th>Nom Prénom</th>
-                <th>Email</th>
-                <th>Tel</th>
-                <th>Dernière connexion</th>
-                <th>Action</th>
-            </tr>
-            </thead>
-            <tbody>
-                {% for client in clients %}
-                    <tr>
-                        <td>{{ loop.index }}</td>
-                        <td>{{ client.firstname|title }} {{ client.lastname|title }}</td>
-                        <td>{{ client.email }}</td>
-                        <td>{{ client.tel }}</td>
-                        <td>{{ client.dateAuth|created_ago|default('Pas encore connecté') }}</td>
-                        <td>
-                            {% if client.enabled  %}
-                                <a onclick="return(confirm('Etes-vous sûr de vouloir desactiver ce client?'));" href="{{ path('horus_site_desactive_client', {'id' : client.id }) }}" class="btn btn-primary"><i class="glyphicon glyphicon-minus-sign"></i></a>
-                            {% else %}
-                                <a onclick="return(confirm('Etes-vous sûr de vouloir activer ce client?'));" href="{{ path('horus_site_active_client', {'id' : client.id }) }}" class="btn btn-primary"><i class="glyphicon glyphicon-ok"></i></a>
-                            {% endif %}
-                            <a href="{{ path('horus_site_edit_client', {'id' : client.id }) }}" class="btn btn-primary"><i class="glyphicon glyphicon-pencil"></i></a>
-                            <a onclick="return(confirm('Etes-vous sûr de vouloir supprimer ce client?'));" href="{{ path('horus_site_remove_client', {'id' : client.id }) }}" class="btn btn-primary"><i class="glyphicon glyphicon-remove"></i></a>
-                            <a href="{{ path('horus_site_client', {'id' : client.id }) }}" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></a>
-                        </td>
-                    </tr>
-                {% else %}
-                    <tr>
-                        <div class="alert alert-dismissable alert-danger">
-                            <button type="button" class="close" data-dismiss="alert">×</button>
-                            <i class="glyphicon glyphicon-info-sign"></i> Aucun client de créer pour le moment.
-                            <a href="{{ path('horus_site_article_create') }}" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i> Ajouter un article</a>
-                            <div class="clear"></div>
-                        </div>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+        <div class="pull-right">
+            {{ knp_pagination_render(clients) }}
+        </div>
+        <div class="clear"></div>
+
         <a href="{{ path('horus_site_create_client') }}" class="btn btn-danger pull-right"><i class="glyphicon glyphicon-plus"></i> Créer un client</a>
     <div class="clear"></div>
     </div>

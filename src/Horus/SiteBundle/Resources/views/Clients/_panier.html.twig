@@ -1,0 +1,33 @@
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Nom/Prénom</th>
+        <th>Ville</th>
+        <th>Email</th>
+        <th>Tel</th>
+        <th>Dernière connexion</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for client in clients %}
+        <tr>
+            <td>{{ client.firstname|title }} {{ client.lastname|title }}</td>
+            <td>{{ client.ville|title }}({{ client.departement }}) </td>
+            <td><a href="mailto:{{ client.email }}">{{ client.email }}</a></td>
+            <td><i>{{ client.tel|default('Non précisé') }}</i></td>
+            <td>{{ client.dateAuth|created_ago|default('Pas encore connecté') }}</td>
+        </tr>
+    {% else %}
+        <tr>
+            <div class="alert alert-dismissable alert-danger">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <i class="glyphicon glyphicon-info-sign"></i> Aucun client de créer pour le moment.
+                <a href="{{ path('horus_site_article_create') }}" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i> Ajouter un article</a>
+                <div class="clear"></div>
+            </div>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>

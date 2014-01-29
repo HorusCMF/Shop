@@ -3,7 +3,7 @@ UPGRADE FROM 1.0 to 1.1
 
 ### General
 
-  * 	
+  * Each includes in loops
   * Flash promotion for products => Enchere inversée timepicker
   * Hinclude with render and cache HTTP
   * Warning if product & category & famille is same or similar title

@@ -105,12 +105,13 @@ parameters:
 
 twig:
     globals:
-      base_url: 'http://www.weekinsport.fr/'
+      base_url: 'http://www.horus-solution.com/'
       imgsite: '/bundles/site/images/'
       imgmarques: '/uploads/marques/'
       imgfamilles: '/uploads/familles/'
       imgproducts: '/uploads/products/'
       imgcategories: '/uploads/categories/'
+      imgadministrateurs: '/uploads/administrateurs/'
       imgtransports: '/uploads/transports/'
       imgfournisseurs: '/uploads/fournisseurs/'
       documentsuploads: '/uploads/documents/'
@@ -122,6 +123,7 @@ twig:
       imgsports: '/uploads/sports/'
       imgremises: '/uploads/remises/'
       imgpromotions: '/uploads/promotions/'
+      imgpages: '/uploads/pages/'
       unknowuserfnormal: '/uploads/users/unknow/unknow-f-normal.jpg'
       unknowuserfbig: '/uploads/users/unknow/unknow-f-medium.jpg'
       unknowuserf: '/uploads/users/unknow/unknow-f-small.jpg'

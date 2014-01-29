@@ -20,6 +20,7 @@ class FamilleType extends AbstractType
     {
         $builder
                 ->add('name', 'text', array('attr' => array('placeholder' => "Nom de la famille")))
+                ->add('keywords', 'textarea', array('required' => false,'attr' => array("class" => "form-control", 'placeholder' => 'Ajouter quelques mots-clefs')))
                 ->add('cover', 'textarea', array('attr' => array("class" => "ckeditor", 'placeholder' => 'Résumé en quelques mots')))
                 ->add('description', 'textarea', array('attr' => array("class" => "ckeditor", 'placeholder' => 'Description complète')))
                 ->add('file')

@@ -9,6 +9,21 @@ use Doctrine\ORM\EntityRepository;
  */
 class ArticleRepository extends EntityRepository
 {
+
+
+    /**
+     * Get Active Page
+     * @return \Doctrine\ORM\QueryBuilder
+     */
+    public function getCountValidArticles($state = 3)
+    {
+        $query = $this->getEntityManager()
+            ->createQuery("SELECT COUNT(a.id) FROM HorusSiteBundle:Article a WHERE a.nature = :state")
+            ->setParameter('state', $state);
+        return $query->getSingleScalarResult();
+    }
+
+
     /**
      * @return QueryBuilder
      */
@@ -18,8 +33,6 @@ class ArticleRepository extends EntityRepository
             ->createQueryBuilder()
             ->select('m')
             ->from('Horus\SiteBundle\Entity\Article', 'm')
-            ->leftJoin('m.category', 'c')
-            ->leftJoin('m.tags', 't')
             ->orderBy('m.id', 'DESC');
         return $queryBuilder;
     }

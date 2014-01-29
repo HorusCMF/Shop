@@ -23,6 +23,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
  * @ORM\Table(name="administrateur")
  * @UniqueEntity(fields={"email"}, message="Votre email est déjà utilisé")
  * @ORM\Entity(repositoryClass="Horus\SiteBundle\Repository\AdministrateurRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Administrateur extends EntityRepository  implements AdvancedUserInterface, \Serializable {
 
@@ -108,6 +109,23 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      */
     protected $entreprise;
 
+
+    /**
+     * @Assert\Image(
+     *     minWidth = 200,
+     *     minHeight  = 100,
+     *     maxWidth = 3000,
+     *     maxHeight = 3000,
+     *     maxSize = "6000k",
+     *     mimeTypes = {"image/jpg","image/jpeg", "image/png", "image/gif", "image/bmp"},
+     *     mimeTypesMessage = "Image au format non supporté",
+     *    maxWidthMessage = "Image trop grande en largeur {{ width }}px. Le maximum en largeur est de {{ max_width }}px" ,
+     *    minWidthMessage = "Image trop petite en largeur {{ width }}px. Le minimum en largeur est de {{ min_width }}px" ,
+     *    minHeightMessage = "Image trop petite en hauteur {{ height }}px. Le mimum en hauteur est de {{ min_height }}px" ,
+     *    maxHeightMessage = "Image trop grande en hauteur  {{ height }}px. Le maximum en hauteur est de {{ max_height }}px"
+     * )
+     */
+    public $file;
 
 
     /**
@@ -389,12 +407,6 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
      */
     protected $metier;
 
-
-    /**
-     * @ORM\ManyToMany(targetEntity="Languages", mappedBy="Administrateurs")
-     * @ORM\JoinTable(name="Administrateur_i18n_language_codes")
-     */
-    private $langues;
 
 
     /**
@@ -1243,57 +1255,6 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
 
 
     /**
-     * Uploads
-     */
-
-    /**
-     * Get Absolute Path
-     * @return type
-     */
-    public function getAbsolutePath($location = 'users', $iduser = 'null')
-    {
-        return null === $this->avatar ? null : $this->getUploadRootDir($location, $iduser) . '/' . $this->avatar;
-    }
-
-    /**
-     * Get Src Absolute Path
-     * @return type
-     */
-    public function getSrcAbsolutePath($location = 'users', $iduser = 'null')
-    {
-        return null === $this->avatar ? null : $this->getUploadRootDir($location, $iduser) . '/';
-    }
-
-    /**
-     * Get Web Path
-     * @return type
-     */
-    public function getWebPath($location = 'users', $iduser = 'null')
-    {
-        return null === $this->avatar ? null : $this->getUploadDir($location, $iduser) . '/' . $this->avatar;
-    }
-
-    /**
-     * Get Upload dir
-     * @param type $location
-     * @return type
-     */
-    public function getUploadRootDir($location = 'users', $iduser = 'null')
-    {
-        return __DIR__ . '/../../../../web/' . $this->getUploadDir($location, $iduser);
-    }
-
-    /**
-     * Get Upload Directory
-     * @param type $location
-     * @return type
-     */
-    public function getUploadDir($location = 'users', $iduser)
-    {
-        return 'uploads/' . $location . '/' . $iduser;
-    }
-
-    /**
      * Set extension
      *
      * @param string $extension
@@ -1317,169 +1278,6 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     }
 
 
-    /**
-     * Get Upload Action
-     * @param type $location
-     * @return type
-     */
-    public function upload($location = 'users', $iduser)
-    {
-
-        // the file property can be empty if the field is not required
-        if (null === $this->file) {
-            return false;
-        }
-        $mime = $this->file->getMimeType();
-        $this->extension = $this->file->guessExtension();
-
-        if ($mime !== 'image/jpeg' && $mime !== 'image/jpg' && $mime !== 'image/png' && $mime !== 'image/gif' && $mime != 'image/bmp')
-            return false;
-
-        if (!is_dir($this->getUploadRootDir($location, $iduser)))
-            if (!@mkdir($this->getUploadRootDir($location, $iduser)))
-                return;
-
-
-        $this->avatar_name = md5(uniqid(rand(), true));
-        $this->avatar = $this->avatar_name . '.' . $this->file->guessExtension();
-        $this->avatarbig = $this->avatar_name . '-big.' . $this->file->guessExtension();
-        $this->avatarmedium = $this->avatar_name . '-medium.' . $this->file->guessExtension();
-        $this->avatarcamera = $this->avatar_name . '-camera.' . $this->file->guessExtension();
-
-        //Original Picture
-        $path = $this->file->move($this->getUploadRootDir($location, $iduser), $this->avatar);
-        $bigfile = $this->getUploadRootDir($location, $iduser) . '/' . $this->avatar_name . '.' . $this->extension;
-
-        if ($this->extension == "jpg" || $this->extension == "jpeg") {
-            $src_img = imagecreatefromjpeg($this->getUploadRootDir($location, $iduser) . '/' . $this->avatar);
-        }
-        if ($this->extension == "png") {
-            $src_img = imagecreatefrompng($this->getUploadRootDir($location, $iduser) . '/' . $this->avatar);
-        }
-        if ($this->extension == "gif") {
-            $src_img = imagecreatefromgif($this->getUploadRootDir($location, $iduser) . '/' . $this->avatar);
-        }
-
-        // Le ratio de l'image uploadée
-        $oldWidth = imageSX($src_img);
-        $oldHeight = imageSY($src_img);
-        $ratio = $oldWidth / $oldHeight;
-
-        // Les tailles à générer
-        $taille = array(
-
-            array(
-                'name' => 'medium',
-                'width' => 290,
-                'height' => 250
-            ),
-            array(
-                'name' => 'giga',
-                'width' => 800,
-                'height' => 600
-            ),
-            array(
-                'name' => 'mini',
-                'width' => 70,
-                'height' => 60
-            ),
-        );
-
-        // C'est parti
-        foreach ($taille as $value) {
-            // On prépare les valeurs
-            $width = $value['width']-1;
-            $height = $value['height']-1;
-            $ratioImg = $width / $height;
-
-            // On calcule les nouvelles
-            if ($ratioImg > $ratio) {
-                $newWidth = $width;
-                $newHeight = $width / $ratio;
-            } elseif ($ratioImg < $ratio) {
-                $newHeight = $height;
-                $newWidth = $height * $ratio;
-            } else {
-                $newWidth = $width;
-                $newHeight = $height;
-            }
-
-            // Point de départ du crop
-            $x = ($newWidth - $width) / 2;
-            $y = 0;
-
-            // On bosse sur l'image
-            $imagine = new \Imagine\Gd\Imagine();
-            $imagine
-                ->open($bigfile)
-                ->resize(new \Imagine\Image\Box($newWidth, $newHeight))
-                ->save(
-                $this->getUploadRootDir($location, $iduser) . '/' . $this->avatar_name . '-' . $value['name'] . '.' . $this->extension,
-                array(
-                    'quality' => 100
-                )
-            );
-
-        }
-
-        // Les tailles à générer
-        $taille2 = array(
-
-            array(
-                'name' => 'normal',
-                'width' => 290,
-                'height' => 200
-            ),
-
-        );
-
-        // C'est parti
-        foreach ($taille2 as $value) {
-            // On prépare les valeurs
-            $width = $value['width']-1;
-            $height = $value['height']-1;
-            $ratioImg = $width / $height;
-
-            // On calcule les nouvelles
-            if ($ratioImg > $ratio) {
-                $newWidth = $width;
-                $newHeight = $width / $ratio;
-            } elseif ($ratioImg < $ratio) {
-                $newHeight = $height;
-                $newWidth = $height * $ratio;
-            } else {
-                $newWidth = $width;
-                $newHeight = $height;
-            }
-
-            // Point de départ du crop
-            $x = ($newWidth - $width) / 2;
-            $y = 0;
-
-            // On bosse sur l'image
-            $imagine = new \Imagine\Gd\Imagine();
-            $imagine
-                ->open($bigfile)
-                ->thumbnail(new \Imagine\Image\Box($newWidth, $newHeight))
-                ->crop(new Point($x, $y), new Box($width, $height))
-                ->save(
-                $this->getUploadRootDir($location, $iduser) . '/' . $this->avatar_name . '-' . $value['name'] . '.' . $this->extension,
-                array(
-                    'quality' => 100
-                )
-            );
-        }
-
-        // On supprime le fichier maintenant que l'on en a plus besoin
-        if (@file_exists($bigfile))
-            @unlink($bigfile);
-
-
-        // clean up the file property as you won't need it anymore
-        $this->file = null;
-
-        return true;
-    }
 
     /**
      * Set lastActivity
@@ -1526,16 +1324,6 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
         return $this->titre;
     }
 
-    /**
-     * Set xpPro
-     *
-     * @param string $xpPro
-     * @return Administrateur
-     */
-    public function setXpPro($xpPro)
-    {
-        $this->xpPro = $xpPro;
-    }
 
     /**
      * Get xpPro
@@ -1547,16 +1335,6 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
         return $this->xpPro;
     }
 
-    /**
-     * Set etude
-     *
-     * @param string $etude
-     * @return Administrateur
-     */
-    public function setEtude($etude)
-    {
-        $this->etude = $etude;
-    }
 
     /**
      * Get etude
@@ -1589,16 +1367,6 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
         return $this->statut;
     }
 
-    /**
-     * Set permis
-     *
-     * @param integer $permis
-     * @return Administrateur
-     */
-    public function setPermis($permis)
-    {
-        $this->permis = $permis;
-    }
 
     /**
      * Get permis
@@ -1608,17 +1376,6 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     public function getPermis()
     {
         return $this->permis;
-    }
-
-    /**
-     * Set mobiliter
-     *
-     * @param integer $mobiliter
-     * @return Administrateur
-     */
-    public function setMobiliter($mobiliter)
-    {
-        $this->mobiliter = $mobiliter;
     }
 
     /**
@@ -1641,11 +1398,6 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     public function getMea()
     {
         return $this->mea;
-    }
-
-    public function setMea($mea)
-    {
-        $this->mea = $mea;
     }
 
 
@@ -1730,39 +1482,6 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     public function getExtras()
     {
         return $this->extras;
-    }
-
-    /**
-     * Add langues
-     *
-     * @param \Horus\SiteBundle\Entity\Languages $langues
-     * @return Administrateur
-     */
-    public function addLangue(\Horus\SiteBundle\Entity\Languages $langues)
-    {
-        $this->langues[] = $langues;
-    
-        return $this;
-    }
-
-    /**
-     * Remove langues
-     *
-     * @param \Horus\SiteBundle\Entity\Languages $langues
-     */
-    public function removeLangue(\Horus\SiteBundle\Entity\Languages $langues)
-    {
-        $this->langues->removeElement($langues);
-    }
-
-    /**
-     * Get langues
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getLangues()
-    {
-        return $this->langues;
     }
 
     /**
@@ -1935,4 +1654,169 @@ class Administrateur extends EntityRepository  implements AdvancedUserInterface,
     {
         return $this->adresse;
     }
+
+
+    /**
+     *  Upload Images
+     *
+     * @return text
+     */
+
+    public function getAbsolutePath()
+    {
+        return null === $this->avatar ? null : $this->getUploadRootDir().'/'.$this->avatar;
+    }
+
+    public function getWebPath()
+    {
+        return null === $this->avatar ? null : $this->getUploadDir().'/'.$this->avatar;
+    }
+
+    protected function getUploadRootDir()
+    {
+        // le chemin absolu du répertoire où les documents uploadés doivent être sauvegardés
+        return __DIR__.'/../../../../web/'.$this->getUploadDir();
+    }
+
+    protected function getUploadDir()
+    {
+        // on se débarrasse de « __DIR__ » afin de ne pas avoir de problème lorsqu'on affiche
+        // le document/image dans la vue.
+        return 'uploads/administrateurs/';
+    }
+
+
+
+    /**
+     * @ORM\PrePersist()
+     * @ORM\PreUpdate()
+     */
+    public function preUpload()
+    {
+        if (null !== $this->file) {
+            // faites ce que vous voulez pour générer un nom unique
+            $this->avatar = sha1(uniqid(mt_rand(), true)).'.'.$this->file->guessExtension();
+        }
+    }
+
+    /**
+     * @ORM\PostPersist()
+     * @ORM\PostUpdate()
+     */
+    public function upload($id = null)
+    {
+
+        // la propriété « file » peut être vide si le champ n'est pas requis
+        if (null === $this->file) {
+            return;
+        }
+
+
+        // utilisez le nom de fichier original ici mais
+        // vous devriez « l'assainir » pour au moins éviter
+        // quelconques problèmes de sécurité
+
+        // la méthode « move » prend comme arguments le répertoire cible et
+        // le nom de fichier cible où le fichier doit être déplacé
+
+        $rewritename = sha1(uniqid(mt_rand(), true));
+        $rewritefile = $rewritename.'.'.$this->file->guessExtension();
+        $extension = $this->file->guessExtension();
+
+        $this->file->move($this->getUploadRootDir(), $rewritefile);
+
+        // définit la propriété « path » comme étant le nom de fichier où vous
+        // avez stocké le fichier
+        $this->avatar = $rewritefile;
+
+//        $this->avatar = sha1(uniqid(mt_rand(), true)).'.'.$this->file->guessExtension();
+
+        //Original photo
+        $bigfile = $this->getUploadRootDir().'/'.$rewritefile;
+
+        if ($extension == "jpg" || $extension == "jpeg") {
+            $src_img = imagecreatefromjpeg($bigfile);
+        }
+        if ($extension == "png") {
+            $src_img = imagecreatefrompng($bigfile);
+        }
+        if ($extension == "gif") {
+            $src_img = imagecreatefromgif($bigfile);
+        }
+
+        // Le ratio de l'image uploadée
+        $oldWidth = imageSX($src_img);
+        $oldHeight = imageSY($src_img);
+        $ratio = $oldWidth / $oldHeight;
+
+        $taille = array(
+            array(
+                'name' => 'big',
+                'width' => 500,
+                'height' => 300
+            ),
+            array(
+                'name' => 'medium',
+                'width' => 300,
+                'height' => 260
+            ),
+            array(
+                'name' => 'small',
+                'width' => 250,
+                'height' => 180
+            ),
+        );
+
+        // C'est parti
+        foreach ($taille as $value) {
+
+            // On prépare les valeurs
+            $width = $value['width'] - 1;
+            $height = $value['height'] -1;
+            $ratioImg = $width / $height;
+
+            // On calcule les nouvelles
+            if ($ratioImg > $ratio) {
+                $newWidth = $width;
+                $newHeight = $width / $ratio;
+            } elseif ($ratioImg < $ratio) {
+                $newHeight = $height;
+                $newWidth = $height * $ratio;
+            } else {
+                $newWidth = $width;
+                $newHeight = $height;
+            }
+
+            // Point de départ du crop
+            $x = ($newWidth - $width) / 2;
+            $y = 0;
+
+            // On bosse sur l'image
+            $imagine = new \Imagine\Gd\Imagine();
+            $imagine
+                ->open($bigfile)
+                ->thumbnail(new \Imagine\Image\Box($newWidth, $newHeight))
+                ->save(
+                    $this->getUploadRootDir().'/'. $rewritename . '-' . $value['name'] . '.' . $extension,
+                    array(
+                        'quality' => 80
+                    )
+                );
+        }
+
+        // « nettoie » la propriété « file » comme vous n'en aurez plus besoin
+        $this->file = null;
+    }
+
+    /**
+     * @ORM\PostRemove()
+     */
+    public function removeUpload()
+    {
+        if ($file = $this->getAbsolutePath()) {
+            @unlink($file);
+        }
+    }
+
+
 }

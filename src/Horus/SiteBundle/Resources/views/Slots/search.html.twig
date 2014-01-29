@@ -17,7 +17,9 @@
             <form action="{{ path('horus_search_avanced') }}" class="span12" role="search" method="get">
                 <div class="form-group">
                     <div class="col-xs-8">
-                        <input type="text" data-url="{{ path('horus_site_products_ajax') }}" id="search_input" class="form-control" name="word"
+                        <input type="text" data-url="{{ path('horus_site_products_ajax') }}" id="search_input"
+                               class="form-control" name="word"
+                               required="required"
                                placeholder="Nom, Référence, Description, Catégorie..."
                                value="{{ app.request.query.get('word') }}">
                     </div>
@@ -54,7 +56,7 @@
                 <div class="span2">
                     <input name="articles" id="articles" type="checkbox"
                            {% if app.request.query.get('articles') %}checked="checked"{% endif %}> <label
-                            for="articles" class="whitetext">Article</label>
+                            for="articles" class="whitetext">Articles</label>
                 </div>
                 <div class="span2">
                     <input name="tags" id="tags" type="checkbox"
@@ -63,7 +65,13 @@
                 </div>
                 <div class="span2">
                     <input name="marques" id="marques" type="checkbox"
-                           {% if app.request.query.get('marques') %}checked="checked"{% endif %}> <label for="marques" class="whitetext">Marques</label>
+                           {% if app.request.query.get('marques') %}checked="checked"{% endif %}> <label for="marques"
+                                                                                                         class="whitetext">Marques</label>
+                </div>
+                <div class="span2">
+                    <input name="clients" id="clients" type="checkbox"
+                           {% if app.request.query.get('clients') %}checked="checked"{% endif %}> <label for="clients"
+                                                                                                         class="whitetext">Clients</label>
                 </div>
             </div>
             <button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-filter"></i> Filtrer

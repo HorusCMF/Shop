@@ -20,6 +20,7 @@ class MarquesType extends AbstractType
     {
         $builder
                 ->add('title', 'text', array('attr' => array('placeholder' => "Titre de la marque")))
+                ->add('url', 'url', array('required' => false,'attr' => array('placeholder' => "http://")))
                 ->add('keywords', 'text', array('required' => false,'attr' => array('placeholder' => "Mot-clefs de votre marques")))
                 ->add('resume', 'textarea', array('attr' => array("class" => "ckeditor", 'placeholder' => 'Résumé en quelques mots')))
                 ->add('description', 'textarea', array('attr' => array("class" => "ckeditor", 'placeholder' => 'Description complète')))

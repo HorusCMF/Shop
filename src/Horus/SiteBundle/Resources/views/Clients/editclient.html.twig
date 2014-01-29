@@ -2,10 +2,20 @@
 
 {% block javascripts %}
     {{ parent() }}
+    {% javascripts '@HorusSiteBundle/Resources/public/js/pages/client.js' %}
+    <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets '@HorusSiteBundle/Resources/public/css/pages/client.sass' filter='yui_css' %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+    {% endstylesheets %}
 {% endblock %}
 
 {% block content %}
-    <div class="page" id="clients">
+    <div class="page" id="editclient">
         <a class="btn back btn-danger pull-right" href="{{ path('horus_site_clients') }}">&larr; Revenir à la liste des clients</a>
 
         <h1><i class="glyphicon glyphicon-pencil"></i> Editer le client {{ client.firstname|title }} {{ client.lastname|title }}</h1>
@@ -13,7 +23,7 @@
 
         <hr class="clear fancy-line">
 
-        <form novalidate="novalidate" action="{{ path('horus_site_edit_client', {'id' : client.id }) }}" method="post">
+        <form  novalidate="novalidate" action="{{ path('horus_site_edit_client', {'id' : client.id }) }}" method="post">
 
             <div class="row-fluid">
                 <div class="span3">

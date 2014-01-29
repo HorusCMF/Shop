@@ -45,14 +45,18 @@ jQuery(document).ready(function () {
      * CAlcul tva
      */
     $('#prixHT').on('blur', function (e) {
-        var ttc = parseFloat($('#prixHT').val()) * (1 + parseFloat($("#tva").val()) / 100).toFixed(2);
-        if (ttc != "")
-            $('#prixTTC').val(ttc);
+        if ($('#prixHT').val().length > 0) {
+            var ttc = parseFloat($('#prixHT').val()) * (1 + parseFloat($("#tva").val()) / 100).toFixed(2);
+            if (ttc != "")
+                $('#prixTTC').val(ttc);
+        }
     });
     $('#tva').on('change', function (e) {
-        var ttc = parseFloat($('#prixHT').val()) * (1 + parseFloat($("#tva").val()) / 100).toFixed(2);
-        if (ttc != "")
-            $('#prixTTC').val(ttc);
+        if ($('#prixHT').val().length > 0) {
+            var ttc = parseFloat($('#prixHT').val()) * (1 + parseFloat($("#tva").val()) / 100).toFixed(2);
+            if (ttc != "")
+                $('#prixTTC').val(ttc);
+        }
     });
 
 // ajoute l'ancre « ajouter un tag » et li à la balise ul

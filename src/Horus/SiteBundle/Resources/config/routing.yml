@@ -7,10 +7,6 @@ horus_site_main:
   pattern:  /
   defaults: { _controller: HorusSiteBundle:Main:index }
 
-horus_site_langues:
-  pattern:  /languages/{langue}
-  defaults: { _controller: HorusSiteBundle:Main:langues,langue: fr }
-
 horus_site_switch:
   pattern:  /switcher?username={username}
   defaults: { _controller: HorusSiteBundle:Administrateur:relogadministrateur }
@@ -84,6 +80,18 @@ horus_site_moveup_product:
 horus_site_movedown_product:
   pattern:  /produits/movedown/{id}
   defaults: { _controller: HorusSiteBundle:Product:downproduct }
+
+horus_site_commandes_product:
+  pattern:  /produits/commandes/{id}
+  defaults: { _controller: HorusSiteBundle:Product:productcommandes }
+
+horus_site_product_ishome:
+  pattern:  /produits/ishome/{id}
+  defaults: { _controller: HorusSiteBundle:Product:ishome }
+
+horus_site_product_isnothome:
+  pattern:  /produits/isnothome/{id}
+  defaults: { _controller: HorusSiteBundle:Product:isnothome }
 
 
 
@@ -296,6 +304,18 @@ horus_site_desactive_client:
   pattern:  /clients/desactivation/{id}
   defaults: { _controller: HorusSiteBundle:Clients:desactiveclient }
 
+horus_site_commandes_client:
+  pattern:  /clients/commandes/{id}
+  defaults: { _controller: HorusSiteBundle:Clients:commandesclient }
+
+horus_site_adresses_client:
+  pattern:  /clients/adresses/{id}
+  defaults: { _controller: HorusSiteBundle:Clients:adressesclient }
+
+horus_site_panier_client:
+  pattern:  /clients/panier/{id}
+  defaults: { _controller: HorusSiteBundle:Clients:panierclient }
+
 
 
 
@@ -429,6 +449,10 @@ horus_site_administrateur:
   pattern:  /administrateur/{id}
   defaults: { _controller: HorusSiteBundle:Administrateur:administrateur }
 
+horus_site_write_administrateur:
+  pattern:  /administrateur/ecrire/{id}
+  defaults: { _controller: HorusSiteBundle:Administrateur:writeadministrateur }
+
 horus_site_remove_administrateur:
   pattern:  /administrateurs/supprimer/{id}
   defaults: { _controller: HorusSiteBundle:Administrateur:removeadministrateur }
@@ -543,6 +567,31 @@ horus_site_active_article:
 horus_site_desactive_article:
   pattern:  /articles/desactivation/{id}
   defaults: { _controller: HorusSiteBundle:CMS:desactivearticle }
+
+horus_site_article_commentaire:
+  pattern:  /articles/commentaires/{id}
+  defaults: { _controller: HorusSiteBundle:CMS:articlecommentaire }
+
+horus_site_article_remove_commentaire:
+  pattern:  /articles/commentaires/suppression/{id}
+  defaults: { _controller: HorusSiteBundle:CMS:removecommentaire }
+
+horus_site_article_active_commentaire:
+  pattern:  /articles/commentaires/activation/{id}
+  defaults: { _controller: HorusSiteBundle:CMS:activecommentaire }
+
+horus_site_article_desactive_commentaire:
+  pattern:  /articles/commentaires/desactivation/{id}
+  defaults: { _controller: HorusSiteBundle:CMS:desactivecommentaire }
+
+horus_site_article_ishome:
+  pattern:  /articles/ishome/{id}
+  defaults: { _controller: HorusSiteBundle:CMS:ishome }
+
+horus_site_article_isnothome:
+  pattern:  /articles/isnothome/{id}
+  defaults: { _controller: HorusSiteBundle:CMS:isnothome }
+
 
 
 

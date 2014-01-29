@@ -27,7 +27,7 @@ class Meta
 
     /**
      * @Assert\Length(
-     *      min = "5",
+     *      min = "2",
      *      max = "200",
      *      minMessage = "Votre titre doit faire au moins {{ limit }} caractères",
      *      maxMessage = "Votre titre ne peut pas être plus long que {{ limit }} caractères"
@@ -38,7 +38,7 @@ class Meta
 
     /**
      * @Assert\Length(
-     *      min = "5",
+     *      min = "3",
      *      max = "200",
      *      minMessage = "Votre contenu doit faire au moins {{ limit }} caractères",
      *      maxMessage = "Votre contenu ne peut pas être plus long que {{ limit }} caractères"

@@ -42,6 +42,17 @@ class Famille
     private $name;
 
     /**
+     * @Assert\Length(
+     *      min = "3",
+     *      max = "1000",
+     *      minMessage = "Votre mots-clefs doit faire au moins {{ limit }} caractères",
+     *      maxMessage = "Votre mots-clefs ne peut pas être plus long que {{ limit }} caractères"
+     * )
+     * @ORM\Column(name="keywords", type="text", nullable=true)
+     */
+    private $keywords;
+
+    /**
      * @ORM\Column(name="path", type="string", length=3000, nullable=true)
      */
     private $path;
@@ -539,9 +550,6 @@ class Famille
 
 
 
-
-
-
     /**
      *  Upload Images
      *
@@ -735,8 +743,30 @@ class Famille
     public function getOptionLabel()
     {
         return str_repeat(
-            html_entity_decode('>>', ENT_QUOTES, 'UTF-8'),
+            html_entity_decode('...', ENT_QUOTES, 'UTF-8'),
             ($this->getLvl() + 1) * 2
         ) . $this->getName();
+    }
+
+    /**
+     * Set keywords
+     *
+     * @param text $keywords
+     * @return Famille
+     */
+    public function setKeywords($keywords)
+    {
+        $this->keywords = $keywords;
+        return $this;
+    }
+
+    /**
+     * Get keywords
+     *
+     * @return text 
+     */
+    public function getKeywords()
+    {
+        return $this->keywords;
     }
 }

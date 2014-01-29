@@ -12,8 +12,18 @@
                 {% else %}
                     <li><a  href="{{ path('horus_site_desactive_article', {'id' : article.id}) }}"><i class="glyphicon glyphicon-minus-sign"></i> Dépublier</a></li>
                 {% endif %}
+                <li><a  href="{{ path('horus_site_article_commentaire', {'id' : article.id}) }}"><i class="glyphicon glyphicon-comment"></i> Voir les commentaires</a></li>
             </ul>
         </div>
+        {% if article.home %}
+            <a title="Mis en avant sur la page acceuil" class="ishome athome pull-left" data-url="{{ path('horus_site_article_isnothome', {'id' : article.id}) }}">
+                <i class="pull-left glyphicon glyphicon-heart"></i>
+            </a>
+        {% else %}
+            <a title="Non mis en avant sur la page acceuil" class="ishome nothome pull-left" data-url="{{ path('horus_site_article_ishome', {'id' : article.id}) }}">
+                <i class="pull-left glyphicon glyphicon-heart-empty"></i>
+            </a>
+        {% endif %}
         <div class="media-body">
             <h4 class="media-heading"><a href="{{ path('horus_site_edit_article', {'id' : article.id}) }}">{{ article.title }}</a>
                 {% if article.nature == 3 %}
@@ -21,10 +31,12 @@
                 {% elseif article.nature == 2  %}
                     <span class="badge badge-warning">En cours de relecture</span>
                 {% else %}
-                    <span class="badge badge-danger">Hors-Ligne</span>
+                    <span class="badge badge-danger">Brouillon</span>
                 {% endif %}
             </h4>
             <p>{{ article.cover|striptags|truncate(900,'...')|raw }}</p>
+            <p class="pull-right"><i class="glyphicon glyphicon-comment"></i> {{ article.commentaires|length }} commentaires</p>
+            <div class="clear"></div>
         </div>
     </div>
     {% if not loop.last %}

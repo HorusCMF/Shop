@@ -12,7 +12,7 @@
             "email": "julien@meetserious.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "beta",
     "autoload": {
         "psr-0": {
             "": "src/"
@@ -31,23 +31,17 @@
         "sensio/framework-extra-bundle": "2.3.*",
         "sensio/generator-bundle": "2.3.*",
         "incenteev/composer-parameter-handler": "~2.0",
-        "friendsofsymfony/rest-bundle": "dev-master",
         "jms/serializer-bundle": "dev-master",
         "jms/security-extra-bundle": "dev-master",
         "knplabs/knp-paginator-bundle": "dev-master",
         "codeception/codeception": "*",
         "friendsofsymfony/elastica-bundle": "3.0.*@dev",
-        "doctrine/mongodb-odm-bundle": "3.0.*",
-        "whiteoctober/breadcrumbs-bundle": "dev-master",
+        "doctrine/mongodb-odm-bundle": "3.0.*@dev",
         "stof/doctrine-extensions-bundle": "dev-master",
         "fg/essence": "1.4.1",
         "imagine/Imagine": "0.6.*@dev",
-        "saad-tazi/g-chart-bundle": "dev-master",
-        "nelmio/security-bundle": "dev-master",
         "whiteoctober/tcpdf-bundle": "dev-master",
-        "egulias/security-debug-command-bundle": "dev-master",
-        "doctrine/doctrine-fixtures-bundle": "dev-master",
-        "knplabs/knp-menu-bundle": "dev-master"
+        "doctrine/doctrine-fixtures-bundle": "dev-master"
     },
 
     "scripts": {
@@ -69,7 +63,7 @@
     "config": {
         "bin-dir": "bin"
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "beta",
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
@@ -77,7 +71,7 @@
             "file": "app/config/parameters.yml"
         },
         "branch-alias": {
-            "dev-master": "2.4-dev"
+            "dev-master": "2.4"
         }
     }
 }

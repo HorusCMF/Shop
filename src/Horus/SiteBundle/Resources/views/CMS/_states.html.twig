@@ -1,8 +1,9 @@
 {% block states %}
     <div class="btn-group pull-left">
-        <button type="button" class="btn btn-sm btn-default btn-success">3 publiés</button>
-        <button type="button" class="btn btn-sm btn-default btn-info">2 en cours</button>
-        <button type="button" class="btn btn-sm btn-default btn-inverse">1 brouillon</button>
+        <a href="?nature=3" class="btn btn-sm btn-default btn-success"><i class="glyphicon glyphicon-ok"></i> {{ nbvalider }}  publiés</a>
+        <a href="?nature=2" class="btn btn-sm btn-default btn-info"><i class="glyphicon glyphicon-retweet"></i> {{ nbvalidating }}  en cours de publication</a>
+        <a href="?nature=1" class="btn btn-sm btn-default btn-inverse"><i class="glyphicon glyphicon-ban-circle"></i> {{ nbnovalidate }} en brouillon</a>
+        <a href="{{ path('horus_site_pages') }}" class="btn btn-sm btn-default btn-primary"><i class="glyphicon glyphicon-minus"></i> Annuler le filtre</a>
     </div>
     <div class="clear"></div>
 {% endblock %}

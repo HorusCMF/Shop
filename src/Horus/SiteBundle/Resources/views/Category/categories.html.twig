@@ -1,14 +1,26 @@
 {% extends 'HorusSiteBundle::layout.html.twig' %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets '@HorusSiteBundle/Resources/public/css/pages/category.sass' filter='yui_css' %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+{% endblock %}
+
 {% block content %}
     <div class="page" id="categories">
-        <h2><i class="glyphicon glyphicon-th-large"></i> Vos catégories({{ categories|length }})</h2>
+        <h2><i class="glyphicon glyphicon-th-large"></i> Vos catégories({{ categories.getTotalItemCount }})</h2>
         {% include 'HorusSiteBundle:Slots:display.html.twig' %}
 
         {% include 'HorusSiteBundle:Category:_listcategories.html.twig' %}
+
+        <div class="pull-right">
+            {{ knp_pagination_render(categories) }}
+        </div>
         <div class="clear"></div>
         <div class="action">
-            <a href="{{ path('horus_site_add_category') }}" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Ajouter une catégorie</a>
+            <a href="{{ path('horus_site_add_category') }}" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i> Ajouter une catégorie</a>
+            <div class="clear"></div>
         </div>
     </div>
 {% endblock %}

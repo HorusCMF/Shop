@@ -39,25 +39,24 @@
         <div class="media-body">
             <h4 class="media-heading"><a
                         href="{{ path('horus_site_category', {'id' : category.id}) }}">{{ category.name }}</a>
-                {% if category.visible %}
-                    <span class="badge badge-success">En ligne</span>
-                {% else %}
-                    <span class="badge badge-danger">Hors-Ligne</span>
+                <span class="badge badge-success">{{ category.produits|length }} produit(s)</span>
+                {% if not category.visible %}
+                    <span class="badge badge-warning">Hors-ligne</span>
                 {% endif %}
             </h4>
 
             <p>{{ category.cover|striptags|truncate(900,'...')|raw }}</p>
-            <h4 class="pull-right"><span class="label label-info">{{ category.produits|length|default('0') }}
-                    produit(s)</span></h4>
+
         </div>
     </div>
     {% if not loop.last %}
-        <hr class="clear fancy-line"/>{% endif %}
-        {% else %}
-<div class="alert alert-dismissable alert-danger">
-    <button type="button" class="close" data-dismiss="alert">×</button>
-    <i class="glyphicon glyphicon-info-sign"></i> Aucune catégorie de crée pour le moment.
-
-    <div class="clear"></div>
+        <hr class="clear fancy-line"/>
+    {% endif %}
+    {% else %}
+        <div class="alert alert-dismissable alert-danger">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <i class="glyphicon glyphicon-info-sign"></i> Aucune catégorie de crée pour le moment.
+        </div>
+        <div class="clear"></div>
     {% endfor %}
 

@@ -28,7 +28,6 @@ $ ->
       $("<li></li>").data("ui-autocomplete-item", item).  append("<a href=\"" + item.url + "\">" + item.nom + "</span></a>").appendTo ul.addClass("list-row")
 
 
-
   $(".fancybox").fancybox()
 
   $poped = $('#notifications')
@@ -39,16 +38,16 @@ $ ->
       $(this).popover "show"
 
   $('.popov').popover
-    original-title: "<i class='glyphicon glyphicon-question-sign'></i> Aide"
+    "original-title": "<i class=glyphicon glyphicon-question-sign></i> Aide"
     placement: "bottom"
     trigger: 'focus'
     content: $(this).attr('data-content')
     html: true
 
-  $('#messages').emoticonize()
-
   $("#btn-tchat").click (evt) ->
     $('#messagerie').show()
+
+  $("#messagerie").draggable()
 
   $(".closemessagerie").click ->
     $('#messagerie').hide()
@@ -60,11 +59,11 @@ $ ->
 #  $("html:not(#notifications)").on "click.popover.data-api", ->
 #    $poped.popover "hide"
 
-  $(".star").jRating
-    isDisabled : true
-    bigStarsPath: '/images/stars.png'
-    length : 5
-    rateMax : 5
+#  $(".star").jRating
+#    isDisabled : true
+#    bigStarsPath: '/images/stars.png'
+#    length : 5
+#    rateMax : 5
 
   $(window).scroll ->
     if $(document).scrollTop() >= 100
@@ -113,6 +112,15 @@ $ ->
     $(this).find('button[type=submit]').attr 'disabled','disabled'
     $(this).find('button[type=submit]').text('Envoi en cours...')
     $('#overlay').removeClass('hide')
+
+
+  $("input[required]").on "blur", (event) ->
+    if $(this).val().length == 0
+      $(this).addClass('parsley-error')
+
+  $("input[required]").on "keydown", (event) ->
+    $(this).removeClass('parsley-error')
+
 
   $(window).scroll ->
     if $(this).scrollTop() > 100

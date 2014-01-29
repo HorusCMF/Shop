@@ -29,7 +29,7 @@ class CategoryType extends AbstractType
                     'required' => false,
                     'empty_value' => 'Choisissez une catégorie parente',
                     'label' => 'Catégorie parente'
-            ))
+                ))
                 ->add('articles');
     }
 

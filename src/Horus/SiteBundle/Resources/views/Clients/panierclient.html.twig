@@ -1,0 +1,19 @@
+{% extends 'HorusSiteBundle::layout.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    <div class="page" id="clients">
+        <a class="btn back btn-danger pull-right" href="{{ path('horus_site_clients') }}">&larr; Revenir à la liste</a>
+
+        <h1><i class="glyphicon glyphicon-user"></i> Panier du client {{ client.firstname|title }} {{ client.lastname|title }}
+        </h1>
+
+        <h3>Adresses</h3>
+        {% include 'HorusSiteBundle:Clients:_panier.html.twig' %}
+
+    </div>
+{% endblock %}
+

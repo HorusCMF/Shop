@@ -8,6 +8,14 @@
 {% endblock %}
 
 
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets '@HorusSiteBundle/Resources/public/css/pages/transport.sass' filter='yui_css' %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+{% endblock %}
+
+
 {% block content %}
     <div id="createtransport" class="page">
         <a class="btn back btn-danger pull-right" href="{{ path('horus_site_transports') }}">&larr; Revenir à la liste
@@ -15,7 +23,7 @@
 
         <h1><i class="glyphicon glyphicon-pencil"></i> Editer "{{ transport.title }}"</h1>
         <hr class="clear fancy-line">
-        <form novalidate="novalidate" action="{{ path('horus_site_edit_transport', {'id' : transport.id }) }}" method="post" enctype="multipart/form-data">
+        <form  novalidate="novalidate" action="{{ path('horus_site_edit_transport', {'id' : transport.id }) }}" method="post" enctype="multipart/form-data">
 
             <div class="row-fluid">
                 <h3>Présentation</h3>

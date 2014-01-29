@@ -1,0 +1,26 @@
+{% extends 'HorusSiteBundle::layout.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    <div class="page" id="clients">
+        <a class="btn back btn-danger pull-right" href="{{ path('horus_site_clients') }}">&larr; Revenir à la liste</a>
+
+        <h1><i class="glyphicon glyphicon-shopping-cart"></i> Commandes du client {{ client.firstname|title }} {{ client.lastname|title }}
+        </h1>
+        {% include 'HorusSiteBundle:Slots:display.html.twig' %}
+        {% include 'HorusSiteBundle:Commandes:_states.html.twig' %}
+        <div class="clear"></div>
+        {% include 'HorusSiteBundle:Commandes:_listcommandes.html.twig' %}
+
+        <div class="pull-right">
+            {{ knp_pagination_render(commandes) }}
+        </div>
+        <div class="clear"></div>
+
+
+    </div>
+{% endblock %}
+

@@ -18,7 +18,6 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Horus\SiteBundle\HorusSiteBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle($this),
-            new FOS\RestBundle\FOSRestBundle(),
             new JMS\AopBundle\JMSAopBundle(),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
@@ -27,13 +26,8 @@ class AppKernel extends Kernel
             new FOS\ElasticaBundle\FOSElasticaBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new Doctrine\Bundle\MongoDBBundle\DoctrineMongoDBBundle(),
-            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
-            new SaadTazi\GChartBundle\SaadTaziGChartBundle(),
-            new Nelmio\SecurityBundle\NelmioSecurityBundle(),
-            new Egulias\SecurityDebugCommandBundle\EguliasSecurityDebugCommandBundle(),
             new WhiteOctober\TCPDFBundle\WhiteOctoberTCPDFBundle(),
-            new Horus\FrontBundle\HorusFrontBundle(),
-
+            new Horus\FrontBundle\HorusFrontBundle()
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

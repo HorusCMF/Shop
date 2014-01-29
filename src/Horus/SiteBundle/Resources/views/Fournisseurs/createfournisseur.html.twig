@@ -2,17 +2,26 @@
 
 {% block javascripts %}
     {{ parent() }}
+    {% javascripts '@HorusSiteBundle/Resources/public/js/pages/fournisseur.js' %}
+    <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
 {% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets '@HorusSiteBundle/Resources/public/css/pages/fournisseur.sass' filter='yui_css' %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+{% endblock %}
 
 {% block content %}
-    <div id="editarticle">
+    <div id="createfournisseur" class="page">
         <a class="btn back btn-danger pull-right" href="{{ path('horus_site_fournisseurs') }}">&larr; Revenir à la liste des fournisseurs</a>
 
         <h1><i class="glyphicon glyphicon-plus"></i> Ajouter une fournisseur</h1>
         <hr class="clear fancy-line">
 
-        <form novalidate="novalidate" action="{{ path('horus_site_create_fournisseurs') }}" method="post" enctype="multipart/form-data">
+        <form  novalidate="novalidate" action="{{ path('horus_site_create_fournisseurs') }}" method="post" enctype="multipart/form-data">
 
             <div class="row-fluid">
                 <div class="span12">

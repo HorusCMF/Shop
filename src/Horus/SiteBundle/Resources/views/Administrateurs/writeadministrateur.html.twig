@@ -1,0 +1,56 @@
+{% extends 'HorusSiteBundle::layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets '@HorusSiteBundle/Resources/public/css/pages/administrateur.sass' filter='yui_css' %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+{% endblock %}
+
+
+{% block content %}
+    <div class="page" id="writeadministrateurs">
+        <h2><i class="glyphicon glyphicon-envelope"></i> Ecrire
+            à {{ administrateur.firstname|title }} {{ administrateur.lastname|title }}</h2>
+
+        <form enctype="multipart/form-data" novalidate="novalidate"
+              action="{{ path('horus_site_write_administrateur', {'id' : administrateur.id}) }}" method="post">
+            <div class="row-fluid">
+                <div class="span12">
+                    <label for="title">Sujet</label>
+
+                    <div class="input-group">
+                        {{ form_widget(form.subject) }}
+                        <span class="input-group-btn">
+                                          <button class="btn btn-search btn-primary" type="button"><i
+                                                      class="glyphicon glyphicon-pencil"></i></button>
+                                      </span>
+
+                    </div>
+                    {{ form_errors(form.subject) }}
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span12">
+                    <label for="title">Criticité</label>
+                    {{ form_widget(form.criticite) }}
+                    {{ form_errors(form.criticite) }}
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span12">
+                    <label for="title">Contenu</label>
+                    {{ form_widget(form.content) }}
+                    {{ form_errors(form.content) }}
+                </div>
+            </div>
+
+            <button class="btn btn-primary btn-large" type="submit"><i class="glyphicon glyphicon-pencil"></i>
+                Ecrire à cet administrateur
+            </button>
+    </div>
+    </form>
+
+    </div>
+{% endblock %}
+

@@ -2,6 +2,13 @@
 
 {% block javascripts %}
     {{ parent() }}
+    <script src="{{ asset('bundles/horussite/js/jRating.jquery.min.js') }}"></script>
+    {% javascripts '@HorusSiteBundle/Resources/public/js/pages/produits.js' %}
+    <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
+    {% javascripts '@HorusSiteBundle/Resources/public/js/pages/produit.js' %}
+    <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
     {% javascripts '@HorusSiteBundle/Resources/public/js/referencement.js' %}
     <script src="{{ asset_url }}" type="text/javascript"></script>
     {% endjavascripts %}
@@ -13,6 +20,19 @@
     {% javascripts '@HorusSiteBundle/Resources/public/js/liens.js' %}
     <script src="{{ asset_url }}" type="text/javascript"></script>
     {% endjavascripts %}
+{% endblock %}
+
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets '@HorusSiteBundle/Resources/public/css/pages/produit.sass' filter='yui_css' %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/horussite/css/jRating.jquery.css') }}"/>
+
+    {% stylesheets '@HorusSiteBundle/Resources/public/css/pages/produits.sass' filter='yui_css' %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+    {% endstylesheets %}
 {% endblock %}
 
 
@@ -39,7 +59,7 @@
         </div>
     {% endif %}
 
-    <form enctype="multipart/form-data" id="editproduct" novalidate="novalidate"
+    <form  enctype="multipart/form-data" id="editproduct" novalidate="novalidate"
           action="{{ path('horus_site_edit_product', {'id' : produit.id}) }}" method="post">
 
     <div class="bs-example bs-example-tabs">
@@ -195,7 +215,7 @@
             {{ form_errors(form.quantity) }}
             {{ form_errors(form.datePublication) }}
             <div class="">
-                <h4>Etat de produit</h4>
+                <h3>Etat de produit</h3>
 
                 <div class="span3">
                     {{ form_widget(form.etat[0], {'attr': {'class' : 'rad pull-left' }}) }}
@@ -213,7 +233,7 @@
         </div>
         <div class="row-fluid">
             <div class="">
-                <h4>Disponibilité du produit</h4>
+                <h3>Disponibilité du produit</h3>
 
                 <div class="span3">
                     {{ form_widget(form.status[0], {'attr': {'class' : 'rad pull-left' }}) }}
@@ -236,7 +256,7 @@
         <p></p>
 
         <div class="">
-            <h4>Précision</h4>
+            <h3>Précision</h3>
 
             <div class="row-fluid">
                 <div class="span3">
@@ -390,6 +410,12 @@
         </div>
     </div>
     <div class="tab-pane fade" id="extras">
+        <div class="row-fluid">
+            <div class="span12">
+                {{ form_widget(form.home, {'attr': {}}) }}
+                <label for="service">Le produit est mis en avant sur la page d'acceuil</label>
+            </div>
+        </div>
         {% if video.html is defined %}
             <h3>La vidéo de votre produit</h3>
             <div class="row-fluid well">
@@ -422,7 +448,7 @@
                 {{ form_widget(form.extras, {'attr': { }}) }}
             </div>
         </div>
-        <div class="row-fluid">
+        <div class="row-fluid well">
             <div class="span12">
                 <label for="articles">Articles associés</label>
                 {{ form_widget(form.articles, {'attr': { }}) }}

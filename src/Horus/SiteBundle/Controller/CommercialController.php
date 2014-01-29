@@ -32,8 +32,17 @@ class CommercialController extends Controller
     public function commercialsAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $commercials = $em->getRepository('HorusSiteBundle:Commercial')->findAll();
-        return $this->render('HorusSiteBundle:Commercial:commercials.html.twig', array('commercials' => $commercials));
+        $display = $this->container->get('request')->get('display', 5);
+
+        $commercials = $em->getRepository('HorusSiteBundle:Commercial')->findBy(array(), array('id' => "DESC"));
+
+        $paginator = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $commercials,
+            $this->get('request')->query->get('page', 1) /*page number*/,
+            $display);
+
+        return $this->render('HorusSiteBundle:Commercial:commercials.html.twig', array('commercials' => $pagination));
     }
 
     /**

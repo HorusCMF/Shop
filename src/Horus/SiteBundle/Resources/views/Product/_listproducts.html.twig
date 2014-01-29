@@ -23,9 +23,20 @@
                                 class="glyphicon glyphicon-camera"></i> Photos</a></li>
                 <li><a href="{{ path('horus_site_product', {'id' : produit.id}) }}"><i
                                 class="glyphicon glyphicon-search"></i> Voir</a></li>
-
+                <li><a href="{{ path('horus_site_commandes_product', {'id' : produit.id}) }}"><i
+                                class="glyphicon glyphicon-transfer"></i> Voir ses commandes</a></li>
             </ul>
         </div>
+        {% if produit.home %}
+            <a title="Mis en avant sur la page acceuil" class="ishome athome pull-left" data-url="{{ path('horus_site_product_isnothome', {'id' : produit.id}) }}">
+                <i class="pull-left glyphicon glyphicon-heart"></i>
+            </a>
+        {% else %}
+        <a title="Non mis en avant sur la page acceuil" class="ishome nothome pull-left" data-url="{{ path('horus_site_product_ishome', {'id' : produit.id}) }}">
+            <i class="pull-left glyphicon glyphicon-heart-empty"></i>
+        </a>
+        {% endif %}
+
         <a class="pull-left" href="{{ path('horus_site_product', {'id' : produit.id}) }}">
             {% if produit.starPicture %}
                 <a href="{{ imgproducts ~  produit.id ~ '/' ~ produit.starPicture.path|sizes('big') }}" rel="group"
@@ -38,8 +49,8 @@
         </a>
 
         <div class="media-body">
-            <h4 class="media-heading"><a
-                        href="{{ path('horus_site_product', {'id' : produit.id}) }}">{{ produit.title }}</a> de
+            <h4 class="media-heading"><a href="{{ path('horus_site_product', {'id' : produit.id}) }}">{{ produit.title }}</a> de
+
                 <a href="{{ path('horus_site_category', {'id' : produit.category.id}) }}">{{ produit.category.name }}</a>
                 {% if produit.isVisible %}
                     <span class="pull-right badge badge-success">En ligne</span>
@@ -52,30 +63,30 @@
 
             <div class="star" data-average="{{ produit.average }}"></div>
             <div class="clear"></div>
-            <div class="pull-right">
-                <a class="btn btn-default btn-sm"
-                   href="{{ path('horus_site_product_remove_quantity', {'id' : produit.id }) }}"><i
-                            class="glyphicon glyphicon-minus-sign"></i></a>
-                <a class="btn btn-default btn-sm btn-primary"
-                   href="{{ path('horus_site_product_add_quantity', {'id' : produit.id }) }}"><i
-                            class="glyphicon glyphicon-plus-sign"></i></a>
-                <a class="btn btn-default btn-sm"
-                   href="{{ path('horus_site_moveup_product', {'id' : produit.id }) }}"><i
-                            class="glyphicon glyphicon-arrow-up"></i></a>
-                <a class="btn btn-default btn-sm btn-primary"
-                   href="{{ path('horus_site_movedown_product', {'id' : produit.id }) }}"><i
-                            class="glyphicon glyphicon-arrow-down"></i></a>
-            </div>
+            {#<div class="pull-right">#}
+                {#&#123;&#35;<a class="btn btn-default btn-sm"&#35;&#125;#}
+                   {#&#123;&#35;href="{{ path('horus_site_product_remove_quantity', {'id' : produit.id }) }}"><i&#35;&#125;#}
+                            {#&#123;&#35;class="glyphicon glyphicon-minus-sign"></i></a>&#35;&#125;#}
+                {#&#123;&#35;<a class="btn btn-default btn-sm btn-primary"&#35;&#125;#}
+                   {#&#123;&#35;href="{{ path('horus_site_product_add_quantity', {'id' : produit.id }) }}"><i&#35;&#125;#}
+                            {#&#123;&#35;class="glyphicon glyphicon-plus-sign"></i></a>&#35;&#125;#}
+                {#<a class="btn btn-default btn-sm"#}
+                   {#href="{{ path('horus_site_moveup_product', {'id' : produit.id }) }}"><i#}
+                            {#class="glyphicon glyphicon-arrow-up"></i></a>#}
+                {#<a class="btn btn-default btn-sm btn-primary"#}
+                   {#href="{{ path('horus_site_movedown_product', {'id' : produit.id }) }}"><i#}
+                            {#class="glyphicon glyphicon-arrow-down"></i></a>#}
+            {#</div>#}
             <div class="clear"></div>
 
             <div class="clear"></div>
-            <hr class="fancy-line"/>
+            <hr class="fancy-line" />
 
             <p>{{ produit.cover|striptags|truncate(500,'...')|raw }}</p>
 
             <h4 class="pull-right">
                 {% if produit.quantity > 0 and produit.quantity > 3 %}
-                    <span class="label label-success pull-left">{{ produit.quantity }} en stock</span>
+                    <span class="label label-success pull-left"><i class="glyphicon glyphicon-ok"></i>  {{ produit.quantity }} en stock</span>
                 {% elseif produit.quantity <= 3 and produit.quantity > 0 %}
                     <span class="label label-warning pull-left"><i class="glyphicon glyphicon-warning-sign"></i> Plus que {{ produit.quantity }}
                         en stock</span>
@@ -86,14 +97,12 @@
         </div>
     </div>
     {% if not loop.last %}
-        <hr class="clear fancy-line"/>{% endif %}
-        {% else %}
-            <div class="alert alert-dismissable alert-danger">
-                <button type="button" class="close" data-dismiss="alert">×</button>
-                <i class="glyphicon glyphicon-info-sign"></i> Aucun produit de créer pour le moment.
-                <a href="{{ path('horus_site_create_product' ) }}" class="pull-right btn btn-primary "><i
-                            class="glyphicon glyphicon-plus"></i> Créer un produit</a>
-
-                <div class="clear"></div>
-            </div>
-        {% endfor %}
+        <hr class="clear fancy-line"/>
+    {% endif %}
+{% else %}
+    <div class="alert alert-dismissable alert-danger">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <i class="glyphicon glyphicon-info-sign"></i> Aucun produit de créer pour le moment.
+        <div class="clear"></div>
+    </div>
+{% endfor %}

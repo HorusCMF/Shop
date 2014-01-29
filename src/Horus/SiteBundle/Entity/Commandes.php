@@ -112,7 +112,7 @@ class Commandes
     private $transport;
 
     /**
-     * @ORM\OneToMany(targetEntity="CommandesProduit", mappedBy="commandes")
+     * @ORM\OneToMany(targetEntity="CommandesProduit", mappedBy="commandes",  cascade={"all"},orphanRemoval=true)
      */
     private $commandesProduits;
 

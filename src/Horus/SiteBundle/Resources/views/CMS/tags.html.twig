@@ -11,12 +11,16 @@
 {% block content %}
 
     <div class="page" id="tags">
-        <h2><i class="glyphicon glyphicon-tags"></i> Vos tags</h2>
+        <h2><i class="glyphicon glyphicon-tags"></i> Vos tags({{ tags.getTotalItemCount }})</h2>
         {% include 'HorusSiteBundle:Slots:display.html.twig' %}
-
 
         {% include 'HorusSiteBundle:CMS:_listtags.html.twig' %}
 
+        <div class="pull-right">
+            {{ knp_pagination_render(tags) }}
+        </div>
+
+        <div class="clear"></div>
         <div class="action">
             <a href="{{ path('horus_site_tag_create') }}" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Ajouter un tag</a>
         </div>

@@ -21,6 +21,7 @@ class AdministrateursType extends AbstractType
                 'expanded' => true
             ))
             ->add('groups')
+            ->add('file')
             ->add('lastname', null, array('required' => true, 'label' => 'Nom', 'attr' => array('pattern' => '.{2,}', 'placeholder' => 'Nom')))
             ->add('firstname', null, array('required' => true, 'label' => 'Prénom', 'attr' => array('pattern' => '.{2,}', 'placeholder' => 'Prénom')))
             ->add('entreprise', null, array('required' => false, 'label' => 'Entreprise', 'attr' => array('pattern' => '.{2,}', 'placeholder' => 'Entreprise')))

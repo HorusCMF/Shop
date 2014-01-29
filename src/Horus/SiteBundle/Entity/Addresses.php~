@@ -18,6 +18,7 @@ class Addresses
 
     public function __construct(){
         $this->dateCreated = new \Datetime('now');
+        $this->nature = 1;
     }
 
     /**
@@ -40,6 +41,30 @@ class Addresses
      * @ORM\Column(name="adresse", type="string", nullable=true)
      */
     private $adresse;
+
+    /**
+     * @var string
+     * @ORM\Column(name="adresse2", type="string", nullable=true)
+     */
+    private $adresse2;
+
+    /**
+     * @var string
+     * @ORM\Column(name="etage", type="string", nullable=true)
+     */
+    private $etage;
+
+    /**
+     * @var string
+     * @ORM\Column(name="numero", type="string", nullable=true)
+     */
+    private $numero;
+    
+    /**
+     * @var string
+     * @ORM\Column(name="interphone", type="string", nullable=true)
+     */
+    private $interphone;
 
     /**
      * @var string
@@ -194,5 +219,39 @@ class Addresses
     public function getClient()
     {
         return $this->client;
+    }
+
+    /**
+     * Set nature
+     *
+     * @param string $nature
+     * @return Addresses
+     */
+    public function setNature($nature)
+    {
+        $this->nature = $nature;
+        return $this;
+    }
+
+    /**
+     * Get nature
+     *
+     * @return string 
+     */
+    public function getNature()
+    {
+        return $this->nature;
+    }
+
+    /**
+     * Set client
+     *
+     * @param Horus\SiteBundle\Entity\Client $client
+     * @return Addresses
+     */
+    public function setClient(\Horus\SiteBundle\Entity\Client $client = null)
+    {
+        $this->client = $client;
+        return $this;
     }
 }

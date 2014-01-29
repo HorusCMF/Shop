@@ -26,9 +26,17 @@ class CategoryController extends Controller
     public function famillesAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $familles = $em->getRepository('HorusSiteBundle:Famille')->findAll();
+        $display = $this->container->get('request')->get('display', 5);
 
-        return $this->render('HorusSiteBundle:Category:familles.html.twig', array('familles' => $familles));
+        $familles = $em->getRepository('HorusSiteBundle:Famille')->findBy(array(), array());
+
+        $paginator = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $familles,
+            $this->get('request')->query->get('page', 1) /*page number*/,
+            $display
+        );
+        return $this->render('HorusSiteBundle:Category:familles.html.twig', array('familles' => $pagination));
     }
 
     /**
@@ -38,9 +46,18 @@ class CategoryController extends Controller
     public function categoriesAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $categories = $em->getRepository('HorusSiteBundle:Category')->findBy(array('parent' => null));
+        $display = $this->container->get('request')->get('display', 5);
 
-        return $this->render('HorusSiteBundle:Category:categories.html.twig', array('categories' => $categories));
+        $categories = $em->getRepository('HorusSiteBundle:Category')->findBy(array(), array());
+
+        $paginator = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $categories,
+            $this->get('request')->query->get('page', 1) /*page number*/,
+            $display
+        );
+
+        return $this->render('HorusSiteBundle:Category:categories.html.twig', array('categories' => $pagination));
     }
 
 
@@ -115,6 +132,10 @@ class CategoryController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $category = new Category();
+        $idarg = $request->query->get('categoryref');
+        if(!empty($idarg)){
+            $category = $em->getRepository('HorusSiteBundle:Category')->find($idarg);
+        }
 
         $form = $this->createForm(new CategoryType(), $category);
         $form->handleRequest($request);
@@ -203,7 +224,10 @@ class CategoryController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $famille = new Famille();
-
+        $idarg = $request->query->get('familleref');
+        if(!empty($idarg)){
+            $famille = $em->getRepository('HorusSiteBundle:Famille')->find($idarg);
+        }
         $form = $this->createForm(new FamilleType(), $famille);
         $form->handleRequest($request);
 
@@ -418,10 +442,12 @@ class CategoryController extends Controller
     public function categoryAction(Category $id)
     {
         $produits = $id->getProduits();
+        $articles = $id->getArticles();
         return $this->render('HorusSiteBundle:Category:category.html.twig',
             array(
                 'category' => $id,
-                'produits' => $produits
+                'produits' => $produits,
+                'articles' => $articles
             )
         );
     }
@@ -434,9 +460,11 @@ class CategoryController extends Controller
      */
     public function familleAction(Famille $id)
     {
+        $produits = $id->getProduits();
         return $this->render('HorusSiteBundle:Category:famille.html.twig',
             array(
                 'category' => $id,
+                'produits' => $produits
             )
         );
     }

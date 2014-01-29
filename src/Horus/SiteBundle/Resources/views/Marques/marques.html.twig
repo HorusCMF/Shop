@@ -3,10 +3,13 @@
 {% block content %}
 
     <div class="page" id="marques">
-        <h2><i class="glyphicon glyphicon-bookmark"></i> Vos marques({{ marques|length }})</h2>
+        <h2><i class="glyphicon glyphicon-bookmark"></i> Vos marques({{ marques.getTotalItemCount }})</h2>
         {% include 'HorusSiteBundle:Slots:display.html.twig' %}
         {% include 'HorusSiteBundle:Marques:_listmarques.html.twig' %}
 
+        <div class="pull-right">
+            {{ knp_pagination_render(marques) }}
+        </div>
 
         <div class="clear"></div>
         <div class="action">

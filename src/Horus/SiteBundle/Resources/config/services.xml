@@ -15,11 +15,20 @@
             <argument type="service" id="session"></argument>
         </service>
 
+        <service id="horus_configuration" class="Horus\SiteBundle\Configuration\Configuration">
+            <argument type="service" id="doctrine.orm.entity_manager"></argument>
+        </service>
+
         <service id="activity_listener" class="Horus\SiteBundle\Listener\ActivityListener" scope="request">
             <argument type="service" id="security.context"/>
             <argument type="service" id="doctrine"/>
             <argument type="service" id="service_container"/>
             <tag name="kernel.event_listener" event="kernel.controller" method="onCoreController"/>
+        </service>
+
+        <service id="email" class="Horus\SiteBundle\Email\Emails">
+            <argument type="service" id="service_container"/>
+            <argument type="service" id="horus_configuration"/>
         </service>
 
         <service id="lastactions_listener" class="Horus\SiteBundle\Listener\LastActionsListener">

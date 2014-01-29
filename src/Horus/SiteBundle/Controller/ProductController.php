@@ -2,6 +2,7 @@
 
 namespace Horus\SiteBundle\Controller;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use fg\Essence\Essence;
 use Horus\SiteBundle\Entity\Image;
 use Horus\SiteBundle\Entity\Liens;
@@ -25,33 +26,22 @@ class ProductController extends Controller
 {
 
     /**
-     * All action commercial
-     * @return \Symfony\Component\HttpFoundation\Response
-     */
-    public function commercialsAction()
-    {
-        $em = $this->getDoctrine()->getManager();
-        $commercials = $em->getRepository('HorusSiteBundle:Commercial')->findAll();
-
-        return $this->render('HorusSiteBundle:Commercial:commercials.html.twig', array('commercials' => $commercials));
-    }
-
-    /**
      * All Products
      * @return \Symfony\Component\HttpFoundation\Response
      */
     public function productsAction()
     {
-        $em = $this->getDoctrine()->getManager();
-        $paginate_by_page = $this->container->getParameter('paginate_by_page');
 
+        $em = $this->getDoctrine()->getManager();
+
+        $display = $this->container->get('request')->get('display', 5);
         $products = $em->getRepository('HorusSiteBundle:Produit')->findBy(array(), array('position' => "DESC"));
 
         $paginator = $this->get('knp_paginator');
         $pagination = $paginator->paginate(
             $products,
             $this->get('request')->query->get('page', 1) /*page number*/,
-            $paginate_by_page
+            $display
         );
 
         return $this->render('HorusSiteBundle:Product:products.html.twig', array('produits' => $pagination));
@@ -126,6 +116,35 @@ class ProductController extends Controller
         );
 
         return $this->redirect($this->generateUrl('horus_site_products'));
+    }
+
+    /**
+     * In home product
+     * @param Image $id
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
+    public function ishomeAction(Produit $id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $id->setHome(true);
+        $em->persist($id);
+        $em->flush();
+        return new JsonResponse(array('success' => true));
+    }
+
+    /**
+     * Not in home product
+     * @param Image $id
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
+    public function isnothomeAction(Produit $id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $id->setHome(false);
+        $em->persist($id);
+        $em->flush();
+        return new JsonResponse(array('success' => true));
+
     }
 
     /**
@@ -265,21 +284,6 @@ class ProductController extends Controller
      * @param Produit $id
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function seeproductAction(Produit $id)
-    {
-        return $this->render('HorusSiteBundle:Product:visualizeproduct.html.twig',
-            array(
-                'produit' => $id,
-            )
-        );
-    }
-
-
-    /**
-     * See a product
-     * @param Produit $id
-     * @return \Symfony\Component\HttpFoundation\Response
-     */
     public function addquantityproductAction(Produit $id)
     {
         $em = $this->getDoctrine()->getManager();
@@ -399,7 +403,7 @@ class ProductController extends Controller
         if ((int)$category['nombre'] == 0) {
             $this->get('session')->getFlashBag()->add(
                 'warning',
-                "Avant de gérer le produit, vous devez créer une catégorie"
+                "Avant de créer un produit, vous devez créer une catégorie"
             );
             return $this->redirect($this->generateUrl('horus_site_add_category'));
         }
@@ -425,8 +429,6 @@ class ProductController extends Controller
 
         $form = $this->createForm(new ProductType(), $produit);
         $form->handleRequest($request);
-
-
 
         if ($form->isValid()) {
             $pj->upload($produit->getId());
@@ -459,6 +461,58 @@ class ProductController extends Controller
     }
 
 
+
+    /**
+     * See a product
+     * @param Produit $id
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function seeproductAction(Produit $id)
+    {
+
+        $Essence = new \fg\Essence\Essence();
+        $media = $Essence->embed($id->getVideo(), array(
+            'maxwidth' => 400,
+            'maxheight' => 200
+        ));
+        return $this->render('HorusSiteBundle:Product:product.html.twig',
+            array(
+                'produit' => $id,
+                'video' => $media,
+                'articles' => $id->getArticles(),
+                'categories' => $id->getCates(),
+                'familles' => $id->getFamilles(),
+                'tags' => $id->getTags(),
+                'produitsaccessoires' => $id->getAccesories(),
+                'fournisseurs' => array($id->getFournisseur()),
+                'commentaires' => $id->getCommentaires(),
+                'commandes' => $id->getCommandes(),
+                'marques' => array($id->getMarque()),
+                'fournisseurs' => array($id->getFournisseur()),
+            )
+        );
+    }
+
+
+
+    /**
+     * See a commandes product
+     * @param Produit $id
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function productcommandesAction(Produit $id)
+    {
+
+
+        return $this->render('HorusSiteBundle:Product:productcommandes.html.twig',
+            array(
+                'produit' => $id,
+                'commandes' => $id->getCommandes(),
+            )
+        );
+    }
+
+
     /**
      * Edit a product
      * @param Produit $id
@@ -468,10 +522,6 @@ class ProductController extends Controller
     {
         $request = $this->getRequest();
         $em = $this->getDoctrine()->getManager();
-
-//        $produit = $em->getRepository('HorusSiteBundle:Produits')->getProductsIsQuantityNull();
-//        exit(var_dump($produit));
-
 
         $form = $this->createForm(new ProductType($id), $id);
         $form->handleRequest($request);
@@ -504,6 +554,12 @@ class ProductController extends Controller
             if (!empty($liens))
                 foreach ($liens as $lien) {
                     $lien->setProduit($id);
+                }
+
+            $metas = $id->getMetas();
+            if (!empty($metas))
+                foreach ($metas as $meta) {
+                    $meta->setProduit($id);
                 }
 
             $id->setDateUpdated(new \Datetime('now'));

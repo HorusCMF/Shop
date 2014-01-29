@@ -1,0 +1,19 @@
+
+    {% for commande in commandes %}
+        <tr class="{{ commande.commandes.etat|commandesclasses }}">
+            <td><a href="{{ path('horus_site_commande', {'id' : commande.commandes.id}) }}">{{ loop.index }}</a></td>
+            <td>
+                <a href="{{ path('horus_site_commande', {'id' : commande.commandes.id}) }}">{{ commande.commandes.reference }}</a>
+            </td>
+            <td><a href="">{{ commande.commandes.client.firstname|title }} {{ commande.commandes.client.lastname|title }}</a></td>
+            <td>{{ commande.commandes.totalTTC }}€</td>
+            <td>{{ commande.commandes.transport.title }}</td>
+            <td>{{ commande.commandes.etat|commandes }}</td>
+            <td>{{ commande.commandes.dateCreated|created_ago }}</td>
+            <td>
+                <a href="{{ path('horus_site_generatefacture', {'id' : commande.commandes.id}) }}"><i class="glyphicon glyphicon-cloud-download"></i></a>
+                <a href="{{ path('horus_site_edit_commande', {'id' : commande.commandes.id}) }}"><i class="glyphicon glyphicon-pencil"></i></a>
+                <a href="{{ path('horus_site_commande', {'id' : commande.commandes.id}) }}"><i class="glyphicon glyphicon-search"></i></a>
+            </td>
+        </tr>
+    {% endfor %}

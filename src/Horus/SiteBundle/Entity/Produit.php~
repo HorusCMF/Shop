@@ -31,6 +31,7 @@ class Produit
         $this->etat = 1;
         $this->status = 1;
         $this->quantity = 1;
+        $this->home = false;
     }
     /**
      * @var integer
@@ -106,6 +107,13 @@ class Produit
     private $status;
 
     /**
+     * @var integer
+     *
+     * @ORM\Column(name="home", type="boolean", nullable=false)
+     */
+    private $home;
+
+    /**
      * @Gedmo\SortablePosition
      * @ORM\Column(name="position", type="integer")
      */
@@ -173,7 +181,7 @@ class Produit
      * )
      * @Assert\Length(
      *      min = "5",
-     *      max = "1000",
+     *      max = "10000",
      *      minMessage = "Votre accroche doit faire au moins {{ limit }} caractères",
      *      maxMessage = "Votre accroche ne peut pas être plus long que {{ limit }} caractères"
      * )
@@ -194,7 +202,7 @@ class Produit
      * )
      * @Assert\Length(
      *      min = "3",
-     *      max = "3000",
+     *      max = "30000",
      *      minMessage = "Votre résumé doit faire au moins {{ limit }} caractères",
      *      maxMessage = "Votre résumé ne peut pas être plus long que {{ limit }} caractères"
      * )
@@ -208,7 +216,7 @@ class Produit
      * )
      * @Assert\Length(
      *      min = "5",
-     *      max = "10000",
+     *      max = "100000",
      *      minMessage = "Votre description doit faire au moins {{ limit }} caractères",
      *      maxMessage = "Votre description ne peut pas être plus long que {{ limit }} caractères"
      * )
@@ -359,78 +367,76 @@ class Produit
 
 
     /**
-     * @ORM\OneToMany(targetEntity="CommandesProduit",mappedBy="produit", cascade={"all"},orphanRemoval=true)
-     * @Assert\Valid
+     * @ORM\OneToMany(targetEntity="CommandesProduit", mappedBy="produit", cascade={"all"},orphanRemoval=true)
      */
-    protected $commandes;
+    private $commandes;
 
     /**
      * @ORM\OneToMany(targetEntity="Rate",mappedBy="produit", cascade={"all"},orphanRemoval=true)
-     * @Assert\Valid
      */
-    protected $rates;
+    private $rates;
 
     /**
      * @ORM\OneToMany(targetEntity="Seo",mappedBy="produit", cascade={"all"},orphanRemoval=true)
      * @Assert\Valid
      */
-    protected $seo;
+    private $seo;
 
     /**
      * @ORM\OneToMany(targetEntity="Commentaire",mappedBy="produit", cascade={"all"},orphanRemoval=true)
      */
-    protected $commentaires;
+    private $commentaires;
 
     /**
      * @ORM\OneToMany(targetEntity="Pj",mappedBy="produit", cascade={"all"},orphanRemoval=true)
      * @Assert\Valid
      */
-    protected $pjs;
+    private $pjs;
 
     /**
      * @ORM\OneToOne(targetEntity="Produit")
      * @ORM\JoinColumn(name="parent_id", referencedColumnName="id")
      */
-    protected $prodparent;
+    private $prodparent;
 
 
     /**
      * @ORM\OneToMany(targetEntity="Meta",mappedBy="produit", cascade={"all"},orphanRemoval=true)
      * @Assert\Valid
      */
-    protected $metas;
+    private $metas;
 
     /**
      * @ORM\OneToMany(targetEntity="Liens",mappedBy="produit", cascade={"all"},orphanRemoval=true)
      * @Assert\Valid
      */
-    protected $liens;
+    private $liens;
 
     /**
      * @ORM\OneToMany(targetEntity="Image",mappedBy="produit", cascade={"all"},orphanRemoval=true)
      * @Assert\Valid
      * @ORM\OrderBy({"dateCreated" = "DESC"})
      */
-    protected $images;
+    private $images;
 
 
     /**
      * @ORM\ManyToMany(targetEntity="Article", inversedBy="produits", cascade={"all"},orphanRemoval=true)
      * @ORM\JoinTable(name="article_produit")
      */
-    protected $articles;
+    private $articles;
 
     /**
      * @ORM\ManyToMany(targetEntity="Produit", mappedBy="articlesaccesories")
      * @ORM\OrderBy({"dateCreated" = "DESC"})
      */
-    protected $accesories;
+    private $accesories;
 
     /**
      * @ORM\ManyToMany(targetEntity="Produit", inversedBy="accesories",cascade={"all"},orphanRemoval=true)
      * @ORM\JoinTable(name="produit_accessories")
      */
-    protected $articlesaccesories;
+    private $articlesaccesories;
 
 
     /**
@@ -1747,5 +1753,54 @@ class Produit
     public function getSecurite()
     {
         return $this->securite;
+    }
+
+    /**
+     * Add rates
+     *
+     * @param Horus\SiteBundle\Entity\Rate $rates
+     * @return Produit
+     */
+    public function addRate(\Horus\SiteBundle\Entity\Rate $rates)
+    {
+        $this->rates[] = $rates;
+        return $this;
+    }
+
+    /**
+     * Remove rates
+     *
+     * @param Horus\SiteBundle\Entity\Rate $rates
+     */
+    public function removeRate(\Horus\SiteBundle\Entity\Rate $rates)
+    {
+        $this->rates->removeElement($rates);
+    }
+
+    /**
+     * Get rates
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getRates()
+    {
+        return $this->rates;
+    }
+
+    /**
+     * Get rates
+     *
+     * @return Doctrine\Common\Collections\Collection
+     */
+    public function getAverage()
+    {
+        if(!empty($this->rates) && count($this->rates) > 0){
+            $sumrate = 0;
+            foreach($this->rates as $rate){
+                $sumrate += $rate->getRate();
+            }
+            return $sumrate / count($this->rates);
+        }
+        return 0;
     }
 }

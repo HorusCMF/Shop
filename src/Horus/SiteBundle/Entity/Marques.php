@@ -94,6 +94,14 @@ class Marques
      */
     protected $description;
 
+
+    /**
+     * @var string $url
+     * @ORM\Column(name="url", type="string", length=32)
+     * @Assert\Url( message = "Votre URL est invalide")
+     */
+    protected $url;
+
     /**
      * @var string $picture
      * @ORM\Column(name="picture", type="string", length=32)
@@ -856,9 +864,31 @@ class Marques
     public function getOptionLabel()
     {
         return str_repeat(
-            html_entity_decode('>>', ENT_QUOTES, 'UTF-8'),
+            html_entity_decode('...', ENT_QUOTES, 'UTF-8'),
             ($this->getLvl() + 1) * 2
         ) . $this->getTitle();
     }
 
+
+    /**
+     * Set url
+     *
+     * @param string $url
+     * @return Marques
+     */
+    public function setUrl($url)
+    {
+        $this->url = $url;
+        return $this;
+    }
+
+    /**
+     * Get url
+     *
+     * @return string 
+     */
+    public function getUrl()
+    {
+        return $this->url;
+    }
 }

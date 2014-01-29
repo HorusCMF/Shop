@@ -30,7 +30,7 @@
                         {{ flashMessage }}
                     </div>
                 {% endfor %}
-                <form action="{{ path('horus_site_edit', {'id' : article.id}) }}" method="post">
+                <form  action="{{ path('horus_site_edit', {'id' : article.id}) }}" method="post">
                 {{ form(form) }}
                 </form>
             </div><!--/span-->

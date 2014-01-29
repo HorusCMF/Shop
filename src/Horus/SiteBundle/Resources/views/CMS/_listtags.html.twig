@@ -1,6 +1,6 @@
 {% if tags is not empty %}
 
-    <table class="table table-bordered">
+    <table class="table table-bordered table-striped">
         <thead>
         <tr>
             <th>#</th>
@@ -16,7 +16,7 @@
                 <td>
                     <a onclick="return(confirm('Etes-vous sûr de vouloir supprimer ce tag ?'));"
                        href="{{ path('horus_site_remove_tag', {'id' : tag.id}) }}" class="btn btn-primary"><i
-                                class="glyphicon glyphicon-remove"></i></a>
+                                class="glyphicon glyphicon-remove"></i></a></h6>
                     <a href="{{ path('horus_site_edit_tag', {'id' : tag.id}) }}" class="btn btn-primary"><i
                                 class="glyphicon glyphicon-pencil"></i></a>
                 </td>

@@ -2,7 +2,19 @@
 
 {% block javascripts %}
     {{ parent() }}
+    {% javascripts '@HorusSiteBundle/Resources/public/js/pages/commande.js' %}
+    <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
 {% endblock %}
+
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets '@HorusSiteBundle/Resources/public/css/pages/commande.sass' filter='yui_css' %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+{% endblock %}
+
 
 {% block content %}
     <div class="page" id="commande">
@@ -10,7 +22,7 @@
         <hr class="clear fancy-line">
 
         <a href="{{ path('horus_site_commandes') }}" class="btn btn-primary pull-right">Retour aux commandes</a>
-        <form novalidate="novalidate" action="{{ path('horus_site_edit_commande', {'id' : commande.id }) }}" method="post">
+        <form  novalidate="novalidate" action="{{ path('horus_site_edit_commande', {'id' : commande.id }) }}" method="post">
             <div class="row-fluid">
                 <div class="span12">
                     <label for="title">Etat</label>

@@ -8,6 +8,7 @@ use Horus\SiteBundle\Document\Messagerie;
 use Horus\SiteBundle\Form\AdministrateursType;
 use Horus\SiteBundle\Form\ConfigurationType;
 use Horus\SiteBundle\Entity\Administrateur;
+use Horus\SiteBundle\Form\ContactType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Security\Core\Encoder\MessageDigestPasswordEncoder;
 use Symfony\Component\Security\Core\SecurityContext;
@@ -169,10 +170,19 @@ class AdministrateurController extends Controller
     public function allmessagerieAction()
     {
         $dm = $this->get('doctrine_mongodb')->getManager();
-        $messages = $dm->getRepository('HorusSiteBundle:Messagerie')->findBy(array(), array('_id' => 'DESC'));
+        $messages = $dm->getRepository('HorusSiteBundle:Messagerie')->findBy(array(), array('dateCreated' => 'DESC'));
+
+        $display = $this->container->get('request')->get('display', 15);
+
+        $paginator = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $messages->toArray(),
+            $this->get('request')->query->get('page', 1) /*page number*/,
+            $display
+        );
 
         return $this->get('templating')->renderResponse(
-            'HorusSiteBundle:Administrateurs:allmessages.html.twig', array('messages' => $messages)
+            'HorusSiteBundle:Administrateurs:allmessages.html.twig', array('messages' => $pagination)
         );
     }
 
@@ -198,9 +208,17 @@ class AdministrateurController extends Controller
     {
         $dm = $this->get('doctrine_mongodb')->getManager();
         $actions = $dm->getRepository('HorusSiteBundle:Actions')->findBy(array(), array('dateCreated' => 'DESC'));
+        $display = $this->container->get('request')->get('display', 15);
+
+        $paginator = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $actions->toArray(),
+            $this->get('request')->query->get('page', 1) /*page number*/,
+            $display
+        );
 
         return $this->get('templating')->renderResponse(
-            'HorusSiteBundle:Administrateurs:allactions.html.twig', array('actions' => $actions)
+            'HorusSiteBundle:Administrateurs:allactions.html.twig', array('actions' => $pagination)
         );
     }
 
@@ -228,9 +246,17 @@ class AdministrateurController extends Controller
     {
         $dm = $this->get('doctrine_mongodb')->getManager();
         $notifs = $dm->getRepository('HorusSiteBundle:Notifications')->findBy(array(), array('dateCreated' => 'DESC'));
+        $display = $this->container->get('request')->get('display', 15);
+
+        $paginator = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $notifs->toArray(),
+            $this->get('request')->query->get('page', 1) /*page number*/,
+            $display
+        );
 
         return $this->get('templating')->renderResponse(
-            'HorusSiteBundle:Administrateurs:allnotifications.html.twig', array('notifs' => $notifs)
+            'HorusSiteBundle:Administrateurs:allnotifications.html.twig', array('notifs' => $pagination)
         );
     }
 
@@ -262,6 +288,9 @@ class AdministrateurController extends Controller
 
         $administrateur = $this->get('security.context')->getToken()->getUser();
 
+        $dm = $this->get('doctrine_mongodb')->getManager();
+        $actions = $dm->getRepository('HorusSiteBundle:Actions')->findBy(array('aid' => $administrateur->getId()), array('dateCreated' => 'DESC'), 5);
+
         $form = $this->createForm(new AdministrateursType(), $administrateur);
         $form->handleRequest($request);
 
@@ -278,7 +307,8 @@ class AdministrateurController extends Controller
                 $administrateur->setLongitude($villesproxymite->getLongitude());
                 $administrateur->setLatitude($villesproxymite->getLatitude());
             }
-
+            $administrateur->upload($administrateur->getId());
+            $administrateur->setUpdatedAt(new \Datetime('now'));
             $administrateur->setIp($this->container->get('request')->getClientIp());
 
             $mdp = $form['password']->getData();
@@ -302,13 +332,16 @@ class AdministrateurController extends Controller
             $this->container->get('lastactions_listener')->insertActions('Edition', 'a édité son compte','glyphicon glyphicon-user');
 
 
-            return $this->redirect($this->generateUrl('horus_site_main'));
+            return $this->redirect($this->generateUrl('horus_site_myaccount'));
         }
 
 
         return $this->get('templating')->renderResponse(
             'HorusSiteBundle:Administrateurs:myaccount.html.twig',
-            array('form' => $form->createView())
+            array(
+                'form' => $form->createView(),
+                'actions' => $actions,
+            )
         );
     }
 
@@ -355,8 +388,12 @@ class AdministrateurController extends Controller
         $form = $this->createForm(new AdministrateursType(), $id);
         $form->handleRequest($request);
 
+        $dm = $this->get('doctrine_mongodb')->getManager();
+        $actions = $dm->getRepository('HorusSiteBundle:Actions')->findBy(array('aid' => $id->getId()), array('dateCreated' => 'DESC'), 5);
+
         if ($form->isValid()) {
-            $id->setDateUpdated(new \Datetime('now'));
+            $id->upload($id->getId());
+            $id->setUpdatedAt(new \Datetime('now'));
             $em->persist($id);
             $em->flush();
             $this->get('session')->getFlashBag()->add(
@@ -381,6 +418,7 @@ class AdministrateurController extends Controller
             array(
                 'form' => $form->createView(),
                 'administrateur' => $id,
+                'actions' => $actions,
             )
         );
     }
@@ -388,7 +426,45 @@ class AdministrateurController extends Controller
 
 
     /**
-     * Edit a Administrateur
+     * Write a Administrateur
+     * @param Famille $id
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     */
+    public function writeadministrateurAction(Administrateur $id)
+    {
+        $request = $this->getRequest();
+
+        $form = $this->createForm(new ContactType());
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+            $subject = $form['subject']->getData();
+            $content = $form['content']->getData();
+            $criticite = $form['criticite']->getData();
+
+            $this->email = $this->container->get('email');
+            $this->email->send(null, 'HorusSiteBundle:Mails:writeadministrateur.html.twig', "Un administrateur vous a ecrit un message ".$subject, $id->getEmail(), null,
+                array( 'content' => $content), null, null, null, $criticite
+            );
+            $this->get('session')->getFlashBag()->add(
+                'success',
+                "L'email à l'administrateur a bien été envoyé"
+            );
+            return $this->redirect($this->generateUrl('horus_site_administrateurs'));
+        }
+
+        return $this->render('HorusSiteBundle:Administrateurs:writeadministrateur.html.twig',
+            array(
+                'form' => $form->createView(),
+                'administrateur' => $id,
+            )
+        );
+    }
+
+
+
+    /**
+     * Add a Administrateur
      * @param Famille $id
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
      */
@@ -404,6 +480,8 @@ class AdministrateurController extends Controller
         $form->handleRequest($request);
 
         if ($form->isValid()) {
+            $administrateur->upload($administrateur->getId());
+
             $administrateur->setDateCreated(new \Datetime('now'));
 
             $ville = $form['ville']->getData();
@@ -426,9 +504,9 @@ class AdministrateurController extends Controller
             $newpass = $encoder->encodePassword($mdp, $administrateur->getSalt());
             $administrateur->setPassword($newpass);
 
-
             $em->persist($administrateur);
             $em->flush();
+
             $this->get('session')->getFlashBag()->add(
                 'success',
                 "L'administrateur a bien été crée"
@@ -485,7 +563,8 @@ class AdministrateurController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $id->setAccountnonlocked(false);
+        $id->setEnabled(false);
+        $id->setAccountnonlocked(true);
         $em->persist($id);
         $em->flush();
         $this->get('session')->getFlashBag()->add(
@@ -515,6 +594,7 @@ class AdministrateurController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
+        $id->setEnabled(true);
         $id->setAccountnonlocked(true);
         $em->persist($id);
         $em->flush();

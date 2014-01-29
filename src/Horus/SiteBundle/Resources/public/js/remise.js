@@ -20,17 +20,17 @@ jQuery(document).ready(function () {
         }
     });
     $val = $('#nature').val();
-    if($val == 1){
-        $('#remiseNet').val('').removeAttr('disabled');
+    if($val == "1"){
+        $('#remiseNet').removeAttr('disabled');
         $('#remiseVar').val('').attr('disabled', 'disabled');
         $('#offert').removeAttr('checked');
     }
-    if($val == 2){
+    if($val == "2"){
         $('#remiseNet').val('').attr('disabled', 'disabled');
-        $('#remiseVar').val('').removeAttr('disabled');
+        $('#remiseVar').removeAttr('disabled');
         $('#offert').removeAttr('checked');
     }
-    if($val == 3){
+    if($val == "3"){
         $('#remiseNet').val('').attr('disabled', 'disabled');
         $('#remiseVar').val('').attr('disabled', 'disabled');
         $('#offert').attr('checked','checked');

@@ -2,22 +2,32 @@
 
 {% block javascripts %}
     {{ parent() }}
+    {% javascripts '@HorusSiteBundle/Resources/public/js/pages/famille.js' %}
+    <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
+
 {% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets '@HorusSiteBundle/Resources/public/css/pages/famille.sass' filter='yui_css' %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+{% endblock %}
 
 {% block content %}
-    <div id="createfamille">
+    <div id="createfamille" class="page">
         <a class="btn back btn-danger pull-right" href="{{ path('horus_site_familles') }}">&larr; Revenir à la liste des
             familles</a>
 
         <h1><i class="glyphicon glyphicon-plus"></i> Créer une famille</h1>
         <hr class="clear fancy-line">
 
-        <form novalidate="novalidate" action="{{ path('horus_site_add_famille') }}" method="post"  enctype="multipart/form-data">
+        <form  novalidate="novalidate" action="{{ path('horus_site_add_famille') }}" method="post"  enctype="multipart/form-data">
 
             <div class="row-fluid">
-                <div class="span12">
-                    <label for="title">Titre</label>
+                <div class="span6">
+                    <label for="name">Nom de la famille</label>
 
                     <div class="input-group">
                         {{ form_widget(form.name) }}
@@ -29,25 +39,37 @@
                     </div>
                     {{ form_errors(form.name) }}
                 </div>
+                <div class="span6">
+                    <label for="keywords">Mot-clefs</label>
+                    {{ form_widget(form.keywords) }}
+                    {{ form_errors(form.keywords) }}
+                </div>
             </div>
 
             <div class="row-fluid">
                 <div class="span12">
-                    <label for="title">Résumé</label>
+                    <label for="parent">Famille parente</label>
+                    {{ form_widget(form.parent) }}
+                    {{ form_errors(form.parent) }}
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span12">
+                    <label for="cover">Petit résumé</label>
                     {{ form_widget(form.cover) }}
                     {{ form_errors(form.cover) }}
                 </div>
             </div>
             <div class="row-fluid">
                 <div class="span12">
-                    <label for="title">Image</label>
+                    <label for="file"><i class="glyphicon glyphicon-picture"></i> Image de la famille</label>
                     {{ form_widget(form.file) }}
                     {{ form_errors(form.file) }}
                 </div>
             </div>
             <div class="row-fluid">
                 <div class="span12">
-                    <label for="title">Description</label>
+                    <label for="description">Description complète</label>
                     {{ form_widget(form.description) }}
                     {{ form_errors(form.description) }}
                 </div>
@@ -61,7 +83,7 @@
             </div>
             <div class="row-fluid">
                 <div class="span12">
-                    <label for="title">Produits associés</label>
+                    <label for="produits"><i class="glyphicon glyphicon-share-alt"></i> Produits associés</label>
                     {{ form_widget(form.produits) }}
                     {{ form_errors(form.produits) }}
                 </div>

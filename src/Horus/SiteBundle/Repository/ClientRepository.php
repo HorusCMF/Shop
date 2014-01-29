@@ -10,4 +10,17 @@ use Doctrine\ORM\EntityRepository;
 class ClientRepository extends EntityRepository
 {
 
+    /**
+     * Get Active Page
+     * @return \Doctrine\ORM\QueryBuilder
+     */
+    public function getActivePageQueryBuilder()
+    {
+        $queryBuilder = $this->getEntityManager()
+            ->createQueryBuilder()
+            ->select('m')
+            ->from('Horus\SiteBundle\Entity\Client', 'm')
+            ->orderBy('m.id', 'DESC');
+        return $queryBuilder;
+    }
 }

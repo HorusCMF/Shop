@@ -13,7 +13,7 @@ collectionHolder.find('li').each(function () {
 });
 
 function addTagFormDeleteLink($tagFormLi) {
-    var $removeFormA = $('<a class="btn btn-primary addcaracteristiques"><i class="glyphicon glyphicon-minus"></i> Supprimer cette caractéristique</a>');
+    var $removeFormA = $('<a class="btn btn-primary addcaracteristiques"><i class="glyphicon glyphicon-minus"></i> Supprimer cette caractéristique</a><div class="clear"><div></div> ');
     $tagFormLi.append($removeFormA);
 
     $removeFormA.on('click', function (e) {

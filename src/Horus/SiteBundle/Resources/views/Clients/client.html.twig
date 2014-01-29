@@ -6,11 +6,13 @@
 
 {% block content %}
     <div class="page" id="clients">
+        <a class="btn back btn-danger pull-right" href="{{ path('horus_site_clients') }}">&larr; Revenir à la liste</a>
+
+
         <h1><i class="glyphicon glyphicon-user"></i> Client {{ client.firstname|title }} {{ client.lastname|title }}
         </h1>
-        <a class="btn back btn-danger pull-right" href="{{ path('horus_site_clients') }}">&larr; Revenir à la liste des
-            clients</a>
 
+        <div class="clear"></div>
         <hr class="clear fancy-line">
 
 
@@ -41,20 +43,13 @@
                         class="glyphicon glyphicon-remove"></i></a>
         </p>
 
-        {% if  client.cart is not empty %}
-            <h3>Panier</h3>
-            <p>Total TTC: {{ client.cart.totalTTC }} euros</p>
-            <p>Total HT: {{ client.cart.totalHT }} euros</p>
-            <p>Date de création: {{ client.cart.dateCreated|date('d/m/Y') }}</p>
-        {% endif %}
+        <h3>Son panier</h3>
+        {% include 'HorusSiteBundle:Clients:_panier.html.twig' %}
 
-        {% if  client.addresses is not empty %}
-            <h3>Adresse</h3>
-        {% endif %}
-        {% for adresse in client.addresses %}
-            <p>{{ adresse.adresse }}</p>
-            <p>{{ adresse.zipcode }} {{ adresse.ville|title }}</p>
-        {% endfor %}
+
+        <h3>Adresses</h3>
+        {% include 'HorusSiteBundle:Clients:_listadresses.html.twig' %}
+
     </div>
 {% endblock %}
 

@@ -2,18 +2,28 @@
 
 {% block javascripts %}
     {{ parent() }}
+    {% javascripts '@HorusSiteBundle/Resources/public/js/pages/commentaire.js' %}
+    <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
 {% endblock %}
 
 
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets '@HorusSiteBundle/Resources/public/css/pages/commentaire.sass' filter='yui_css' %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+{% endblock %}
+
 {% block content %}
-    <div id="createcommentaire">
+    <div id="createcommentaire" class="page">
         <a class="btn back btn-danger pull-right" href="{{ path('horus_site_commentaires') }}">&larr; Revenir à la liste
             des commentaires</a>
 
         <h1><i class="glyphicon glyphicon-pencil"></i> Editer un commentaire</h1>
         <hr class="clear fancy-line">
 
-        <form novalidate="novalidate" action="{{ path('horus_site_edit_commentaire', {'id' : commentaire.id}) }}" method="post">
+        <form  novalidate="novalidate" action="{{ path('horus_site_edit_commentaire', {'id' : commentaire.id}) }}" method="post">
             <div class="row-fluid">
                 <div class="span12">
                     <label for="title">Content</label>

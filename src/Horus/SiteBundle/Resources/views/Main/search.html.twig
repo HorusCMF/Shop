@@ -10,9 +10,10 @@
 
 {% block content %}
     <div id="searchproduct" class="page">
-
+        <span id="searchword" class="hide">{{ app.request.query.get('word') }}</span>
+        {#Search Products#}
         {% if produits is not empty %}
-            <h1><i class="glyphicon glyphicon-shopping-cart"></i> Produits pour "{{ app.request.query.get('word') }}" <span class="label-danger label pull-right"><i class="glyphicon glyphicon-shopping-cart"></i> {{ produits.getTotalItemCount }} produits</span></h1>
+            <h1><i class="glyphicon glyphicon-shopping-cart"></i> Produits pour "{{ app.request.query.get('word') }}" <span class="label-danger label"><i class="glyphicon glyphicon-shopping-cart"></i> {{ produits.getTotalItemCount }} produit(s)</span></h1>
             <hr class="clear fancy-line">
             {% include 'HorusSiteBundle:Product:_listproducts.html.twig' %}
         {% endif %}
@@ -23,9 +24,10 @@
         </div>
         <div class="clear"></div>
 
-
+        {#Search Categories#}
         {% if categories is not empty %}
-            <h1><i class="glyphicon glyphicon-list"></i> Catégories pour "{{ app.request.query.get('word') }}" <span class="label-danger label pull-right"><i class="glyphicon glyphicon-shopping-cart"></i> {{ categories.getTotalItemCount }} catégories</span></h1>
+
+            <h1><i class="glyphicon glyphicon-list"></i> Catégories pour "{{ app.request.query.get('word') }}" <span class="label-danger label"><i class="glyphicon glyphicon-shopping-cart"></i> {{ categories.getTotalItemCount }} catégorie(s)</span></h1>
             <hr class="clear fancy-line">
 
         {% include 'HorusSiteBundle:Category:_listcategories.html.twig' %}
@@ -37,10 +39,10 @@
         </div>
         <div class="clear"></div>
 
-
-
+        {#Search Familles #}
         {% if familles is not empty %}
-            <h1><i class="glyphicon glyphicon-th-list"></i> Familles pour "{{ app.request.query.get('word') }}" <span class="label-danger label pull-right"><i class="glyphicon glyphicon-shopping-cart"></i> {{ familles.getTotalItemCount }} familles</span></h1>
+
+            <h1><i class="glyphicon glyphicon-th-list"></i> Familles pour "{{ app.request.query.get('word') }}" <span class="label-danger label"><i class="glyphicon glyphicon-shopping-cart"></i> {{ familles.getTotalItemCount }} famille(s)</span></h1>
             <hr class="clear fancy-line">
 
         {% include 'HorusSiteBundle:Category:_listfamilles.html.twig' %}
@@ -54,13 +56,14 @@
         <div class="clear"></div>
 
 
+        {#Search Pages #}
         {% if pages is not empty %}
-            <h1><i class="glyphicon glyphicon-list-alt"></i> Pages pour "{{ app.request.query.get('word') }}" <span class="label-danger label pull-right"><i class="glyphicon glyphicon-shopping-cart"></i> {{ pages.getTotalItemCount }} pages</span></h1>
+
+            <h1><i class="glyphicon glyphicon-list-alt"></i> Pages pour "{{ app.request.query.get('word') }}" <span class="label-danger label"><i class="glyphicon glyphicon-shopping-cart"></i> {{ pages.getTotalItemCount }} page(s)</span></h1>
             <hr class="clear fancy-line">
 
         {% include 'HorusSiteBundle:CMS:_listpages.html.twig' %}
         {% endif %}
-
 
         <div class="clear"></div>
         <div class="pull-right clearing">
@@ -68,8 +71,10 @@
         </div>
 
 
+        {#Search Articles #}
         {% if articles is not empty %}
-            <h1><i class="glyphicon glyphicon-pencil"></i> Articles pour "{{ app.request.query.get('word') }}" <span class="label-danger label pull-right"><i class="glyphicon glyphicon-shopping-cart"></i> {{ articles.getTotalItemCount }} articles</span></h1>
+
+            <h1><i class="glyphicon glyphicon-pencil"></i> Articles pour "{{ app.request.query.get('word') }}" <span class="label-danger label"><i class="glyphicon glyphicon-shopping-cart"></i> {{ articles.getTotalItemCount }} article(s)</span></h1>
             <hr class="clear fancy-line">
 
         {% include 'HorusSiteBundle:CMS:_listarticles.html.twig' %}
@@ -81,8 +86,11 @@
             {{ knp_pagination_render(articles) }}
         </div>
 
+
+        {#Search Tags #}
         {% if tags is not empty %}
-            <h1><i class="glyphicon glyphicon-tags"></i> Tags pour "{{ app.request.query.get('word') }}" <span class="label-danger label pull-right"><i class="glyphicon glyphicon-shopping-cart"></i> {{ tags.getTotalItemCount }} tags</span></h1>
+
+            <h1><i class="glyphicon glyphicon-tags"></i> Tags pour "{{ app.request.query.get('word') }}" <span class="label-danger label"><i class="glyphicon glyphicon-shopping-cart"></i> {{ tags.getTotalItemCount }} tag(s)</span></h1>
             <hr class="clear fancy-line">
 
         {% include 'HorusSiteBundle:CMS:_listtags.html.twig' %}
@@ -95,9 +103,10 @@
         </div>
 
 
-
+        {#Search Marques #}
         {% if marques is not empty %}
-            <h1><i class="glyphicon glyphicon-tags"></i> Marques pour "{{ app.request.query.get('word') }}" <span class="label-danger label pull-right"><i class="glyphicon glyphicon-shopping-cart"></i> {{ marques.getTotalItemCount }} tags</span></h1>
+
+            <h1><i class="glyphicon glyphicon-tags"></i> Marques pour "{{ app.request.query.get('word') }}" <span class="label-danger label"><i class="glyphicon glyphicon-shopping-cart"></i> {{ marques.getTotalItemCount }} marque(s)</span></h1>
             <hr class="clear fancy-line">
 
         {% include 'HorusSiteBundle:Marques:_listmarques.html.twig' %}
@@ -105,7 +114,27 @@
 
         <div class="clear"></div>
         <div class="pull-right clearing">
-            {{ knp_pagination_render(tags) }}
+            {{ knp_pagination_render(marques) }}
         </div>
+
+        {#Search Marques #}
+        {% if clients is not empty %}
+
+            <h1><i class="glyphicon glyphicon-tags"></i> Clients pour "{{ app.request.query.get('word') }}" <span class="label-danger label"><i class="glyphicon glyphicon-shopping-cart"></i> {{ clients.getTotalItemCount }} client(s)</span></h1>
+            <hr class="clear fancy-line">
+
+        {% include 'HorusSiteBundle:Clients:_listclients.html.twig' %}
+        {% endif %}
+
+        <div class="clear"></div>
+        <div class="pull-right clearing">
+            {{ knp_pagination_render(clients) }}
+        </div>
+
+        <div class="clear"></div>
+        {% if vide == "true" %}
+            <h1><i class="glyphicon glyphicon-ban-circle"></i> Aucun résultat ne corresponds à votre recherche "{{ keywords }}"</h1>
+        {% endif %}
+
     </div>
 {% endblock %}

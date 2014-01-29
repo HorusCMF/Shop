@@ -44,6 +44,30 @@ class Addresses
 
     /**
      * @var string
+     * @ORM\Column(name="adresse2", type="string", nullable=true)
+     */
+    private $adresse2;
+
+    /**
+     * @var string
+     * @ORM\Column(name="etage", type="string", nullable=true)
+     */
+    private $etage;
+
+    /**
+     * @var string
+     * @ORM\Column(name="numero", type="string", nullable=true)
+     */
+    private $numero;
+    
+    /**
+     * @var string
+     * @ORM\Column(name="interphone", type="string", nullable=true)
+     */
+    private $interphone;
+
+    /**
+     * @var string
      * @ORM\Column(name="ville", type="string", nullable=true)
      */
     private $ville;
@@ -229,5 +253,93 @@ class Addresses
     {
         $this->client = $client;
         return $this;
+    }
+
+    /**
+     * Set adresse2
+     *
+     * @param string $adresse2
+     * @return Addresses
+     */
+    public function setAdresse2($adresse2)
+    {
+        $this->adresse2 = $adresse2;
+        return $this;
+    }
+
+    /**
+     * Get adresse2
+     *
+     * @return string 
+     */
+    public function getAdresse2()
+    {
+        return $this->adresse2;
+    }
+
+    /**
+     * Set etage
+     *
+     * @param string $etage
+     * @return Addresses
+     */
+    public function setEtage($etage)
+    {
+        $this->etage = $etage;
+        return $this;
+    }
+
+    /**
+     * Get etage
+     *
+     * @return string 
+     */
+    public function getEtage()
+    {
+        return $this->etage;
+    }
+
+    /**
+     * Set numero
+     *
+     * @param string $numero
+     * @return Addresses
+     */
+    public function setNumero($numero)
+    {
+        $this->numero = $numero;
+        return $this;
+    }
+
+    /**
+     * Get numero
+     *
+     * @return string 
+     */
+    public function getNumero()
+    {
+        return $this->numero;
+    }
+
+    /**
+     * Set interphone
+     *
+     * @param string $interphone
+     * @return Addresses
+     */
+    public function setInterphone($interphone)
+    {
+        $this->interphone = $interphone;
+        return $this;
+    }
+
+    /**
+     * Get interphone
+     *
+     * @return string 
+     */
+    public function getInterphone()
+    {
+        return $this->interphone;
     }
 }

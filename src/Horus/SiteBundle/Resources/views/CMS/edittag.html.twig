@@ -2,11 +2,21 @@
 
 {% block javascripts %}
     {{ parent() }}
+    {% javascripts '@HorusSiteBundle/Resources/public/js/pages/tag.js' %}
+    <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets '@HorusSiteBundle/Resources/public/css/pages/tag.sass' filter='yui_css' %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+    {% endstylesheets %}
 {% endblock %}
 
 
 {% block content %}
-    <div id="edittag">
+    <div id="edittag" class="page">
         <a class="btn back btn-danger pull-right" href="{{ path('horus_site_tags') }}">&larr; Revenir à la liste des
             tags</a>
 
@@ -15,7 +25,7 @@
 
         <hr class="clear fancy-line">
 
-        <form novalidate="novalidate" action="{{ path('horus_site_edit_tag',{'id' : tag.id}) }}" method="post">
+        <form  novalidate="novalidate" action="{{ path('horus_site_edit_tag',{'id' : tag.id}) }}" method="post">
 
             <div class="row-fluid">
                 <div class="span12">

@@ -1,0 +1,411 @@
+{% extends 'HorusSiteBundle::layout.html.twig' %}
+
+
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/horussite/js/jRating.jquery.min.js') }}"></script>
+    {% javascripts '@HorusSiteBundle/Resources/public/js/pages/produits.js' %}
+    <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/horussite/css/jRating.jquery.css') }}"/>
+
+    {% stylesheets '@HorusSiteBundle/Resources/public/css/pages/category.sass' filter='yui_css' %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+{% endblock %}
+
+{% block content %}
+<div id="visualizeproduct" class="page">
+<div class="well">
+<a class="btn back btn-danger pull-right" href="{{ path('horus_site_products') }}">&larr; Revenir à la liste de
+    produit</a>
+
+
+<h1><i class="glyphicon glyphicon-search"></i> "{{ produit.title|title }}"</h1>
+
+<div class="star" data-average="{{ produit.average }}"></div>
+
+<div class="pull-right">
+    {% if produit.isVisible %}
+        <span class="label label-success"><i class="glyphicon glyphicon-ok"></i> Produit est en ligne</span>
+    {% else %}
+        <span class="label label-danger"><i class="glyphicon glyphicon-remove"></i> Hors-ligne</span>
+    {% endif %}
+</div>
+<hr class="clear fancy-line">
+<div class="span3 pull-right">
+    {% if produit.starPicture %}
+        <a href="{{ imgproducts ~  produit.id ~ '/' ~ produit.starPicture.path|sizes('big') }}" rel="group"
+           class="pull-right fancybox">
+            <img class="media-object img-thumbnail"
+                 src="{{ imgproducts ~  produit.id ~ '/' ~ produit.starPicture.path|sizes('medium') }}"/>
+        </a>
+    {% else %}
+        <img class="media-object  pull-right img-thumbnail" src="http://placehold.it/150x75" alt="...">
+    {% endif %}
+</div>
+<h3><i class="glyphicon glyphicon-bookmark"></i>
+    Description
+</h3>
+
+
+<p>
+    <strong>Accroche:</strong> {{ produit.accroche|default('Aucune pour le moment') }}
+</p>
+
+<p>
+    <strong>Référence:</strong> {{ produit.reference|default('Aucune     pour le moment') }}
+</p>
+
+<p>
+    <strong>Catégorie principale:</strong> {{ produit.category.name|default('Aucune pour le moment') }}
+</p>
+
+<p>
+    <strong>Prix HT: </strong> {{ produit.prixHT }}€
+</p>
+
+<p>
+    <strong>Prix TTC: </strong> {{ produit.prixTTC }}€
+</p>
+
+<p>
+    <strong>TVA: </strong> {{ produit.tva }}%
+</p>
+
+<p>
+    <strong>Date de
+        disponibilité: </strong> {{ produit.datePublication|date('d/m/Y')|default('Aucune pour le moment') }}
+</p>
+
+<p>
+    <strong>Quantité: </strong> {{ produit.quantity }} produits
+</p>
+
+<p>
+    <strong>Ean:</strong> {{ produit.ean|default('Aucun pour le moment') }}
+</p>
+
+<p>
+    <strong>Service:</strong> {{ produit.service|raw|default('Aucun pour le moment') }}
+</p>
+
+<p>
+    {% if produit.etat == 1 %}
+        <strong>Etat: </strong> Neuf
+    {% elseif produit.etat == 2 %}
+        <strong>Etat: </strong> Occasion
+    {% elseif produit.etat == 3 %}
+        <strong>Etat: </strong> Reconditionné
+    {% endif %}
+</p>
+
+<p>
+    {% if produit.status == 1 %}
+        <strong>Status: </strong> Disponible à la vente
+    {% elseif produit.status == 2 %}
+        <strong>Status: </strong> Juste afficher le prix
+    {% elseif produit.status == 3 %}
+        <strong>Status: </strong> Gratuit
+    {% endif %}
+</p>
+
+<p>
+    {% if produit.tva == 1 %}
+        <strong>TVA: </strong> 19.6%
+    {% elseif produit.tva == 2 %}
+        <strong>TVA: </strong> 20%
+    {% elseif produit.tva == 3 %}
+        <strong>TVA: </strong> 7%
+    {% elseif produit.tva == 4 %}
+        <strong>TVA: </strong> 10%
+    {% elseif produit.tva == 5 %}
+        <strong>TVA: </strong> 5.5%
+    {% elseif produit.tva == 6 %}
+        <strong>TVA: </strong> 2.1%
+    {% endif %}
+</p>
+
+{% if produit.prodparent.title is defined %}
+    <p>
+        <strong>Produit parent: </strong> {{ produit.prodparent.title }} <a
+                href="{{ path('horus_site_product', {'id' : produit.prodparent.id }) }}">Voir le
+            produit</a>
+    </p>
+{% endif %}
+<p>
+    <strong>Accroche: </strong> {{ produit.accroche|default('Aucun pour le moment') }}
+</p>
+
+<h3><i class="glyphicon glyphicon-minus"></i> Résumé</h3>
+
+<div class="contenthtml">
+    {{ produit.cover|raw }}
+</div>
+
+
+
+<h3><i class="glyphicon glyphicon-plus"></i> Description <button type="button" class="btn btn-primary btn-md pull-right" data-toggle="collapse" data-target="#desc"><i class="glyphicon glyphicon-search"></i> Voir la description</button></h3>
+
+<div id="desc" class="collapse">
+    <div class="contenthtml">
+        {{ produit.content|raw }}
+    </div>
+</div>
+
+<h3><i class="glyphicon glyphicon-cog"></i> Caractéristiques</h3>
+<table class="table-hover table table-bordered">
+    <thead>
+    <tr>
+        <th>Poid(Kg.)</th>
+        <th>Longeur(cm.)</th>
+        <th>Largeur(cm.)</th>
+        <th>Hauteur(cm.)</th>
+        <th>Profondeur(cm.)</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>{{ produit.poid|default('Non précisé') }}</td>
+        <td>{{ produit.longeur|default('Non précisé') }}</td>
+        <td>{{ produit.largeur|default('Non précisé') }}</td>
+        <td>{{ produit.hauteur|default('Non précisé') }}</td>
+        <td>{{ produit.profondeur|default('Non précisé') }}</td>
+    </tr>
+    </tbody>
+</table>
+
+<h3><i class="glyphicon glyphicon-paperclip"></i> Extras</h3>
+{% if video.html is defined %}
+    <h5>La vidéo de ce produit</h5>
+    <div class="span12">
+        {{ video.html|raw }}
+    </div>
+{% endif %}
+<div class="row-fluid">
+    <div class="span6">
+        <h5>Sécurité: {{ produit.securite|raw|default('Aucune de préciser pour ce produit') }}</h5>
+        <h5>Service: {{ produit.service|raw|default('Aucune de préciser pour ce produit') }}</h5>
+    </div>
+    <div class="span6">
+    {% if produit.pjs is not empty %}
+        <h4><i class="glyphicon glyphicon-download-alt"></i> Fichiers joints:</h4>
+        <div class="pjs">
+            {% for pj in produit.pjs %}
+                <div class="">
+                    <div class="row-fluid">
+                        <div class="col-md-6">
+                            <a href="{{ documentsuploads ~ produit.id ~ '/' ~ pj.path }}"
+                               target="_blank">
+                                <i class="glyphicon glyphicon-file"></i>{{ pj.path }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                <div class="alert alert-danger">
+                    <i class="glyphicon glyphicon-remove"></i> Aucun fichier joint pour le moment
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+    </div>
+</div>
+
+<h3><i class="glyphicon glyphicon-picture"></i> Images</h3>
+
+<div id="photos">
+    {% for image in produit.images %}
+        <div class="span3 {% if image.cover %}coverimg{% endif %}">
+            <a class="btn btn-primary"
+
+               href="{{ path('horus_site_remove_image_product', {'id' : image.id}) }}"><i
+                        class="glyphicon glyphicon-remove"></i></a>
+            <a class="btn btn-primary"
+               href="{{ path('horus_site_cover_image_product', {'id' : image.id}) }}"><i
+                        class="glyphicon glyphicon-heart"></i></a>
+            <a rel="group" class="pull-left fancybox" href="{{ imgproducts ~  produit.id ~ '/' ~ image.path }}">
+                <img class="img-thumbnail zoom" src="{{ imgproducts ~  produit.id ~ '/' ~ image.path }}"/>
+            </a>
+        </div>
+
+    {% else %}
+        <div class="alert alert-dismissable alert-warning">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <i class="glyphicon glyphicon-warning-sign"></i> Aucune photo pour le moment
+        </div>
+    {% endfor %}
+</div>
+<div class="clear">
+
+    <h3><i class="glyphicon glyphicon-th-list"></i> Fiches Techniques</h3>
+
+    {% if produit.metas is not empty %}
+        <table class="table table-bordered table-striped">
+            <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Contenu</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for meta in produit.metas %}
+                <tr>
+                    <td><strong>{{ meta.title|default('Aucun titre précisé') }}</strong></td>
+                    <td>{{ meta.content|default('Aucune valeur précisé') }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <div class="alert alert-dismissable alert-warning">
+            <i class="glyphicon glyphicon-warning-sign"></i> Aucune fiche technique pour le moment
+        </div>
+    {% endif %}
+
+    <h3><i class="glyphicon glyphicon-tasks"></i> SEO</h3>
+
+    {% if produit.seo is not empty %}
+        {% for seo in produit.seo %}
+            <p>Titre: {{ seo.title }}</p>
+            <p>Mots-clefs: {{ seo.keywords }}</p>
+            <p>Description: {{ seo.description }}</p>
+        {% endfor %}
+    {% else %}
+        <div class="alert alert-dismissable alert-warning">
+            <i class="glyphicon glyphicon-warning-sign"></i> Aucune SEO pour le moment
+        </div>
+    {% endif %}
+
+    <h3><i class="glyphicon glyphicon-tasks"></i> Liens</h3>
+
+    {% if produit.liens is not empty %}
+        <ul class="btn-group-vertical">
+        {% for lien in produit.liens %}
+            <li><a href="{{ lien.link }}"><i class="glyphicon glyphicon-paperclip"></i> {{ lien.aliasing }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <div class="alert alert-dismissable alert-warning">
+            <i class="glyphicon glyphicon-warning-sign"></i> Aucune SEO pour le moment
+        </div>
+    {% endif %}
+
+
+    <h3><i class="glyphicon glyphicon-th"></i> Marque associé: </h3>
+    {% include 'HorusSiteBundle:Marques:_listmarques.html.twig' %}
+
+    <h3><i class="glyphicon glyphicon-th"></i> Fournisseur associé: </h3>
+
+    {% for fournisseur in fournisseurs %}
+        <div class="media">
+            <div class="btn-group pull-right">
+                <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
+                    <i class="glyphicon glyphicon-plus"></i> Action <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a onclick="return(confirm('Etes-vous sûr de vouloir supprimer ce fournisseur ?'));"
+                           href="{{ path('horus_site_remove_fournisseurs', {'id' : fournisseur.id}) }}"><i
+                                    class="glyphicon glyphicon-remove"></i> Supprimer</a></li>
+                    <li><a href="{{ path('horus_site_edit_fournisseurs', {'id' : fournisseur.id}) }}"><i
+                                    class="glyphicon glyphicon-pencil"></i> Editer</a></li>
+                    <li><a href="{{ path('horus_site_edit_pictures_fournisseurs', {'id' : fournisseur.id}) }}"><i
+                                    class="glyphicon glyphicon-camera"></i> Photos</a></li>
+                </ul>
+            </div>
+            <a class="pull-left">
+                {% if fournisseur.path %}
+                    <img class="img-polaroid"
+                         src="{{ imgfournisseurs ~ fournisseur.id ~ '/' ~ fournisseur.path|sizes('medium') }}"/>
+                {% else %}
+                    <img class="media-object img-thumbnail" src="http://placehold.it/150x75" alt="...">
+                {% endif %}
+            </a>
+
+            <div class="media-body">
+                <h4 class="media-heading"><a href="">{{ fournisseur.title }}</a>
+                    {% if fournisseur.active %}
+                        <span class="badge badge-success">En ligne</span>
+                    {% else %}
+                        <span class="badge badge-danger">Hors-Ligne</span>
+                    {% endif %}
+                </h4>
+
+                <p>{{ fournisseur.resume|striptags|truncate(900,'...')|raw }}</p>
+            </div>
+        </div>
+        {% if not loop.last %}
+            <hr class="clear fancy-line"/>{% endif %}
+    {% else %}
+        <div class="alert alert-dismissable alert-danger">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <i class="glyphicon glyphicon-info-sign"></i> Aucun fournisseur de créer pour le moment.
+            <div class="clear"></div>
+        </div>
+    {% endfor %}
+
+    <h3><i class="glyphicon glyphicon-retweet"></i> Les dernières commandes</h3>
+
+    {% if commandes is not empty %}
+        <table class="table">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Référence</th>
+                <th>Client</th>
+                <th>Prix TTC</th>
+                <th>Transporteur</th>
+                <th>Etat</th>
+                <th>Date</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% include 'HorusSiteBundle:Commandes:_listcommandesinline.html.twig' with {'commandes' : commandes} %}
+            </tbody>
+        </table>
+    {% else %}
+        <div class="alert alert-dismissable alert-danger">
+            <i class="glyphicon glyphicon-info-sign"></i> Aucune commandes pour le moment sur ce produit.
+            <div class="clear"></div>
+        </div>
+    {% endif %}
+
+
+    <h3><i class="glyphicon glyphicon-comment"></i> Les commentaires</h3>
+    {% include 'HorusSiteBundle:Commentaires:_listcommentaires.html.twig' %}
+
+    <h3><i class="glyphicon glyphicon-tags"></i> Articles relatifs</h3>
+    {% include 'HorusSiteBundle:CMS:_listarticles.html.twig' %}
+
+    <h3><i class="glyphicon glyphicon-th-large"></i> Catégories secondaires</h3>
+    {% include 'HorusSiteBundle:Category:_listcategories.html.twig' %}
+
+    <h3><i class="glyphicon glyphicon-th"></i> Familles: </h3>
+    {% include 'HorusSiteBundle:Category:_listfamilles.html.twig' %}
+
+    <h3><i class="glyphicon glyphicon-record"></i> Accessoires</h3>
+    {% include 'HorusSiteBundle:Product:_listproducts.html.twig' with {'produits': produitsaccessoires} %}
+
+    <h3><i class="glyphicon glyphicon-briefcase"></i> Mots clefs: </h3>
+    {% include 'HorusSiteBundle:CMS:_listtags.html.twig' %}
+
+    <br/>
+    <br/>
+    <br/>
+
+    <div class="action">
+        <a href="{{ path('horus_site_edit_product', {'id' : produit.id}) }}" class="btn btn-primary pull-right"><i
+                    class="glyphicon glyphicon-pencil"></i> Editer ce produit</a>
+
+        <div class="clear"></div>
+    </div>
+</div>
+</div>
+{% endblock %}
+

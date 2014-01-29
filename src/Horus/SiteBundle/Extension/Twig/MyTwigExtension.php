@@ -79,7 +79,8 @@ class MyTwigExtension extends \Twig_Extension
             'etudes' => new \Twig_Filter_Method($this, 'etudes'),
             'commandes' => new \Twig_Filter_Method($this, 'commandes'),
             'commandesclasses' => new \Twig_Filter_Method($this, 'commandesclasses'),
-            'characters' => new \Twig_Filter_Method($this, 'characters')
+            'characters' => new \Twig_Filter_Method($this, 'characters'),
+            'adressenature' => new \Twig_Filter_Method($this, 'adressenature')
         );
     }
 
@@ -156,6 +157,23 @@ class MyTwigExtension extends \Twig_Extension
             return 'Autre';
         } else {
             return "Autre";
+        }
+    }
+
+    /**
+     * @param int $expr
+     * @return string
+     */
+    public function adressenature($expr = 1)
+    {
+        if ($expr == 1) {
+            return 'Livraison/Facturation';
+        } elseif ($expr == 2) {
+            return "Livraison";
+        }elseif ($expr == 3) {
+            return "Facturation";
+        } else{
+            return 'Livraison/Facturation';
         }
     }
 

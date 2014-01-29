@@ -371,6 +371,12 @@ class Client extends EntityRepository  implements AdvancedUserInterface, \Serial
 
 
     /**
+     * @ORM\OneToMany(targetEntity="Commandes", mappedBy="client", cascade={"all"},orphanRemoval=true)
+     */
+    protected $commandes;
+
+
+    /**
      * @ORM\OneToMany(targetEntity="Addresses", mappedBy="client", cascade={"all"}, orphanRemoval=true)
      * @ORM\OrderBy({"dateCreated" = "DESC"})
      */
@@ -1697,5 +1703,37 @@ class Client extends EntityRepository  implements AdvancedUserInterface, \Serial
     public function getAddresses()
     {
         return $this->addresses;
+    }
+
+    /**
+     * Add commandes
+     *
+     * @param Horus\SiteBundle\Entity\Commandes $commandes
+     * @return Client
+     */
+    public function addCommande(\Horus\SiteBundle\Entity\Commandes $commandes)
+    {
+        $this->commandes[] = $commandes;
+        return $this;
+    }
+
+    /**
+     * Remove commandes
+     *
+     * @param Horus\SiteBundle\Entity\Commandes $commandes
+     */
+    public function removeCommande(\Horus\SiteBundle\Entity\Commandes $commandes)
+    {
+        $this->commandes->removeElement($commandes);
+    }
+
+    /**
+     * Get commandes
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getCommandes()
+    {
+        return $this->commandes;
     }
 }

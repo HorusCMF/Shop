@@ -36,6 +36,7 @@ class PageType extends AbstractType
                     'required' => false,
                     'empty_value' => 'Choisissez une page parente'
                 ))
+                ->add('file')
                 ->add('articles')
                 ->add('produits');
     }

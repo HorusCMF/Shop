@@ -2,19 +2,24 @@
 
 {% block javascripts %}
     {{ parent() }}
-
+    {% javascripts '@HorusSiteBundle/Resources/public/js/pages/tag.js' %}
+    <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
 {% endblock %}
 
 
 {% block content %}
 
-    <div id="createtag">
+    <div id="createtag" class="page">
         <a class="btn back btn-danger pull-right" href="{{ path('horus_site_tags') }}">&larr; Revenir à la liste des tags</a>
 
         <h1><i class="glyphicon glyphicon-tag"></i> Créer un tag</h1>
         <hr class="clear fancy-line">
 
-        <form novalidate="novalidate" action="{{ path('horus_site_tag_create') }}" method="post">
+        <div class="alert alert-warning">
+            <i class="glyphicon glyphicon-info-sign"></i>Pour créer plusieurs mots-clefs à la fois, vous devez séparer vos motfs-clefs par des points-vigules ";"
+        </div>
+        <form  novalidate="novalidate" action="{{ path('horus_site_tag_create') }}" method="post">
 
             <div class="row-fluid">
                 <div class="span12">

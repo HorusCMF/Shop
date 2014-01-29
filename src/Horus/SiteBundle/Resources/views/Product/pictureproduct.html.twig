@@ -7,48 +7,48 @@
     {% javascripts '@HorusSiteBundle/Resources/public/js/product.js' filter="cssrewrite" %}
     <script src="{{ asset_url }}" type="text/javascript"></script>
     {% endjavascripts %}
+
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets '@HorusSiteBundle/Resources/public/css/pages/category.sass' filter='yui_css' %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+    {% endstylesheets %}
 {% endblock %}
 
 
 {% block content %}
-    <div id="pictureproduct" class="page">
-        <a class="btn back btn-danger pull-right" href="{{ path('horus_site_products') }}">&larr; Revenir à la liste de
-            produit</a>
+<div id="pictureproduct" class="page">
+    <a class="btn back btn-danger pull-right" href="{{ path('horus_site_products') }}">&larr; Revenir à la liste de
+        produit</a>
 
-        <h1><i class="glyphicon glyphicon-camera"></i> Photos "{{ produit.title|title }}"</h1>
-        <hr class="clear fancy-line">
-        <h3>Les photos</h3>
-        <table>
-            <tbody>
-            {% for image in produit.images %}
-                <tr>
-                    <td>
-                        {% if image.cover %}
-                            <span class="label label-success">Cette photo a été mise en avant</span><br/><br/>
-                        {% endif %}
-                        <a class="btn btn-primary"
+    <h1><i class="glyphicon glyphicon-camera"></i> Photos "{{ produit.title|title }}"</h1>
+    <hr class="clear fancy-line">
+    <h3>Les photos</h3>
 
-                           href="{{ path('horus_site_remove_image_product', {'id' : image.id}) }}"><i
-                                    class="glyphicon glyphicon-remove"></i></a>
-                        <a class="btn btn-primary"
-                           href="{{ path('horus_site_cover_image_product', {'id' : image.id}) }}"><i
-                                    class="glyphicon glyphicon-heart"></i></a>
-                    </td>
-                    <td>
-                        <a rel="group" class="pull-left fancybox" href="{{ imgproducts ~  produit.id ~ '/' ~ image.path }}">
-                            <img class="img-thumbnail zoom" src="{{ imgproducts ~  produit.id ~ '/' ~ image.path }}"/>
-                        </a>
+    <div id="photos">
 
-                    </td>
-                </tr>
-            {% else %}
-                <div class="alert alert-dismissable alert-warning">
-                    <button type="button" class="close" data-dismiss="alert">×</button>
-                    <i class="glyphicon glyphicon-warning-sign"></i> Aucune photo pour le moment
-                </div>
-            {% endfor %}
-            </tbody>
-        </table>
+        {% for image in produit.images %}
+            <div class="span3 {% if image.cover %}coverimg{% endif %}">
+                <a class="btn btn-primary"
+
+                   href="{{ path('horus_site_remove_image_product', {'id' : image.id}) }}"><i
+                            class="glyphicon glyphicon-remove"></i></a>
+                <a class="btn btn-primary"
+                   href="{{ path('horus_site_cover_image_product', {'id' : image.id}) }}"><i
+                            class="glyphicon glyphicon-heart"></i></a>
+                <a rel="group" class="pull-left fancybox" href="{{ imgproducts ~  produit.id ~ '/' ~ image.path }}">
+                    <img class="img-thumbnail zoom" src="{{ imgproducts ~  produit.id ~ '/' ~ image.path }}"/>
+                </a>
+            </div>
+
+        {% else %}
+            <div class="alert alert-dismissable alert-warning">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <i class="glyphicon glyphicon-warning-sign"></i> Aucune photo pour le moment
+            </div>
+        {% endfor %}
 
         <hr class="clear"/>
 
@@ -62,5 +62,5 @@
             </div>
         </form>
     </div>
-{% endblock %}
+    {% endblock %}
 

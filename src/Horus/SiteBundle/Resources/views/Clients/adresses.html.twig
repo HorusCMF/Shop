@@ -1,0 +1,123 @@
+{% extends 'HorusSiteBundle::layout.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script>
+        var map;
+        var geocoder = new google.maps.Geocoder();
+        var bounds = new google.maps.LatLngBounds();
+
+        var myLatlng = new google.maps.LatLng(48.862253,2.357903);
+        var mapOptions = {
+            zoom: 6,
+            center: myLatlng
+        };
+
+        var map = new google.maps.Map(document.getElementById('map-canvas'),
+                mapOptions);
+
+        {% for address in addresses %}
+            var address = "{{ address.adresse }} {{ address.zipcode }} {{ address.ville }}";
+            geocoder.geocode({ 'address': address}, function(results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    var contentString = '<div id="content">'+
+                            '<h1 id="firstHeading" class="firstHeading">'+ address +'</h1>'+
+                            '<div id="bodyContent">'+
+                            '</div>'+
+                            '</div>';
+                    var infowindow = new google.maps.InfoWindow({
+                        content: contentString
+                    });
+
+                    var marker = new google.maps.Marker({
+                        map: map,
+                        position: results[0].geometry.location
+                    });
+                    google.maps.event.addListener(marker, 'click', function() {
+                        infowindow.open(map,marker);
+                    });
+                    map.setCenter(marker.getPosition());
+                }
+            });
+        {% endfor %}
+    </script>
+    {% javascripts '@HorusSiteBundle/Resources/public/js/pages/adresses.js' %}
+    <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+
+{% block stylesheets %}
+    {{ parent() }}
+
+{% endblock %}
+
+
+{% block content %}
+    <div class="page" id="adresses">
+        <a class="btn back btn-danger pull-right" href="{{ path('horus_site_clients') }}">&larr; Revenir à la liste</a>
+
+        <h1><i class="glyphicon glyphicon-map-marker"></i> Adresses du
+            client {{ client.firstname|title }} {{ client.lastname|title }}</h1>
+
+
+        {% include 'HorusSiteBundle:Clients:_listadresses.html.twig' %}
+
+        {% if addresses is not empty %}
+            <h3>Carte des adresses</h3>
+            <div id="map-canvas"></div>
+        {% endif %}
+
+        <form novalidate="novalidate" action="{{ path('horus_site_adresses_client', {'id': client.id}) }}"
+              method="post">
+            <h3>Changements des adresses</h3>
+            <div class="addresses" data-prototype="{{ form_widget(form.addresses.vars.prototype)|e }}">
+                {% for adresse in form.addresses %}
+                    <div class="row-fluid">
+                        <h2>Adresse {{ loop.index }}</h2>
+
+                        <div class="row-fluid">
+                            <div class="span6">
+                                <h3>Type</h3>
+                                {{ form_row(adresse.nature) }}
+                            </div>
+                            <div class="span6">
+                                <h3>Adresse</h3>
+                                {{ form_row(adresse.adresse) }}
+                                {{ form_row(adresse.adresse2) }}
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span6">
+                                <h3>Localisation</h3>
+                                {{ form_row(adresse.zipcode) }}
+                                {{ form_row(adresse.ville) }}
+                            </div>
+                            <div class="span6">
+                                <h3>Précision</h3>
+                                {{ form_row(adresse.etage) }}
+                                {{ form_row(adresse.numero) }}
+                                {{ form_row(adresse.interphone) }}
+                            </div>
+                        </div>
+                    </div>
+                    {% if not loop.last %}
+                        <hr class="clear"/>
+                    {% endif %}
+                {% endfor %}
+            </div>
+    </div>
+    {{ form_row(form) }}
+
+    <button class="btn btn-primary btn-large" type="submit"><i class="glyphicon glyphicon-plus"></i> Créer
+        cette adresse
+    </button>
+    </form>
+
+    <div class="clear"></div>
+    <hr class="clear fancy-line">
+
+    </div>
+{% endblock %}
+

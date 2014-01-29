@@ -14,20 +14,31 @@
                 {% endif %}
             </ul>
         </div>
+        <a class="pull-left">
+            {% if page.picture %}
+                <a href="{{ imgpages ~ page.picture|sizes('big') }}" rel="group" class="pull-left fancybox">
+                    <img src="{{ imgpages  ~ page.picture|sizes('medium') }}"/>
+                </a>
+            {% else %}
+                <img class="media-object img-thumbnail" src="http://placehold.it/150x75" alt="...">
+            {% endif %}
+            <p class="text-warning"><i class="glyphicon glyphicon-eye-open"></i> {{ page.vues }} vues</p>
+        </a>
 
 
         <div class="media-body">
-            <h4 class="media-heading"><a href="{{ path('horus_site_edit_page', {'id' : page.id}) }}">{{ page.name }}</a>
+            <h4 class="media-heading"><a href="{{ path('horus_site_edit_page', {'id' : page.id}) }}">{{ page.name }}
+                </a>
                 {% if page.nature == 3 %}
                     <span class="badge badge-success">En ligne</span>
                 {% elseif page.nature == 2  %}
                     <span class="badge badge-warning">En cours de relecture</span>
                 {% else %}
-                    <span class="badge badge-danger">Hors-Ligne</span>
+                    <span class="badge badge-danger">Brouillon</span>
                 {% endif %}
             </h4>
             <p>{{ page.cover|striptags|truncate(900,'...')|raw }}</p>
-            <h4 class="pull-right"><span class="label label-info">{{ page.produits|length|default('0') }} produit(s)</span></h4>
+            <h4 class="pull-right"><span class="label label-warning">{{ page.produits|length|default('0') }} produit(s) affecté(s)</span></h4>
         </div>
     </div>
     {% if not loop.last %}

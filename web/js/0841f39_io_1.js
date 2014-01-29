@@ -1,9 +1,7 @@
 $(document).ready(function () {
 
-    var socket = io.connect('http://www.freakinjob.com:1665');
+    var socket = io.connect('http://www.horus.ju:1665');
     var me = null;
-
-
 
 
     /*****************Handle All actions******************/
@@ -23,7 +21,9 @@ $(document).ready(function () {
         $('#messagerie #messages').append($elt);
         $elt.show('slow');
         $('#messagerie #messages').animate({scrollTop:$('#messagerie #messages').prop('scrollHeight')}, 500);
+        $('h3#btn-tchat').css('backgroundColor','chocolate');
     });
+
 
 
 

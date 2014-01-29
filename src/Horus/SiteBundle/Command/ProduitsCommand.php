@@ -20,8 +20,8 @@ class ProduitsCommand extends ContainerAwareCommand {
      * Secure command linbe with param true
      */
     protected function configure() {
-        $this->setName('meetsy:remplissage:meets')
-                ->setDescription('Remplissage des Meets')
+        $this->setName('produit:remplissage:meets')
+                ->setDescription('Remplissage de datas')
                 ->addArgument('activation', InputArgument::REQUIRED, 'Activation de la tâche?');
     }
 

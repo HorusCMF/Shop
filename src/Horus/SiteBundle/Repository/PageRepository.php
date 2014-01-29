@@ -24,6 +24,18 @@ class PageRepository extends EntityRepository
         return $queryBuilder;
     }
 
+    /**
+     * Get Active Page
+     * @return \Doctrine\ORM\QueryBuilder
+     */
+    public function getCountValidPages($state = 3)
+    {
+        $query = $this->getEntityManager()
+            ->createQuery("SELECT COUNT(a.id) FROM HorusSiteBundle:Page a WHERE a.nature = :state")
+            ->setParameter('state', $state);
+        return $query->getSingleScalarResult();
+    }
+
 
     /**
      * Is Article

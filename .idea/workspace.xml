@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/Horus/SiteBundle/Listener/NotificationsListener.php" line="161" />
+    <bookmark url="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Product/product.html.twig" line="297" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3710369-12cf-41a7-b768-bf355bf28dfd" name="Default" comment="" />
@@ -12,27 +12,26 @@
     <file path="/routing_dev.yml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387487820106" ignored="false" />
     <file path="/DefaultController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384629268610" ignored="false" />
     <file path="/hello.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382280929118" ignored="false" />
-    <file path="/routing.yml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1388068281070" ignored="false" />
+    <file path="/routing.yml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390921512773" ignored="false" />
     <file path="/partial.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381814432181" ignored="false" />
-    <file path="/ArticleRepository.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387276892668" ignored="false" />
-    <file path="/Article.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387040768599" ignored="false" />
-    <file path="/layout.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387488335393" ignored="false" />
+    <file path="/ArticleRepository.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390772111790" ignored="false" />
+    <file path="/Article.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390668153615" ignored="false" />
+    <file path="/layout.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390566297288" ignored="false" />
     <file path="/another.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381814942330" ignored="false" />
     <file path="/page2.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381815291193" ignored="false" />
     <file path="/test.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382288173508" ignored="false" />
     <file path="/test.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381817139137" ignored="false" />
     <file path="/hetic.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382015567061" ignored="false" />
     <file path="/AppKernel.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1386973955161" ignored="false" />
-    <file path="/config.yml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387402987424" ignored="false" />
-    <file path="/SearchType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381858398883" ignored="false" />
+    <file path="/config.yml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390842048224" ignored="false" />
+    <file path="/SearchType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390569854429" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/AbstractType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382374214535" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/FormBuilder.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381858574203" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/KernelInterface.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381858574203" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/FormTypeInterface.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382374214535" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/Response.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811188" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/FormBuilderInterface.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381858574203" ignored="false" />
-    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/ContainerAware.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811191" ignored="false" />
-    <file path="/security.yml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385290114534" ignored="false" />
+    <file path="/security.yml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390646469971" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bridge/Twig/phpunit.xml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811188" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/phpunit.xml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811188" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Routing/Tests/Fixtures/missing_id.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1381923811188" ignored="false" />
@@ -193,17 +192,16 @@
     <file path="$PROJECT_DIR$/web/bundles/framework/css/structure.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273328" ignored="false" />
     <file path="$PROJECT_DIR$/web/bundles/sensiodistribution/webconfigurator/css/configurator.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382282610866" ignored="false" />
     <file path="$PROJECT_DIR$/web/bundles/framework/css/exception.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382282610866" ignored="false" />
-    <file path="/topmenu.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387489473381" ignored="false" />
+    <file path="/topmenu.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390777240842" ignored="false" />
     <file path="/index.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382347449100" ignored="false" />
     <file path="/ArticleType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387039521701" ignored="false" />
     <file path="/edit.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382978485299" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/FormInterface.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382374214535" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Validator/Constraints/Length.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382374214535" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/Form.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382374214535" ignored="false" />
-    <file path="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382374214535" ignored="false" />
     <file path="/Category.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1386537099561" ignored="false" />
     <file path="/administration.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382376719618" ignored="false" />
-    <file path="/a.dummy" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387726537118" ignored="false" />
+    <file path="/a.dummy" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390902355049" ignored="false" />
     <file path="/Tags.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382385426953" ignored="false" />
     <file path="/detail.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382388420900" ignored="false" />
     <file path="/detail.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382976586741" ignored="false" />
@@ -211,20 +209,20 @@
     <file path="/CategoryRepository.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387319036414" ignored="false" />
     <file path="/index.sass" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382974805137" ignored="false" />
     <file path="/Star.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382907172452" ignored="false" />
-    <file path="/articlesingle.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383045087126" ignored="false" />
-    <file path="/categorydetail.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383044523933" ignored="false" />
+    <file path="/articlesingle.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389541615759" ignored="false" />
+    <file path="/categorydetail.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389541586651" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/doctrine/orm/tools/sandbox/xml/Entities.User.dcm.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382955655286" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/doctrine/orm/build.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382955655286" ignored="false" />
     <file path="/leftnav.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1382975148403" ignored="false" />
-    <file path="/main.sass" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1388837709864" ignored="false" />
+    <file path="/main.sass" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1391021284302" ignored="false" />
     <file path="/DefaultControllerTest.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383046329481" ignored="false" />
-    <file path="/fields.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384607180952" ignored="false" />
+    <file path="/fields.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390549235498" ignored="false" />
     <file path="/AddArticleCept.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383766959319" ignored="false" />
     <file path="/acceptance.suite.yml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384978708662" ignored="false" />
-    <file path="$PROJECT_DIR$/app/cache/dev/appDevDebugProjectContainer.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387365108979" ignored="false" />
+    <file path="$PROJECT_DIR$/app/cache/dev/appDevDebugProjectContainer.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390569754419" ignored="false" />
     <file path="/createcategory.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383036107972" ignored="false" />
-    <file path="/createcategory.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387042983617" ignored="false" />
-    <file path="/editcategory.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387042992841" ignored="false" />
+    <file path="/createcategory.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390573267361" ignored="false" />
+    <file path="/editcategory.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390662264300" ignored="false" />
     <file path="/CategoryType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383301768076" ignored="false" />
     <file path="/AddArticleFunctionalCept.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383302868497" ignored="false" />
     <file path="$PROJECT_DIR$/app/cache/test/appTestDebugProjectContainer.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383311799715" ignored="false" />
@@ -235,7 +233,7 @@
     <file path="/README.md" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387097039269" ignored="false" />
     <file path="/.gitignore" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385062967687" ignored="false" />
     <file path="/app.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383666549779" ignored="false" />
-    <file path="/search.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387315736250" ignored="false" />
+    <file path="/search.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1391021041818" ignored="false" />
     <file path="/TagRepository.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383752232028" ignored="false" />
     <file path="/ReposArticleTest.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383764018792" ignored="false" />
     <file path="$PROJECT_DIR$/tests/_log/acceptance-2013-11-06" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1383764679027" ignored="false" />
@@ -244,10 +242,10 @@
     <file path="/mainmenu.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384604136376" ignored="false" />
     <file path="/LayoutController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387205343924" ignored="false" />
     <file path="/menu.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384606813337" ignored="false" />
-    <file path="/services.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387322202612" ignored="false" />
+    <file path="/services.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390568857326" ignored="false" />
     <file path="/dashboard.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384613669136" ignored="false" />
-    <file path="/forms.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384846781843" ignored="false" />
-    <file path="/index.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384607759691" ignored="false" />
+    <file path="/forms.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390553758879" ignored="false" />
+    <file path="/index.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1391021425371" ignored="false" />
     <file path="$PROJECT_DIR$/app/cache/dev/twig/72/6b/000154f8aade0cb6faa8898cfecf4164ddee4ceebc0229069539f4f5fa77.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384608119110" ignored="false" />
     <file path="$PROJECT_DIR$/app/cache/dev/twig/6e/8b/bc632bd19eac186597af58eb68fbfa71109b74c1c135656ef6821dd10061.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384608119110" ignored="false" />
     <file path="$PROJECT_DIR$/app/cache/dev/twig/ef/df/2c258cd68617d7b476a610719fc6cacb2b358800023ef0e98ec470d167eb.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384608119110" ignored="false" />
@@ -255,10 +253,10 @@
     <file path="$PROJECT_DIR$/app/cache/dev/appDevDebugProjectContainer.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384610525473" ignored="false" />
     <file path="$PROJECT_DIR$/app/cache/dev/twig/de/5a/83b120297b906801afc255ac2f3514180276c2533b0638684277e9a17fa6.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384608119110" ignored="false" />
     <file path="$PROJECT_DIR$/app/cache/dev/twig/0f/ff/0786f80ceb4d69ce6ed6f2d6456863444c37ee1ab7260455b4022e7c0a42.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384608119110" ignored="false" />
-    <file path="/main.coffee" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1388149693747" ignored="false" />
+    <file path="/main.coffee" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390558748707" ignored="false" />
     <file path="/green.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384612400670" ignored="false" />
-    <file path="/Produit.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387182772638" ignored="false" />
-    <file path="/products.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387301468414" ignored="false" />
+    <file path="/Produit.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390812456377" ignored="false" />
+    <file path="/products.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390675806730" ignored="false" />
     <file path="$PROJECT_DIR$/web/js/ckeditor/samples/plugins/wysiwygarea/fullpage.html" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384617588567" ignored="false" />
     <file path="$PROJECT_DIR$/web/js/ckeditor/samples/plugins/toolbar/toolbar.html" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384617588567" ignored="false" />
     <file path="$PROJECT_DIR$/web/js/ckeditor/samples/xhtmlstyle.html" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384617588567" ignored="false" />
@@ -269,59 +267,59 @@
     <file path="/layout_simple.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384958534308" ignored="false" />
     <file path="/Demandeur.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384633961788" ignored="false" />
     <file path="/AuthenticationSiteHandler.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385070364013" ignored="false" />
-    <file path="/AdministrateurController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1388841101207" ignored="false" />
+    <file path="/AdministrateurController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390752942062" ignored="false" />
     <file path="/flashdatas.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384638315961" ignored="false" />
-    <file path="/Administrateur.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385815892998" ignored="false" />
+    <file path="/Administrateur.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390756311250" ignored="false" />
     <file path="/AdministrateurRepository.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384640282667" ignored="false" />
-    <file path="/MainController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387487406636" ignored="false" />
-    <file path="/config_dev.yml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385127523471" ignored="false" />
-    <file path="/.htaccess" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1386518094892" ignored="false" />
-    <file path="/ProductController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1388145083610" ignored="false" />
-    <file path="/createproduct.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1388225524281" ignored="false" />
-    <file path="/ProductType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1388149512692" ignored="false" />
+    <file path="/MainController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390844280503" ignored="false" />
+    <file path="/config_dev.yml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389089688096" ignored="false" />
+    <file path="/.htaccess" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389255435575" ignored="false" />
+    <file path="/ProductController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390815401400" ignored="false" />
+    <file path="/createproduct.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390742494933" ignored="false" />
+    <file path="/ProductType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390812682328" ignored="false" />
     <file path="/Seo.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384696315748" ignored="false" />
     <file path="/SeoType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384687843589" ignored="false" />
-    <file path="/Meta.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384689409572" ignored="false" />
+    <file path="/Meta.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390747685827" ignored="false" />
     <file path="/MetaType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384694965339" ignored="false" />
     <file path="/product.coffee" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384707556669" ignored="false" />
     <file path="/product.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384898639735" ignored="false" />
-    <file path="/editproduct.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387206651848" ignored="false" />
+    <file path="/editproduct.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390812799995" ignored="false" />
     <file path="/flashdatas.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384712731213" ignored="false" />
-    <file path="/pictureproduct.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387304399480" ignored="false" />
+    <file path="/pictureproduct.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390656359521" ignored="false" />
     <file path="/ImageType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384722029004" ignored="false" />
     <file path="/Image.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385034510396" ignored="false" />
     <file path="/visualizeproduct.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384973075310" ignored="false" />
-    <file path="/categories.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387043654858" ignored="false" />
-    <file path="/CategoryController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387116295064" ignored="false" />
+    <file path="/categories.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390650263867" ignored="false" />
+    <file path="/CategoryController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390669491223" ignored="false" />
     <file path="/ImageCategory.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384732337569" ignored="false" />
-    <file path="/picturecategory.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384941482738" ignored="false" />
-    <file path="/Famille.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1386068005170" ignored="false" />
-    <file path="/familles.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387304189021" ignored="false" />
-    <file path="/createfamille.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387043021493" ignored="false" />
-    <file path="/editfamille.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387043013554" ignored="false" />
-    <file path="/category.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385989307953" ignored="false" />
-    <file path="/famille.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384972490573" ignored="false" />
-    <file path="/CMSController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387267325168" ignored="false" />
-    <file path="/Page.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387040795213" ignored="false" />
-    <file path="/pages.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387266968114" ignored="false" />
-    <file path="/createpage.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387268774718" ignored="false" />
-    <file path="/editpage.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387038946182" ignored="false" />
-    <file path="/page.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384972754448" ignored="false" />
-    <file path="/parameters.yml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1386972314233" ignored="false" />
+    <file path="/picturecategory.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390654984703" ignored="false" />
+    <file path="/Famille.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390662341446" ignored="false" />
+    <file path="/familles.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389532125866" ignored="false" />
+    <file path="/createfamille.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390573288312" ignored="false" />
+    <file path="/editfamille.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390662460006" ignored="false" />
+    <file path="/category.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390669289100" ignored="false" />
+    <file path="/famille.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390669790550" ignored="false" />
+    <file path="/CMSController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390816952186" ignored="false" />
+    <file path="/Page.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390810534061" ignored="false" />
+    <file path="/pages.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390757656176" ignored="false" />
+    <file path="/createpage.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390758204085" ignored="false" />
+    <file path="/editpage.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390811318895" ignored="false" />
+    <file path="/page.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389541424361" ignored="false" />
+    <file path="/parameters.yml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390392837503" ignored="false" />
     <file path="/messages.fr.yml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387404527546" ignored="false" />
-    <file path="/articles.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387267228133" ignored="false" />
-    <file path="/article.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384972548072" ignored="false" />
-    <file path="/editarticle.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387040871653" ignored="false" />
-    <file path="/createarticle.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384972694593" ignored="false" />
-    <file path="/tags.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387315441604" ignored="false" />
-    <file path="/createtag.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384808838523" ignored="false" />
-    <file path="/edittag.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385212688453" ignored="false" />
+    <file path="/articles.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389534041099" ignored="false" />
+    <file path="/article.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389541120933" ignored="false" />
+    <file path="/editarticle.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390772974679" ignored="false" />
+    <file path="/createarticle.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390816882183" ignored="false" />
+    <file path="/tags.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389534069529" ignored="false" />
+    <file path="/createtag.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390773780235" ignored="false" />
+    <file path="/edittag.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390573572006" ignored="false" />
     <file path="/Commercial.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387047651020" ignored="false" />
-    <file path="/commercials.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387119163978" ignored="false" />
-    <file path="/CommercialController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387283544336" ignored="false" />
+    <file path="/commercials.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390685055951" ignored="false" />
+    <file path="/CommercialController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389532398984" ignored="false" />
     <file path="/commercial.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384972812572" ignored="false" />
-    <file path="/editcommercial.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387047818072" ignored="false" />
-    <file path="/createcommercial.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387047485715" ignored="false" />
+    <file path="/editcommercial.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389541500310" ignored="false" />
+    <file path="/createcommercial.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390573681114" ignored="false" />
     <file path="/CommercialType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387046596566" ignored="false" />
     <file path="$PROJECT_DIR$/web/bundles/heticsite/css/flat/purple.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273327" ignored="false" />
     <file path="$PROJECT_DIR$/web/bundles/heticsite/css/flat/_all.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384848273327" ignored="false" />
@@ -373,20 +371,20 @@
     <file path="/ProduitRepository.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387319761913" ignored="false" />
     <file path="/search_partial.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384853465751" ignored="false" />
     <file path="/sliding.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384855256984" ignored="false" />
-    <file path="/PageRepository.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387268872742" ignored="false" />
+    <file path="/PageRepository.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390757036951" ignored="false" />
     <file path="/MediasController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385110598918" ignored="false" />
     <file path="/medias.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384972922372" ignored="false" />
     <file path="/LICENSE" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384945710906" ignored="false" />
     <file path="/HorusSiteBundle.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384957777508" ignored="false" />
     <file path="/composer.json" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384962910687" ignored="false" />
-    <file path="/UPGRADE.md" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387175899410" ignored="false" />
+    <file path="/UPGRADE.md" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390903896725" ignored="false" />
     <file path="/ConfiguresController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384971156975" ignored="false" />
     <file path="/statistics.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387102856675" ignored="false" />
     <file path="/WelcomeCept.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384978849309" ignored="false" />
     <file path="/ProduitsCest.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1384979449474" ignored="false" />
     <file path="/MainCest.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1386015344165" ignored="false" />
-    <file path="/_listproducts.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1388141623798" ignored="false" />
-    <file path="/pj.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1388225711365" ignored="false" />
+    <file path="/_listproducts.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390815574395" ignored="false" />
+    <file path="/pj.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390746074904" ignored="false" />
     <file path="/Pj.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385029917063" ignored="false" />
     <file path="/PjType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385030769609" ignored="false" />
     <file path="/MyTwigExtension.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387364647368" ignored="false" />
@@ -395,79 +393,79 @@
     <file path="/Messages.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385046361020" ignored="false" />
     <file path="/ActivityListener.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385115474196" ignored="false" />
     <file path="/UsersListener.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385046433302" ignored="false" />
-    <file path="/ChartController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387135700065" ignored="false" />
+    <file path="/ChartController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390398431327" ignored="false" />
     <file path="/main.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387121797936" ignored="false" />
-    <file path="/ClientsController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387136537202" ignored="false" />
-    <file path="/commentaires.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387101835079" ignored="false" />
+    <file path="/ClientsController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390921759959" ignored="false" />
+    <file path="/commentaires.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390679003816" ignored="false" />
     <file path="/panier.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385048191687" ignored="false" />
-    <file path="/clients.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387121529090" ignored="false" />
+    <file path="/clients.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390900167729" ignored="false" />
     <file path="/transports.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387037265371" ignored="false" />
     <file path="/SecurityController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385055429591" ignored="false" />
     <file path="/factures.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387101313130" ignored="false" />
     <file path="/CommandesController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387136296522" ignored="false" />
-    <file path="/commandes.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387321016318" ignored="false" />
+    <file path="/commandes.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389535797681" ignored="false" />
     <file path="/base.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385064192520" ignored="false" />
     <file path="/Age.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385063894947" ignored="false" />
-    <file path="/io.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387364073100" ignored="false" />
-    <file path="/realtime.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387363811382" ignored="false" />
+    <file path="/io.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389133598254" ignored="false" />
+    <file path="/realtime.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389131554753" ignored="false" />
     <file path="/notification.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385067428802" ignored="false" />
     <file path="/MeetsCommand.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385067795499" ignored="false" />
-    <file path="/connected.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387365574191" ignored="false" />
+    <file path="/connected.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390685427934" ignored="false" />
     <file path="/online.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385213928011" ignored="false" />
     <file path="/Transports.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385816047666" ignored="false" />
     <file path="/Departements.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385815960931" ignored="false" />
     <file path="/TransportsController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387120727196" ignored="false" />
     <file path="/TransportType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385209241102" ignored="false" />
-    <file path="/createtransport.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1386068501607" ignored="false" />
+    <file path="/createtransport.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390573940853" ignored="false" />
     <file path="/edittransport.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385210520173" ignored="false" />
-    <file path="/Client.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385815942751" ignored="false" />
+    <file path="/Client.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390900462561" ignored="false" />
     <file path="/UsersType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385215422103" ignored="false" />
-    <file path="/createclient.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385378251534" ignored="false" />
+    <file path="/createclient.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390573333462" ignored="false" />
     <file path="/ClientsType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385224427006" ignored="false" />
     <file path="/VillesRepository.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385223498256" ignored="false" />
-    <file path="/editclient.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385296988470" ignored="false" />
+    <file path="/editclient.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389541385075" ignored="false" />
     <file path="/Commandes.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385238477919" ignored="false" />
     <file path="/CommandesProduit.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385237862764" ignored="false" />
-    <file path="/Cart.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1386072297222" ignored="false" />
+    <file path="/Cart.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390923362857" ignored="false" />
     <file path="/Commentaire.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385241041792" ignored="false" />
     <file path="/CommentairesController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387280281216" ignored="false" />
-    <file path="/createcommentaire.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385242392125" ignored="false" />
+    <file path="/createcommentaire.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390572619357" ignored="false" />
     <file path="/CommentaireType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385243937931" ignored="false" />
-    <file path="/editcommentaire.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385244042084" ignored="false" />
-    <file path="/Configuration.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1388842595739" ignored="false" />
+    <file path="/editcommentaire.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390573630173" ignored="false" />
+    <file path="/Configuration.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390569283530" ignored="false" />
     <file path="/configuration.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1388843805257" ignored="false" />
     <file path="/ConfigurationType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1388843093158" ignored="false" />
     <file path="/configuration.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385281574736" ignored="false" />
-    <file path="/myaccount.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387489962985" ignored="false" />
+    <file path="/myaccount.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390648146457" ignored="false" />
     <file path="/Group.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385815990205" ignored="false" />
-    <file path="/administrateurs.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387490203653" ignored="false" />
-    <file path="/createadministrateur.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385376179097" ignored="false" />
-    <file path="/editadministrateur.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387488973306" ignored="false" />
-    <file path="/referencement.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385324201422" ignored="false" />
-    <file path="/_listcategories.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387315643969" ignored="false" />
+    <file path="/administrateurs.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390756434591" ignored="false" />
+    <file path="/createadministrateur.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390648140425" ignored="false" />
+    <file path="/editadministrateur.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390648115685" ignored="false" />
+    <file path="/referencement.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390742061945" ignored="false" />
+    <file path="/_listcategories.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390673729347" ignored="false" />
     <file path="/TagType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385377472697" ignored="false" />
     <file path="/PageType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387032335706" ignored="false" />
     <file path="/commande.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385554717683" ignored="false" />
     <file path="/commande.pdf.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385474130891" ignored="false" />
-    <file path="/editcommande.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385563298815" ignored="false" />
+    <file path="/editcommande.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390573604995" ignored="false" />
     <file path="/CommandeType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385545981221" ignored="false" />
-    <file path="/Addresses.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385813821324" ignored="false" />
-    <file path="/MarquesController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387118187163" ignored="false" />
-    <file path="/Marques.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1386537757475" ignored="false" />
+    <file path="/Addresses.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390901597989" ignored="false" />
+    <file path="/MarquesController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389533306214" ignored="false" />
+    <file path="/Marques.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390748814032" ignored="false" />
     <file path="/ImageMarques.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385809689615" ignored="false" />
-    <file path="/marques.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387304245656" ignored="false" />
-    <file path="/createmarque.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387046069557" ignored="false" />
-    <file path="/editmarque.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1386000012804" ignored="false" />
-    <file path="/picturemarque.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385724072812" ignored="false" />
+    <file path="/marques.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389534045680" ignored="false" />
+    <file path="/createmarque.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390749598547" ignored="false" />
+    <file path="/editmarque.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390749496815" ignored="false" />
+    <file path="/picturemarque.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390684957866" ignored="false" />
     <file path="/FournisseursController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387121037800" ignored="false" />
     <file path="/Fournisseurs.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385979097431" ignored="false" />
-    <file path="/createfournisseur.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387121102243" ignored="false" />
-    <file path="/editfournisseur.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387037156498" ignored="false" />
+    <file path="/createfournisseur.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390573744154" ignored="false" />
+    <file path="/editfournisseur.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389541662044" ignored="false" />
     <file path="/fournisseurs.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387101253561" ignored="false" />
     <file path="/ImageFournisseurs.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385810976656" ignored="false" />
     <file path="/picturefournisseur.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385821118677" ignored="false" />
     <file path="/FournisseursType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385744294971" ignored="false" />
-    <file path="/client.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1386072461453" ignored="false" />
+    <file path="/client.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390922029383" ignored="false" />
     <file path="/Metier.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385816010575" ignored="false" />
     <file path="/parameters.yml.dist" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385903431392" ignored="false" />
     <file path="/.travis.yml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385910306903" ignored="false" />
@@ -484,8 +482,8 @@
     <file path="/LoadOrdersDatas.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385982479891" ignored="false" />
     <file path="/LoadMarquesDatas.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385985382283" ignored="false" />
     <file path="/LoadProductsDatas.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1385989096499" ignored="false" />
-    <file path="/MarquesType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387036276293" ignored="false" />
-    <file path="/remise.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1386016245576" ignored="false" />
+    <file path="/MarquesType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390749001177" ignored="false" />
+    <file path="/remise.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390771101710" ignored="false" />
     <file path="/ImageCategoryRepository.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1386066956856" ignored="false" />
     <file path="/MarquesRepository.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1386067199204" ignored="false" />
     <file path="/ImageMarquesRepository.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1386067294590" ignored="false" />
@@ -497,12 +495,12 @@
     <file path="/liens.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1386515803335" ignored="false" />
     <file path="/Rate.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1386533888511" ignored="false" />
     <file path="/app_dev.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1386938605552" ignored="false" />
-    <file path="/Dummy.txt" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1388849854871" ignored="false" />
+    <file path="/Dummy.txt" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390742764079" ignored="false" />
     <file path="$USER_HOME$/ogisclone/ogic/apps/frontend/modules/prospect/actions/actions.class.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387290655396" ignored="false" />
     <file path="/display.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387014837992" ignored="false" />
     <file path="/pages.sass" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387035189726" ignored="false" />
     <file path="/tags.sass" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387041289654" ignored="false" />
-    <file path="/_states.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387321195435" ignored="false" />
+    <file path="/_states.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390757639658" ignored="false" />
     <file path="/lastactions.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387207283477" ignored="false" />
     <file path="/Actions.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387205894266" ignored="false" />
     <file path="/LastActionsListener.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387175264888" ignored="false" />
@@ -511,11 +509,11 @@
     <file path="/lastcommandes.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387136371745" ignored="false" />
     <file path="/lastclients.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387136561998" ignored="false" />
     <file path="/lastcommentaires.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387136710166" ignored="false" />
-    <file path="/allactions.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387286872292" ignored="false" />
+    <file path="/allactions.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390574620934" ignored="false" />
     <file path="/Notifications.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387206115468" ignored="false" />
     <file path="/NotificationsController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387143473793" ignored="false" />
     <file path="/AlertListener.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387178024727" ignored="false" />
-    <file path="/allactionsbyadministrateurs.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387176204207" ignored="false" />
+    <file path="/allactionsbyadministrateurs.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390574070338" ignored="false" />
     <file path="/ProductsListener.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387180806367" ignored="false" />
     <file path="/ProduitsListener.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387280745423" ignored="false" />
     <file path="/notifications.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387326949426" ignored="false" />
@@ -527,7 +525,7 @@
     <file path="/CommentaireRepository.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387279989517" ignored="false" />
     <file path="/Day.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387284246126" ignored="false" />
     <file path="/NotificationsListener.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387322341362" ignored="false" />
-    <file path="/allnotifications.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387286819503" ignored="false" />
+    <file path="/allnotifications.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389541264729" ignored="false" />
     <file path="$USER_HOME$/ogisclone/ogic/apps/frontend/modules/home/actions/actions.class.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387300842350" ignored="false" />
     <file path="/actions.class.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387901879995" ignored="false" />
     <file path="$USER_HOME$/Téléchargements/ogic (2).xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387290978877" ignored="false" />
@@ -540,11 +538,11 @@
     <file path="$USER_HOME$/ogisclone/ogic/html/flux/ogic_v2.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387299240757" ignored="false" />
     <file path="$USER_HOME$/ogisclone/ogic/apps/frontend/modules/home/templates/_slider.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387300842350" ignored="false" />
     <file path="$USER_HOME$/ogisclone/ogic/lib/model/doctrine/ImageHomeTable.class.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387726984829" ignored="false" />
-    <file path="/_listfamilles.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387315653078" ignored="false" />
+    <file path="/_listfamilles.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390649994416" ignored="false" />
     <file path="/_listmarques.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387304277496" ignored="false" />
-    <file path="$PROJECT_DIR$/web/css/88f7443.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1388151718532" ignored="false" />
-    <file path="$PROJECT_DIR$/web/css/88f7443_main_1.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1388151718532" ignored="false" />
-    <file path="$PROJECT_DIR$/app/cache/dev/doctrine/orm/Proxies/__CG__HorusSiteBundleEntityClient.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387353725934" ignored="false" />
+    <file path="$PROJECT_DIR$/web/css/88f7443.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390903290230" ignored="false" />
+    <file path="$PROJECT_DIR$/web/css/88f7443_main_1.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390903290230" ignored="false" />
+    <file path="$PROJECT_DIR$/app/cache/dev/doctrine/orm/Proxies/__CG__HorusSiteBundleEntityClient.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390503817983" ignored="false" />
     <file path="/lastmessages.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387401302837" ignored="false" />
     <file path="/Messagerie.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387363782866" ignored="false" />
     <file path="$USER_HOME$/ogisclone/ogic/plugins/sfDoctrineGuardPlugin/lib/form/doctrine/base/BasesfGuardChangeUserPasswordForm.class.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387357937494" ignored="false" />
@@ -569,23 +567,18 @@
     <file path="$USER_HOME$/ogisclone/ogic/lib/form/doctrine/OrigineForm.class.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387361101244" ignored="false" />
     <file path="$USER_HOME$/ogisclone/ogic/lib/form/doctrine/SelectionForm.class.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387361117538" ignored="false" />
     <file path="$USER_HOME$/ogisclone/ogic/lib/form/doctrine/SpecialForm.class.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387361120702" ignored="false" />
-    <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Clients/editclient.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387399357976" ignored="false" />
-    <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/CMS/editpage.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387399357976" ignored="false" />
-    <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Commercial/editcommercial.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387399357976" ignored="false" />
-    <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/CMS/editarticle.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387399357976" ignored="false" />
-    <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/CMS/edittag.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387399357976" ignored="false" />
-    <file path="/allmessages.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387401105176" ignored="false" />
+    <file path="/allmessages.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390574133612" ignored="false" />
     <file path="/HorusSiteBundle.en.yml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387402725732" ignored="false" />
     <file path="/messages.en.yml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387487168948" ignored="false" />
     <file path="$PROJECT_DIR$/web/css/63fc03d_green_1.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387490182494" ignored="false" />
     <file path="$PROJECT_DIR$/web/css/63fc03d.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387490182494" ignored="false" />
-    <file path="$PROJECT_DIR$/web/css/d08f53d.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1388141931376" ignored="false" />
-    <file path="$PROJECT_DIR$/web/css/d08f53d_bootswatch_1.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1388141931376" ignored="false" />
-    <file path="$PROJECT_DIR$/web/css/c4ac368_tags_1.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387490195585" ignored="false" />
-    <file path="$PROJECT_DIR$/web/css/c4ac368.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387490195585" ignored="false" />
-    <file path="$PROJECT_DIR$/web/css/d8897d8_colorpicker_1.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387490200750" ignored="false" />
-    <file path="$PROJECT_DIR$/web/css/55a7dee_bootswatch_1.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1388141931375" ignored="false" />
-    <file path="$PROJECT_DIR$/web/css/55a7dee.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1388141931375" ignored="false" />
+    <file path="$PROJECT_DIR$/web/css/d08f53d.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390903245199" ignored="false" />
+    <file path="$PROJECT_DIR$/web/css/d08f53d_bootswatch_1.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390903245199" ignored="false" />
+    <file path="$PROJECT_DIR$/web/css/c4ac368_tags_1.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390648246606" ignored="false" />
+    <file path="$PROJECT_DIR$/web/css/c4ac368.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390648246606" ignored="false" />
+    <file path="$PROJECT_DIR$/web/css/d8897d8_colorpicker_1.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390648246606" ignored="false" />
+    <file path="$PROJECT_DIR$/web/css/55a7dee_bootswatch_1.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390903337926" ignored="false" />
+    <file path="$PROJECT_DIR$/web/css/55a7dee.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390903307005" ignored="false" />
     <file path="$USER_HOME$/ogisclone/ogic/apps/frontend/modules/programme/templates/_prix/tableauPrix1.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387720829002" ignored="false" />
     <file path="/tableauPrix1.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387720828506" ignored="false" />
     <file path="$USER_HOME$/ogisclone/ogic/apps/frontend/modules/programme/templates/_prix/tableauPrix4.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1387720846969" ignored="false" />
@@ -603,11 +596,75 @@
     <file path="$PROJECT_DIR$/web/js/8cbc505.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1388141931375" ignored="false" />
     <file path="$PROJECT_DIR$/web/js/3c178a4_pj_1.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1388143945047" ignored="false" />
     <file path="$PROJECT_DIR$/web/js/3c178a4.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1388144276984" ignored="false" />
-    <file path="$PROJECT_DIR$/web/css/3a43ed6.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1388141931376" ignored="false" />
-    <file path="$PROJECT_DIR$/web/css/3a43ed6_main_1.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1388141931376" ignored="false" />
+    <file path="$PROJECT_DIR$/web/css/3a43ed6.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390903337926" ignored="false" />
+    <file path="$PROJECT_DIR$/web/css/3a43ed6_main_1.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390903337926" ignored="false" />
     <file path="$PROJECT_DIR$/web/js/8cbc505_liens_1.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1388141931376" ignored="false" />
     <file path="/hinclude.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1388840831476" ignored="false" />
     <file path="/infos.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1388841142166" ignored="false" />
+    <file path="/test.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389035014266" ignored="false" />
+    <file path="/autoload.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389034748912" ignored="false" />
+    <file path="/CustomController.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389529551447" ignored="false" />
+    <file path="$USER_HOME$/ogisclone/ogic/apps/frontend/modules/programme/templates/metiersSuccess.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389178401009" ignored="false" />
+    <file path="$USER_HOME$/ogisclone/ogic/apps/backend/i18n/messages.fr.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389088075596" ignored="false" />
+    <file path="/messages.fr.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389088075596" ignored="false" />
+    <file path="/metiersSuccess.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389088325387" ignored="false" />
+    <file path="$USER_HOME$/ogisclone/ogic/apps/frontend/modules/programme/actions/actions.class.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389178401009" ignored="false" />
+    <file path="/FooBar.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389100012165" ignored="false" />
+    <file path="/Curl.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389173363304" ignored="false" />
+    <file path="$USER_HOME$/ogisclone/ogic/apps/frontend/modules/programme/templates/offresSuccess.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389178464648" ignored="false" />
+    <file path="/offresSuccess.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389178310855" ignored="false" />
+    <file path="$USER_HOME$/ogisclone/ogic/ogic.xml" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389178401009" ignored="false" />
+    <file path="$USER_HOME$/ogisclone/ogic/html/css/custom.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389178401009" ignored="false" />
+    <file path="/welcome.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389182451344" ignored="false" />
+    <file path="/header.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390567481164" ignored="false" />
+    <file path="/_listclients.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390921888599" ignored="false" />
+    <file path="/RecursiveCategoryIterator.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389538413616" ignored="false" />
+    <file path="$USER_HOME$/Bureau/cours/index.html" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389546148024" ignored="false" />
+    <file path="/index.html" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389546072428" ignored="false" />
+    <file path="$USER_HOME$/Bureau/cours/cours1.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1389546157907" ignored="false" />
+    <file path="/formulaire.html" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390403211056" ignored="false" />
+    <file path="/formulaire.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390380184496" ignored="false" />
+    <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Default/dashboard.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390550044137" ignored="false" />
+    <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Default/search_partial.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390550044137" ignored="false" />
+    <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Default/edit.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390550044139" ignored="false" />
+    <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Default/editcategory.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390550044139" ignored="false" />
+    <file path="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Default/createcategory.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390550044139" ignored="false" />
+    <file path="/main.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390685701029" ignored="false" />
+    <file path="$PROJECT_DIR$/web/js/84dff6c_main_1.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390566452633" ignored="false" />
+    <file path="/footer.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390569382663" ignored="false" />
+    <file path="/Emails.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390569715697" ignored="false" />
+    <file path="/administrateur.sass" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390579750795" ignored="false" />
+    <file path="/writeadministrateur.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390643731097" ignored="false" />
+    <file path="/ContactType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390582606552" ignored="false" />
+    <file path="$PROJECT_DIR$/web/css/d8897d8.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390648246606" ignored="false" />
+    <file path="$PROJECT_DIR$/web/css/47e4f5d.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390648246606" ignored="false" />
+    <file path="$PROJECT_DIR$/web/css/47e4f5d_administrateur_1.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390648246606" ignored="false" />
+    <file path="/category.sass" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390656416214" ignored="false" />
+    <file path="/pagination.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390648612307" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/horusfront/css/bootswatch.css" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390655211472" ignored="false" />
+    <file path="$PROJECT_DIR$/web/bundles/horusfront/css/main.sass" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390655211472" ignored="false" />
+    <file path="/FamilleType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390662487989" ignored="false" />
+    <file path="/product.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390751809302" ignored="false" />
+    <file path="/_listcommentaires.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390777828118" ignored="false" />
+    <file path="/HorusRequirements.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390744332372" ignored="false" />
+    <file path="$USER_HOME$/oro/crm-application/composer.json" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390744682678" ignored="false" />
+    <file path="/productcommandes.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390751555122" ignored="false" />
+    <file path="/_listcommandesinline.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390751241447" ignored="false" />
+    <file path="/_listpages.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390810976900" ignored="false" />
+    <file path="/_listarticles.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390816832005" ignored="false" />
+    <file path="/_listtags.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390812083317" ignored="false" />
+    <file path="/CommentaireArticle.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390776392986" ignored="false" />
+    <file path="/articlecommentaire.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390777780877" ignored="false" />
+    <file path="/produits.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390815975682" ignored="false" />
+    <file path="/clientcommande.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390900494122" ignored="false" />
+    <file path="/_listcommandes.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390900860426" ignored="false" />
+    <file path="/AdressesType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390901725775" ignored="false" />
+    <file path="/ClientsAdressesType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390902390832" ignored="false" />
+    <file path="/adresses.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390920952741" ignored="false" />
+    <file path="/adresses.js" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390903201692" ignored="false" />
+    <file path="/_listadresses.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390904438098" ignored="false" />
+    <file path="/AddressesType.php" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390906744701" ignored="false" />
+    <file path="/panierclient.html.twig" changelist="c3710369-12cf-41a7-b768-bf355bf28dfd" time="1390921956954" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -626,7 +683,35 @@
     <favorites_list name="hetic" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="ClientsController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Controller/ClientsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="38" selection-start="454" selection-end="454" vertical-scroll-proportion="0.28808448">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="colorpicker.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/public/js/colorpicker.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="realtime.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/node/realtime.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="57" selection-start="223" selection-end="277" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -636,31 +721,31 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Administrateurs/online.html.twig" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Administrateurs/lastactions.html.twig" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Product/createproduct.html.twig" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/public/js/liens.js" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/public/js/pj.js" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/public/css/main.sass" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Extension/Twig/MyTwigExtension.php" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/hinclude.html.twig" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Main/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Slots/statistics.html.twig" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Slots/infos.html.twig" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Slots/leftmenu.html.twig" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Controller/AdministrateurController.php" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Entity/Configuration.php" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Form/ConfigurationType.php" />
-        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Pages/configuration.html.twig" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Clients/_listadresses.html.twig" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Clients/_cartinline.html.twig" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Form/AddressesType.php" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Clients/adresses.html.twig" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Clients/_listclients.html.twig" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Clients/panierclient.html.twig" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Clients/_panier.html.twig" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Clients/client.html.twig" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Entity/Cart.php" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Main/search.html.twig" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/public/css/main.sass" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/public/js/index.js" />
+        <option value="$PROJECT_DIR$/src/Horus/SiteBundle/Controller/ClientsController.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="272" />
-    <option name="y" value="53" />
-    <option name="width" value="1231" />
-    <option name="height" value="793" />
+    <option name="x" value="167" />
+    <option name="y" value="197" />
+    <option name="width" value="1290" />
+    <option name="height" value="874" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -717,6 +802,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -760,6 +859,184 @@
               <option name="myItemId" value="Horus" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SiteBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Horus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SiteBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Horus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SiteBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Horus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SiteBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Horus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SiteBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Horus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hetic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -768,11 +1045,11 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="options.lastSelected" value="preferences.general" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="options.searchVisible" value="true" />
+    <property name="options.lastSelected" value="preferences.pluginManager" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Bureau/cours" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig" serverName="Horus" serverId="521361b6-cc8f-46b5-845e-092619ce9bdb">
     <servers>
@@ -806,11 +1083,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Slots" />
-      <recent name="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views" />
-      <recent name="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Product" />
-      <recent name="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/translations" />
-      <recent name="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Administrateurs" />
+      <recent name="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Clients" />
+      <recent name="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/public/js/pages" />
+      <recent name="$PROJECT_DIR$/src/Horus/SiteBundle/Form" />
+      <recent name="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/CMS" />
+      <recent name="$PROJECT_DIR$/src/Horus/SiteBundle/Entity" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Commandes" />
@@ -820,7 +1097,7 @@
       <recent name="$PROJECT_DIR$/tests/acceptance" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit on Server.DefaultControllerTest on Hetic">
+  <component name="RunManager">
     <configuration default="false" name="DefaultControllerTest on Hetic" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" temporary="true" class="DefaultControllerTest" path="$PROJECT_DIR$/src/Cours/SiteBundle/Tests/Controller/DefaultControllerTest.php" server_id="0705591e-4c9d-471f-85dd-b1898a488506" server_name="Hetic">
       <RunnerSettings RunnerId="PhpRunner" />
       <ConfigurationWrapper RunnerId="PhpRunner" />
@@ -833,6 +1110,9 @@
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="$PROJECT_DIR$">
+      <method />
+    </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
       <JSRemoteDebuggerConfigurationSettings>
         <option name="engineId" value="embedded" />
@@ -840,17 +1120,12 @@
       </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="0705591e-4c9d-471f-85dd-b1898a488506" server_name="Hetic">
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="521361b6-cc8f-46b5-845e-092619ce9bdb" server_name="Horus">
       <method />
     </configuration>
     <list size="1">
       <item index="0" class="java.lang.String" itemvalue="PHPUnit on Server.DefaultControllerTest on Hetic" />
     </list>
-    <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="PHPUnit on Server.DefaultControllerTest on Hetic" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
@@ -879,25 +1154,25 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="272" y="53" width="1231" height="793" extended-state="0" />
-    <editor active="false" />
+    <frame x="167" y="197" width="1290" height="874" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31489015" sideWeight="0.67164177" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24223602" sideWeight="0.5319693" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24348474" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.314578" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905295" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27724665" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27526596" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49449036" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48541114" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -964,88 +1239,106 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/hinclude.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="23" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0" />
+        <state line="316" column="63" selection-start="8762" selection-end="8774" vertical-scroll-proportion="-19.4" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Clients/client.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="15" selection-start="597" selection-end="597" vertical-scroll-proportion="0.41584158" />
+        <state line="45" column="22" selection-start="1592" selection-end="1592" vertical-scroll-proportion="-19.25" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Slots/infos.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Clients/panierclient.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="14" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0" />
+        <state line="14" column="45" selection-start="455" selection-end="521" vertical-scroll-proportion="-10.5" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Slots/leftmenu.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Clients/_panier.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="70" selection-start="237" selection-end="237" vertical-scroll-proportion="0.120200336" />
+        <state line="5" column="22" selection-start="108" selection-end="108" vertical-scroll-proportion="0.13081396" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/layout.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Entity/Cart.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="43" selection-start="4182" selection-end="4182" vertical-scroll-proportion="0.6450512" />
+        <state line="56" column="7" selection-start="1180" selection-end="1180" vertical-scroll-proportion="-0.75">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Slots/statistics.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/public/js/pages/adresses.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="167" selection-end="167" vertical-scroll-proportion="0.11612903" />
+        <state line="9" column="34" selection-start="494" selection-end="494" vertical-scroll-proportion="0.2275281">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Main/index.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/public/js/pages/fournisseur.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="20" selection-start="920" selection-end="1001" vertical-scroll-proportion="0.5634267" />
+        <state line="8" column="0" selection-start="0" selection-end="47" vertical-scroll-proportion="0.19862069">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Controller/ProductController.php">
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/public/css/main.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="193" column="0" selection-start="5646" selection-end="5646" vertical-scroll-proportion="0.20098847" />
+        <state line="838" column="26" selection-start="16602" selection-end="16602" vertical-scroll-proportion="-14.4">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Form/FamilleType.php">
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/public/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="33" selection-start="723" selection-end="860" vertical-scroll-proportion="0.46075085" />
+        <state line="8" column="63" selection-start="427" selection-end="432" vertical-scroll-proportion="0.19862069">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Entity/Configuration.php">
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Main/search.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="32" selection-start="1284" selection-end="1291" vertical-scroll-proportion="0.0" />
+        <state line="12" column="28" selection-start="373" selection-end="383" vertical-scroll-proportion="0.23546511">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Form/ConfigurationType.php">
+    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/public/js/colorpicker.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="59" selection-start="1430" selection-end="1430" vertical-scroll-proportion="0.0" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Resources/views/Pages/configuration.html.twig">
+    <entry file="file://$PROJECT_DIR$/app/node/realtime.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="170" column="18" selection-start="6786" selection-end="6786" vertical-scroll-proportion="-9.75" />
+        <state line="9" column="57" selection-start="223" selection-end="277" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Controller/AdministrateurController.php">
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/ContainerAwareInterface.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="17" selection-start="3097" selection-end="3097" vertical-scroll-proportion="0.0" />
+        <state line="20" column="10" selection-start="458" selection-end="458" vertical-scroll-proportion="0.31967214">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/ContainerAware.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="48" selection-start="462" selection-end="462" vertical-scroll-proportion="0.31967214">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="36" selection-start="1123" selection-end="1123" vertical-scroll-proportion="0.3442623">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Horus/SiteBundle/Controller/ClientsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="0" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="14" selection-start="276" selection-end="276" vertical-scroll-proportion="0.2515528">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="10" selection-start="1810" selection-end="1810" vertical-scroll-proportion="0.36129034">
+        <state line="17" column="38" selection-start="454" selection-end="454" vertical-scroll-proportion="0.28808448">
           <folding />
         </state>
       </provider>

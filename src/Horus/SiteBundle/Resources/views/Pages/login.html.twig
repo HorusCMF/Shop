@@ -11,7 +11,7 @@
 
 {% block content %}
     <div class="page" id="login">
-        <form class="form-signin" action="{{ path('login_check') }}" method="post">
+        <form  class="form-signin" action="{{ path('login_check') }}" method="post">
             <h2 class="text-center form-signin-heading"><i class="glyphicon glyphicon-off"></i> Authentification</h2>
             {% if error %}
                 <div class="alert alert-dismissable alert-danger">

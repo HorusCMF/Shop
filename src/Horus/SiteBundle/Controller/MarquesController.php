@@ -27,14 +27,14 @@ class MarquesController extends Controller
     public function marquesAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $marques = $em->getRepository('HorusSiteBundle:Marques')->findAll();
-        $paginate_by_page = $this->container->getParameter('paginate_by_page');
+        $marques = $em->getRepository('HorusSiteBundle:Marques')->findBy(array(), array('id' => 'DESC'));
+        $display = $this->container->get('request')->get('display', 5);
 
         $paginator = $this->get('knp_paginator');
         $pagination = $paginator->paginate(
             $marques,
             $this->get('request')->query->get('page', 1) /*page number*/,
-            $paginate_by_page
+            $display
         );
 
         return $this->render('HorusSiteBundle:Marques:marques.html.twig', array('marques' => $pagination));
@@ -230,6 +230,10 @@ class MarquesController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $marque = new Marques();
+        $idarg = $request->query->get('marqueref');
+        if(!empty($idarg)){
+            $marque = $em->getRepository('HorusSiteBundle:Marques')->find($idarg);
+        }
 
         $form = $this->createForm(new MarquesType(), $marque);
         $form->handleRequest($request);

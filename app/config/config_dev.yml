@@ -11,6 +11,12 @@ web_profiler:
     toolbar: true
     intercept_redirects: false
 
+swiftmailer:
+    transport:            gmail
+    host:                 smtp.gmail.com
+    username:  'julien@meetserious.com'
+    password:  'djscrave'
+
 monolog:
     handlers:
         main:

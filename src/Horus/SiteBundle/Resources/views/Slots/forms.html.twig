@@ -12,7 +12,7 @@
 {% block form_widget_simple %}
     {% spaceless %}
         {% set type = type|default('text') %}
-        <input type="{{ type }}" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %} class="form-control" />
+        <input  type="{{ type }}" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %} class="form-control" name="field"  />
     {% endspaceless %}
 {% endblock form_widget_simple %}
 
@@ -39,7 +39,7 @@
 
 {% block textarea_widget %}
     {% spaceless %}
-        <textarea {{ block('widget_attributes') }}>{{ value }}</textarea>
+        <textarea    {{ block('widget_attributes') }} >{{ value }}</textarea>
     {% endspaceless %}
 {% endblock textarea_widget %}
 
@@ -66,7 +66,7 @@
 
 {% block choice_widget_collapsed %}
     {% spaceless %}
-        <select class="form-control {% if multiple %}multiselect{% endif %}" {{ block('widget_attributes') }}{% if multiple %} multiple="multiple"{% endif %}>
+        <select  class="form-control {% if multiple %}multiselect{% endif %}" {{ block('widget_attributes') }}  {% if multiple %} multiple="multiple"{% endif %}>
             {% if empty_value is not none %}
                 <option value="">{{ empty_value|trans({}, translation_domain) }}</option>
             {% endif %}
@@ -100,13 +100,13 @@
 
 {% block checkbox_widget %}
     {% spaceless %}
-        <input type="checkbox" {{ block('widget_attributes') }}{% if value is defined %} value="{{ value }}"{% endif %}{% if checked %} checked="checked"{% endif %} />
+        <input  type="checkbox" {{ block('widget_attributes') }}  {% if value is defined %} value="{{ value }}"{% endif %}{% if checked %} checked="checked"{% endif %} />
     {% endspaceless %}
 {% endblock checkbox_widget %}
 
 {% block radio_widget %}
     {% spaceless %}
-        <input type="radio" {{ block('widget_attributes') }}{% if value is defined %} value="{{ value }}"{% endif %}{% if checked %} checked="checked"{% endif %} />
+        <input  type="radio" {{ block('widget_attributes') }}{% if value is defined %} value="{{ value }}"{% endif %}{% if checked %} checked="checked"{% endif %}   />
     {% endspaceless %}
 {% endblock radio_widget %}
 
@@ -238,10 +238,6 @@
 
 {% block repeated_row %}
     {% spaceless %}
-        {#
-        No need to render the errors here, as all errors are mapped
-        to the first child (see RepeatedTypeValidatorExtension).
-        #}
         {{ block('form_rows') }}
     {% endspaceless %}
 {% endblock repeated_row %}

@@ -20,9 +20,11 @@ class ArticleType extends AbstractType
     {
         $builder
                 ->add('title', 'text', array('attr' => array('placeholder' => "Nom de l'article")))
-                ->add('category')
                 ->add('tags', null, array( 'label' => 'Mots-clefs associés'))
-                ->add('pages')
+                ->add('home', 'checkbox', array('required' => false, 'label' => "Visible en page d'accueil"))
+                ->add('produits', null, array( 'label' => 'Produits associés'))
+                ->add('pages', null, array( 'label' => 'Pages associés'))
+                ->add('categories')
                 ->add('nature','choice', array(
                     'choices'   => array(1 => 'Brouillon', 2 => 'En attente de relecture', 3 => 'Final'),
                     'required'  => true,

@@ -1,0 +1,44 @@
+<table class="table">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Référence</th>
+        <th>Client</th>
+        <th>Prix TTC</th>
+        <th>Transporteur</th>
+        <th>Etat</th>
+        <th>Date</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for commande in commandes %}
+        <tr class="{{ commande.etat|commandesclasses }}">
+            <td><a href="{{ path('horus_site_commande', {'id' : commande.id}) }}">{{ loop.index }}</a></td>
+            <td>
+                <a href="{{ path('horus_site_commande', {'id' : commande.id}) }}">{{ commande.reference }}</a>
+            </td>
+            <td><a href="">{{ commande.client.firstname|title }} {{ commande.client.lastname|title }}</a></td>
+            <td>{{ commande.totalTTC }}€</td>
+            <td>{{ commande.transport.title }}</td>
+            <td>{{ commande.etat|commandes }}</td>
+            <td>{{ commande.dateCreated|created_ago }}</td>
+            <td>
+                <a href="{{ path('horus_site_generatefacture', {'id' : commande.id}) }}"><i class="glyphicon glyphicon-cloud-download"></i></a>
+                <a href="{{ path('horus_site_edit_commande', {'id' : commande.id}) }}"><i class="glyphicon glyphicon-pencil"></i></a>
+                <a href="{{ path('horus_site_commande', {'id' : commande.id}) }}"><i class="glyphicon glyphicon-search"></i></a>
+            </td>
+        </tr>
+    {% else %}
+        <tr>
+            <td colspan="2">
+                <div class="alert alert-dismissable alert-danger">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <i class="glyphicon glyphicon-info-sign"></i> Aucune commande de créer pour le moment.
+                    <div class="clear"></div>
+                </div>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>

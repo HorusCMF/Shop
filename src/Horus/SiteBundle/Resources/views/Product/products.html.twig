@@ -1,22 +1,39 @@
 {% extends 'HorusSiteBundle::layout.html.twig' %}
 
 
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/horussite/js/jRating.jquery.min.js') }}"></script>
+    {% javascripts '@HorusSiteBundle/Resources/public/js/pages/produits.js' %}
+        <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/horussite/css/jRating.jquery.css') }}"/>
+
+    {% stylesheets '@HorusSiteBundle/Resources/public/css/pages/produits.sass' filter='yui_css' %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+{% endblock %}
+
 {% block content %}
     <div class="page" id="products">
-        <h2><i class="glyphicon glyphicon-gift"></i> Vos produits({{ produits.getTotalItemCount }}) </h2>
-
         {% include 'HorusSiteBundle:Slots:display.html.twig' %}
+
+        <h2><i class="glyphicon glyphicon-gift"></i> Vos produits({{ produits.getTotalItemCount }}) </h2>
 
         <hr class="clear fancy-line">
 
         {% include 'HorusSiteBundle:Product:_listproducts.html.twig' %}
 
-        <div class="pull-right">
-            {{ knp_pagination_render(produits) }}
-        </div>
-
         <div class="action">
-            <a href="{{ path('horus_site_create_product') }}" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Ajouter une produit</a>
+            <a href="{{ path('horus_site_create_product') }}" class="btn btn-primary pull-left"><i class="glyphicon glyphicon-plus"></i> Ajouter une produit</a>
+            <div class="pull-right">
+                {{ knp_pagination_render(produits) }}
+            </div>
+            <div class="clear"></div>
         </div>
         <div class="clear"></div>
     </div>

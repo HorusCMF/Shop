@@ -21,34 +21,13 @@ class MainController extends Controller
      */
     public function indexAction()
     {
-//        $request = $this->getRequest();
-//        $request->setLocale('en_EN');
-//        $this->get('session')->set('_locale', 'en_EN');
+
+//        $this->email = $this->container->get('email');
+//        $this->email->send(null, 'HorusSiteBundle:Mails:welcome.html.twig', "Bienvenue sur Horus", 'julien@meetserious.com', null,
+//            array( 'content' => 'coucou sa va?')
+//        );
 
         return $this->render('HorusSiteBundle:Main:index.html.twig');
-    }
-
-    /**
-     * Dashboard Homepage
-     * @return \Symfony\Component\HttpFoundation\Response
-     */
-    public function languesAction($langue = null)
-    {
-        $request = $this->getRequest();
-        if ($langue == "en") {
-            $request->setLocale('en');
-            $this->get('session')->set('_locale', 'en_US');
-            return $this->redirect($this->generateUrl('horus_site_main_en'));
-        } else {
-            $request->setLocale('fr_FR');
-            $this->get('session')->set('_locale', 'fr_FR');
-        }
-
-        $this->get('session')->getFlashBag()->add(
-            'success',
-            "Vous avez changé de langue"
-        );
-        return $this->redirect($this->generateUrl('horus_site_main'));
     }
 
     /**
@@ -72,6 +51,7 @@ class MainController extends Controller
         $tags = array();
         $familles = array();
         $marques = array();
+        $clients = array();
 
         $finalword = null;
 
@@ -86,6 +66,7 @@ class MainController extends Controller
         $pages_arg = $request->query->get('pages');
         $articles_arg = $request->query->get('articles');
         $marques_arg = $request->query->get('marques');
+        $clients_arg = $request->query->get('clients');
 
         /**
          * Notifications
@@ -106,6 +87,7 @@ class MainController extends Controller
         $finderFamille = $this->container->get('fos_elastica.finder.website.famille');
         $finderPages = $this->container->get('fos_elastica.finder.website.pages');
         $finderMarques = $this->container->get('fos_elastica.finder.website.marques');
+        $finderClients = $this->container->get('fos_elastica.finder.website.clients');
 
         if (!empty($products_arg))
             $produits = $finderProducts->find($finalword);
@@ -180,7 +162,23 @@ class MainController extends Controller
             $this->get('request')->query->get('page7', 1) /*page number*/,
             $paginate_by_page,
             array('pageParameterName' => 'page7')
-        );;
+        );
+
+
+        if (!empty($clients_arg))
+            $clients = $finderClients->find($finalword);
+
+        $pagination9 = $paginator->paginate(
+            $clients,
+            $this->get('request')->query->get('page8', 1) /*page number*/,
+            $paginate_by_page,
+            array('pageParameterName' => 'page8')
+        );
+
+        $vide = false;
+        if (empty($produits) && empty($clients) && empty($categories) && empty($familles) && empty($categories) && empty($tags) && empty($pages) && empty($articles) && empty($marques))
+            $vide = true;
+
         return $this->render('HorusSiteBundle:Main:search.html.twig',
             array('form' => $form->createView(),
                 'produits' => $pagination,
@@ -190,6 +188,9 @@ class MainController extends Controller
                 'pages' => $pagination6,
                 'articles' => $pagination7,
                 'marques' => $pagination8,
+                'clients' => $pagination9,
+                'vide' => $vide,
+                'keywords' => $finalword,
             )
         );
     }
@@ -226,6 +227,7 @@ class MainController extends Controller
         $finderFamille = $this->container->get('fos_elastica.finder.website.famille');
         $finderPages = $this->container->get('fos_elastica.finder.website.pages');
         $finderMarques = $this->container->get('fos_elastica.finder.website.marques');
+        $finderClients = $this->container->get('fos_elastica.finder.website.clients');
 
         $produits = $finderProducts->find($finalword);
         $categories = $finderCategories->find($finalword);
@@ -234,6 +236,7 @@ class MainController extends Controller
         $familles = $finderFamille->find($finalword);
         $pages = $finderPages->find($finalword);
         $marques = $finderMarques->find($finalword);
+        $clients = $finderClients->find($finalword);
 
         $results_final = array();
 
@@ -269,7 +272,15 @@ class MainController extends Controller
 
         if (!empty($marques))
             foreach ($marques as $marque)
-                $results_final[] = array('nom' => $marque->getTitle(), 'url' => $this->generateUrl('horus_search_avanced', array('word' => $finalword, 'pages' => 'on')));
+                $results_final[] = array('nom' => $marque->getTitle(), 'url' => $this->generateUrl('horus_search_avanced', array('word' => $finalword, 'marques' => 'on')));
+
+
+        if (!empty($clients))
+            foreach ($clients as $client)
+                $results_final[] = array(
+                    'nom' => $client->getFirstname() . " " . $client->getLastname() . " du " . $client->getVille() . "(" . $client->getDepartement() . ")",
+                    'url' => $this->generateUrl('horus_search_avanced', array('word' => $finalword, 'clients' => 'on'))
+                );
 
 
         return new JsonResponse($results_final);

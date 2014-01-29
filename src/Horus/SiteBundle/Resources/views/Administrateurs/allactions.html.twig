@@ -1,14 +1,18 @@
 {% extends 'HorusSiteBundle::layout.html.twig' %}
 
 {% block content %}
-<div class="page" id="administrateurs">
-    <h2><i class="glyphicon glyphicon-list"></i> Historique des actions</h2>
+    <div class="page" id="actions">
+        <h2><i class="glyphicon glyphicon-list"></i> Historique des actions administrateurs</h2>
+        {% include 'HorusSiteBundle:Slots:display.html.twig' %}
 
         <ul class="nav nav-pills nav-stacked">
             {% for action in actions %}
                 <li>
                     <h4 class="pull-left">{{ action.titre|raw }}</h4>
-                    <span class="pull-right"><small><i class="glyphicon glyphicon-time"></i> {{ action.dateCreated|date('d/m/Y H:i:') }}</small></span>
+                    <span class="pull-right"><small><i
+                                    class="glyphicon glyphicon-time"></i> {{ action.dateCreated|date('d/m/Y H:i') }}
+                        </small></span>
+
                     <div class="clear"></div>
                     <p>{{ action.content|raw }}</p>
                 </li>
@@ -18,6 +22,9 @@
                 </div>
             {% endfor %}
         </ul>
+        <div class="pull-right">
+            {{ knp_pagination_render(actions) }}
+        </div>
+        <div class="clear"></div>
     </div>
-</div>
 {% endblock %}

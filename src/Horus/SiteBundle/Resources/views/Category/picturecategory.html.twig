@@ -3,58 +3,57 @@
 {% block javascripts %}
     {{ parent() }}
     <script type="text/javascript" src="/js/dropzone.js"></script>
+    {% javascripts '@HorusSiteBundle/Resources/public/js/product.js' filter="cssrewrite" %}
+    <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets '@HorusSiteBundle/Resources/public/css/pages/category.sass' filter='yui_css' %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+    {% endstylesheets %}
 {% endblock %}
 
 
 {% block content %}
-    <div id="picturecategory">
+    <div id="picturecategory" class="page">
         <a class="btn back btn-danger pull-right" href="{{ path('horus_site_categories') }}">&larr; Revenir à la liste
             de
             catégories</a>
 
-        <h1><i class="glyphicon glyphicon-camera"></i> Photos "{{ category.name|title }}"</h1>
+        <h1><i class="glyphicon glyphicon-camera"></i> Photos de la catégorie "{{ category.name|title }}"</h1>
         <hr class="clear fancy-line">
         <h3>Les photos</h3>
-        <table>
-            <tbody>
-            {% for image in category.images %}
+            <div id="photos">
+                {% for image in category.images %}
+                        <div class="span3 {% if image.cover %}coverimg{% endif %}">
 
-                <tr>
-                    <td>
+                            <a class="btn btn-primary"
+                               onclick="return(confirm('Etes-vous sûr de vouloir supprimer cette photo?'));"
+                               href="{{ path('horus_site_remove_image_category', {'id' : image.id}) }}"><i
+                                        class="glyphicon glyphicon-remove"></i></a>
+                            <a class="btn btn-primary"
+                               onclick="return(confirm('Etes-vous sûr de vouloir mettre en avant cette photo?'));"
+                               href="{{ path('horus_site_cover_image_category', {'id' : image.id}) }}"><i
+                                        class="glyphicon glyphicon-heart"></i></a>
 
-                        {% if image.cover %}
-                            <span class="label label-success">Cette photo a été mise en avant</span><br/><br/>
-                        {% endif %}
-
-                        <a class="btn btn-primary"
-                           onclick="return(confirm('Etes-vous sûr de vouloir supprimer cette photo?'));"
-                           href="{{ path('horus_site_remove_image_category', {'id' : image.id}) }}"><i
-                                    class="glyphicon glyphicon-remove"></i></a>
-                        <a class="btn btn-primary"
-                           onclick="return(confirm('Etes-vous sûr de vouloir mettre en avant cette photo?'));"
-                           href="{{ path('horus_site_cover_image_category', {'id' : image.id}) }}"><i
-                                    class="glyphicon glyphicon-heart"></i></a>
-
-                    </td>
-                    <td>
-                        <a rel="group" class="pull-left fancybox" href="{{ imgcategories ~  category.id ~ '/' ~ image.path }}">
-                            <img class="img-thumbnail" src="{{ imgcategories ~  category.id ~ '/' ~ image.path }}">
-                        </a>
-                    </td>
-                </tr>
-
-            {% else %}
-                <div class="alert alert-dismissable alert-warning">
-                    <button type="button" class="close" data-dismiss="alert">×</button>
-                    <i class="glyphicon glyphicon-warning-sign"></i> Aucune photo pour le moment
-                </div>
-            {% endfor %}
-            </tbody>
-        </table>
-
+                            <a rel="group" class="pull-left fancybox" href="{{ imgcategories ~  category.id ~ '/' ~ image.path }}">
+                                <img class="img-thumbnail" src="{{ imgcategories ~  category.id ~ '/' ~ image.path }}">
+                            </a>
+                        </div>
+                {% else %}
+                    <div class="alert alert-dismissable alert-warning">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        <i class="glyphicon glyphicon-warning-sign"></i> Aucune photo pour le moment
+                    </div>
+                {% endfor %}
+            </div>
+        <div class="clear"></div>
         <h3>Ajouter une photo</h3>
 
-        <form action="{{ path('horus_site_edit_image_category', {'id' : category.id }) }}" class="dropzone"
+        <form  action="{{ path('horus_site_edit_image_category', {'id' : category.id }) }}" class="dropzone"
               id="my-awesome-dropzone">
             <div class="fallback">
                 <h3><i class="glyphicon glyphicon-picture"></i> Déposer votre image ici</h3>

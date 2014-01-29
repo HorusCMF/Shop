@@ -89,7 +89,7 @@ class Category
     protected $commercials;
 
     /**
-     * @ORM\OneToMany(targetEntity="Article", mappedBy="category", cascade={"all"},orphanRemoval=true)
+     * @ORM\ManyToMany(targetEntity="Article",inversedBy="categories")
      * @ORM\OrderBy({"dateCreated" = "DESC"})
      */
     protected $articles;
@@ -99,12 +99,6 @@ class Category
      * @ORM\OrderBy({"dateCreated" = "DESC"})
      */
     protected $produits;
-
-    /**
-     * @ORM\ManyToMany(targetEntity="Produit", mappedBy="cates", cascade={"all"},orphanRemoval=true)
-     * @ORM\OrderBy({"dateCreated" = "DESC"})
-     */
-    protected $articless;
 
 
     /**

@@ -13,16 +13,10 @@
     <link rel="stylesheet" type="text/css" href="http://getbootstrap.com/2.3.2/assets/css/bootstrap-responsive.css"/>
     <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.10.3/themes/hot-sneaks/jquery-ui.css"/>
     <link rel="stylesheet" type="text/css" href="http://davidstutz.github.io/bootstrap-multiselect/css/bootstrap-multiselect.css"/>
-    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/horussite/css/jRating.jquery.css') }}"/>
-    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/horussite/css/jquery.cssemoticons.css') }}"/>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.css" />
 
     {% stylesheets '@HorusSiteBundle/Resources/public/css/bootswatch.css' filter='yui_css' %}
         <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
-    {% endstylesheets %}
-
-    {% stylesheets '@HorusSiteBundle/Resources/public/css/flat/green.css' filter='yui_css' %}
-    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
     {% endstylesheets %}
 
     {% stylesheets '@HorusSiteBundle/Resources/public/css/main.sass' filter='yui_css' %}
@@ -53,9 +47,12 @@
     <div class="container-fluid">
         <div class="row-fluid">
             {% include 'HorusSiteBundle:Slots:notification.html.twig' %}
+            {{  render(controller('HorusSiteBundle:Administrateur:lastmessagerie')) }}
+
             <div class="span12">
                 <div class="container">
                     <div class="row-fluid">
+
                         <div class="span3" id="leftmenu">
                             {{ render(controller('HorusSiteBundle:Layout:leftmenu')) }}
                         </div>
@@ -63,6 +60,7 @@
                             {% include 'HorusSiteBundle:Slots:search.html.twig' %}
                             {% include 'HorusSiteBundle:Slots:flashdatas.html.twig' %}
                             <div class="maincontent">
+                                <div id="errorglobal" class="alert alert-danger hidden"></div>
                                 {% block content %}
                                 {% endblock %}
                             </div>
@@ -72,7 +70,6 @@
             </div>
             <a class="scrollup">Scroll</a>
             <h3 class="btn btn-primary" id="btn-tchat"><i class="glyphicon glyphicon-comment"></i> {{ "Messagerie"|trans }}</h3>
-            {{  render(controller('HorusSiteBundle:Administrateur:lastmessagerie')) }}
             {% if app.user.id is defined %}
                 {% include 'HorusSiteBundle:Slots:connected.html.twig' %}
             {% endif %}
@@ -100,11 +97,10 @@
     {{ parent() }}
     <script src="http://davidstutz.github.io/bootstrap-multiselect/js/bootstrap-multiselect.js"></script>
     <script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-    <script src="http://modernizr.com/downloads/modernizr-latest.js"></script>
+    {#<script src="http://modernizr.com/downloads/modernizr-latest.js"></script>#}
     <script src="http://cdnjs.cloudflare.com/ajax/libs/hinclude/0.9.5/hinclude.min.js"></script>
-    <script src="{{ asset('bundles/horussite/js/jRating.jquery.min.js') }}"></script>
+    {#<script src="{{ asset('bundles/horussite/js/jRating.jquery.min.js') }}"></script>#}
     <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
-    <script src="{{ asset('bundles/horussite/js/jquery.cssemoticons.min.js') }}"></script>
     <script src="{{ asset('/js/ckeditor/ckeditor.js') }}"></script>
 
     {% javascripts '@HorusSiteBundle/Resources/public/js/miniNotification.coffee' filter='closure' %}
@@ -121,7 +117,7 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    {% javascripts '@HorusSiteBundle/Resources/public/js/main.coffee'  filter='closure' %}
+    {% javascripts '@HorusSiteBundle/Resources/public/js/main.js'  filter='closure' %}
     <script type="text/javascript" src="{{ asset_url }}"></script>
     {% endjavascripts %}
 {% endblock %}

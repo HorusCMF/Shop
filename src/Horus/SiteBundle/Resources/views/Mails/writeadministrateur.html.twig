@@ -1,0 +1,9 @@
+{% extends '::email.html.twig' %}
+
+{% block body %}
+    {% include 'HorusSiteBundle:Mails:header.html.twig'  with { 'sujet' :  sujet , 'datas' : datas} %}
+    {{ datas.content|raw }}
+    <br/>
+    <br/>
+    {% include 'HorusSiteBundle:Mails:footer.html.twig'  with { 'base_img' :  base_img , 'datas' : datas} %}
+{% endblock %}

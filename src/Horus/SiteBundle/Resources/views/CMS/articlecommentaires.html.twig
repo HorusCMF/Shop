@@ -1,0 +1,13 @@
+{% extends 'HorusSiteBundle::layout.html.twig' %}
+
+{% block content %}
+    <div class="page" id="commentarticle">
+        <a class="btn back btn-danger pull-right" href="{{ path('horus_site_articles') }}">&larr; Revenir à la liste des
+            article</a>
+        <h2><i class="glyphicon glyphicon-comment"></i> Commentaire sur l'article "{{ article.title|title }}"</h2>
+
+        {% include 'HorusSiteBundle:CMS:_listcommentaires.html.twig' %}
+
+    </div>
+{% endblock %}
+

@@ -1,0 +1,29 @@
+{% if  addresses is not empty %}
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Nature</th>
+        <th>Adresse</th>
+        <th>Ville / Code Postal</th>
+        <th>Etage/Numero/Interphone</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for adresse in addresses %}
+        <tr>
+            <td>{{ adresse.nature|adressenature }}</td>
+            <td>{{ adresse.adresse }} {{ adresse.adresse2 }}</td>
+            <td>{{ adresse.zipcode }} / {{ adresse.ville }}</td>
+            <td>{{ adresse.etage|default('Non précisé') }} / {{ adresse.numero|default('Non précisé') }} / {{ adresse.interphone|default('Non précisé') }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% else %}
+    <div class="alert alert-dismissable alert-danger">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <i class="glyphicon glyphicon-info-sign"></i> Aucune adresse du client de créer pour le moment.
+        <div class="clear"></div>
+    </div>
+{% endif %}

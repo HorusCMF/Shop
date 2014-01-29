@@ -1,43 +1,73 @@
 {% extends 'HorusSiteBundle::layout.html.twig' %}
 
 {% block content %}
-    <div class="page" id="category">
-        <h2><i class="glyphicon glyphicon-gift"></i> Catégory "{{ category.name|title }}"</h2>
+<div class="page" id="category">
+    <h2><i class="glyphicon glyphicon-gift"></i> Catégory "{{ category.name|title }}"</h2>
 
-        <div class="btn-group pull-right">
-            <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
-                <i class="glyphicon glyphicon-plus"></i> Action <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu">
-                {% if category.visible %}
-                    <li><a onclick="return(confirm('Etes-vous sûr de vouloir désactiver cette catégory ?'));" href="{{ path('horus_site_desactive_category', {'id' : category.id}) }}"><i class="glyphicon glyphicon-minus-sign"></i> Désactiver</a></li>
-                {% else %}
-                    <li><a onclick="return(confirm('Etes-vous sûr de vouloir activer cette catégory ?'));" href="{{ path('horus_site_active_category', {'id' : category.id}) }}"><i class="glyphicon glyphicon-ok"></i> Activer</a></li>
-                {% endif %}
-                <li><a onclick="return(confirm('Etes-vous sûr de vouloir supprimer cette catégory ?'));" href="{{ path('horus_site_remove_category', {'id' : category.id}) }}"><i class="glyphicon glyphicon-remove"></i> Supprimer</a></li>
-                <li><a  href="{{ path('horus_site_edit_category', {'id' : category.id}) }}"><i class="glyphicon glyphicon-pencil"></i> Editer</a></li>
-                <li><a  href="{{ path('horus_site_edit_image_category', {'id' : category.id}) }}"><i class="glyphicon glyphicon-camera"></i> Photos</a></li>
-            </ul>
-        </div>
-        <a class="pull-left" href="#">
-            {% if category.starPicture  %}
-                <img src="{{ imgcategories ~  category.id ~ '/' ~ category.starPicture.path }} " />
-            {% else  %}
-                <img class="media-object img-thumbnail" src="http://placehold.it/150x75" alt="...">
-            {% endif  %}
-        </a>
-
-        <h3>La description</h3>
-        <p>
-            {{ category.description|raw }}
-        </p>
-
-        <hr />
-        <h3>Les produits</h3>
-        {% include 'HorusSiteBundle:Product:_listproducts.html.twig' %}
-
-
-        <div class="clear"></div>
+    <div class="btn-group pull-right">
+        <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-plus"></i> Action <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            {% if category.visible %}
+                <li><a onclick="return(confirm('Etes-vous sûr de vouloir désactiver cette catégory ?'));"
+                       href="{{ path('horus_site_desactive_category', {'id' : category.id}) }}"><i
+                                class="glyphicon glyphicon-minus-sign"></i> Désactiver</a></li>
+            {% else %}
+                <li><a onclick="return(confirm('Etes-vous sûr de vouloir activer cette catégory ?'));"
+                       href="{{ path('horus_site_active_category', {'id' : category.id}) }}"><i
+                                class="glyphicon glyphicon-ok"></i> Activer</a></li>
+            {% endif %}
+            <li><a onclick="return(confirm('Etes-vous sûr de vouloir supprimer cette catégory ?'));"
+                   href="{{ path('horus_site_remove_category', {'id' : category.id}) }}"><i
+                            class="glyphicon glyphicon-remove"></i> Supprimer</a></li>
+            <li><a href="{{ path('horus_site_edit_category', {'id' : category.id}) }}"><i
+                            class="glyphicon glyphicon-pencil"></i> Editer</a></li>
+            <li><a href="{{ path('horus_site_edit_image_category', {'id' : category.id}) }}"><i
+                            class="glyphicon glyphicon-camera"></i> Photos</a></li>
+        </ul>
     </div>
-{% endblock %}
+    <div class="row-fluid">
+        <div class="span3">
+            <a class="pull-left">
+                {% if category.starPicture %}
+                    <a rel="group" class="pull-left fancybox"
+                       href="{{ imgcategories ~  category.id ~ '/' ~ category.starPicture.path|sizes('big') }}">
+                        <img src="{{ imgcategories ~  category.id ~ '/' ~ category.starPicture.path|sizes('medium') }}"/>
+                    </a>
+                {% else %}
+                    <img class="media-object img-thumbnail" src="http://placehold.it/150x75" alt="...">
+                {% endif %}
+            </a>
+        </div>
+        <div class="span8">
+
+            <h3>Categorie parente</h3>
+
+            <p>
+               {% if category.parent is not empty %} {{ category.parent.name|title }} {% else %} Aucune {% endif %}
+            </p>
+            <h3>Petit résumé</h3>
+
+            <p>
+                {{ category.cover|raw }}
+            </p>
+
+            <h3>Description totale</h3>
+
+            <p>
+                {{ category.description|raw }}
+            </p>
+
+            <div class="clear"></div>
+            <h3>Les produits associés à cette catégorie</h3>
+            {% include 'HorusSiteBundle:Product:_listproducts.html.twig' %}
+            <div class="clear"></div>
+            <h3>Les articles sous-jacents à cette catégorie</h3>
+            {% include 'HorusSiteBundle:CMS:_listarticles.html.twig' %}
+            <div class="clear"></div>
+        </div>
+
+    </div>
+    {% endblock %}
 

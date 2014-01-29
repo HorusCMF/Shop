@@ -25,6 +25,7 @@ class AuthenticationSiteHandler implements LogoutSuccessHandlerInterface, Authen
      * @var \Symfony\Component\Routing\RouterInterface
      */
     protected $router;
+
     /**
      * @var \Doctrine\ORM\EntityManager
      */

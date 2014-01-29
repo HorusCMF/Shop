@@ -31,6 +31,7 @@ class Produit
         $this->etat = 1;
         $this->status = 1;
         $this->quantity = 1;
+        $this->home = false;
     }
     /**
      * @var integer
@@ -104,6 +105,13 @@ class Produit
      * @ORM\Column(name="status", type="integer", nullable=false)
      */
     private $status;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="home", type="boolean", nullable=false)
+     */
+    private $home;
 
     /**
      * @Gedmo\SortablePosition
@@ -359,77 +367,76 @@ class Produit
 
 
     /**
-     * @ORM\OneToMany(targetEntity="CommandesProduit",mappedBy="produit", cascade={"all"},orphanRemoval=true)
-     * @Assert\Valid
+     * @ORM\OneToMany(targetEntity="CommandesProduit", mappedBy="produit", cascade={"all"},orphanRemoval=true)
      */
-    protected $commandes;
+    private $commandes;
 
     /**
      * @ORM\OneToMany(targetEntity="Rate",mappedBy="produit", cascade={"all"},orphanRemoval=true)
      */
-    protected $rates;
+    private $rates;
 
     /**
      * @ORM\OneToMany(targetEntity="Seo",mappedBy="produit", cascade={"all"},orphanRemoval=true)
      * @Assert\Valid
      */
-    protected $seo;
+    private $seo;
 
     /**
      * @ORM\OneToMany(targetEntity="Commentaire",mappedBy="produit", cascade={"all"},orphanRemoval=true)
      */
-    protected $commentaires;
+    private $commentaires;
 
     /**
      * @ORM\OneToMany(targetEntity="Pj",mappedBy="produit", cascade={"all"},orphanRemoval=true)
      * @Assert\Valid
      */
-    protected $pjs;
+    private $pjs;
 
     /**
      * @ORM\OneToOne(targetEntity="Produit")
      * @ORM\JoinColumn(name="parent_id", referencedColumnName="id")
      */
-    protected $prodparent;
+    private $prodparent;
 
 
     /**
      * @ORM\OneToMany(targetEntity="Meta",mappedBy="produit", cascade={"all"},orphanRemoval=true)
      * @Assert\Valid
      */
-    protected $metas;
+    private $metas;
 
     /**
      * @ORM\OneToMany(targetEntity="Liens",mappedBy="produit", cascade={"all"},orphanRemoval=true)
      * @Assert\Valid
      */
-    protected $liens;
+    private $liens;
 
     /**
      * @ORM\OneToMany(targetEntity="Image",mappedBy="produit", cascade={"all"},orphanRemoval=true)
      * @Assert\Valid
      * @ORM\OrderBy({"dateCreated" = "DESC"})
      */
-    protected $images;
+    private $images;
 
 
     /**
      * @ORM\ManyToMany(targetEntity="Article", inversedBy="produits", cascade={"all"},orphanRemoval=true)
      * @ORM\JoinTable(name="article_produit")
      */
-    protected $articles;
+    private $articles;
 
     /**
      * @ORM\ManyToMany(targetEntity="Produit", mappedBy="articlesaccesories")
      * @ORM\OrderBy({"dateCreated" = "DESC"})
      */
-    protected $accesories;
+    private $accesories;
 
     /**
      * @ORM\ManyToMany(targetEntity="Produit", inversedBy="accesories",cascade={"all"},orphanRemoval=true)
      * @ORM\JoinTable(name="produit_accessories")
      */
-    protected $articlesaccesories;
+    private $articlesaccesories;
 
 
     /**
@@ -1795,5 +1802,27 @@ class Produit
             return $sumrate / count($this->rates);
         }
         return 0;
+    }
+
+    /**
+     * Set home
+     *
+     * @param boolean $home
+     * @return Produit
+     */
+    public function setHome($home)
+    {
+        $this->home = $home;
+        return $this;
+    }
+
+    /**
+     * Get home
+     *
+     * @return boolean 
+     */
+    public function getHome()
+    {
+        return $this->home;
     }
 }

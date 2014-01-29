@@ -1,8 +1,9 @@
 {% extends 'HorusSiteBundle::layout.html.twig' %}
 
 {% block content %}
-<div class="page" id="administrateurs">
+<div class="page" id="notifications">
     <h2><i class="glyphicon glyphicon-bell"></i> Historique des notifications</h2>
+    {% include 'HorusSiteBundle:Slots:display.html.twig' %}
 
         <ul class="nav nav-pills nav-stacked">
             {% for notif in notifs %}
@@ -18,6 +19,9 @@
                 </div>
             {% endfor %}
         </ul>
+    <div class="pull-right">
+        {{ knp_pagination_render(notifs) }}
     </div>
-</div>
+    <div class="clear"></div>
+    </div>
 {% endblock %}

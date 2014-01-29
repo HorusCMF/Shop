@@ -1,0 +1,74 @@
+{% if commentaires is not empty %}
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Produit</th>
+            <th>Client</th>
+            <th>Etat</th>
+            <th>Contenu</th>
+            <th>Date de création</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for commentaire in commentaires %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td><a href="">{{ commentaire.produit.title|title }}</a></td>
+                <td><a href="">{{ commentaire.client.firstname|title }} {{ commentaire.client.lastname|title }}</a></td>
+                <td>
+                    {% if commentaire.visible  == 0 %}
+                        <i class="glyphicon glyphicon-remove"></i>
+                    {% elseif commentaire.visible  == 1 %}
+                        <i class="glyphicon glyphicon-retweet"></i>
+                    {% else %}
+                        <i class="glyphicon glyphicon-check"></i>
+                    {% endif %}
+                </td>
+                <td>{{ commentaire.content|truncate(250,'...') }}</td>
+                <td>{{ commentaire.dateCreated|created_ago }}</td>
+                <td>
+                    <div class="btn-group pull-right">
+                        <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
+                            <i class="glyphicon glyphicon-plus"></i> Action <span class="caret"></span>
+                        </button>
+
+                        <ul class="dropdown-menu">
+                            {% if commentaire.visible  == 0 or commentaire.visible  == 1 %}
+                                <li>
+                                    <a href="{{ path('horus_site_active_commentaire', {'id' : commentaire.id}) }}"><i
+                                                class="glyphicon glyphicon-check"></i> Activer</a>
+                                </li>
+                            {% else %}
+                                <li>
+                                    <a href="{{ path('horus_site_desactive_commentaire', {'id' : commentaire.id}) }}"><i
+                                                class="glyphicon glyphicon-remove"></i> Désactiver</a>
+                                </li>
+                            {% endif %}
+                            <li>
+                                <a onclick="return(confirm('Etes-vous sûr de vouloir supprimer ce commentaire ?'));"
+                                   href="{{ path('horus_site_remove_commentaire', {'id' : commentaire.id}) }}"><i
+                                            class="glyphicon glyphicon-remove"></i> Supprimer</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('horus_site_edit_commentaire', {'id' : commentaire.id}) }}"><i
+                                            class="glyphicon glyphicon-pencil"></i> Editer</a>
+                            </li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+
+        {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <div class="alert alert-dismissable alert-danger">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <i class="glyphicon glyphicon-info-sign"></i> Aucun commentaire de créer pour le moment.
+        <div class="clear"></div>
+    </div>
+{% endif %}
+
+

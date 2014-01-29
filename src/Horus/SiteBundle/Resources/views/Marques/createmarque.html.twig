@@ -2,22 +2,41 @@
 
 {% block javascripts %}
     {{ parent() }}
+    {% javascripts '@HorusSiteBundle/Resources/public/js/pages/marque.js' %}
+    <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
+
+{% endblock %}
+
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets '@HorusSiteBundle/Resources/public/css/pages/marque.sass' filter='yui_css' %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+    {% endstylesheets %}
 {% endblock %}
 
 
 {% block content %}
-    <div id="editarticle">
+    <div id="createmarque" class="page">
         <a class="btn back btn-danger pull-right" href="{{ path('horus_site_marques') }}">&larr; Revenir à la liste des
             marques</a>
 
         <h1><i class="glyphicon glyphicon-plus"></i> Ajouter une marque</h1>
         <hr class="clear fancy-line">
 
-        <form id="createmarque" novalidate="novalidate" action="{{ path('horus_site_create_marques') }}" method="post" enctype="multipart/form-data">
-
+        <form id="createmarque" novalidate="novalidate" action="{{ path('horus_site_create_marques') }}" method="post"
+              enctype="multipart/form-data">
+            <div class="row-fluid">
+                <div class="span12">
+                    {{ form_widget(form.active) }}
+                    {{ form_errors(form.active) }}
+                    <label for="active">Visible sur le site</label>
+                </div>
+            </div>
             <div class="row-fluid">
                 <div class="span7">
-                    <label for="title">Titre</label>
+                    <label for="title">Nom de la marque</label>
 
                     <div class="input-group">
                         {{ form_widget(form.title) }}
@@ -27,7 +46,9 @@
                     {{ form_errors(form.title) }}
                 </div>
                 <div class="span5">
-                    <label for="title">Mots-clefs <small>(séparé par des virgules)</small></label>
+                    <label for="keywords">Quelques mots-clefs
+                        <small>(séparé par des virgules)</small>
+                    </label>
 
                     <div class="input-group">
                         {{ form_widget(form.keywords) }}
@@ -39,66 +60,85 @@
             </div>
             <div class="row-fluid">
                 <div class="span12">
-                    <label for="cover">Résumé</label>
+                    <label for="resume">Petit résumé de la marque</label>
                     {{ form_widget(form.resume) }}
                     {{ form_errors(form.resume) }}
                 </div>
             </div>
             <div class="row-fluid">
                 <div class="span12">
-                    <label for="content">Description</label>
+                    <label for="description">Description complète de la marque</label>
                     {{ form_widget(form.description) }}
                     {{ form_errors(form.description) }}
                 </div>
             </div>
             <div class="row-fluid">
                 <div class="span12">
-                    <label for="tags">Fichier</label>
+                    <label for="url"><i
+                                class="glyphicon glyphicon-list-alt"></i> Site Officiel de la marque</label>
+
+                    <div class="input-group">
+                        {{ form_widget(form.url) }}
+                        <span class="input-group-btn"><button class="btn btn-search btn-primary"><i
+                                        class="glyphicon glyphicon-globe"></i></button></span>
+                    </div>
+                    {{ form_errors(form.url) }}
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span12">
+                    <label for="file"><i class="glyphicon glyphicon-picture"></i> Logo de la marque</label>
                     {{ form_widget(form.file) }}
                     {{ form_errors(form.file) }}
                 </div>
             </div>
             <div class="row-fluid">
                 <div class="span12">
-                    <label for="tags">Parent</label>
+                    <label for="parent">Marque parente</label>
                     {{ form_widget(form.parent) }}
                     {{ form_errors(form.parent) }}
                 </div>
             </div>
-            <div class="row-fluid">
-                <div class="span12">
-                    {{ form_widget(form.active) }}
-                    {{ form_errors(form.active) }}
-                    <label for="isVisible">Visible sur le site</label>
-                </div>
-            </div>
+
             <p></p>
-            <hr class="clear" />
-            <h3>Référencement</h3>
-            <div class="row-fluid">
-                <div class="span12">
-                    <label for="tags">Titre de référencement</label>
-                    {{ form_widget(form.metaTitle) }}
-                    {{ form_errors(form.metaTitle) }}
+            <hr class="clear"/>
+            <h3>Référencement de la page</h3>
+            <button type="button" class="btn btn-primary btn-md" data-toggle="collapse" data-target="#seo"><i
+                        class="glyphicon glyphicon-plus"></i> Configurer le SEO de la page
+            </button>
+            <div id="seo" class="collapse">
+
+                <h3>Référencement de la page</h3>
+
+                <div class="row-fluid">
+                    <div class="span12">
+                        <label for="metaTitle">Titre de référencement</label>
+                        {{ form_widget(form.metaTitle) }}
+                        {{ form_errors(form.metaTitle) }}
+                    </div>
+                </div>
+                <p></p>
+
+                <div class="row-fluid">
+                    <div class="span12">
+                        <label for="metaDescription">Description de référencement</label>
+                        {{ form_widget(form.metaDescription) }}
+                        {{ form_errors(form.metaDescription) }}
+                    </div>
+                </div>
+                <p></p>
+
+                <div class="row-fluid">
+                    <div class="span12">
+                        <label for="metaKeywords">Mots-clefs de référencement</label>
+                        {{ form_widget(form.metaKeywords) }}
+                        {{ form_errors(form.metaKeywords) }}
+                    </div>
                 </div>
             </div>
-            <p></p>
-            <div class="row-fluid">
-                <div class="span12">
-                    <label for="tags">Description de référencement</label>
-                    {{ form_widget(form.metaDescription) }}
-                    {{ form_errors(form.metaDescription) }}
-                </div>
-            </div>
-            <p></p>
-            <div class="row-fluid">
-                <div class="span12">
-                    <label for="tags">Mots-clefs de référencement</label>
-                    {{ form_widget(form.metaKeywords) }}
-                    {{ form_errors(form.metaKeywords) }}
-                </div>
-            </div>
-            <button class="btn btn-primary btn-large" type="submit"><i class="glyphicon glyphicon-plus"></i> Créer une marque</button>
+            <button class="btn btn-primary btn-large" type="submit"><i class="glyphicon glyphicon-plus"></i> Créer une
+                marque
+            </button>
         </form>
     </div>
 {% endblock %}

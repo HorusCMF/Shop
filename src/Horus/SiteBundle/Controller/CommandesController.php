@@ -19,7 +19,16 @@ class CommandesController extends Controller
         $em = $this->getDoctrine()->getManager();
         $commandes = $em->getRepository('HorusSiteBundle:Commandes')->findAll();
 
-        return $this->render('HorusSiteBundle:Commandes:commandes.html.twig', array('commandes' => $commandes));
+        $display = $this->container->get('request')->get('display', 5);
+
+        $paginator = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $commandes,
+            $this->get('request')->query->get('page', 1) /*page number*/,
+            $display
+        );
+
+        return $this->render('HorusSiteBundle:Commandes:commandes.html.twig', array('commandes' => $pagination));
     }
    public function lastcommandesAction()
     {

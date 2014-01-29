@@ -3,7 +3,6 @@ app.listen(1665);
 var io = require("socket.io");
 var io = io.listen(app);
 var sockets = {};
-
 var mongojs = require('mongojs');
 var db = mongojs('mongodb://localhost/horus');
 

@@ -1,8 +1,9 @@
 {% extends 'HorusSiteBundle::layout.html.twig' %}
 
 {% block content %}
-    <div class="page" id="administrateurs">
-        <h2><i class="glyphicon glyphicon-comment"></i> Tous les messages de la Messagerie interne</h2>
+    <div class="page" id="messages">
+        <h2><i class="glyphicon glyphicon-comment"></i> Tous les messages de la Messagerie Interne</h2>
+        {% include 'HorusSiteBundle:Slots:display.html.twig' %}
 
         <div id="all-messages">
             <ul>
@@ -20,5 +21,9 @@
                 {% endfor %}
             </ul>
         </div>
+            <div class="pull-right">
+                {{ knp_pagination_render(messages) }}
+            </div>
+            <div class="clear"></div>
     </div>
 {% endblock content %}
